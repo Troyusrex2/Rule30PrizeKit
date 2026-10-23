@@ -13,13 +13,29 @@ It applies to every column of every configuration with a leftmost black cell.
 Unlike the forward pumping method, this criterion does not require a stabilized
 reachable set. It uses the existing analytic white-pulse reduction.
 
-## Six-bit investigation: verification in progress
+## Six-bit theorem: kernel verified
 
-Exact backward obstructions were found for all sixteen six-bit words beginning
-and ending in black. Their widest strip has width fourteen. Combined with the
-prior five-tail result and rotation, they suggest the uniform extension to all
-tails of length at most six with `r >= 77`. **The complete Lean assembly is still
-under verification; that headline is not yet claimed as kernel verified here.**
+`Rule30SixTailSharpenedResearch.no_six_tail_leftFinite` excludes eventual `0^r u`
+for every `length(u) <= 6` and `r >= 74`, at every column of every configuration
+with a leftmost black cell, after every transient. This covers all nonzero finite
+starts and the single seed. Earlier bounds 69 for five bits and 49 for four bits
+remain available. No optimality is claimed.
+
+All 162 research modules in its dependency chain compile in the catalog and the
+pinned kit `cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554`. Catalog declarations were
+replayed through unchanged `Check.lean`. The pinned run compiles the 48 inherited
+research modules and replays the 114 added modules where they contain declarations.
+Only module-system wrappers change for that older kit; source bodies are identical.
+Import-only modules have no declarations to replay. Data-only modules pass kernel
+replay and introduce no axioms; their expected missing-headline exit is recorded
+separately, not treated as a submission verdict. All three final theorem headlines
+pass in both runs. Exact reports and source hashes are in `evidence/catalog` and
+`evidence/pinned`.
+
+The sixteen basic backward certificates give a uniform bound 77. Endpoint
+restrictions for `110001` and `111101`, using the existing restricted backward-tube
+criterion, reduce this to 74. Rotation and the prior five-tail theorem handle all
+shorter and white-ended tails.
 
 The computational facts below have already been checked independently:
 
@@ -48,7 +64,10 @@ From the repository root:
 
 ```sh
 python tests/check_six_tail_backward_research.py
+python tests/check_six_tail_endpoint_research.py
 python research/six-tail/generate.py
+python research/six-tail/generate-endpoints.py
+python research/six-tail/verify.py --lake /path/to/lake --target Ruliology.CellularAutomata.Rule30SixTailSharpenedResearch
 python research/six-tail/wolfram-crosscheck.py --width 14 --padding 14 --word 110001
 python research/six-tail/wolfram-crosscheck.py --width 14 --padding 13 --word 110001
 ```
@@ -57,6 +76,23 @@ The generator writes Lean data modules whose predecessor implications are checke
 with `decide +kernel`. It is a search/data-export tool, not a proof oracle. The
 Wolfram script sends only this public mathematical model to the free remote
 service; it uses no Wolfram ID and performs no prize submission.
+
+The endpoint test checks both closed white sets, forward and backward transitions,
+and forced bits, and rejects a wrong-bit negative control.
+
+`prepare-pinned.py PATH --target Ruliology.CellularAutomata.Rule30SixTailSharpenedResearch`
+copies the dependency chain to a separate pinned worktree. Use `verify.py --kit PATH
+--output PATH` there; omitting `--build-only-base` replays inherited modules too.
+
+The [standalone proof](Rule30SixCoreStandalone.lean) covers all sixteen new six-bit
+black-ended cores at bound 74. It omits the older five-tail chain, so its headline
+is **not** the complete length-at-most-six theorem. All 940 declarations were
+separately replayed in the pinned kit. The [essay source](Rule30-Six-Core-Notebook.md)
+embeds that exact proof. To build it in a fresh activated Wolfram kernel, set
+`RULE30PRIZE_KIT` and `RULE30_NOTEBOOK_CONFIG` to the prepared kit and this directory's
+`notebook-config.json`, then run `../forbidden-suffix/build-notebook.wl`. The builder
+requires actual LeanLink kernel checks before writing a verification report and
+never submits to the prize API. No notebook has yet been built or evaluated here.
 
 Research and formalization: OpenAI Codex through `Troyusrex2`, building on the
 earlier white-pulse, strip, and uniform Jen results. All results remain partial;

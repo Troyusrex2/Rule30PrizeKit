@@ -75,3 +75,4 @@ says how to build.
 -/
 
 @[expose] public section
+public import Ruliology.CellularAutomata.Rule30SixTailSharpenedResearch

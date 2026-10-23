@@ -10,14 +10,28 @@ If[PacletFind["Wolfram/LeanLink"] === {},
 Needs["Wolfram`LeanLink`"];
 
 suffixDirectory = DirectoryName[$InputFileName];
+suffixConfigFile = Quiet[Environment["RULE30_NOTEBOOK_CONFIG"]];
+If[StringQ[suffixConfigFile] && suffixConfigFile =!= "",
+  If[!FileExistsQ[suffixConfigFile], Print[Failure["NotebookConfig", <|"File" -> suffixConfigFile|>]]; Exit[1]];
+  suffixConfig = Import[suffixConfigFile, "RawJSON"];
+  suffixContentDirectory = DirectoryName[ExpandFileName[suffixConfigFile]],
+  suffixConfig = <|"SourceFile" -> "Rule30SuffixStandalone.lean",
+    "EssayFile" -> "Rule30-Forbidden-Suffix-Addendum.md",
+    "Headlines" -> {"Rule30Submission.no_padding_suffix011",
+      "Rule30Submission.no_padding_suffix001001", "Rule30Submission.no_padding_suffix111001"}|>;
+  suffixContentDirectory = suffixDirectory];
+If[!AssociationQ[suffixConfig] ||
+  !And @@ (KeyExistsQ[suffixConfig, #] & /@ {"SourceFile", "EssayFile", "Headlines"}),
+  Print[Failure["NotebookConfig", <|"Message" -> "SourceFile, EssayFile and Headlines are required."|>]]; Exit[1]];
 suffixKit = Environment["RULE30PRIZE_KIT"];
 If[!StringQ[suffixKit] || !DirectoryQ[suffixKit],
   Print[Failure["KitDirectory", <|"Message" -> "Set RULE30PRIZE_KIT before starting the kernel."|>]]; Exit[1]];
 $Rule30PrizeKit = suffixKit;
-suffixSourceFile = FileNameJoin[{suffixDirectory, "Rule30SuffixStandalone.lean"}];
+suffixSourceFile = FileNameJoin[{suffixContentDirectory, suffixConfig["SourceFile"]}];
 suffixSource = "import Rule30PrizeKit\n" <> Import[suffixSourceFile, "Text", CharacterEncoding -> "UTF-8"];
-suffixHeadlines = {"Rule30Submission.no_padding_suffix011",
-  "Rule30Submission.no_padding_suffix001001", "Rule30Submission.no_padding_suffix111001"};
+suffixHeadlines = suffixConfig["Headlines"];
+If[!ListQ[suffixHeadlines] || suffixHeadlines === {} || !AllTrue[suffixHeadlines, StringQ],
+  Print[Failure["NotebookConfig", <|"Message" -> "Headlines must be a nonempty list of strings."|>]]; Exit[1]];
 
 (* Preflight checks the exact source used by the notebook, including its root import. *)
 suffixPreflight = LeanImportString[suffixSource, "ProjectDir" -> suffixKit];
@@ -27,12 +41,12 @@ If[!AllTrue[suffixPreflightChecks, MatchQ[#, _Success] &],
 
 suffixOutput = Quiet[Environment["RULE30_NOTEBOOK_OUTPUT"]];
 If[!StringQ[suffixOutput] || suffixOutput === "",
-  suffixOutput = FileNameJoin[{suffixDirectory, "Rule30-Forbidden-Suffix-Addendum.nb"}]];
+  suffixOutput = FileNameJoin[{suffixContentDirectory, FileBaseName[suffixConfig["EssayFile"]] <> ".nb"}]];
 Clear[rule30Submission];
 suffixConverter = ResourceFunction[
   "https://www.wolframcloud.com/obj/wolframinstitute/DeployedResources/Function/MarkdownToNotebook"];
 suffixBuild = suffixConverter[
-  FileNameJoin[{suffixDirectory, "Rule30-Forbidden-Suffix-Addendum.md"}],
+  FileNameJoin[{suffixContentDirectory, suffixConfig["EssayFile"]}],
   suffixOutput, "UseCache" -> False];
 If[!FileExistsQ[suffixOutput], Print[Failure["NotebookBuild", <|"Result" -> suffixBuild|>]]; Exit[1]];
 
