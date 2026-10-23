@@ -10,26 +10,27 @@ including the root import, passes the pinned kit's unchanged checker. Tests conf
 that the essays embed those checked bytes. Public remote Wolfram SAT computations
 independently confirm the basic finite obstructions.
 
-There is **no evaluated Wolfram/LeanLink notebook, prize API submission, submission
-ID, or prize-verifier verdict**. Public code availability is not maintainer
-acceptance or prize registration.
+Both research notebooks are now built and evaluated in Wolfram Engine 15.0.0.
+Their own LeanLink module replays pass: 252 declarations for the suffix families
+and 939 for the sixteen six-bit cores. Both saved notebooks preserve the exact
+checked source and contain successful kernel-check output with zero message cells.
+The valid starter and its negative controls pass in four fresh processes. The
+local MCP evaluator and `ReadNotebook` work. Engine activation and cloud sign-in
+are complete; no further terminal sign-in is currently needed.
+
+There is **no prize API submission, submission ID, or prize-verifier verdict**.
+Local checks and public code availability are not maintainer acceptance or prize
+registration. See `../windows-notebook/README.md` for the Windows runtime workaround.
 
 Remaining steps:
 
-1. With permission, install and activate a local Wolfram Engine 14.3+ if needed.
-   The installation question is pending. Account activation is performed by the
-   human; passwords and license keys must not be put in chat or the repository.
-2. Evaluate the official `HowToStart.md` starter essay in that kernel, following
+1. Obtain the human author name and explicit submission consent for the built
+   notebooks. These are separate from GitHub permission. The agent workflow says
+   to "get their explicit go-ahead and their name for authors":
    https://www.wolframcloud.com/obj/rule-30-prize/Agents/skill.md .
-3. In a fresh kernel with Lean 4.35.0 on PATH, set `RULE30PRIZE_KIT` to the prepared
-   pinned worktree and `RULE30_NOTEBOOK_CONFIG` to this folder's
-   `notebook-config.json`; evaluate `../forbidden-suffix/build-notebook.wl` as UTF-8.
-   It requires actual LeanLink kernel checks of the preflight and the notebook's
-   own environment before emitting a verification report. It never submits.
-4. Inspect the built notebook and its verification report. Obtain the human author
-   name and explicit submission consent. These are separate from GitHub permission.
-5. Connect the human's Wolfram ID locally, submit the built notebook with the
-   official PR as its repository, and report the returned ID and status-page URL.
+2. Fill the human author byline, preserving and checking the evaluated input cells.
+3. Submit the built notebooks with the official PR as their repository, and report
+   each returned ID and status-page URL.
    Inspect the eventual automatic-verifier result; do not assume success from the
    local checks.
 

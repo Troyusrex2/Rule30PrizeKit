@@ -4,7 +4,7 @@ Name: Forbidden suffixes and unbounded tail families for Rule 30
 Author: OpenAI Codex; contributed through Troyusrex2; human byline pending
 Date: 2026-10-23
 Description: An arbitrary-prefix corollary of the white-pulse reduction
-Abstract: For every finite Boolean word v, no column of a configuration with a leftmost black cell eventually repeats 0^r v 011 when r is at least 10|v|+41. Suffixes 001001 and 111001 give the bound 10|v|+71. Unlike a list of bounded-length tails, these are families with unrestricted tail length. The complete standalone catalog proof and its dependencies pass the unchanged local official kernel checker at the pinned reference commit. This is a partial result. No notebook has been built or evaluated, and no prize submission has been made.
+Abstract: For every finite Boolean word v, no column of a configuration with a leftmost black cell eventually repeats 0^r v 011 when r is at least 10|v|+41. Suffixes 001001 and 111001 give the bound 10|v|+71. Unlike a list of bounded-length tails, these are families with unrestricted tail length. The complete standalone catalog proof and its dependencies pass the unchanged local official kernel checker at the pinned reference commit. This is a partial result. The notebook evaluates the included proof with LeanLink; prize-system submission and verification are separate steps.
 Keywords: [rule 30, eventual periodicity, forbidden suffix, vacuum, Lean]
 ---
 
@@ -96,14 +96,14 @@ The bundled `Rule30SuffixStandalone.lean` contains every research dependency and
 imports only modules already available in the pinned kit. It is checked separately
 in one kernel replay. The final three wrappers are named `Rule30Submission.*`.
 
-The following cells are **unevaluated Wolfram Language source**. They carry the
+The following Wolfram Language cells carry the
 entire proof, not local file references. The notebook form adds the required
 `import Rule30PrizeKit`; the exact embedded source, including that import, has
 also passed a root-project build and unchanged-checker replay at the pinned kit
-commit, for all three headlines (252 local declarations). A Wolfram/LeanLink
-notebook has not been built or evaluated, so notebook execution remains to be
-checked before any prize API submission. No successful LeanEnvironment output is
-claimed here.
+commit, for all three headlines (252 local declarations). The generated notebook
+evaluates these cells and displays its own module kernel replay below. That replay
+checks every declaration, covering all three headlines together. Prize-system
+verification is a separate fresh evaluation after submission.
 
 ```wl
 Needs["Wolfram`LeanLink`"];
@@ -121,7 +121,7 @@ headlines = {"Rule30Submission.no_padding_suffix011",
   "Rule30Submission.no_padding_suffix111001"};
 Table[With[{thm = rule30Submission[name]},
   {name, thm["TypeForm"], thm["Axioms"]}], {name, headlines}]
-rule30Submission[First[headlines]]["KernelCheck"]
+rule30KernelCheck = rule30Submission[First[headlines]]["KernelCheck"]
 ```
 
 ## What remains open

@@ -28,36 +28,67 @@ If[!StringQ[suffixKit] || !DirectoryQ[suffixKit],
   Print[Failure["KitDirectory", <|"Message" -> "Set RULE30PRIZE_KIT before starting the kernel."|>]]; Exit[1]];
 $Rule30PrizeKit = suffixKit;
 suffixSourceFile = FileNameJoin[{suffixContentDirectory, suffixConfig["SourceFile"]}];
-suffixSource = "import Rule30PrizeKit\n" <> Import[suffixSourceFile, "Text", CharacterEncoding -> "UTF-8"];
+suffixSource = "import Rule30PrizeKit\n" <> FromCharacterCode[BinaryReadList[suffixSourceFile], "UTF-8"];
 suffixHeadlines = suffixConfig["Headlines"];
 If[!ListQ[suffixHeadlines] || suffixHeadlines === {} || !AllTrue[suffixHeadlines, StringQ],
   Print[Failure["NotebookConfig", <|"Message" -> "Headlines must be a nonempty list of strings."|>]]; Exit[1]];
 
-(* Preflight checks the exact source used by the notebook, including its root import. *)
-suffixPreflight = LeanImportString[suffixSource, "ProjectDir" -> suffixKit];
-suffixPreflightChecks = Table[suffixPreflight[name]["KernelCheck"], {name, suffixHeadlines}];
-If[!AllTrue[suffixPreflightChecks, MatchQ[#, _Success] &],
-  Print[Failure["LeanPreflight", <|"Checks" -> suffixPreflightChecks|>]]; Exit[1]];
+(* Verify the exact embedded source before evaluation. The notebook itself
+   performs the module replay; a duplicate preflight retains another full native
+   import graph and needlessly doubles peak memory. *)
+suffixEssayFile = FileNameJoin[{suffixContentDirectory, suffixConfig["EssayFile"]}];
+suffixEssayText = Import[suffixEssayFile, "Text", CharacterEncoding -> "UTF-8"];
+suffixEmbeddedStrings = StringCases[suffixEssayText,
+  RegularExpression["LeanImportString\\[(\"(?:\\\\.|[^\"\\\\])*\")"] -> "$1"];
+If[Length[suffixEmbeddedStrings] =!= 1,
+  Print[Failure["EmbeddedSourceMismatch", <||>]]; Exit[1]];
+(* Parse the notebook's Wolfram string literal while holding all evaluation. *)
+suffixHeldSource = ToExpression[First[suffixEmbeddedStrings], InputForm, HoldComplete];
+If[!MatchQ[suffixHeldSource, HoldComplete[_String]] || First[suffixHeldSource] =!= suffixSource,
+  Print[Failure["EmbeddedSourceMismatch", <||>]]; Exit[1]];
 
 suffixOutput = Quiet[Environment["RULE30_NOTEBOOK_OUTPUT"]];
 If[!StringQ[suffixOutput] || suffixOutput === "",
   suffixOutput = FileNameJoin[{suffixContentDirectory, FileBaseName[suffixConfig["EssayFile"]] <> ".nb"}]];
 Clear[rule30Submission];
-suffixConverter = ResourceFunction[
-  "https://www.wolframcloud.com/obj/wolframinstitute/DeployedResources/Function/MarkdownToNotebook"];
+suffixConverterSource = Quiet[Environment["RULE30_MARKDOWN_CONVERTER_SOURCE"]];
+If[StringQ[suffixConverterSource] && FileExistsQ[suffixConverterSource],
+  Get[suffixConverterSource, CharacterEncoding -> "UTF-8"];
+  suffixConverter = MarkdownToNotebook,
+  suffixConverter = ResourceFunction[
+    "https://www.wolframcloud.com/obj/wolframinstitute/DeployedResources/Function/MarkdownToNotebook"]];
 suffixBuild = suffixConverter[
-  FileNameJoin[{suffixContentDirectory, suffixConfig["EssayFile"]}],
+  suffixEssayFile,
   suffixOutput, "UseCache" -> False];
 If[!FileExistsQ[suffixOutput], Print[Failure["NotebookBuild", <|"Result" -> suffixBuild|>]]; Exit[1]];
 
 (* The notebook must actually evaluate its own LeanImportString cell. *)
-suffixNotebookChecks = Table[rule30Submission[name]["KernelCheck"], {name, suffixHeadlines}];
-If[!AllTrue[suffixNotebookChecks, MatchQ[#, _Success] &],
-  Print[Failure["NotebookEvaluation", <|"Checks" -> suffixNotebookChecks|>]]; Exit[1]];
+(* MarkdownToNotebook evaluates each document in a private MTNB$ context. Read
+   its own result, rather than the separate preflight or an unbound Global symbol. *)
+suffixEnvironmentNames = Select[Join[Names["Global`rule30Submission"], Names["MTNB$*`rule30Submission"]],
+  ToExpression[#, InputForm, Function[s, ValueQ[s], HoldAll]] &];
+If[Length[suffixEnvironmentNames] =!= 1,
+  Print[Failure["NotebookEnvironment", <|"Count" -> Length[suffixEnvironmentNames]|>]]; Exit[1]];
+suffixNotebookEnvironment = ToExpression[First[suffixEnvironmentNames]];
+suffixCheckName = StringReplace[First[suffixEnvironmentNames],
+  "rule30Submission" ~~ EndOfString -> "rule30KernelCheck"];
+suffixNotebookCheck = ToExpression[suffixCheckName];
+If[!MatchQ[suffixNotebookCheck, Success["KernelChecked", _Association]],
+  Print[Failure["NotebookEvaluation", <|"Check" -> suffixNotebookCheck|>]]; Exit[1]];
+suffixHeadlineAxioms = Table[suffixNotebookEnvironment[name]["Axioms"], {name, suffixHeadlines}];
+If[!AllTrue[Table[suffixNotebookEnvironment[name]["Kind"], {name, suffixHeadlines}], # === "theorem" &],
+  Print[Failure["HeadlineKind", <||>]]; Exit[1]];
+If[!AllTrue[suffixHeadlineAxioms, Function[axioms, ListQ[axioms] &&
+    Complement[axioms, {"propext", "Classical.choice", "Quot.sound"}] === {}]],
+  Print[Failure["HeadlineAxioms", <||>]]; Exit[1]];
 suffixReport = <|"NotebookBuilt" -> True, "NotebookEvaluated" -> True,
   "LeanKernelChecksPassed" -> True, "PrizeAPISubmitted" -> False,
   "KernelVersion" -> $Version,
   "StandaloneFileSHA256" -> IntegerString[FileHash[suffixSourceFile, "SHA256"], 16, 64],
+  "EmbeddedSourceMatched" -> True,
+  "KernelReplayedModule" -> suffixNotebookCheck[[2]]["Module"],
+  "KernelReplayedDeclarations" -> suffixNotebookCheck[[2]]["Declarations"],
+  "AllHeadlineAxiomsStandard" -> True,
   "Headlines" -> suffixHeadlines|>;
 Export[suffixOutput <> ".verification.json", suffixReport, "RawJSON"];
 Print[suffixReport];

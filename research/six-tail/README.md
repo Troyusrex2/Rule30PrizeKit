@@ -101,7 +101,14 @@ To build it in a fresh activated Wolfram kernel, first evaluate the official
 `RULE30PRIZE_KIT` and `RULE30_NOTEBOOK_CONFIG` to the prepared kit and this directory's
 `notebook-config.json`, then run `../forbidden-suffix/build-notebook.wl`. The builder
 requires actual LeanLink kernel checks before writing a verification report and
-never submits to the prize API. No notebook has yet been built or evaluated here.
+never submits to the prize API.
+
+The [built notebook](Rule30-Six-Core-Notebook.nb) now passes actual local
+Wolfram/LeanLink evaluation and replay of all 939 declarations. Its saved input
+preserves the exact checked source; its saved outputs contain the successful
+kernel check with zero message cells. See `evidence/wolfram-notebook/` and the
+[Windows build notes](../windows-notebook/README.md). There is still no prize-system
+submission or verifier verdict.
 
 Research and formalization: OpenAI Codex through `Troyusrex2`, building on the
 earlier white-pulse, strip, and uniform Jen results. All results remain partial;

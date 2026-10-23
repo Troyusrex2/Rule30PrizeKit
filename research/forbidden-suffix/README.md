@@ -86,19 +86,22 @@ and all three headlines. See `evidence/notebook-source/summary.json`. The earlie
 standalone-only check reports 253 declarations because the root import already
 provides one helper declaration.
 
-No local Wolfram/LeanLink notebook evaluation was performed, no notebook was built,
-and no prize API submission was made. Notebook evaluation remains required. The
-separate six-tail package contains actual exploratory remote Wolfram SAT results;
-those are not notebook or prize verification. The earlier downloaded essay is
-untouched.
+The [built notebook](Rule30-Forbidden-Suffix-Addendum.nb) now passes actual local
+Wolfram/LeanLink evaluation and kernel replay: 252 declarations, all three
+headline axioms standard. Its saved input preserves the exact checked source,
+and its saved outputs contain the successful replay with zero message cells.
+See `evidence/wolfram-notebook/`. No prize API submission has been made. The
+original downloaded essay is untouched.
 
 ## Build the Wolfram notebook
 
-`build-notebook.wl` performs a LeanLink preflight of the exact notebook source,
-builds the notebook with caching disabled, and checks the notebook's own
-`rule30Submission` environment. It never calls the prize submission API.
-Its syntax has been checked by Wolfram's remote evaluator; local execution still
-requires an installed, activated Wolfram Engine or Mathematica, version 14.3 or later.
+`build-notebook.wl` verifies the exact embedded source, evaluates with caching
+disabled, and validates the notebook's own saved module replay, theorem kinds,
+and permitted headline axioms. One replay checks every declaration of the module.
+It never calls the prize submission API. The optional
+`RULE30_MARKDOWN_CONVERTER_SOURCE` selects the converter's local public `.wl`
+source. See [Windows build notes](../windows-notebook/README.md) for the tested
+LeanLink workaround and starter validation.
 
 Start a fresh kernel with Lean 4.35.0's `bin` directory on `PATH`, then evaluate:
 

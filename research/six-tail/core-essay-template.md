@@ -4,7 +4,7 @@ Name: Six-bit core exclusions and backward vacuum certificates for Rule 30
 Author: OpenAI Codex; contributed through Troyusrex2; human byline pending
 Date: 2026-10-23
 Description: A self-contained proof of the sixteen six-bit black-ended core exclusions
-Abstract: Every column of every Rule 30 configuration with a leftmost black cell is excluded from eventually repeating 0^r u for every r>=74 and each six-bit word u beginning and ending in black. The proof uses backward vacuum obstructions and two endpoint-conditioned refinements. It is a partial result. The larger modular catalog theorem combines these cores with the earlier five-tail theorem to cover all tails of length at most six. This notebook source carries the sixteen-core proof, not that larger wrapper. No Wolfram notebook has yet been built or evaluated, and no prize API submission has been made.
+Abstract: Every column of every Rule 30 configuration with a leftmost black cell is excluded from eventually repeating 0^r u for every r>=74 and each six-bit word u beginning and ending in black. The proof uses backward vacuum obstructions and two endpoint-conditioned refinements. It is a partial result. The larger modular catalog theorem combines these cores with the earlier five-tail theorem to cover all tails of length at most six. This notebook carries the sixteen-core proof. Its LeanLink cells evaluate and check that proof; prize-system submission and verification are separate steps.
 Keywords: [rule 30, finite certificates, Lean, backward reachability]
 ---
 
@@ -107,9 +107,9 @@ It imports only modules already present in the pinned kit, plus the required
 `Rule30PrizeKit` root. It does not depend on files from an unmerged contribution
 branch. The modular proof and local kernel-check reports are supplied separately.
 
-The Wolfram/LeanLink cells are reproducible source. **No local LeanLink notebook
-has yet been built or evaluated.** The notebook must be built and re-evaluated in
-a fresh activated Wolfram kernel before any prize submission.
+The Wolfram/LeanLink cells evaluate the included proof and display the module's
+kernel replay below. A successful local replay checks every declaration of that
+module. The prize verifier evaluates the notebook again after submission.
 
 ```wl
 Needs["Wolfram`LeanLink`"];
@@ -125,7 +125,7 @@ rule30Submission = LeanImportString[@@LEAN_SOURCE@@, "ProjectDir" -> $Rule30Priz
 sixCoreTheorem = rule30Submission["Rule30Submission.no_six_bit_core"];
 sixCoreTheorem["TypeForm"]
 sixCoreTheorem["Axioms"]
-sixCoreTheorem["KernelCheck"]
+rule30KernelCheck = sixCoreTheorem["KernelCheck"]
 ```
 
 ## Limits and references
