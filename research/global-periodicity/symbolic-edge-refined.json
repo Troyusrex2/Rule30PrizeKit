@@ -1,0 +1,39 @@
+{
+  "finite_experiment_only": true,
+  "solver": "5.3.1",
+  "results": [
+    {
+      "width": 12,
+      "horizon": 38,
+      "status": "sat",
+      "fixed_left_edge": null,
+      "seconds": 16.0,
+      "rows": [
+        20110911,
+        10934896
+      ],
+      "left_edges": [
+        -12,
+        -11
+      ],
+      "independently_checked": true,
+      "first_difference": 38,
+      "verification_horizon": 4134
+    },
+    {
+      "width": 12,
+      "horizon": 40,
+      "status": "unsat",
+      "fixed_left_edge": null,
+      "seconds": 23.375
+    },
+    {
+      "width": 16,
+      "horizon": 64,
+      "status": "unknown",
+      "fixed_left_edge": null,
+      "seconds": 60.109,
+      "reason": "timeout"
+    }
+  ]
+}
