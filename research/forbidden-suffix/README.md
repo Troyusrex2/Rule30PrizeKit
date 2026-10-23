@@ -83,4 +83,24 @@ The standalone catalog proof is checked separately. The essay's notebook source
 adds the required `import Rule30PrizeKit`, beyond that catalog proof. No Wolfram
 kernel or LeanLink evaluation was performed, no notebook was built, and no prize
 API submission was made. The exact final notebook environment must still be
-evaluated and checked. The earlier essay and other agent's branch are untouched.
+evaluated and checked. The earlier downloaded essay is untouched.
+
+## Build the Wolfram notebook
+
+`build-notebook.wl` performs a LeanLink preflight of the exact notebook source,
+builds the notebook with caching disabled, and checks the notebook's own
+`rule30Submission` environment. It never calls the prize submission API.
+Its syntax has been checked by Wolfram's remote evaluator; local execution still
+requires an installed, activated Wolfram Engine or Mathematica, version 14.3 or later.
+
+Start a fresh kernel with Lean 4.35.0's `bin` directory on `PATH`, then evaluate:
+
+```wl
+SetEnvironment["RULE30PRIZE_KIT" -> "/absolute/path/to/prepared/pinned/kit"];
+Get["/absolute/path/to/research/forbidden-suffix/build-notebook.wl",
+  CharacterEncoding -> "UTF-8"]
+```
+
+The default output is beside the essay. `RULE30_NOTEBOOK_OUTPUT` can specify a
+different output path. A successful run writes a `.verification.json` sidecar.
+Human authorship and explicit consent remain required before any prize submission.

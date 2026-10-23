@@ -111,6 +111,7 @@ theorem pre (j : Nat) (hj : j < N+tail.length) :
 """
         text += "".join(f"  · exact step{j}\n" for j in range(length))
         threshold = max(71, width + 63, padding)
+        nproof = "(by simp [N])" if padding == 0 else "(by simp [N]; omega)"
         text += f"""
 /-- Uniform column exclusion, for every padding length at least {threshold}. -/
 theorem no_padding {{x : Int → Bool}} {{lo : Int}}
@@ -118,7 +119,7 @@ theorem no_padding {{x : Int → Bool}} {{lo : Int}}
     (i : Int) (r : Nat) (hr : {threshold} ≤ r) :
     ¬ Rule30FiniteStripsResearch.EventuallyWord x i (List.replicate r false ++ tail) := by
   exact no_padding_of_backward_certificate hlo hzero i tail K N Q (by rfl) (by rfl) pre
-    r (by simp [N]; omega) (by simp [tail]; omega) (by simp [K, tail]; omega)
+    r {nproof} (by simp [tail]; omega) (by simp [K, tail]; omega)
 end {namespace}
 """
         write(final, text)
