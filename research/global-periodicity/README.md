@@ -1,8 +1,8 @@
 # A global route under investigation
 
-See [the follow-up investigation](FOLLOWUP.md) for an exact checked obstruction
-to stronger left reconstruction and separation tests with unrestricted right
-halves.
+See [the follow-up investigation](FOLLOWUP.md) for unbounded separation of
+every pair of single-seed spatial columns, an exact obstruction to stronger
+left reconstruction, and separation tests with unrestricted right halves.
 
 **Status: no full prize problem is solved here.** This is a research checkpoint
 from 2026-10-23. The global Lean implication has an open hypothesis; the

@@ -1,7 +1,7 @@
 """Check catalog registration and the public headlines on the upstream base.
 
-The separate separation runner replays every generated certificate module in
-both environments. This additional check verifies integration of the five
+The separate separation runners replay every generated certificate module in
+both environments. This additional check verifies integration of the six
 public modules into the standalone core catalog.
 """
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -24,6 +24,7 @@ TARGETS = {
     'Rule30TraceAmbiguityResearch': 'arbitrarily_long_finite_left_ambiguity',
     'Rule30TraceSeparationResearch': 'separate_minus_one_minus_two',
     'Rule30TraceSeparationThreeResearch': 'separate_minus_two_minus_three',
+    'Rule30ColumnSeparationResearch': 'columns_distinguishable',
 }
 
 
@@ -47,7 +48,7 @@ def main():
         for job in as_completed(jobs):
             modules.append(job.result())
     sources = [PROJECT/'lean/Ruliology.lean', checker]
-    sources += list((PROJECT/'lean/Ruliology/CellularAutomata').glob('Rule30Trace*Research.lean'))
+    sources += [PROJECT/'lean/Ruliology/CellularAutomata'/(n+'.lean') for n in TARGETS]
     sources += list((PROJECT/'lean/Ruliology/CellularAutomata/Rule30Certificates').glob('TraceSepH15*.lean'))
     report = {'verdict': 'pass', 'standalone_core_catalog_build': True,
               'base_commit': subprocess.check_output(['git','rev-parse','HEAD'], cwd=PROJECT, text=True).strip(),

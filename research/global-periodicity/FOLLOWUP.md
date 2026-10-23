@@ -1,4 +1,4 @@
-# Follow-up: right completions and a checked obstruction
+# Column separation and limits on reconstruction
 
 This continues the global investigation on 2026-10-23. **Problem 1 and the
 unbounded edge-recovery statement remain open.** This work has not been
@@ -8,6 +8,37 @@ The kit's [`Preimages.lean`](../../equivalents/Rule30Equivalents/Preimages.lean)
 already proves noninjectivity for left-asymptotic rows. The explicit example
 below records the finiteness distinction and its consequence for uniform
 reconstruction; it is not presented as a discovery of noninjectivity.
+
+## Unbounded separation of single-seed columns
+
+[`Rule30ColumnSeparationResearch.lean`](../../lean/Ruliology/CellularAutomata/Rule30ColumnSeparationResearch.lean)
+proves that **every pair of different spatial columns p and q** in the
+single-seed pattern has a differing observation at a time
+`t <= max(abs(p),abs(q))+18`. In particular, for every m>0 the mirror columns
+-m and m differ at time m+j for some j<=18. This is a theorem about all
+integer positions, not an extrapolation from finitely many sampled columns.
+
+Different distances from the seed are distinguished by their first black
+arrival. For equal distances the proof uses the first 20 cells at each moving
+edge. The right window is 256-periodic from time zero; the left window is
+4-periodic after time 20. Ordinary kernel certificates establish the cycles,
+all 256 phase cases, and the small initial exceptions. Induction carries
+these facts to arbitrarily large column positions. The window encoding is
+proved directly against the catalog's cellwise diagonals.
+
+All 85 generated constants pass unchanged-checker kernel replay in both kit
+versions, with standard axioms only. See `columns-catalog-verification.json`,
+`columns-pinned-verification.json` and `columns-evidence/`. Independent
+cellwise Python and Wolfram checks confirm the cycles, all 256 finite phase
+cases, and 512 sample mirror pairs. Python also checks 1,176 column pairs and
+negative controls using rules 90 and 150. Their sample sizes do not limit the
+Lean theorem's quantifiers.
+
+This proves injectivity of the **complete traces starting at time zero** for
+the single-seed pattern. It does not exclude eventual equality of columns or
+prove any column temporally nonperiodic. `EdgeObservable` for arbitrary finite
+starting rows, and the full prize problem, remain open. No literature-first
+claim is made for this spatial distinction.
 
 ## A stronger induction assumption is false
 
@@ -212,6 +243,17 @@ ancestors, but a proposed periodic trace can only be pulled back to its unknown
 transient, not necessarily to time zero. An argument exploiting finite left
 support, or a more specific property of the single seed, is still required.
 
+Two related primary sources reinforce this distinction. Kopra's
+[*A natural class of cellular automata containing fractional multiplication
+automata, Rule 30, and others*](https://arxiv.org/html/2202.13809), Section 4,
+leaves the width-one trace problem open and notes the Rule 90 counterexample
+to extending the general expansivity argument. Nersissian's
+[*Diagonal Bases and Diagonal Periods of Elementary Cellular Automata*](https://arxiv.org/html/2609.25078v1),
+Section 10.2, distinguishes a supplied fixed-diagonal representation from the
+cost and behavior of the growing-depth center readout. Neither paper supplies
+the missing single-column argument, and neither is imported as a proof premise
+in the new Lean modules.
+
 ## Reproduction
 
 The simulations use standard-library Python. Symbolic searches additionally
@@ -231,12 +273,17 @@ python research/global-periodicity/verify_trace_rigidity.py --ambiguity --lake /
 python research/global-periodicity/verify_trace_rigidity.py --ambiguity --lake /path/to/lake --pinned-project /path/to/pinned-kit
 python research/global-periodicity/verify_trace_separation.py --lake /path/to/lake
 python research/global-periodicity/verify_trace_separation.py --lake /path/to/lake --pinned-project /path/to/pinned-kit
+python research/global-periodicity/verify_column_separation.py --lake /path/to/lake
+python research/global-periodicity/verify_column_separation.py --lake /path/to/lake --pinned-project /path/to/pinned-kit
+python research/global-periodicity/column-front-check.py
 python research/global-periodicity/incremental-asymmetric-search.py
 ```
 
 In Wolfram, `Get` `wolfram-rigidity-check.wl`, `wolfram-separation-check.wl`
 and `wolfram-ambiguity-check.wl`, then evaluate `rigidityReport[]`,
-`separationReport[]` and `finiteAmbiguityReport[]`. Their saved independent output is versioned alongside
+`separationReport[]` and `finiteAmbiguityReport[]`. For the spatial theorem,
+load `wolfram-column-front-check.wl` and evaluate `columnFrontReport[]`.
+Their saved independent output is versioned alongside
 the source. Wolfram observations remain distinguished from all-time Lean
 theorems throughout.
 
@@ -244,10 +291,9 @@ theorems throughout.
 
 This contribution branch is based directly on upstream commit
 `9679f830d345efc7b4e6a5c30dc5468836e30e21` and is independent of the padded-tail
-PR. Its five public modules are imported by `lean/Ruliology.lean` and listed
-in the catalog README. The complete standalone core catalog builds (90 jobs),
-and all five public-module headlines pass unchanged-checker replay on that
-base (216 constants, in addition to the full certificate-chain checks above).
+PR. Its six public modules are imported by `lean/Ruliology.lean` and listed
+in the catalog README. The complete standalone core catalog builds, and all
+six public-module headlines pass unchanged-checker replay on that base.
 See `catalog-integration-verification.json` and `integration-evidence/`.
 
 Reproduce this additional integration check with:
