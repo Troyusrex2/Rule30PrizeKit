@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "certificates": [
+    {
+      "width": 5,
+      "suffix": "011",
+      "trajectories": 256,
+      "reachable_states": 22,
+      "reachable_mask": "3889685974",
+      "vacuum_absent": true
+    },
+    {
+      "width": 6,
+      "suffix": "001001",
+      "trajectories": 4096,
+      "reachable_states": 35,
+      "reachable_mask": "6167527503282140438",
+      "vacuum_absent": true
+    },
+    {
+      "width": 6,
+      "suffix": "111001",
+      "trajectories": 4096,
+      "reachable_states": 31,
+      "reachable_mask": "6095188434250659094",
+      "vacuum_absent": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "width": 4,
+      "suffix": "011",
+      "trajectories": 128,
+      "vacuum_witness": {
+        "initial": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_boundary": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "width": 5,
+      "suffix": "11",
+      "trajectories": 128,
+      "vacuum_witness": {
+        "initial": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_boundary": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "width": 5,
+      "suffix": "01",
+      "trajectories": 128,
+      "vacuum_witness": {
+        "initial": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "right_boundary": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "width": 5,
+      "suffix": "",
+      "trajectories": 32,
+      "vacuum_witness": {
+        "initial": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_boundary": []
+      }
+    }
+  ],
+  "lean_kernel_verification": false
+}
