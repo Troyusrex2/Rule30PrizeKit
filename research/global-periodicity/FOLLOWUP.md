@@ -40,6 +40,15 @@ prove any column temporally nonperiodic. `EdgeObservable` for arbitrary finite
 starting rows, and the full prize problem, remain open. No literature-first
 claim is made for this spatial distinction.
 
+The evaluated computational essay is available as a
+[Wolfram notebook](column-separation-essay.nb) and
+[readable output from ReadNotebook](column-separation-essay-evaluated.md).
+Its self-contained proof carries all 85 declarations, checks them in a fresh
+Wolfram/LeanLink process, and preserves the exact source. The saved notebook
+has zero message cells; its verification and inspection reports are adjacent
+to the notebook. This is a local evaluated artifact, not a new prize-API
+submission. No new submission has been sent for this result.
+
 ## A stronger induction assumption is false
 
 It is tempting to strengthen edge recovery to recovery of every initial cell
@@ -278,6 +287,14 @@ python research/global-periodicity/verify_column_separation.py --lake /path/to/l
 python research/global-periodicity/column-front-check.py
 python research/global-periodicity/incremental-asymmetric-search.py
 ```
+
+To rebuild the essay, set `RULE30PRIZE_KIT` to a prepared reference kit and
+evaluate `Get["build-column-notebook.wl", CharacterEncoding -> "UTF-8"]` from
+this directory in a fresh Wolfram kernel with LeanLink installed. The script
+uses the official MarkdownToNotebook converter with caching disabled, checks
+the embedded source and complete kernel replay, and never submits anything.
+`generate-column-essay.py` synchronizes the standalone source and its embedded
+Wolfram string if the catalog proof is edited.
 
 In Wolfram, `Get` `wolfram-rigidity-check.wl`, `wolfram-separation-check.wl`
 and `wolfram-ambiguity-check.wl`, then evaluate `rigidityReport[]`,
