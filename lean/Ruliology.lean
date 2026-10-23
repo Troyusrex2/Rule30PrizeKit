@@ -52,6 +52,11 @@ public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
 public import Ruliology.CellularAutomata.Rule30FiniteWhiteRuns
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour
 public import Ruliology.CellularAutomata.Rule30WhiteEnd
+public import Ruliology.CellularAutomata.Rule30TraceEdgeResearch
+public import Ruliology.CellularAutomata.Rule30TraceRigidityResearch
+public import Ruliology.CellularAutomata.Rule30TraceAmbiguityResearch
+public import Ruliology.CellularAutomata.Rule30TraceSeparationResearch
+public import Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch
 
 /-!
 # Rule 30 Prize: Lean snapshot
