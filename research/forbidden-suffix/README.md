@@ -90,8 +90,7 @@ The [built notebook](Rule30-Forbidden-Suffix-Addendum.nb) now passes actual loca
 Wolfram/LeanLink evaluation and kernel replay: 252 declarations, all three
 headline axioms standard. Its saved input preserves the exact checked source,
 and its saved outputs contain the successful replay with zero message cells.
-See `evidence/wolfram-notebook/`. No prize API submission has been made. The
-original downloaded essay is untouched.
+See `evidence/wolfram-notebook/`. Submission [R30-20261023-8fe04c](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261023-8fe04c) is now **Lean Verified** by the prize system, with standard axioms only. The signed-in submitter and reviewers can open that page. The sanitized verifier report is `evidence/wolfram-notebook/submission.json`. Human review remains pending. The original downloaded essay is untouched.
 
 ## Build the Wolfram notebook
 
@@ -113,4 +112,4 @@ Get["/absolute/path/to/research/forbidden-suffix/build-notebook.wl",
 
 The default output is beside the essay. `RULE30_NOTEBOOK_OUTPUT` can specify a
 different output path. A successful run writes a `.verification.json` sidecar.
-Human authorship and explicit consent remain required before any prize submission.
+Troy Lowry supplied the author name and explicit consent; the completed submission is linked above.

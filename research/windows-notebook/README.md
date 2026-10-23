@@ -4,7 +4,7 @@ Both research notebooks have now been evaluated in Wolfram Engine 15.0.0, with
 Lean 4.35.0 and the verifier's pinned kit. Their saved input cells preserve the
 exact checked UTF-8 source; their saved outputs contain successful kernel replays
 and no message cells. Reports live under each research directory's
-`evidence/wolfram-notebook/`. These are local checks, not prize-system verdicts.
+`evidence/wolfram-notebook/`. Separate prize-system verifier verdicts now pass too; sanitized reports are included alongside the local evidence.
 
 ## LeanLink's Windows bridge
 
@@ -57,5 +57,5 @@ single combined run was stopped when available memory became too low. Both
 research notebooks were each evaluated as one complete document in a fresh kernel.
 
 No account identifiers, authentication codes, credentials, or raw login logs are
-included in these artifacts. Human author name and explicit consent are still
-required before prize submission.
+included in these artifacts. Troy Lowry provided the author name and explicit consent. Both submissions now
+pass the prize system's automated verifier; human review remains pending.

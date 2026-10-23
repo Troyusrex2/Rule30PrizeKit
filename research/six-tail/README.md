@@ -107,8 +107,7 @@ The [built notebook](Rule30-Six-Core-Notebook.nb) now passes actual local
 Wolfram/LeanLink evaluation and replay of all 939 declarations. Its saved input
 preserves the exact checked source; its saved outputs contain the successful
 kernel check with zero message cells. See `evidence/wolfram-notebook/` and the
-[Windows build notes](../windows-notebook/README.md). There is still no prize-system
-submission or verifier verdict.
+[Windows build notes](../windows-notebook/README.md). Submission [R30-20261023-524848](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261023-524848) is now **Lean Verified** by the prize system, with standard axioms only. The signed-in submitter and reviewers can open that page. The sanitized verifier report is `evidence/wolfram-notebook/submission.json`. Human review remains pending.
 
 Research and formalization: OpenAI Codex through `Troyusrex2`, building on the
 earlier white-pulse, strip, and uniform Jen results. All results remain partial;
