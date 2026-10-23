@@ -16,6 +16,8 @@ def load(name):
 obs=load('trace-observability')
 side=load('sideways-candidate')
 normal=load('collision-normalization')
+periodic=load('periodic-right-fibers')
+caps=load('finite-preimage-caps')
 
 
 def lut_trace(number,width,steps,rule=30):
@@ -77,6 +79,62 @@ class Experiments(unittest.TestCase):
             for row in range(1<<(2*width+1)):
                 reduced=normal.normalize(row,width)
                 self.assertEqual(lut_trace(row,width,24),lut_trace(reduced,width,24))
+
+    def test_periodic_right_rigidity_counterexample(self):
+        a,b=(10,'010'),(12,'100')
+        self.assertNotEqual(periodic.cell(a,-1),periodic.cell(b,-1))
+        self.assertTrue(periodic.one_step_merge(a,b))
+        for p in range(-24,25):
+            expected=int(p>=-4 and p!=-2)
+            self.assertEqual(periodic.image(a,p),expected)
+            self.assertEqual(periodic.image(b,p),expected)
+        ta=obs.center_trace(periodic.encode(*a,512),511,512)
+        tb=obs.center_trace(periodic.encode(*b,512),511,512)
+        self.assertEqual(ta,tb)
+
+    def test_right_cone_cutoff(self):
+        # Arbitrary additions beyond position H-1 cannot affect H observations.
+        for h in range(1,17):
+            center=h-1
+            for depth in range(5):
+                for free in [0,(1<<depth)-1]:
+                    a=(((1<<depth)|free)<<center)|((1<<center)-1)
+                    expected=obs.center_trace(a,center,h)
+                    for extra in range(8):
+                        self.assertEqual(expected,obs.center_trace((a<<3)|extra,center+3,h))
+
+    def test_finite_fixed_depth_ambiguity_witnesses(self):
+        # Positive control: test the depth-two decoder on every relevant
+        # initial cone with the separate cellwise implementation.
+        for prefix in range(4,8):
+            for right in range(8):
+                c0,c1,c2,c3=lut_trace((prefix<<3)|right,3,4)
+                decoded=(1-c1) if c0 else c2 if c1 else c2 & (1-c3)
+                self.assertEqual(decoded,(prefix>>1)&1)
+        # Truncate the periodic merge pair. Check FINITE witnesses using
+        # the separate cellwise implementation, including very short cones.
+        for horizon in [0,1,2,9,32,128]:
+            a=periodic.encode(10,'010',horizon+1)
+            b=periodic.encode(12,'100',horizon+1)
+            self.assertEqual(a.bit_length(),horizon+4)
+            self.assertEqual(b.bit_length(),horizon+4)
+            self.assertNotEqual((a>>(horizon+1))&1,(b>>(horizon+1))&1)
+            width=max(horizon,3)
+            self.assertEqual(lut_trace(a<<(width-horizon),width,horizon),
+                             lut_trace(b<<(width-horizon),width,horizon))
+        # Truncating the infinite pair must not be mistaken for preserving
+        # its infinite trace equality. This finite pair later separates.
+        h=1024
+        a=periodic.encode(10,'010',h+1)
+        b=periodic.encode(12,'100',h+1)
+        delta=obs.center_trace(a,h,4096)^obs.center_trace(b,h,4096)
+        self.assertEqual((delta&-delta).bit_length()-1,2601)
+
+    def test_finite_inverse(self):
+        for row in range(512):
+            self.assertEqual(caps.finite_inverse(obs.phi(row)),row)
+        self.assertIsNone(caps.finite_inverse(1))
+        self.assertIsNone(caps.finite_inverse(2))
 
 
 if __name__=='__main__':

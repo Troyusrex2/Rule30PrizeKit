@@ -1,8 +1,13 @@
 # A global route under investigation
 
+See [the follow-up investigation](FOLLOWUP.md) for an exact checked obstruction
+to stronger left reconstruction and separation tests with unrestricted right
+halves.
+
 **Status: no full prize problem is solved here.** This is a research checkpoint
-from 2026-10-23. The new Lean theorem is a conditional implication, with an open
-hypothesis. The experiments are finite. This directory has not been submitted
+from 2026-10-23. The global Lean implication has an open hypothesis; the
+follow-up distinguishes its unconditional bounded certificates and exact
+counterexample from that conjecture. The experiments are finite. This directory has not been submitted
 to the prize API. The two earlier verified submissions are described in
 [`../six-tail/SUBMISSION-STATUS.md`](../six-tail/SUBMISSION-STATUS.md).
 
@@ -201,8 +206,9 @@ position `p`. One CA step in the moving integer frame is
 The unit tests also check this formula against a position-indexed truth-table
 implementation, independently of both the packed and Wolfram code.
 
-Executed validation: all six instrument tests passed; the independent Wolfram
-checks passed; both Lean builds and both complete kernel replays passed.
+Initial-checkpoint validation: all six original instrument tests passed; the
+independent Wolfram checks passed; both Lean builds and both complete kernel
+replays passed. The follow-up expands the independent test suite to ten.
 `symbolic-model-controls.json` records SAT/UNSAT pairs matching the exhaustive
 minima on each side of the cutoff at radii two and four. Larger solver
 timeouts remain explicitly unknown in their reports.

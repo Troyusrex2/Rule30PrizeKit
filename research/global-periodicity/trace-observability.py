@@ -1,8 +1,9 @@
 """Test a structural route to the full problem, not additional tail exclusions.
 
-Hypothesis under investigation: distinct finite configurations have distinct
-infinite center traces. If true, comparing a row with a later row would exclude
-every eventual period. Finite computation here is only a falsification test.
+Hypothesis under investigation: equal infinite center traces of finite nonzero
+configurations force equal left-edge positions. Comparing a row with a later
+row would then exclude every eventual period. Full trace injectivity is false
+(the stripe examples already refute it). These computations are finite tests.
 """
 import argparse
 import json
