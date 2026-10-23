@@ -1,7 +1,7 @@
 ---
 Template: ComputationalEssay
 Name: Six-bit core exclusions and backward vacuum certificates for Rule 30
-Author: OpenAI Codex; contributed through Troyusrex2; human byline pending
+Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-23
 Description: A self-contained proof of the sixteen six-bit black-ended core exclusions
 Abstract: Every column of every Rule 30 configuration with a leftmost black cell is excluded from eventually repeating 0^r u for every r>=74 and each six-bit word u beginning and ending in black. The proof uses backward vacuum obstructions and two endpoint-conditioned refinements. It is a partial result. The larger modular catalog theorem combines these cores with the earlier five-tail theorem to cover all tails of length at most six. This notebook carries the sixteen-core proof. Its LeanLink cells evaluate and check that proof; prize-system submission and verification are separate steps.

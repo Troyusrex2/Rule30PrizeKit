@@ -1,7 +1,7 @@
 ---
 Template: ComputationalEssay
 Name: Forbidden suffixes and unbounded tail families for Rule 30
-Author: OpenAI Codex; contributed through Troyusrex2; human byline pending
+Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-23
 Description: An arbitrary-prefix corollary of the white-pulse reduction
 Abstract: For every finite Boolean word v, no column of a configuration with a leftmost black cell eventually repeats 0^r v 011 when r is at least 10|v|+41. Suffixes 001001 and 111001 give the bound 10|v|+71. Unlike a list of bounded-length tails, these are families with unrestricted tail length. The complete standalone catalog proof and its dependencies pass the unchanged local official kernel checker at the pinned reference commit. This is a partial result. The notebook evaluates the included proof with LeanLink; prize-system submission and verification are separate steps.
