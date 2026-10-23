@@ -1,0 +1,1 @@
+Clear[rule30Step]; rule30Step[row_List] := Module[{p = Join[{0}, row, {0}]},Table[BitXor[p[[j]], BitOr[p[[j+1]], p[[j+2]]]], {j, Length[row]}]]; rule30Rows = NestList[rule30Step,Join[ConstantArray[0, 100], {1}, ConstantArray[0, 100]], 100]; {Dimensions[rule30Rows],Take[rule30Rows[[All,101]],50],And@@Flatten[Map[MemberQ[{0,1},#]&,rule30Rows,{2}]]}

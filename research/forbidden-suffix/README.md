@@ -79,11 +79,18 @@ standard axioms. The three finite certificates were also checked by a separate
 cellwise implementation over all 8,448 initial-strip/right-boundary trajectories.
 Four negative controls produce actual vacuum witnesses.
 
-The standalone catalog proof is checked separately. The essay's notebook source
-adds the required `import Rule30PrizeKit`, beyond that catalog proof. No Wolfram
-kernel or LeanLink evaluation was performed, no notebook was built, and no prize
-API submission was made. The exact final notebook environment must still be
-evaluated and checked. The earlier downloaded essay is untouched.
+The standalone catalog proof is checked separately. The essay's exact embedded
+source, including the required `import Rule30PrizeKit`, also passes a root-project
+build and unchanged-checker replay at the pinned commit: 252 local declarations
+and all three headlines. See `evidence/notebook-source/summary.json`. The earlier
+standalone-only check reports 253 declarations because the root import already
+provides one helper declaration.
+
+No local Wolfram/LeanLink notebook evaluation was performed, no notebook was built,
+and no prize API submission was made. Notebook evaluation remains required. The
+separate six-tail package contains actual exploratory remote Wolfram SAT results;
+those are not notebook or prize verification. The earlier downloaded essay is
+untouched.
 
 ## Build the Wolfram notebook
 

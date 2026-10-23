@@ -10,6 +10,24 @@ Keywords: [rule 30, finite certificates, Lean, backward reachability]
 
 ## Exact claim and scope
 
+Rule 30 updates a cell by `a XOR (b OR c)`, where a, b, c are its left neighbor,
+itself, and its right neighbor. Prize Problem 1 asks whether the center column
+from one black seed is eventually periodic. The result here rules out certain
+periodic words; it does not answer that question in full.
+
+```wl
+Clear[rule30Step];
+rule30Step[row_List] := Module[{p = Join[{0}, row, {0}]},
+  Table[BitXor[p[[j]], BitOr[p[[j+1]], p[[j+2]]]], {j, Length[row]}]];
+rule30Rows = NestList[rule30Step,
+  Join[ConstantArray[0, 100], {1}, ConstantArray[0, 100]], 100];
+ArrayPlot[rule30Rows, ColorRules -> {0 -> White, 1 -> Black}, Frame -> False]
+```
+
+```wl
+Take[rule30Rows[[All, 101]], 50]
+```
+
 For each of the sixteen Boolean words u of length six that begin and end in black,
 and every r>=74, no column of a configuration with a leftmost black cell eventually
 repeats `0^r u`. The transient, column, and initial configuration size are unrestricted.

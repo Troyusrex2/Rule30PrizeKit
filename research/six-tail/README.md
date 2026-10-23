@@ -88,7 +88,16 @@ The [standalone proof](Rule30SixCoreStandalone.lean) covers all sixteen new six-
 black-ended cores at bound 74. It omits the older five-tail chain, so its headline
 is **not** the complete length-at-most-six theorem. All 940 declarations were
 separately replayed in the pinned kit. The [essay source](Rule30-Six-Core-Notebook.md)
-embeds that exact proof. To build it in a fresh activated Wolfram kernel, set
+embeds that exact proof. Its exact embedded source, including the required
+`import Rule30PrizeKit`, separately passes a root-project build and unchanged
+checker replay (939 local declarations); see `evidence/notebook-source`. The
+difference is the helper `Rule30Realization.seed.eq_1`, already provided by the
+root import. `bundle-core.py` rebuilds both artifacts without changing the checked
+proof, and `tests/check_rule30_notebook_sources.py` checks both essays against
+their recorded exact-source hashes.
+
+To build it in a fresh activated Wolfram kernel, first evaluate the official
+`HowToStart.md` starter essay as the agent workflow requires. Then set
 `RULE30PRIZE_KIT` and `RULE30_NOTEBOOK_CONFIG` to the prepared kit and this directory's
 `notebook-config.json`, then run `../forbidden-suffix/build-notebook.wl`. The builder
 requires actual LeanLink kernel checks before writing a verification report and

@@ -98,9 +98,10 @@ in one kernel replay. The final three wrappers are named `Rule30Submission.*`.
 
 The following cells are **unevaluated Wolfram Language source**. They carry the
 entire proof, not local file references. The notebook form adds the required
-`import Rule30PrizeKit`; local standalone evidence covers the catalog proof without
-that extra root import. A Wolfram/LeanLink notebook has not been built or evaluated,
-so notebook reproducibility and the exact final submission environment remain to be
+`import Rule30PrizeKit`; the exact embedded source, including that import, has
+also passed a root-project build and unchanged-checker replay at the pinned kit
+commit, for all three headlines (252 local declarations). A Wolfram/LeanLink
+notebook has not been built or evaluated, so notebook execution remains to be
 checked before any prize API submission. No successful LeanEnvironment output is
 claimed here.
 

@@ -53,7 +53,7 @@ def main():
     (HERE / "Rule30SuffixStandalone.lean").write_text(source, encoding="utf-8", newline="\n")
 
     # The notebook source adds the official root import. Local kernel evidence
-    # covers the standalone catalog source; Wolfram/LeanLink has not run here.
+    # also covers this exact root import; Wolfram/LeanLink has not run here.
     notebook_source = "import Rule30PrizeKit\n" + source
     essay = (HERE / "essay-template.md").read_text(encoding="utf-8")
     essay = essay.replace("@@LEAN_SOURCE@@", json.dumps(notebook_source, ensure_ascii=False))
