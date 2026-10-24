@@ -20,7 +20,7 @@ for path in sorted({p for pattern in patterns for p in here.glob(pattern)}):
                 'reward_mode', 'auxiliary_graph_degree', 'signed_weights_with_uniform_graph_lower_bound',
                 'lag', 'stride', 'require_alternation', 'local_pattern_length', 'graph_window',
                 'prefix_dfa_states', 'tracks_prefix_ones_parity', 'pattern_length',
-                'signed_weights_with_accepted_path_lower_bound']:
+                'signed_weights_with_accepted_path_lower_bound', 'spatial_geometric_base']:
         if key in report: entry[key] = report[key]
     entries.append(entry)
 result = {'Lean_verified_results': False, 'prize_problem_proved': False, 'entries': entries}

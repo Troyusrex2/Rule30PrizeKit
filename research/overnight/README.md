@@ -631,7 +631,7 @@ the [working catalog](stripe-prefix-evidence/catalog/report.json) and the
 `stripe_prefix_dfa_potential.py` tracks this whole-prefix restriction, spatial
 parity, and optionally the parity of the number of preceding black cells. It
 searches additive scores for nonzero windows of length two or four. All four
-recorded numerical searches were infeasible; each passed 128 independent scalar
+original step-charging numerical searches were infeasible; each passed 128 independent scalar
 update and exact feature-accounting controls. Floating-point infeasibility is
 not an exact refutation.
 
@@ -650,9 +650,25 @@ proves equality of the scores for **arbitrary integer weights**, and deduces
 that no rank with these features can meet the proposed strict descent. This
 obstruction does not depend on nonnegative weights or a solver. It does not
 exclude longer windows, different automata, or other types of ranking.
-All 41 declarations and ten headlines passed full unchanged-checker replay in
+The weaker model that charges only changes of the odd-time boundary bit also
+fails for length-two windows, with or without prefix black-count parity. An
+exact positive combination of nine actual accepted transitions has zero total
+feature change and a total change charge of 86. The theorem
+`no_freeFlip_descent_r2` verifies this contradiction for arbitrary integer
+weights. This rules out strict decrease on those changes even without a lower
+bound assumption. [Independent controls](prefix_feature_obstruction_controls.json)
+list all rows, multiplicities, and exact feature-balance checks; a separate list
+implementation checks the physical updates.
+
+All 50 declarations and eleven headlines passed full unchanged-checker replay in
 the [working catalog](prefix-rank-obstruction-evidence/catalog/report.json) and
 [pinned reference](prefix-rank-obstruction-evidence/pinned/report.json).
+
+Four flip-charging numerical variants and four additional variants with
+geometric spatial weights (base 2 or 3/2) also returned infeasible and passed
+their scalar controls. These floating-point results are recorded separately;
+the Lean obstruction above does not cover arbitrary geometric bases or the
+length-four parity model. No positive rank was found.
 
 `temporal_profile_probe.py` investigates a separate diagonal observability
 conjecture by integrating temporal columns from the zero right boundary. The
@@ -699,6 +715,8 @@ python research/overnight/verify_stripe_prefix.py --lake /path/to/lake
 python research/overnight/verify_prefix_rank_obstruction.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_prefix_rank_obstruction.py --lake /path/to/lake
 python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed
+python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed --reward free-flip --spatial-base 3/2
+python research/overnight/prefix_feature_obstruction_controls.py
 python research/overnight/temporal_profile_probe.py --clock 64
 python research/overnight/controlled_response_controls.py
 python research/overnight/controlled_response_normal_form.py --max-width 22

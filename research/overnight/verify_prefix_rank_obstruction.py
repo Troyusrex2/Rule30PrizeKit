@@ -33,7 +33,7 @@ def main():
     argv = [args.lake, 'env', 'lean', '--run', 'Check.lean', module, '--claim', 'partial']
     for h in ['packedStep_sound', 'packedStep_two', 'transition203', 'transition143659',
               'features203', 'features143659', 'no_descent_r2', 'no_descent_r4',
-              'no_integerRanking_r2', 'no_integerRanking_r4']:
+              'no_integerRanking_r2', 'no_integerRanking_r4', 'no_freeFlip_descent_r2']:
         argv += ['--headline', module+'.'+h]
     log = evidence/'check.log'
     audit.run(argv, project, log)

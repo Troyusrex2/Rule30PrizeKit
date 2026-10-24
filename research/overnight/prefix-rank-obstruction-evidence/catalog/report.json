@@ -1,18 +1,38 @@
 {
   "verdict": "pass",
   "scope": "exact finite obstructions to specified prefix-DFA additive rank classes",
-  "source_sha256": "788c98ad2e25f29bb6d12bd95b01306090ac7aab567f5f00e119808a3f0bd089",
+  "source_sha256": "d798c18d52984ba8712f394b6f6c74e5d366e3927cdb0daf9fcbdcb37949c5cf",
   "checker_modified": false,
   "Q01_proved": false,
   "new_temporal_period_excluded": false,
   "full_problem_claim": false,
-  "reference_commit": "2d10eb661227a0b30350acdb821140972cb1d4d2",
+  "reference_commit": "8c180813edbf59bc415913c717f68c36572730ad",
   "check": {
     "claim": "partial",
     "declared": [
       {
         "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.Accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
         "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.Descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.FreeFlipDescent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.GoodWitness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.accepted_of_witness",
         "standardAxioms": true
       },
       {
@@ -52,12 +72,27 @@
       },
       {
         "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.goodWitness_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.instDecidableGoodWitness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
         "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.no_descent_r2",
         "standardAxioms": true
       },
       {
         "kind": "theorem",
         "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.no_descent_r4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.no_freeFlip_descent_r2",
         "standardAxioms": true
       },
       {
@@ -271,6 +306,18 @@
         "ok": true,
         "problems": [],
         "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch.no_freeFlip_descent_r2",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
       }
     ],
     "importsStatements": true,
@@ -279,7 +326,7 @@
     "official": [],
     "reasons": [],
     "replay": {
-      "constants": 41,
+      "constants": 50,
       "ok": true
     },
     "verdict": "pass",

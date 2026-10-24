@@ -150,4 +150,63 @@ theorem no_integerRanking_r4 (w : Nat → Int) (V : (Nat → Bool) → Int)
   rw [packedStep_two,hs,hs] at hh
   exact hh
 
+/-- A finite, decidable witness for a good packed row. -/
+def GoodWitness (a W d : Nat) : Prop :=
+  a<2^W ∧ 1≤d ∧ d%2=0 ∧
+  (∀ k : Fin d, 1≤k.val → packedRow a k.val=stripe k.val) ∧
+  packedRow a d≠stripe d
+
+instance (a W d : Nat) : Decidable (GoodWitness a W d) := by
+  unfold GoodWitness
+  infer_instance
+
+theorem goodWitness_sound {a W d : Nat} (h : GoodWitness a W d) : Good (packedRow a) := by
+  refine ⟨packedRow_finite a W h.1,d,⟨h.2.1,?_,h.2.2.2.2⟩,h.2.2.1⟩
+  intro k hk hkd
+  exact h.2.2.2.1 ⟨k,hkd⟩ hk
+
+def Accepted (a : Nat) : Prop := Good (packedRow a) ∧ Good (zrow (packedRow a) 2)
+
+theorem accepted_of_witness {a d e : Nat}
+    (h : GoodWitness a 16 d) (hn : GoodWitness (packedStep (packedStep a)) 16 e) : Accepted a := by
+  refine ⟨goodWitness_sound h,?_⟩
+  rw [packedStep_two]
+  exact goodWitness_sound hn
+
+/-- A weaker candidate descent that charges only changes of the odd-time
+boundary bit. The second spatial bit determines that boundary bit on an
+accepted two-step transition. No certificate satisfying this is asserted. -/
+def FreeFlipDescent (r : Nat) (parity : Bool) (w : Nat → Int) : Prop :=
+  ∀ a, Accepted a →
+    score r parity w (packedStep (packedStep a))+
+      (if a.testBit 1=(packedStep (packedStep a)).testBit 1 then 0 else 1)≤score r parity w a
+
+/-- An exact positive combination of nine actual transitions rules out even
+this weaker descent for length-two windows, with either prefix parity model. -/
+theorem no_freeFlip_descent_r2 (parity : Bool) (w : Nat → Int) :
+    ¬FreeFlipDescent 2 parity w := by
+  intro h
+  have h1 := h 323 (accepted_of_witness (d:=2) (e:=4) (by decide) (by decide))
+  have h2 := h 1277 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have h3 := h 1341 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have h4 := h 1917 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have h5 := h 2371 (accepted_of_witness (d:=2) (e:=4) (by decide) (by decide))
+  have h6 := h 2429 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have h7 := h 2653 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have h8 := h 4035 (accepted_of_witness (d:=2) (e:=4) (by decide) (by decide))
+  have h9 := h 4093 (accepted_of_witness (d:=4) (e:=2) (by decide) (by decide))
+  have hw1 := Int.mul_le_mul_of_nonneg_left h1 (by decide : (0:Int)≤3)
+  have hw2 := Int.mul_le_mul_of_nonneg_left h2 (by decide : (0:Int)≤8)
+  have hw3 := Int.mul_le_mul_of_nonneg_left h3 (by decide : (0:Int)≤6)
+  have hw4 := Int.mul_le_mul_of_nonneg_left h4 (by decide : (0:Int)≤7)
+  have hw5 := Int.mul_le_mul_of_nonneg_left h5 (by decide : (0:Int)≤38)
+  have hw6 := Int.mul_le_mul_of_nonneg_left h6 (by decide : (0:Int)≤13)
+  have hw7 := Int.mul_le_mul_of_nonneg_left h7 (by decide : (0:Int)≤5)
+  have hw8 := Int.mul_le_mul_of_nonneg_left h8 (by decide : (0:Int)≤2)
+  have hw9 := Int.mul_le_mul_of_nonneg_left h9 (by decide : (0:Int)≤4)
+  have hh := Int.add_le_add (Int.add_le_add (Int.add_le_add (Int.add_le_add
+    (Int.add_le_add (Int.add_le_add (Int.add_le_add (Int.add_le_add
+      hw1 hw2) hw3) hw4) hw5) hw6) hw7) hw8) hw9
+  cases parity <;> dsimp [score,scoreLoop,advance,packedStep,Nat.testBit] at hh <;> omega
+
 end Ruliology.CellularAutomata.Rule30PrefixRankObstructionResearch
