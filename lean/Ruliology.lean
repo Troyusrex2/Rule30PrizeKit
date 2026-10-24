@@ -52,10 +52,31 @@ public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
 public import Ruliology.CellularAutomata.Rule30FiniteWhiteRuns
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour
 public import Ruliology.CellularAutomata.Rule30WhiteEnd
-public import Ruliology.CellularAutomata.Rule30FiveTailResearch
-public import Ruliology.CellularAutomata.Rule30SuffixFamiliesResearch
-public import Ruliology.CellularAutomata.Rule30BackwardVacuumResearch
+public import Ruliology.CellularAutomata.Rule30FiveTail
+public import Ruliology.CellularAutomata.Rule30SuffixFamilies
+public import Ruliology.CellularAutomata.Rule30BackwardVacuum
 public import Ruliology.CellularAutomata.Rule30Problem3
+public import Ruliology.CellularAutomata.Rule30WhitePadding
+public import Ruliology.CellularAutomata.Rule30FiniteStrips
+public import Ruliology.CellularAutomata.Rule30WhitePulse
+public import Ruliology.CellularAutomata.Rule30ZeroPredecessor
+public import Ruliology.CellularAutomata.Rule30BackwardTube
+public import Ruliology.CellularAutomata.Rule30WhitePaddingVacuumCriterion
+public import Ruliology.CellularAutomata.Rule30SparsePreimage
+public import Ruliology.CellularAutomata.Rule30Certificates.FiveTailTube
+public import Ruliology.CellularAutomata.Rule30Certificates.SixTailBackward
+public import Ruliology.CellularAutomata.Rule30RestrictedBackwardTube
+public import Ruliology.CellularAutomata.Rule30Certificates.SixTailEndpoints
+public import Ruliology.CellularAutomata.Rule30Certificates.WhitePaddingFamilies
+public import Ruliology.CellularAutomata.Rule30UniformWhitePadding
+public import Ruliology.CellularAutomata.Rule30WordRotation
+public import Ruliology.CellularAutomata.Rule30ShortTail
+public import Ruliology.CellularAutomata.Rule30FiveTailReduction
+public import Ruliology.CellularAutomata.Rule30VacuumExample
+public import Ruliology.CellularAutomata.Rule30WhitePadding10101
+public import Ruliology.CellularAutomata.Rule30ForbiddenSuffix
+public import Ruliology.CellularAutomata.Rule30SixTailReduction
+public import Ruliology.CellularAutomata.Rule30SixTail
 
 /-!
 # Rule 30 Prize: Lean snapshot
@@ -76,4 +97,4 @@ says how to build.
 -/
 
 @[expose] public section
-public import Ruliology.CellularAutomata.Rule30SixTailSharpenedResearch
+public import Ruliology.CellularAutomata.Rule30SixTailSharpened

@@ -45,7 +45,32 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30Certificates.EtherTrap3 Rule30Certificates.EtherTrap4 Rule30Certificates.EtherTrap5 \
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \
     Rule30EtherThree Rule30EtherThreeNoWall Rule30EtherThreeTrap Rule30EtherThreeReach \
-    Rule30EtherThreeLeft Rule30EtherThreeSkeleton Rule30Certificates.WhiteEndChecks Rule30WhiteEnd; do
+    Rule30EtherThreeLeft Rule30EtherThreeSkeleton Rule30Certificates.WhiteEndChecks Rule30WhiteEnd \
+    Rule30WhitePadding \
+    Rule30FiniteStrips \
+    Rule30WhitePulse \
+    Rule30ZeroPredecessor \
+    Rule30BackwardTube \
+    Rule30WhitePaddingVacuumCriterion \
+    Rule30BackwardVacuum \
+    Rule30SparsePreimage \
+    Rule30Certificates.FiveTailTube \
+    Rule30Certificates.SixTailBackward \
+    Rule30RestrictedBackwardTube \
+    Rule30Certificates.SixTailEndpoints \
+    Rule30Certificates.WhitePaddingFamilies \
+    Rule30UniformWhitePadding \
+    Rule30WordRotation \
+    Rule30ShortTail \
+    Rule30FiveTailReduction \
+    Rule30VacuumExample \
+    Rule30WhitePadding10101 \
+    Rule30FiveTail \
+    Rule30ForbiddenSuffix \
+    Rule30SixTailReduction \
+    Rule30SixTail \
+    Rule30SixTailSharpened \
+    Rule30SuffixFamilies; do
   build "$m" "Ruliology.CellularAutomata.$m"
 done
 build Ruliology Ruliology
