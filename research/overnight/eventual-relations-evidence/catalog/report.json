@@ -1,0 +1,91 @@
+{
+  "verdict": "pass",
+  "full_problem_claim": false,
+  "temporal_period_excluded": false,
+  "all_spatial_distances_covered": false,
+  "checker_modified": false,
+  "source_sha256": "498c5d188d37389e1b8a1e86cf720798a0742a38e6848d93f566a19e9cc4d891",
+  "project_commit": "e825255914a1c2e0244b6cb85b9c970477df6274",
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.adjacent_complement_monotone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.adjacent_not_complement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.distance_two_infinitely_different",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.middle_eventually_constant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.middle_step",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.middle_eventually_constant",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.distance_two_infinitely_different",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch.adjacent_not_complement",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30EventualColumnRelationsResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 9,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

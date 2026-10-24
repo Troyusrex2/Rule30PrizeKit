@@ -11,7 +11,7 @@ The public upstream pull requests were checked at these exact heads:
 | Contribution | Source head | Independent check |
 |---|---|---|
 | [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4): `0^q10111`, every `q â‰¥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
-| [AIOvernight, PR 5](https://github.com/WolframInstitute/Rule30PrizeKit/pull/5): 56 even black observations force 17 initial black cells | `8f6a97973c59b5a45ed676794cbcd3adb467e96a` | Build and replay in progress; not yet used as a verified premise. |
+| [AIOvernight, PR 5](https://github.com/WolframInstitute/Rule30PrizeKit/pull/5): 56 even black observations force 17 initial black cells | `8f6a97973c59b5a45ed676794cbcd3adb467e96a` | Independent full replay passed: 1,236 data declarations and 346 public declarations. No official private status inferred. |
 
 The first result is an unbounded word-family exclusion. The second is a finite
 quantitative bound, with an unrestricted initial tail. Its reviewer requests a
@@ -24,6 +24,18 @@ every declaration replay, and the unchanged kit commit
 removed to match that reference kit. These are independent local kernel checks;
 we did not access another submitter's private prize status or infer official
 verification from a PR description.
+
+The sparse proof was also compiled and replayed under diagnostic module names
+without native C generation: [full diagnostic record](contribution-audit/sparse-noC-verification.json).
+That run preserved every mathematical proof body, changed only the module/export
+wrappers and the public module's data import, and replayed all 1,582 declarations.
+The ordinary library build was deliberately interrupted as redundant after this
+pass; we do not claim that its C-artifact build completed. The audit runner's
+`--no-native-c` option reproduces direct olean compilation under the original
+module names, then invokes the same unchanged kernel checker. C artifacts are
+unnecessary for this proof replay.
+The [original-module-name run](contribution-audit/report-no-native-c.json) also
+passed both complete replays, with exact upstream and adapted source hashes.
 
 ## An unbounded identity with an exact iteration obstruction
 
@@ -172,12 +184,52 @@ potential becomes negative on an actually reachable depth-12 ribbon. That
 candidate is explicitly rejected in its report. None of these numerical
 optimization results is used as a Lean premise.
 
+`reachable_variation_potential.py` tests richer windows on exactly reachable
+diagonals, rather than only the earlier abstract ribbon constraints. The tested
+nonnegative local potential classes with windows of three and four cells were
+numerically infeasible through depths 27 and 29, respectively. Allowing a factor
+of two potential increase at black outputs did not produce a candidate either.
+These LP results are not kernel-verified impossibility theorems and rule out
+neither a nonlocal potential nor the open variation estimate.
+Distance-weighted versions, charging black output cells in proportion to their
+depth rather than merely their count, were also infeasible in those two tested
+classes. These results are recorded separately with the `-positional` suffix.
+
+`psi_marker_probe.py` checked simple candidate black markers of the form
+`a*2^n+b` for the empty-right `Psi` row. None survived the depth-65,536 training
+window (odd `a` from 1 to 31 and `b` from -32 to 32, at least ten observations).
+The independent forward controls and depth-1,048,576 row hash are recorded in
+`psi-marker-probe.json`. This rejects only that tested marker family.
+
 The conditional reduction and the exact factor-two refutation are research
 checkpoints, separate from the three unconditional modules in
 [catalog PR 7](https://github.com/WolframInstitute/Rule30PrizeKit/pull/7).
 That PR also includes an evaluated review essay, with all 73 standalone
 declarations replayed by LeanLink and zero saved message cells. It has not
 been submitted to the prize API.
+
+## Eventual spatial relations
+
+The research-only `Rule30EventualColumnRelationsResearch` uses the update rule
+and the existing no-eventually-constant-column theorem. If columns `i` and
+`i+2` agree from a time onward, the middle column obeys
+
+```text
+b(t+1) = b(t) AND NOT a(t).
+```
+
+It becomes constant. Thus in every orbit with a leftmost black cell, those two
+columns disagree at arbitrarily late times. Similarly, eventual complementary
+values at adjacent columns make the left column monotone and are impossible.
+This strengthens complete-trace separation in these specific relations only.
+It excludes no new temporal period of one column and makes no assertion about
+eventual equality at arbitrary spatial distances. Verification records are in
+`eventual-relations-evidence`; the general prize problem remains open.
+All nine generated declarations passed the unchanged checker in both the
+[working](eventual-relations-evidence/catalog/report.json) and
+[pinned](eventual-relations-evidence/pinned/report.json) environments. These
+short consequences of the existing monotonicity theorem are research helpers;
+no claim of literature priority is made.
 
 ## Reproduction
 
@@ -187,12 +239,15 @@ only its own child processes.
 
 ```text
 python research/overnight/audit_contributions.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/audit_contributions.py --project /path/to/pinned-kit --lake /path/to/lake --no-native-c --module-filter Sparse16
 python research/overnight/verify_spacing.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_spacing.py --lake /path/to/lake
 python research/overnight/verify_gap.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_gap.py --lake /path/to/lake
 python research/overnight/verify_variation.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_variation.py --lake /path/to/lake
+python research/overnight/verify_eventual_relations.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_eventual_relations.py --lake /path/to/lake
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
 python research/overnight/driven_spacing_probe.py --samples 96 --cycles 16384
@@ -208,6 +263,6 @@ The first full-catalog cold build hit its per-job memory guard under parallel
 compilation. The dependency-ordered runner then passed the complete standalone
 core catalog; [the build record](core-build.json) includes the final root and
 its source hash. The first sparse
-certificate audit also stopped at its resource guard without a pass; an exact
-source retry uses a longer time limit while retaining the already checked
-padded-word passes. Neither interrupted attempt is recorded as verification.
+certificate audit also stopped at its resource guard without a pass. A later
+exact-source replay without C emission passed as described above. Neither
+interrupted ordinary build is recorded as successful verification.

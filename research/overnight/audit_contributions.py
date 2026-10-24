@@ -77,6 +77,9 @@ def main():
     ap.add_argument('--lake', required=True)
     ap.add_argument('--timeout-seconds', type=int, default=1200)
     ap.add_argument('--resume', action='store_true')
+    ap.add_argument('--no-native-c', action='store_true',
+                    help='Compile the same proof modules directly to olean, without C artifacts')
+    ap.add_argument('--module-filter', default='', help='Audit only module names containing this text')
     args = ap.parse_args()
     project = args.project.resolve()
     evidence = HERE / 'contribution-audit'
@@ -85,7 +88,7 @@ def main():
               'checker_modified': False, 'proof_bodies_unchanged': True,
               'kit_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=project,
                                                     text=True).strip(), 'modules': []}
-    report_path = evidence / 'report.json'
+    report_path = evidence / ('report-no-native-c.json' if args.no_native_c else 'report.json')
     if args.resume and report_path.exists():
         previous = json.loads(report_path.read_text(encoding='utf-8'))
         assert previous['kit_commit'] == report['kit_commit']
@@ -93,7 +96,11 @@ def main():
     expected_checker = subprocess.check_output(['git', 'show', 'HEAD:Check.lean'], cwd=project)
     # Git may have checked text out with CRLF; compare normalized source.
     assert (project / 'Check.lean').read_bytes().replace(b'\r\n', b'\n') == expected_checker
+    if not any(args.module_filter in item[1] for item in ITEMS):
+        ap.error('--module-filter selects no audit modules')
     for ref, stem, headline in ITEMS:
+        if args.module_filter not in stem:
+            continue
         rel = Path('lean') / Path((PREFIX + stem).replace('.', '/')).with_suffix('.lean')
         raw = subprocess.check_output(['git', 'show', ref + ':' + rel.as_posix()], cwd=ROOT)
         source = raw.decode('utf-8')
@@ -117,7 +124,16 @@ def main():
             print(json.dumps({'stage': 'retained_exact_source_pass', 'module': module}), flush=True)
             continue
         print(json.dumps({'stage': 'build', 'module': module}), flush=True)
-        record['build_seconds'] = run([args.lake, 'build', module], project,
+        if args.no_native_c:
+            # These modules belong to the local `lean` dependency, whose
+            # library search path precedes the root package's artifact path.
+            output = project / 'lean/.lake/build/lib/lean' / Path(module.replace('.', '/')).with_suffix('.olean')
+            output.parent.mkdir(parents=True, exist_ok=True)
+            build_command = [args.lake, 'env', 'lean', '-o', str(output), str(target)]
+        else:
+            build_command = [args.lake, 'build', module]
+        record['native_C_artifacts_generated'] = not args.no_native_c
+        record['build_seconds'] = run(build_command, project,
                                        evidence / (stem + '.build.log'), args.timeout_seconds)
         print(json.dumps({'stage': 'full_kernel_replay', 'module': module}), flush=True)
         log = evidence / (stem + '.check.log')
@@ -130,12 +146,13 @@ def main():
         assert all(h['ok'] for h in data['headlines'])
         record['check'] = data
         report['modules'].append(record)
-        (evidence / 'report.json').write_text(json.dumps(report, indent=2) + '\n',
+        report_path.write_text(json.dumps(report, indent=2) + '\n',
                                              encoding='utf-8', newline='\n')
         print(json.dumps({'stage': 'passed', 'module': module,
                           'constants': data['replay']['constants']}), flush=True)
     report['verdict'] = 'pass'
-    (evidence / 'report.json').write_text(json.dumps(report, indent=2) + '\n',
+    report['scope'] = 'selected modules only' if args.module_filter else 'all listed modules'
+    report_path.write_text(json.dumps(report, indent=2) + '\n',
                                          encoding='utf-8', newline='\n')
 
 
