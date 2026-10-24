@@ -872,3 +872,15 @@ The same notes record an independent pinned-kernel audit of four public
 `ghywel/placego` proof files: 215 declarations and twenty concrete headlines
 pass, with proof bodies unchanged and upstream credit retained. The
 [audit record](external-profile-audit/report.json) links exact source revisions.
+
+## A necessary phase condition for period-three rows
+
+[`Rule30ThreePrefixResearch`](../../lean/Ruliology/CellularAutomata/Rule30ThreePrefixResearch.lean)
+certifies the first-ether-defect restriction used in a history-dependent
+ranking search. A finite 010-driven left row satisfying phases `(*,0,1)`
+first differs from either reference at a zero-based depth divisible by three,
+and the same holds at every whole-period restart. All 59 declarations pass
+both unchanged checkers; see [the pinned replay](three-prefix-evidence/pinned/report.json).
+[The notes](period-three-ribbon-notes.md) separate that necessary condition
+from the open rank synthesis, rejected finite scores, and solver timeouts.
+No period-three or prize exclusion is claimed.
