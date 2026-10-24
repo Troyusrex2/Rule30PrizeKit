@@ -4,14 +4,39 @@
   "prize_API_submitted": false,
   "full_problem_claim": false,
   "finite_tail_completeness_proved": false,
-  "source_sha256": "f2d2f267efe961c3408157323d41efd8f358bacd8f099d9091d9b92ab38eaef2",
+  "source_sha256": "d13bdd7d1353d700e7e3553892179e59acb1c09ff10d3f7a27d87a00f31c570e",
   "kit_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
-  "build_seconds": 6.766,
-  "check_seconds": 11.953,
+  "build_seconds": 6.735,
+  "check_seconds": 11.422,
   "native_C_emitted": false,
   "check": {
     "claim": "partial",
     "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.OR_not_half_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.iterate_column_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.no_constant_OR_at_onset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.orbit_onset_not_constant_OR",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.predecessor_not_half_period",
+        "standardAxioms": true
+      },
       {
         "kind": "theorem",
         "name": "Rule30Submission.Feedback.center_not_eventually_constant",
@@ -1010,6 +1035,42 @@
         "ok": true,
         "problems": [],
         "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.no_constant_OR_at_onset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.OR_not_half_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Clocks.predecessor_not_half_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
       }
     ],
     "importsStatements": true,
@@ -1018,7 +1079,7 @@
     "official": [],
     "reasons": [],
     "replay": {
-      "constants": 238,
+      "constants": 251,
       "ok": true
     },
     "verdict": "pass",

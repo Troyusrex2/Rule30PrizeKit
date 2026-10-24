@@ -1,6 +1,6 @@
 # Controlled right-half responses and finite-support limits
 
-This contribution contains three core Lean modules, developed by Troy Lowry with
+This contribution contains four core Lean modules, developed by Troy Lowry with
 OpenAI Codex. Problem 1 remains open. No literature-priority claim is made.
 
 `Rule30ControlledResponseResearch` characterizes equal head responses to **all**
@@ -32,6 +32,13 @@ neither a power-of-two temporal period nor a nonconstant OR observation replaces
 the finite-support hypotheses in proposed reconstruction arguments. No finite
 conjecture is refuted and no eventual center period is excluded.
 
+`Rule30ClockMaskResearch` proves a local positive obstruction: with even
+half-clock H, a full 2H clock on one column, a color reversal after H on the
+next, and H clocks on its next two neighbors, the first-pair OR cannot have
+period H. One more predecessor cannot have period H either. Every update and
+clock hypothesis is explicit. This does not extend the clock through an
+arbitrary prefix or prove finite-tail period nonloss.
+
 The [review essay](controlled-response-essay.md) embeds the exact standalone
 proof; the [evaluated notebook](controlled-response-essay.nb) carries that source
 and its full LeanLink replay. The [diagram](profile-counter-figure.png) is
@@ -40,15 +47,16 @@ exported from its saved output. The notebook has not been sent to the prize API.
 Validation records:
 
 - [Catalog build and replay](catalog-verification.json): the standalone core
-  catalog is built in dependency order, then every declaration in all three new
+  catalog is built in dependency order, then every declaration in all four new
   modules is replayed with the unchanged checker.
-- [Pinned standalone replay](standalone-verification.json): all 238 declarations
-  and 21 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
+- [Pinned standalone replay](standalone-verification.json): all 251 declarations
+  and 24 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
 - [Fresh-kernel notebook inspection](controlled-response-essay.nb.verification.json):
   exact saved source, all declarations replayed, standard headline axioms,
   zero message cells, and independently checked computation outputs.
 - [Wolfram controls](wolfram-independent-controls.json): 104 full Rule 30 rewrite
-  experiments, eight actual-feedback examples, and 792 scalar cells in three profile cones.
+  experiments, eight actual-feedback examples, 792 scalar cells in three profile
+  cones, 192 qualifying clock cases, and ten additional built-in Rule 30 cones.
 - [Python response controls](controlled_response_controls.json): exact response-tree
   partitions compared with the nonbranching signatures at widths 1 through 7
   and horizons 1 through 20.

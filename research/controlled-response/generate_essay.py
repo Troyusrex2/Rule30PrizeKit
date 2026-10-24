@@ -1,4 +1,4 @@
-"""Embed the complete three-module proof in a review essay; never submit it."""
+"""Embed the complete four-module proof in a review essay; never submit it."""
 import hashlib
 import json
 from pathlib import Path
@@ -8,7 +8,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 modules = {'Rule30ControlledResponseResearch': 'Response',
            'Rule30PeriodicProfileCounterResearch': 'Profiles',
-           'Rule30FeedbackErasureResearch': 'Feedback'}
+           'Rule30FeedbackErasureResearch': 'Feedback',
+           'Rule30ClockMaskResearch': 'Clocks'}
 parts, manifest = [], []
 for module in modules:
     path = ROOT/'lean/Ruliology/CellularAutomata'/(module+'.lean')
@@ -35,6 +36,8 @@ headlines += ['Rule30Submission.Profiles.'+h for h in [
     'infinite_true', 'infinite_false', 'loss_head_period_two', 'loss_full_period_lower_bound', 'loss_infinite']]
 headlines += ['Rule30Submission.Feedback.'+h for h in [
     'white_step_erases_distinction', 'same_left_forever', 'finite_feedback_counterexample']]
+headlines += ['Rule30Submission.Clocks.'+h for h in [
+    'no_constant_OR_at_onset', 'OR_not_half_period', 'predecessor_not_half_period']]
 config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
           'EssayFile': 'controlled-response-essay.md', 'Headlines': headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config, indent=2)+'\n', encoding='utf-8', newline='\n')
@@ -43,7 +46,7 @@ config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
     'standalone_changes': 'Only module/import/export wrappers and namespaces adapted',
     'full_problem_claim': False}, indent=2)+'\n', encoding='utf-8', newline='\n')
 probes = '\n'.join((HERE/name).read_text(encoding='utf-8') for name in
-                   ['controlled-response-check.wl', 'profile-counter-check.wl', 'feedback-erasure-check.wl'])
+                   ['controlled-response-check.wl', 'profile-counter-check.wl', 'feedback-erasure-check.wl', 'clock-mask-check.wl'])
 essay = '''---
 Template: ComputationalEssay
 Name: Controlled responses and finite-support observability limits in Rule 30
@@ -140,18 +143,41 @@ at every depth, and then identify all iterates by induction. The finite search
 that found the tables is not a proof premise. No part of this essay excludes
 an eventual center period or proves a Rule 30 Prize problem.
 
+## A local clock obstruction with explicit hypotheses
+
+Let five temporal columns a,b,c,d,e obey the triangular update, so the next
+a is a XOR (b OR c), the next b is b XOR (c OR d), and the next c is
+c XOR (d OR e). Put H=2n. Assume a has period 2H, b reverses color after
+H, and c and d each have period H. Then a OR b cannot have period H. Any
+additional predecessor whose temporal difference is a OR b cannot have
+period H either. There is a direct application to columns of the actual Q
+orbit with every clock assumption retained.
+
+The proof supposes the OR has period H. Since b reverses after H, the OR
+would have to be constantly black. Define K(t)=a(t) XOR a(t+H). The local
+updates force d(t) to be at most c(t), and K XOR b would alternate each
+step. It would then be both H-periodic and color-reversing after the even
+number H of steps, which is impossible.
+
+This protects the neighborhood of a clock onset. It does not prove arbitrary
+prefix propagation, a finite-tail period-detection theorem, or center-column
+nonperiodicity. In particular, the even half-clock and full-clock premises
+must not be dropped. No literature-priority claim is made.
+
 ## Independent finite controls
 
 The first calculation compares terminal rewrites in 104 complete Rule 30
 experiments with random common left halves and prefixes. The second compares
 all three profile tables with built-in Rule 30 on finite causal cones. The
 third checks eight actual-feedback examples, including the all-white left
-half, at both the center and the right head through time 128.
+half, at both the center and the right head through time 128. The fourth
+checks 192 qualifying clock cases among 512 finite starts and compares ten
+whole-row Q evolutions with built-in Rule 30 on slanted causal cones.
 These controls do not replace the unbounded kernel proofs.
 
 ```wl
 '''+probes+'''
-{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[]}
+{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[], clockMaskReport[]}
 ```
 
 The diagram shows eight times, from top to bottom, and the first twelve cells
@@ -165,7 +191,7 @@ profileCounterDiagram[]
 
 ## Exact embedded proof and full kernel replay
 
-The source below contains all three complete catalog modules, with only imports,
+The source below contains all four complete catalog modules, with only imports,
 module/export wrappers and namespace names adapted for a standalone file.
 It imports only official core modules and uses no additional axioms or native
 decision procedures. A passing partial check does not establish an official

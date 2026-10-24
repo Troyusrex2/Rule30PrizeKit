@@ -42,9 +42,17 @@ A third start, 1100(0001)…, has a head trace of least period two, whereas its 
 
 The proofs use explicit temporal profile tables, verify their scalar update at every depth, and then identify all iterates by induction. The finite search that found the tables is not a proof premise. No part of this essay excludes an eventual center period or proves a Rule 30 Prize problem.
 
+## A local clock obstruction with explicit hypotheses
+
+Let five temporal columns a,b,c,d,e obey the triangular update, so the next a is a XOR (b OR c), the next b is b XOR (c OR d), and the next c is c XOR (d OR e). Put H=2n. Assume a has period 2H, b reverses color after H, and c and d each have period H. Then a OR b cannot have period H. Any additional predecessor whose temporal difference is a OR b cannot have period H either. There is a direct application to columns of the actual Q orbit with every clock assumption retained.
+
+The proof supposes the OR has period H. Since b reverses after H, the OR would have to be constantly black. Define K(t)=a(t) XOR a(t+H). The local updates force d(t) to be at most c(t), and K XOR b would alternate each step. It would then be both H-periodic and color-reversing after the even number H of steps, which is impossible.
+
+This protects the neighborhood of a clock onset. It does not prove arbitrary prefix propagation, a finite-tail period-detection theorem, or center-column nonperiodicity. In particular, the even half-clock and full-clock premises must not be dropped. No literature-priority claim is made.
+
 ## Independent finite controls
 
-The first calculation compares terminal rewrites in 104 complete Rule 30 experiments with random common left halves and prefixes. The second compares all three profile tables with built-in Rule 30 on finite causal cones. The third checks eight actual-feedback examples, including the all-white left half, at both the center and the right head through time 128. These controls do not replace the unbounded kernel proofs.
+The first calculation compares terminal rewrites in 104 complete Rule 30 experiments with random common left halves and prefixes. The second compares all three profile tables with built-in Rule 30 on finite causal cones. The third checks eight actual-feedback examples, including the all-white left half, at both the center and the right head through time 128. The fourth checks 192 qualifying clock cases among 512 finite starts and compares ten whole-row Q evolutions with built-in Rule 30 on slanted causal cones. These controls do not replace the unbounded kernel proofs.
 
 ```wl
 In[1]:=
@@ -131,9 +139,49 @@ feedbackErasureReport[] := BlockRandom[
   ]
 ];
 
-{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[]}
+(* Finite controls, independent of the unbounded Lean proof. *)
+ClearAll[clockMaskReport];
+clockMaskReport[] := Module[{q, orbit, cases = {}, caChecks = {}, row, p, h, profiles,
+    aa, bb, cc, dd, ss, prev, w, horizon = 32, initial, ca, iter, samples},
+  q[x_] := BitXor[x, BitOr[BitShiftRight[x, 1], BitShiftRight[x, 2]]];
+  Do[
+    orbit = {a}; row = q[a];
+    While[row != a, AppendTo[orbit, row]; row = q[row]];
+    p = Length[orbit];
+    If[p >= 4,
+      h = p / 2; w = IntegerLength[a, 2];
+      profiles = Table[BitAnd[BitShiftRight[orbit, k], 1], {k, 0, w + 3}];
+      Do[
+        {aa, bb, cc, dd} = profiles[[k + {1, 2, 3, 4}]];
+        If[RotateLeft[bb, h] === 1 - bb && RotateLeft[cc, h] === cc && RotateLeft[dd, h] === dd,
+          ss = MapThread[BitOr, {aa, bb}];
+          prev = If[k == 0, True, RotateLeft[profiles[[k]], h] =!= profiles[[k]]];
+          AppendTo[cases, <|"Word" -> a, "Column" -> k, "Clock" -> p,
+            "ORNonconstant" -> (Length[DeleteDuplicates[ss]] == 2),
+            "ORNotHalfPeriodic" -> (RotateLeft[ss, h] =!= ss),
+            "PredecessorNotHalfPeriodicWhenPresent" -> prev|>]
+        ], {k, 0, w - 1}]
+    ], {a, 0, 511}];
+  samples = {4, 7, 8, 16, 32, 33, 64, 160, 528, 529};
+  Do[
+    w = IntegerLength[a, 2];
+    initial = Join[ConstantArray[0, horizon + 1], Table[BitAnd[BitShiftRight[a, k], 1], {k, 0, w - 1}],
+      ConstantArray[0, 3 * horizon + 1]];
+    ca = CellularAutomaton[30, initial, horizon]; iter = NestList[q, a, horizon];
+    AppendTo[caChecks, And@@Flatten@Table[
+      ca[[t + 1, horizon + 2 + k + t]] == BitAnd[BitShiftRight[iter[[t + 1]], k], 1],
+      {t, 0, horizon}, {k, 0, w - 1}]], {a, samples}];
+  <|"FiniteControlsOnly" -> True, "LeanVerifiedByThisCalculation" -> False,
+    "FullProblemClaim" -> False, "InitialWordsChecked" -> 512,
+    "OnsetCasesChecked" -> Length[cases], "BuiltinRule30Cones" -> Length[samples],
+    "AllPassed" -> (Length[cases] > 0 && And@@caChecks &&
+      And@@Flatten[Lookup[cases, {"ORNonconstant", "ORNotHalfPeriodic",
+        "PredecessorNotHalfPeriodicWhenPresent"}]]), "Cases" -> cases|>
+];
 
-Out[1]=  {<|"FiniteSamplesOnly" -> True, "UnboundedProofReplaced" -> False, "FullProblemClaim" -> False, "CaseCount" -> 104, "AllPassed" -> True, "Cases" -> {<|"PrefixLength" -> 0, "Rewrite" -> "011->01", "Horizon" -> 128, "ObservationCount" -> 129, "SameCe ... HeadPrefixNonconstant" -> True|>, <|"AllWhiteLeft" -> False, "Horizon" -> 128, "ObservationCount" -> 129, "SameCenterTracePrefix" -> True, "SameRightHeadTracePrefix" -> True, "CenterPrefixNonconstant" -> True, "HeadPrefixNonconstant" -> True|>}|>}
+{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[], clockMaskReport[]}
+
+Out[1]=  {<|"FiniteSamplesOnly" -> True, "UnboundedProofReplaced" -> False, "FullProblemClaim" -> False, "CaseCount" -> 104, "AllPassed" -> True, "Cases" -> {<|"PrefixLength" -> 0, "Rewrite" -> "011->01", "Horizon" -> 128, "ObservationCount" -> 129, "SameCe ... nt" -> True, "ORNotHalfPeriodic" -> True, "PredecessorNotHalfPeriodicWhenPresent" -> True|>, <|"Word" -> 511, "Column" -> 0, "Clock" -> 32, "ORNonconstant" -> True, "ORNotHalfPeriodic" -> True, "PredecessorNotHalfPeriodicWhenPresent" -> True|>}|>}
 ```
 
 The diagram shows eight times, from top to bottom, and the first twelve cells of each infinite row. Black squares are black cells. The right tail repeats from position four. The last panel's first column alternates while later columns require eight times to repeat; the all-time claims are proved below.
@@ -141,12 +189,12 @@ The diagram shows eight times, from top to bottom, and the first twelve cells of
 ```wl
 In[2]:=  profileCounterDiagram[]
 
-Out[2]=  ![cell image](attachment://content-8cvqo)
+Out[2]=  ![cell image](attachment://content-lmbl7)
 ```
 
 ## Exact embedded proof and full kernel replay
 
-The source below contains all three complete catalog modules, with only imports, module/export wrappers and namespace names adapted for a standalone file. It imports only official core modules and uses no additional axioms or native decision procedures. A passing partial check does not establish an official prize target.
+The source below contains all four complete catalog modules, with only imports, module/export wrappers and namespace names adapted for a standalone file. It imports only official core modules and uses no additional axioms or native decision procedures. A passing partial check does not establish an official prize target.
 
 ```wl
 In[3]:=
@@ -303,122 +351,132 @@ theorem iterate_from (x : State) : ∀ n, iterate (diagonal x) n=iterate x (n+1)
   | n+1 => by rw [iterate,iterate_from x n]; rfl
 
 def ObserveEq (x y : State) : Prop :=
-  x 0=y 0 ∧ (x 0 || x 1)=(y 0 || y 1 ... 0 → evol (splice left (word [true])) 1 p =
-      evol (splice left (word [true,true])) 1 p := by
-  intro p hp
-  change rule (splice left (word [true]) (p-1)) (splice left (word [true]) p)
-      (splice left (word [true]) (p+1)) =
-    rule (splice left (word [true,true]) (p-1)) (splice left (word [true,true]) p)
-      (splice left (word [true,true]) (p+1))
-  rw [show splice left (word [true]) (p-1)=left (p-1) by simp [splice,show p-1≤0 by omega],
-      show splice left (word [true,true]) (p-1)=left (p-1) by simp [splice,show p-1≤0 by omega]]
-  simp only [splice,hp,ite_true]
-  by_cases hz : p=0
-  · subst p; rfl
-  · simp [show p+1≤0 by omega]
+  x 0=y 0 ∧ (x 0 || x 1)=(y 0 || y 1 ... ses b <;> cases c <;> rfl
 
-theorem first_right_sameResponse (left : Int → Bool) (hwhite : left 0=false) :
-    SameResponse (rightPart (evol (splice left (word [true])) 1))
-      (rightPart (evol (splice left (word [true,true])) 1)) := by
-  rw [show 1=0+1 from rfl,rightPart_next,rightPart_next]
-  simp only [evol,splice,Int.le_refl,ite_true,hwhite]
-  exact white_step_erases_distinction
+private theorem xor_not_right (a b : Bool) : xor a (!b)=!xor a b := by
+  cases a <;> cases b <;> rfl
 
-/-- All actual left columns agree, despite initially inequivalent right responses. -/
-theorem same_left_forever (left : Int → Bool) (hwhite : left 0=false) :
-    ∀ t p, p≤0 → evol (splice left (word [true])) t p =
-      evol (splice left (word [true,true])) t p := by
-  intro t p hp
-  cases t with
-  | zero => simp [evol,splice,hp]
-  | succ t =>
-      have h := (feedback_left_equal (first_left_equal left)
-        (first_right_sameResponse left hwhite) t).1 p hp
-      simpa only [evol_restart,Nat.add_comm 1 t] using h
+/-- An even half-clock cannot hide this particular clock onset behind constant OR. -/
+theorem no_constant_OR_at_onset (a b c d e : Nat → Bool) (n : Nat)
+    (ha : ∀ t, a (t+1)=xor (a t) (b t || c t))
+    (hb : ∀ t, b (t+1)=xor (b t) (c t || d t))
+    (hc : ∀ t, c (t+1)=xor (c t) (d t || e t))
+    (haper : ∀ t, a (t+2*(2*n))=a t)
+    (hanti : ∀ t, b (t+2*n)=!b t)
+    (hcper : ∀ t, c (t+2*n)=c t)
+    (hdper : ∀ t, d (t+2*n)=d t) :
+    ¬ ∀ t, (a t || b t)=true := by
+  intro hor
+  let K (t : Nat) := xor (a t) (a (t+2*n))
+  have Kstep (t : Nat) : K (t+1)=xor (K t) (!c t) := by
+    dsimp [K]
+    rw [show t+1+2*n=(t+2*n)+1 by omega,ha,ha,hanti,hcper]
+    exact difference_step _ _ _ _
+  have Kzero (t : Nat) (hk : K t=false) : c t=false ∧ d t=false := by
+    apply mask_zero (a t) (a (t+2*n)) (b t) (c t) (d t) (hor t) ?_ ?_ ?_ hk
+    · simpa only [hanti] using hor (t+2*n)
+    · simpa only [ha,hb] using hor (t+1)
+    · have h := hor ((t+2*n)+1)
+      simpa only [ha,hb,hanti,hcper,hdper] using h
+  have cd (t : Nat) : (c t || d t)=c t := by
+    cases hct : c t with
+    | true => rfl
+    | false =>
+        have hdt : d t=false := by
+          cases hkt : K t with
+          | false => exact (Kzero t hkt).2
+          | true =>
+              have hnext : K (t+1)=false := by rw [Kstep,hkt,hct]; rfl
+              have hcn := (Kzero (t+1) hnext).1
+              rw [hc,hct] at hcn
+              cases hdt : d t <;> cases het : e t <;> simp_all
+        rw [hdt]
+        rfl
+  let f (t : Nat) := xor (K t) (b t)
+  have fstep (t : Nat) : f (t+1)=!f t := by
+    dsimp [f]
+    rw [Kstep,hb,cd]
+    exact flip_sum _ _ _
+  have f_even : ∀ m t, f (t+2*m)=f t := by
+    intro m
+    induction m with
+    | zero => intro t; rfl
+    | succ m ih =>
+        intro t
+        rw [show t+2*(m+1)=(t+2*m+1)+1 by omega,fstep,fstep,ih]
+        exact Bool.not_not _
+  have Kper (t : Nat) : K (t+2*n)=K t := by
+    dsimp [K]
+    rw [show t+2*n+2*n=t+2*(2*n) by omega,haper]
+    exact Bool.xor_comm _ _
+  have f_anti (t : Nat) : f (t+2*n)=!f t := by
+    dsimp [f]
+    rw [Kper,hanti]
+    exact xor_not_right _ _
+  have he := f_even n 0
+  rw [f_anti] at he
+  cases hf : f 0 <;> simp [hf] at he
 
-def single : Int → Bool := splice (fun _ => false) (word [true])
-def double : Int → Bool := splice (fun _ => false) (word [true,true])
+theorem iterate_column_step (x : State) (k t : Nat) :
+    iterate x (t+1) k=xor (iterate x t k)
+      (iterate x t (k+1) || iterate x t (k+2)) := rfl
 
-theorem single_support (p : Int) : single p = decide (p=1) := by
-  by_cases hp : p≤0
-  · simp [single,splice,hp,show p≠1 by omega]
-  · by_cases h1 : p=1
-    · subst p; rfl
-    · have hn : 1≤p.toNat-1 := by omega
-      obtain ⟨k,hk⟩ := Nat.exists_eq_add_of_le hn
-      simp [single,splice,hp,word,hk,List.getD,h1]
+/-- The OR cannot even have the shorter half-clock: that would make it constant. -/
+theorem OR_not_half_period (a b c d e : Nat → Bool) (n : Nat)
+    (ha : ∀ t, a (t+1)=xor (a t) (b t || c t))
+    (hb : ∀ t, b (t+1)=xor (b t) (c t || d t))
+    (hc : ∀ t, c (t+1)=xor (c t) (d t || e t))
+    (haper : ∀ t, a (t+2*(2*n))=a t)
+    (hanti : ∀ t, b (t+2*n)=!b t)
+    (hcper : ∀ t, c (t+2*n)=c t)
+    (hdper : ∀ t, d (t+2*n)=d t) :
+    ¬ ∀ t, (a (t+2*n) || b (t+2*n))=(a t || b t) := by
+  intro hs
+  apply no_constant_OR_at_onset a b c d e n ha hb hc haper hanti hcper hdper
+  intro t
+  cases hbt : b t with
+  | true => simp
+  | false =>
+      have ht := hs t
+      rw [hanti,hbt] at ht
+      simpa using ht.symm
 
-theorem double_support (p : Int) : double p = decide (p=1 ∨ p=2) := by
-  by_cases hp : p≤0
-  · simp [double,splice,hp,show p≠1 by omega,show p≠2 by omega]
-  · by_cases h1 : p=1
-    · subst p; rfl
-    · by_cases h2 : p=2
-      · subst p; rfl
-      · have hn : 2≤p.toNat-1 := by omega
-        obtain ⟨k,hk⟩ := Nat.exists_eq_add_of_le hn
-        simp [double,splice,hp,word,hk,List.getD,h1,h2]
+/-- One more column to the left must retain the larger clock as well. -/
+theorem predecessor_not_half_period (z a b c d e : Nat → Bool) (n : Nat)
+    (hz : ∀ t, z (t+1)=xor (z t) (a t || b t))
+    (ha : ∀ t, a (t+1)=xor (a t) (b t || c t))
+    (hb : ∀ t, b (t+1)=xor (b t) (c t || d t))
+    (hc : ∀ t, c (t+1)=xor (c t) (d t || e t))
+    (haper : ∀ t, a (t+2*(2*n))=a t)
+    (hanti : ∀ t, b (t+2*n)=!b t)
+    (hcper : ∀ t, c (t+2*n)=c t)
+    (hdper : ∀ t, d (t+2*n)=d t) :
+    ¬ ∀ t, z (t+2*n)=z t := by
+  intro hzper
+  apply OR_not_half_period a b c d e n ha hb hc haper hanti hcper hdper
+  intro t
+  have h1 := hz (t+2*n)
+  rw [show t+2*n+1=(t+1)+2*n by omega,hzper,hzper,hz] at h1
+  cases hz0 : z t <;> cases ho0 : (a t || b t) <;>
+    cases hoH : (a (t+2*n) || b (t+2*n)) <;> simp_all
 
-theorem single_finite : FinConfig single := by
-  refine ⟨1,?_⟩
-  intro p hp
-  rw [single_support]
-  simp [show p≠1 by intro h; subst p; simp at hp]
+/-- Application to the actual triangular orbit, with every clock premise explicit. -/
+theorem orbit_onset_not_constant_OR (x : State) (k n : Nat)
+    (ha : ∀ t, iterate x (t+2*(2*n)) k=iterate x t k)
+    (hb : ∀ t, iterate x (t+2*n) (k+1)=!iterate x t (k+1))
+    (hc : ∀ t, iterate x (t+2*n) (k+2)=iterate x t (k+2))
+    (hd : ∀ t, iterate x (t+2*n) (k+3)=iterate x t (k+3)) :
+    ¬ ∀ t, (iterate x t k || iterate x t (k+1))=true := by
+  apply no_constant_OR_at_onset (fun t => iterate x t k)
+    (fun t => iterate x t (k+1)) (fun t => iterate x t (k+2))
+    (fun t => iterate x t (k+3)) (fun t => iterate x t (k+4)) n
+    (iterate_column_step x k) ?_ ?_ ha hb hc hd
+  · intro t
+    simpa only [Nat.add_assoc] using iterate_column_step x (k+1) t
+  · intro t
+    simpa only [Nat.add_assoc] using iterate_column_step x (k+2) t
 
-theorem double_finite : FinConfig double := by
-  refine ⟨2,?_⟩
-  intro p hp
-  rw [double_support]
-  simp [show p≠1 by intro h; subst p; simp at hp,
-    show p≠2 by intro h; subst p; simp at hp]
-
-theorem single_nonzero : ∃ p, single p=true := ⟨1,rfl⟩
-theorem double_nonzero : ∃ p, double p=true := ⟨1,rfl⟩
-
-theorem configurations_differ : single≠double := by
-  intro h
-  have he := congrFun h 2
-  change false=true at he
-  cases he
-
-theorem same_actual_left : ∀ t p, p≤0 → evol single t p=evol double t p :=
-  same_left_forever (fun _ => false) rfl
-
-theorem same_actual_center (t : Nat) : evol single t 0=evol double t 0 :=
-  same_actual_left t 0 (by omega)
-
-theorem same_actual_right_head (t : Nat) : evol single t 1=evol double t 1 := by
-  cases t with
-  | zero => rfl
-  | succ t =>
-      have h := (feedback_left_equal (first_left_equal (fun _ => false))
-        (first_right_sameResponse (fun _ => false) rfl) t).2
-      have he := (sameResponse_observe h).1
-      change evol (evol single 1) t 1=evol (evol double 1) t 1 at he
-      simpa only [evol_restart,Nat.add_comm 1 t] using he
-
-theorem initial_rights_not_sameResponse : ¬ SameResponse (rightPart single) (rightPart double) := by
-  simpa only [single,double,rightPart_splice] using initial_responses_differ
-
-theorem center_not_eventually_constant : ¬ ∃ T b, ∀ t, T≤t → evol single t 0=b :=
-  Rule30FiniteConfigs.no_column_eventually_constant_finite single_finite single_nonzero 0
-
-theorem right_head_not_eventually_constant : ¬ ∃ T b, ∀ t, T≤t → evol single t 1=b :=
-  Rule30FiniteConfigs.no_column_eventually_constant_finite single_finite single_nonzero 1
-
-/-- A genuine finite feedback counterexample, without an eventually constant trace. -/
-theorem finite_feedback_counterexample :
-    FinConfig single ∧ FinConfig double ∧ single≠double ∧
-    (∀ t, evol single t 0=evol double t 0) ∧
-    (∀ t, evol single t 1=evol double t 1) ∧
-    (¬ ∃ T b, ∀ t, T≤t → evol single t 0=b) ∧
-    (¬ ∃ T b, ∀ t, T≤t → evol single t 1=b) ∧
-    ¬ SameResponse (rightPart single) (rightPart double) :=
-  ⟨single_finite,double_finite,configurations_differ,same_actual_center,
-    same_actual_right_head,center_not_eventually_constant,right_head_not_eventually_constant,
-    initial_rights_not_sameResponse⟩
-
-end Rule30Submission.Feedback
+end Rule30Submission.Clocks
 ",
   "ProjectDir" -> $Rule30PrizeKit, "IncludeInternal" -> True];
 rule30KernelCheck = rule30Submission["Rule30Submission.Response.sameResponse_iff_diagonal"]["KernelCheck"];
@@ -427,15 +485,15 @@ rule30KernelCheck
 Out[4]=
 Success["KernelChecked", Association["MessageTemplate" ->
    "The kernel accepts all `1` declarations of `2`.", "MessageParameters" ->
-   {238, "LeanLinkTmp33396275289253062788x733523"},
-  "Module" -> "LeanLinkTmp33396275289253062788x733523", "Declarations" -> 238]]
+   {251, "LeanLinkTmp33396284824939074513x464895"},
+  "Module" -> "LeanLinkTmp33396284824939074513x464895", "Declarations" -> 251]]
 
 In[5]:=
-responseHeadlines = {"Rule30Submission.Response.sameResponse_iff_diagonal", "Rule30Submission.Response.sameResponse_iff_drv", "Rule30Submission.Response.tail_011_drv", "Rule30Submission.Response.tail_101_drv", "Rule30Submission.Response.feedback_left_equal", "Rule30Submission.Response.tail_011_center", "Rule30Submission.Response.tail_101_center", "Rule30Submission.Response.short_window_not_sameResponse", "Rule30Submission.Response.fixed_driver_counterexample", "Rule30Submission.Profiles.full_period_eight", "Rule30Submission.Profiles.same_OR", "Rule30Submission.Profiles.OR_nonconstant", "Rule30Submission.Profiles.heads_differ", "Rule30Submission.Profiles.infinite_true", "Rule30Submission.Profiles.infinite_false", "Rule30Submission.Profiles.loss_head_period_two", "Rule30Submission.Profiles.loss_full_period_lower_bound", "Rule30Submission.Profiles.loss_infinite", "Rule30Submission.Feedback.white_step_erases_distinction", "Rule30Submission.Feedback.same_left_forever", "Rule30Submission.Feedback.finite_feedback_counterexample"};
+responseHeadlines = {"Rule30Submission.Response.sameResponse_iff_diagonal", "Rule30Submission.Response.sameResponse_iff_drv", "Rule30Submission.Response.tail_011_drv", "Rule30Submission.Response.tail_101_drv", "Rule30Submission.Response.feedback_left_equal", "Rule30Submission.Response.tail_011_center", "Rule30Submission.Response.tail_101_center", "Rule30Submission.Response.short_window_not_sameResponse", "Rule30Submission.Response.fixed_driver_counterexample", "Rule30Submission.Profiles.full_period_eight", "Rule30Submission.Profiles.same_OR", "Rule30Submission.Profiles.OR_nonconstant", "Rule30Submission.Profiles.heads_differ", "Rule30Submission.Profiles.infinite_true", "Rule30Submission.Profiles.infinite_false", "Rule30Submission.Profiles.loss_head_period_two", "Rule30Submission.Profiles.loss_full_period_lower_bound", "Rule30Submission.Profiles.loss_infinite", "Rule30Submission.Feedback.white_step_erases_distinction", "Rule30Submission.Feedback.same_left_forever", "Rule30Submission.Feedback.finite_feedback_counterexample", "Rule30Submission.Clocks.no_constant_OR_at_onset", "Rule30Submission.Clocks.OR_not_half_period", "Rule30Submission.Clocks.predecessor_not_half_period"};
 Table[<|"Theorem" -> name, "Kind" -> rule30Submission[name]["Kind"],
   "Axioms" -> rule30Submission[name]["Axioms"]|>, {name, responseHeadlines}]
 
-Out[5]=  {<|"Theorem" -> "Rule30Submission.Response.sameResponse_iff_diagonal", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Response.sameResponse_iff_drv", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "p ... Feedback.same_left_forever", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Feedback.finite_feedback_counterexample", "Kind" -> "theorem", "Axioms" -> {"Classical.choice", "Quot.sound", "propext"}|>}
+Out[5]=  {<|"Theorem" -> "Rule30Submission.Response.sameResponse_iff_diagonal", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Response.sameResponse_iff_drv", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "p ... rem" -> "Rule30Submission.Clocks.OR_not_half_period", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Clocks.predecessor_not_half_period", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>}
 ```
 
 Finite-tail normal-form completeness, actual fixed-driver trace rigidity and the full center-column problem remain open. No new prize essay is submitted by this build.

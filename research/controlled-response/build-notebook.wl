@@ -45,7 +45,7 @@ renormMessages = Cases[renormNotebook,Cell[b_,"Message",___]:>HoldComplete[b],In
 If[renormEmbedded=!={renormSource} || Length[renormMessages]!=0 || !StringContainsQ[ToString[renormOutputs,InputForm],"KernelChecked"],
   Print[Failure["SavedNotebookInspection",<|"Messages"->Length[renormMessages]|>]];Exit[1]];
 renormControls = ToExpression[renormOutputs[[1,1]],StandardForm];
-If[!ListQ[renormControls] || Length[renormControls]!=3 ||
+If[!ListQ[renormControls] || Length[renormControls]!=4 ||
   !AllTrue[renormControls,AssociationQ[#] && TrueQ[#["AllPassed"]]&],
   Print[Failure["IndependentControls",<|"Controls"->renormControls|>]];Exit[1]];
 renormGraphics = Cases[renormNotebook,Cell[BoxData[b_GraphicsBox],"Output",___]:>b,Infinity];

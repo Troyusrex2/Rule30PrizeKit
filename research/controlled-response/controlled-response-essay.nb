@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       160,          7]
-NotebookDataLength[    151968,       2842]
-NotebookOptionsPosition[    147519,       2750]
-NotebookOutlinePosition[    147861,       2765]
-CellTagsIndexPosition[    147818,       2762]
+NotebookDataLength[    274837,       5183]
+NotebookOptionsPosition[    269918,       5083]
+NotebookOutlinePosition[    270260,       5098]
+CellTagsIndexPosition[    270217,       5095]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -170,18 +170,51 @@ excludes an eventual center period or proves a Rule 30 Prize problem.\
 \>", "Text",
  CellID->1432876021,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
 
-Cell["Independent finite controls", "Section",
+Cell["A local clock obstruction with explicit hypotheses", "Section",
  CellID->876231958,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"],
+
+Cell["\<\
+Let five temporal columns a,b,c,d,e obey the triangular update, so the next a \
+is a XOR (b OR c), the next b is b XOR (c OR d), and the next c is c XOR (d \
+OR e). Put H=2n. Assume a has period 2H, b reverses color after H, and c and \
+d each have period H. Then a OR b cannot have period H. Any additional \
+predecessor whose temporal difference is a OR b cannot have period H either. \
+There is a direct application to columns of the actual Q orbit with every \
+clock assumption retained.\
+\>", "Text",
+ CellID->1020575516,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+
+Cell["\<\
+The proof supposes the OR has period H. Since b reverses after H, the OR \
+would have to be constantly black. Define K(t)=a(t) XOR a(t+H). The local \
+updates force d(t) to be at most c(t), and K XOR b would alternate each step. \
+It would then be both H-periodic and color-reversing after the even number H \
+of steps, which is impossible.\
+\>", "Text",
+ CellID->1967685850,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+
+Cell["\<\
+This protects the neighborhood of a clock onset. It does not prove arbitrary \
+prefix propagation, a finite-tail period-detection theorem, or center-column \
+nonperiodicity. In particular, the even half-clock and full-clock premises \
+must not be dropped. No literature-priority claim is made.\
+\>", "Text",
+ CellID->1044562475,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"],
+
+Cell["Independent finite controls", "Section",
+ CellID->1653200050,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
 
 Cell["\<\
 The first calculation compares terminal rewrites in 104 complete Rule 30 \
 experiments with random common left halves and prefixes. The second compares \
 all three profile tables with built-in Rule 30 on finite causal cones. The \
 third checks eight actual-feedback examples, including the all-white left \
-half, at both the center and the right head through time 128. These controls \
-do not replace the unbounded kernel proofs.\
+half, at both the center and the right head through time 128. The fourth \
+checks 192 qualifying clock cases among 512 finite starts and compares ten \
+whole-row Q evolutions with built-in Rule 30 on slanted causal cones. These \
+controls do not replace the unbounded kernel proofs.\
 \>", "Text",
- CellID->1020575516,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+ CellID->1384978530,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
 
 Cell[CellGroupData[{
 
@@ -725,13 +758,265 @@ Cell[BoxData[
             "      ", 
             RowBox[{"\"\<Cases\>\"", " ", "->", " ", "cases"}]}], "|>"}]}]}], 
         "\n", "  ", "]"}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Finite", " ", "controls"}], ",", " ", 
+     RowBox[{
+     "independent", " ", "of", " ", "the", " ", "unbounded", " ", "Lean", " ", 
+      RowBox[{"proof", "."}]}]}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "clockMaskReport", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"clockMaskReport", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"q", ",", " ", "orbit", ",", " ", 
+         RowBox[{"cases", "=", 
+          RowBox[{"{", "}"}]}], ",", " ", 
+         RowBox[{"caChecks", "=", 
+          RowBox[{"{", "}"}]}], ",", " ", "row", ",", " ", "p", ",", " ", "h",
+          ",", " ", "profiles", ",", "\n", "    ", "aa", ",", " ", "bb", ",", 
+         " ", "cc", ",", " ", "dd", ",", " ", "ss", ",", " ", "prev", ",", 
+         " ", "w", ",", " ", 
+         RowBox[{"horizon", "=", "32"}], ",", " ", "initial", ",", " ", "ca", 
+         ",", " ", "iter", ",", " ", "samples"}], "}"}], ",", "\n", "  ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"q", "[", "x_", "]"}], " ", ":=", " ", 
+         RowBox[{"BitXor", "[", 
+          RowBox[{"x", ",", " ", 
+           RowBox[{"BitOr", "[", 
+            RowBox[{
+             RowBox[{"BitShiftRight", "[", 
+              RowBox[{"x", ",", "1"}], "]"}], ",", 
+             RowBox[{"BitShiftRight", "[", 
+              RowBox[{"x", ",", "2"}], "]"}]}], "]"}]}], "]"}]}], ";", "\n", 
+        "  ", 
+        RowBox[{"Do", "[", "\n", "    ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"orbit", "=", 
+            RowBox[{"{", "a", "}"}]}], ";", " ", 
+           RowBox[{"row", "=", 
+            RowBox[{"q", "[", "a", "]"}]}], ";", "\n", "    ", 
+           RowBox[{"While", "[", 
+            RowBox[{
+             RowBox[{"row", "!=", "a"}], ",", " ", 
+             RowBox[{
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"orbit", ",", "row"}], "]"}], ";", " ", 
+              RowBox[{"row", "=", 
+               RowBox[{"q", "[", "row", "]"}]}]}]}], "]"}], ";", "\n", "    ", 
+           RowBox[{"p", "=", 
+            RowBox[{"Length", "[", "orbit", "]"}]}], ";", "\n", "    ", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"p", ">=", "4"}], ",", "\n", "      ", 
+             RowBox[{
+              RowBox[{"h", "=", 
+               RowBox[{"p", "/", "2"}]}], ";", " ", 
+              RowBox[{"w", "=", 
+               RowBox[{"IntegerLength", "[", 
+                RowBox[{"a", ",", "2"}], "]"}]}], ";", "\n", "      ", 
+              RowBox[{"profiles", "=", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"BitAnd", "[", 
+                  RowBox[{
+                   RowBox[{"BitShiftRight", "[", 
+                    RowBox[{"orbit", ",", "k"}], "]"}], ",", "1"}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"k", ",", "0", ",", 
+                   RowBox[{"w", "+", "3"}]}], "}"}]}], "]"}]}], ";", "\n", 
+              "      ", 
+              RowBox[{"Do", "[", "\n", "        ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"aa", ",", "bb", ",", "cc", ",", "dd"}], "}"}], "=", 
+                  RowBox[{"profiles", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"k", "+", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], 
+                    "]"}], "]"}]}], ";", "\n", "        ", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"RotateLeft", "[", 
+                    RowBox[{"bb", ",", "h"}], "]"}], "===", 
+                    RowBox[{"1", "-", "bb"}]}], " ", "&&", " ", 
+                    RowBox[{
+                    RowBox[{"RotateLeft", "[", 
+                    RowBox[{"cc", ",", "h"}], "]"}], "===", "cc"}], " ", "&&",
+                     " ", 
+                    RowBox[{
+                    RowBox[{"RotateLeft", "[", 
+                    RowBox[{"dd", ",", "h"}], "]"}], "===", "dd"}]}], ",", 
+                   "\n", "          ", 
+                   RowBox[{
+                    RowBox[{"ss", "=", 
+                    RowBox[{"MapThread", "[", 
+                    RowBox[{"BitOr", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"aa", ",", "bb"}], "}"}]}], "]"}]}], ";", "\n", 
+                    "          ", 
+                    RowBox[{"prev", "=", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"k", "==", "0"}], ",", "True", ",", 
+                    RowBox[{
+                    RowBox[{"RotateLeft", "[", 
+                    RowBox[{
+                    RowBox[{"profiles", "[", 
+                    RowBox[{"[", "k", "]"}], "]"}], ",", "h"}], "]"}], "=!=", 
+                    
+                    RowBox[{"profiles", "[", 
+                    RowBox[{"[", "k", "]"}], "]"}]}]}], "]"}]}], ";", "\n", 
+                    "          ", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"cases", ",", " ", 
+                    RowBox[{"<|", 
+                    RowBox[{
+                    RowBox[{"\"\<Word\>\"", "->", "a"}], ",", 
+                    RowBox[{"\"\<Column\>\"", "->", "k"}], ",", 
+                    RowBox[{"\"\<Clock\>\"", "->", "p"}], ",", "\n", 
+                    "            ", 
+                    RowBox[{"\"\<ORNonconstant\>\"", "->", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"DeleteDuplicates", "[", "ss", "]"}], "]"}], "==",
+                     "2"}], ")"}]}], ",", "\n", "            ", 
+                    RowBox[{"\"\<ORNotHalfPeriodic\>\"", "->", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"RotateLeft", "[", 
+                    RowBox[{"ss", ",", "h"}], "]"}], "=!=", "ss"}], ")"}]}], ",",
+                     "\n", "            ", 
+                    
+                    RowBox[{"\"\<PredecessorNotHalfPeriodicWhenPresent\>\"", "->",
+                     "prev"}]}], "|>"}]}], "]"}]}]}], "\n", "        ", 
+                  "]"}]}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"k", ",", "0", ",", 
+                  RowBox[{"w", "-", "1"}]}], "}"}]}], "]"}]}]}], "\n", "    ",
+             "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"a", ",", "0", ",", "511"}], "}"}]}], "]"}], ";", "\n", 
+        "  ", 
+        RowBox[{"samples", "=", 
+         RowBox[{"{", 
+          RowBox[{
+          "4", ",", "7", ",", "8", ",", "16", ",", "32", ",", "33", ",", "64",
+            ",", "160", ",", "528", ",", "529"}], "}"}]}], ";", "\n", "  ", 
+        RowBox[{"Do", "[", "\n", "    ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"w", "=", 
+            RowBox[{"IntegerLength", "[", 
+             RowBox[{"a", ",", "2"}], "]"}]}], ";", "\n", "    ", 
+           RowBox[{"initial", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"ConstantArray", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{"horizon", "+", "1"}]}], "]"}], ",", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"BitAnd", "[", 
+                 RowBox[{
+                  RowBox[{"BitShiftRight", "[", 
+                   RowBox[{"a", ",", "k"}], "]"}], ",", "1"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"k", ",", "0", ",", 
+                  RowBox[{"w", "-", "1"}]}], "}"}]}], "]"}], ",", "\n", 
+              "      ", 
+              RowBox[{"ConstantArray", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{
+                 RowBox[{"3", "*", "horizon"}], "+", "1"}]}], "]"}]}], 
+             "]"}]}], ";", "\n", "    ", 
+           RowBox[{"ca", "=", 
+            RowBox[{"CellularAutomaton", "[", 
+             RowBox[{"30", ",", "initial", ",", "horizon"}], "]"}]}], ";", 
+           " ", 
+           RowBox[{"iter", "=", 
+            RowBox[{"NestList", "[", 
+             RowBox[{"q", ",", "a", ",", "horizon"}], "]"}]}], ";", "\n", 
+           "    ", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"caChecks", ",", 
+             RowBox[{"And", "@@", 
+              RowBox[{"Flatten", "@", 
+               RowBox[{"Table", "[", "\n", "      ", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"ca", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "1"}], ",", 
+                    RowBox[{"horizon", "+", "2", "+", "k", "+", "t"}]}], 
+                    "]"}], "]"}], "==", 
+                  RowBox[{"BitAnd", "[", 
+                   RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"iter", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", "k"}], "]"}], 
+                    ",", "1"}], "]"}]}], ",", "\n", "      ", 
+                 RowBox[{"{", 
+                  RowBox[{"t", ",", "0", ",", "horizon"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"k", ",", "0", ",", 
+                   RowBox[{"w", "-", "1"}]}], "}"}]}], "]"}]}]}]}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"a", ",", "samples"}], "}"}]}], "]"}], ";", "\n", "  ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<FiniteControlsOnly\>\"", "->", "True"}], ",", 
+          RowBox[{"\"\<LeanVerifiedByThisCalculation\>\"", "->", "False"}], ",",
+           "\n", "    ", 
+          RowBox[{"\"\<FullProblemClaim\>\"", "->", "False"}], ",", 
+          RowBox[{"\"\<InitialWordsChecked\>\"", "->", "512"}], ",", "\n", 
+          "    ", 
+          RowBox[{"\"\<OnsetCasesChecked\>\"", "->", 
+           RowBox[{"Length", "[", "cases", "]"}]}], ",", 
+          RowBox[{"\"\<BuiltinRule30Cones\>\"", "->", 
+           RowBox[{"Length", "[", "samples", "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<AllPassed\>\"", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", "cases", "]"}], ">", "0"}], " ", "&&", 
+             " ", 
+             RowBox[{"And", "@@", "caChecks"}], " ", "&&", "\n", "      ", 
+             RowBox[{"And", "@@", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"Lookup", "[", 
+                RowBox[{"cases", ",", 
+                 RowBox[{"{", 
+                  
+                  RowBox[{"\"\<ORNonconstant\>\"", 
+                   ",", "\"\<ORNotHalfPeriodic\>\"", ",", "\n", 
+                   "        ", \
+"\"\<PredecessorNotHalfPeriodicWhenPresent\>\""}], "}"}]}], "]"}], "]"}]}]}], 
+            ")"}]}], ",", 
+          RowBox[{"\"\<Cases\>\"", "->", "cases"}]}], "|>"}]}]}], "\n", 
+      "]"}]}], ";"}], "\n", "\n", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"controlledResponseReport", "[", "]"}], ",", " ", 
      RowBox[{"profileCounterReport", "[", "]"}], ",", " ", 
-     RowBox[{"feedbackErasureReport", "[", "]"}]}], "}"}]}]}]], "Input",
+     RowBox[{"feedbackErasureReport", "[", "]"}], ",", " ", 
+     RowBox[{"clockMaskReport", "[", "]"}]}], "}"}]}]}]], "Input",
  CellLabel->"In[1]:= ",
- CellID->810754696,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+ CellID->1407158826,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1692,10 +1977,1935 @@ Cell[BoxData[
           RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
           RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
           RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
-         "\[RightAssociation]"}]}], "}"}]}]}], "\[RightAssociation]"}]}], 
-  "}"}]], "Output",
+         "\[RightAssociation]"}]}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"FiniteControlsOnly\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"LeanVerifiedByThisCalculation\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"InitialWordsChecked\"\>", "\[Rule]", "512"}], ",", 
+     RowBox[{"\<\"OnsetCasesChecked\"\>", "\[Rule]", "192"}], ",", 
+     RowBox[{"\<\"BuiltinRule30Cones\"\>", "\[Rule]", "10"}], ",", 
+     RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "33"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "34"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "35"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "36"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "37"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "38"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "39"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "56"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "57"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "58"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "59"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "60"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "61"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "62"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "63"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "88"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "89"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "90"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "91"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "92"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "93"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "94"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "95"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "96"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "97"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "98"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "99"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "100"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "101"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "102"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "103"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "160"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "161"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "162"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "163"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "164"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "165"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "166"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "167"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "216"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "217"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "218"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "219"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "220"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "221"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "222"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "223"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "256"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "257"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "258"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "259"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "260"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "261"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "262"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "263"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "264"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "265"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "266"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "267"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "268"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "269"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "270"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "271"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "272"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "273"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "274"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "275"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "276"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "277"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "278"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "279"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "280"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "281"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "282"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "283"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "284"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "285"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "286"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "287"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "288"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "289"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "290"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "291"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "292"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "293"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "294"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "295"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "296"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "297"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "298"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "299"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "300"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "301"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "302"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "303"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "304"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "305"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "306"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "307"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "308"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "309"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "310"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "311"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "312"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "313"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "314"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "315"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "316"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "317"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "318"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "319"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "344"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "345"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "346"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "347"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "348"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "349"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "350"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "351"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "416"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "417"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "418"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "419"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "420"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "421"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "422"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "423"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "448"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "449"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "450"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "451"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "452"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "453"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "454"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "455"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "456"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "457"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "458"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "459"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "460"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "461"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "462"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "463"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "464"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "465"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "466"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "467"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "468"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "469"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "470"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "471"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "472"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "473"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "474"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "475"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "476"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "477"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "478"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "479"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "480"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "481"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "482"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "483"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "484"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "485"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "486"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "487"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "488"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "489"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "490"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "491"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "492"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "493"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "494"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "495"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "496"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "497"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "498"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "499"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "500"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "501"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "502"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "503"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "504"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "505"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "506"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "507"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "508"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "509"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "510"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Word\"\>", "\[Rule]", "511"}], ",", 
+          RowBox[{"\<\"Column\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Clock\"\>", "\[Rule]", "32"}], ",", 
+          RowBox[{"\<\"ORNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ORNotHalfPeriodic\"\>", "\[Rule]", "True"}], ",", 
+          
+          RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
+           "True"}]}], "\[RightAssociation]"}]}], "}"}]}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
  CellLabel->"Out[1]= ",
- CellID->1909490830,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"]
+ CellID->1138490425,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"]
 }, Open  ]],
 
 Cell["\<\
@@ -1704,14 +3914,14 @@ of each infinite row. Black squares are black cells. The right tail repeats \
 from position four. The last panel's first column alternates while later \
 columns require eight times to repeat; the all-time claims are proved below.\
 \>", "Text",
- CellID->1044562475,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+ CellID->1609367578,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"profileCounterDiagram", "[", "]"}]], "Input",
  CellLabel->"In[2]:= ",
- CellID->1772362660,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+ CellID->692927338,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {InsetBox[
@@ -1873,20 +4083,20 @@ Cell[BoxData[
   PlotRange->{{0, 1032.}, {-260.177525, 0}},
   PlotRangePadding->Automatic]], "Output",
  CellLabel->"Out[2]= ",
- CellID->35498422,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"]
+ CellID->160879640,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"]
 }, Open  ]],
 
 Cell["Exact embedded proof and full kernel replay", "Section",
- CellID->1384978530,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
+ CellID->1657269721,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"],
 
 Cell["\<\
-The source below contains all three complete catalog modules, with only \
+The source below contains all four complete catalog modules, with only \
 imports, module/export wrappers and namespace names adapted for a standalone \
 file. It imports only official core modules and uses no additional axioms or \
 native decision procedures. A passing partial check does not establish an \
 official prize target.\
 \>", "Text",
- CellID->519689844,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
+ CellID->1140508347,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1896,7 +4106,7 @@ Cell[BoxData[{
    RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
   ";"}]}], "Input",
  CellLabel->"In[3]:= ",
- CellID->1609367578,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
+ CellID->496109794,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"],
 
 Cell[CellGroupData[{
 
@@ -2348,7 +4558,98 @@ SameResponse (rightPart single) (rightPart double) :=\\n  \
 \:27e8single_finite,double_finite,configurations_differ,same_actual_center,\\\
 n    same_actual_right_head,center_not_eventually_constant,right_head_not_\
 eventually_constant,\\n    initial_rights_not_sameResponse\:27e9\\n\\nend \
-Rule30Submission.Feedback\\n\>\"", ",", "\n", "  ", 
+Rule30Submission.Feedback\\n\\n/-!\\n# A local obstruction to masking the \
+first period doubling\\n\\nThis is a statement about five temporal columns \
+satisfying the triangular\\nupdate, not about the vertical center column. If \
+the second column reverses\\ncolor after an even half-period while the next \
+two repeat, the OR of the\\nfirst two columns cannot stay black forever. A \
+full-clock hypothesis on the\\nfirst column is explicit. No finite-tail \
+period-detection theorem or prize\\nproblem is proved \
+here.\\n-/\\n\\n\\n\\nnamespace Rule30Submission.Clocks\\n\\nopen \
+Rule30Submission.Response\\n\\nprivate theorem mask_zero (a ah b c d : \
+Bool)\\n    (h0 : (a || b)=true) (hh : (ah || !b)=true)\\n    (h1 : (xor a (b \
+|| c) || xor b (c || d))=true)\\n    (hh1 : (xor ah (!b || c) || xor (!b) (c \
+|| d))=true)\\n    (hk : xor a ah=false) : c=false \[And] d=false := by\\n  \
+cases a <;> cases ah <;> cases b <;> cases c <;> cases d <;> \
+simp_all\\n\\nprivate theorem difference_step (a ah b c : Bool) :\\n    xor \
+(xor a (b || c)) (xor ah (!b || c)) = xor (xor a ah) (!c) := by\\n  cases a \
+<;> cases ah <;> cases b <;> cases c <;> rfl\\n\\nprivate theorem flip_sum (k \
+b c : Bool) :\\n    xor (xor k (!c)) (xor b c) = !xor k b := by\\n  cases k \
+<;> cases b <;> cases c <;> rfl\\n\\nprivate theorem xor_not_right (a b : \
+Bool) : xor a (!b)=!xor a b := by\\n  cases a <;> cases b <;> rfl\\n\\n/-- An \
+even half-clock cannot hide this particular clock onset behind constant OR. \
+-/\\ntheorem no_constant_OR_at_onset (a b c d e : Nat \[RightArrow] Bool) (n \
+: Nat)\\n    (ha : \[ForAll] t, a (t+1)=xor (a t) (b t || c t))\\n    (hb : \
+\[ForAll] t, b (t+1)=xor (b t) (c t || d t))\\n    (hc : \[ForAll] t, c \
+(t+1)=xor (c t) (d t || e t))\\n    (haper : \[ForAll] t, a (t+2*(2*n))=a \
+t)\\n    (hanti : \[ForAll] t, b (t+2*n)=!b t)\\n    (hcper : \[ForAll] t, c \
+(t+2*n)=c t)\\n    (hdper : \[ForAll] t, d (t+2*n)=d t) :\\n    \[Not] \
+\[ForAll] t, (a t || b t)=true := by\\n  intro hor\\n  let K (t : Nat) := xor \
+(a t) (a (t+2*n))\\n  have Kstep (t : Nat) : K (t+1)=xor (K t) (!c t) := \
+by\\n    dsimp [K]\\n    rw [show t+1+2*n=(t+2*n)+1 by \
+omega,ha,ha,hanti,hcper]\\n    exact difference_step _ _ _ _\\n  have Kzero \
+(t : Nat) (hk : K t=false) : c t=false \[And] d t=false := by\\n    apply \
+mask_zero (a t) (a (t+2*n)) (b t) (c t) (d t) (hor t) ?_ ?_ ?_ hk\\n    \
+\[CenterDot] simpa only [hanti] using hor (t+2*n)\\n    \[CenterDot] simpa \
+only [ha,hb] using hor (t+1)\\n    \[CenterDot] have h := hor ((t+2*n)+1)\\n  \
+    simpa only [ha,hb,hanti,hcper,hdper] using h\\n  have cd (t : Nat) : (c t \
+|| d t)=c t := by\\n    cases hct : c t with\\n    | true => rfl\\n    | \
+false =>\\n        have hdt : d t=false := by\\n          cases hkt : K t \
+with\\n          | false => exact (Kzero t hkt).2\\n          | true =>\\n    \
+          have hnext : K (t+1)=false := by rw [Kstep,hkt,hct]; rfl\\n         \
+     have hcn := (Kzero (t+1) hnext).1\\n              rw [hc,hct] at hcn\\n  \
+            cases hdt : d t <;> cases het : e t <;> simp_all\\n        rw \
+[hdt]\\n        rfl\\n  let f (t : Nat) := xor (K t) (b t)\\n  have fstep (t \
+: Nat) : f (t+1)=!f t := by\\n    dsimp [f]\\n    rw [Kstep,hb,cd]\\n    \
+exact flip_sum _ _ _\\n  have f_even : \[ForAll] m t, f (t+2*m)=f t := by\\n  \
+  intro m\\n    induction m with\\n    | zero => intro t; rfl\\n    | succ m \
+ih =>\\n        intro t\\n        rw [show t+2*(m+1)=(t+2*m+1)+1 by \
+omega,fstep,fstep,ih]\\n        exact Bool.not_not _\\n  have Kper (t : Nat) \
+: K (t+2*n)=K t := by\\n    dsimp [K]\\n    rw [show t+2*n+2*n=t+2*(2*n) by \
+omega,haper]\\n    exact Bool.xor_comm _ _\\n  have f_anti (t : Nat) : f \
+(t+2*n)=!f t := by\\n    dsimp [f]\\n    rw [Kper,hanti]\\n    exact \
+xor_not_right _ _\\n  have he := f_even n 0\\n  rw [f_anti] at he\\n  cases \
+hf : f 0 <;> simp [hf] at he\\n\\ntheorem iterate_column_step (x : State) (k \
+t : Nat) :\\n    iterate x (t+1) k=xor (iterate x t k)\\n      (iterate x t \
+(k+1) || iterate x t (k+2)) := rfl\\n\\n/-- The OR cannot even have the \
+shorter half-clock: that would make it constant. -/\\ntheorem \
+OR_not_half_period (a b c d e : Nat \[RightArrow] Bool) (n : Nat)\\n    (ha : \
+\[ForAll] t, a (t+1)=xor (a t) (b t || c t))\\n    (hb : \[ForAll] t, b \
+(t+1)=xor (b t) (c t || d t))\\n    (hc : \[ForAll] t, c (t+1)=xor (c t) (d t \
+|| e t))\\n    (haper : \[ForAll] t, a (t+2*(2*n))=a t)\\n    (hanti : \
+\[ForAll] t, b (t+2*n)=!b t)\\n    (hcper : \[ForAll] t, c (t+2*n)=c t)\\n    \
+(hdper : \[ForAll] t, d (t+2*n)=d t) :\\n    \[Not] \[ForAll] t, (a (t+2*n) \
+|| b (t+2*n))=(a t || b t) := by\\n  intro hs\\n  apply \
+no_constant_OR_at_onset a b c d e n ha hb hc haper hanti hcper hdper\\n  \
+intro t\\n  cases hbt : b t with\\n  | true => simp\\n  | false =>\\n      \
+have ht := hs t\\n      rw [hanti,hbt] at ht\\n      simpa using \
+ht.symm\\n\\n/-- One more column to the left must retain the larger clock as \
+well. -/\\ntheorem predecessor_not_half_period (z a b c d e : Nat \
+\[RightArrow] Bool) (n : Nat)\\n    (hz : \[ForAll] t, z (t+1)=xor (z t) (a t \
+|| b t))\\n    (ha : \[ForAll] t, a (t+1)=xor (a t) (b t || c t))\\n    (hb : \
+\[ForAll] t, b (t+1)=xor (b t) (c t || d t))\\n    (hc : \[ForAll] t, c \
+(t+1)=xor (c t) (d t || e t))\\n    (haper : \[ForAll] t, a (t+2*(2*n))=a \
+t)\\n    (hanti : \[ForAll] t, b (t+2*n)=!b t)\\n    (hcper : \[ForAll] t, c \
+(t+2*n)=c t)\\n    (hdper : \[ForAll] t, d (t+2*n)=d t) :\\n    \[Not] \
+\[ForAll] t, z (t+2*n)=z t := by\\n  intro hzper\\n  apply OR_not_half_period \
+a b c d e n ha hb hc haper hanti hcper hdper\\n  intro t\\n  have h1 := hz \
+(t+2*n)\\n  rw [show t+2*n+1=(t+1)+2*n by omega,hzper,hzper,hz] at h1\\n  \
+cases hz0 : z t <;> cases ho0 : (a t || b t) <;>\\n    cases hoH : (a (t+2*n) \
+|| b (t+2*n)) <;> simp_all\\n\\n/-- Application to the actual triangular \
+orbit, with every clock premise explicit. -/\\ntheorem \
+orbit_onset_not_constant_OR (x : State) (k n : Nat)\\n    (ha : \[ForAll] t, \
+iterate x (t+2*(2*n)) k=iterate x t k)\\n    (hb : \[ForAll] t, iterate x \
+(t+2*n) (k+1)=!iterate x t (k+1))\\n    (hc : \[ForAll] t, iterate x (t+2*n) \
+(k+2)=iterate x t (k+2))\\n    (hd : \[ForAll] t, iterate x (t+2*n) \
+(k+3)=iterate x t (k+3)) :\\n    \[Not] \[ForAll] t, (iterate x t k || \
+iterate x t (k+1))=true := by\\n  apply no_constant_OR_at_onset (fun t => \
+iterate x t k)\\n    (fun t => iterate x t (k+1)) (fun t => iterate x t \
+(k+2))\\n    (fun t => iterate x t (k+3)) (fun t => iterate x t (k+4)) n\\n   \
+ (iterate_column_step x k) ?_ ?_ ha hb hc hd\\n  \[CenterDot] intro t\\n    \
+simpa only [Nat.add_assoc] using iterate_column_step x (k+1) t\\n  \
+\[CenterDot] intro t\\n    simpa only [Nat.add_assoc] using \
+iterate_column_step x (k+2) t\\n\\nend Rule30Submission.Clocks\\n\>\"", ",", 
+     "\n", "  ", 
      RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}], ",", 
      " ", 
      RowBox[{"\"\<IncludeInternal\>\"", " ", "->", " ", "True"}]}], "]"}]}], 
@@ -2362,7 +4663,7 @@ Rule30Submission.Feedback\\n\>\"", ",", "\n", "  ",
      "]"}], "[", "\"\<KernelCheck\>\"", "]"}]}], 
   ";"}], "\n", "rule30KernelCheck"}], "Input",
  CellLabel->"In[4]:= ",
- CellID->692927338,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"],
+ CellID->1897438500,ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2398,14 +4699,14 @@ Cell[BoxData[
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 238 declarations of \
-LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 251 declarations of \
+LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396275289253062788x733523\"", 
+                 "\"LeanLinkTmp33396284824939074513x464895\"", 
                   "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
@@ -2445,20 +4746,20 @@ LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 238 declarations of \
-LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 251 declarations of \
+LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396275289253062788x733523\"", 
+                 "\"LeanLinkTmp33396284824939074513x464895\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["238", "SummaryItem"]}]}, {
+                 TagBox["251", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
@@ -2483,14 +4784,14 @@ LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
   Success[
   "KernelChecked", <|
    "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
-    "MessageParameters" -> {238, "LeanLinkTmp33396275289253062788x733523"}, 
-    "Module" -> "LeanLinkTmp33396275289253062788x733523", "Declarations" -> 
-    238|>],
+    "MessageParameters" -> {251, "LeanLinkTmp33396284824939074513x464895"}, 
+    "Module" -> "LeanLinkTmp33396284824939074513x464895", "Declarations" -> 
+    251|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellLabel->"Out[4]= ",
- CellID->160879640,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"]
+ CellID->206965717,ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2519,8 +4820,11 @@ Cell[BoxData[{
       " ", "\"\<Rule30Submission.Profiles.loss_infinite\>\"", ",", 
      " ", "\"\<Rule30Submission.Feedback.white_step_erases_distinction\>\"", ",",
       " ", "\"\<Rule30Submission.Feedback.same_left_forever\>\"", ",", 
-     " ", "\"\<Rule30Submission.Feedback.finite_feedback_counterexample\>\""}]\
-, "}"}]}], ";"}], "\n", 
+     " ", "\"\<Rule30Submission.Feedback.finite_feedback_counterexample\>\"", 
+     ",", " ", "\"\<Rule30Submission.Clocks.no_constant_OR_at_onset\>\"", ",",
+      " ", "\"\<Rule30Submission.Clocks.OR_not_half_period\>\"", ",", 
+     " ", "\"\<Rule30Submission.Clocks.predecessor_not_half_period\>\""}], 
+    "}"}]}], ";"}], "\n", 
  RowBox[{"Table", "[", 
   RowBox[{
    RowBox[{"<|", 
@@ -2538,7 +4842,7 @@ Cell[BoxData[{
     RowBox[{"name", ",", " ", "responseHeadlines"}], "}"}]}], "]"}]}], "Input",\
 
  CellLabel->"In[5]:= ",
- CellID->355665354,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
+ CellID->525840340,ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2735,10 +5039,39 @@ Cell[BoxData[
      RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
-        ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}], 
-  "}"}]], "Output",
+        ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Clocks.no_constant_OR_at_onset\"\>"}], 
+     ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Clocks.OR_not_half_period\"\>"}], ",", 
+     
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.Clocks.predecessor_not_half_period\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
  CellLabel->"Out[5]= ",
- CellID->792264023,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"]
+ CellID->1708324045,ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f"]
 }, Open  ]],
 
 Cell["\<\
@@ -2746,12 +5079,12 @@ Finite-tail normal-form completeness, actual fixed-driver trace rigidity and \
 the full center-column problem remain open. No new prize essay is submitted \
 by this build.\
 \>", "Text",
- CellID->1140508347,ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0"]
+ CellID->203008389,ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10"]
 },
 LightDark->"Light",
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d"
+ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63"
 ]
 (* End of Notebook Content *)
 
@@ -2764,86 +5097,94 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
+Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
  CellID->874461601],
-Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
+Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
  CellID->36768919],
-Cell[874, 28, 700, 10, 70, "Abstract",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
+Cell[874, 28, 700, 10, 70, "Abstract",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
  CellID->1699946459],
-Cell[1567, 40, 116, 1, 70, "Section",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
+Cell[1567, 40, 116, 1, 70, "Section",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
  CellID->1535504786],
-Cell[1685, 43, 405, 6, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+Cell[1685, 43, 405, 6, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
  CellID->1208482393],
-Cell[2087, 51, 552, 8, 70, "Text",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
+Cell[2087, 51, 552, 8, 70, "Text",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
  CellID->28909615],
-Cell[2634, 61, 121, 1, 70, "Section",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
+Cell[2634, 61, 121, 1, 70, "Section",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
  CellID->193832008],
-Cell[2757, 64, 198, 4, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
+Cell[2757, 64, 198, 4, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
  CellID->684317082],
-Cell[2954, 70, 193, 4, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+Cell[2954, 70, 193, 4, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
  CellID->528485616],
-Cell[3146, 76, 544, 8, 70, "Text",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+Cell[3146, 76, 544, 8, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
  CellID->1392207227],
-Cell[3685, 86, 651, 10, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+Cell[3685, 86, 651, 10, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
  CellID->705466992],
-Cell[4329, 98, 575, 9, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+Cell[4329, 98, 575, 9, 70, "Text",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
  CellID->1350516518],
-Cell[4898, 109, 134, 1, 70, "Section",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+Cell[4898, 109, 134, 1, 70, "Section",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
  CellID->907546795],
-Cell[5034, 112, 636, 9, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+Cell[5034, 112, 636, 9, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
  CellID->814772321],
-Cell[5664, 123, 644, 9, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+Cell[5664, 123, 644, 9, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
  CellID->1054628905],
-Cell[6302, 134, 145, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+Cell[6302, 134, 145, 1, 70, "Section",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
  CellID->2043779557],
-Cell[6449, 137, 169, 3, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+Cell[6449, 137, 169, 3, 70, "Text",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
  CellID->17830494],
-Cell[6618, 142, 150, 1, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+Cell[6618, 142, 150, 1, 70, "Text",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
  CellID->1589986527],
-Cell[6770, 145, 538, 8, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+Cell[6770, 145, 538, 8, 70, "Text",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
  CellID->943101875],
-Cell[7303, 155, 464, 7, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+Cell[7303, 155, 464, 7, 70, "Text",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
  CellID->67888809],
-Cell[7763, 164, 404, 6, 70, "Text",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
+Cell[7763, 164, 404, 6, 70, "Text",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
  CellID->1432876021],
-Cell[8164, 172, 122, 1, 70, "Section",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
+Cell[8164, 172, 145, 1, 70, "Section",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
  CellID->876231958],
-Cell[8288, 175, 537, 8, 70, "Text",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
+Cell[8311, 175, 600, 9, 70, "Text",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
  CellID->1020575516],
-Cell[CellGroupData[{
-Cell[8842, 187, 25261, 546, 70, "Input",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
- CellID->810754696],
-Cell[33560, 735, 54793, 962, 70, "Output",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
- CellID->1909490830]
-}, Open  ]],
-Cell[87406, 1700, 415, 6, 70, "Text",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
+Cell[8905, 186, 447, 7, 70, "Text",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
+ CellID->1967685850],
+Cell[9348, 195, 399, 6, 70, "Text",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
  CellID->1044562475],
-Cell[CellGroupData[{
-Cell[87840, 1710, 172, 3, 70, "Input",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
- CellID->1772362660],
-Cell[88012, 1715, 7877, 160, 70, "Output",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
- CellID->35498422]
-}, Open  ]],
-Cell[95744, 1878, 139, 1, 70, "Section",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
+Cell[9744, 203, 123, 1, 70, "Section",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
+ CellID->1653200050],
+Cell[9869, 206, 699, 10, 70, "Text",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
  CellID->1384978530],
-Cell[95885, 1881, 436, 7, 70, "Text",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
- CellID->519689844],
-Cell[96317, 1890, 349, 8, 70, "Input",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
+Cell[CellGroupData[{
+Cell[10583, 220, 36615, 798, 70, "Input",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
+ CellID->1407158826],
+Cell[46403, 1020, 158002, 2887, 70, "Output",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
+ CellID->1138490425]
+}, Open  ]],
+Cell[201533, 3910, 415, 6, 70, "Text",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
  CellID->1609367578],
 Cell[CellGroupData[{
-Cell[96683, 1902, 34167, 462, 70, "Input",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
+Cell[201967, 3920, 171, 3, 70, "Input",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
  CellID->692927338],
-Cell[130391, 2366, 6022, 126, 70, "Output",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
+Cell[202138, 3925, 7878, 160, 70, "Output",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
  CellID->160879640]
 }, Open  ]],
+Cell[209871, 4088, 139, 1, 70, "Section",ExpressionUUID->"6ea251ed-865f-e03c-1652-48b733ebb306",
+ CellID->1657269721],
+Cell[210012, 4091, 436, 7, 70, "Text",ExpressionUUID->"25a0bfbe-b1d4-2428-535f-36fbc0668f72",
+ CellID->1140508347],
+Cell[210444, 4100, 348, 8, 70, "Input",ExpressionUUID->"04786d0e-016a-d127-2c07-8568b01ca00d",
+ CellID->496109794],
 Cell[CellGroupData[{
-Cell[136324, 2497, 2360, 43, 70, "Input",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
- CellID->355665354],
-Cell[138644, 2542, 8783, 198, 70, "Output",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
- CellID->792264023]
+Cell[210809, 4112, 41082, 553, 70, "Input",ExpressionUUID->"2d15b43a-cd49-5244-5b2a-2e67e4fc20ae",
+ CellID->1897438500],
+Cell[251341, 4667, 6022, 126, 70, "Output",ExpressionUUID->"2d1ff276-b82a-c3ca-5b24-f43039dc9110",
+ CellID->206965717]
 }, Open  ]],
-Cell[147244, 2743, 276, 5, 70, "Text",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
- CellID->1140508347]
+Cell[CellGroupData[{
+Cell[257274, 4798, 2590, 46, 70, "Input",ExpressionUUID->"14fd1512-f616-8834-3c82-8d5f83a0db1e",
+ CellID->525840340],
+Cell[259821, 4846, 10035, 227, 70, "Output",ExpressionUUID->"66c67103-72a1-9427-0efe-696d0755ff0d",
+ CellID->1708324045]
+}, Open  ]],
+Cell[269644, 5076, 275, 5, 70, "Text",ExpressionUUID->"48c794f4-84f6-2bfc-78fc-0dbe2c8379c6",
+ CellID->203008389]
 }
 ]
 *)
