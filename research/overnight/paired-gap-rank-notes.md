@@ -76,6 +76,10 @@ multi-stage ranks, or the prize statement. No result in these files is used
 as a Lean premise. Increasing the fitting horizon cannot repair this cone's
 exact obstruction.
 
+A subsequent [return-time experiment](return-gap-rank-notes.md) permits the
+score to rise between consecutive common rising edges. A separate exact
+certificate rejects this fixed feature cone under that relaxed condition too.
+
 ## Reproduction
 
 From the repository root, discovery uses NumPy, SciPy and SymPy:
