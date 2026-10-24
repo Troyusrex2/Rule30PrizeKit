@@ -1,0 +1,193 @@
+{
+  "snapshots": [
+    {
+      "time_samples": 1000,
+      "distinct": {
+        "20": 1000,
+        "21": 1000,
+        "22": 1000,
+        "23": 1000,
+        "24": 1000
+      },
+      "seconds": 0.0
+    },
+    {
+      "time_samples": 10000,
+      "distinct": {
+        "20": 9962,
+        "21": 9981,
+        "22": 9992,
+        "23": 9996,
+        "24": 9998
+      },
+      "seconds": 0.047
+    },
+    {
+      "time_samples": 100000,
+      "distinct": {
+        "20": 95193,
+        "21": 97553,
+        "22": 98785,
+        "23": 99383,
+        "24": 99725
+      },
+      "seconds": 1.765
+    },
+    {
+      "time_samples": 250000,
+      "distinct": {
+        "20": 222299,
+        "21": 235626,
+        "22": 242784,
+        "23": 246327,
+        "24": 248217
+      },
+      "seconds": 9.828
+    },
+    {
+      "time_samples": 500000,
+      "distinct": {
+        "20": 397818,
+        "21": 444901,
+        "22": 471731,
+        "23": 485563,
+        "24": 492896
+      },
+      "seconds": 37.547
+    },
+    {
+      "time_samples": 750000,
+      "distinct": {
+        "20": 535782,
+        "21": 630748,
+        "22": 686977,
+        "23": 717554,
+        "24": 733574
+      },
+      "seconds": 83.156
+    },
+    {
+      "time_samples": 1000000,
+      "distinct": {
+        "20": 644905,
+        "21": 795627,
+        "22": 890245,
+        "23": 942984,
+        "24": 971022
+      },
+      "seconds": 160.906
+    }
+  ],
+  "closure": [
+    {
+      "width": 1,
+      "closure_size": 2,
+      "round_sizes": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 2,
+      "closure_size": 4,
+      "round_sizes": [
+        4,
+        4
+      ]
+    },
+    {
+      "width": 3,
+      "closure_size": 8,
+      "round_sizes": [
+        4,
+        8,
+        8
+      ]
+    },
+    {
+      "width": 4,
+      "closure_size": 16,
+      "round_sizes": [
+        4,
+        12,
+        16,
+        16
+      ]
+    },
+    {
+      "width": 5,
+      "closure_size": 32,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        32
+      ]
+    },
+    {
+      "width": 6,
+      "closure_size": 64,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        64,
+        64
+      ]
+    },
+    {
+      "width": 7,
+      "closure_size": 128,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        96,
+        128,
+        128
+      ]
+    },
+    {
+      "width": 8,
+      "closure_size": 256,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        96,
+        224,
+        256,
+        256
+      ]
+    },
+    {
+      "width": 9,
+      "closure_size": 512,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        96,
+        288,
+        512,
+        512
+      ]
+    },
+    {
+      "width": 10,
+      "closure_size": 1024,
+      "round_sizes": [
+        4,
+        12,
+        32,
+        96,
+        288,
+        704,
+        1024,
+        1024
+      ]
+    }
+  ],
+  "limitation": "Finite absence is not future impossibility. Closure under arbitrary exterior bits fills every word, already from zero.",
+  "seconds": 160.937
+}

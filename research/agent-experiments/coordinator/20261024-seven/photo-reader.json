@@ -1,0 +1,179 @@
+{
+  "records": [
+    {
+      "top_matched": false,
+      "low_features_removed": false,
+      "model": "tree2",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.875,
+      "selected_features": [
+        "normalized_SeedLow",
+        "trailing_zeros"
+      ]
+    },
+    {
+      "top_matched": false,
+      "low_features_removed": false,
+      "model": "five-feature-logistic",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.8072916666666667,
+      "selected_features": [
+        "normalized_SeedLow",
+        "trailing_zeros",
+        "low_k2_word1",
+        "top_k3_word6",
+        "top_k4_word7"
+      ]
+    },
+    {
+      "top_matched": false,
+      "low_features_removed": true,
+      "model": "tree2",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.8020833333333333,
+      "selected_features": [
+        "top_k4_word7",
+        "top_k4_word9"
+      ]
+    },
+    {
+      "top_matched": false,
+      "low_features_removed": true,
+      "model": "five-feature-logistic",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.8958333333333333,
+      "selected_features": [
+        "top_k3_word6",
+        "top_k4_word7",
+        "top_k4_word9",
+        "top_k4_word10",
+        "top_k4_word12"
+      ]
+    },
+    {
+      "top_matched": true,
+      "low_features_removed": false,
+      "model": "tree2",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.8756510416666667,
+      "selected_features": [
+        "normalized_SeedLow",
+        "trailing_zeros"
+      ]
+    },
+    {
+      "top_matched": true,
+      "low_features_removed": false,
+      "model": "five-feature-logistic",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.8131510416666667,
+      "selected_features": [
+        "normalized_SeedLow",
+        "trailing_zeros",
+        "low_k2_word0",
+        "low_k2_word1",
+        "low_k3_word0"
+      ]
+    },
+    {
+      "top_matched": true,
+      "low_features_removed": true,
+      "model": "tree2",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.5,
+      "selected_features": [
+        "top_k3_word3",
+        "top_k4_word7",
+        "top_k3_word0"
+      ]
+    },
+    {
+      "top_matched": true,
+      "low_features_removed": true,
+      "model": "five-feature-logistic",
+      "train_rows": 1344,
+      "held_out_rows": 1536,
+      "train_T": [
+        12,
+        95
+      ],
+      "test_T": [
+        96,
+        191
+      ],
+      "ood_balanced_accuracy": 0.5,
+      "selected_features": [
+        "top_k4_word11",
+        "top_k4_word12",
+        "top_k4_word13",
+        "top_k4_word14",
+        "top_k4_word15"
+      ]
+    }
+  ],
+  "negative_family": "explicit same-width stripe twins; both random-top and genuine-top-matched",
+  "limitation": "This labels orbit membership, not all infinite-trace equivalence. Separating the sampled stripe grammar cannot prove canonical separation."
+}

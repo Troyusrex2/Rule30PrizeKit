@@ -1,0 +1,27 @@
+N = 400000
+determinism link  c(t+1) = l(t) XOR (c(t) OR r(t))  holds on all 399999 steps: True
+centre bit: fraction of ones 0.50108
+
+letter (l,c,r) -> centre it writes : count     share
+  000 -> 0 :    49580   0.12395
+  001 -> 1 :    49948   0.12487
+  010 -> 1 :    50174   0.12543
+  011 -> 1 :    50192   0.12548
+  100 -> 1 :    50119   0.12530
+  101 -> 0 :    49920   0.12480
+  110 -> 0 :    50187   0.12547
+  111 -> 0 :    49880   0.12470
+centre=0 is written by 4 distinct letters, 199567 times; split ['0.248', '0.250', '0.251', '0.250']
+centre=1 is written by 4 distinct letters, 200433 times; split ['0.249', '0.250', '0.250', '0.250']
+
+stored column, ceiling 1 bit:
+  H(bit(t+1) | last 1 bits)     = 1.0000
+  H(bit(t+1) | last 4 bits)     = 1.0000
+  H(bit(t+1) | last 8 bits)     = 0.9995
+witness column, ceiling 2 bits (one bit of each letter is determined):
+  H(w(t+1)   | last 1 witnesses) = 1.5001
+  H(w(t+1)   | last 2 witnesses) = 1.3267
+  H(w(t+1)   | last 3 witnesses) = 1.2941
+  H(w(t+1)   | last 4 witnesses) = 1.2719
+
+Note: the plug-in estimator is biased DOWNWARD as the context grows (8^4 = 4096 contexts at k=4). Only the k=1 witness figure is sample-robust here.

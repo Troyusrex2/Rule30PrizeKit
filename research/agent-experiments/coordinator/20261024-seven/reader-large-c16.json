@@ -1,0 +1,66 @@
+{
+  "width": 32,
+  "center": 16,
+  "horizon": 128,
+  "seed": 307043,
+  "train": 40000,
+  "validation": 8000,
+  "test": 12000,
+  "disjoint_row_values": true,
+  "balanced_classes_per_split": true,
+  "models": [
+    {
+      "model": "parity-forest",
+      "train_accuracy": 0.97675,
+      "validation_accuracy": 0.49612500000000004,
+      "test_accuracy": 0.5075833333333333
+    },
+    {
+      "model": "mlp-raw",
+      "epochs": 17,
+      "validation_history": [
+        0.504625,
+        0.501,
+        0.506625,
+        0.5,
+        0.496,
+        0.502,
+        0.49624999999999997,
+        0.504625,
+        0.509125,
+        0.500625,
+        0.5041249999999999,
+        0.507125,
+        0.5055,
+        0.497375,
+        0.504375,
+        0.499,
+        0.5001249999999999
+      ],
+      "train_accuracy": 0.6385,
+      "validation_accuracy": 0.509125,
+      "test_accuracy": 0.5039166666666667
+    },
+    {
+      "model": "mlp-local-parity",
+      "epochs": 10,
+      "validation_history": [
+        0.50325,
+        0.507375,
+        0.503625,
+        0.504125,
+        0.5045,
+        0.500375,
+        0.506125,
+        0.497375,
+        0.504625,
+        0.49787499999999996
+      ],
+      "train_accuracy": 0.530375,
+      "validation_accuracy": 0.507375,
+      "test_accuracy": 0.4970833333333333
+    }
+  ],
+  "seconds": 13.594,
+  "full_problem_solved": false
+}

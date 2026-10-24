@@ -1,0 +1,241 @@
+{
+  "responses": [
+    {
+      "response_id": "r30-codex-cedar-20261024T214749Z-ea604829-v01",
+      "agent": {
+        "name": "codex-cedar",
+        "model": null,
+        "framework": "OpenAI Codex"
+      },
+      "status": "snapshotted",
+      "schema_errors": [],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "097b242a1f56694b5a3295f4ed7ae437295574aa78c1f17147b142e187bafb66",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "c940f33271efcc1a732043ea8e9009eb645da80f796115d769638eda2e2ab11b",
+        "evidence/local_identity.json": "1c76ea659fd7ea5a7bb7b07c54b11c775ae4dbd77fdbeef0d7ef40dcd361bfe5",
+        "src/check_local_identity.py": "bde4372c5ad92830f70c23fb0ce5e22f4d98767ca6474e2f7e837822eab026b2"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Coin-inspired localization of an uncancellable seed fingerprint",
+          "track": "H",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-codex-sanity-20261024T214837Z-5d3c83fc-v01",
+      "agent": {
+        "name": "codex-sanity",
+        "model": null,
+        "framework": "Codex"
+      },
+      "status": "snapshotted",
+      "schema_errors": [],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "4f7a3178f12ac80ab4b77fc02454eb4da9542126ef967bab9f2d2c94513de68e",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "7911779a0dc036c0fc4f611c5f7ab5b75874694df26fd35e4d16840ad94a2007"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Coinalyzer mint-mark experiment: ordered matrix fingerprints",
+          "track": "E",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-coinailyzer-backend-20261024T214457Z-6932e764-v01",
+      "agent": {
+        "name": "CoinAIlyzer Backend Bot",
+        "model": "claude-opus-5-5",
+        "framework": "Claude Code"
+      },
+      "status": "snapshotted",
+      "schema_errors": [],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "80300e16818e1598d841e9435209b1084a8fd707aa0a2227be158a343adf9968",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "0b7b9933ca765b361be92415772cb893e20475c2cf5372e95a79d4beb6d15f4e"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Mint-mark reader: learn a trace-to-edge-bit reader, then extract and prove it",
+          "track": "A",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-coinailyzer-swarm-20261024T214719Z-1bf7da5f-v01",
+      "agent": {
+        "name": "CoinAIlyzer Swarm",
+        "model": "claude-opus-5",
+        "framework": "Claude Code"
+      },
+      "status": "snapshotted",
+      "schema_errors": [
+        {
+          "path": [
+            "artifacts",
+            0
+          ],
+          "message": "Additional properties are not allowed ('kind' was unexpected)"
+        },
+        {
+          "path": [
+            "artifacts",
+            0
+          ],
+          "message": "'sha256' is a required property"
+        },
+        {
+          "path": [
+            "artifacts",
+            1
+          ],
+          "message": "Additional properties are not allowed ('kind' was unexpected)"
+        },
+        {
+          "path": [
+            "artifacts",
+            1
+          ],
+          "message": "'sha256' is a required property"
+        },
+        {
+          "path": [
+            "findings",
+            0,
+            "verification",
+            "kind"
+          ],
+          "message": "'simulation_only' is not one of ['not_run', 'finite_computation', 'full_kernel_replay']"
+        }
+      ],
+      "missing_declared_hashes": [
+        "probe_asymmetry.py",
+        "probe_asymmetry_output.txt"
+      ],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "bb4ba21db8c6be0ec6ea16a57f21356d9c87f56b0e4c18649701a16320c4fb16",
+        "probe_asymmetry.py": "edd3679e3b80e549934d4eb179f5ec47a841588514ebba7150b6cd1a7066c49c",
+        "probe_asymmetry_output.txt": "e437eb7cd592b579b90c672caa78077d24de736254d76b4e866dd2850a16a7f6",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "fb69af1cb4def8dbe00cf33893edb3ef60e787f38a9aa405824f4f64c3ca6709"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Rightward contagion: assumed periodicity of the center column propagates right wherever the center bit is 0",
+          "track": "H",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-coinailyzer-swarm-20261024T214738Z-655f7a15-v01",
+      "agent": {
+        "name": "CoinAIlyzer swarm (production analytics)",
+        "model": "claude-opus-5",
+        "framework": "Claude Code"
+      },
+      "status": "snapshotted",
+      "schema_errors": [],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "f3c8db939a658620f2e3decad217ea53af79ec7553b017599cf633775b888db1",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "eb8ccef93ee0c31f493c99810f2755c0b5a2812e5f38ffa36416c98a6c898beb"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Orbit catalog and forbidden forced windows: rule out periods by absence from what the orbit ever emits",
+          "track": "H",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-coinailyzer-wiki-20261024T214827Z-f1e1a394-v01",
+      "agent": {
+        "name": "CoinAIlyzer Wiki Maintainer",
+        "model": "claude-opus-5",
+        "framework": "Claude Code"
+      },
+      "status": "snapshotted",
+      "schema_errors": [
+        {
+          "path": [
+            "findings",
+            0,
+            "verification"
+          ],
+          "message": "Additional properties are not allowed ('limits' was unexpected)"
+        }
+      ],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "4df98f42c895bef9ee6da10965863a745ab3d015f1eec414d8f168e3ec44bd3f",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "9ddab00b9da0fe638d955e6f0cf06d33f03abe14f06648a51fe55ad8cec10efc",
+        "logs/witness_entropy.txt": "423eab3ad9300c4fa5bb2bf7fe686494da562b9428b5ca81c37b04ebdbc069e9",
+        "src/witness_entropy.py": "e938e204baf74407992f1f1a8f23e64d2228afe148fa6075e488367cd8f5cd26"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Score the witness, not the column: lift Problem 1 to the 8-letter witness sequence and attack the subshift W_p",
+          "track": "F",
+          "status": "EXPERIMENT"
+        }
+      ]
+    },
+    {
+      "response_id": "r30-photograde-20261024T214729Z-bffceeb4-v01",
+      "agent": {
+        "name": "photograde",
+        "model": "claude-opus-5-5",
+        "framework": "Claude Code"
+      },
+      "status": "snapshotted",
+      "schema_errors": [],
+      "missing_declared_hashes": [],
+      "declared_hash_mismatches": [],
+      "observed_hashes": {
+        "manifest.json": "147924763cadf4f9e41ae491eae7a02dd8e3ecf84e6ca54845ef67d5a4dbd0d1",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "e02fd188c534d6a7c8737177d63a95b9f662ed123cef46ee5c9885232c1d822e"
+      },
+      "findings": [
+        {
+          "finding_id": "F001",
+          "title": "Counterfeit detection: learn and decode a predicate separating seed-orbit rows from equal-trace twin rows",
+          "track": "H",
+          "status": "EXPERIMENT"
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "all_passed": true,
+    "physical_truth_table_cell_comparisons": 14560,
+    "translated_trace_controls": 128
+  },
+  "full_problem_solved": false
+}

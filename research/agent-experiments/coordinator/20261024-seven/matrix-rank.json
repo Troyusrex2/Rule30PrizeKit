@@ -1,0 +1,227 @@
+{
+  "seed": 307025,
+  "tested": 100000,
+  "constraints": 23,
+  "small_bank_size": 40,
+  "scope": "50000 sampled invertible {-1,0,1} tuples; 50000 sampled {-2,-1,0,1,2} tuples",
+  "best_candidates": [
+    {
+      "trial": 0,
+      "passed_prefix": 0,
+      "matrices": [
+        [
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "counterexample": {
+        "a": 16,
+        "b": 401,
+        "c": 4,
+        "rank_before": 12,
+        "rank_after": 20
+      }
+    },
+    {
+      "trial": 2,
+      "passed_prefix": 2,
+      "matrices": [
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "counterexample": {
+        "a": 6416,
+        "b": 102849,
+        "c": 8,
+        "rank_before": 2,
+        "rank_after": 29
+      }
+    },
+    {
+      "trial": 3,
+      "passed_prefix": 3,
+      "matrices": [
+        [
+          -1,
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "counterexample": {
+        "a": 256,
+        "b": 102849,
+        "c": 8,
+        "rank_before": 1,
+        "rank_after": 2
+      }
+    },
+    {
+      "trial": 23,
+      "passed_prefix": 4,
+      "matrices": [
+        [
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "counterexample": {
+        "a": 28528,
+        "b": 456263,
+        "c": 9,
+        "rank_before": 2,
+        "rank_after": 5
+      }
+    },
+    {
+      "trial": 36,
+      "passed_prefix": 10,
+      "matrices": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          -1
+        ]
+      ],
+      "counterexample": {
+        "a": 1685271616,
+        "b": 107568396185,
+        "c": 18,
+        "rank_before": 6,
+        "rank_after": 210
+      }
+    }
+  ],
+  "survivors": [],
+  "seconds": 2.0,
+  "limitation": "No survivor does not exclude unsampled matrices, larger dimensions, or other rank functions."
+}

@@ -1,0 +1,67 @@
+{
+  "width": 32,
+  "center": 1,
+  "horizon": 128,
+  "seed": 307028,
+  "train": 40000,
+  "validation": 8000,
+  "test": 12000,
+  "disjoint_row_values": true,
+  "balanced_classes_per_split": true,
+  "models": [
+    {
+      "model": "parity-forest",
+      "train_accuracy": 0.8930750000000001,
+      "validation_accuracy": 0.743125,
+      "test_accuracy": 0.7430833333333333
+    },
+    {
+      "model": "mlp-raw",
+      "epochs": 12,
+      "validation_history": [
+        0.512375,
+        0.55825,
+        0.74375,
+        0.745,
+        0.74475,
+        0.73325,
+        0.7413749999999999,
+        0.74475,
+        0.7435,
+        0.74425,
+        0.7226250000000001,
+        0.73725
+      ],
+      "train_accuracy": 0.751425,
+      "validation_accuracy": 0.745,
+      "test_accuracy": 0.7433333333333334,
+      "hard_subset_test_accuracy": 0.4993257328990228
+    },
+    {
+      "model": "mlp-local-parity",
+      "epochs": 14,
+      "validation_history": [
+        0.6936249999999999,
+        0.7402500000000001,
+        0.740875,
+        0.7435,
+        0.740375,
+        0.744875,
+        0.742375,
+        0.742125,
+        0.7424999999999999,
+        0.744875,
+        0.67525,
+        0.74475,
+        0.7155,
+        0.7144999999999999
+      ],
+      "train_accuracy": 0.751125,
+      "validation_accuracy": 0.744875,
+      "test_accuracy": 0.7440833333333333,
+      "hard_subset_test_accuracy": 0.4999166666666667
+    }
+  ],
+  "seconds": 13.578,
+  "full_problem_solved": false
+}
