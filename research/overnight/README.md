@@ -267,6 +267,15 @@ period-ten and period-twelve cases reached that cap and remain unknown.
 The completed cycles did not refute the proposed variation estimate. Those
 ordinary integer calculations are not used as Lean premises.
 
+The follow-up `spaced_density_potential.py` asks whether a nonnegative local
+potential could force positive initial black density under the newly certified
+gate restrictions. Its finite fits are not proofs. For minimum spacing three,
+the radius-four depth-49 fit failed at depth 73. For exact spacings three or
+five, the depth-49 fits failed at depths 59 and 52. At training depth 97, the
+radius-three LP was infeasible and the radius-four solver returned unknown,
+not infeasible. The reports retain those distinctions; no candidate is accepted
+and no density or finite-left-support conclusion follows.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
