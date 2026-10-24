@@ -2665,7 +2665,13 @@ with Turing machines reading n. Notes:
   (verbal: none in time o(n)), with `problem3Verbal_of_problem3`. A machine whose states are the
   2-kernel computes every 2-automatic sequence in |bin n| + 1 = O(log n) steps
   (`decidesBinInTime_kernelTM`), so `not_isAutomatic_of_problem3Verbal`, `problem1_of_problem3Verbal` and
-  `problem1_of_problem3` hold: the chain above, formally.
+  `problem1_of_problem3` hold: the chain above, formally. The kit's own statements, in
+  [Rule30Problem3](../lean/Ruliology/CellularAutomata/Rule30Problem3.lean), use a machine with
+  numbered states and symbols that halts by a transition, and add `Problem3Robust`, no machine in
+  time n^o(1), the version that does not depend on the model. `OfTM.ofTM` runs a machine of
+  OneTapeGap there one step slower (`OfTM.computes_ofTM`), so the kit's statements imply the ones
+  here (`problem3_of_kit`, `problem3Verbal_of_kit`), and `Problem3Robust` implies Problem 1
+  (`problem1_of_problem3Robust`).
 - Its circuit-complexity strengthenings are beyond current lower-bound techniques [LY22], [FGHK16],
   and natural proofs are a barrier [RR97].
 - In the query model the t-step map is provably linear. A decision tree that reads cells of the

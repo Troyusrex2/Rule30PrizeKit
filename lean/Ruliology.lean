@@ -57,6 +57,7 @@ public import Ruliology.CellularAutomata.Rule30PackedReconstruction
 public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexample
 public import Ruliology.CellularAutomata.Rule30DrivenPrefix
 public import Ruliology.CellularAutomata.Rule30ExactReturn
+public import Ruliology.CellularAutomata.Rule30Problem3
 
 /-!
 # Rule 30 Prize: Lean snapshot
