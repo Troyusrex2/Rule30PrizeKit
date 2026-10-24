@@ -51,6 +51,7 @@ public import Ruliology.CellularAutomata.Rule30FiniteBlackRunBlocks
 public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
 public import Ruliology.CellularAutomata.Rule30FiniteWhiteRuns
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour
+public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete
 public import Ruliology.CellularAutomata.Rule30WhiteEnd
 public import Ruliology.CellularAutomata.Rule30FiveTail
 public import Ruliology.CellularAutomata.Rule30SuffixFamilies
