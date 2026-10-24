@@ -109,6 +109,7 @@ Regenerate with `python3 equivalents/scripts/gen_check_axioms.py`. -/
 #print axioms Rule30Equivalents.PresburgerExpansion.problem1_of_mul_definable
 #print axioms Rule30Equivalents.ProblemThree.problem1_of_problem3Verbal
 #print axioms Rule30Equivalents.ProblemThree.problem1_of_problem3
+#print axioms Rule30Equivalents.ProblemThree.problem1_of_problem3Robust
 #print axioms Rule30Equivalents.ProblemTwo.problem2_iff_tendsto
 #print axioms Rule30Equivalents.ProblemTwo.problem2_iff_abel
 #print axioms Rule30Equivalents.ProblemTwo.problem2_iff_simplyNormal

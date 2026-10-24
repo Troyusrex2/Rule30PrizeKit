@@ -55,6 +55,7 @@ public import Ruliology.CellularAutomata.Rule30WhiteEnd
 public import Ruliology.CellularAutomata.Rule30FiveTailResearch
 public import Ruliology.CellularAutomata.Rule30SuffixFamiliesResearch
 public import Ruliology.CellularAutomata.Rule30BackwardVacuumResearch
+public import Ruliology.CellularAutomata.Rule30Problem3
 
 /-!
 # Rule 30 Prize: Lean snapshot
