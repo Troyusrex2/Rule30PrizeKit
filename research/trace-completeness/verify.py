@@ -1,4 +1,4 @@
-"""Fully replay the forcing laws, horizon obstructions, and inverse trace code."""
+"""Fully replay the trace laws, obstructions, inverse code, and seed reduction."""
 import argparse
 import hashlib
 import importlib.util
@@ -20,7 +20,13 @@ ITEMS=[('Rule30PairedForcingResearch',['local_polarization','paired_difference_s
           'InverseTrace.inversePrefix_unique']),
        ('Rule30EdgeHorizonObstructionResearch',['pair13_prefix','pair13_difference',
           'pair13_distinct_edges','edge_horizon_2n_minus_c_counterexample',
-          'edge_horizon_2n_minus_one_counterexample'])]
+          'edge_horizon_2n_minus_one_counterexample']),
+       ('Rule30SeedBoundaryResearch',['SeedBoundary.seedLow_phiRows',
+          'SeedBoundary.seedLow_stripe_trivial','SeedBoundary.seedLow_even_never_stripe',
+          'SeedBoundary.period_pair_never_stripe','SeedBoundary.seedRows_sound',
+          'SeedBoundary.aligned_seed_read','SeedBoundary.period_pair_left_outside',
+          'SeedBoundary.periodic_center_forces_seed_even_collision',
+          'SeedBoundary.problem1_of_seedLow_even_left_separation'])]
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

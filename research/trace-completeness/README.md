@@ -2,7 +2,8 @@
 
 **Problem 1 and EdgeObservable remain open.** This checkpoint records exact
 paired-row identities, a proved obstruction to one proposed finite recovery
-bound, arbitrary-width inverse trace codes, and finite falsification experiments. Research and formalization by
+bound, arbitrary-width inverse trace codes, a seed-boundary reduction, and
+finite falsification experiments. Research and formalization by
 OpenAI Codex, working with Troy Lowry.
 
 The existing kit's `Rule30TraceEdge.problem1_of_edgeObservable` proves that
@@ -55,11 +56,12 @@ Both rows have the same highest bit, hence the same physical left edge.
 The example therefore rejects the proposed full-row horizon without
 refuting an edge-only bound or EdgeObservable.
 
-All four proof modules passed full replay with the unchanged official checker
+All five proof modules passed full replay with the unchanged official checker
 at `2f63afda261888e04ec57237290e723190914a1d`: **9 forcing-law declarations,
 8 full-row counterexample declarations, 52 inverse-code declarations, and
-9 edge-horizon obstruction declarations**, with eighteen selected headlines and
-only standard axioms. See [the complete reports](evidence/report.json).
+9 edge-horizon obstruction declarations, and 72 seed-boundary declarations**,
+with twenty-seven selected headlines and only standard axioms. See
+[the complete reports](evidence/report.json).
 
 ## Rejected tighter edge horizons
 
@@ -74,6 +76,53 @@ both proposed horizons are 13 for this pair. This is an edge-only obstruction,
 unlike the same-edge pair 33/45 above. It does not refute `2*n+2`, contradict
 EdgeObservable, or settle a prize problem. The complete prefix, next difference,
 and the two rejected universal bounds are kernel-checked.
+
+## The single seed has no nontrivial stripe partner
+
+`Rule30SeedBoundaryResearch.lean` proves an unbounded restriction on the
+single-seed route. Define `SeedLow(a)` by bit zero being black and bits one
+and two being equal. In low-to-high order, those three bits are `(1,0,0)` or
+`(1,1,1)`. Every packed row `Phi^t(1)` lies in this class, for every time `t`.
+
+`seedLow_stripe_trivial` proves that a stripe-related partner of **any** row
+in this class is that same row. Both the row size and center index are
+unrestricted. The proof uses the exact stripe grammar: after either of these
+three-bit prefixes the tail parser is permanently dead. A two-bit eligible
+cut would require unequal bits one and two; a one-bit cut fixes both entire
+rows. The class is preserved by `Phi` because bit zero stays black while
+bits one and two both flip.
+
+For a hypothetical eventual period with onset `T` and positive period `P`,
+the two rows must first be aligned to a common moving right frame:
+
+```text
+a = Phi^T(1) << P       b = Phi^(T+P)(1)       c = T+P.
+```
+
+Row `a` is even, and row `b` has `SeedLow`. `period_pair_never_stripe` proves
+that their future rows cannot enter the stripe relation at **any** time or
+center. Thus the known stripe ambiguity cannot explain a periodic seed trace.
+This does not establish that the traces eventually differ: completeness or
+another separation argument is still required.
+
+The same module formalizes a more restricted sufficient condition:
+`SeedLowEvenLeftSeparation`. It asks only about nonzero even rows `a`, rows
+`b` with `SeedLow`, and a black bit of `b` beyond every black bit of `a`.
+It asserts that these rows cannot share an entire center trace. **This
+condition is OPEN.** It does not demand full-row recovery or address pairs
+with the same left edge.
+
+`periodic_center_forces_seed_even_collision` proves that any eventual seed
+period, with arbitrary onset and positive period, supplies exactly such a
+pair. Its packed/physical correspondence, shift alignment, and left-edge
+witness are proved in the module. Consequently
+`problem1_of_seedLow_even_left_separation` concludes the exact official
+`Rule30Prize.Problem1` **conditional on that open hypothesis**. The hypothesis
+has not been proved or supplied; this is not an unconditional prize solution.
+
+Independent physical truth-table controls compare 2695 cells and 819 aligned
+row pairs (1638 center observations). They check the coordinate interpretation,
+not the open separation statement. See [the controls](seed-boundary-controls.json).
 
 ## Exact inverse codes, with the right prefix supplied
 
@@ -189,10 +238,11 @@ python research/trace-completeness/inverse_section_probe.py
 python research/trace-completeness/vector_edge_horizon_probe.py
 python research/trace-completeness/vector_edge_horizon_probe.py --widths 24 --centers 1 --output research/trace-completeness/vector-edge-c1-probe.json
 python research/trace-completeness/solver_edge_horizon_probe.py
+python research/trace-completeness/control_seed_boundary.py
 ```
 
 The proof runner checks prerequisite source hashes and the original checker,
-guards every owned compiler/replay process, and freshly replays all four modules.
+guards every owned compiler/replay process, and freshly replays all five modules.
 The enumeration and gap probes have separate time and memory guards and report
 partial scope on interruption. The section probe uses the fixed workloads
 described above. Logs and Python caches are ignored.
