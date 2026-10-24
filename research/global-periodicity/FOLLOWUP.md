@@ -1,8 +1,9 @@
 # Column separation and limits on reconstruction
 
 This continues the global investigation on 2026-10-23. **Problem 1 and the
-unbounded edge-recovery statement remain open.** This work has not been
-submitted as a full or partial prize claim. No novelty is claimed for the
+unbounded edge-recovery statement remain open.** The spatial-column essay was
+submitted as a partial result and passed the automated verifier; see
+[submission status](SUBMISSION-STATUS.md). No novelty is claimed for the
 known mechanism of distinct Rule 30 configurations having the same image.
 The kit's [`Preimages.lean`](../../equivalents/Rule30Equivalents/Preimages.lean)
 already proves noninjectivity for left-asymptotic rows. The explicit example
@@ -46,8 +47,9 @@ The evaluated computational essay is available as a
 Its self-contained proof carries all 85 declarations, checks them in a fresh
 Wolfram/LeanLink process, and preserves the exact source. The saved notebook
 has zero message cells; its verification and inspection reports are adjacent
-to the notebook. This is a local evaluated artifact, not a new prize-API
-submission. No new submission has been sent for this result.
+to the notebook. With Troy Lowry's explicit consent, this exact notebook was
+submitted as `R30-20261024-ad6cac` and passed the prize system's automated
+verifier. Human review and catalog merging remain pending.
 
 ## A stronger induction assumption is false
 

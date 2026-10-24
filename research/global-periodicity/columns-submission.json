@@ -1,0 +1,77 @@
+{
+  "id": "R30-20261024-ad6cac",
+  "title": "Distinct spatial column traces with an explicit uniform bound",
+  "claim": "partial",
+  "problem": "1",
+  "authors": [
+    "Troy Lowry",
+    "OpenAI Codex"
+  ],
+  "explicit_human_consent": true,
+  "status": "Lean Verified",
+  "submitted": "2026-10-24T00:16:15Z",
+  "page": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-ad6cac",
+  "repository": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/6",
+  "tags": [],
+  "kitContribution": null,
+  "notebook_sha256": "97924ac02eecfa9e1d3993a8485df1a2070bd843cfa54df31cac67ad6fdaa8c0",
+  "check": {
+    "state": "passed",
+    "detail": "Kernel replay passed; standard axioms only.",
+    "verdict": "pass",
+    "reasons": [],
+    "verifiedTargets": [],
+    "official": [],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.columns_distinguishable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.mirror_columns_distinguishable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.columns_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "replay": {
+      "constants": 85,
+      "ok": true
+    },
+    "newAxioms": [],
+    "lean": "4.35.0",
+    "kitCommit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+    "checkedAt": "2026-10-24T00:17:33Z"
+  },
+  "full_problem_claim": false,
+  "prize_award_claim": false
+}

@@ -7,8 +7,9 @@ left reconstruction, and separation tests with unrestricted right halves.
 **Status: no full prize problem is solved here.** This is a research checkpoint
 from 2026-10-23. The global Lean implication has an open hypothesis; the
 follow-up distinguishes its unconditional bounded certificates and exact
-counterexample from that conjecture. The experiments are finite. This directory has not been submitted
-to the prize API. The two earlier verified submissions are described in
+counterexample from that conjecture. The experiments are finite. The spatial
+essay has been submitted as a partial result and is **Lean Verified**; see
+[its submission status](SUBMISSION-STATUS.md). The two earlier verified submissions are described in
 [the earlier padded-tail PR](https://github.com/WolframInstitute/Rule30PrizeKit/pull/1).
 
 The renewed investigation targets all eventual periods in Problem 1, rather
