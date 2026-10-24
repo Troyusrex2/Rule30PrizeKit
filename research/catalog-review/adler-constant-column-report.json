@@ -1,0 +1,188 @@
+{
+  "upstream_repository": "keithadler/rule30-constant-column-lean",
+  "upstream_commit": "ce8ed7df906f272bc9b606cde7a84b17b35eac4c",
+  "upstream_file": "ConstColumn.lean",
+  "upstream_source_sha256": "6440117b2b5afd8318c5ed8abb5397c5b069335de94e03b7bfd969e4dbe76370",
+  "pinned_project_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "author_credit": "Keith Adler with Claude; prior mathematical result credited upstream to D. L. Condrey",
+  "new_result_claim": false,
+  "full_problem_claim": false,
+  "checker_modified": false,
+  "scope": "Constant trace through times 0..A+2 impossible for a nonzero row supported in [-A,A]; includes equality to official evolution",
+  "adaptation": "Official import, enclosing namespace, and two additional bridge theorems; original upstream source preserved",
+  "adapted_source_sha256": "0920e8eecfc694b2266d750269fe6730cbfa278127a9a3c09d6e5d8631c0e292",
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.D",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.E",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.b_par",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.b_true",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.b_y1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.b_z1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.evo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.evo_eq_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.evo_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.heven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.hodd",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.left_true",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.no_const_column",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.official_no_const_column",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.par",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.s",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.seed0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.y",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.y1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.y2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.yrule",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.zero_case",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.evo.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30AdlerExternalAudit.evo_eq_evol.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.no_const_column",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30AdlerExternalAudit.official_no_const_column",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30AdlerExternalAudit",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 124,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
