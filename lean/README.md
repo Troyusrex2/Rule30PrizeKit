@@ -30,7 +30,7 @@ Barriers are also proved:
 
 You need [elan](https://github.com/leanprover/elan); it installs Lean 4.35.0 from `lean-toolchain`.
 
-`lake build` builds everything, but a cold build runs modules in parallel. The four `Rule30Certificates/ZeroBoundaryWidth52Chunks*` modules take about 20 s and 3 GB each, so a cold parallel build can need about 12.5 GB.
+`lake build` builds everything, but a cold build runs modules in parallel. The four `Rule30Certificates/ZeroBoundaryWidth52Chunks*` modules take about 20 s and 3 GB each, so a cold parallel build can need about 12.5 GB before the contributed tail modules below. Build these heavy data modules sequentially too.
 
 Building one module at a time is safest; each `lake build` below compiles exactly one module, and peak memory stays under 4 GB.
 
@@ -81,7 +81,7 @@ done
 lake build
 ```
 
-On 2026-10-15 this took 285 s in total on an Apple M3 Max with 48 GB; the four modules added on 2026-10-23 take about 45 s more. Every module not listed below built in under 7 s and 1.2 GB.
+On 2026-10-15 this took 285 s in total on an Apple M3 Max with 48 GB; the four upstream modules added on 2026-10-23 take about 45 s more. The contributed white-padding modules are measured separately below. Every module not listed below built in under 7 s and 1.2 GB.
 
 | Module | Time | Peak memory |
 |---|---|---|
@@ -94,7 +94,48 @@ On 2026-10-15 this took 285 s in total on an Apple M3 Max with 48 GB; the four m
 | `Rule30EtherThreeNoWall` | 9 s | 1.1 GB |
 | `Rule30BlackRuns` | 9 s | 2.2 GB |
 
-The build prints no warnings.
+### Contributed white-padding modules
+
+Measured on Windows x64 with Lean 4.35.0 on 2026-10-24. Core dependencies were
+already compiled. Each main module was rebuilt after removing its own `.olean`;
+its imported modules were available. Every rebuilt `.olean` was byte-identical
+to the artifact already replayed by the kernel. The four data rows record their
+first builds after consolidation, including any newly needed imports. Peak
+memory is the sum of the owned processes' RSS, sampled every 50 ms.
+
+| Module | Time | Peak memory |
+|---|---|---|
+| `Rule30BackwardTube` | 2.20 s | 291 MiB |
+| `Rule30BackwardVacuum` | 1.86 s | 248 MiB |
+| `Rule30Certificates/FiveTailTube` | 147.70 s | 3061 MiB |
+| `Rule30Certificates/SixTailBackward` | 84.51 s | 1376 MiB |
+| `Rule30Certificates/SixTailEndpoints` | 20.16 s | 656 MiB |
+| `Rule30Certificates/WhitePaddingFamilies` | 285.22 s | 2372 MiB |
+| `Rule30FiniteStrips` | 1.89 s | 266 MiB |
+| `Rule30FiveTail` | 1.55 s | 219 MiB |
+| `Rule30FiveTailReduction` | 2.41 s | 420 MiB |
+| `Rule30ForbiddenSuffix` | 1.56 s | 248 MiB |
+| `Rule30RestrictedBackwardTube` | 2.03 s | 276 MiB |
+| `Rule30ShortTail` | 1.64 s | 258 MiB |
+| `Rule30SixTail` | 1.56 s | 232 MiB |
+| `Rule30SixTailReduction` | 7.12 s | 1222 MiB |
+| `Rule30SixTailSharpened` | 1.56 s | 241 MiB |
+| `Rule30SparsePreimage` | 1.41 s | 243 MiB |
+| `Rule30SuffixFamilies` | 1.52 s | 246 MiB |
+| `Rule30UniformWhitePadding` | 1.42 s | 241 MiB |
+| `Rule30VacuumExample` | 1.41 s | 237 MiB |
+| `Rule30WhitePadding` | 1.58 s | 238 MiB |
+| `Rule30WhitePadding10101` | 1.39 s | 216 MiB |
+| `Rule30WhitePaddingVacuumCriterion` | 1.66 s | 248 MiB |
+| `Rule30WhitePulse` | 2.48 s | 302 MiB |
+| `Rule30WordRotation` | 1.62 s | 270 MiB |
+| `Rule30ZeroPredecessor` | 1.42 s | 229 MiB |
+
+`lake build Ruliology` passes after these builds. The unchanged partial checker
+replays 2,641 declarations across all 25 modules and checks 52 README headlines,
+with standard axioms only. The four consolidated data modules replace 144
+certificate files; all 21 main modules and their general statements are retained.
+
 
 To check axioms, compile a file outside this folder from here:
 
