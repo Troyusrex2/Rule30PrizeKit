@@ -139,6 +139,42 @@ premise. See [the core report](official-problem3-core-report.json).
 Numerical/conditional seed-gap claims and unreviewed harness sources from
 other repositories are not adopted as proved facts.
 
+## XOR rigidity audit
+
+The new [PR 12 XOR-rigidity contribution](https://github.com/WolframInstitute/Rule30PrizeKit/pull/12)
+was independently replayed at immutable head
+`e7d1e3a03dff9c57a0c78e94b7bf9e4df1c0bd36`, against the unchanged reference
+kit at `2f63afda261888e04ec57237290e723190914a1d`: all **87 declarations and
+10 selected headlines** passed full kernel replay, with standard axioms only.
+The proof bodies and namespace are unchanged; only module/import/export
+wrappers are removed for the standalone review. Credit: OpenAI Codex for
+@AIOvernight; the pull request was assembled with Claude Code.
+
+Its premise is that the pointwise XOR of two entire Rule 30 histories is
+itself a Rule 30 history. Our kernel-checked
+`same_trace_does_not_imply_xor_step` gives a concrete limitation on applying
+it to the remaining trace-completeness question: finite rows **2 and 3 at
+center index 1 have equal entire center traces**, but `Phi(2 XOR 3)=7` while
+`Phi(2) XOR Phi(3)=3`. Their difference already fails the update on the
+first step. The counterexample uses the independently replayed stripe
+trace-preservation proof; it is an all-time statement, rather than a long
+finite trace comparison. Its own five declarations and three headlines pass
+full replay. See [the combined audit report](xor-rigidity-e7d-report.json)
+and [the counterexample source](Rule30XorTraceBarrierResearch.lean).
+
+To reproduce the external audit, fetch PR 12's immutable head into the source
+repository and run:
+
+```text
+python research/catalog-review/audit_xor_rigidity.py --project <pinned-reference-checkout> --source-repository <repository-with-e7d1e3a> --lake <lake> --output <audit-directory>
+```
+
+For the counterexample too, first run
+`research/normalization-first-meeting/replay.py` against the same reference
+checkout, then add `--trace-barrier` to the audit command. This checks the
+exact prerequisite source hashes before building and fully replaying the
+counterexample.
+
 ## Reproduce
 
 In a checkout of the corresponding revised PR head:
