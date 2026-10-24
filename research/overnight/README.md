@@ -670,6 +670,22 @@ their scalar controls. These floating-point results are recorded separately;
 the Lean obstruction above does not cover arbitrary geometric bases or the
 length-four parity model. No positive rank was found.
 
+The follow-up [aged-prefix experiment](aged_prefix_rank_probe.json) retains an
+actual surviving prehistory, with every even intermediate row accepted, before
+scoring a transition. It uses length-four windows and prefix black-count parity.
+Small samples admit scores, but those fits disappear at greater widths:
+
+| Retained actual steps | First tested initial width returning infeasible |
+|---|---|
+| 2 | 14 |
+| 4 | 14 |
+| 8 | 18 |
+| 12 | 20 |
+
+These are numerical finite-sample failures, not exact or Lean refutations. No
+sample fit was promoted to a rank theorem. The experiment does not justify a
+claim about every prehistory length or other feature classes.
+
 `temporal_profile_probe.py` investigates a separate diagonal observability
 conjecture by integrating temporal columns from the zero right boundary. The
 clock-64 graph exhausts its 171,780 profile-pair states, so the algorithm covers
@@ -717,6 +733,7 @@ python research/overnight/verify_prefix_rank_obstruction.py --lake /path/to/lake
 python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed
 python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed --reward free-flip --spatial-base 3/2
 python research/overnight/prefix_feature_obstruction_controls.py
+python research/overnight/aged_prefix_rank_probe.py --max-width 20
 python research/overnight/temporal_profile_probe.py --clock 64
 python research/overnight/controlled_response_controls.py
 python research/overnight/controlled_response_normal_form.py --max-width 22
