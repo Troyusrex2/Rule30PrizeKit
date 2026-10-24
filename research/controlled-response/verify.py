@@ -1,4 +1,4 @@
-"""Build the standalone core catalog serially, then fully replay both modules."""
+"""Build the standalone core catalog serially, then fully replay all three modules."""
 import argparse
 import hashlib
 import json
@@ -22,7 +22,13 @@ TARGETS = {
         'frame_step', 'iterate_frame', 'full_period_eight', 'same_OR', 'OR_nonconstant',
         'heads_differ', 'tail_OR_different', 'infinite_true', 'infinite_false', 'loss_frame_step',
         'loss_full_period_eight', 'loss_head_period_two', 'loss_full_period_lower_bound',
-        'loss_not_head_period_one', 'loss_infinite']}
+        'loss_not_head_period_one', 'loss_infinite'],
+    'Rule30FeedbackErasureResearch': [
+        'white_step_erases_distinction', 'initial_responses_differ', 'same_left_forever',
+        'single_finite', 'double_finite', 'configurations_differ', 'same_actual_left',
+        'same_actual_center', 'same_actual_right_head', 'initial_rights_not_sameResponse',
+        'center_not_eventually_constant', 'right_head_not_eventually_constant',
+        'finite_feedback_counterexample']}
 
 
 def run(argv, cwd, log):

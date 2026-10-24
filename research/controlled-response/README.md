@@ -1,6 +1,6 @@
 # Controlled right-half responses and finite-support limits
 
-This contribution contains two core Lean modules, developed by Troy Lowry with
+This contribution contains three core Lean modules, developed by Troy Lowry with
 OpenAI Codex. Problem 1 remains open. No literature-priority claim is made.
 
 `Rule30ControlledResponseResearch` characterizes equal head responses to **all**
@@ -15,6 +15,14 @@ same complete center trace, despite different right edges.
 The module also separates finite-horizon agreement and agreement under a
 single driver from universal response equivalence. It does not prove a complete
 finite-tail normal form or recover a left edge from a center trace.
+
+`Rule30FeedbackErasureResearch` strengthens the single-driver distinction to
+actual feedback from finite configurations. Initial black sets `{1}` and
+`{1,2}` have identical complete center and right-head traces, although their
+initial right halves are not universally response equivalent. Their common
+traces are proved not eventually constant, using the kit's existing finite
+configuration theorem. The distinction is erased after one white-boundary
+step. Both left edges are position 1, so left-edge recovery remains open.
 
 `Rule30PeriodicProfileCounterResearch` supplies three explicit infinite tails.
 Two have period-eight diagonal orbits with the same nonconstant first-two-cell
@@ -32,15 +40,15 @@ exported from its saved output. The notebook has not been sent to the prize API.
 Validation records:
 
 - [Catalog build and replay](catalog-verification.json): the standalone core
-  catalog is built in dependency order, then every declaration in both new
+  catalog is built in dependency order, then every declaration in all three new
   modules is replayed with the unchanged checker.
-- [Pinned standalone replay](standalone-verification.json): all 203 declarations
-  and 18 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
+- [Pinned standalone replay](standalone-verification.json): all 238 declarations
+  and 21 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
 - [Fresh-kernel notebook inspection](controlled-response-essay.nb.verification.json):
   exact saved source, all declarations replayed, standard headline axioms,
   zero message cells, and independently checked computation outputs.
 - [Wolfram controls](wolfram-independent-controls.json): 104 full Rule 30 rewrite
-  experiments and 792 scalar cells in three profile cones.
+  experiments, eight actual-feedback examples, and 792 scalar cells in three profile cones.
 - [Python response controls](controlled_response_controls.json): exact response-tree
   partitions compared with the nonbranching signatures at widths 1 through 7
   and horizons 1 through 20.

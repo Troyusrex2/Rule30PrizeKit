@@ -4,7 +4,7 @@ ClearAll[controlledResponseReport];
 controlledResponseReport[] := BlockRandom[
   SeedRandom[20261024];
   Module[{cases},
-    cases = Flatten[Table[Module[{left, prefix, old, new, ca, cb, center = 9},
+    cases = Flatten[Table[Module[{left, prefix, old, new, ca, cb, center = 8},
       left = RandomInteger[1, 9];
       prefix = RandomInteger[1, n];
       {old, new} = If[rule == 0, {{0,1,1}, {0,1,0}}, {{1,0,1}, {1,1,0}}];

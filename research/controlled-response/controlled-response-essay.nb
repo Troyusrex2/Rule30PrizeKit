@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       160,          7]
-NotebookDataLength[    127376,       2410]
-NotebookOptionsPosition[    123264,       2324]
-NotebookOutlinePosition[    123606,       2339]
-CellTagsIndexPosition[    123563,       2336]
+NotebookDataLength[    151968,       2842]
+NotebookOptionsPosition[    147519,       2750]
+NotebookOutlinePosition[    147861,       2765]
+CellTagsIndexPosition[    147818,       2762]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,8 +32,9 @@ exactly by two observations of a triangular diagonal map. Terminal rewrites \
 011 to 01 and 101 to 11 preserve the complete center trace with every common \
 initial left half. Explicit eight-periodic infinite tails show that OR alone \
 need not recover the head and that a period-two head need not detect a full \
-period-eight state. Finite-tail completeness and the Rule 30 Prize problems \
-remain open.\
+period-eight state. Finite feedback can erase an initial distinction even \
+when the common output is not eventually constant. Finite-tail completeness \
+and the Rule 30 Prize problems remain open.\
 \>", "Abstract",
  CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
 
@@ -106,16 +107,41 @@ W=7.\
 \>", "Text",
  CellID->1350516518,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"],
 
-Cell["Why the support and observation hypotheses matter", "Section",
+Cell["A finite actual-feedback counterexample", "Section",
  CellID->907546795,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+
+Cell["\<\
+There is a stronger failure of the converse from one realized input. Let the \
+common initial left half, including the center, be all white, and put black \
+cells at {1} in one row and {1,2} in the other. Their initial right halves 1 \
+and 11 are not universally response equivalent. With the white initial \
+center, one step sends them to 11 and 101. The terminal rewrite above proves \
+these new right halves universally equivalent. The entire left halves still \
+agree, so feedback soundness applies at every subsequent time.\
+\>", "Text",
+ CellID->814772321,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+
+Cell["\<\
+Thus both the complete center traces and complete right-head traces agree \
+forever, although the initial controlled response classes differ. Both starts \
+are finite and nonzero. The kit's finite-configuration version of Jen's \
+period-one result proves that neither common trace is eventually constant. \
+This is an actual whole-line feedback example, without assuming an externally \
+constant input. Their left edges are both position 1, so it does not refute \
+left-edge recovery. No claim about their eventual periodicity is made.\
+\>", "Text",
+ CellID->1054628905,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+
+Cell["Why the support and observation hypotheses matter", "Section",
+ CellID->2043779557,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
 
 Cell["\<\
 Write an infinite row from its head toward the right. The two starts\
 \>", "Text",
- CellID->814772321,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+ CellID->17830494,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
 
 Cell["    x = 1100(1101)\[Ellipsis]     y = 0110(01)\[Ellipsis]", "Text",
- CellID->1054628905,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+ CellID->1589986527,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
 
 Cell["\<\
 use parenthesized blocks repeated forever. Both complete Q orbits have period \
@@ -125,7 +151,7 @@ cells one and two, differs. The common OR alone cannot recover the head or \
 the next OR. These states are not universally response equivalent, because \
 that relation observes the head as well.\
 \>", "Text",
- CellID->2043779557,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
+ CellID->943101875,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
 
 Cell["\<\
 A third start, 1100(0001)\[Ellipsis], has a head trace of least period two, \
@@ -134,7 +160,7 @@ proved to have infinite support. A power-of-two orbit period cannot replace \
 finite support in a proposed head-period detection theorem. No finite-tail \
 conjecture is refuted or proved by these examples.\
 \>", "Text",
- CellID->17830494,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
+ CellID->67888809,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
 
 Cell["\<\
 The proofs use explicit temporal profile tables, verify their scalar update \
@@ -142,18 +168,20 @@ at every depth, and then identify all iterates by induction. The finite \
 search that found the tables is not a proof premise. No part of this essay \
 excludes an eventual center period or proves a Rule 30 Prize problem.\
 \>", "Text",
- CellID->1589986527,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
+ CellID->1432876021,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
 
 Cell["Independent finite controls", "Section",
- CellID->943101875,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
+ CellID->876231958,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"],
 
 Cell["\<\
 The first calculation compares terminal rewrites in 104 complete Rule 30 \
 experiments with random common left halves and prefixes. The second compares \
-all three profile tables with built-in Rule 30 on finite causal cones. These \
-controls do not replace the unbounded kernel proofs.\
+all three profile tables with built-in Rule 30 on finite causal cones. The \
+third checks eight actual-feedback examples, including the all-white left \
+half, at both the center and the right head through time 128. These controls \
+do not replace the unbounded kernel proofs.\
 \>", "Text",
- CellID->67888809,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
+ CellID->1020575516,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
 
 Cell[CellGroupData[{
 
@@ -193,7 +221,7 @@ Cell[BoxData[
                   RowBox[{
                   "left", ",", " ", "prefix", ",", " ", "old", ",", " ", 
                    "new", ",", " ", "ca", ",", " ", "cb", ",", " ", 
-                   RowBox[{"center", " ", "=", " ", "9"}]}], "}"}], ",", "\n",
+                   RowBox[{"center", " ", "=", " ", "8"}]}], "}"}], ",", "\n",
                   "      ", 
                  RowBox[{
                   RowBox[{"left", " ", "=", " ", 
@@ -528,12 +556,182 @@ Cell[BoxData[
              RowBox[{"j", ",", "3"}], "}"}]}], "]"}], ",", " ", 
           RowBox[{"ImageSize", "->", "1050"}]}], "]"}]}]}], "\n", "]"}]}], 
     ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Built", "-", 
+      RowBox[{
+      "in", " ", "full", " ", "Rule", " ", "30", " ", "controls", " ", "for", 
+       " ", "the", " ", "actual"}], "-", 
+      RowBox[{"feedback", " ", 
+       RowBox[{"collision", ".", "\n", "   ", "Finite"}], " ", "observations",
+        " ", "here", " ", "accompany"}]}], ",", " ", 
+     RowBox[{"and", " ", "do", " ", "not", " ", "replace"}], ",", " ", 
+     RowBox[{"the", " ", "Lean", " ", 
+      RowBox[{"proof", "."}]}]}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "feedbackErasureReport", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"feedbackErasureReport", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"BlockRandom", "[", "\n", "  ", 
+      RowBox[{
+       RowBox[{"SeedRandom", "[", "2026102406", "]"}], ";", "\n", "  ", 
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", "cases", "}"}], ",", "\n", "    ", 
+         RowBox[{
+          RowBox[{"cases", " ", "=", " ", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Module", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "left", ",", " ", "a", ",", " ", "b", ",", " ", "ca", ",", 
+                 " ", "cb", ",", " ", "ha", ",", " ", "hb", ",", " ", 
+                 RowBox[{"center", " ", "=", " ", "8"}]}], "}"}], ",", "\n", 
+               "      ", 
+               RowBox[{
+                RowBox[{"left", " ", "=", " ", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{"sample", " ", "==", " ", "1"}], ",", " ", 
+                   RowBox[{"ConstantArray", "[", 
+                    RowBox[{"0", ",", " ", "9"}], "]"}], ",", " ", 
+                   RowBox[{"Append", "[", 
+                    RowBox[{
+                    RowBox[{"RandomInteger", "[", 
+                    RowBox[{"1", ",", " ", "8"}], "]"}], ",", " ", "0"}], 
+                    "]"}]}], "]"}]}], ";", "\n", "      ", 
+                RowBox[{"a", " ", "=", " ", 
+                 RowBox[{"Join", "[", 
+                  RowBox[{"left", ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}], "]"}]}], ";", " ", 
+                RowBox[{"b", " ", "=", " ", 
+                 RowBox[{"Join", "[", 
+                  RowBox[{"left", ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}]}], "]"}]}], ";", "\n", 
+                "      ", 
+                RowBox[{"ca", " ", "=", " ", 
+                 RowBox[{"Flatten", "@", 
+                  RowBox[{"CellularAutomaton", "[", 
+                   RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", "center", "}"}], "}"}]}], "}"}]}], "]"}]}]}],
+                 ";", "\n", "      ", 
+                RowBox[{"cb", " ", "=", " ", 
+                 RowBox[{"Flatten", "@", 
+                  RowBox[{"CellularAutomaton", "[", 
+                   RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"b", ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", "center", "}"}], "}"}]}], "}"}]}], "]"}]}]}],
+                 ";", "\n", "      ", 
+                RowBox[{"ha", " ", "=", " ", 
+                 RowBox[{"Flatten", "@", 
+                  RowBox[{"CellularAutomaton", "[", 
+                   RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"center", "+", "1"}], "}"}], "}"}]}], "}"}]}], 
+                   "]"}]}]}], ";", "\n", "      ", 
+                RowBox[{"hb", " ", "=", " ", 
+                 RowBox[{"Flatten", "@", 
+                  RowBox[{"CellularAutomaton", "[", 
+                   RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"b", ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"center", "+", "1"}], "}"}], "}"}]}], "}"}]}], 
+                   "]"}]}]}], ";", "\n", "      ", 
+                RowBox[{"<|", 
+                 RowBox[{
+                  RowBox[{"\"\<AllWhiteLeft\>\"", " ", "->", " ", 
+                   RowBox[{"(", 
+                    RowBox[{"sample", " ", "==", " ", "1"}], ")"}]}], ",", 
+                  " ", 
+                  RowBox[{"\"\<Horizon\>\"", " ", "->", " ", "128"}], ",", 
+                  "\n", "        ", 
+                  RowBox[{"\"\<ObservationCount\>\"", " ", "->", " ", 
+                   RowBox[{"Length", "[", "ca", "]"}]}], ",", " ", 
+                  RowBox[{"\"\<SameCenterTracePrefix\>\"", " ", "->", " ", 
+                   RowBox[{"SameQ", "[", 
+                    RowBox[{"ca", ",", " ", "cb"}], "]"}]}], ",", "\n", 
+                  "        ", 
+                  
+                  RowBox[{"\"\<SameRightHeadTracePrefix\>\"", " ", "->", " ", 
+                   
+                   RowBox[{"SameQ", "[", 
+                    RowBox[{"ha", ",", " ", "hb"}], "]"}]}], ",", "\n", 
+                  "        ", 
+                  RowBox[{"\"\<CenterPrefixNonconstant\>\"", " ", "->", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"DeleteDuplicates", "[", "ca", "]"}], "]"}], " ", 
+                    "==", " ", "2"}], ")"}]}], ",", "\n", "        ", 
+                  RowBox[{"\"\<HeadPrefixNonconstant\>\"", " ", "->", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"DeleteDuplicates", "[", "ha", "]"}], "]"}], " ", 
+                    "==", " ", "2"}], ")"}]}]}], "|>"}]}]}], "\n", "    ", 
+              "]"}], ",", " ", 
+             RowBox[{"{", 
+              RowBox[{"sample", ",", " ", "1", ",", " ", "8"}], "}"}]}], 
+            "]"}]}], ";", "\n", "    ", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<FiniteSamplesOnly\>\"", " ", "->", " ", "True"}], ",",
+             " ", 
+            
+            RowBox[{"\"\<UnboundedProofReplaced\>\"", " ", "->", " ", 
+             "False"}], ",", "\n", "      ", 
+            RowBox[{"\"\<FullProblemClaim\>\"", " ", "->", " ", "False"}], ",",
+             " ", 
+            RowBox[{"\"\<CaseCount\>\"", " ", "->", " ", 
+             RowBox[{"Length", "[", "cases", "]"}]}], ",", "\n", "      ", 
+            RowBox[{"\"\<AllPassed\>\"", " ", "->", " ", 
+             RowBox[{"And", "@@", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"And", "@@", 
+                  RowBox[{"Lookup", "[", 
+                   RowBox[{"#", ",", " ", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\"\<SameCenterTracePrefix\>\"", ",", "\n", 
+                    "        ", "\"\<SameRightHeadTracePrefix\>\"", ",", 
+                    " ", "\"\<CenterPrefixNonconstant\>\"", ",", 
+                    " ", "\"\<HeadPrefixNonconstant\>\""}], "}"}]}], "]"}]}], 
+                 "&"}], " ", "/@", " ", "cases"}], ")"}]}]}], ",", "\n", 
+            "      ", 
+            RowBox[{"\"\<Cases\>\"", " ", "->", " ", "cases"}]}], "|>"}]}]}], 
+        "\n", "  ", "]"}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"controlledResponseReport", "[", "]"}], ",", " ", 
-     RowBox[{"profileCounterReport", "[", "]"}]}], "}"}]}]}]], "Input",
+     RowBox[{"profileCounterReport", "[", "]"}], ",", " ", 
+     RowBox[{"feedbackErasureReport", "[", "]"}]}], "}"}]}]}]], "Input",
  CellLabel->"In[1]:= ",
- CellID->1801257020,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
+ CellID->810754696,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1404,9 +1602,100 @@ Cell[BoxData[
           RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
          "\[RightAssociation]"}]}], "}"}]}], ",", 
      RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
-    "\[RightAssociation]"}]}], "}"}]], "Output",
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"FiniteSamplesOnly\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"UnboundedProofReplaced\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"CaseCount\"\>", "\[Rule]", "8"}], ",", 
+     RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"AllWhiteLeft\"\>", "\[Rule]", "False"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"SameRightHeadTracePrefix\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"CenterPrefixNonconstant\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadPrefixNonconstant\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}]}], "}"}]}]}], "\[RightAssociation]"}]}], 
+  "}"}]], "Output",
  CellLabel->"Out[1]= ",
- CellID->358626973,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"]
+ CellID->1909490830,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"]
 }, Open  ]],
 
 Cell["\<\
@@ -1415,14 +1704,14 @@ of each infinite row. Black squares are black cells. The right tail repeats \
 from position four. The last panel's first column alternates while later \
 columns require eight times to repeat; the all-time claims are proved below.\
 \>", "Text",
- CellID->876231958,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+ CellID->1044562475,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"profileCounterDiagram", "[", "]"}]], "Input",
  CellLabel->"In[2]:= ",
- CellID->1274972605,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+ CellID->1772362660,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {InsetBox[
@@ -1584,20 +1873,20 @@ Cell[BoxData[
   PlotRange->{{0, 1032.}, {-260.177525, 0}},
   PlotRangePadding->Automatic]], "Output",
  CellLabel->"Out[2]= ",
- CellID->332869178,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"]
+ CellID->35498422,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"]
 }, Open  ]],
 
 Cell["Exact embedded proof and full kernel replay", "Section",
- CellID->1967685850,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+ CellID->1384978530,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
 
 Cell["\<\
-The source below contains both complete catalog modules, with only imports, \
-module/export wrappers and namespace names adapted for a standalone file. It \
-imports only official core modules and uses no additional axioms or native \
-decision procedures. A passing partial check does not establish an official \
-prize target.\
+The source below contains all three complete catalog modules, with only \
+imports, module/export wrappers and namespace names adapted for a standalone \
+file. It imports only official core modules and uses no additional axioms or \
+native decision procedures. A passing partial check does not establish an \
+official prize target.\
 \>", "Text",
- CellID->1044562475,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+ CellID->519689844,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1607,7 +1896,7 @@ Cell[BoxData[{
    RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
   ";"}]}], "Input",
  CellLabel->"In[3]:= ",
- CellID->1653200050,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+ CellID->1609367578,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
 
 Cell[CellGroupData[{
 
@@ -1617,7 +1906,8 @@ Cell[BoxData[{
    RowBox[{"LeanImportString", "[", 
     RowBox[{"\"\<import Ruliology.CellularAutomata.Rule30Ether\\nimport \
 Ruliology.CellularAutomata.Rule30Realization\\nimport \
-Ruliology.CellularAutomata.Rule30ZeroBoundary\\n\\nopen \
+Ruliology.CellularAutomata.Rule30ZeroBoundary\\nimport \
+Ruliology.CellularAutomata.Rule30FiniteConfigs\\n\\nopen \
 Ruliology.CellularAutomata\\n\\n/-!\\n# Controlled responses and the \
 triangular right-edge update\\n\\nThe response tree for every possible left \
 driver is equivalent to alternating\\nhead/OR observations of a triangular \
@@ -1954,8 +2244,111 @@ loss_infinite : \[Not]Rule30ZeroBoundary.FinSupp lossInitial := by\\n  rintro \
 \:27e8W,hW\:27e9\\n  have h := hW (4*(W+1)+7) (by omega)\\n  have hk : key \
 (4*(W+1)+7)=7 := by\\n    unfold key\\n    rw [ite_eq_right (by omega)]\\n    \
 omega\\n  change (lossProfile (key (4*(W+1)+7))).testBit 0=false at h\\n  rw \
-[hk] at h\\n  contradiction\\n\\nend Rule30Submission.Profiles\\n\>\"", ",", 
-     "\n", "  ", 
+[hk] at h\\n  contradiction\\n\\nend Rule30Submission.Profiles\\n\\n/-!\\n# \
+Finite feedback can erase a distinction between controlled responses\\n\\nThe \
+right halves `1` and `11` are not universally response equivalent.\\nWhen the \
+initial center is white, one actual Rule 30 step sends them to\\n`11` and \
+`101`, which are universally response equivalent. Consequently\\nthey give \
+the same entire left space-time diagram under any common initial\\nleft half \
+whose center is white. Specializing that left half to white gives\\ntwo \
+finite, nonzero configurations with identical, \
+non-eventually-constant\\ncenter traces. This does not decide eventual \
+periodicity or distinguish\\nconfigurations with different left \
+edges.\\n-/\\n\\n\\n\\nnamespace Rule30Submission.Feedback\\n\\nopen \
+Rule30Jen Rule30Realization Rule30Submission.Response\\nopen \
+Rule30PeriodTwoSideways Rule30ZeroBoundaryBarriers\\n\\ntheorem \
+step_white_one : step false (word [true]) = word [true,true] := by\\n  funext \
+k\\n  cases k with\\n  | zero => rfl\\n  | succ k => cases k <;> \
+rfl\\n\\ntheorem step_white_two : step false (word [true,true]) = word \
+[true,false,true] := by\\n  funext k\\n  cases k with\\n  | zero => rfl\\n  | \
+succ k =>\\n      cases k with\\n      | zero => rfl\\n      | succ k => \
+cases k <;> rfl\\n\\ntheorem white_step_erases_distinction :\\n    \
+SameResponse (step false (word [true])) (step false (word [true,true])) := by\
+\\n  rw [step_white_one,step_white_two]\\n  exact sameResponse_symm \
+(tail_101_response [])\\n\\ntheorem initial_responses_differ : \[Not] \
+SameResponse (word [true]) (word [true,true]) :=\\n  \
+fixed_driver_counterexample.2\\n\\ntheorem first_left_equal (left : Int \
+\[RightArrow] Bool) :\\n    \[ForAll] p, p\[LessEqual]0 \[RightArrow] evol \
+(splice left (word [true])) 1 p =\\n      evol (splice left (word \
+[true,true])) 1 p := by\\n  intro p hp\\n  change rule (splice left (word \
+[true]) (p-1)) (splice left (word [true]) p)\\n      (splice left (word \
+[true]) (p+1)) =\\n    rule (splice left (word [true,true]) (p-1)) (splice \
+left (word [true,true]) p)\\n      (splice left (word [true,true]) (p+1))\\n  \
+rw [show splice left (word [true]) (p-1)=left (p-1) by simp [splice,show p-1\
+\[LessEqual]0 by omega],\\n      show splice left (word [true,true]) \
+(p-1)=left (p-1) by simp [splice,show p-1\[LessEqual]0 by omega]]\\n  simp \
+only [splice,hp,ite_true]\\n  by_cases hz : p=0\\n  \[CenterDot] subst p; rfl\
+\\n  \[CenterDot] simp [show p+1\[LessEqual]0 by omega]\\n\\ntheorem \
+first_right_sameResponse (left : Int \[RightArrow] Bool) (hwhite : left \
+0=false) :\\n    SameResponse (rightPart (evol (splice left (word [true])) \
+1))\\n      (rightPart (evol (splice left (word [true,true])) 1)) := by\\n  \
+rw [show 1=0+1 from rfl,rightPart_next,rightPart_next]\\n  simp only \
+[evol,splice,Int.le_refl,ite_true,hwhite]\\n  exact \
+white_step_erases_distinction\\n\\n/-- All actual left columns agree, despite \
+initially inequivalent right responses. -/\\ntheorem same_left_forever (left \
+: Int \[RightArrow] Bool) (hwhite : left 0=false) :\\n    \[ForAll] t p, p\
+\[LessEqual]0 \[RightArrow] evol (splice left (word [true])) t p =\\n      \
+evol (splice left (word [true,true])) t p := by\\n  intro t p hp\\n  cases t \
+with\\n  | zero => simp [evol,splice,hp]\\n  | succ t =>\\n      have h := \
+(feedback_left_equal (first_left_equal left)\\n        \
+(first_right_sameResponse left hwhite) t).1 p hp\\n      simpa only \
+[evol_restart,Nat.add_comm 1 t] using h\\n\\ndef single : Int \[RightArrow] \
+Bool := splice (fun _ => false) (word [true])\\ndef double : Int \
+\[RightArrow] Bool := splice (fun _ => false) (word [true,true])\\n\\ntheorem \
+single_support (p : Int) : single p = decide (p=1) := by\\n  by_cases hp : p\
+\[LessEqual]0\\n  \[CenterDot] simp [single,splice,hp,show p\[NotEqual]1 by \
+omega]\\n  \[CenterDot] by_cases h1 : p=1\\n    \[CenterDot] subst p; rfl\\n  \
+  \[CenterDot] have hn : 1\[LessEqual]p.toNat-1 := by omega\\n      obtain \
+\:27e8k,hk\:27e9 := Nat.exists_eq_add_of_le hn\\n      simp \
+[single,splice,hp,word,hk,List.getD,h1]\\n\\ntheorem double_support (p : Int) \
+: double p = decide (p=1 \[Or] p=2) := by\\n  by_cases hp : p\[LessEqual]0\\n \
+ \[CenterDot] simp [double,splice,hp,show p\[NotEqual]1 by omega,show p\
+\[NotEqual]2 by omega]\\n  \[CenterDot] by_cases h1 : p=1\\n    \[CenterDot] \
+subst p; rfl\\n    \[CenterDot] by_cases h2 : p=2\\n      \[CenterDot] subst \
+p; rfl\\n      \[CenterDot] have hn : 2\[LessEqual]p.toNat-1 := by omega\\n   \
+     obtain \:27e8k,hk\:27e9 := Nat.exists_eq_add_of_le hn\\n        simp \
+[double,splice,hp,word,hk,List.getD,h1,h2]\\n\\ntheorem single_finite : \
+FinConfig single := by\\n  refine \:27e81,?_\:27e9\\n  intro p hp\\n  rw \
+[single_support]\\n  simp [show p\[NotEqual]1 by intro h; subst p; simp at \
+hp]\\n\\ntheorem double_finite : FinConfig double := by\\n  refine \:27e82,?_\
+\:27e9\\n  intro p hp\\n  rw [double_support]\\n  simp [show p\[NotEqual]1 by \
+intro h; subst p; simp at hp,\\n    show p\[NotEqual]2 by intro h; subst p; \
+simp at hp]\\n\\ntheorem single_nonzero : \[Exists] p, single p=true := \
+\:27e81,rfl\:27e9\\ntheorem double_nonzero : \[Exists] p, double p=true := \
+\:27e81,rfl\:27e9\\n\\ntheorem configurations_differ : \
+single\[NotEqual]double := by\\n  intro h\\n  have he := congrFun h 2\\n  \
+change false=true at he\\n  cases he\\n\\ntheorem same_actual_left : \
+\[ForAll] t p, p\[LessEqual]0 \[RightArrow] evol single t p=evol double t p \
+:=\\n  same_left_forever (fun _ => false) rfl\\n\\ntheorem same_actual_center \
+(t : Nat) : evol single t 0=evol double t 0 :=\\n  same_actual_left t 0 (by \
+omega)\\n\\ntheorem same_actual_right_head (t : Nat) : evol single t 1=evol \
+double t 1 := by\\n  cases t with\\n  | zero => rfl\\n  | succ t =>\\n      \
+have h := (feedback_left_equal (first_left_equal (fun _ => false))\\n        \
+(first_right_sameResponse (fun _ => false) rfl) t).2\\n      have he := \
+(sameResponse_observe h).1\\n      change evol (evol single 1) t 1=evol (evol \
+double 1) t 1 at he\\n      simpa only [evol_restart,Nat.add_comm 1 t] using \
+he\\n\\ntheorem initial_rights_not_sameResponse : \[Not] SameResponse \
+(rightPart single) (rightPart double) := by\\n  simpa only \
+[single,double,rightPart_splice] using initial_responses_differ\\n\\ntheorem \
+center_not_eventually_constant : \[Not] \[Exists] T b, \[ForAll] t, T\
+\[LessEqual]t \[RightArrow] evol single t 0=b :=\\n  \
+Rule30FiniteConfigs.no_column_eventually_constant_finite single_finite \
+single_nonzero 0\\n\\ntheorem right_head_not_eventually_constant : \[Not] \
+\[Exists] T b, \[ForAll] t, T\[LessEqual]t \[RightArrow] evol single t 1=b :=\
+\\n  Rule30FiniteConfigs.no_column_eventually_constant_finite single_finite \
+single_nonzero 1\\n\\n/-- A genuine finite feedback counterexample, without \
+an eventually constant trace. -/\\ntheorem finite_feedback_counterexample \
+:\\n    FinConfig single \[And] FinConfig double \[And] \
+single\[NotEqual]double \[And]\\n    (\[ForAll] t, evol single t 0=evol \
+double t 0) \[And]\\n    (\[ForAll] t, evol single t 1=evol double t 1) \
+\[And]\\n    (\[Not] \[Exists] T b, \[ForAll] t, T\[LessEqual]t \[RightArrow] \
+evol single t 0=b) \[And]\\n    (\[Not] \[Exists] T b, \[ForAll] t, T\
+\[LessEqual]t \[RightArrow] evol single t 1=b) \[And]\\n    \[Not] \
+SameResponse (rightPart single) (rightPart double) :=\\n  \
+\:27e8single_finite,double_finite,configurations_differ,same_actual_center,\\\
+n    same_actual_right_head,center_not_eventually_constant,right_head_not_\
+eventually_constant,\\n    initial_rights_not_sameResponse\:27e9\\n\\nend \
+Rule30Submission.Feedback\\n\>\"", ",", "\n", "  ", 
      RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}], ",", 
      " ", 
      RowBox[{"\"\<IncludeInternal\>\"", " ", "->", " ", "True"}]}], "]"}]}], 
@@ -1969,7 +2362,7 @@ omega\\n  change (lossProfile (key (4*(W+1)+7))).testBit 0=false at h\\n  rw \
      "]"}], "[", "\"\<KernelCheck\>\"", "]"}]}], 
   ";"}], "\n", "rule30KernelCheck"}], "Input",
  CellLabel->"In[4]:= ",
- CellID->1267857253,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
+ CellID->692927338,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2005,14 +2398,14 @@ Cell[BoxData[
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 203 declarations of \
-LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 238 declarations of \
+LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396268976700301757x753874\"", 
+                 "\"LeanLinkTmp33396275289253062788x733523\"", 
                   "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
@@ -2052,20 +2445,20 @@ LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 203 declarations of \
-LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 238 declarations of \
+LeanLinkTmp33396275289253062788x733523.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396268976700301757x753874\"", 
+                 "\"LeanLinkTmp33396275289253062788x733523\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["203", "SummaryItem"]}]}, {
+                 TagBox["238", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
@@ -2090,14 +2483,14 @@ LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
   Success[
   "KernelChecked", <|
    "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
-    "MessageParameters" -> {203, "LeanLinkTmp33396268976700301757x753874"}, 
-    "Module" -> "LeanLinkTmp33396268976700301757x753874", "Declarations" -> 
-    203|>],
+    "MessageParameters" -> {238, "LeanLinkTmp33396275289253062788x733523"}, 
+    "Module" -> "LeanLinkTmp33396275289253062788x733523", "Declarations" -> 
+    238|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellLabel->"Out[4]= ",
- CellID->1873570946,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"]
+ CellID->160879640,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2123,8 +2516,11 @@ Cell[BoxData[{
      " ", "\"\<Rule30Submission.Profiles.infinite_false\>\"", ",", 
      " ", "\"\<Rule30Submission.Profiles.loss_head_period_two\>\"", ",", 
      " ", "\"\<Rule30Submission.Profiles.loss_full_period_lower_bound\>\"", ",",
-      " ", "\"\<Rule30Submission.Profiles.loss_infinite\>\""}], "}"}]}], 
-  ";"}], "\n", 
+      " ", "\"\<Rule30Submission.Profiles.loss_infinite\>\"", ",", 
+     " ", "\"\<Rule30Submission.Feedback.white_step_erases_distinction\>\"", ",",
+      " ", "\"\<Rule30Submission.Feedback.same_left_forever\>\"", ",", 
+     " ", "\"\<Rule30Submission.Feedback.finite_feedback_counterexample\>\""}]\
+, "}"}]}], ";"}], "\n", 
  RowBox[{"Table", "[", 
   RowBox[{
    RowBox[{"<|", 
@@ -2142,7 +2538,7 @@ Cell[BoxData[{
     RowBox[{"name", ",", " ", "responseHeadlines"}], "}"}]}], "]"}]}], "Input",\
 
  CellLabel->"In[5]:= ",
- CellID->1407158826,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
+ CellID->355665354,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2310,9 +2706,39 @@ Cell[BoxData[
      RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
-    "\[RightAssociation]"}]}], "}"}]], "Output",
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Feedback.white_step_erases_distinction\
+\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Feedback.same_left_forever\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.Feedback.finite_feedback_counterexample\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
+        ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}], 
+  "}"}]], "Output",
  CellLabel->"Out[5]= ",
- CellID->1138490425,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"]
+ CellID->792264023,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"]
 }, Open  ]],
 
 Cell["\<\
@@ -2320,12 +2746,12 @@ Finite-tail normal-form completeness, actual fixed-driver trace rigidity and \
 the full center-column problem remain open. No new prize essay is submitted \
 by this build.\
 \>", "Text",
- CellID->1609367578,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"]
+ CellID->1140508347,ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0"]
 },
 LightDark->"Light",
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"
+ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d"
 ]
 (* End of Notebook Content *)
 
@@ -2338,80 +2764,86 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5",
+Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
  CellID->874461601],
-Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0",
+Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
  CellID->36768919],
-Cell[874, 28, 592, 9, 70, "Abstract",ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d",
+Cell[874, 28, 700, 10, 70, "Abstract",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
  CellID->1699946459],
-Cell[1460, 39, 116, 1, 70, "Section",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
+Cell[1567, 40, 116, 1, 70, "Section",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
  CellID->1535504786],
-Cell[1578, 42, 405, 6, 70, "Text",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
+Cell[1685, 43, 405, 6, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
  CellID->1208482393],
-Cell[1980, 50, 552, 8, 70, "Text",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
+Cell[2087, 51, 552, 8, 70, "Text",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
  CellID->28909615],
-Cell[2527, 60, 121, 1, 70, "Section",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
+Cell[2634, 61, 121, 1, 70, "Section",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
  CellID->193832008],
-Cell[2650, 63, 198, 4, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+Cell[2757, 64, 198, 4, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
  CellID->684317082],
-Cell[2847, 69, 193, 4, 70, "Text",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
+Cell[2954, 70, 193, 4, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
  CellID->528485616],
-Cell[3039, 75, 544, 8, 70, "Text",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
+Cell[3146, 76, 544, 8, 70, "Text",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
  CellID->1392207227],
-Cell[3578, 85, 651, 10, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
+Cell[3685, 86, 651, 10, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
  CellID->705466992],
-Cell[4222, 97, 575, 9, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+Cell[4329, 98, 575, 9, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
  CellID->1350516518],
-Cell[4791, 108, 144, 1, 70, "Section",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+Cell[4898, 109, 134, 1, 70, "Section",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
  CellID->907546795],
-Cell[4937, 111, 170, 3, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+Cell[5034, 112, 636, 9, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
  CellID->814772321],
-Cell[5107, 116, 150, 1, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+Cell[5664, 123, 644, 9, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
  CellID->1054628905],
-Cell[5259, 119, 539, 8, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+Cell[6302, 134, 145, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
  CellID->2043779557],
-Cell[5793, 129, 464, 7, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+Cell[6449, 137, 169, 3, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
  CellID->17830494],
-Cell[6253, 138, 404, 6, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+Cell[6618, 142, 150, 1, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
  CellID->1589986527],
-Cell[6654, 146, 122, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+Cell[6770, 145, 538, 8, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
  CellID->943101875],
-Cell[6778, 149, 389, 6, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+Cell[7303, 155, 464, 7, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
  CellID->67888809],
-Cell[CellGroupData[{
-Cell[7186, 159, 17126, 376, 70, "Input",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
- CellID->1801257020],
-Cell[23939, 537, 49276, 871, 70, "Output",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
- CellID->358626973]
-}, Open  ]],
-Cell[72359, 1411, 414, 6, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+Cell[7763, 164, 404, 6, 70, "Text",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
+ CellID->1432876021],
+Cell[8164, 172, 122, 1, 70, "Section",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
  CellID->876231958],
+Cell[8288, 175, 537, 8, 70, "Text",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
+ CellID->1020575516],
 Cell[CellGroupData[{
-Cell[72792, 1421, 172, 3, 70, "Input",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
- CellID->1274972605],
-Cell[72964, 1426, 7878, 160, 70, "Output",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
- CellID->332869178]
+Cell[8842, 187, 25261, 546, 70, "Input",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
+ CellID->810754696],
+Cell[33560, 735, 54793, 962, 70, "Output",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
+ CellID->1909490830]
 }, Open  ]],
-Cell[80697, 1589, 139, 1, 70, "Section",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
- CellID->1967685850],
-Cell[80838, 1592, 432, 7, 70, "Text",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
+Cell[87406, 1700, 415, 6, 70, "Text",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
  CellID->1044562475],
-Cell[81266, 1601, 349, 8, 70, "Input",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
- CellID->1653200050],
 Cell[CellGroupData[{
-Cell[81632, 1613, 26362, 358, 70, "Input",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
- CellID->1267857253],
-Cell[107639, 1973, 6023, 126, 70, "Output",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
- CellID->1873570946]
+Cell[87840, 1710, 172, 3, 70, "Input",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
+ CellID->1772362660],
+Cell[88012, 1715, 7877, 160, 70, "Output",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
+ CellID->35498422]
+}, Open  ]],
+Cell[95744, 1878, 139, 1, 70, "Section",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
+ CellID->1384978530],
+Cell[95885, 1881, 436, 7, 70, "Text",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
+ CellID->519689844],
+Cell[96317, 1890, 349, 8, 70, "Input",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
+ CellID->1609367578],
+Cell[CellGroupData[{
+Cell[96683, 1902, 34167, 462, 70, "Input",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
+ CellID->692927338],
+Cell[130391, 2366, 6022, 126, 70, "Output",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
+ CellID->160879640]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[113573, 2104, 2121, 40, 70, "Input",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
- CellID->1407158826],
-Cell[115657, 2146, 7485, 168, 70, "Output",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
- CellID->1138490425]
+Cell[136324, 2497, 2360, 43, 70, "Input",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
+ CellID->355665354],
+Cell[138644, 2542, 8783, 198, 70, "Output",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
+ CellID->792264023]
 }, Open  ]],
-Cell[122989, 2317, 276, 5, 70, "Text",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
- CellID->1609367578]
+Cell[147244, 2743, 276, 5, 70, "Text",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
+ CellID->1140508347]
 }
 ]
 *)

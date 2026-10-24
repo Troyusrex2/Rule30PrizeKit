@@ -1,4 +1,4 @@
-"""Embed the complete two-module proof in a review essay; never submit it."""
+"""Embed the complete three-module proof in a review essay; never submit it."""
 import hashlib
 import json
 from pathlib import Path
@@ -7,7 +7,8 @@ import re
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 modules = {'Rule30ControlledResponseResearch': 'Response',
-           'Rule30PeriodicProfileCounterResearch': 'Profiles'}
+           'Rule30PeriodicProfileCounterResearch': 'Profiles',
+           'Rule30FeedbackErasureResearch': 'Feedback'}
 parts, manifest = [], []
 for module in modules:
     path = ROOT/'lean/Ruliology/CellularAutomata'/(module+'.lean')
@@ -21,7 +22,8 @@ for module in modules:
     parts.append(source.strip())
 source = ('import Ruliology.CellularAutomata.Rule30Ether\n'
           'import Ruliology.CellularAutomata.Rule30Realization\n'
-          'import Ruliology.CellularAutomata.Rule30ZeroBoundary\n\n'
+          'import Ruliology.CellularAutomata.Rule30ZeroBoundary\n'
+          'import Ruliology.CellularAutomata.Rule30FiniteConfigs\n\n'
           'open Ruliology.CellularAutomata\n\n'+'\n\n'.join(parts)+'\n')
 (HERE/'Rule30ControlledResponseStandalone.lean').write_text(source, encoding='utf-8', newline='\n')
 headlines = ['Rule30Submission.Response.'+h for h in [
@@ -31,6 +33,8 @@ headlines = ['Rule30Submission.Response.'+h for h in [
 headlines += ['Rule30Submission.Profiles.'+h for h in [
     'full_period_eight', 'same_OR', 'OR_nonconstant', 'heads_differ',
     'infinite_true', 'infinite_false', 'loss_head_period_two', 'loss_full_period_lower_bound', 'loss_infinite']]
+headlines += ['Rule30Submission.Feedback.'+h for h in [
+    'white_step_erases_distinction', 'same_left_forever', 'finite_feedback_counterexample']]
 config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
           'EssayFile': 'controlled-response-essay.md', 'Headlines': headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config, indent=2)+'\n', encoding='utf-8', newline='\n')
@@ -39,14 +43,14 @@ config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
     'standalone_changes': 'Only module/import/export wrappers and namespaces adapted',
     'full_problem_claim': False}, indent=2)+'\n', encoding='utf-8', newline='\n')
 probes = '\n'.join((HERE/name).read_text(encoding='utf-8') for name in
-                   ['controlled-response-check.wl', 'profile-counter-check.wl'])
+                   ['controlled-response-check.wl', 'profile-counter-check.wl', 'feedback-erasure-check.wl'])
 essay = '''---
 Template: ComputationalEssay
 Name: Controlled responses and finite-support observability limits in Rule 30
 Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-24
-Description: Arbitrary-driver response equivalence, sound terminal rewrites, and explicit infinite-tail counterexamples
-Abstract: Responses of a right half to every left-boundary input are characterized exactly by two observations of a triangular diagonal map. Terminal rewrites 011 to 01 and 101 to 11 preserve the complete center trace with every common initial left half. Explicit eight-periodic infinite tails show that OR alone need not recover the head and that a period-two head need not detect a full period-eight state. Finite-tail completeness and the Rule 30 Prize problems remain open.
+Description: Arbitrary-driver response equivalence, sound terminal rewrites, finite feedback erasure, and explicit infinite-tail counterexamples
+Abstract: Responses of a right half to every left-boundary input are characterized exactly by two observations of a triangular diagonal map. Terminal rewrites 011 to 01 and 101 to 11 preserve the complete center trace with every common initial left half. Explicit eight-periodic infinite tails show that OR alone need not recover the head and that a period-two head need not detect a full period-eight state. Finite feedback can erase an initial distinction even when the common output is not eventually constant. Finite-tail completeness and the Rule 30 Prize problems remain open.
 Keywords: [Rule 30, controlled systems, observability, Lean, infinite tails]
 ---
 
@@ -93,6 +97,24 @@ extend to a finite whole-line orbit. A second example, packed states 42 and
 70, agrees through thirteen observations for every driver but is not
 universally equivalent. Checking only 2W-1 observations is insufficient at W=7.
 
+## A finite actual-feedback counterexample
+
+There is a stronger failure of the converse from one realized input. Let the
+common initial left half, including the center, be all white, and put black
+cells at {1} in one row and {1,2} in the other. Their initial right halves 1
+and 11 are not universally response equivalent. With the white initial center,
+one step sends them to 11 and 101. The terminal rewrite above proves these
+new right halves universally equivalent. The entire left halves still agree,
+so feedback soundness applies at every subsequent time.
+
+Thus both the complete center traces and complete right-head traces agree
+forever, although the initial controlled response classes differ. Both starts
+are finite and nonzero. The kit's finite-configuration version of Jen's
+period-one result proves that neither common trace is eventually constant.
+This is an actual whole-line feedback example, without assuming an externally
+constant input. Their left edges are both position 1, so it does not refute
+left-edge recovery. No claim about their eventual periodicity is made.
+
 ## Why the support and observation hypotheses matter
 
 Write an infinite row from its head toward the right. The two starts
@@ -122,12 +144,14 @@ an eventual center period or proves a Rule 30 Prize problem.
 
 The first calculation compares terminal rewrites in 104 complete Rule 30
 experiments with random common left halves and prefixes. The second compares
-all three profile tables with built-in Rule 30 on finite causal cones.
+all three profile tables with built-in Rule 30 on finite causal cones. The
+third checks eight actual-feedback examples, including the all-white left
+half, at both the center and the right head through time 128.
 These controls do not replace the unbounded kernel proofs.
 
 ```wl
 '''+probes+'''
-{controlledResponseReport[], profileCounterReport[]}
+{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[]}
 ```
 
 The diagram shows eight times, from top to bottom, and the first twelve cells
@@ -141,7 +165,7 @@ profileCounterDiagram[]
 
 ## Exact embedded proof and full kernel replay
 
-The source below contains both complete catalog modules, with only imports,
+The source below contains all three complete catalog modules, with only imports,
 module/export wrappers and namespace names adapted for a standalone file.
 It imports only official core modules and uses no additional axioms or native
 decision procedures. A passing partial check does not establish an official
