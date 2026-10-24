@@ -476,6 +476,39 @@ proof or used to infer a result about Rule 30 here.
 
 ## An explicit lower bound on any hypothetical ranking
 
+## Exact return criterion for the eight-column identity
+
+`Rule30ExactReturnResearch.lean` characterizes the full return, rather than
+merely testing the old sufficient spacing premise. The eight-column formula
+at every reconstructed depth holds **if and only if** adjacent black gates
+are forbidden and distance-two black pairs are forbidden starting at index
+one. The pair at indices zero and two is the sole exception.
+
+For an initially spaced gate, this exact weaker condition holds after the
+transform `D G(r)=G(r+2) xor G(r+4)` **if and only if** `G` is white from
+index five onward. A gate black only at index four demonstrates that this
+is weaker than preservation of spacing, which requires whiteness from index
+four. Nevertheless, any gate with black observations arbitrarily far out
+violates the exact transformed condition arbitrarily late. This applies to
+the actual empty-right gate. `empty_second_translation_fails` directly
+negates the universal twice-transformed scalar reconstruction formula for
+that actual gate.
+
+Thus weakening the spacing premise cannot repair iteration of this same
+depth-eight formula and transform. A different mechanism is still possible;
+no temporal period or prize problem is excluded. Both environments replayed
+all 26 new declarations and ten headlines:
+[working](exact-return-evidence/catalog/report.json),
+[pinned](exact-return-evidence/pinned/report.json). Previously replayed
+dependencies, totaling 396 declarations, were retained only after exact
+source-hash comparisons. Independent scalar temporal reconstruction checked
+all 4096 finite zero-tail words of width twelve, including 129 spaced words,
+and found the actual transformed gate already violates the condition at
+cycle zero of the sampled 1024-cycle window. These finite controls support,
+and do not replace, the unbounded proofs.
+
+## Quantitative ranking obstruction
+
 `Rule30QuantitativeRankResearch.lean` uses the newly audited PR 8 results:
 every seed-center window `[a,2a]`, `a>=1`, contains both colors. The three-cell
 start is exactly the single seed after one step, so its center must flip at

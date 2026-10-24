@@ -1,0 +1,268 @@
+{
+  "verdict": "pass",
+  "scope": "exact eight-column return criterion and actual-gate obstruction",
+  "full_problem_claim": false,
+  "new_temporal_period_excluded": false,
+  "checker_modified": false,
+  "source_sha256": "0d353861df019031a8e7a1dddb55024adbff41e517e121e504d23e556c6095a8",
+  "project_commit": "ae3c98e3ea3afedf4eea96dbd952672cc7994ed3",
+  "retained_exact_dependency_replays": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch",
+      "source_sha256": "4c2788c5a106019e6acba6b0821b0da53103dc75c56ab6dfa8e2e5c3ddb3702d",
+      "previous_full_replay_constants": 45,
+      "previous_report": "research/overnight/spacing-evidence/catalog/report.json",
+      "source_hash_matches": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenPrefixResearch",
+      "source_sha256": "377b464d3e4393f9960415ae49b8ca22d8657ef77d354f430353664cb800f987",
+      "previous_full_replay_constants": 62,
+      "previous_report": "research/overnight/driven-wall-evidence/catalog/report.json",
+      "source_hash_matches": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyWall",
+      "source_sha256": "5df98d5cf7af40b35e5bde6c01da4d3404122ae638dc1d127376b355f457678a",
+      "previous_full_replay_constants": 269,
+      "previous_report": "research/overnight/driven-wall-evidence/catalog/report.json",
+      "source_hash_matches": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30EmptyGateSpacingResearch",
+      "source_sha256": "4ee35ad6f170543d498905ee564fe9d3f8f9fd6307cb86441665c760e0837d46",
+      "previous_full_replay_constants": 20,
+      "previous_report": "research/overnight/driven-wall-evidence/catalog/report.json",
+      "source_hash_matches": true
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.ExactReturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.NearSpaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.ReturnAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_gate_blocks_second_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_gate_fails_arbitrarily_late",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_second_translation_fails",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.exactReturn_iff_nearSpaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.infinite_gate_blocks_second_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.infinite_gate_fails_arbitrarily_late",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed_spaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed_transformed_not_spaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed_transformed_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.returnAt_transformed_forces_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.transformed_exactReturn_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.translate_of_exactReturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.translation_iff_nearSpaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.ReturnAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.exactReturn_iff_nearSpaced",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.translation_iff_nearSpaced",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.returnAt_transformed_forces_white",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.transformed_exactReturn_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.infinite_gate_fails_arbitrarily_late",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_gate_blocks_second_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_gate_fails_arbitrarily_late",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.empty_second_translation_fails",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed_transformed_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ExactReturnResearch.lastAllowed_transformed_not_spaced",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30ExactReturnResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 26,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
