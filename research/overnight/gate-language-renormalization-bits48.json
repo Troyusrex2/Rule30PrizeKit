@@ -1,0 +1,490 @@
+{
+  "finite_symbolic_search_only": true,
+  "Lean_verified": false,
+  "CQ01Empty_proved": false,
+  "gate_bits": 48,
+  "input_eight_words": [
+    8,
+    9,
+    16,
+    18,
+    33,
+    36,
+    66,
+    72,
+    132,
+    144
+  ],
+  "word_counts": {
+    "7": 9,
+    "8": 10,
+    "9": 11,
+    "10": 12,
+    "11": 13,
+    "12": 15,
+    "13": 17,
+    "14": 19,
+    "15": 21,
+    "16": 23,
+    "17": 26,
+    "18": 29,
+    "19": 32,
+    "20": 36,
+    "21": 40,
+    "22": 45,
+    "23": 50,
+    "24": 55,
+    "25": 62,
+    "26": 69,
+    "27": 77,
+    "28": 86,
+    "29": 95,
+    "30": 107,
+    "31": 119,
+    "32": 132,
+    "33": 148,
+    "34": 164,
+    "35": 184,
+    "36": 205,
+    "37": 227,
+    "38": 255,
+    "39": 283,
+    "40": 316,
+    "41": 353,
+    "42": 391,
+    "43": 439,
+    "44": 488,
+    "45": 543,
+    "46": 608,
+    "47": 674,
+    "48": 755
+  },
+  "maximum_depth_tested": 79,
+  "constant_odd_columns": [
+    {
+      "depth": 1,
+      "odd_constant": 1,
+      "even_constant": null,
+      "recoded_eight_words": [
+        8,
+        9,
+        16,
+        18,
+        33,
+        36,
+        66,
+        72,
+        132,
+        144
+      ],
+      "language_preserved": true
+    },
+    {
+      "depth": 9,
+      "odd_constant": 1,
+      "even_constant": null,
+      "recoded_eight_words": [
+        41,
+        45,
+        74,
+        75,
+        82,
+        90,
+        105,
+        148,
+        150,
+        165,
+        180,
+        210
+      ],
+      "language_preserved": false
+    }
+  ],
+  "nonconstant_column_witnesses": [
+    {
+      "depth": 2,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 3,
+      "gate_word_hex": "0x84212121212",
+      "odd_bit": 0
+    },
+    {
+      "depth": 4,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 5,
+      "gate_word_hex": "0x84212121212",
+      "odd_bit": 0
+    },
+    {
+      "depth": 6,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 7,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 8,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 10,
+      "gate_word_hex": "0x84210848484",
+      "odd_bit": 0
+    },
+    {
+      "depth": 11,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 12,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 13,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 14,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 15,
+      "gate_word_hex": "0x84210848484",
+      "odd_bit": 0
+    },
+    {
+      "depth": 16,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 17,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 18,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 19,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 20,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 21,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 22,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 23,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 24,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 25,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 26,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 27,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 28,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 29,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 30,
+      "gate_word_hex": "0x84210909090",
+      "odd_bit": 0
+    },
+    {
+      "depth": 31,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 32,
+      "gate_word_hex": "0x84210848484",
+      "odd_bit": 0
+    },
+    {
+      "depth": 33,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 34,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 35,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 36,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 37,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 38,
+      "gate_word_hex": "0x84210848421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 39,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 40,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 41,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 42,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 43,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 44,
+      "gate_word_hex": "0x84210908484",
+      "odd_bit": 0
+    },
+    {
+      "depth": 45,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 46,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 47,
+      "gate_word_hex": "0x84210908421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 48,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 49,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 50,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 51,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 52,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 53,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 54,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 55,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 56,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 57,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 58,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 59,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 60,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 61,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 62,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 63,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 64,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 65,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 66,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 67,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 68,
+      "gate_word_hex": "0x84210842121",
+      "odd_bit": 0
+    },
+    {
+      "depth": 69,
+      "gate_word_hex": "0x84212109084",
+      "odd_bit": 0
+    },
+    {
+      "depth": 70,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 71,
+      "gate_word_hex": "0x84210848421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 72,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    },
+    {
+      "depth": 73,
+      "gate_word_hex": "0x84210908421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 74,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 75,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 76,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 77,
+      "gate_word_hex": "0x84210842421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 78,
+      "gate_word_hex": "0x84210848421",
+      "odd_bit": 0
+    },
+    {
+      "depth": 79,
+      "gate_word_hex": "0x84210842108",
+      "odd_bit": 0
+    }
+  ]
+}

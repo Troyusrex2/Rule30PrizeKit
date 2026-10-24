@@ -362,6 +362,34 @@ These refute the corresponding finite LP systems, not the Rule 30 conjecture.
 `synthesize_inversion_potential.py` tests a separate ordered-pair feature class
 on finite samples and is not an all-length certificate method.
 
+The subsequent `synthesize_front_transducer_potential.py` uses the exact
+outer black edge of a hypothetical finite row. It cuts each diagonal at that
+moving front; the cut grows by one per two reconstruction steps, instead of
+counting an increasing white suffix. Its endpoint motifs were compared with
+2,412 independently evolved cellwise finite-row cases. The distance model
+also permits weights in the distances from both ends of the moving word.
+Neither model yielded a certificate. Some larger models ended in numerical
+errors, recorded separately from infeasibility.
+
+`synthesize_history_transducer_potential.py` retains four or six consecutive
+diagonals, enforcing their exact reconstruction equations. Only the oldest
+two input bits are free. Its controls check thousands of transitions against
+direct complete diagonals and compare whole-word feature differences. The
+signed-weight variant seeks an additional graph certificate that bounds its
+potential below. These are still **unverified proof models**. The six-row
+run timed out; two exact-rational solver runs were stopped by an external
+480-second guard after the requested 90-second solver limit did not return
+a result promptly. No infeasibility is inferred from these stopped runs.
+Run exact-solver experiments behind an external wall-clock guard.
+
+The [search index](transducer-search-index.json) records all these outcomes
+and exact report hashes. A separate [finite symbolic probe](gate-language-renormalization-bits48.json)
+checks 755 words in the eight-bit gate language: among reconstruction depths
+1 through 79, only 1 and 9 have universally black odd entries. The depth-nine
+recoding gives twelve eight-bit words and fails to preserve the input
+language. This rejects that tested fixed-depth return, not every possible
+renormalization or the prize conjecture. The probe has not been Lean verified.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
