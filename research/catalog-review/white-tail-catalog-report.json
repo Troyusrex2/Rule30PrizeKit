@@ -1,0 +1,462 @@
+{
+  "verdict": "pass",
+  "project_commit": "765143dc2bf6d4b85f91df3a60433d80ae30ff85",
+  "checker_modified": false,
+  "comparison_base": "2f63afda261888e04ec57237290e723190914a1d",
+  "dependency_commit": "f6885abec122a9dcbb3160cb69312323bc075dc1",
+  "dependency_authors": "Luis Perez Morales; Claude (Fable 5.1)",
+  "extension_authors": "Troy Lowry; OpenAI Codex (GPT-6)",
+  "research_to_catalog": "module/export wrappers and namespace only",
+  "research_source_sha256": "43abac8e3536a2113c4fe45fe2dab31fca654b6017e8a9b7c1730f45aa33514d",
+  "problem1_proved": false,
+  "period_three_excluded": false,
+  "modules": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30EtherThreeErosion",
+      "source_sha256": "4f9ed0f7eb6bf1f0a0d2c901fc8e9748371e0c44366dced5d1b6cd553c9cc962",
+      "build_seconds": 3.687,
+      "check_seconds": 13.125,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.Front",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.IsB",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.REdge",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.certAt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.cert_all",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.cls",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.dC",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.erosion3_fin",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.eth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.eth_rule",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.exists_least",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.front_le_redge",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.front_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.isB_cls",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.isBad",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.nC",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.ne_eth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.no_wall",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.prefix_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.psiF",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.psiF_le",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.psiTab",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.psiTab_le",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.redge_add",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.redge_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.rule_flip",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.run_bad",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.stepGood",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.uC",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.ubit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.wake_good",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.wallCfg",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.nC.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.cert_all",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.front_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.wake_good",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.run_bad",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.erosion3_fin",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.no_wall",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.redge_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30EtherThreeErosion",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 131,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30WhiteTailErosion",
+      "source_sha256": "ceb5c28e5a065cb32e9318586f35d77bade84c8e77dd62943af50d42e4614252",
+      "build_seconds": 3.672,
+      "check_seconds": 10.5,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.erosion_bounded",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.ether_black_within",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.front_le_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.run_bad_bounded",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_defect",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_erosion",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_evol",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_often_departs",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30EtherThree.eth.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.front_le_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.run_bad_bounded",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.erosion_bounded",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_evol",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.ether_black_within",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_defect",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_erosion",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_often_departs",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30WhiteTailErosion",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 48,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ],
+  "warm_catalog_build_seconds": 3.7039999999979045
+}
