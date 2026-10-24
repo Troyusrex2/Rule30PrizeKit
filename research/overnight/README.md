@@ -884,3 +884,17 @@ both unchanged checkers; see [the pinned replay](three-prefix-evidence/pinned/re
 [The notes](period-three-ribbon-notes.md) separate that necessary condition
 from the open rank synthesis, rejected finite scores, and solver timeouts.
 No period-three or prize exclusion is claimed.
+
+## Generic inverse-cone certificates
+
+[`Rule30ThreeConeResearch`](../../lean/Ruliology/CellularAutomata/Rule30ThreeConeResearch.lean)
+extends the packed reconstruction bridge to arbitrary driven boundaries.
+For every prefix length N, the constrained `(*,0,1)` head has only
+`ceil(N/3)` free temporal bits; `prefix_code` gives exact initial-prefix
+coverage. For every W,N, `coneCheck_failure` turns a true finite certificate
+into an actual forced-phase violation before N for every row white beyond W.
+All 68 declarations and fourteen headlines pass both unchanged checkers;
+the width-eight certificate is a regression test, not a new numerical bound.
+See [the full scope, rejected candidates and controls](three-cone-notes.md).
+Neither certificate existence at every width, an unbounded density estimate,
+`C3w(011)`, nor the full prize statement has been proved.

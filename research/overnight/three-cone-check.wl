@@ -1,0 +1,43 @@
+(* Independent built-in Rule 30 controls for inverse-cone search witnesses. *)
+threeConeDir=DirectoryName[$InputFileName];
+ClearAll[threeConeReport];
+threeConeReport[]:=Module[{smoke,wide,beam,signed,samples,step,driver,cases},
+  smoke=Import[FileNameJoin[{threeConeDir,"three-inverse-width-smoke.json"}],"RawJSON"]["results"];
+  wide=Import[FileNameJoin[{threeConeDir,"three-inverse-width-probe.json"}],"RawJSON"]["results"];
+  beam=Import[FileNameJoin[{threeConeDir,"three-inverse-weight-beam.json"}],"RawJSON"]["levels"];
+  signed=Import[FileNameJoin[{threeConeDir,"three-inverse-density-lp-signed.json"}],"RawJSON"]["rejected_candidate"];
+  samples=Join[
+    (<|"Row"->FromDigits[#["witness"]],"Steps"->#["latest_first_violation"]+1,
+        "ExpectedViolation"->#["latest_first_violation"],"ExpectedTrace"->Null|>&)/@
+      Join[smoke,Select[wide,MemberQ[{24,40,60},#["width_bound"]]&]],
+    (<|"Row"->FromDigits[#["row"]],"Steps"->#["depth"],"ExpectedViolation"->Null,
+        "ExpectedTrace"->FromDigits[#["trace"]]|>&)/@Select[beam,MemberQ[{96,192},#["depth"]]&],
+    {<|"Row"->FromDigits[signed["row"]],"Steps"->signed["depth"],
+        "ExpectedViolation"->Null,"ExpectedTrace"->FromDigits[signed["trace"]]|>}];
+  step[x_,b_]:=BitXor[BitShiftRight[x,1],BitOr[x,BitShiftLeft[x,1],b]];
+  driver[t_]:=Boole[Mod[t,3]==1];
+  cases=Table[Module[{word=s["Row"],h=s["Steps"],w,pad,wall,ca,row,head={},
+      checks={},cells=0,violations,first,trace},
+    w=Max[1,IntegerLength[word,2]];pad=2*h+4;wall=pad+w+1;
+    ca=Join[ConstantArray[0,pad],IntegerDigits[word,2,w],{driver[0]},ConstantArray[0,2*h+4]];
+    row=word;
+    Do[
+      AppendTo[head,ca[[wall-1]]];
+      checks=Join[checks,Table[ca[[wall-1-k]]==BitAnd[BitShiftRight[row,k],1],{k,0,w+h-1}]];
+      cells+=w+h;
+      row=step[row,driver[t]];
+      ca=Last[CellularAutomaton[30,ca,1]];
+      ca[[wall]]=driver[t+1],{t,0,h-1}];
+    violations=Select[Range[0,h-1],Mod[#,3]!=0&&head[[#+1]]!=Boole[Mod[#,3]==2]&];
+    first=If[violations=={},Null,First[violations]];
+    trace=Sum[head[[t+1]]*2^t,{t,0,h-1}];
+    <|"InitialWidth"->w,"Steps"->h,"CellsCompared"->cells,"BuiltinConesMatch"->And@@checks,
+      "FirstViolation"->first,
+      "ExpectedResultMatches"->If[s["ExpectedViolation"]===Null,
+        first===Null&&trace==s["ExpectedTrace"],first==s["ExpectedViolation"]]|>
+  ],{s,samples}];
+  <|"FiniteControlsOnly"->True,"LeanVerifiedByThisCalculation"->False,"FullProblemClaim"->False,
+    "BuiltinRule30Cones"->Length[cases],"CellsCompared"->Total[Lookup[cases,"CellsCompared"]],
+    "AllPassed"->(Length[cases]==8&&And@@Flatten[Lookup[cases,{"BuiltinConesMatch","ExpectedResultMatches"}]]),
+    "Cases"->cases|>
+];
