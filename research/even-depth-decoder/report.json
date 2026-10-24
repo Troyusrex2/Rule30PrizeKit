@@ -1,0 +1,676 @@
+{
+  "verdict": "pass",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "source_sha256": "cd6c410fa0b03882b2542d001018efa147e45823271a901fe4836e78545c053f",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "external_reconstruction_audit": {
+    "verdict": "pass",
+    "submission_id": "R30-20261024-ad1748",
+    "authors": "G.P.J.W. Quint; Gemini (Google)",
+    "supersedes": "R30-20261024-1e1b3b",
+    "source_url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/api/file?id=R30-20261024-ad1748&kind=lean",
+    "source_sha256": "153226d13365d8b01d4e85a4ecac57b0556e59c98cdbff1d8dc74f6e39c6daa0",
+    "source_bytes": 27298,
+    "source_adaptations": "none",
+    "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+    "checker_unchanged": true,
+    "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+    "dependency_build_seconds": 6.344,
+    "build_seconds": 30.781,
+    "replay_seconds": 25.578,
+    "check": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.L_eq_skelPair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.L_skelRow_eq_skelPair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.Q01_iff_no_skelPair_support",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.cell_neg_eq_skelPair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.clearBit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.even_depth_white_iff_s_eq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.free_bits_unique_of_even_depths",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.golden_shift",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m10_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m4_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m5_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m5_even_eq_m3_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m5_odd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m6_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m6_odd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m7_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m7_odd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m8_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m8_odd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.m9_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.odd_depth_determined_by_even_depths",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.or_m3_m2_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.or_m7_m6_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.or_m8_m7_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.or_m9_m8_even",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.skelPair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_even_affine_decomp",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_even_fst",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_even_snd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_locality_and_pivot",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_odd_fst",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_odd_snd",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_one",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_support_of_not_Q01",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.skelRow",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.L_eq_skelPair.match_1_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.L_skelRow_eq_skelPair.match_1_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.cell_neg_eq_skelPair.match_1_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.free_bits_unique_of_even_depths.match_1_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair.eq_3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.skelPair.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30Submission.skelPair_locality_and_pivot.match_1_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.Q01_iff_no_skelPair_support",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.cell_neg_eq_skelPair",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_locality_and_pivot",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.skelPair_even_affine_decomp",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.even_depth_white_iff_s_eq",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.free_bits_unique_of_even_depths",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.odd_depth_determined_by_even_depths",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.L_eq_skelPair",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.L_skelRow_eq_skelPair",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m5_even",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m6_odd",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m7_even",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m7_odd",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m8_even",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m8_odd",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m9_even",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30Submission.m10_even",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Rule30ExternalSkelPairAudit",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 139,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    "Q01_proved": false,
+    "full_problem_solved": false,
+    "scope": "All-depth free-bit reconstruction and equivalence with still-open Q01; golden closed forms assume a coupled alternating center"
+  },
+  "build_seconds": 29.765,
+  "replay_seconds": 24.531,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30EvenDecodeResearch.FiniteBits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.Q01_iff_finite_even_infinite_odd",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EvenDecodeResearch.decode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode_evenCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode_locality",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EvenDecodeResearch.evenCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_bijective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_decode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.finite_even_odd_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.finite_tail_has_last",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EvenDecodeResearch.oddCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.oddCode_locality",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.oddCode.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_decode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode_evenCode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.evenCode_bijective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.decode_locality",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.oddCode_locality",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.finite_even_odd_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EvenDecodeResearch.Q01_iff_finite_even_infinite_odd",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30EvenDecodeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 31,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "Q01_proved": false,
+  "full_problem_solved": false
+}
