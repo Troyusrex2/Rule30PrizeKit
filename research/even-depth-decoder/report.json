@@ -16,9 +16,9 @@
     "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
     "checker_unchanged": true,
     "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
-    "dependency_build_seconds": 6.344,
-    "build_seconds": 30.781,
-    "replay_seconds": 25.578,
+    "dependency_build_seconds": 5.812,
+    "build_seconds": 30.844,
+    "replay_seconds": 25.609,
     "check": {
       "claim": "partial",
       "declared": [
@@ -475,8 +475,8 @@
     "full_problem_solved": false,
     "scope": "All-depth free-bit reconstruction and equivalence with still-open Q01; golden closed forms assume a coupled alternating center"
   },
-  "build_seconds": 29.765,
-  "replay_seconds": 24.531,
+  "build_seconds": 29.813,
+  "replay_seconds": 25.156,
   "check": {
     "claim": "partial",
     "declared": [
@@ -670,6 +670,189 @@
     },
     "verdict": "pass",
     "verifiedTargets": []
+  },
+  "odd_sensitivity": {
+    "module": "Rule30OddSensitivityResearch",
+    "source_sha256": "3efd3a89174f4b795e64972c455c91ed573d356a91b44c207968a2e4418772c4",
+    "dependency_build_seconds": 3.688,
+    "build_seconds": 30.375,
+    "replay_seconds": 24.593,
+    "check": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.alt_flipAt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30OddSensitivityResearch.diagParity",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.difference_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.factor_xor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30OddSensitivityResearch.flipAt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.odd_free_flip",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.recon_flipAt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.recon_shoulder_difference",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30OddSensitivityResearch.shoulder",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.shoulder_parity",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.diagParity.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.diagParity.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.diagParity.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.flipAt.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.shoulder.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.shoulder.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.shoulder.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Rule30OddSensitivityResearch.shoulder.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ZeroBoundary.alt.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.recon_shoulder_difference",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.shoulder_parity",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.recon_flipAt",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.alt_flipAt",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Rule30OddSensitivityResearch.odd_free_flip",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Rule30OddSensitivityResearch",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 41,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
   },
   "Q01_proved": false,
   "full_problem_solved": false
