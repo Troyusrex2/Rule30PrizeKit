@@ -721,6 +721,39 @@ compare 257 complete rows with built-in `CellularAutomaton[30, ...]`, eight
 binary-counter periods, and 1,022 odd-counter diagonal values. All pass.
 No novelty or prize claim is made for this diagnostic.
 
+## Infinite right tails defeat period-only replacements for finite support
+
+`Rule30PeriodicProfileCounterResearch.lean` gives explicit counterexamples for
+`Q(x)(k) = x(k) XOR (x(k+1) OR x(k+2))`. These concern a triangular diagonal
+system, not the actual vertical center. They show why a power-of-two orbit
+period cannot replace finite support in proposed observability arguments.
+
+The first two starts, written from the head to the right, are
+`1100(1101)...` and `0110(01)...`, where the parenthesized block repeats
+forever. Both full Q orbits have period dividing eight. Their head traces are
+different, but the OR of their first two cells is the same nonconstant trace
+at every time. At time two, the OR of cells one and two differs. Thus the
+common head OR does not recover even the next OR. These are not universally
+equivalent controlled states: universal response also observes the head itself.
+
+A third start, `1100(0001)...`, has a head trace of least period two, whereas
+its full Q orbit has least period eight. The shorter head period loses actual
+state information even though all temporal periods involved are powers of two.
+All three starts are proved to have infinite support. None refutes the
+corresponding finite-tail conjecture or proves its unbounded truth.
+
+The [discovery and control script](periodic_profile_counter_controls.py) finds
+the examples in the graph allowing infinite right continuations. Its clock-eight
+graph has 132 viable profile pairs; the earlier zero-right-boundary search
+reaches only 36. Independent packed updates check 12,288 scalar cells.
+The infinite-time and infinite-depth statements, including the lack of finite
+support and the full-state period lower bound, are kernel proofs, not graph
+search assumptions. No literature-priority claim is made.
+
+All 61 generated declarations and fifteen headlines pass full replay with the
+unchanged [working](periodic-profile-evidence/catalog/report.json) and
+[pinned](periodic-profile-evidence/pinned/report.json) checkers, with no new axioms.
+
 ## Reproduction commands
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -760,6 +793,9 @@ python research/overnight/prefix_feature_obstruction_controls.py
 python research/overnight/aged_prefix_rank_probe.py --max-width 20
 python research/overnight/verify_moving_frame.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_moving_frame.py --lake /path/to/lake
+python research/overnight/verify_periodic_profile.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_periodic_profile.py --lake /path/to/lake
+python research/overnight/periodic_profile_counter_controls.py
 python research/overnight/temporal_profile_probe.py --clock 64
 python research/overnight/controlled_response_controls.py
 python research/overnight/controlled_response_normal_form.py --max-width 22
