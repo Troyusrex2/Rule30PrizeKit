@@ -72,3 +72,21 @@ python research/renormalization/verify.py --lake /path/to/lake
 In Wolfram, load `spacing-probe.wl` and evaluate `spacingReport[]`, then load
 `spacing-gap-probe.wl` and evaluate `spacingGapReport[]`. The finite experiments
 are distinguished from the all-time Lean statements throughout.
+
+## Review essay
+
+The [evaluated notebook](renormalization-essay.nb) embeds the exact
+[standalone source](Rule30RenormalizationStandalone.lean).
+The unchanged CLI checker and LeanLink each replayed all 73 declarations;
+the saved notebook has zero message cells and its source round-trip matches.
+See [CLI verification](standalone-verification.json) and
+[notebook verification](renormalization-essay.nb.verification.json).
+
+It is prepared for human review and **has not been submitted to the prize
+API**. New submission consent is still required. To regenerate the essay,
+run `generate_essay.py`, set `RULE30PRIZE_KIT` to a prepared pinned kit, and
+evaluate `build-notebook.wl` in a fresh Wolfram kernel with LeanLink installed.
+The builder disables conversion caching, inspects the saved notebook and never
+submits anything. `IncludeInternal -> True` exposes ordinary theorem names
+containing `.rec`, which LeanLink's default display filter otherwise hides;
+it does not change the kernel check.
