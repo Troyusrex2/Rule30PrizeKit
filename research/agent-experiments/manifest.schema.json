@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rule 30 multi finding agent response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "campaign_id", "response_id", "agent", "created_utc", "research_base_commit", "supersedes", "artifacts", "findings"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "campaign_id": {"const": "rule30-20261024"},
+    "response_id": {"$ref": "#/$defs/responseId"},
+    "agent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "model": {"type": ["string", "null"]},
+        "framework": {"type": ["string", "null"]}
+      }
+    },
+    "created_utc": {"type": "string", "format": "date-time", "pattern": "Z$"},
+    "research_base_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "supersedes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/responseId"}},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["artifact_id", "path", "sha256", "description"],
+        "properties": {
+          "artifact_id": {"type": "string", "pattern": "^A[0-9]{3}$"},
+          "path": {"type": "string", "pattern": "^(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9][A-Za-z0-9._/-]*$"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "findings": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/finding"}}
+  },
+  "$defs": {
+    "responseId": {"type": "string", "pattern": "^r30-[a-z0-9][a-z0-9-]*-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}-v(?:0[1-9]|[1-9][0-9])$"},
+    "findingRef": {"type": "string", "pattern": "^r30-[a-z0-9][a-z0-9-]*-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}-v(?:0[1-9]|[1-9][0-9])#F[0-9]{3}$"},
+    "verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["not_run", "finite_computation", "full_kernel_replay"]},
+        "kit_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "lean_version": {"type": "string", "minLength": 1},
+        "module": {"type": "string", "minLength": 1},
+        "headlines": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "commands": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "checker_unchanged": {"type": "boolean"},
+        "full_replay": {"type": "boolean"},
+        "checker_report_artifact_id": {"type": "string", "pattern": "^A[0-9]{3}$"}
+      },
+      "allOf": [{
+        "if": {"properties": {"kind": {"const": "full_kernel_replay"}}, "required": ["kind"]},
+        "then": {
+          "required": ["kit_commit", "lean_version", "module", "headlines", "commands", "checker_unchanged", "full_replay", "checker_report_artifact_id"],
+          "properties": {"checker_unchanged": {"const": true}, "full_replay": {"const": true}, "commands": {"minItems": 1}}
+        }
+      }]
+    },
+    "finding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["finding_id", "track", "status", "title", "claim", "scope", "result", "evidence_artifact_ids", "verification", "depends_on", "conflicts_with", "limitations", "next_action"],
+      "properties": {
+        "finding_id": {"type": "string", "pattern": "^F[0-9]{3}$"},
+        "track": {"enum": ["A", "B", "C", "D", "E", "F", "G", "H"]},
+        "status": {"enum": ["EXPERIMENT", "FAILED", "COUNTEREXAMPLE_CANDIDATE", "PARTIAL_KERNEL_CHECKED", "FULL_SOLUTION_CANDIDATE"]},
+        "title": {"type": "string", "minLength": 1},
+        "claim": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "result": {"type": "string", "minLength": 1},
+        "evidence_artifact_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^A[0-9]{3}$"}},
+        "verification": {"$ref": "#/$defs/verification"},
+        "depends_on": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/findingRef"}},
+        "conflicts_with": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/findingRef"}},
+        "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "next_action": {"type": "string", "minLength": 1}
+      },
+      "allOf": [{
+        "if": {"properties": {"status": {"enum": ["PARTIAL_KERNEL_CHECKED", "FULL_SOLUTION_CANDIDATE"]}}, "required": ["status"]},
+        "then": {"properties": {"verification": {"properties": {"kind": {"const": "full_kernel_replay"}}}, "evidence_artifact_ids": {"minItems": 1}}}
+      }]
+    }
+  }
+}

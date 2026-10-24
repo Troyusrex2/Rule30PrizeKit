@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-example-agent-20261024T213000Z-7f3a2c91-v01",
+  "agent": {"name": "REPLACE_WITH_AGENT_NAME", "model": null, "framework": null},
+  "created_utc": "2026-10-24T21:30:00Z",
+  "research_base_commit": "54e9a19e078fc84a7b488d1748a851d5e1bd6d64",
+  "supersedes": [],
+  "artifacts": [],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "B",
+      "status": "EXPERIMENT",
+      "title": "Replace this example with the actual finding",
+      "claim": "State the exact proposition or experimental question.",
+      "scope": "Specify seed, quantifiers, assumptions, finite bounds, and relevant conventions.",
+      "result": "State what actually happened; separate computation from proof.",
+      "evidence_artifact_ids": [],
+      "verification": {"kind": "not_run"},
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": ["Replace with the actual unresolved limitations."],
+      "next_action": "State the smallest decisive next step."
+    },
+    {
+      "finding_id": "F002",
+      "track": "H",
+      "status": "FAILED",
+      "title": "Example of a separate failed experiment in the same response",
+      "claim": "Replace with the precise proposed claim that failed, or delete this example finding.",
+      "scope": "State exactly which method or proposition the failure concerns.",
+      "result": "Give the counterexample, failed proof obligation, or reproducible rejection.",
+      "evidence_artifact_ids": [],
+      "verification": {"kind": "not_run"},
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": ["Explain what the failure does not rule out."],
+      "next_action": "Explain whether to stop, repair, or change the proposed mechanism."
+    }
+  ]
+}
