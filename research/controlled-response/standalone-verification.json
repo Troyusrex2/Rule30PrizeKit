@@ -4,10 +4,10 @@
   "prize_API_submitted": false,
   "full_problem_claim": false,
   "finite_tail_completeness_proved": false,
-  "source_sha256": "48e5e171b096cb22614d65ff15db40c4f7c2a4439fd301d322630a217424b075",
+  "source_sha256": "5c19cad512fe7f56fab0292d3c6981d178e03091a026f4b0ade4620509ccc1b2",
   "kit_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
-  "build_seconds": 8.313,
-  "check_seconds": 13.484,
+  "build_seconds": 8.875,
+  "check_seconds": 14.11,
   "native_C_emitted": false,
   "check": {
     "claim": "partial",
@@ -808,6 +808,101 @@
         "standardAxioms": true
       },
       {
+        "kind": "inductive",
+        "name": "Rule30Submission.TerminalClock.Linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30Submission.TerminalClock.RewriteEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.deflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.deflate_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.inflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.inflate_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.iterate_equal_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_deflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_diagonal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_inflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_iterate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.linked_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.rewrite_equal_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.rewrite_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.rewrite_return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.tail_011_return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.tail_101_return_iff",
+        "standardAxioms": true
+      },
+      {
         "kind": "theorem",
         "name": "Rule30Submission.Feedback.double.eq_1",
         "standardAxioms": true
@@ -1113,6 +1208,101 @@
         "standardAxioms": true
       },
       {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.Linked.base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30Submission.TerminalClock.Linked.below",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.Linked.brecOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.Linked.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.Linked.cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30Submission.TerminalClock.Linked.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.Linked.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.brecOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.trans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.deflate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.inflate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.linked_iterate.match_1_1",
+        "standardAxioms": true
+      },
+      {
         "kind": "theorem",
         "name": "Rule30Submission.FiniteClockCertificate.Node.mk.inj",
         "standardAxioms": true
@@ -1135,6 +1325,56 @@
       {
         "kind": "def",
         "name": "Rule30Submission.FiniteClockCertificate.instDecidableEqNode.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.Linked.below.base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.Linked.below.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.Linked.below.cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30Submission.TerminalClock.Linked.below.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.TerminalClock.RewriteEq.below.trans",
         "standardAxioms": true
       }
     ],
@@ -1475,6 +1715,54 @@
         "ok": true,
         "problems": [],
         "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.iterate_equal_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.tail_011_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.tail_101_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.TerminalClock.rewrite_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
       }
     ],
     "importsStatements": true,
@@ -1483,7 +1771,7 @@
     "official": [],
     "reasons": [],
     "replay": {
-      "constants": 345,
+      "constants": 394,
       "ok": true
     },
     "verdict": "pass",
