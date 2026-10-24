@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.advance","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.advance_last","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.advance_succ","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.advance_zero","standardAxioms":true},{"kind":"def","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.packedRun","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.packedRun_succ","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.packedRun_zero","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.packed_sound","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch.packed_sound","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Ruliology.CellularAutomata.Rule30PackedReconstructionResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":13,"ok":true},"verdict":"pass","verifiedTargets":[]}
