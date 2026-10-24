@@ -276,6 +276,46 @@ radius-three LP was infeasible and the radius-four solver returned unknown,
 not infeasible. The reports retain those distinctions; no candidate is accepted
 and no density or finite-left-support conclusion follows.
 
+## Exact remaining target and anti-diagonal model
+
+`Rule30EmptyGateReductionResearch` proves the unconditional equality
+
+```text
+lam (boundary gate) k = zrow (Psi empty) 293 k.
+```
+
+Finite support of `Psi empty` therefore implies finite support of this shifted
+row. No converse assertion about finite preimages is used. The module defines
+the **open** weighted-count estimate `CostEstimate`: fixed natural `C,K` with
+`n <= C * sum_{1<=j<=n, shifted(j)=black} j + K` for every `n`.
+It proves that this estimate would imply `CQ01Empty`, but **does not prove the
+estimate**. All 32 generated declarations passed unchanged-checker replay in
+the [working](empty-reduction-evidence/catalog/report.json) and
+[pinned](empty-reduction-evidence/pinned/report.json) environments.
+
+`Rule30DiagonalSuffixResearch` separately proves the scalar prefix-xor/OR
+anti-diagonal recurrence and both local ribbon constraints used by the search.
+For a reconstructed row white beyond width `W`, it proves that every suffix of
+fixed width `s` is white once diagonal length `n > W+2*s`. All 32 declarations
+passed replay in the [working](diagonal-suffix-evidence/catalog/report.json)
+and [pinned](diagonal-suffix-evidence/pinned/report.json) environments. This is
+a necessary consequence of finite support, not a decreasing-potential proof.
+
+The [density search index](density-potential-index.json) distinguishes numerical
+infeasibility, solver errors, time limits and rejected candidates. Adding global
+renewal-clock weights produced finite fits, but six successive fits were
+rejected by independently evolved prefixes, through depth 248. Restricting the
+descent inequalities to states with white suffixes also produced rejected fits,
+through depth 641. No potential is accepted.
+
+`check_abstract_density_potential.py` uses dynamic programming over a fixed set
+of ribbon-buffer states. It checks a **bounded** range of widths and can impose
+an exact finite legal history at the head. Its synthetic counterexamples need
+not be reachable from a gate: they reject only a proof based on that ribbon
+overapproximation. They do not refute the desired estimate. An unbounded
+transducer certificate would additionally need graph-potential inequalities
+covering every transition and endpoint; that proof has not been supplied.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -295,6 +335,8 @@ python research/overnight/verify_eventual_relations.py --project /path/to/pinned
 python research/overnight/verify_eventual_relations.py --lake /path/to/lake
 python research/overnight/verify_driven_wall.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_driven_wall.py --lake /path/to/lake
+python research/overnight/verify_empty_reduction.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_diagonal_suffix.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
 python research/overnight/driven_spacing_probe.py --samples 96 --cycles 16384
