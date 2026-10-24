@@ -308,6 +308,45 @@ unchanged and pinned by SHA256 in
 python research/catalog-review/audit_width74_submission.py --project <3eca23c-reference-checkout> --lake <lake> --output <audit-directory>
 ```
 
+## All-depth period-two reconstruction audit
+
+[R30-20261024-ad1748](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-ad1748),
+by G.P.J.W. Quint and Gemini (Google), supersedes `R30-20261024-1e1b3b`.
+We independently compiled and replayed all **139 declarations and 17
+headlines** of its exact published source at `3eca23c`, with the unchanged
+checker and standard axioms only. The source was not adapted. See
+[the report](skelpair-ad1748-report.json).
+
+Its recursive `skelPair s m k` describes every left column at even and odd
+times from the free sequence at column `-1`. The proof establishes all-depth
+locality and a linear pivot, shows that initial even spatial depths determine
+the free bits and initial odd depths, and realizes arbitrary free sequences
+in the zero-boundary left half. It proves an exact equivalence between `Q01`
+and nonexistence of a nonzero, finitely supported reconstructed row.
+**That nonexistence statement and `Q01` remain open.**
+
+The golden-mean restriction and the additional closed forms through column
+`-10` assume an actual coupled history with alternating center. They are not
+identities for arbitrary free sequences. Applying them to every zero-boundary
+reconstruction would add an unjustified hypothesis.
+
+Independent physical-coordinate truth-table controls compare 34816 cells in
+uncontaminated causal cones for 64 arbitrary free sequences, including ones
+that violate the golden restriction. A further 6144 finite checks exercise
+the stated locality and pivot. These controls test the implementation and
+interpretation; the all-depth claims come from full kernel replay. See
+[the controls](skelpair-ad1748-controls.json).
+
+```text
+python research/catalog-review/audit_skelpair_submission.py --project <3eca23c-reference-checkout> --lake <lake> --output <audit-directory>
+python research/catalog-review/control_skelpair_submission.py
+```
+
+The [reproducer](audit_skelpair_submission.py) pins the public source hash,
+protects different existing source, rebuilds it, and fully replays every
+declaration under the existing resource guards. This audit credits the
+external authors and makes no claim to a new period exclusion or prize.
+
 ## Reproduce
 
 In a checkout of the corresponding revised PR head:

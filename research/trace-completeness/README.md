@@ -252,8 +252,9 @@ the finite experiments have not supplied one.
 [The catalog bridge](Rule30AncestryCatalogBridge.lean) proves that the
 lightweight module's update, iterates and observation predicate agree with
 the adopted `Rule30StripeMeeting` constants, and states the counterexample
-with those catalog constants. All **52 declarations and 12 selected
-headlines** across the two modules passed full kernel replay at the updated
+with those catalog constants. Together with the backward obstruction below,
+all **61 declarations and 18 selected headlines** across three modules passed
+fresh full kernel replay at the updated
 verifier commit `3eca23c0a9fa6b153313655e6d51835406c2d06e`, with the unchanged
 checker and standard axioms only. See [the report](evidence/ancestry-3eca/report.json).
 The earlier five-module reports remain pinned to their original commit.
@@ -267,6 +268,33 @@ statement; the Lean support argument does that. See [the controls](ancestry-cont
 python research/trace-completeness/verify_ancestry.py --project /path/to/3eca23c-kit --lake /path/to/lake
 python research/trace-completeness/control_ancestry.py
 ```
+
+## Equal futures do not justify a backward step
+
+[The backward obstruction](Rule30BackwardTraceObstruction.lean) checks a
+failure of the unrestricted rule “equal future traces and finite predecessors
+force equal predecessor observations.” In the catalog's frame, take parents
+`a=6`, `b=5`, and center index `0`. Their initial observed bits differ. Their
+images are `26` and `27`, which are stripe-related at center index `1`.
+The adopted stripe theorem therefore proves equality of **every future
+observation**, not just a tested prefix:
+
+```text
+Phi^t(6)[t] = Phi^t(5)[t] for every t >= 1,
+but 6[0] != 5[0].
+```
+
+Both parents are positive finite rows and have highest bit `2`. Thus this
+does not refute edge observability, infinite-trace ancestry recovery, or the
+seed-specific separation premise. It prevents an unrestricted backward step
+from being used in those arguments. It also says nothing about an eventual
+period of either individual trace.
+
+The new module's **nine declarations and six selected headlines** are included
+in the expanded 61-declaration replay above. Its proof uses the actual adopted
+`Phi`, `phiRows` and `StripeRelated` constants. Independent physical controls
+compare 8710 more cells and confirm the unequal initial observations and the
+next 64 equal observations. All-time equality comes from the Lean proof.
 
 ## Reproduce the earlier packages
 

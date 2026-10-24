@@ -4,8 +4,8 @@
     {
       "module": "Rule30AncestryResearch",
       "source_sha256": "3268a979d654e034d12eef23a797c4c8be143382af4519cae03a133ac6e31555",
-      "build_seconds": 5.75,
-      "replay_seconds": 9.922,
+      "build_seconds": 6.297,
+      "replay_seconds": 10.468,
       "check": {
         "claim": "partial",
         "declared": [
@@ -240,8 +240,8 @@
     {
       "module": "Rule30AncestryCatalogBridge",
       "source_sha256": "44db51ad3074b1db638656caf5d7a2a75397fbc0c855058d6a49c6449bc4329e",
-      "build_seconds": 5.735,
-      "replay_seconds": 9.984,
+      "build_seconds": 5.75,
+      "replay_seconds": 9.969,
       "check": {
         "claim": "partial",
         "declared": [
@@ -337,14 +337,145 @@
         "verdict": "pass",
         "verifiedTargets": []
       }
+    },
+    {
+      "module": "Rule30BackwardTraceObstruction",
+      "source_sha256": "b1b2af9a2812485c58dc6302bdb28fd734889bfdd681e757a07235fc8f2cf8bc",
+      "build_seconds": 6.328,
+      "replay_seconds": 11.11,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.different_predecessor_observation",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.equal_future_images",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.images_stripe_related",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.no_unrestricted_backward_rule",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.parent_traces_agree_after_one",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.positive_finite_predecessors",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.same_predecessor_edge",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.images_stripe_related",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.equal_future_images",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.parent_traces_agree_after_one",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.different_predecessor_observation",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.same_predecessor_edge",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30BackwardTraceObstruction.no_unrestricted_backward_rule",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30BackwardTraceObstruction",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 9,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
     }
   ],
   "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
   "checker_unchanged": true,
   "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
-  "dependency_build_seconds": 3.672,
+  "dependency_build_seconds": 3.688,
   "finite_ancestry_bound_proved": true,
   "short_ancestry_horizon_refuted": true,
+  "unrestricted_backward_recovery_refuted": true,
   "infinite_trace_ancestry_recovery_proved": false,
   "edge_horizon_refuted": false,
   "full_problem_solved": false

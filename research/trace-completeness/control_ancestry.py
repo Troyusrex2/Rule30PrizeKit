@@ -46,9 +46,29 @@ def main():
         if a < 16:
             assert result != 42
         parent_checks += 1
+    backwards = []
+    backward_cells = 0
+    for a in [6, 5]:
+        row = initial(a, 0)
+        packed = a
+        observed = []
+        for t in range(65):
+            observed.append(row.get(0, 0))
+            for p, bit in row.items():
+                k = t-p
+                assert k >= 0 and bit == ((packed >> k) & 1)
+                backward_cells += 1
+            row = step(row)
+            packed ^= (packed << 1) | (packed << 2)
+        backwards.append(observed)
+    assert backwards[0][0] != backwards[1][0]
+    assert backwards[0][1:] == backwards[1][1:]
     report = {'all_passed': True, 'physical_cells_compared': cells,
         'one_step_parent_controls': parent_checks, 'first_difference_time': first,
         'rows': [49, 42], 'center_index': 2, 'Lean_verified_by_this_script': False,
+        'backward_rows': [6, 5], 'backward_physical_cells_compared': backward_cells,
+        'backward_future_observations_compared': 64,
+        'backward_initial_observations_differ': True,
         'unbounded_no_parent_claim_from_controls': False,
         'full_problem_solved': False}
     (HERE/'ancestry-controls.json').write_text(json.dumps(report, indent=2)+'\n',

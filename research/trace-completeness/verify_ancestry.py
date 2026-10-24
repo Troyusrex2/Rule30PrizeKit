@@ -1,4 +1,4 @@
-"""Replay the ancestry calculation and failed short horizon at kit 3eca23c."""
+"""Replay ancestry calculations and failed short/backward recovery at kit 3eca23c."""
 import argparse
 import hashlib
 import importlib.util
@@ -15,7 +15,11 @@ HEADS = ['Phi_log2', 'phiRows_log2', 'finite_ancestry_bound', 'no_parent42',
 ITEMS = [(MODULE, 'Rule30AncestryResearch.', HEADS),
          ('Rule30AncestryCatalogBridge', 'Rule30AncestryCatalogBridge.',
           ['Phi_agrees', 'phiRows_agree', 'prefix_agrees',
-           'official_short_ancestry_horizon_counterexample'])]
+           'official_short_ancestry_horizon_counterexample']),
+         ('Rule30BackwardTraceObstruction', 'Rule30BackwardTraceObstruction.',
+          ['images_stripe_related', 'equal_future_images', 'parent_traces_agree_after_one',
+           'different_predecessor_observation', 'same_predecessor_edge',
+           'no_unrestricted_backward_rule'])]
 
 
 def main():
@@ -70,6 +74,7 @@ def main():
         'dependency_build_seconds': dependency_time,
         'finite_ancestry_bound_proved': True,
         'short_ancestry_horizon_refuted': True,
+        'unrestricted_backward_recovery_refuted': True,
         'infinite_trace_ancestry_recovery_proved': False,
         'edge_horizon_refuted': False, 'full_problem_solved': False}
     (output/'report.json').write_text(json.dumps(report, indent=2)+'\n',
