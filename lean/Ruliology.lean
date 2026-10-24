@@ -61,6 +61,7 @@ public import Ruliology.CellularAutomata.Rule30ColumnSeparationResearch
 public import Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch
 public import Ruliology.CellularAutomata.Rule30PackedReconstructionResearch
 public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch
+public import Ruliology.CellularAutomata.Rule30CenterRuns
 
 /-!
 # Rule 30 Prize: Lean snapshot
