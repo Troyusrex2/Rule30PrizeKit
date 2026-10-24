@@ -2,7 +2,7 @@
 
 Troy Lowry; OpenAI Codex • 2026-10-24
 
-Certified 16-cell forward invariants prove exact spacings three or five in the empty-right driven gate from white cycle 146 onward, and exclude consecutive gaps of three from cycle 155 onward. Its eight-column reconstruction translation applies once, but the required spacing fails after transformation. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
+Certified 16-cell forward invariants prove exact spacings three or five in the empty-right driven gate from white cycle 146 onward, and exclude consecutive gaps of three from cycle 155 onward. The exact condition for its eight-column reconstruction return is weaker than spacing, but the actual transformed gate violates even that condition arbitrarily late. Its universal twice-transformed formula is false. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
 
 ## Scope and source
 
@@ -18,6 +18,8 @@ recon b\_G (m+8) t = recon b\_(D G) m t.
 
 An initial support bound W transfers to W-8. The preservation criterion is exact: D G is spaced if and only if G(r+4)=0 for every r. Thus this particular spacing hypothesis cannot be carried through a second step for an infinite gate. Other renormalizations remain possible.
 
+The exact weaker condition can also be characterized: the full eight-column formula at every reconstructed depth holds if and only if adjacent black gates are forbidden, and distance-two black pairs are forbidden starting at index one. Only the pair at indices zero and two is exempted. For a spaced G, this exact condition holds for D G if and only if G(r+5)=0 for every r. A gate black only at index four shows that this condition is weaker than preservation of spacing.
+
 ## The actual empty-right gate
 
 Let u(s) be position one at physical time 2s+1 of the right half driven by an alternating black-first center, starting with an entirely white right half. Set G(r)=u(146+r). A forward invariant of 13,937 sixteen-cell prefixes contains the actual prefix at physical time 293. The certificate checks all 262,144 eighteen-bit cases, including every possibility for the two unseen right cells. It checks both closure and six-cycle gate observations. Induction therefore proves, at every later time, that black observations are separated by exactly three or five cycles, and that no six-cycle gate window is all white.
@@ -26,7 +28,7 @@ At white cycle 155, physical time 311, the actual prefix enters a smaller, close
 
 The packed engine is proved equal to the kit's driven evolution, with explicit tail-dependence lemmas. The search that generated the wall is untrusted; every certificate case is checked by ordinary kernel reduction. There are no native decision procedures or added axioms.
 
-The translation applies once to this actual spaced gate. Its transform is provably not spaced, so the same lemma cannot be iterated on it. Infinitely many black gate observations do not establish infinitely many black cells in the reconstructed initial left row. That remaining assertion is CQ01Empty, which this essay leaves open.
+The translation applies once to this actual spaced gate. Its transform is provably not spaced, and violates even the exact weaker return condition arbitrarily late. The universal twice-transformed scalar formula is false for this actual gate. Weakening the premise cannot repair this particular iteration; a different transform or reconstruction mechanism remains possible. Infinitely many black gate observations do not establish infinitely many black cells in the reconstructed initial left row. That remaining assertion is CQ01Empty, which this essay leaves open.
 
 ## Independent finite observations
 
@@ -228,143 +230,121 @@ theorem support_transfer (G : Nat → Bool) (h : Spaced G) (W : Nat)
 
 /-- A finite reconstructed initial row remains finite after the translation. -/
 theorem finite_transfer (G : Nat → Bool) (h : Spaced G)
-    (hf : FinSupp (lam (boundary G))) : FinSupp (lam (bo ...  block208
-  | 209,_ => block209
-  | 210,_ => block210
-  | 211,_ => block211
-  | 212,_ => block212
-  | 213,_ => block213
-  | 214,_ => block214
-  | 215,_ => block215
-  | 216,_ => block216
-  | 217,_ => block217
-  | 218,_ => block218
-  | 219,_ => block219
-  | 220,_ => block220
-  | 221,_ => block221
-  | 222,_ => block222
-  | 223,_ => block223
-  | 224,_ => block224
-  | 225,_ => block225
-  | 226,_ => block226
-  | 227,_ => block227
-  | 228,_ => block228
-  | 229,_ => block229
-  | 230,_ => block230
-  | 231,_ => block231
-  | 232,_ => block232
-  | 233,_ => block233
-  | 234,_ => block234
-  | 235,_ => block235
-  | 236,_ => block236
-  | 237,_ => block237
-  | 238,_ => block238
-  | 239,_ => block239
-  | 240,_ => block240
-  | 241,_ => block241
-  | 242,_ => block242
-  | 243,_ => block243
-  | 244,_ => block244
-  | 245,_ => block245
-  | 246,_ => block246
-  | 247,_ => block247
-  | 248,_ => block248
-  | 249,_ => block249
-  | 250,_ => block250
-  | 251,_ => block251
-  | 252,_ => block252
-  | 253,_ => block253
-  | 254,_ => block254
-  | 255,_ => block255
-  | n+256,h => by omega
+    (hf : FinSupp (lam (boundary G))) : FinSupp (lam (bo ... m+10) r).1 || (pair G (m+9) r).1),
+           xor (pair G (m+10) (r+1)).1 ((pair G (m+10) r).2 || (pair G (m+9) r).2)) =
+          (xor (pair (transform G) (m+2) r).2
+             ((pair (transform G) (m+2) r).1 || (pair (transform G) (m+1) r).1),
+           xor (pair (transform G) (m+2) (r+1)).1
+             ((pair (transform G) (m+2) r).2 || (pair (transform G) (m+1) r).2))
+        rw [ih.2 r,ih.2 (r+1),ih.1 r]
+  exact fun m => (key m).1
 
-theorem good_all (q : Nat) (hq : q<262144) : Good q := by
-  have hb := all_blocks (q/1024) (by omega)
-  have he := (List.all_eq_true.mp hb) (q%1024) (List.mem_range.mpr (Nat.mod_lt _ (by decide)))
-  have hh : 1024*(q/1024)+q%1024=q := by omega
-  rw [hh] at he
-  exact of_decide_eq_true he
+theorem translation_iff_nearSpaced (G : Nat → Bool) :
+    (∀ m r, pair G (m+9) r=pair (transform G) (m+1) r) ↔ NearSpaced G := by
+  rw [← exactReturn_iff_nearSpaced]
+  exact ⟨fun h r => ⟨h 0 r,h 1 r⟩,translate_of_exactReturn G⟩
 
-theorem entry : wall (white 155)=true := by decide
+theorem returnAt_transformed_forces_white (G : Nat → Bool) (h : Spaced G) (r : Nat)
+    (hr : ReturnAt (transform G) r) : G (r+5)=false := by
+  have ha := (h (r+3)).2
+  have hb := (h (r+5)).2
+  have hc := (return_at_constraints (transform G) r hr).2
+  simp only [transform,Nat.add_assoc] at ha hb hc
+  cases h3 : G (r+3) <;> cases h5 : G (r+5) <;> cases h7 : G (r+7) <;> simp_all
 
-end Rule30Submission.DrivenCore
+/-- Even the exact weaker premise survives only for a gate white from index five. -/
+theorem transformed_exactReturn_iff (G : Nat → Bool) (h : Spaced G) :
+    ExactReturn (transform G) ↔ ∀ r, G (r+5)=false := by
+  rw [exactReturn_iff_nearSpaced]
+  constructor
+  · intro hn r
+    have ha := (h (r+3)).2
+    have hb := (h (r+5)).2
+    have hc := hn.2 r
+    simp only [transform,Nat.add_assoc] at ha hb hc
+    cases h3 : G (r+3) <;> cases h5 : G (r+5) <;> cases h7 : G (r+7) <;> simp_all
+  · intro hz
+    constructor
+    · intro r
+      have ha := (h (r+2)).1
+      have hb := (h (r+3)).1
+      have hc := hz r
+      simp only [transform,Nat.add_assoc] at ha hb hc ⊢
+      cases h2 : G (r+2) <;> cases h3 : G (r+3) <;> cases h4 : G (r+4) <;> simp_all
+    · intro r
+      have ha := hz r
+      have hb := hz (r+2)
+      simp only [transform,Nat.add_assoc] at ha hb ⊢
+      simp [ha,hb]
 
-/-!
-# A stronger certified output language of the empty-right gate
+/-- The obstruction persists arbitrarily far in time, not just at an initial exception. -/
+theorem infinite_gate_fails_arbitrarily_late (G : Nat → Bool) (h : Spaced G)
+    (hi : ∀ N, ∃ s, N≤s ∧ G s=true) (N : Nat) :
+    ∃ r, N≤r ∧ ¬ ReturnAt (transform G) r := by
+  obtain ⟨s,hs,hb⟩ := hi (N+5)
+  refine ⟨s-5,by omega,fun hr => ?_⟩
+  have hz := returnAt_transformed_forces_white G h (s-5) hr
+  rw [show s-5+5=s by omega,hb] at hz
+  contradiction
 
-At cycle 155 the driven right half enters a smaller finite wall. Its eight-bit
-gate windows exclude two successive short gaps. This refines the earlier
-three-or-five spacing theorem; it does not prove finite-support impossibility.
--/
+theorem infinite_gate_blocks_second_return (G : Nat → Bool) (h : Spaced G)
+    (hi : ∀ N, ∃ s, N≤s ∧ G s=true) : ¬ ExactReturn (transform G) := by
+  intro hr
+  have hz := (transformed_exactReturn_iff G h).mp hr
+  obtain ⟨s,hs,hb⟩ := hi 5
+  have he := hz (s-5)
+  rw [show s-5+5=s by omega,hb] at he
+  contradiction
 
-namespace Rule30Submission.EmptyLanguage
+/-- The actual empty-right gate fails the true return condition, not only spacing. -/
+theorem empty_gate_blocks_second_return :
+    ¬ ExactReturn (transform Rule30Submission.EmptyGate.gate) :=
+  infinite_gate_blocks_second_return _ Rule30Submission.EmptyGate.empty_spaced
+    Rule30Submission.EmptyGate.empty_black_after
 
-open Rule30Submission.Driven Rule30PeriodTwoSideways
-open Rule30Submission.Spacing
+theorem empty_gate_fails_arbitrarily_late (N : Nat) :
+    ∃ r, N≤r ∧ ¬ ReturnAt (transform Rule30Submission.EmptyGate.gate) r :=
+  infinite_gate_fails_arbitrarily_late _ Rule30Submission.EmptyGate.empty_spaced
+    Rule30Submission.EmptyGate.empty_black_after N
 
-theorem core_trim (a : Nat) : Rule30Submission.DrivenCore.wall (a%2^18)=Rule30Submission.DrivenCore.wall a := by
-  unfold Rule30Submission.DrivenCore.wall
-  rw [Nat.mod_mod_of_dvd a (by decide : 65536 ∣ 2^18)]
-
-theorem core_step (a : Nat) (ha : Rule30Submission.DrivenCore.wall a=true) :
-    Rule30Submission.DrivenCore.Observe a ∧ Rule30Submission.DrivenCore.wall (double a)=true := by
-  have ht : Rule30Submission.DrivenCore.wall (a%262144)=true := by
-    change Rule30Submission.DrivenCore.wall (a%2^18)=true
-    rw [core_trim]
-    exact ha
-  have hg := Rule30Submission.DrivenCore.good_all (a%262144) (Nat.mod_lt _ (by decide)) ht
-  refine ⟨(Rule30Submission.DrivenCore.observe_trim a).mp hg.1,?_⟩
-  have he : Rule30Submission.DrivenCore.wall (double (a%2^18))=Rule30Submission.DrivenCore.wall (double a) := by
-    unfold Rule30Submission.DrivenCore.wall
-    rw [← double_prefix a 16]
-  rw [he] at hg
-  exact hg.2
-
-theorem white_core : ∀ n, Rule30Submission.DrivenCore.wall (white (155+n))=true
-  | 0 => Rule30Submission.DrivenCore.entry
-  | n+1 => by
-      rw [show 155+(n+1)=(155+n)+1 by omega,white]
-      exact (core_step _ (white_core n)).2
-
-def refinedGate (r : Nat) : Bool := u empty (155+r)
-
-theorem refinedGate_eq (r : Nat) :
-    refinedGate r=Rule30Submission.EmptyGate.gate (9+r) := by
-  unfold refinedGate Rule30Submission.EmptyGate.gate
-  congr 1
-  omega
-
-theorem refined_spaced : Spaced refinedGate := by
+/-- The full twice-transformed scalar formula is false for the actual gate. -/
+theorem empty_second_translation_fails :
+    ¬ ∀ m t, Rule30ZeroBoundary.recon (boundary Rule30Submission.EmptyGate.gate) (m+17) t=
+      Rule30ZeroBoundary.recon
+        (boundary (transform (transform Rule30Submission.EmptyGate.gate))) (m+1) t := by
+  intro hh
+  apply empty_gate_blocks_second_return
   intro r
-  have h := Rule30Submission.EmptyGate.empty_spaced (9+r)
-  simpa only [Nat.add_assoc,← refinedGate_eq] using h
+  constructor
+  · have hp := pair_translate _ Rule30Submission.EmptyGate.empty_spaced 8 r
+    rw [pair_recon,pair_recon] at hp
+    rw [pair_recon,pair_recon,← hp]
+    exact Prod.ext (hh 0 (2*r)) (hh 0 (2*r+1))
+  · have hp := pair_translate _ Rule30Submission.EmptyGate.empty_spaced 9 r
+    rw [pair_recon,pair_recon] at hp
+    rw [pair_recon,pair_recon,← hp]
+    exact Prod.ext (hh 1 (2*r)) (hh 1 (2*r+1))
 
-theorem refined_next_gap (r : Nat) (hr : refinedGate r=true) :
-    (refinedGate (r+3)=true ∧ refinedGate (r+4)=false ∧ refinedGate (r+5)=false) ∨
-    (refinedGate (r+3)=false ∧ refinedGate (r+4)=false ∧ refinedGate (r+5)=true) := by
-  have hr' := (refinedGate_eq r).symm.trans hr
-  have h := Rule30Submission.EmptyGate.empty_next_gap (9+r) hr'
-  simpa only [Nat.add_assoc,← refinedGate_eq] using h
+def lastAllowed (r : Nat) : Bool := r==4
 
-/-- In particular, a gap of three can never be followed by another gap of three. -/
-theorem no_successive_short_gaps (r : Nat) :
-    (refinedGate r && refinedGate (r+3) && refinedGate (r+6))=false := by
-  have h := (core_step _ (white_core r)).1.1
-  simpa only [iterate_white,white_gate,refinedGate,Nat.add_assoc,Nat.add_zero] using h
+theorem lastAllowed_spaced : Spaced lastAllowed := by
+  intro r
+  simp only [lastAllowed,beq_iff_eq,Bool.and_eq_false_imp]
+  constructor <;> intro hr <;> simp_all <;> omega
 
-def windowWord (r : Nat) : Nat :=
-  ((refinedGate r).toNat <<< 0) ||| ((refinedGate (r+1)).toNat <<< 1) |||
-  ((refinedGate (r+2)).toNat <<< 2) ||| ((refinedGate (r+3)).toNat <<< 3) |||
-  ((refinedGate (r+4)).toNat <<< 4) ||| ((refinedGate (r+5)).toNat <<< 5) |||
-  ((refinedGate (r+6)).toNat <<< 6) ||| ((refinedGate (r+7)).toNat <<< 7)
+/-- Sharp boundary case: the weaker return can hold where spacing fails. -/
+theorem lastAllowed_transformed_return : ExactReturn (transform lastAllowed) := by
+  apply (transformed_exactReturn_iff lastAllowed lastAllowed_spaced).mpr
+  intro r
+  simp [lastAllowed]
 
-theorem windowWord_allowed (r : Nat) :
-    windowWord r ∈ [8,9,16,18,33,36,66,72,132,144] := by
-  have h := (core_step _ (white_core r)).1.2
-  simpa only [Rule30Submission.DrivenCore.word8,windowWord,iterate_white,white_gate,refinedGate,
-    Nat.add_assoc,Nat.add_zero] using h
+theorem lastAllowed_transformed_not_spaced : ¬ Spaced (transform lastAllowed) := by
+  intro h
+  have hz := (transform_spaced_iff lastAllowed lastAllowed_spaced).mp h 0
+  change true=false at hz
+  contradiction
 
-end Rule30Submission.EmptyLanguage
+end Rule30Submission.ExactReturn
 ",
   "ProjectDir" -> $Rule30PrizeKit, "IncludeInternal" -> True];
 rule30KernelCheck = rule30Submission["Rule30Submission.Spacing.reconstruction_translate"]["KernelCheck"];
@@ -373,15 +353,15 @@ rule30KernelCheck
 Out[3]=
 Success["KernelChecked", Association["MessageTemplate" ->
    "The kernel accepts all `1` declarations of `2`.", "MessageParameters" ->
-   {718, "LeanLinkTmp33396211502336645039x160487"},
-  "Module" -> "LeanLinkTmp33396211502336645039x160487", "Declarations" -> 718]]
+   {744, "LeanLinkTmp33396241721465865270x256595"},
+  "Module" -> "LeanLinkTmp33396241721465865270x256595", "Declarations" -> 744]]
 
 In[4]:=
-renormalizationHeadlines = {"Rule30Submission.Spacing.reconstruction_translate", "Rule30Submission.Spacing.transform_spaced_iff", "Rule30Submission.Spacing.second_translation_fails", "Rule30Submission.Gap.no_uniform_gap_bound_sixteen", "Rule30Submission.EmptyGate.empty_spaced", "Rule30Submission.EmptyGate.empty_next_gap", "Rule30Submission.EmptyGate.transformed_empty_not_spaced", "Rule30Submission.EmptyLanguage.no_successive_short_gaps", "Rule30Submission.EmptyLanguage.windowWord_allowed"};
+renormalizationHeadlines = {"Rule30Submission.Spacing.reconstruction_translate", "Rule30Submission.Spacing.transform_spaced_iff", "Rule30Submission.Spacing.second_translation_fails", "Rule30Submission.Gap.no_uniform_gap_bound_sixteen", "Rule30Submission.EmptyGate.empty_spaced", "Rule30Submission.EmptyGate.empty_next_gap", "Rule30Submission.EmptyGate.transformed_empty_not_spaced", "Rule30Submission.EmptyLanguage.no_successive_short_gaps", "Rule30Submission.EmptyLanguage.windowWord_allowed", "Rule30Submission.ExactReturn.translation_iff_nearSpaced", "Rule30Submission.ExactReturn.transformed_exactReturn_iff", "Rule30Submission.ExactReturn.empty_gate_fails_arbitrarily_late", "Rule30Submission.ExactReturn.empty_second_translation_fails"};
 Table[<|"Theorem" -> name, "Kind" -> rule30Submission[name]["Kind"],
   "Axioms" -> rule30Submission[name]["Axioms"]|>, {name, renormalizationHeadlines}]
 
-Out[4]=  {<|"Theorem" -> "Rule30Submission.Spacing.reconstruction_translate", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Spacing.transform_spaced_iff", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "prop ... le30Submission.EmptyLanguage.no_successive_short_gaps", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.EmptyLanguage.windowWord_allowed", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>}
+Out[4]=  {<|"Theorem" -> "Rule30Submission.Spacing.reconstruction_translate", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.Spacing.transform_spaced_iff", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "prop ... actReturn.empty_gate_fails_arbitrarily_late", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>, <|"Theorem" -> "Rule30Submission.ExactReturn.empty_second_translation_fails", "Kind" -> "theorem", "Axioms" -> {"Quot.sound", "propext"}|>}
 ```
 
 The complete declaration replay and standard-axiom checks establish exactly these partial claims. The universal sixteen-cell bound is negated directly in ``no_uniform_gap_bound_sixteen``. A passing partial headline check does not establish an official prize target, and human review remains separate.

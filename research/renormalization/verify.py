@@ -1,4 +1,4 @@
-"""Build the core catalog and replay every declaration in all eight new modules."""
+"""Build the core catalog and replay every declaration in all nine new modules."""
 import argparse
 import hashlib
 import json
@@ -25,6 +25,10 @@ TARGETS = {
     'Rule30Certificates.DrivenEmptyCore': ['observe_trim', 'good_all', 'entry'],
     'Rule30EmptyGateLanguageResearch': ['refined_spaced', 'refined_next_gap',
         'no_successive_short_gaps', 'windowWord_allowed'],
+    'Rule30ExactReturnResearch': ['exactReturn_iff_nearSpaced', 'translation_iff_nearSpaced',
+        'transformed_exactReturn_iff', 'empty_gate_fails_arbitrarily_late',
+        'empty_second_translation_fails', 'lastAllowed_transformed_return',
+        'lastAllowed_transformed_not_spaced'],
 }
 
 

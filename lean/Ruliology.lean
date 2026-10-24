@@ -58,6 +58,7 @@ public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch
 public import Ruliology.CellularAutomata.Rule30DrivenPrefixResearch
 public import Ruliology.CellularAutomata.Rule30EmptyGateSpacingResearch
 public import Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch
+public import Ruliology.CellularAutomata.Rule30ExactReturnResearch
 
 /-!
 # Rule 30 Prize: Lean snapshot

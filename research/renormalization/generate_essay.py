@@ -12,7 +12,8 @@ modules = {'Rule30SpacingRenormalizationResearch': 'Spacing',
            'Rule30Certificates.DrivenEmptyWall': 'DrivenWall',
            'Rule30EmptyGateSpacingResearch': 'EmptyGate',
            'Rule30Certificates.DrivenEmptyCore': 'DrivenCore',
-           'Rule30EmptyGateLanguageResearch': 'EmptyLanguage'}
+           'Rule30EmptyGateLanguageResearch': 'EmptyLanguage',
+           'Rule30ExactReturnResearch': 'ExactReturn'}
 parts = []
 for module in modules:
     source = (ROOT/'lean/Ruliology/CellularAutomata'/Path(module.replace('.','/')).with_suffix('.lean')).read_text(encoding='utf-8')
@@ -39,7 +40,11 @@ headlines = ['Rule30Submission.Spacing.reconstruction_translate',
              'Rule30Submission.EmptyGate.empty_next_gap',
              'Rule30Submission.EmptyGate.transformed_empty_not_spaced',
              'Rule30Submission.EmptyLanguage.no_successive_short_gaps',
-             'Rule30Submission.EmptyLanguage.windowWord_allowed']
+             'Rule30Submission.EmptyLanguage.windowWord_allowed',
+             'Rule30Submission.ExactReturn.translation_iff_nearSpaced',
+             'Rule30Submission.ExactReturn.transformed_exactReturn_iff',
+             'Rule30Submission.ExactReturn.empty_gate_fails_arbitrarily_late',
+             'Rule30Submission.ExactReturn.empty_second_translation_fails']
 config = {'SourceFile':'Rule30RenormalizationStandalone.lean',
           'EssayFile':'renormalization-essay.md','Headlines':headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config,indent=2)+'\n',encoding='utf-8',newline='\n')
@@ -51,7 +56,7 @@ Name: Empty-right gate spacing and the limits of reconstruction iteration
 Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-24
 Description: An all-time driven-gate invariant, reconstruction identity and exact iteration obstruction
-Abstract: Certified 16-cell forward invariants prove exact spacings three or five in the empty-right driven gate from white cycle 146 onward, and exclude consecutive gaps of three from cycle 155 onward. Its eight-column reconstruction translation applies once, but the required spacing fails after transformation. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
+Abstract: Certified 16-cell forward invariants prove exact spacings three or five in the empty-right driven gate from white cycle 146 onward, and exclude consecutive gaps of three from cycle 155 onward. The exact condition for its eight-column reconstruction return is weaker than spacing, but the actual transformed gate violates even that condition arbitrarily late. Its universal twice-transformed formula is false. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
 Keywords: [Rule 30, reconstruction, renormalization, Lean, counterexamples]
 ---
 
@@ -86,6 +91,14 @@ exact: D G is spaced if and only if G(r+4)=0 for every r. Thus this particular
 spacing hypothesis cannot be carried through a second step for an infinite
 gate. Other renormalizations remain possible.
 
+The exact weaker condition can also be characterized: the full eight-column
+formula at every reconstructed depth holds if and only if adjacent black
+gates are forbidden, and distance-two black pairs are forbidden starting
+at index one. Only the pair at indices zero and two is exempted. For a
+spaced G, this exact condition holds for D G if and only if G(r+5)=0 for
+every r. A gate black only at index four shows that this condition is weaker
+than preservation of spacing.
+
 ## The actual empty-right gate
 
 Let u(s) be position one at physical time 2s+1 of the right half driven by an
@@ -111,7 +124,10 @@ certificate case is checked by ordinary kernel reduction. There are no native
 decision procedures or added axioms.
 
 The translation applies once to this actual spaced gate. Its transform is
-provably not spaced, so the same lemma cannot be iterated on it. Infinitely
+provably not spaced, and violates even the exact weaker return condition
+arbitrarily late. The universal twice-transformed scalar formula is false
+for this actual gate. Weakening the premise cannot repair this particular
+iteration; a different transform or reconstruction mechanism remains possible. Infinitely
 many black gate observations do not establish infinitely many black cells in
 the reconstructed initial left row. That remaining assertion is CQ01Empty,
 which this essay leaves open.

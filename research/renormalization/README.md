@@ -25,15 +25,16 @@ immediately by another gap of three. The refinement covers all future times.
 This is a property of the actual empty-right driven gate. **It does not prove
 `CQ01Empty`: infinitely many black gate observations do not establish infinitely
 many black cells in the reconstructed initial left row.** The transformed
-actual gate is provably not spaced, so the eight-column identity below still
-cannot be iterated by reusing its spacing hypothesis.
+actual gate is provably not spaced. It also violates the exact weaker return
+condition arbitrarily late, so weakening the spacing premise cannot repair
+this particular iteration.
 
 Let `G : Nat → Bool`, and reconstruct leftwards from the white wall and the
 boundary history `!G(0),1,!G(1),1,...`. Write
 `D G(r) = G(r+2) xor G(r+4)`. A gate is *spaced* when no two black cells have
 distance one or two.
 
-The eight core-only modules also prove:
+The nine core-only modules also prove:
 
 - **Exact translation.** For a spaced gate, at every depth `m≥1` and every
   time `t`, `recon b_G (m+8) t = recon b_(D G) m t`. An initial support bound
@@ -41,6 +42,14 @@ The eight core-only modules also prove:
 - **Exact preservation condition.** For a spaced gate, `D G` is spaced if and
   only if `G(r+4)=0` for every `r`. Thus an infinite gate loses the condition
   required by this lemma after the first transform.
+- **Exact return condition.** The full eight-column formula at every depth
+  holds if and only if adjacent black gates are forbidden and distance-two
+  pairs are forbidden starting at index one. Only the pair at zero and two
+  is exempted. For a spaced gate, this weaker condition holds for `D G` if
+  and only if `G(r+5)=0` for every `r`. A gate black only at index four shows
+  the distinction from preservation of spacing. The actual infinite gate
+  violates the transformed condition arbitrarily late, and its universal
+  twice-transformed scalar reconstruction formula is false.
 - **A second translation can be false.** The period-five gate is spaced,
   while its transform is not. Applying the formula twice gives the wrong
   reconstructed cell already at depth 17, time 0: white versus black.
@@ -72,7 +81,7 @@ The Lean formalization, support transfer, preservation criterion, finite-cone
 engines, driven-gate invariant and counterexamples here were developed by Troy Lowry with OpenAI
 Codex. No claim of literature priority is made.
 
-All **718 generated constants** were replayed by the unchanged checker in the
+All **744 generated constants** were replayed by the unchanged checker in the
 working catalog and the pinned reference kit
 `cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554`, with standard axioms only:
 [spacing reference check](spacing-pinned-verification.json),
@@ -110,7 +119,7 @@ are distinguished from the all-time Lean statements throughout.
 
 The [evaluated notebook](renormalization-essay.nb) embeds the exact
 [standalone source](Rule30RenormalizationStandalone.lean).
-The unchanged CLI checker and LeanLink each replayed all 718 declarations;
+The unchanged CLI checker and LeanLink each replayed all 744 declarations;
 the saved notebook has zero message cells and its source round-trip matches.
 See [CLI verification](standalone-verification.json) and
 [notebook verification](renormalization-essay.nb.verification.json).
