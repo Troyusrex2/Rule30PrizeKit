@@ -49,17 +49,14 @@ columns `1..k` ether forever, and `erosion3_fin` (with `w = b + 1`) breaks them.
 
 The certificate and the potential come from an exhaustive computation (two independent code
 paths); here they are checked by the kernel (`decide +kernel`, about two seconds).
-
-**Source.** Luis Perez Morales and Claude (Fable 5.1), Rule 30 Prize submission
-`R30-20261024-1fc962`, ported to core Lean.
 -/
 
 @[expose] public section
 
-namespace Ruliology.CellularAutomata
-namespace Rule30EtherThree
+namespace Ruliology.CellularAutomata.Rule30EtherThreeErosion
 
-open Rule30Jen Rule30Ether
+open Ruliology.CellularAutomata
+open Rule30EtherThree Rule30Jen Rule30Ether
 
 /-! ### The local certificate -/
 
@@ -469,5 +466,4 @@ theorem no_wall (a b : Nat) (hb : 0 < b) {W : Nat → Nat → Prop} (hW : WallOK
   intro φ r hWr
   exact key ((φ + 1) % 3) _ (Nat.mod_lt _ (by decide)) (hW.2.2 φ r false hWr)
 
-end Rule30EtherThree
-end Ruliology.CellularAutomata
+end Ruliology.CellularAutomata.Rule30EtherThreeErosion

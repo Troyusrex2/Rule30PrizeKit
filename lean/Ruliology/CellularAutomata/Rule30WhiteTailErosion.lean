@@ -20,7 +20,7 @@ center column and does not prove any prize problem.
 
 namespace Ruliology.CellularAutomata.Rule30WhiteTailErosion
 
-open Rule30Jen Rule30Ether Rule30EtherThree
+open Rule30Jen Rule30Ether Rule30EtherThree Rule30EtherThreeErosion
 
 theorem front_le_witness {F : Nat → Nat → Bool} {j0 s t D R : Nat}
     (hD : Front F j0 s t D)

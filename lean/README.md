@@ -135,7 +135,7 @@ The birth times of the catalog files (`stat -f %B`) and the docstrings agree. Th
 All modules live in `Ruliology/CellularAutomata/`. Theorems live in the namespace `Ruliology.CellularAutomata.<Module>`, with these exceptions:
 
 - `Rule30Predecessors` and `Rule30PredecessorCounts` use `…Rule30`.
-- The six `Rule30EtherThree*` modules share `…Rule30EtherThree`.
+- The six `Rule30EtherThree*` modules of the snapshot share `…Rule30EtherThree`; `Rule30EtherThreeErosion` uses its own.
 - `Rule30EtherTrapWidth20` uses `…Rule30EtherTrap`.
 - `Rule30ZeroBoundaryStripeFamily` and `Rule30ZeroBoundaryStripeFour` use `…Rule30ZeroBoundaryStripeFront`.
 - The data modules in `Rule30Certificates/` use namespaces inside the module they serve, for example `…Rule30ZeroBoundaryWidth52.C0`.
