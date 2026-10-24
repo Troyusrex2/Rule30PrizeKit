@@ -77,6 +77,7 @@ public import Ruliology.CellularAutomata.Rule30WhitePadding10101
 public import Ruliology.CellularAutomata.Rule30ForbiddenSuffix
 public import Ruliology.CellularAutomata.Rule30SixTailReduction
 public import Ruliology.CellularAutomata.Rule30SixTail
+public import Ruliology.CellularAutomata.Rule30SixTailSharpened
 
 /-!
 # Rule 30 Prize: Lean snapshot
@@ -97,4 +98,3 @@ says how to build.
 -/
 
 @[expose] public section
-public import Ruliology.CellularAutomata.Rule30SixTailSharpened
