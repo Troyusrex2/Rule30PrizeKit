@@ -465,7 +465,55 @@ de Bruijn graphs for additive-energy inequalities is standard; see
 No general conservation-law theorem from that survey is assumed in the Lean
 proof or used to infer a result about Rule 30 here.
 
-## Reproduction
+## Controlled right-half responses
+
+`Rule30ControlledResponseResearch.lean` proves an exact equivalence for
+**every boundary input**, at every observation horizon. Number right-hand
+cells starting at zero, and put
+
+```text
+Q(x)[k] = x[k] XOR (x[k+1] OR x[k+2])
+step(b,x) = (b XOR (x[0] OR x[1])) :: Q(x).
+```
+
+Two states have the same response to every boundary word exactly when,
+for every iterate of Q, both their first bit and the OR of their first two
+bits agree. Two response observations remove one Q layer exactly
+(`responseEq_two`); `run_sound` connects the controlled model to the kit's
+unchanged `Rule30Ether.drv`. `ObservationPrefix` gives a finite test without
+branching over boundary words.
+
+The module also proves that terminal **011 -> 01** and **101 -> 11**, followed
+by infinitely many zeros, preserve this response behind any shared finite
+prefix. These are unbounded soundness proofs. They do **not** prove the
+rewrites complete. Repeatedly applying them gives a candidate normal form;
+the independent exact finite partition-refinement experiment in
+`controlled_response_normal_form.py` tests its completeness at bounded
+widths. Its JSON states the actual widths tested. No unbounded completeness
+theorem, novelty claim, or fixed-driver classification follows from those
+calculations.
+
+`short_window_agreement` and `short_window_not_sameResponse` certify a failed
+guess: states with low-to-high packed values 42 and 70, each of width at most
+seven, agree on the first thirteen response observations for every input,
+but are not response equivalent. A bound of 2W-1 therefore fails at W=7.
+
+Universal boundary-input equivalence is stronger than agreement for one
+prescribed input, including the actual center column. None of these results
+proves the open finite-row trace rigidity or any prize problem.
+`fixed_driver_counterexample` proves the gap explicitly: right states 1 and
+11 both output 1 forever under a constantly zero external boundary, although
+they are not universally response equivalent. It does not assert that the
+external driver extends to a finite whole-row Rule 30 orbit.
+
+`feedback_left_equal` proves the sound direction for complete Rule 30 rows:
+equal initial left halves and universally equivalent right halves give equal
+left halves at every later time, even with the actual feedback through the
+center. In particular, `tail_011_center` and `tail_101_center` prove the two
+terminal rewrites preserve the complete center trace behind any initial left
+half. The converse is not proved.
+
+## Reproduction commands
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
 the pinned worktree; it refuses to overwrite different source files and bounds
