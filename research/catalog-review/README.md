@@ -16,13 +16,21 @@ their imported dependencies.
 
 | PR | Revised head | Modules | Declarations | Headlines | Evidence |
 |---|---|---:|---:|---:|---|
-| [1](https://github.com/WolframInstitute/Rule30PrizeKit/pull/1) | `3b8cae7ed1573dbe30b9b38e53ff2113864706e4` | 25 | 2641 | 52 | [Final replay](pr1-report.json) |
+| [1](https://github.com/WolframInstitute/Rule30PrizeKit/pull/1) | `5dc53f37e910e5775ca6feff3268ab0147be0561` | 25 | 2641 | 52 | [Current-reference replay](pr1-current-reference-report.json) |
 | [6](https://github.com/WolframInstitute/Rule30PrizeKit/pull/6) | `b94808b0110f3e0859ed26590b8c9d7a2337e2ae` | 4 | 197 | 12 | [Report](pr6-report.json) |
 | [7](https://github.com/WolframInstitute/Rule30PrizeKit/pull/7) | `f58b7f7e8350285cfd9e205c34489530569399c1` | 5 | 158 | 16 | [Report](pr7-report.json) |
 | [9](https://github.com/WolframInstitute/Rule30PrizeKit/pull/9) | `51d7d4d6c400f21df315a3d781a8031ff1b986ef` | 7 | 399 | 32 | [Report](pr9-report.json) |
 
-The final PR 1 replay is fresh at the exact published head, without reusing
-earlier replay results. Its [earlier build/replay history](pr1-build-and-replay-history.json)
+The latest PR 1 replay is fresh at the exact published merge head `5dc53f3`,
+including current reference kit `2f63afd`, without reusing earlier replay
+results. Its [complete core build](pr1-current-reference-build-report.json)
+passes for all 112 source modules. The 25 contributed proof sources are
+unchanged, their compiled artifacts remain byte-identical to the freshly
+replayed artifacts, and the import conflict with upstream has been resolved.
+The README credits AIOvernight's stronger `10111` threshold of nine.
+
+The [previous final replay](pr1-report.json) at `3b8cae7` and
+[earlier build/replay history](pr1-build-and-replay-history.json)
 records first-build resource measurements and explicitly identifies reused,
 byte-identical proof artifacts during intermediate wrapper fixes. The
 [separate measurements](pr1-build-measurements.json) force all 21 main modules
