@@ -1,0 +1,860 @@
+{
+  "verdict": "pass",
+  "checker_modified": false,
+  "prize_API_submitted": false,
+  "full_problem_claim": false,
+  "finite_tail_completeness_proved": false,
+  "source_sha256": "2e8025388a2e36839fed1b39ebf809f7374644066881a958eee81fa4f6c88a57",
+  "kit_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "build_seconds": 6.75,
+  "check_seconds": 11.422,
+  "native_C_emitted": false,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.OR_nonconstant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.frame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.frame_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.full_period_eight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.heads_differ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.infinite_false",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.infinite_true",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.iterate_frame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.key",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.key_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.key_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.lossFrame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.lossInitial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.lossProfile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_frame_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_full_period_eight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_full_period_lower_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_head_period_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_infinite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_iterate_frame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_neighbor_short_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_not_head_period_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_step_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.nextKey",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.profile_step_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.same_OR",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.same_OR_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.tail_OR_different",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.ObservationPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.ObserveEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.ResponseEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.SameResponse",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.State",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.asRight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.diagonal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal_01",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal_011",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal_101",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal_11",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.feedback_left_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.fixed_driver_counterexample",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.iterate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.iterate_from",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.observationPrefixDecidable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.observeEqDecidable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.responseEq_all_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.responseEq_iff_observationPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.responseEq_iff_runs",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.responseEq_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.rightPart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.rightPart_next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.rightPart_splice",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.run_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.run_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_iff_diagonal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_iff_drv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_observe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_trans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_withPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.shortWindowA",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.shortWindowB",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.short_window_agreement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.short_window_not_sameResponse",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.splice",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.splice_same_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.step_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_011_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_011_drv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_011_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_101_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_101_drv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_101_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.withPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.word_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.word_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.zero_driver_head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.frame.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.iterate_frame.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.key.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.lossFrame.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Profiles.loss_iterate_frame.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ObservationPrefix.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ObservationPrefix.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ObservationPrefix.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ObservationPrefix.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.ObservationPrefix.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ResponseEq.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ResponseEq.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.ResponseEq.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.ResponseEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.asRight.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.diagonal.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.iterate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.iterate.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.iterate.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.iterate_from.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.prepend.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.prepend.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.prepend.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.responseEq_iff_observationPrefix.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.rightPart.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.run_shift.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.splice.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.step.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.withPrefix.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.withPrefix.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.withPrefix.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Response.withPrefix.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_iff_diagonal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.sameResponse_iff_drv",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_011_drv",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_101_drv",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.feedback_left_equal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_011_center",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.tail_101_center",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.short_window_not_sameResponse",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Response.fixed_driver_counterexample",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.full_period_eight",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.same_OR",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.OR_nonconstant",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.heads_differ",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.infinite_true",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.infinite_false",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_head_period_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_full_period_lower_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.Profiles.loss_infinite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ControlledResponseReview",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 203,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

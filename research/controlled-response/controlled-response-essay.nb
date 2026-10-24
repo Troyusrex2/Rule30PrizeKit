@@ -1,0 +1,2419 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[    127376,       2410]
+NotebookOptionsPosition[    123264,       2324]
+NotebookOutlinePosition[    123606,       2339]
+CellTagsIndexPosition[    123563,       2336]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Controlled responses and finite-support observability limits in Rule 30\
+\>", "Title",
+ CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
+
+Cell["Troy Lowry; OpenAI Codex \[Bullet] 2026-10-24", "Author",
+ CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
+
+Cell["\<\
+Responses of a right half to every left-boundary input are characterized \
+exactly by two observations of a triangular diagonal map. Terminal rewrites \
+011 to 01 and 101 to 11 preserve the complete center trace with every common \
+initial left half. Explicit eight-periodic infinite tails show that OR alone \
+need not recover the head and that a period-two head need not detect a full \
+period-eight state. Finite-tail completeness and the Rule 30 Prize problems \
+remain open.\
+\>", "Abstract",
+ CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
+
+Cell["Scope and provenance", "Section",
+ CellID->1535504786,ExpressionUUID->"75d93363-5da6-51a4-23e6-ab4d5453238e"],
+
+Cell["\<\
+This is a partial contribution developed by Troy Lowry with OpenAI Codex. It \
+builds on the kit's driven right half in Rule30Ether and whole-line evolution \
+in Rule30Realization. No literature-priority claim is made. The essay is \
+prepared for human review and has not been sent to the prize API.\
+\>", "Text",
+ CellID->1208482393,ExpressionUUID->"25a568a6-87a2-527f-535a-810032572145"],
+
+Cell["\<\
+The terminal rewrites can change a finite row's right edge without changing \
+its center trace. For example, the two rows with black cells only at \
+positions {2,3} and {2}, respectively, have identical center traces at every \
+time. Their left edges agree; this does not refute recovering a left edge \
+from the trace. The general theorem allows every common initial left half and \
+every shared finite prefix before the displayed terminal word.\
+\>", "Text",
+ CellID->28909615,ExpressionUUID->"00d7f70d-8d0e-ae34-30ec-ef5724b8f51e"],
+
+Cell["Exact response equivalence", "Section",
+ CellID->193832008,ExpressionUUID->"2f3e8453-9762-68ea-56c5-1e1d22173a30"],
+
+Cell["\<\
+Index a right-half state x by 0,1,\[Ellipsis] for physical positions 1,2,\
+\[Ellipsis] . Define\
+\>", "Text",
+ CellID->684317082,ExpressionUUID->"5902d484-617f-9570-0f31-cdee100bfc5a"],
+
+Cell["\<\
+    Q(x)(k) = x(k) XOR (x(k+1) OR x(k+2)).     F_b(x)  = (b XOR (x(0) OR \
+x(1))) :: Q(x).\
+\>", "Text",
+ CellID->528485616,ExpressionUUID->"56e0e12c-de7d-6135-7e9f-f889db08301f"],
+
+Cell["\<\
+The second formula is exactly one Rule 30 step with left boundary bit b. Two \
+right states have equal head outputs for every boundary-input sequence and \
+every time if and only if, for every n, both the head and the OR of the first \
+two cells of Q^n(x) agree. The infinite response tree is therefore replaced \
+by two observations along one deterministic orbit. The theorem places no \
+finite-support restriction on this equivalence.\
+\>", "Text",
+ CellID->1392207227,ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8"],
+
+Cell["\<\
+For every common finite prefix, terminal 011 followed by zeros can be \
+replaced by 01, and terminal 101 followed by zeros by 11. Both replacements \
+preserve responses to all boundary inputs for all times. A separate induction \
+shows that this equivalence remains sound with actual feedback through the \
+center: if initial left halves, including the center, agree, they agree at \
+every later time. Thus both terminal rewrites preserve the complete center \
+trace in the full Rule 30 system, including when both starting rows are \
+finite.\
+\>", "Text",
+ CellID->705466992,ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0"],
+
+Cell["\<\
+No converse from a single prescribed driver is proved. In fact, right states \
+1 and 11 have the same head output forever under the constantly zero driver, \
+but are not universally response equivalent. This driver is not asserted to \
+extend to a finite whole-line orbit. A second example, packed states 42 and \
+70, agrees through thirteen observations for every driver but is not \
+universally equivalent. Checking only 2W-1 observations is insufficient at \
+W=7.\
+\>", "Text",
+ CellID->1350516518,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"],
+
+Cell["Why the support and observation hypotheses matter", "Section",
+ CellID->907546795,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+
+Cell["\<\
+Write an infinite row from its head toward the right. The two starts\
+\>", "Text",
+ CellID->814772321,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+
+Cell["    x = 1100(1101)\[Ellipsis]     y = 0110(01)\[Ellipsis]", "Text",
+ CellID->1054628905,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+
+Cell["\<\
+use parenthesized blocks repeated forever. Both complete Q orbits have period \
+dividing eight. Their head traces differ, but the OR of the first two cells \
+is the same nonconstant sequence at every time. At time two, the next OR, of \
+cells one and two, differs. The common OR alone cannot recover the head or \
+the next OR. These states are not universally response equivalent, because \
+that relation observes the head as well.\
+\>", "Text",
+ CellID->2043779557,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
+
+Cell["\<\
+A third start, 1100(0001)\[Ellipsis], has a head trace of least period two, \
+whereas its complete Q orbit has least period eight. All three starts are \
+proved to have infinite support. A power-of-two orbit period cannot replace \
+finite support in a proposed head-period detection theorem. No finite-tail \
+conjecture is refuted or proved by these examples.\
+\>", "Text",
+ CellID->17830494,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
+
+Cell["\<\
+The proofs use explicit temporal profile tables, verify their scalar update \
+at every depth, and then identify all iterates by induction. The finite \
+search that found the tables is not a proof premise. No part of this essay \
+excludes an eventual center period or proves a Rule 30 Prize problem.\
+\>", "Text",
+ CellID->1589986527,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
+
+Cell["Independent finite controls", "Section",
+ CellID->943101875,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
+
+Cell["\<\
+The first calculation compares terminal rewrites in 104 complete Rule 30 \
+experiments with random common left halves and prefixes. The second compares \
+all three profile tables with built-in Rule 30 on finite causal cones. These \
+controls do not replace the unbounded kernel proofs.\
+\>", "Text",
+ CellID->67888809,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Independent", " ", "finite", " ", "samples", " ", "using", " ", "the", " ",
+      "built"}], "-", 
+    RowBox[{"in", " ", "Rule", " ", "30", " ", 
+     RowBox[{"evolution", ".", "\n", "   ", "Unbounded"}], " ", "statements", 
+     " ", "and", " ", "feedback", " ", "soundness", " ", "are", " ", "proved",
+      " ", "in", " ", 
+     RowBox[{"Lean", "."}]}]}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", "controlledResponseReport", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"controlledResponseReport", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"BlockRandom", "[", "\n", "  ", 
+      RowBox[{
+       RowBox[{"SeedRandom", "[", "20261024", "]"}], ";", "\n", "  ", 
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", "cases", "}"}], ",", "\n", "    ", 
+         RowBox[{
+          RowBox[{"cases", " ", "=", " ", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"Module", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "left", ",", " ", "prefix", ",", " ", "old", ",", " ", 
+                   "new", ",", " ", "ca", ",", " ", "cb", ",", " ", 
+                   RowBox[{"center", " ", "=", " ", "9"}]}], "}"}], ",", "\n",
+                  "      ", 
+                 RowBox[{
+                  RowBox[{"left", " ", "=", " ", 
+                   RowBox[{"RandomInteger", "[", 
+                    RowBox[{"1", ",", " ", "9"}], "]"}]}], ";", "\n", 
+                  "      ", 
+                  RowBox[{"prefix", " ", "=", " ", 
+                   RowBox[{"RandomInteger", "[", 
+                    RowBox[{"1", ",", " ", "n"}], "]"}]}], ";", "\n", 
+                  "      ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"old", ",", " ", "new"}], "}"}], " ", "=", " ", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"rule", " ", "==", " ", "0"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "}"}], ",", 
+                    " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0", ",", "1"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "0"}], "}"}]}], "}"}]}], 
+                    "]"}]}], ";", "\n", "      ", 
+                  RowBox[{"ca", " ", "=", " ", 
+                   RowBox[{"Flatten", "@", 
+                    RowBox[{"CellularAutomaton", "[", 
+                    RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Join", "[", 
+                    RowBox[{"left", ",", " ", "prefix", ",", " ", "old"}], 
+                    "]"}], ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", "center", "}"}], "}"}]}], "}"}]}], "]"}]}]}],
+                   ";", "\n", "      ", 
+                  RowBox[{"cb", " ", "=", " ", 
+                   RowBox[{"Flatten", "@", 
+                    RowBox[{"CellularAutomaton", "[", 
+                    RowBox[{"30", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Join", "[", 
+                    RowBox[{"left", ",", " ", "prefix", ",", " ", "new"}], 
+                    "]"}], ",", " ", "0"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"128", ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"{", "center", "}"}], "}"}]}], "}"}]}], "]"}]}]}],
+                   ";", "\n", "      ", 
+                  RowBox[{"<|", 
+                   RowBox[{
+                    RowBox[{"\"\<PrefixLength\>\"", " ", "->", " ", "n"}], ",",
+                     " ", 
+                    RowBox[{"\"\<Rewrite\>\"", " ", "->", " ", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"rule", " ", "==", " ", "0"}], ",", 
+                    " ", "\"\<011->01\>\"", ",", " ", "\"\<101->11\>\""}], 
+                    "]"}]}], ",", "\n", "        ", 
+                    RowBox[{"\"\<Horizon\>\"", " ", "->", " ", "128"}], ",", 
+                    " ", 
+                    RowBox[{"\"\<ObservationCount\>\"", " ", "->", " ", 
+                    RowBox[{"Length", "[", "ca", "]"}]}], ",", " ", 
+                    RowBox[{"\"\<SameCenterTracePrefix\>\"", " ", "->", " ", 
+                    RowBox[{"SameQ", "[", 
+                    RowBox[{"ca", ",", " ", "cb"}], "]"}]}]}], "|>"}]}]}], 
+                "\n", "    ", "]"}], ",", " ", 
+               RowBox[{"{", 
+                RowBox[{"n", ",", " ", "0", ",", " ", "12"}], "}"}], ",", " ", 
+               RowBox[{"{", 
+                RowBox[{"rule", ",", " ", "0", ",", " ", "1"}], "}"}], ",", 
+               " ", 
+               RowBox[{"{", 
+                RowBox[{"sample", ",", " ", "1", ",", " ", "4"}], "}"}]}], 
+              "]"}], ",", " ", "2"}], "]"}]}], ";", "\n", "    ", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<FiniteSamplesOnly\>\"", " ", "->", " ", "True"}], ",",
+             " ", 
+            
+            RowBox[{"\"\<UnboundedProofReplaced\>\"", " ", "->", " ", 
+             "False"}], ",", "\n", "      ", 
+            RowBox[{"\"\<FullProblemClaim\>\"", " ", "->", " ", "False"}], ",",
+             " ", 
+            RowBox[{"\"\<CaseCount\>\"", " ", "->", " ", 
+             RowBox[{"Length", "[", "cases", "]"}]}], ",", "\n", "      ", 
+            RowBox[{"\"\<AllPassed\>\"", " ", "->", " ", 
+             RowBox[{"And", "@@", 
+              RowBox[{"Lookup", "[", 
+               RowBox[{"cases", ",", " ", "\"\<SameCenterTracePrefix\>\""}], 
+               "]"}]}]}], ",", " ", 
+            RowBox[{"\"\<Cases\>\"", " ", "->", " ", "cases"}]}], "|>"}]}]}], 
+        "\n", "  ", "]"}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Compare", " ", "all", " ", "three", " ", "infinite", " ", "profile", " ",
+      "tables", " ", "with", " ", "actual", " ", "finite", " ", "Rule", " ", 
+     "30", " ", 
+     RowBox[{"cones", "."}]}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "profileCounterReport", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"profileCounterReport", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tables", ",", " ", 
+         RowBox[{"h", " ", "=", " ", "32"}], ",", " ", 
+         RowBox[{"window", " ", "=", " ", "8"}], ",", " ", "counts"}], "}"}], 
+       ",", "\n", "  ", 
+       RowBox[{
+        RowBox[{"tables", " ", "=", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "45", ",", "43", ",", "186", ",", "166", ",", "101", ",", "149", ",",
+              "86", ",", "89"}], "}"}], ",", "\n", "    ", 
+           RowBox[{"{", 
+            RowBox[{
+            "42", ",", "45", ",", "51", ",", "170", ",", "170", ",", "85", ",",
+              "170", ",", "85"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{
+            "85", ",", "87", ",", "168", ",", "212", ",", "172", ",", "178", ",",
+              "202", ",", "43"}], "}"}]}], "}"}]}], ";", "\n", "  ", 
+        RowBox[{"counts", " ", "=", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "profile", ",", " ", "n", ",", " ", "initial", ",", " ", "ca", ",",
+                " ", "checks"}], "}"}], ",", "\n", "    ", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"profile", "[", "k_", "]"}], " ", ":=", " ", 
+               RowBox[{"table", "[", 
+                RowBox[{"[", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{"k", "<", "4"}], ",", " ", 
+                   RowBox[{"k", "+", "1"}], ",", " ", 
+                   RowBox[{"5", "+", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"k", "-", "4"}], ",", "4"}], "]"}]}]}], "]"}], 
+                 "]"}], "]"}]}], ";", "\n", "    ", 
+              RowBox[{"n", " ", "=", " ", 
+               RowBox[{"window", "+", 
+                RowBox[{"2", "*", "h"}], "+", "2"}]}], ";", "\n", "    ", 
+              RowBox[{"initial", " ", "=", " ", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"BitAnd", "[", 
+                  RowBox[{
+                   RowBox[{"profile", "[", "k", "]"}], ",", " ", "1"}], "]"}],
+                  ",", " ", 
+                 RowBox[{"{", 
+                  RowBox[{"k", ",", " ", "0", ",", " ", 
+                   RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ";", "\n", 
+              "    ", 
+              RowBox[{"ca", " ", "=", " ", 
+               RowBox[{"CellularAutomaton", "[", 
+                RowBox[{"30", ",", " ", 
+                 RowBox[{"Join", "[", 
+                  RowBox[{
+                   RowBox[{"ConstantArray", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"h", "+", "1"}]}], "]"}], ",", " ", "initial", ",",
+                    " ", 
+                   RowBox[{"ConstantArray", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"h", "+", "1"}]}], "]"}]}], "]"}], ",", " ", 
+                 "h"}], "]"}]}], ";", "\n", "    ", 
+              RowBox[{"checks", " ", "=", " ", 
+               RowBox[{"Flatten", "@", 
+                RowBox[{"Table", "[", "\n", "      ", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"ca", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "1"}], ",", " ", 
+                    RowBox[{"h", "+", "2", "+", "k", "+", "t"}]}], "]"}], 
+                    "]"}], " ", "==", " ", 
+                   RowBox[{"BitAnd", "[", 
+                    RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"profile", "[", "k", "]"}], ",", " ", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"t", ",", "8"}], "]"}]}], "]"}], ",", "1"}], 
+                    "]"}]}], ",", "\n", "      ", 
+                  RowBox[{"{", 
+                   RowBox[{"t", ",", "0", ",", "h"}], "}"}], ",", " ", 
+                  RowBox[{"{", 
+                   RowBox[{"k", ",", "0", ",", 
+                    RowBox[{"window", "-", "1"}]}], "}"}]}], "]"}]}]}], ";", 
+              "\n", "    ", 
+              RowBox[{"<|", 
+               RowBox[{
+                RowBox[{"\"\<ScalarCellsCompared\>\"", "->", 
+                 RowBox[{"Length", "[", "checks", "]"}]}], ",", " ", 
+                RowBox[{"\"\<AllPassed\>\"", "->", 
+                 RowBox[{"And", "@@", "checks"}]}]}], "|>"}]}]}], "\n", "  ", 
+            "]"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"table", ",", "tables"}], "}"}]}], "]"}]}], ";", "\n", 
+        "  ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<FiniteControlsOnly\>\"", "->", "True"}], ",", " ", 
+          RowBox[{"\"\<FullProblemClaim\>\"", "->", "False"}], ",", "\n", 
+          "    ", 
+          RowBox[{"\"\<BuiltinRule30Cones\>\"", "->", 
+           RowBox[{"Length", "[", "counts", "]"}]}], ",", " ", 
+          RowBox[{"\"\<Cases\>\"", "->", "counts"}], ",", "\n", "    ", 
+          RowBox[{"\"\<AllPassed\>\"", "->", 
+           RowBox[{"And", "@@", 
+            RowBox[{"Lookup", "[", 
+             RowBox[{"counts", ",", "\"\<AllPassed\>\""}], "]"}]}]}]}], 
+         "|>"}]}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "profileCounterDiagram", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"profileCounterDiagram", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tables", ",", " ", "labels"}], "}"}], ",", "\n", "  ", 
+       RowBox[{
+        RowBox[{"tables", " ", "=", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "45", ",", "43", ",", "186", ",", "166", ",", "101", ",", "149", ",",
+              "86", ",", "89"}], "}"}], ",", "\n", "    ", 
+           RowBox[{"{", 
+            RowBox[{
+            "42", ",", "45", ",", "51", ",", "170", ",", "170", ",", "85", ",",
+              "170", ",", "85"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{
+            "85", ",", "87", ",", "168", ",", "212", ",", "172", ",", "178", ",",
+              "202", ",", "43"}], "}"}]}], "}"}]}], ";", "\n", "  ", 
+        RowBox[{"labels", " ", "=", " ", 
+         RowBox[{"{", 
+          
+          RowBox[{"\"\<First OR example\>\"", ",", 
+           " ", "\"\<Second OR example\>\"", ",", 
+           " ", "\"\<Head period 2; state period 8\>\""}], "}"}]}], ";", "\n",
+         "  ", 
+        RowBox[{"GraphicsRow", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"ArrayPlot", "[", "\n", "    ", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"BitAnd", "[", 
+                 RowBox[{
+                  RowBox[{"BitShiftRight", "[", 
+                   RowBox[{
+                    RowBox[{"tables", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"k", "<", "4"}], ",", 
+                    RowBox[{"k", "+", "1"}], ",", 
+                    RowBox[{"5", "+", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"k", "-", "4"}], ",", "4"}], "]"}]}]}], "]"}]}], 
+                    "]"}], "]"}], ",", "t"}], "]"}], ",", "1"}], "]"}], ",", 
+                "\n", "      ", 
+                RowBox[{"{", 
+                 RowBox[{"t", ",", "0", ",", "7"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"k", ",", "0", ",", "11"}], "}"}]}], "]"}], ",", " ", 
+              RowBox[{"ColorRules", "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"0", "->", "White"}], ",", 
+                 RowBox[{"1", "->", "Black"}]}], "}"}]}], ",", "\n", "    ", 
+              RowBox[{"Frame", "->", "True"}], ",", " ", 
+              RowBox[{"FrameTicks", "->", "None"}], ",", " ", 
+              RowBox[{"Mesh", "->", "All"}], ",", " ", 
+              RowBox[{"MeshStyle", "->", "LightGray"}], ",", "\n", "    ", 
+              RowBox[{"PlotLabel", "->", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"labels", "[", 
+                  RowBox[{"[", "j", "]"}], "]"}], ",", "12"}], "]"}]}], ",", 
+              "\n", "    ", 
+              RowBox[{"(*", " ", 
+               RowBox[{"ArrayPlot", " ", "orders", " ", "these", " ", "as", " ", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"bottom", ",", "top"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"left", ",", "right"}], "}"}]}], "}"}], "."}]}], 
+               " ", "*)"}], "\n", "    ", 
+              RowBox[{"FrameLabel", "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\"\<position 0 through 11\>\"", ",", "None"}], 
+                  "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<time 0 through 7 from top\>\"", ",", "None"}], 
+                  "}"}]}], "}"}]}], ",", "\n", "    ", 
+              RowBox[{"ImageSize", "->", "320"}]}], "]"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "3"}], "}"}]}], "]"}], ",", " ", 
+          RowBox[{"ImageSize", "->", "1050"}]}], "]"}]}]}], "\n", "]"}]}], 
+    ";"}], "\n", "\n", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"controlledResponseReport", "[", "]"}], ",", " ", 
+     RowBox[{"profileCounterReport", "[", "]"}]}], "}"}]}]}]], "Input",
+ CellLabel->"In[1]:= ",
+ CellID->1801257020,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"FiniteSamplesOnly\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"UnboundedProofReplaced\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"CaseCount\"\>", "\[Rule]", "104"}], ",", 
+     RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "0"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "1"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "2"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "3"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "4"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "5"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "6"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "7"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "8"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "9"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "10"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "11"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"011->01\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"PrefixLength\"\>", "\[Rule]", "12"}], ",", 
+          RowBox[{"\<\"Rewrite\"\>", "\[Rule]", "\<\"101->11\"\>"}], ",", 
+          RowBox[{"\<\"Horizon\"\>", "\[Rule]", "128"}], ",", 
+          RowBox[{"\<\"ObservationCount\"\>", "\[Rule]", "129"}], ",", 
+          RowBox[{"\<\"SameCenterTracePrefix\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}]}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"FiniteControlsOnly\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"BuiltinRule30Cones\"\>", "\[Rule]", "3"}], ",", 
+     RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "264"}], ",", 
+          RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "264"}], ",", 
+          RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "264"}], ",", 
+          RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellLabel->"Out[1]= ",
+ CellID->358626973,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"]
+}, Open  ]],
+
+Cell["\<\
+The diagram shows eight times, from top to bottom, and the first twelve cells \
+of each infinite row. Black squares are black cells. The right tail repeats \
+from position four. The last panel's first column alternates while later \
+columns require eight times to repeat; the all-time claims are proved below.\
+\>", "Text",
+ CellID->876231958,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"profileCounterDiagram", "[", "]"}]], "Input",
+ CellLabel->"In[2]:= ",
+ CellID->1274972605,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[{
+       RasterBox[SparseArray[
+        Automatic, {8, 12}, 1., {
+         1, {{0, 4, 10, 16, 23, 28, 36, 41, 49}, {{3}, {4}, {6}, {10}, {5}, {
+           7}, {8}, {9}, {11}, {12}, {1}, {2}, {3}, {4}, {5}, {9}, {3}, {6}, {
+           7}, {8}, {10}, {11}, {12}, {1}, {2}, {3}, {8}, {12}, {1}, {4}, {
+           5}, {6}, {7}, {9}, {10}, {11}, {2}, {3}, {4}, {7}, {11}, {1}, {
+           2}, {5}, {6}, {8}, {9}, {10}, {12}}}, CompressedData["
+1:eJxTTMoPSmVkYGAwZBgFgwUAAOuiAdw=
+          "]}], {{0, 0}, {12, 8}}, {0, 1}], {
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 8}, {12, 8}}, {{0, 7}, {12, 7}}, {{0, 6}, {12, 6}}, {{
+           0, 5}, {12, 5}}, {{0, 4}, {12, 4}}, {{0, 3}, {12, 3}}, {{0, 2}, {
+           12, 2}}, {{0, 1}, {12, 1}}, {{0, 0}, {12, 0}}}],
+          Antialiasing->False]}, 
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 0}, {0, 8}}, {{1, 0}, {1, 8}}, {{2, 0}, {2, 8}}, {{3, 
+           0}, {3, 8}}, {{4, 0}, {4, 8}}, {{5, 0}, {5, 8}}, {{6, 0}, {6, 
+           8}}, {{7, 0}, {7, 8}}, {{8, 0}, {8, 8}}, {{9, 0}, {9, 8}}, {{10, 
+           0}, {10, 8}}, {{11, 0}, {11, 8}}, {{12, 0}, {12, 8}}}],
+          Antialiasing->False]}}},
+      DefaultBaseStyle->{"PlotGraphics", "Graphics"},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{{
+         FormBox["\"time 0 through 7 from top\"", TraditionalForm], None}, {
+         FormBox["\"position 0 through 11\"", TraditionalForm], None}},
+      FrameTicks->{{None, None}, {None, None}},
+      GridLinesStyle->Directive[
+        GrayLevel[0.5, 0.4]],
+      ImagePadding->{{17.171875, 0.5}, {17.171875, 0.5}},
+      ImageSize->320,
+      Method->{
+       "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+        "DefaultGraphicsInteraction" -> {
+         "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+          "Effects" -> {
+           "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+            "Droplines" -> {
+             "freeformCursorMode" -> True, 
+              "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+        "DefaultPlotStyle" -> Automatic},
+      PlotInteractivity:>True,
+      PlotLabel->FormBox[
+        StyleBox["\"First OR example\"", 12, StripOnInput -> False], 
+        TraditionalForm]], {172., -130.0887625}, ImageScaled[{0.5, 0.5}], {320., 236.177525},
+     
+     BaseStyle->{Graphics3DBoxOptions -> {SphericalRegion -> False}}], 
+    InsetBox[
+     GraphicsBox[{
+       RasterBox[SparseArray[
+        Automatic, {8, 12}, 1., {
+         1, {{0, 5, 9, 17, 22, 29, 34, 41, 47}, {{4}, {5}, {7}, {9}, {11}, {
+           6}, {8}, {10}, {12}, {1}, {2}, {3}, {4}, {5}, {7}, {9}, {11}, {
+           3}, {6}, {8}, {10}, {12}, {1}, {2}, {4}, {5}, {7}, {9}, {11}, {
+           2}, {6}, {8}, {10}, {12}, {1}, {3}, {4}, {5}, {7}, {9}, {11}, {
+           2}, {3}, {6}, {8}, {10}, {12}}}, CompressedData["
+1:eJxTTMoPSmVkYGDQZxgFAwUAyuoB2g==
+          "]}], {{0, 0}, {12, 8}}, {0, 1}], {
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 8}, {12, 8}}, {{0, 7}, {12, 7}}, {{0, 6}, {12, 6}}, {{
+           0, 5}, {12, 5}}, {{0, 4}, {12, 4}}, {{0, 3}, {12, 3}}, {{0, 2}, {
+           12, 2}}, {{0, 1}, {12, 1}}, {{0, 0}, {12, 0}}}],
+          Antialiasing->False]}, 
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 0}, {0, 8}}, {{1, 0}, {1, 8}}, {{2, 0}, {2, 8}}, {{3, 
+           0}, {3, 8}}, {{4, 0}, {4, 8}}, {{5, 0}, {5, 8}}, {{6, 0}, {6, 
+           8}}, {{7, 0}, {7, 8}}, {{8, 0}, {8, 8}}, {{9, 0}, {9, 8}}, {{10, 
+           0}, {10, 8}}, {{11, 0}, {11, 8}}, {{12, 0}, {12, 8}}}],
+          Antialiasing->False]}}},
+      DefaultBaseStyle->{"PlotGraphics", "Graphics"},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{{
+         FormBox["\"time 0 through 7 from top\"", TraditionalForm], None}, {
+         FormBox["\"position 0 through 11\"", TraditionalForm], None}},
+      FrameTicks->{{None, None}, {None, None}},
+      GridLinesStyle->Directive[
+        GrayLevel[0.5, 0.4]],
+      ImagePadding->{{17.171875, 0.5}, {17.171875, 0.5}},
+      ImageSize->320,
+      Method->{
+       "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+        "DefaultGraphicsInteraction" -> {
+         "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+          "Effects" -> {
+           "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+            "Droplines" -> {
+             "freeformCursorMode" -> True, 
+              "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+        "DefaultPlotStyle" -> Automatic},
+      PlotInteractivity:>True,
+      PlotLabel->FormBox[
+        StyleBox["\"Second OR example\"", 12, StripOnInput -> False], 
+        TraditionalForm]], {516., -130.0887625}, ImageScaled[{0.5, 0.5}], {320., 236.177525},
+     
+     BaseStyle->{Graphics3DBoxOptions -> {SphericalRegion -> False}}], 
+    InsetBox[
+     GraphicsBox[{
+       RasterBox[SparseArray[
+        Automatic, {8, 12}, 1., {
+         1, {{0, 8, 13, 20, 25, 32, 37, 44, 48}, {{3}, {4}, {5}, {6}, {7}, {
+           9}, {10}, {11}, {1}, {2}, {4}, {7}, {11}, {3}, {5}, {6}, {8}, {
+           9}, {10}, {12}, {1}, {2}, {4}, {6}, {10}, {3}, {5}, {7}, {8}, {
+           9}, {11}, {12}, {1}, {2}, {4}, {5}, {9}, {2}, {6}, {7}, {8}, {
+           10}, {11}, {12}, {1}, {2}, {8}, {12}}}, CompressedData["
+1:eJxTTMoPSmVkYGAwYBgFAw0A2z4B2w==
+          "]}], {{0, 0}, {12, 8}}, {0, 1}], {
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 8}, {12, 8}}, {{0, 7}, {12, 7}}, {{0, 6}, {12, 6}}, {{
+           0, 5}, {12, 5}}, {{0, 4}, {12, 4}}, {{0, 3}, {12, 3}}, {{0, 2}, {
+           12, 2}}, {{0, 1}, {12, 1}}, {{0, 0}, {12, 0}}}],
+          Antialiasing->False]}, 
+        {GrayLevel[0.85], 
+         StyleBox[
+          LineBox[{{{0, 0}, {0, 8}}, {{1, 0}, {1, 8}}, {{2, 0}, {2, 8}}, {{3, 
+           0}, {3, 8}}, {{4, 0}, {4, 8}}, {{5, 0}, {5, 8}}, {{6, 0}, {6, 
+           8}}, {{7, 0}, {7, 8}}, {{8, 0}, {8, 8}}, {{9, 0}, {9, 8}}, {{10, 
+           0}, {10, 8}}, {{11, 0}, {11, 8}}, {{12, 0}, {12, 8}}}],
+          Antialiasing->False]}}},
+      DefaultBaseStyle->{"PlotGraphics", "Graphics"},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{{
+         FormBox["\"time 0 through 7 from top\"", TraditionalForm], None}, {
+         FormBox["\"position 0 through 11\"", TraditionalForm], None}},
+      FrameTicks->{{None, None}, {None, None}},
+      GridLinesStyle->Directive[
+        GrayLevel[0.5, 0.4]],
+      ImagePadding->{{17.171875, 0.5}, {17.171875, 0.5}},
+      ImageSize->320,
+      Method->{
+       "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+        "DefaultGraphicsInteraction" -> {
+         "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+          "Effects" -> {
+           "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+            "Droplines" -> {
+             "freeformCursorMode" -> True, 
+              "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+        "DefaultPlotStyle" -> Automatic},
+      PlotInteractivity:>True,
+      PlotLabel->FormBox[
+        StyleBox[
+        "\"Head period 2; state period 8\"", 12, StripOnInput -> False], 
+        TraditionalForm]], {860., -130.0887625}, ImageScaled[{0.5, 0.5}], {320., 236.177525},
+     
+     BaseStyle->{Graphics3DBoxOptions -> {SphericalRegion -> False}}]}, {}},
+  ImageSize->1050,
+  Method->{"IgnoreImageSizeAutomaticLimit" -> True},
+  PlotRange->{{0, 1032.}, {-260.177525, 0}},
+  PlotRangePadding->Automatic]], "Output",
+ CellLabel->"Out[2]= ",
+ CellID->332869178,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"]
+}, Open  ]],
+
+Cell["Exact embedded proof and full kernel replay", "Section",
+ CellID->1967685850,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+
+Cell["\<\
+The source below contains both complete catalog modules, with only imports, \
+module/export wrappers and namespace names adapted for a standalone file. It \
+imports only official core modules and uses no additional axioms or native \
+decision procedures. A passing partial check does not establish an official \
+prize target.\
+\>", "Text",
+ CellID->1044562475,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Wolfram`LeanLink`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$Rule30PrizeKit", " ", "=", " ", 
+   RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[3]:= ",
+ CellID->1653200050,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"rule30Submission", " ", "=", " ", 
+   RowBox[{"LeanImportString", "[", 
+    RowBox[{"\"\<import Ruliology.CellularAutomata.Rule30Ether\\nimport \
+Ruliology.CellularAutomata.Rule30Realization\\nimport \
+Ruliology.CellularAutomata.Rule30ZeroBoundary\\n\\nopen \
+Ruliology.CellularAutomata\\n\\n/-!\\n# Controlled responses and the \
+triangular right-edge update\\n\\nThe response tree for every possible left \
+driver is equivalent to alternating\\nhead/OR observations of a triangular \
+update. This is an exact controlled-system\\nequivalence. A single prescribed \
+driver is a different question; no prize\\nproblem is solved here.\\n-/\\n\\n\
+\\n\\nnamespace Rule30Submission.Response\\n\\nopen Rule30Jen \
+Rule30Ether\\n\\nabbrev State := Nat \[RightArrow] Bool\\n\\ndef prepend (a : \
+Bool) (x : State) : State\\n  | 0 => a\\n  | k+1 => x k\\n\\ndef diagonal (x \
+: State) (k : Nat) : Bool :=\\n  xor (x k) (x (k+1) || x (k+2))\\n\\ndef step \
+(b : Bool) (x : State) : State :=\\n  prepend (xor b (x 0 || x 1)) (diagonal \
+x)\\n\\ndef run (c : Nat \[RightArrow] Bool) (x : State) : Nat \[RightArrow] \
+State\\n  | 0 => x\\n  | t+1 => step (c t) (run c x t)\\n\\ndef asRight (x : \
+State) (p : Nat) : Bool :=\\n  if p=0 then false else x (p-1)\\n\\n/-- The \
+controlled state uses zero-based indexing of the kit's positions 1,2,... . -/\
+\\ntheorem run_sound (c : Nat \[RightArrow] Bool) (x : State) : \[ForAll] t \
+k,\\n    run c x t k=drv c (asRight x) t (k+1) := by\\n  intro t\\n  \
+induction t with\\n  | zero => intro k; simp [run,drv,asRight]\\n  | succ t \
+ih =>\\n      intro k\\n      cases k with\\n      | zero => simp \
+[run,step,prepend,drv,rule,ih,drv_col0]\\n      | succ k => simp \
+[run,step,prepend,diagonal,drv,rule,ih,Nat.add_assoc]\\n\\ntheorem run_shift \
+(c : Nat \[RightArrow] Bool) (x : State) : \[ForAll] n,\\n    run c x \
+(n+1)=run (fun j => c (j+1)) (step (c 0) x) n\\n  | 0 => rfl\\n  | n+1 => \
+by\\n      rw [run,run_shift c x n]\\n      rfl\\n\\ndef ResponseEq : Nat \
+\[RightArrow] State \[RightArrow] State \[RightArrow] Prop\\n  | 0,_,_ => \
+True\\n  | n+1,x,y => x 0=y 0 \[And] \[ForAll] b, ResponseEq n (step b x) \
+(step b y)\\n\\ntheorem responseEq_iff_runs (n : Nat) (x y : State) :\\n    \
+ResponseEq n x y \[LeftRightArrow] \[ForAll] c t, t<n \[RightArrow] run c x t \
+0=run c y t 0 := by\\n  induction n generalizing x y with\\n  | zero => simp \
+[ResponseEq]\\n  | succ n ih =>\\n      constructor\\n      \[CenterDot] \
+intro h c t ht\\n        cases t with\\n        | zero => exact h.1\\n        \
+| succ t =>\\n            rw [run_shift,run_shift]\\n            exact (ih \
+(step (c 0) x) (step (c 0) y)).mp (h.2 (c 0)) _ t (by omega)\\n      \
+\[CenterDot] intro h\\n        refine \:27e8h (fun _ => false) 0 (by \
+omega),fun b => ?_\:27e9\\n        apply (ih _ _).mpr\\n        intro c t \
+ht\\n        have he := h (prepend b c) (t+1) (by omega)\\n        rw \
+[run_shift,run_shift] at he\\n        simpa only [prepend] using \
+he\\n\\ntheorem diagonal_prepend (a : Bool) (x : State) : diagonal (prepend a \
+x)=step a x := by\\n  funext k\\n  cases k <;> rfl\\n\\ntheorem step_prepend \
+(b a : Bool) (x : State) :\\n    step b (prepend a x)=prepend (xor b (a || x \
+0)) (step a x) := by\\n  unfold step\\n  rw [diagonal_prepend]\\n  \
+rfl\\n\\nprivate theorem xor_cancel (a b : Bool) : xor (xor a b) b=a := by\\n \
+ cases a <;> cases b <;> rfl\\n\\n/-- One arbitrary shared prefix cell costs \
+one observation of the tail system. -/\\ntheorem responseEq_all_prepend (n : \
+Nat) (x y : State) :\\n    (\[ForAll] a, ResponseEq (n+1) (prepend a x) \
+(prepend a y)) \[LeftRightArrow] ResponseEq n x y := by\\n  induction n \
+generalizing x y with\\n  | zero => simp [ResponseEq,prepend]\\n  | succ n ih \
+=>\\n      constructor\\n      \[CenterDot] intro h\\n        have hhead : x \
+0=y 0 := by\\n          have he := ((h false).2 false).1\\n          simpa \
+[step,prepend] using he\\n        refine \:27e8hhead,fun b => ?_\:27e9\\n     \
+   apply (ih _ _).mp\\n        intro a\\n        have he := (h b).2 (xor a (b \
+|| x 0))\\n        rw [step_prepend,step_prepend,\[LeftArrow] \
+hhead,xor_cancel] at he\\n        exact he\\n      \[CenterDot] intro h a\\n  \
+      refine \:27e8rfl,fun b => ?_\:27e9\\n        rw \
+[step_prepend,step_prepend,h.1]\\n        exact (ih _ _).mpr (h.2 a) (xor b \
+(a || y 0))\\n\\n/-- Two observations remove one triangular diagonal layer \
+exactly. -/\\ntheorem responseEq_two (n : Nat) (x y : State) :\\n    \
+ResponseEq (n+2) x y \[LeftRightArrow] x 0=y 0 \[And] (x 0 || x 1)=(y 0 || y \
+1) \[And]\\n      ResponseEq n (diagonal x) (diagonal y) := by\\n  \
+constructor\\n  \[CenterDot] intro h\\n    have hor : (x 0 || x 1)=(y 0 || y \
+1) := by\\n      have he := (h.2 false).1\\n      simpa [step,prepend] using \
+he\\n    refine \:27e8h.1,hor,(responseEq_all_prepend n _ _).mp (fun a => ?_)\
+\:27e9\\n    have he := h.2 (xor a (x 0 || x 1))\\n    change ResponseEq \
+(n+1)\\n      (prepend (xor (xor a (x 0 || x 1)) (x 0 || x 1)) (diagonal \
+x))\\n      (prepend (xor (xor a (x 0 || x 1)) (y 0 || y 1)) (diagonal y)) at \
+he\\n    rw [\[LeftArrow] hor,xor_cancel] at he\\n    exact he\\n  \
+\[CenterDot] rintro \:27e8hhead,hor,hdiag\:27e9\\n    refine \:27e8hhead,fun \
+b => ?_\:27e9\\n    change ResponseEq (n+1) (prepend (xor b (x 0 || x 1)) \
+(diagonal x))\\n      (prepend (xor b (y 0 || y 1)) (diagonal y))\\n    rw \
+[hor]\\n    exact (responseEq_all_prepend n _ _).mpr hdiag _\\n\\ndef iterate \
+(x : State) : Nat \[RightArrow] State\\n  | 0 => x\\n  | n+1 => diagonal \
+(iterate x n)\\n\\ntheorem iterate_from (x : State) : \[ForAll] n, iterate \
+(diagonal x) n=iterate x (n+1)\\n  | 0 => rfl\\n  | n+1 => by rw \
+[iterate,iterate_from x n]; rfl\\n\\ndef ObserveEq (x y : State) : Prop :=\\n \
+ x 0=y 0 \[And] (x 0 || x 1)=(y 0 || y 1)\\n\\ndef SameResponse (x y : State) \
+: Prop := \[ForAll] n, ResponseEq n x y\\n\\ntheorem sameResponse_shift {x y \
+: State} (h : SameResponse x y) :\\n    SameResponse (diagonal x) (diagonal \
+y) :=\\n  fun n => ((responseEq_two n x y).mp (h (n+2))).2.2\\n\\ntheorem \
+sameResponse_observe {x y : State} (h : SameResponse x y) : ObserveEq x y \
+:=\\n  \:27e8((responseEq_two 0 x y).mp (h 2)).1,((responseEq_two 0 x y).mp \
+(h 2)).2.1\:27e9\\n\\nprivate theorem response_of_diagonal : \[ForAll] n (x y \
+: State),\\n    (\[ForAll] k, ObserveEq (iterate x k) (iterate y k)) \
+\[RightArrow] ResponseEq n x y\\n  | 0,_,_,_ => True.intro\\n  | 1,x,y,h => \
+\:27e8(h 0).1,fun _ => True.intro\:27e9\\n  | n+2,x,y,h => (responseEq_two n \
+x y).mpr \:27e8(h 0).1,(h 0).2,\\n      response_of_diagonal n (diagonal x) \
+(diagonal y) (fun k => by\\n        rw [iterate_from,iterate_from]\\n        \
+exact h (k+1))\:27e9\\n\\n/-- Exact equivalence for every boundary word and \
+observation horizon. -/\\ntheorem sameResponse_iff_diagonal (x y : State) \
+:\\n    SameResponse x y \[LeftRightArrow] \[ForAll] k, ObserveEq (iterate x \
+k) (iterate y k) := by\\n  constructor\\n  \[CenterDot] intro h\\n    have hi \
+: \[ForAll] k, SameResponse (iterate x k) (iterate y k) := by\\n      intro k\
+\\n      induction k with\\n      | zero => exact h\\n      | succ k ih => \
+exact sameResponse_shift ih\\n    exact fun k => sameResponse_observe (hi \
+k)\\n  \[CenterDot] intro h n\\n    exact response_of_diagonal n x y \
+h\\n\\ntheorem sameResponse_iff_drv (x y : State) :\\n    SameResponse x y \
+\[LeftRightArrow] \[ForAll] c t, drv c (asRight x) t 1=drv c (asRight y) t 1 \
+:= by\\n  constructor\\n  \[CenterDot] intro h c t\\n    rw [\[LeftArrow] \
+run_sound c x t 0,\[LeftArrow] run_sound c y t 0]\\n    exact \
+(responseEq_iff_runs (t+1) x y).mp (h _) c t (by omega)\\n  \[CenterDot] \
+intro h n\\n    apply (responseEq_iff_runs n x y).mpr\\n    intro c t _\\n    \
+rw [run_sound,run_sound]\\n    exact h c t\\n\\ntheorem sameResponse_refl (x \
+: State) : SameResponse x x :=\\n  (sameResponse_iff_drv x x).mpr (fun _ _ => \
+rfl)\\n\\ntheorem sameResponse_symm {x y : State} (h : SameResponse x y) : \
+SameResponse y x :=\\n  (sameResponse_iff_drv y x).mpr (fun c t => \
+((sameResponse_iff_drv x y).mp h c t).symm)\\n\\ntheorem sameResponse_trans \
+{x y z : State} (h : SameResponse x y) (g : SameResponse y z) :\\n    \
+SameResponse x z :=\\n  (sameResponse_iff_drv x z).mpr (fun c t =>\\n    \
+((sameResponse_iff_drv x y).mp h c t).trans ((sameResponse_iff_drv y z).mp g \
+c t))\\n\\ntheorem sameResponse_prepend {x y : State} (h : SameResponse x y) \
+(a : Bool) :\\n    SameResponse (prepend a x) (prepend a y) := by\\n  intro n\
+\\n  cases n with\\n  | zero => exact True.intro\\n  | succ n => exact \
+(responseEq_all_prepend n x y).mpr (h n) a\\n\\ndef withPrefix : List Bool \
+\[RightArrow] State \[RightArrow] State\\n  | [],x => x\\n  | a::bs,x => \
+prepend a (withPrefix bs x)\\n\\ntheorem sameResponse_withPrefix {x y : \
+State} (h : SameResponse x y) (bs : List Bool) :\\n    SameResponse \
+(withPrefix bs x) (withPrefix bs y) := by\\n  induction bs with\\n  | nil => \
+exact h\\n  | cons a bs ih => exact sameResponse_prepend ih a\\n\\ndef word \
+(bs : List Bool) (k : Nat) : Bool := bs.getD k false\\n\\ntheorem word_cons \
+(a : Bool) (bs : List Bool) : word (a::bs)=prepend a (word bs) := by\\n  \
+funext k\\n  cases k <;> rfl\\n\\ntheorem word_append (bs cs : List Bool) : \
+word (bs++cs)=withPrefix bs (word cs) := by\\n  induction bs with\\n  | nil \
+=> rfl\\n  | cons a bs ih =>\\n      rw \
+[List.cons_append,word_cons,withPrefix,ih]\\n\\ntheorem diagonal_011 : \
+diagonal (word [false,true,true])=word [true,false,true] := by\\n  funext \
+k\\n  cases k with\\n  | zero => rfl\\n  | succ k =>\\n      cases k with\\n  \
+    | zero => rfl\\n      | succ k => cases k <;> rfl\\n\\ntheorem \
+diagonal_01 : diagonal (word [false,true])=word [true,true] := by\\n  funext \
+k\\n  cases k with\\n  | zero => rfl\\n  | succ k => cases k <;> \
+rfl\\n\\ntheorem diagonal_101 : diagonal (word [true,false,true])=word \
+[false,true,true] := by\\n  funext k\\n  cases k with\\n  | zero => rfl\\n  | \
+succ k =>\\n      cases k with\\n      | zero => rfl\\n      | succ k => \
+cases k <;> rfl\\n\\ntheorem diagonal_11 : diagonal (word [true,true])=word \
+[false,true] := by\\n  funext k\\n  cases k with\\n  | zero => rfl\\n  | succ \
+k => cases k <;> rfl\\n\\nprivate theorem primitive_responses : \[ForAll] \
+n,\\n    ResponseEq n (word [false,true,true]) (word [false,true]) \[And]\\n  \
+  ResponseEq n (word [true,false,true]) (word [true,true])\\n  | 0 => \
+\:27e8True.intro,True.intro\:27e9\\n  | 1 => \:27e8\:27e8rfl,fun _ => \
+True.intro\:27e9,\:27e8rfl,fun _ => True.intro\:27e9\:27e9\\n  | n+2 => by\\n \
+     constructor\\n      \[CenterDot] apply (responseEq_two n _ _).mpr\\n     \
+   refine \:27e8rfl,rfl,?_\:27e9\\n        rw [diagonal_011,diagonal_01]\\n   \
+     exact (primitive_responses n).2\\n      \[CenterDot] apply \
+(responseEq_two n _ _).mpr\\n        refine \:27e8rfl,rfl,?_\:27e9\\n        \
+rw [diagonal_101,diagonal_11]\\n        exact (primitive_responses \
+n).1\\n\\n/-- A terminal 011 may be replaced by 01, behind any finite shared \
+prefix. -/\\ntheorem tail_011_response (bs : List Bool) :\\n    SameResponse \
+(word (bs++[false,true,true])) (word (bs++[false,true])) := by\\n  rw \
+[word_append,word_append]\\n  exact sameResponse_withPrefix (fun n => \
+(primitive_responses n).1) bs\\n\\n/-- A terminal 101 may be replaced by 11, \
+behind any finite shared prefix. -/\\ntheorem tail_101_response (bs : List \
+Bool) :\\n    SameResponse (word (bs++[true,false,true])) (word \
+(bs++[true,true])) := by\\n  rw [word_append,word_append]\\n  exact \
+sameResponse_withPrefix (fun n => (primitive_responses n).2) bs\\n\\ntheorem \
+tail_011_drv (bs : List Bool) (c : Nat \[RightArrow] Bool) (t : Nat) :\\n    \
+drv c (asRight (word (bs++[false,true,true]))) t 1=\\n      drv c (asRight \
+(word (bs++[false,true]))) t 1 :=\\n  (sameResponse_iff_drv _ _).mp \
+(tail_011_response bs) c t\\n\\ntheorem tail_101_drv (bs : List Bool) (c : \
+Nat \[RightArrow] Bool) (t : Nat) :\\n    drv c (asRight (word \
+(bs++[true,false,true]))) t 1=\\n      drv c (asRight (word \
+(bs++[true,true]))) t 1 :=\\n  (sameResponse_iff_drv _ _).mp \
+(tail_101_response bs) c t\\n\\n/-- An equivalent finite test without \
+branching over all boundary words. -/\\ndef ObservationPrefix : Nat \
+\[RightArrow] State \[RightArrow] State \[RightArrow] Prop\\n  | 0,_,_ => \
+True\\n  | 1,x,y => x 0=y 0\\n  | n+2,x,y => ObserveEq x y \[And] \
+ObservationPrefix n (diagonal x) (diagonal y)\\n\\ntheorem \
+responseEq_iff_observationPrefix : \[ForAll] n (x y : State),\\n    \
+ResponseEq n x y \[LeftRightArrow] ObservationPrefix n x y\\n  | 0,_,_ => \
+Iff.rfl\\n  | 1,_,_ => by simp [ResponseEq,ObservationPrefix]\\n  | n+2,x,y \
+=> by\\n      rw [responseEq_two,ObservationPrefix,\[LeftArrow] \
+responseEq_iff_observationPrefix n]\\n      exact \
+and_assoc.symm\\n\\ninstance observeEqDecidable (x y : State) : Decidable \
+(ObserveEq x y) :=\\n  inferInstanceAs (Decidable (x 0=y 0 \[And] (x 0 || x \
+1)=(y 0 || y 1)))\\n\\ninstance observationPrefixDecidable : \[ForAll] n (x y \
+: State), Decidable (ObservationPrefix n x y)\\n  | 0,_,_ => isTrue \
+True.intro\\n  | 1,x,y => inferInstanceAs (Decidable (x 0=y 0))\\n  | n+2,x,y \
+=> @instDecidableAnd (ObserveEq x y)\\n      (ObservationPrefix n (diagonal \
+x) (diagonal y)) (observeEqDecidable x y)\\n      (observationPrefixDecidable \
+n (diagonal x) (diagonal y))\\n\\ndef shortWindowA : State := word \
+[false,true,false,true,false,true]\\ndef shortWindowB : State := word \
+[false,true,true,false,false,false,true]\\n\\n/-- Width seven does not make \
+thirteen observations a complete test. -/\\ntheorem short_window_agreement : \
+ResponseEq 13 shortWindowA shortWindowB := by\\n  rw \
+[responseEq_iff_observationPrefix]\\n  decide\\n\\ntheorem \
+short_window_not_sameResponse : \[Not] SameResponse shortWindowA shortWindowB \
+:= by\\n  intro h\\n  have he := (sameResponse_iff_diagonal _ _).mp h 8\\n  \
+have hn : \[Not] ObserveEq (iterate shortWindowA 8) (iterate shortWindowB 8) \
+:= by decide\\n  exact hn he\\n\\ntheorem zero_driver_head (x : State) (hx : \
+x 0=true) :\\n    \[ForAll] t, run (fun _ => false) x t 0=true := by\\n  \
+intro t\\n  induction t with\\n  | zero => exact hx\\n  | succ t ih => simp \
+[run,step,prepend,ih]\\n\\n/-- Agreement for one periodic driver does not \
+imply universal response equality.\\nThis externally imposed driver is not \
+asserted to extend to a finite full row. -/\\ntheorem \
+fixed_driver_counterexample :\\n    (\[ForAll] t, drv (fun _ => false) \
+(asRight (word [true])) t 1=\\n      drv (fun _ => false) (asRight (word \
+[true,true])) t 1) \[And]\\n    \[Not] SameResponse (word [true]) (word \
+[true,true]) := by\\n  constructor\\n  \[CenterDot] intro t\\n    rw [\
+\[LeftArrow] run_sound _ _ t 0,\[LeftArrow] run_sound _ _ t 0]\\n    rw \
+[zero_driver_head _ rfl,zero_driver_head _ rfl]\\n  \[CenterDot] intro h\\n   \
+ have he := (sameResponse_iff_diagonal _ _).mp h 1\\n    have hn : \[Not] \
+ObserveEq (iterate (word [true]) 1) (iterate (word [true,true]) 1) := by \
+decide\\n    exact hn he\\n\\ntheorem sameResponse_step {x y : State} (h : \
+SameResponse x y) (b : Bool) :\\n    SameResponse (step b x) (step b y) := \
+fun n => (h (n+1)).2 b\\n\\nopen Rule30Realization\\n\\ndef rightPart (x : \
+Int \[RightArrow] Bool) (k : Nat) : Bool := x ((k:Int)+1)\\n\\ntheorem \
+rightPart_next (x : Int \[RightArrow] Bool) (t : Nat) :\\n    rightPart (evol \
+x (t+1))=step (evol x t 0) (rightPart (evol x t)) := by\\n  funext k\\n  \
+cases k with\\n  | zero => simp [rightPart,evol,step,prepend,rule]\\n  | succ \
+k =>\\n      simp \
+[rightPart,evol,step,prepend,diagonal,rule,Int.natCast_add,Int.add_assoc]\\n  \
+    congr 1 <;> omega\\n\\n/-- Universal right-response equivalence remains \
+sound under actual left feedback. -/\\ntheorem feedback_left_equal {x y : Int \
+\[RightArrow] Bool}\\n    (hleft : \[ForAll] p, p\[LessEqual]0 \[RightArrow] \
+x p=y p) (hright : SameResponse (rightPart x) (rightPart y)) :\\n    \
+\[ForAll] t, (\[ForAll] p, p\[LessEqual]0 \[RightArrow] evol x t p=evol y t \
+p) \[And]\\n      SameResponse (rightPart (evol x t)) (rightPart (evol y t)) \
+:= by\\n  intro t\\n  induction t with\\n  | zero => exact \:27e8hleft,hright\
+\:27e9\\n  | succ t ih =>\\n      constructor\\n      \[CenterDot] intro p hp\
+\\n        have hhead : evol x t 1=evol y t 1 := (sameResponse_observe \
+ih.2).1\\n        change rule (evol x t (p-1)) (evol x t p) (evol x t (p+1)) \
+=\\n          rule (evol y t (p-1)) (evol y t p) (evol y t (p+1))\\n        \
+rw [ih.1 (p-1) (by omega),ih.1 p hp]\\n        by_cases hz : p=0\\n        \
+\[CenterDot] subst p; rw [show (0:Int)+1=1 by omega,hhead]\\n        \
+\[CenterDot] rw [ih.1 (p+1) (by omega)]\\n      \[CenterDot] rw \
+[rightPart_next,rightPart_next,ih.1 0 (by omega)]\\n        exact \
+sameResponse_step ih.2 _\\n\\ndef splice (left : Int \[RightArrow] Bool) \
+(right : State) (p : Int) : Bool :=\\n  if p\[LessEqual]0 then left p else \
+right (p.toNat-1)\\n\\ntheorem rightPart_splice (left : Int \[RightArrow] \
+Bool) (right : State) :\\n    rightPart (splice left right)=right := by\\n  \
+funext k\\n  simp [rightPart,splice,show \[Not] (k:Int)+1\[LessEqual]0 by \
+omega]\\n\\ntheorem splice_same_center (left : Int \[RightArrow] Bool) {x y : \
+State} (h : SameResponse x y) (t : Nat) :\\n    evol (splice left x) t 0=evol \
+(splice left y) t 0 := by\\n  apply (feedback_left_equal (x:=splice left x) \
+(y:=splice left y) ?_ ?_ t).1 0 (by omega)\\n  \[CenterDot] intro p hp\\n    \
+simp [splice,hp]\\n  \[CenterDot] rwa \
+[rightPart_splice,rightPart_splice]\\n\\ntheorem tail_011_center (left : Int \
+\[RightArrow] Bool) (bs : List Bool) (t : Nat) :\\n    evol (splice left \
+(word (bs++[false,true,true]))) t 0=\\n      evol (splice left (word \
+(bs++[false,true]))) t 0 :=\\n  splice_same_center left (tail_011_response \
+bs) t\\n\\ntheorem tail_101_center (left : Int \[RightArrow] Bool) (bs : List \
+Bool) (t : Nat) :\\n    evol (splice left (word (bs++[true,false,true]))) t \
+0=\\n      evol (splice left (word (bs++[true,true]))) t 0 :=\\n  \
+splice_same_center left (tail_101_response bs) t\\n\\nend \
+Rule30Submission.Response\\n\\n/-!\\n# An eight-periodic infinite-tail \
+obstruction to OR-only reconstruction\\n\\nThe two explicit right halves have \
+identical nonconstant head/neighbor OR\\nobservations and different head \
+traces. Both full diagonal orbits have period\\ndividing eight. A third \
+example has head period two and full-state least\\nperiod eight. None is \
+finitely supported: these are not counterexamples\\nto the finite-tail \
+conjectures and prove no prize result.\\n-/\\n\\n\\n\\nnamespace \
+Rule30Submission.Profiles\\n\\nopen Rule30Submission.Response\\n\\ndef key (k \
+: Nat) : Nat := if k<4 then k else 4+(k-4)%4\\ndef nextKey (i : Nat) : Nat := \
+if i<7 then i+1 else 4\\n\\ntheorem key_lt (k : Nat) : key k<8 := by\\n  \
+unfold key\\n  split <;> omega\\n\\ntheorem key_succ (k : Nat) : key \
+(k+1)=nextKey (key k) := by\\n  unfold key nextKey\\n  split <;> split <;> \
+split <;> omega\\n\\ndef profile (which : Bool) (i : Nat) : Nat :=\\n  (if \
+which then [45,43,186,166,101,149,86,89]\\n   else \
+[42,45,51,170,170,85,170,85]).getD i 0\\n\\ndef frame (which : Bool) (t k : \
+Nat) : Bool := (profile which (key k)).testBit (t%8)\\ndef initial (which : \
+Bool) : State := frame which 0\\n\\ntheorem profile_step_table : \[ForAll] \
+which : Bool, \[ForAll] t i : Fin 8,\\n    (profile which i.val).testBit \
+((t.val+1)%8)=\\n      xor ((profile which i.val).testBit t.val)\\n        \
+((profile which (nextKey i.val)).testBit t.val ||\\n         (profile which \
+(nextKey (nextKey i.val))).testBit t.val) := by decide\\n\\ntheorem \
+frame_step (which : Bool) (t : Nat) : diagonal (frame which t)=frame which \
+(t+1) := by\\n  funext k\\n  have h := profile_step_table which \
+\:27e8t%8,Nat.mod_lt _ (by decide)\:27e9 \:27e8key k,key_lt k\:27e9\\n  simpa \
+only [diagonal,frame,key_succ,show k+2=(k+1)+1 by omega,\\n    show \
+(t+1)%8=(t%8+1)%8 by omega] using h.symm\\n\\ntheorem iterate_frame (which : \
+Bool) : \[ForAll] t, iterate (initial which) t=frame which t\\n  | 0 => \
+rfl\\n  | t+1 => by rw [iterate,iterate_frame,frame_step]\\n\\ntheorem \
+full_period_eight (which : Bool) (t : Nat) :\\n    iterate (initial which) \
+(t+8)=iterate (initial which) t := by\\n  rw [iterate_frame,iterate_frame]\\n \
+ funext k\\n  simp [frame]\\n\\ntheorem same_OR_table : \[ForAll] t : Fin \
+8,\\n    ((profile true 0).testBit t.val || (profile true 1).testBit \
+t.val)=\\n    ((profile false 0).testBit t.val || (profile false 1).testBit \
+t.val) := by decide\\n\\ntheorem same_OR (t : Nat) :\\n    (iterate (initial \
+true) t 0 || iterate (initial true) t 1)=\\n    (iterate (initial false) t 0 \
+|| iterate (initial false) t 1) := by\\n  simpa only \
+[iterate_frame,frame,key,show 0<4 by decide,show 1<4 by decide,\\n    \
+ite_true] using same_OR_table \:27e8t%8,Nat.mod_lt _ (by \
+decide)\:27e9\\n\\ntheorem OR_nonconstant :\\n    (iterate (initial true) 0 0 \
+|| iterate (initial true) 0 1)=true \[And]\\n    (iterate (initial true) 4 0 \
+|| iterate (initial true) 4 1)=false := by\\n  rw \
+[iterate_frame,iterate_frame]\\n  decide\\n\\ntheorem heads_differ : initial \
+true 0\[NotEqual]initial false 0 := by decide\\n\\ntheorem tail_OR_different \
+:\\n    (iterate (initial true) 2 1 || iterate (initial true) 2 2)\[NotEqual]\
+\\n    (iterate (initial false) 2 1 || iterate (initial false) 2 2) := by\\n  \
+rw [iterate_frame,iterate_frame]\\n  decide\\n\\ntheorem infinite_true : \
+\[Not]Rule30ZeroBoundary.FinSupp (initial true) := by\\n  rintro \:27e8W,hW\
+\:27e9\\n  have h := hW (4*(W+1)+4) (by omega)\\n  have hk : key \
+(4*(W+1)+4)=4 := by\\n    unfold key\\n    rw [ite_eq_right (by omega)]\\n    \
+omega\\n  change (profile true (key (4*(W+1)+4))).testBit 0=false at h\\n  rw \
+[hk] at h\\n  contradiction\\n\\ntheorem infinite_false : \
+\[Not]Rule30ZeroBoundary.FinSupp (initial false) := by\\n  rintro \:27e8W,hW\
+\:27e9\\n  have h := hW (4*(W+1)+5) (by omega)\\n  have hk : key \
+(4*(W+1)+5)=5 := by\\n    unfold key\\n    rw [ite_eq_right (by omega)]\\n    \
+omega\\n  change (profile false (key (4*(W+1)+5))).testBit 0=false at h\\n  \
+rw [hk] at h\\n  contradiction\\n\\n/-- A third infinite right half: the head \
+has period two but its neighbor\\nand full diagonal state have least period \
+eight. -/\\ndef lossProfile (i : Nat) : Nat := \
+[85,87,168,212,172,178,202,43].getD i 0\\ndef lossFrame (t k : Nat) : Bool := \
+(lossProfile (key k)).testBit (t%8)\\ndef lossInitial : State := lossFrame \
+0\\n\\ntheorem loss_step_table : \[ForAll] t i : Fin 8,\\n    (lossProfile \
+i.val).testBit ((t.val+1)%8)=\\n      xor ((lossProfile i.val).testBit t.val)\
+\\n        ((lossProfile (nextKey i.val)).testBit t.val ||\\n         \
+(lossProfile (nextKey (nextKey i.val))).testBit t.val) := by \
+decide\\n\\ntheorem loss_frame_step (t : Nat) : diagonal (lossFrame \
+t)=lossFrame (t+1) := by\\n  funext k\\n  have h := loss_step_table \
+\:27e8t%8,Nat.mod_lt _ (by decide)\:27e9 \:27e8key k,key_lt k\:27e9\\n  simpa \
+only [diagonal,lossFrame,key_succ,show k+2=(k+1)+1 by omega,\\n    show \
+(t+1)%8=(t%8+1)%8 by omega] using h.symm\\n\\ntheorem loss_iterate_frame : \
+\[ForAll] t, iterate lossInitial t=lossFrame t\\n  | 0 => rfl\\n  | t+1 => by \
+rw [iterate,loss_iterate_frame,loss_frame_step]\\n\\ntheorem \
+loss_full_period_eight (t : Nat) : iterate lossInitial (t+8)=iterate \
+lossInitial t := by\\n  rw [loss_iterate_frame,loss_iterate_frame]\\n  funext \
+k\\n  simp [lossFrame]\\n\\ntheorem loss_head_period_two (t : Nat) : iterate \
+lossInitial (t+2) 0=iterate lossInitial t 0 := by\\n  have h : \[ForAll] t : \
+Fin 8, (lossProfile 0).testBit ((t.val+2)%8)=(lossProfile 0).testBit t.val := \
+by decide\\n  simpa only [loss_iterate_frame,lossFrame,key,show 0<4 by \
+decide,ite_true,\\n    show (t+2)%8=(t%8+2)%8 by omega] using h \
+\:27e8t%8,Nat.mod_lt _ (by decide)\:27e9\\n\\ntheorem \
+loss_neighbor_short_table : \[ForAll] P : Fin 8, 0<P.val \[RightArrow] \
+\[Exists] t : Fin 8,\\n    (lossProfile 1).testBit ((t.val+P.val)%8)\
+\[NotEqual](lossProfile 1).testBit t.val := by decide\\n\\ntheorem \
+loss_full_period_lower_bound (P : Nat) (hP : 0<P)\\n    (hp : \[ForAll] t, \
+iterate lossInitial (t+P)=iterate lossInitial t) : 8\[LessEqual]P := by\\n  \
+by_cases hbig : 8\[LessEqual]P\\n  \[CenterDot] exact hbig\\n  \[CenterDot] \
+obtain \:27e8t,ht\:27e9 := loss_neighbor_short_table \:27e8P,by omega\:27e9 \
+hP\\n    have h := congrFun (hp t.val) 1\\n    simp only \
+[loss_iterate_frame,lossFrame,key,show 1<4 by decide,ite_true,\\n      \
+Nat.mod_eq_of_lt t.isLt] at h\\n    exact False.elim (ht h)\\n\\ntheorem \
+loss_not_head_period_one : \[Not]\[ForAll] t, iterate lossInitial (t+1) \
+0=iterate lossInitial t 0 := by\\n  intro h\\n  have hh := h 0\\n  rw \
+[loss_iterate_frame,loss_iterate_frame] at hh\\n  contradiction\\n\\ntheorem \
+loss_infinite : \[Not]Rule30ZeroBoundary.FinSupp lossInitial := by\\n  rintro \
+\:27e8W,hW\:27e9\\n  have h := hW (4*(W+1)+7) (by omega)\\n  have hk : key \
+(4*(W+1)+7)=7 := by\\n    unfold key\\n    rw [ite_eq_right (by omega)]\\n    \
+omega\\n  change (lossProfile (key (4*(W+1)+7))).testBit 0=false at h\\n  rw \
+[hk] at h\\n  contradiction\\n\\nend Rule30Submission.Profiles\\n\>\"", ",", 
+     "\n", "  ", 
+     RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}], ",", 
+     " ", 
+     RowBox[{"\"\<IncludeInternal\>\"", " ", "->", " ", "True"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"rule30KernelCheck", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+    "rule30Submission", 
+     "[", "\"\<Rule30Submission.Response.sameResponse_iff_diagonal\>\"", 
+     "]"}], "[", "\"\<KernelCheck\>\"", "]"}]}], 
+  ";"}], "\n", "rule30KernelCheck"}], "Input",
+ CellLabel->"In[4]:= ",
+ CellID->1267857253,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Success",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"The kernel accepts all 203 declarations of \
+LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"LeanLinkTmp33396268976700301757x753874\"", 
+                  "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"The kernel accepts all 203 declarations of \
+LeanLinkTmp33396268976700301757x753874.\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"LeanLinkTmp33396268976700301757x753874\"", 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["203", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["\"KernelChecked\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Success[
+  "KernelChecked", <|
+   "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
+    "MessageParameters" -> {203, "LeanLinkTmp33396268976700301757x753874"}, 
+    "Module" -> "LeanLinkTmp33396268976700301757x753874", "Declarations" -> 
+    203|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellLabel->"Out[4]= ",
+ CellID->1873570946,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"responseHeadlines", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Rule30Submission.Response.sameResponse_iff_diagonal\>\"", ",",
+      " ", "\"\<Rule30Submission.Response.sameResponse_iff_drv\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.tail_011_drv\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.tail_101_drv\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.feedback_left_equal\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.tail_011_center\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.tail_101_center\>\"", ",", 
+     " ", "\"\<Rule30Submission.Response.short_window_not_sameResponse\>\"", ",",
+      " ", "\"\<Rule30Submission.Response.fixed_driver_counterexample\>\"", ",",
+      " ", "\"\<Rule30Submission.Profiles.full_period_eight\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.same_OR\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.OR_nonconstant\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.heads_differ\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.infinite_true\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.infinite_false\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.loss_head_period_two\>\"", ",", 
+     " ", "\"\<Rule30Submission.Profiles.loss_full_period_lower_bound\>\"", ",",
+      " ", "\"\<Rule30Submission.Profiles.loss_infinite\>\""}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<Theorem\>\"", " ", "->", " ", "name"}], ",", " ", 
+     RowBox[{"\"\<Kind\>\"", " ", "->", " ", 
+      RowBox[{
+       RowBox[{"rule30Submission", "[", "name", "]"}], "[", "\"\<Kind\>\"", 
+       "]"}]}], ",", "\n", "  ", 
+     RowBox[{"\"\<Axioms\>\"", " ", "->", " ", 
+      RowBox[{
+       RowBox[{"rule30Submission", "[", "name", "]"}], "[", "\"\<Axioms\>\"", 
+       "]"}]}]}], "|>"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"name", ",", " ", "responseHeadlines"}], "}"}]}], "]"}]}], "Input",\
+
+ CellLabel->"In[5]:= ",
+ CellID->1407158826,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.Response.sameResponse_iff_diagonal\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.sameResponse_iff_drv\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.tail_011_drv\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.tail_101_drv\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.feedback_left_equal\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.tail_011_center\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.tail_101_center\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.short_window_not_sameResponse\
+\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Response.fixed_driver_counterexample\"\
+\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.full_period_eight\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.same_OR\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.OR_nonconstant\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.heads_differ\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", "\<\"propext\"\>", "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.infinite_true\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.infinite_false\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.loss_head_period_two\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.Profiles.loss_full_period_lower_bound\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.Profiles.loss_infinite\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellLabel->"Out[5]= ",
+ CellID->1138490425,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"]
+}, Open  ]],
+
+Cell["\<\
+Finite-tail normal-form completeness, actual fixed-driver trace rigidity and \
+the full center-column problem remain open. No new prize essay is submitted \
+by this build.\
+\>", "Text",
+ CellID->1609367578,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"]
+},
+LightDark->"Light",
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5",
+ CellID->874461601],
+Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0",
+ CellID->36768919],
+Cell[874, 28, 592, 9, 70, "Abstract",ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d",
+ CellID->1699946459],
+Cell[1460, 39, 116, 1, 70, "Section",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
+ CellID->1535504786],
+Cell[1578, 42, 405, 6, 70, "Text",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
+ CellID->1208482393],
+Cell[1980, 50, 552, 8, 70, "Text",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
+ CellID->28909615],
+Cell[2527, 60, 121, 1, 70, "Section",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
+ CellID->193832008],
+Cell[2650, 63, 198, 4, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+ CellID->684317082],
+Cell[2847, 69, 193, 4, 70, "Text",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
+ CellID->528485616],
+Cell[3039, 75, 544, 8, 70, "Text",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
+ CellID->1392207227],
+Cell[3578, 85, 651, 10, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
+ CellID->705466992],
+Cell[4222, 97, 575, 9, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+ CellID->1350516518],
+Cell[4791, 108, 144, 1, 70, "Section",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+ CellID->907546795],
+Cell[4937, 111, 170, 3, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+ CellID->814772321],
+Cell[5107, 116, 150, 1, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+ CellID->1054628905],
+Cell[5259, 119, 539, 8, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+ CellID->2043779557],
+Cell[5793, 129, 464, 7, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+ CellID->17830494],
+Cell[6253, 138, 404, 6, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+ CellID->1589986527],
+Cell[6654, 146, 122, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+ CellID->943101875],
+Cell[6778, 149, 389, 6, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+ CellID->67888809],
+Cell[CellGroupData[{
+Cell[7186, 159, 17126, 376, 70, "Input",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+ CellID->1801257020],
+Cell[23939, 537, 49276, 871, 70, "Output",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+ CellID->358626973]
+}, Open  ]],
+Cell[72359, 1411, 414, 6, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+ CellID->876231958],
+Cell[CellGroupData[{
+Cell[72792, 1421, 172, 3, 70, "Input",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
+ CellID->1274972605],
+Cell[72964, 1426, 7878, 160, 70, "Output",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
+ CellID->332869178]
+}, Open  ]],
+Cell[80697, 1589, 139, 1, 70, "Section",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
+ CellID->1967685850],
+Cell[80838, 1592, 432, 7, 70, "Text",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
+ CellID->1044562475],
+Cell[81266, 1601, 349, 8, 70, "Input",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
+ CellID->1653200050],
+Cell[CellGroupData[{
+Cell[81632, 1613, 26362, 358, 70, "Input",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
+ CellID->1267857253],
+Cell[107639, 1973, 6023, 126, 70, "Output",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
+ CellID->1873570946]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[113573, 2104, 2121, 40, 70, "Input",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
+ CellID->1407158826],
+Cell[115657, 2146, 7485, 168, 70, "Output",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
+ CellID->1138490425]
+}, Open  ]],
+Cell[122989, 2317, 276, 5, 70, "Text",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
+ CellID->1609367578]
+}
+]
+*)
+
+(* End of internal cache information *)
