@@ -78,3 +78,27 @@ repositories had no Rule 30 Lean proof to adopt.
 The clock-128 profile search was also repeated to 1.5 million pairs without
 a counterexample. An earlier two-million-pair record was already stronger,
 so it is preserved unchanged. Neither incomplete search proves completeness.
+
+## Falsification target for the next unbounded step
+
+`finite_or_rigidity_probe.py` tests two stronger finite-tail candidates:
+the same nonconstant first-two-cell OR trace determines the head trace,
+and a constantly black OR trace permits only a head of period dividing two.
+At full clocks 128 and 256, searches of 1.5 million reachable profile pairs
+stop at their state guards without a counterexample. Each checks 256
+finite witnesses by independent whole-row scalar evolution. These are
+incomplete searches and neither candidate is assumed in Lean.
+
+The detector allows the one-cell fixed black state; requiring alternation
+instead of period dividing two would incorrectly reject that trivial case.
+It also recognizes the existing infinite-tail counterexample: profiles
+87 and 168 have constantly black OR while the first needs period eight.
+Its scalar causal-cone control checks 512 cells. Thus the finite-support
+condition is essential in the candidate, not an omitted proof detail.
+
+A separate informal Newton-coefficient check rejected monotonicity of the
+highest temporal Newton index along finite spatial prefixes. In the
+clock-32 profile graph, adjacent profiles 1502252310 and 1699433109 have
+indices thirty and thirty-one. They have the same temporal period; this is
+not a period-loss counterexample. No Newton-index invariant was proved or
+adopted. A structural argument still needs to handle cancellation in OR.
