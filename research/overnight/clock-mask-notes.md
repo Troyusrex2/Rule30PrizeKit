@@ -88,3 +88,26 @@ they prove neither regularity nor nonregularity of the infinite language.
 They do not suggest a small fixed-state recognizer for the complete
 period-three constraint. No claim about asymptotic minimum black density is
 made from the finite prefix counts.
+
+## Finite-preimage membership discovery
+
+The next prototype inverts the three 010-boundary steps, with earlier heads
+(*,0,1), using a 64-state transducer. Scanning from near the boundary toward
+the finite zero tail gives an 89-state paired recognizer, minimized to 26
+states. Controls compare 1,024 forward images, every current word below
+2^14, and 512 wider random examples. They all pass. This is a discovery
+prototype; the recognizer's all-width interpretation is not Lean verified.
+
+An initial injectivity guess was false and was rejected by these controls.
+Packed finite predecessors 55 and 56 both map to 400 in three steps; all
+three rows have a uniform first triple. Thus a score using a finite
+predecessor must retain the actual history or account for multiple choices.
+One cannot silently treat the predecessor as a function of the current row.
+
+The 26-state membership condition was added as an all-length necessary
+restriction on the old row in the period-three graph. The length-two score
+model has 60,936 vertices and hit its 30-second LP limit, without a result.
+A separate finite-prehistory fit of that same score class became numerically
+infeasible at initial width 20 (16,384 accepted pairs). No verified score or
+impossibility certificate is asserted. The recognizer may support a more
+appropriate history-dependent argument, which remains to be found.
