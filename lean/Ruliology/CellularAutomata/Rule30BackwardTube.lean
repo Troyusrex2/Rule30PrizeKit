@@ -170,10 +170,10 @@ theorem padding_getD (u : List Bool) (r s : Nat) :
       if s < r then false else u.getD (s-r) false := by
   simp only [List.getD_eq_getElem?_getD]
   by_cases hs : s < r
-  · rw [if_pos hs, List.getElem?_append_left (by simpa using hs),
+  · rw [ite_eq_left hs, List.getElem?_append_left (by simpa using hs),
       List.getElem?_replicate_of_lt hs]
     rfl
-  · rw [if_neg hs, List.getElem?_append_right (by simpa using Nat.le_of_not_lt hs)]
+  · rw [ite_eq_right hs, List.getElem?_append_right (by simpa using Nat.le_of_not_lt hs)]
     simp
 
 theorem subsetB_self (K S : Nat) : subsetB K S S = true := by
@@ -217,7 +217,7 @@ theorem no_padding_of_endpoint_tube {x : Int → Bool} {lo : Int}
       Nat.add_mul_mod_self_right, Nat.mod_eq_of_lt hs, padding_getD]
   have hwhite : ∀ n s, s < r → evol x (T+n*(r+u.length)+s) i = false := by
     intro n s hs
-    rw [hblock n s (by omega), if_pos hs]
+    rw [hblock n s (by omega), ite_eq_left hs]
   have hstarts : ∀ n, Rule30FiniteStrips.encRow x (T+n*(r+u.length)) i K = 0 := by
     intro n
     apply encRow_zero_of_prefix
@@ -258,7 +258,7 @@ theorem no_padding_of_endpoint_tube {x : Int → Bool} {lo : Int}
       (fun j hj => by
         rw [hstep]
         have hh := hblock n (r+j) (by omega)
-        simp only [show ¬r+j<r by omega, if_false, Nat.add_sub_cancel_left] at hh
+        simp only [show ¬r+j<r by omega, ite_false, Nat.add_sub_cancel_left] at hh
         exact congrArg (fun a' => stripStep K a' (z (r+j)) (f (r+j))) hh)
       (by rw [hPend, hfend]; exact Nat.testBit_one_zero)
       hPpre (by rw [hSzero]; exact hfZ r (by omega))
@@ -274,10 +274,10 @@ theorem no_padding_of_endpoint_tube {x : Int → Bool} {lo : Int}
     rw [hblock n s hs]
     change ((if s<r then false else u.getD (s-r) false) || evol x (a+s) (i+1)) = g s
     by_cases hsr : s < r
-    · rw [if_pos hsr, Bool.false_or, hcell, hwhitebits s hsr]
-      simp only [g, if_pos hsr]
-    · rw [if_neg hsr]
-      rw [show g s = (u.getD (s-r) false || c (s-r)) by simp only [g, if_neg hsr]]
+    · rw [ite_eq_left hsr, Bool.false_or, hcell, hwhitebits s hsr]
+      simp only [g, ite_eq_left hsr]
+    · rw [ite_eq_right hsr]
+      rw [show g s = (u.getD (s-r) false || c (s-r)) by simp only [g, ite_eq_right hsr]]
       cases hu : u.getD (s-r) false
       · simp only [Bool.false_or]
         rw [hcell]
