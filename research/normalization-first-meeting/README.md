@@ -156,6 +156,28 @@ the scope of the formal statements.
 
 ## Provenance
 
+The same proofs are packaged for direct catalog use as
+`Ruliology.CellularAutomata.Rule30StripeMeeting` and its data module
+`Rule30Certificates.StripeMeeting`, on the
+[catalog contribution branch](https://github.com/Troyusrex2/Rule30PrizeKit/tree/contribution/stripe-meeting-20261024).
+`catalog_adaptation.py` reproduces both sources, changing only import/export
+wrappers, namespace qualification, and module boundaries. The second finite
+certificate is placed with the first. `replay_catalog.py` checks exact source
+correspondence, builds both modules, fully replays the unchanged checker,
+and builds the aggregate catalog.
+
+The catalog adaptation passed **57 data-module declarations, 416 theorem-module
+declarations, and 10 selected headlines**, followed by the **91-job** aggregate
+catalog build. See `catalog-report.json` for the exact commit, source hashes,
+full checker verdicts, and timings. Both formats prove the same results;
+their declaration totals differ because module boundaries change the generated
+equation declarations.
+
+```text
+python research/normalization-first-meeting/catalog_adaptation.py --project /path/to/catalog-checkout
+python research/normalization-first-meeting/replay_catalog.py --project /path/to/catalog-checkout --lake /path/to/lake --output /path/to/audit-output
+```
+
 The investigation extends the trace-collision experiments in
 [`../global-periodicity/`](../global-periodicity/README.md), particularly
 `collision-normalization.py`. The first candidate, normalization equivariance,
