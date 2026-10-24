@@ -67,3 +67,24 @@ trailing-zero argument has not been formalized or audited in this work.
 The stronger conjecture about every finite Q start must be kept separate
 from statements restricted to the single seed. The local theorem above was
 derived independently before this literature check; no novelty is asserted.
+
+## Subsequent rejected flux scores and a recognizer diagnostic
+
+`finite_Q_OR_rank_probe` uses the fact that Q preserves finite width: on a
+finite periodic orbit a score cannot strictly fall around a complete cycle.
+It therefore searches without any positivity assumption. A positive result
+could have excluded a head that stays unchanged while its adjacent OR stays
+black. The one-step and two-step whole-word models, pattern lengths two
+through four, returned numerical infeasibility. First spatial moments with
+signed affine graph potentials also failed for these six cases. All twelve
+feature-accounting controls passed, but no exact impossibility theorem or
+finite-OR classification is inferred from the failed numerical searches.
+
+`period_three_prefix_predictor` directly builds the constrained initial-prefix
+tree through depth 42 and compares allowed future subtrees. For six future
+cells, 4,096 valid prefixes of depth 36 have 1,004 distinct future trees.
+Independent full-history controls pass 306 samples. These are finite data;
+they prove neither regularity nor nonregularity of the infinite language.
+They do not suggest a small fixed-state recognizer for the complete
+period-three constraint. No claim about asymptotic minimum black density is
+made from the finite prefix counts.
