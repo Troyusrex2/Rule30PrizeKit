@@ -604,6 +604,14 @@ center. In particular, `tail_011_center` and `tail_101_center` prove the two
 terminal rewrites preserve the complete center trace behind any initial left
 half. The converse is not proved.
 
+[The terminal-growth obstruction](../response-growth/README.md) now rules
+out a general bounded-state argument using just those two forward terminal
+rewrites. Under every driver, an irreducible `100`/`111` high cap persists
+and its state grows by one bit per step. Starting at `111` under the constant
+zero driver even gives a constant observed head with unbounded irreducible
+states. All 45 declarations pass full kernel replay. This does not establish
+rewrite completeness or nonperiodicity of the actual center column.
+
 `q_period_loss_probe.py` is a separate finite experiment on the triangular
 diagonal map: through width eighteen, the head trace detects each finite
 state's full orbit period. This is not an unbounded theorem or a statement

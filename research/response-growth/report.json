@@ -1,0 +1,265 @@
+{
+  "verdict": "pass",
+  "module": "Rule30ResponseGrowthResearch",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "source_sha256": "a656bb88dd5d37bfd12075d28913961221d932609571c24a30276ceb23d10b09",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "dependency_build_seconds": 3.672,
+  "build_seconds": 6.297,
+  "replay_seconds": 9.922,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.Cap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.Q",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.Q_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.TerminalReducible",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.cap_irreducible",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.cap_log2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.constant_output_unbounded_states",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.highThree_log2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.packedRun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun_cap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.packedStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedStep_cap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedStep_drop_head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedStep_or",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedStep_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.run_irreducible",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.run_log2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.seven_cap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.seven_unbounded",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.Q.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ResponseGrowthResearch.packedRun.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun_cap",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.cap_irreducible",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.run_irreducible",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.run_log2",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.seven_unbounded",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedStep_sound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.packedRun_sound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ResponseGrowthResearch.constant_output_unbounded_states",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ResponseGrowthResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 45,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "unbounded_irreducible_growth_proved": true,
+  "constant_output_with_unbounded_irreducible_state_proved": true,
+  "terminal_rewrite_completeness_proved": false,
+  "actual_driver_nonperiodicity_proved": false,
+  "full_problem_solved": false
+}
