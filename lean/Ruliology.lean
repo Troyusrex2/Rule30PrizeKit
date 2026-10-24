@@ -52,13 +52,13 @@ public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
 public import Ruliology.CellularAutomata.Rule30FiniteWhiteRuns
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour
 public import Ruliology.CellularAutomata.Rule30WhiteEnd
-public import Ruliology.CellularAutomata.Rule30ControlledResponseResearch
-public import Ruliology.CellularAutomata.Rule30PeriodicProfileCounterResearch
-public import Ruliology.CellularAutomata.Rule30FeedbackErasureResearch
-public import Ruliology.CellularAutomata.Rule30ClockMaskResearch
-public import Ruliology.CellularAutomata.Rule30FiniteClockCertificateResearch
-public import Ruliology.CellularAutomata.Rule30FiniteClockSixteenResearch
-public import Ruliology.CellularAutomata.Rule30TerminalClockResearch
+public import Ruliology.CellularAutomata.Rule30ControlledResponse
+public import Ruliology.CellularAutomata.Rule30PeriodicProfileCounter
+public import Ruliology.CellularAutomata.Rule30FeedbackErasure
+public import Ruliology.CellularAutomata.Rule30ClockMask
+public import Ruliology.CellularAutomata.Rule30FiniteClockCertificate
+public import Ruliology.CellularAutomata.Rule30FiniteClockSixteen
+public import Ruliology.CellularAutomata.Rule30TerminalClock
 
 /-!
 # Rule 30 Prize: Lean snapshot
