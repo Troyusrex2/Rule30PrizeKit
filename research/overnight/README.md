@@ -130,6 +130,55 @@ The next proof must use an invariant with a justified unbounded step. Neither
 a larger finite sparse budget, a finite gap table, nor an unpreserved spacing
 condition supplies that step.
 
+## A variation/weight route under investigation
+
+Let `variation f n` count changes between consecutive free bits through index
+`n`, and let `weight L N` count black initial cells at depths `1..N`.
+The research-only module `Rule30VariationWeightResearch` defines the **open**
+estimate
+
+```text
+there exist fixed natural constants C,K such that, for every f and n,
+variation f n <= C * weight (Theta f) (2*n+3) + K.
+```
+
+It proves that this estimate would imply `Q01`, and hence exclude eventual
+period two. Finite support would bound all prefix weights and therefore all
+free-bit variation; bounded variation forces eventual constancy, contradicting
+the kit's free-bit nonperiodicity theorem. This does not address every period,
+and **the estimate itself is not proved**.
+
+The strict candidate `C=2,K=0` survived an exact enumeration of all `2^24`
+free prefixes through depth 49, but failed at depth 61: a prefix has 21 changes
+and only 10 black initial cells. The same module now proves
+`strict_factor_two_false` directly against `Theta`, using the packed-cone
+soundness theorem. All **54 generated constants** passed unchanged-checker
+replay in the [working](variation-evidence/catalog/report.json) and
+[pinned](variation-evidence/pinned/report.json) environments. The conditional
+headlines do not establish `Q01` or the missing estimate.
+
+The beam search found larger finite violations for factor two; they do not
+prove that every additive offset fails. A factor-three beam search through
+depth 2049 found no counterexample, which is not a universal proof. Longer SAT
+queries returned unknown at their time limits. These results are candidate
+falsification evidence only.
+
+We also tested local weighted potentials for the anti-diagonal recurrence.
+The basic closed ribbon constraint is that the previous diagonal's black bits
+force transitions in the next one; a stronger upper constraint was included
+as well. Nonnegative local potential searches were infeasible in the tested
+class. A signed finite-width LP produced a spurious zero-cost candidate, whose
+potential becomes negative on an actually reachable depth-12 ribbon. That
+candidate is explicitly rejected in its report. None of these numerical
+optimization results is used as a Lean premise.
+
+The conditional reduction and the exact factor-two refutation are research
+checkpoints, separate from the three unconditional modules in
+[catalog PR 7](https://github.com/WolframInstitute/Rule30PrizeKit/pull/7).
+That PR also includes an evaluated review essay, with all 73 standalone
+declarations replayed by LeanLink and zero saved message cells. It has not
+been submitted to the prize API.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -142,6 +191,8 @@ python research/overnight/verify_spacing.py --project /path/to/pinned-kit --lake
 python research/overnight/verify_spacing.py --lake /path/to/lake
 python research/overnight/verify_gap.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_gap.py --lake /path/to/lake
+python research/overnight/verify_variation.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_variation.py --lake /path/to/lake
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
 python research/overnight/driven_spacing_probe.py --samples 96 --cycles 16384
