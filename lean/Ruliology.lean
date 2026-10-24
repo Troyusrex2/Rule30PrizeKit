@@ -78,6 +78,23 @@ public import Ruliology.CellularAutomata.Rule30ForbiddenSuffix
 public import Ruliology.CellularAutomata.Rule30SixTailReduction
 public import Ruliology.CellularAutomata.Rule30SixTail
 public import Ruliology.CellularAutomata.Rule30SixTailSharpened
+public import Ruliology.CellularAutomata.Rule30WhitePad10111
+public import Ruliology.CellularAutomata.Rule30TraceEdge
+public import Ruliology.CellularAutomata.Rule30TraceMerge
+public import Ruliology.CellularAutomata.Rule30TraceAmbiguity
+public import Ruliology.CellularAutomata.Rule30ColumnSeparation
+public import Ruliology.CellularAutomata.Rule30SpacingRenormalization
+public import Ruliology.CellularAutomata.Rule30PackedReconstruction
+public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexample
+public import Ruliology.CellularAutomata.Rule30DrivenPrefix
+public import Ruliology.CellularAutomata.Rule30ExactReturn
+public import Ruliology.CellularAutomata.Rule30ControlledResponse
+public import Ruliology.CellularAutomata.Rule30PeriodicProfileCounter
+public import Ruliology.CellularAutomata.Rule30FeedbackErasure
+public import Ruliology.CellularAutomata.Rule30ClockMask
+public import Ruliology.CellularAutomata.Rule30FiniteClockCertificate
+public import Ruliology.CellularAutomata.Rule30FiniteClockSixteen
+public import Ruliology.CellularAutomata.Rule30TerminalClock
 
 /-!
 # Rule 30 Prize: Lean snapshot
