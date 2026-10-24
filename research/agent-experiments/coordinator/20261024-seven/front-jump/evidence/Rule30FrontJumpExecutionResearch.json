@@ -1,0 +1,60 @@
+{
+  "module": "Rule30FrontJumpExecutionResearch",
+  "source_sha256": "e4d895b9f7f935e1520f1a1a7dda396124818d62b1b718b2a1395d94df5c9eb9",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "build_seconds": 6.844,
+  "replay_seconds": 9.469,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.run_full",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.run_prefix",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.run_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.run_full",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FrontJumpExecutionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 2,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+}

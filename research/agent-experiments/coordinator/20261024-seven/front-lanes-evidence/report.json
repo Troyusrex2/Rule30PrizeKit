@@ -1,0 +1,760 @@
+{
+  "source_sha256": "c9e57c97f1c01b1a76b8d2e693e95a26cc291e0feb668045299a3112a7b6c4c2",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "build_seconds": 6.859,
+  "replay_seconds": 11.047,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30FrontLanesResearch.BoolState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30FrontLanesResearch.LaneState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.Represents",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.allMask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.allMask_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.bitMask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bitMask_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.bnext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.brun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_lo_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_represents",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.bscan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan_getD",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.config",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.initial_run_correct",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.initial_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqBoolState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqLaneState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.map_bit_scan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.pk_pats",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.project",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.project_next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.project_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.represents_next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.represents_unique",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_chain",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_correct",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_represents",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.scan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.scan_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.word_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.word_represents",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.bits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.lo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30FrontLanesResearch.BoolState.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30FrontLanesResearch.BoolState.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.lo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30FrontLanesResearch.LaneState.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.planes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30FrontLanesResearch.LaneState.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.allMask.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bitMask.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bnext.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.brun.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.bscan.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.config.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.initial.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqBoolState.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqLaneState.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.next.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.project.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.scan.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.scan.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.scan.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.scan.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.word.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.BoolState.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.BoolState.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.BoolState.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.BoolState.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.LaneState.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.LaneState.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.LaneState.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.LaneState.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqBoolState.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontLanesResearch.instDecidableEqLaneState.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.scan_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.map_bit_scan",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bitMask_bit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.project_next",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.project_run",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.bscan_getD",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.represents_next",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_represents",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_represents",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.word_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.word_represents",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.represents_unique",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.brun_lo_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_correct",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.allMask_bit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.pk_pats",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.initial_word",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.initial_run_correct",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_add",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontLanesResearch.run_chain",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FrontLanesResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 155,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false,
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+}

@@ -1,0 +1,117 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "1f457c21480e594f509a45e1dca154fc705d0374b0315f6bf04188ac33b8e394",
+  "build_seconds": 6.328,
+  "replay_seconds": 10.0,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.block_orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.exceptional_residues",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReturnMapResearch.iter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.iter_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.period_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.return_map_cycle_lift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReturnMapResearch.iter.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.iter_lt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.block_orbit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.period_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.exceptional_residues",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReturnMapResearch.return_map_cycle_lift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FrontReturnMapResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 10,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

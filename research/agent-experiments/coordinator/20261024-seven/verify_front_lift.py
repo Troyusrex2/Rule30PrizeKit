@@ -1,13 +1,13 @@
 """Replay the general front-width projection lemmas, without finite certificates."""
 import argparse,hashlib,importlib.util,json,shutil,subprocess
 from core import HERE,BASE,REPO
+from verification_context import add_reference_options,reference,unchanged,identity
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--period',action='store_true');args=parser.parse_args()
-    project=BASE/'current-reference-3eca-20261024';lake=BASE/'toolchain/lean-4.35.0-windows/bin/lake.exe'
+    parser=argparse.ArgumentParser();parser.add_argument('--period',action='store_true');add_reference_options(parser)
+    args=parser.parse_args();project,lake,checker=reference(args)
     pin='3eca23c0a9fa6b153313655e6d51835406c2d06e'
     assert subprocess.check_output(['git','rev-parse','HEAD'],cwd=project,text=True).strip()==pin
-    checker=subprocess.check_output(['git','show','HEAD:Check.lean'],cwd=project)
     assert (project/'Check.lean').read_bytes().replace(b'\r\n',b'\n')==checker
     spec=importlib.util.spec_from_file_location('guard',REPO/'research/normalization-first-meeting/replay.py')
     guard=importlib.util.module_from_spec(spec);spec.loader.exec_module(guard)
@@ -27,6 +27,7 @@ def main():
     assert all(h['ok'] for h in checked['headlines'])
     result={'kit_commit':pin,'checker_unchanged':True,'source_sha256':hashlib.sha256(raw).hexdigest(),
             'build_seconds':build,'replay_seconds':replay,'check':checked,'full_problem_solved':False}
+    assert target.read_bytes()==raw;unchanged(project,checker);result.update(identity(checker))
     (out/'report.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
     print({'status':'pass','constants':checked['replay']['constants'],'headlines':len(heads)},flush=True)
 

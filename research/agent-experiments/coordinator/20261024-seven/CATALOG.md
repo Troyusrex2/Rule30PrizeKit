@@ -29,12 +29,14 @@ that arbitrary finite tails have successful certificates:
   initial window and phase zero or one. These theorems prove return only;
   they do not prove the white-witness condition.
 
-The new `jump_table.py` pilot simulates all 4096 upper 12-bit inputs over a
+The initial `jump_table.py` pilot simulates all 4096 upper 12-bit inputs over a
 fixed width-34 lower cycle together. Its return map has a 32-state zero orbit;
 all 32 previously exceptional lifts pass the width-46 test. Sixty-four scalar
-controls agree. This may replace the two-million-step proof with a smaller
-parallel return-map certificate, but its parallel semantics have **not yet
-been proved in Lean**. The sparse low-degree appearance also disappears in
+controls agree. The subsequent [compressed proof](COMPRESSED.md) now proves
+the parallel semantics and checks all execution endpoints, table properties,
+and the completed cycle by full kernel replay. It proves the same family
+without importing the earlier two-million-step complete-cycle certificate.
+The sparse low-degree appearance also disappears in
 higher output bits: the top tested correction has degree nine and 709 terms.
 
 The three-state Mealy model in `mealy_probe.py` matches the integer map in

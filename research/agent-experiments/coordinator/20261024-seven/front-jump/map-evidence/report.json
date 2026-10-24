@@ -1,0 +1,151 @@
+{
+  "source_sha256": "5314b2fd049ab5ef10e103d436a8248310f00fdf6c8ca714a0e9e78bb1b5cfb7",
+  "build_seconds": 6.313,
+  "replay_seconds": 10.016,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.endpoint_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontJumpResearch.jrun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.jrun_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontJumpResearch.jump",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.jump_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontJumpResearch.prefixWord",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.rare_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.rare_table_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.return_cycle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontJumpResearch.jrun.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.jump.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.jump_lt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.jrun_lt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.endpoint_word",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.return_cycle",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.rare_table",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontJumpResearch.rare_table_sound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FrontJumpMapResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 17,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false,
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+}
