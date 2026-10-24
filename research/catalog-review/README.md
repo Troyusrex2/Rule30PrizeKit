@@ -233,6 +233,51 @@ script pins the public source hash and guards every compiler/replay process:
 python research/catalog-review/audit_semigroup_submission.py --project <pinned-reference-checkout> --lake <lake> --output <audit-directory>
 ```
 
+## Fixed-edge deadline submission audit
+
+[Submission R30-20261024-991a71](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-991a71),
+by Gareth Herbert, Claude (Anthropic), and GPT (OpenAI), is marked Lean Verified.
+We independently replayed all **583 declarations** of its exact published
+50397-byte source. The declarations were partitioned into eleven modules;
+their original bodies and namespaces are unchanged, and concatenating the
+original body segments is byte-identical to the published source body. All
+eleven modules and twenty selected headlines passed the unchanged checker
+at `2f63afda261888e04ec57237290e723190914a1d`, with standard axioms only.
+See [the full report](edge-pairs-991a71-report.json).
+
+The result covers arbitrary right tails, including infinite tails, for three
+fixed pairs of leftmost black-cell positions:
+
+| Left edges | Some distinguishing time | Sufficient number of observations |
+|---|---|---:|
+| `-2`, `-1` | `t <= 8` | 9 |
+| `-4`, `-3` | `t <= 13` | 14 |
+| `-3`, `-2` | `t <= 14` | 15 |
+
+Each deadline is attained: an exhibited pair agrees at every earlier time
+and first differs at the displayed time. Independent physical truth-table
+controls reproduce all three witnesses and 48 finite extensions beyond the
+causal window. The unrestricted-tail statement comes from the kernel-checked
+locality and lane-soundness proofs, rather than those finite controls. See
+[the control report](edge-pairs-991a71-controls.json).
+
+The first monolithic local build passed, but its kernel replay hit the standard
+resource guard. That attempt is not counted as a pass. Splitting the unchanged
+declarations kept every later build and replay within the same guard; no checker
+or memory limit was weakened. [The attempt record](edge-pairs-991a71-attempts.json)
+distinguishes the stopped attempt from the successful complete split audit.
+This establishes the external authors' three cases, with no all-edge bound,
+general EdgeObservable proof, or prize claim by this audit.
+
+```text
+python research/catalog-review/audit_edge_pairs_submission.py --project <pinned-reference-checkout> --lake <lake> --output <audit-directory>
+python research/catalog-review/control_edge_pairs_submission.py
+```
+
+The default audit checks every split module. `--whole-module` tries the original
+single module with the same guards. The source download is pinned by SHA256,
+and different existing generated sources are protected from replacement.
+
 ## Reproduce
 
 In a checkout of the corresponding revised PR head:
