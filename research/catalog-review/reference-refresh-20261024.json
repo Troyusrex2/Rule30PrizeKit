@@ -1,0 +1,63 @@
+{
+  "environment_url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/api/environment",
+  "submissions_url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/submissions.json",
+  "submissions_updated": "2026-10-24T17:35:37Z",
+  "submission_count": 34,
+  "last_submission": {
+    "id": "R30-20261024-a129c3",
+    "title": "A death-time lower bound at width 74, with a witness from a complete GPU census",
+    "authors": "Gareth Herbert; Claude (Anthropic); GPT (OpenAI)",
+    "status": "Lean Verified",
+    "tags": []
+  },
+  "previous_reference": "2f63afda261888e04ec57237290e723190914a1d",
+  "announced_environment": {
+    "kit": {
+      "repository": "https://github.com/WolframInstitute/Rule30PrizeKit",
+      "commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+      "url": "https://github.com/WolframInstitute/Rule30PrizeKit/tree/3eca23c0a9fa6b153313655e6d51835406c2d06e",
+      "date": "2026-10-24T21:17:20+05:00"
+    },
+    "lean": "4.35.0",
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+    "leanlink": "1.2.1",
+    "wolfram": "15.0",
+    "image": "rule30-verifier:7",
+    "built": "2026-10-24",
+    "lastCheck": {
+      "checkedAt": "2026-10-24T17:22:22Z",
+      "kitCommit": "2f63afda261888e04ec57237290e723190914a1d",
+      "lean": "4.35.0"
+    }
+  },
+  "unchanged_files": [
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+      "byte_identical_to_previous_reference": true
+    },
+    {
+      "path": "lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "byte_identical_to_previous_reference": true
+    },
+    {
+      "path": "lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "byte_identical_to_previous_reference": true
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "byte_identical_to_previous_reference": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "22995a6d13b3889fa775fd3c7c6f60cbcc39391bca503e8edc4ac1ee1b9ab1a2",
+      "byte_identical_to_previous_reference": true
+    }
+  ],
+  "previous_reports_rewritten": false,
+  "full_problem_solved": false
+}

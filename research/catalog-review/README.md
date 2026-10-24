@@ -278,6 +278,36 @@ The default audit checks every split module. `--whole-module` tries the original
 single module with the same guards. The source download is pinned by SHA256,
 and different existing generated sources are protected from replacement.
 
+## Updated verifier and the width-74 submission
+
+At the 2026-10-24 17:35 UTC refresh, the public verifier environment announced
+kit commit `3eca23c0a9fa6b153313655e6d51835406c2d06e` (image 7), and the public
+list contained 34 submissions. Its `lastCheck` still referred to an earlier
+check at `2f63afd`; those fields have different meanings. The checker, the
+official `Problem1` source, the cell evolution source, the toolchain pin and
+the dependency manifest are byte-identical across the two commits. See
+[the reference refresh](reference-refresh-20261024.json). Historical reports
+have not been relabeled or rewritten.
+
+New submission
+[R30-20261024-a129c3](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-a129c3),
+by Gareth Herbert, Claude (Anthropic), and GPT (OpenAI), exhibits a width-74
+zero-boundary start that is black at depth one at every even time below 134
+and white at 134. We independently compiled and replayed all **16 declarations**
+of its exact published source at the updated `3eca23c` commit. Both selected
+headlines passed the unchanged checker with standard axioms only. See
+[the report](width74-a129c3-report.json).
+
+This checks the exhibited lower bound and death time. It does not reproduce
+the external authors' GPU census, establish maximality or the maximizer count,
+or supply any unbounded period-two conclusion. The source is downloaded
+unchanged and pinned by SHA256 in
+[the reproducer](audit_width74_submission.py).
+
+```text
+python research/catalog-review/audit_width74_submission.py --project <3eca23c-reference-checkout> --lake <lake> --output <audit-directory>
+```
+
 ## Reproduce
 
 In a checkout of the corresponding revised PR head:

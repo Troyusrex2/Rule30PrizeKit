@@ -222,7 +222,53 @@ solver model is independently checked on all 4032 pairs in a small domain
 using physical truth-table evolution: 13 observations admit a collision there,
 while 14 do not. No solver UNSAT result is used as a Lean premise.
 
-## Reproduce
+## Finite ancestry: a bound and a failed short trace horizon
+
+The separate [ancestry module](Rule30AncestryResearch.lean) proves, for every
+nonzero natural row `a` and every time `t`,
+
+```text
+log2(Phi^t(a)) = log2(a) + 2*t.
+```
+
+Consequently any positive finite ancestor `b` satisfying `Phi^t(b)=a` has
+`2*t <= log2(a)`. This is an elementary support calculation. It bounds the
+possible finite prehistory; it does not recover that prehistory from a trace.
+
+The same module refutes the attempted `2*n+2` horizon for recovering even
+**finite-predecessor membership**. The rows `49` and `42` at center index `2`
+agree at times `0` through `16`, then differ at time `17`. Both are six-bit
+rows with highest black bit `5`. Row `49` has the finite predecessor `15`;
+row `42` has no natural-number predecessor at all. That nonexistence is
+proved for every natural input: the support theorem bounds any prospective
+parent below `16`, and the remaining finite check is kernel checked.
+
+Here `2*n+2=14`, so this is a counterexample to the short ancestry horizon.
+The equal highest bits mean it is **not** a counterexample to the edge-only
+candidate above. It also does not refute ancestry recovery from an entire
+infinite trace. That proposed direction still needs an unbounded argument;
+the finite experiments have not supplied one.
+
+[The catalog bridge](Rule30AncestryCatalogBridge.lean) proves that the
+lightweight module's update, iterates and observation predicate agree with
+the adopted `Rule30StripeMeeting` constants, and states the counterexample
+with those catalog constants. All **52 declarations and 12 selected
+headlines** across the two modules passed full kernel replay at the updated
+verifier commit `3eca23c0a9fa6b153313655e6d51835406c2d06e`, with the unchanged
+checker and standard axioms only. See [the report](evidence/ancestry-3eca/report.json).
+The earlier five-module reports remain pinned to their original commit.
+
+Independent physical-coordinate Rule 30 truth-table controls compare 828
+cells, reproduce the first distinguishing time, and check 64 one-step parent
+examples. Their finite checks do not establish the unbounded no-parent
+statement; the Lean support argument does that. See [the controls](ancestry-controls.json).
+
+```text
+python research/trace-completeness/verify_ancestry.py --project /path/to/3eca23c-kit --lake /path/to/lake
+python research/trace-completeness/control_ancestry.py
+```
+
+## Reproduce the earlier packages
 
 Prepare the reference kit and first run the twelve-module
 [`normalization-first-meeting/replay.py`](../normalization-first-meeting/replay.py)
