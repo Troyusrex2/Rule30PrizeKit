@@ -1,4 +1,5 @@
 import Ruliology.CellularAutomata.Rule30Prize
+import Ruliology.CellularAutomata.Rule30Problem3
 import Rule30Equivalents
 
 /-!
@@ -11,7 +12,9 @@ Mathlib `56a005855e` (its `v4.35.0` tag), pinned by `lean-toolchain` and `lake-m
   `lean/Ruliology/CellularAutomata/Rule30Prize.lean`, with the rule-30 pattern `cell` from
   `Rule30Jen.lean`. They match `Rule30.centerColumn_not_eventually_periodic` and
   `Rule30.centerColumn_frequency_half` in google-deepmind/formal-conjectures. Problem 3 needs a model
-  of computation and has no official Lean statement.
+  of computation: `Ruliology.CellularAutomata.Rule30Problem3` states it on a one-tape Turing machine,
+  as `Problem3` (the prize's formal statement), `Problem3Verbal` and `Problem3Robust`, the version
+  that does not depend on the model.
 * **Equivalent forms.** `Rule30Equivalents` proves 120 theorems `problem1_iff_*`, for example
   `Rule30Equivalents.BinaryIrrational.problem1_iff_irrational_binary`: Problem 1 holds iff the binary
   number `0.c(0)c(1)c(2)…` is irrational. A proof of any of these right-hand sides proves Problem 1.

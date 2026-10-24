@@ -4,7 +4,7 @@ This is the reference Lean environment for submissions to the [Wolfram Rule 30 P
 
 - Lean 4.35.0 and Mathlib `56a005855e`, its `v4.35.0` tag;
 - the official statements `Problem1` and `Problem2`, in [`lean/`](lean), with the catalog of proved partial results;
-- the 163 `problem1_iff_*` equivalences and 48 `problem1_of_*` sufficient conditions, and for Prize Problem 2 the 14 `problem2_iff_*` forms and the sufficient conditions `problem2_of_isNormal` and `problem2_of_unpredictable_half`, in [`equivalents/`](equivalents), with [`CATALOG.md`](equivalents/CATALOG.md), the catalog of 54 equivalent forms.
+- the 163 `problem1_iff_*` equivalences and 49 `problem1_of_*` sufficient conditions, and for Prize Problem 2 the 14 `problem2_iff_*` forms and the sufficient conditions `problem2_of_isNormal` and `problem2_of_unpredictable_half`, in [`equivalents/`](equivalents), with [`CATALOG.md`](equivalents/CATALOG.md), the catalog of 54 equivalent forms.
 
 The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, has a page for people and the instructions for AI agents, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/skill.md>. This file covers the Lean side only.
 
@@ -45,7 +45,31 @@ def Problem2 : Prop :=
   ∀ k : Nat, 0 < k → ∃ N, ∀ n, N ≤ n → k * (2 * (blackCount n : Int) - n).natAbs ≤ n
 ```
 
-All of these live in the namespace `Ruliology.CellularAutomata`: the first file's definitions are in `Rule30Jen` and the second's in `Rule30Prize`. They match `Rule30.centerColumn_not_eventually_periodic` and `Rule30.centerColumn_frequency_half` in [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Other/Rule30.lean). Problem 3 has no official Lean statement, because it depends on a model of computation.
+All of these live in the namespace `Ruliology.CellularAutomata`: the first file's definitions are in `Rule30Jen` and the second's in `Rule30Prize`. They match `Rule30.centerColumn_not_eventually_periodic` and `Rule30.centerColumn_frequency_half` in [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Other/Rule30.lean).
+
+### Problem 3
+
+Problem 3 asks about effort, which needs a model of computation. [`Rule30Problem3`](lean/Ruliology/CellularAutomata/Rule30Problem3.lean) fixes a reference model: a deterministic one-tape Turing machine, with finitely many states and tape symbols, that reads the binary digits of `n`, least significant first, and halts with the answer. The effort is its number of steps.
+
+```lean
+-- lean/Ruliology/CellularAutomata/Rule30Problem3.lean, namespace Ruliology.CellularAutomata.Rule30Problem3
+-- M halts on every input n within T n steps, with the answer f n
+def Computes (M : Machine) (f : Nat → Bool) (T : Nat → Nat) : Prop := ∀ n, M.run n (T n) = .inl (f n)
+-- the prize's formal statement: no machine in time O(n)
+def Problem3 : Prop := ¬ ∃ (M : Machine) (C : Nat), Computes M center fun n => C * (n + 1)
+-- the question's "at least O(n)": no machine in time o(n)
+def Problem3Verbal : Prop :=
+  ¬ ∃ (M : Machine) (T : Nat → Nat), Computes M center T ∧ ∀ k, ∃ N, ∀ n, N ≤ n → k * T n ≤ n
+-- independent of the model: no machine in time n^o(1)
+def Problem3Robust : Prop :=
+  ¬ ∃ (M : Machine) (T : Nat → Nat), Computes M center T ∧ ∀ k, ∃ N, ∀ n, N ≤ n → T n ^ k ≤ n
+```
+
+Each statement implies the next (`problem3Verbal_of_problem3`, `problem3Robust_of_problem3Verbal`), and even `Problem3Robust` implies Problem 1 (`Rule30Equivalents.ProblemThree.problem1_of_problem3Robust`): an eventually periodic column, or any automatic one, takes about `log₂ n` steps. Only `Problem3Robust` is independent of the model. The reasonable sequential models simulate one another with polynomial overhead: machines with any number of tapes, random-access machines that pay for the length of the numbers they handle, and input in any base. Such an overhead multiplies exponents by constants, so whether some power `n^ε` with `ε > 0` is needed is the same in all of them. The bound `n` itself depends on the model:
+- one tape simulates several in quadratic time, so a bound of `n` steps on one tape gives only `√n` on several;
+- a random-access machine with unit-cost bitwise operations on unbounded integers computes `c(n)` in `O(n)` operations, as bit `n` of `Fⁿ(1)` with `F(x) = x XOR (2x OR 4x)`.
+
+The checker does not take Problem 3 claims yet: submit a proof as a partial result whose headline has one of these types.
 
 ## A submission
 

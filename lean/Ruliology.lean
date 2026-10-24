@@ -56,6 +56,7 @@ public import Ruliology.CellularAutomata.Rule30TraceEdge
 public import Ruliology.CellularAutomata.Rule30TraceMerge
 public import Ruliology.CellularAutomata.Rule30TraceAmbiguity
 public import Ruliology.CellularAutomata.Rule30ColumnSeparation
+public import Ruliology.CellularAutomata.Rule30Problem3
 
 /-!
 # Rule 30 Prize: Lean snapshot
