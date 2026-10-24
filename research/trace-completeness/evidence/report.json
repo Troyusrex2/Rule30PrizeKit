@@ -1,0 +1,214 @@
+{
+  "verdict": "pass",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_unchanged": true,
+  "modules": [
+    {
+      "module": "Rule30PairedForcingResearch",
+      "source_sha256": "1f898fdf08fd83c26eeb91ab76770a535827c42097c69fdbc984be22d827d8b8",
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.39,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.before_xor",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30NormalizationMachineResearch.crossDefect",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.local_center_gate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.local_polarization",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.paired_difference_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.same_center_gate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.crossDefect.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.local_polarization",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.paired_difference_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.local_center_gate",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.same_center_gate",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30PairedForcingResearch",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 9,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "Rule30TraceHorizonCounterexampleResearch",
+      "source_sha256": "f5e5cf46fe4802521bbf6b65e422a7a05c76b8ac706309a82b2d3b5a42180173",
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.875,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.linear_full_recovery_counterexample",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_check",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_difference",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_no_early_stripe",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.phiRows_one_start",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_prefix",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_difference",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.pair58_no_early_stripe",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.linear_full_recovery_counterexample",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30TraceHorizonCounterexampleResearch",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 8,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ],
+  "edge_observability_proved": false,
+  "trace_completeness_proved": false,
+  "full_problem_solved": false
+}
