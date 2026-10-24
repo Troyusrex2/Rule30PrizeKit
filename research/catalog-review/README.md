@@ -7,6 +7,24 @@ with replies posted on each conversation. Earlier commit-head audits missed
 older review comments; this pass reads the conversations as well. No further
 PR was opened during the cleanup.
 
+## Upstream adoption
+
+The official kit adopted the stripe contribution in
+[`ed1608e`](https://github.com/WolframInstitute/Rule30PrizeKit/commit/ed1608ea42fbf73d2670d7b4aa429e0851d3c8ae)
+and the white-tail erosion contribution in
+[`b26ce59`](https://github.com/WolframInstitute/Rule30PrizeKit/commit/b26ce59a3a1275d676276750081963ee1c3a76bc).
+The maintainer closed PRs 13 and 11 through those adopting commits. Both stripe
+files and the white-tail theorem file are byte-identical to the independently
+replayed contribution heads. See [the source comparisons](upstream-adoption-20261024.json),
+checked against official main `3eca23c0a9fa6b153313655e6d51835406c2d06e`.
+These partial results are available to other researchers in the official catalog.
+
+The prize verifier still named `2f63afda261888e04ec57237290e723190914a1d`
+when checked at this checkpoint. The new research proof and reviewed notebooks
+remain validated against that pinned environment; the adoption record does not
+claim a new prize API submission. The sections below retain their verification
+records for the named immutable commits.
+
 ## Revised catalog heads
 
 All four branches include official main `cc6867c8fe269c04a60db9fce1720ce2dbb563fb`.
