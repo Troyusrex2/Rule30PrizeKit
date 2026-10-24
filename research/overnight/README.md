@@ -231,6 +231,42 @@ All nine generated declarations passed the unchanged checker in both the
 short consequences of the existing monotonicity theorem are research helpers;
 no claim of literature priority is made.
 
+## Certified empty-right gate spacings
+
+For `u empty s` in the kit's driven right half, define
+`G(r)=u empty (146+r)`. The three new modules `Rule30DrivenPrefixResearch`,
+`Rule30Certificates.DrivenEmptyWall` and `Rule30EmptyGateSpacingResearch`
+prove at every future cycle that black gate observations have exact successive
+spacings three or five. No six-cycle gate window is entirely white.
+
+The packed update is proved equal to `Rule30Ether.drv`, with exact prefix
+dependence. A 16-cell wall of 13,937 states contains the actual empty-right
+orbit at white cycle 146 (physical time 293, prefix 49415). All 262,144
+eighteen-bit cases check wall closure and the required gate windows, including
+every value of the two unseen right cells. An induction covers all later
+times. The generator is untrusted; its emitted certificate uses ordinary
+`decide`, and every proof declaration is replayed by the unchanged checker.
+
+All **351 generated declarations** passed full replay in both the
+[working](driven-wall-evidence/catalog/report.json) and
+[pinned](driven-wall-evidence/pinned/report.json) environments. The independent
+[Wolfram check](wolfram-driven-wall-check.json) confirms all 55,748 wall
+transitions, observations, 256 independent vector controls, and the entry time.
+The broader `right_prefix_safety.py` search initially found a larger 18,012-state
+region forbidding distance two; the emitted wall also forbids distance four,
+which yields the sharper 13,937-state certificate.
+
+The eight-column translation applies once to this actual driven gate, but its
+transform is provably not spaced. **This does not prove `CQ01Empty`.** An
+infinite gate and an infinite reconstructed initial left row are different
+assertions; the latter remains open. No prize problem is claimed.
+
+The periodic-free-bit cycle probe is a separate diagnostic. It tested all
+words of periods one through twelve with a 20,000-state cap per word; some
+period-ten and period-twelve cases reached that cap and remain unknown.
+The completed cycles did not refute the proposed variation estimate. Those
+ordinary integer calculations are not used as Lean premises.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -248,6 +284,8 @@ python research/overnight/verify_variation.py --project /path/to/pinned-kit --la
 python research/overnight/verify_variation.py --lake /path/to/lake
 python research/overnight/verify_eventual_relations.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_eventual_relations.py --lake /path/to/lake
+python research/overnight/verify_driven_wall.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_driven_wall.py --lake /path/to/lake
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
 python research/overnight/driven_spacing_probe.py --samples 96 --cycles 16384
