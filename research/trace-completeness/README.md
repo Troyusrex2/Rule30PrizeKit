@@ -76,6 +76,10 @@ observation, `inversePrefix_right` preserves the supplied right prefix, and
 `inversePrefix_unique` proves uniqueness. `finite_trace_code_injective` gives
 the corresponding injectivity statement.
 
+This is a constructive finite-prefix form of left permutivity, the property
+behind the kit's existing `Rule30Realization` construction. No historical
+priority or new prize result is claimed for that underlying principle.
+
 The right prefix is an **input**, not something recovered by the theorem.
 Arbitrary finite target words are realized by finite prefixes, but a compatible
 sequence of such prefixes need not have a finite nonzero support. The theorem

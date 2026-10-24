@@ -175,6 +175,46 @@ checkout, then add `--trace-barrier` to the audit command. This checks the
 exact prerequisite source hashes before building and fully replaying the
 counterexample.
 
+## Semigroup and coupled-reduction submission audit
+
+A fresh public check found [submission R30-20261024-9d92a2](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-9d92a2),
+by Emerson Villafuerte and Antigravity (Google DeepMind), marked **Lean Verified**.
+Its exact 145345-byte source was downloaded and independently compiled and
+fully replayed against the unchanged checker at `2f63afda261888e04ec57237290e723190914a1d`.
+All **653 declarations and 25 selected headlines** passed, with standard
+axioms only. The additional five selected headlines inspect the general
+difference front, exact-death lemma, sideways-support implication, and the two
+absorption-to-coupling bridges. There are no source adaptations. See
+[the report and exact source hash](semigroup-9d92a2-report.json).
+
+The contribution supplies uniform semigroup-saturated word exclusions,
+unconditional empty-right-half coupled exclusions for the named period-three
+and period-four drivers, and useful interfaces between trap absorption and
+coupled exclusion. These are the external authors' results, not new claims
+by this audit.
+
+The scope matters for the remaining global trace question:
+
+- `evol_diff_front` assumes two initial rows agree strictly to the right of
+  their initial rightmost differing cell. It propagates that difference
+  rightward at speed one. The unknown right-side differences in our general
+  edge-recovery problem do not satisfy an assumed agreement near the center.
+- `not_coupled_of_right_masked_periodic` requires eventual periodicity of
+  driven column one at the white steps of the periodic boundary driver.
+  This condition is not proved for every finite initial right half.
+- `CQ_of_absorption` and `CQ_of_absorptionT` still assume the corresponding
+  global absorption hypotheses. Empty-right-half conclusions do not establish
+  the conclusions for arbitrary finite right halves. The separately proved
+  white-tail erosion property also does not establish trap absorption.
+
+None of these results completes EdgeObservable or Problem 1, and none has
+been silently added as a premise to our trace-completeness proofs. The audit
+script pins the public source hash and guards every compiler/replay process:
+
+```text
+python research/catalog-review/audit_semigroup_submission.py --project <pinned-reference-checkout> --lake <lake> --output <audit-directory>
+```
+
 ## Reproduce
 
 In a checkout of the corresponding revised PR head:
