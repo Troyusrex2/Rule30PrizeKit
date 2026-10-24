@@ -10,7 +10,8 @@ The public upstream pull requests were checked at these exact heads:
 
 | Contribution | Source head | Independent check |
 |---|---|---|
-| [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4): `0^q10111`, every `q â‰¥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
+| [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4), original revision: `0^q10111`, every `q ≥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
+| PR 4, reviewed revision: general `0^q10111` theorem only | `993cb1b61164a1833788881128437ee9fb943627` | All 132 declarations and the directly stated headline passed full pinned-checker replay. |
 | [AIOvernight, PR 5](https://github.com/WolframInstitute/Rule30PrizeKit/pull/5): 56 even black observations force 17 initial black cells | `8f6a97973c59b5a45ed676794cbcd3adb467e96a` | Independent full replay passed: 1,236 data declarations and 346 public declarations. No official private status inferred. |
 
 The first result is an unbounded word-family exclusion. The second is a finite
@@ -24,6 +25,14 @@ every declaration replay, and the unchanged kit commit
 removed to match that reference kit. These are independent local kernel checks;
 we did not access another submitter's private prize status or infer official
 verification from a PR description.
+
+The fork was checked again at 03:29 UTC. The reviewed PR 4 revision, pushed
+at 03:17 UTC, responds to the maintainer's packaging requests and removes the
+87 individual words. It supplies the same general family theorem, not a new
+unbounded finite-support result. The [new exact-revision audit](reviewed-whitepad-evidence/report.json)
+records its source hashes and all 132 declaration checks. The remote pull
+reference was fetched directly before checking it; the earlier API listing
+still displayed its previous head.
 
 The sparse proof was also compiled and replayed under diagnostic module names
 without native C generation: [full diagnostic record](contribution-audit/sparse-noC-verification.json).

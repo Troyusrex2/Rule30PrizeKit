@@ -1,0 +1,429 @@
+{
+  "verdict": "pass",
+  "revision": "993cb1b61164a1833788881128437ee9fb943627",
+  "module": "Ruliology.CellularAutomata.Rule30WhitePad10111",
+  "original_source_sha256": "e791e32f7be45125a9e9ef0cd78ea95c78abed631a6b08bd4fa0148ae238ef0d",
+  "reference_source_sha256": "0f9ff1c82b121bb3ed6148aa9a300bafaac75170a66dfbbc630788d65b3367dc",
+  "checker_modified": false,
+  "full_problem_claim": false,
+  "reference_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "adaptation": "module/export wrappers only; proof bodies unchanged",
+  "build_seconds": 7.7810000000026776,
+  "check_seconds": 11.890999999995984,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.A0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.A1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.A2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.A3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.Sub",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.U0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.U1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.U2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.U3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.apply_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.capture",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.closed0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.closed1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.closed2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.closed3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.const_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.driver",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.driver_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.entry0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.entry1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.entry2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.entry3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.exit0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.exit1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.exit2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.exit3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.full_A0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.get_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.get_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.image_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.invariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.mac",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.mac_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.mac_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.masked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.no_word_of_invariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.not_eventually_zeros_10111",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.observed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.oddMask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.odd_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.stage0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.stage1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.stage2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.stage3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.sub_of_and",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.sub_refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.sub_trans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.tail_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.take_tail_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.take_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.three_blocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.white_first",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.white_long",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.white_odd_closed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.white_positive",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.white_start",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.word_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp_closed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp_comm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.applyWord.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.applyWord.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.applyWord.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.iterW.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.iterW.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30StripCertificates.iterW.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.driver.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.masked.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.tail.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.wp.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhitePad10111.not_eventually_zeros_10111",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30WhitePad10111",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 132,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
