@@ -1,0 +1,2267 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[    122820,       2258]
+NotebookOptionsPosition[    117801,       2154]
+NotebookOutlinePosition[    118143,       2169]
+CellTagsIndexPosition[    118100,       2166]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Period-three ether erosion with a white right tail", "Title",
+ CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
+
+Cell["Troy Lowry; OpenAI Codex \[Bullet] 2026-10-24", "Author",
+ CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
+
+Cell["\<\
+For every Rule 30 evolution of the right half whose boundary follows the \
+period-three ether from time T, whiteness beyond W at T forces every prefix \
+1..k to depart from the matching ether by T + 3 max(W + 12 - k, 0) + 6, for \
+every k >= 1 (Rule30Submission.white_tail_erosion). Column one departs \
+arbitrarily late (white_tail_often_departs). Spatial width, phase, transient \
+and initial word are arbitrary. The earlier erosion theorem of Luis Perez \
+Morales and Claude treats finite perturbations of the ether, which have a \
+rightmost defect. A white tail instead has infinitely many ether defects. The \
+new argument replaces a rightmost defect by a defect witness bounded by an \
+edge of speed one (erosion_bounded). A consecutive run of the earlier proof's \
+bad front state advances by at least eight per step, so it is finite; its \
+unchanged good-state potential then forces erosion. Locality and one spatial \
+period of the ether supply the witness. This is an extension of a partial \
+result. No eventual center period is excluded, no optimal deadline is \
+claimed, and arbitrary infinite right sides remain open.\
+\>", "Abstract",
+ CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
+
+Cell["The result and its scope", "Section",
+ CellID->1535504786,ExpressionUUID->"75d93363-5da6-51a4-23e6-ab4d5453238e"],
+
+Cell["\<\
+Let F(t,p) be a Rule 30 evolution for columns p >= 1. Column zero is driven \
+by the period-three ether E(j,t), at any attachment j0 and phase s, from time \
+T onward. Suppose F(T,p)=0 for every p>W. For every k>=1 there is a time t \
+and a column p such that\
+\>", "Text",
+ CellID->1208482393,ExpressionUUID->"25a568a6-87a2-527f-535a-810032572145"],
+
+Cell["\<\
+    T <= t <= T + 3 max(W + 12 - k, 0) + 6,     1 <= p <= k, and F(t,p) != \
+E(j0+p,t+s).\
+\>", "Text",
+ CellID->28909615,ExpressionUUID->"00d7f70d-8d0e-ae34-30ec-ef5724b8f51e"],
+
+Cell[TextData[{
+ "The prefix need not match initially: if it already differs, t=T works. \
+Restarting the argument at later times shows that column one departs from its \
+matching ether profile arbitrarily late. The two headline theorems are ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"Rule30Submission", ".", "white_tail"}], "_erosion"}]], 
+  "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "2f3e8453-9762-68ea-56c5-1e1d22173a30"],
+ " and ",
+ Cell[BoxData[
+  RowBox[{"white_tail", "_often", "_departs"}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "5902d484-617f-9570-0f31-cdee100bfc5a"],
+ "."
+}], "Text",
+ CellID->193832008,ExpressionUUID->"56e0e12c-de7d-6135-7e9f-f889db08301f"],
+
+Cell["\<\
+This does not prove or disprove a Rule 30 Prize problem. In particular, \
+departing from one matching ether profile does not rule out other periodic \
+profiles. The eventual-period-three center question remains open.\
+\>", "Text",
+ CellID->684317082,ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{
+   RowBox[{"CellularAutomaton", "[", 
+    RowBox[{"30", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"48", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "48"}], ",", "48"}], "}"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"Frame", "->", "True"}], ",", "\n", "  ", 
+   RowBox[{"PlotLabel", "->", "\"\<Rule 30 from a single black cell\>\""}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:= ",
+ CellID->24617741,ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJy1VVF2wyAMs3eTHWFX2Q3WC+z+f1uDLYkEAqVJX9rSBCTLst3Px+/348PM
+vv7fP/Z8uf9fXhbbZ/nKRVk+f/l257kuvywubNoexwaLE9sqaMpD7EluK+Rk
+AGQ+KYcVD8EZgnIgWYB4hUAGhyQRTbFIAYWnhtifcRAhowFESoJoikUKVPip
+D55JQL5EkuUOS91MgQo/9QHpdqHmSSMegoSFytD3wXke+pExQiP1mW33mqHv
+A89Tf1wCLUHywVHDWT8odWZMoLMaPFkODIN+YI40Y2qxu1C2GAb9wNvMmECj
+JVrxD31wzZGpVtR+5rYd/9AH+fBaaxYai6qDP+6Hegqh5dhih/p/yQf2tNgZ
+ijhNT+If+oCuZfuGojT+JP97De1+8BwIucCIw/kB/qgf3HcLw3zt1n9PQ8sH
+k8TAlNQ0zP9eQ8MHYZWSYWFN4Z/5oKzSWiyseYa2DxUrK+k4/2c17H2oWJ2V
+NK7/noa9DwRkJUHXqwwNH2RCsKTK/hfxez7IhEDmZuu/p0F9MKXDX89K/KpB
+fZAJgRG9Fr9qUB/QEezgxfhVg45Oju0Mfx2/5QPHdhC/Eb9q0AmhwO/Frxp0
+Qijwu/hHH7LX5uf/BEPlQ/bBev03GCofoOeS+INBfchsXRR/MKgP6cRl+Hsf
+Vub/BEOFfG38wVAhX41f+XBx/oUhfbgh/mDAqL7npaP6Noab8i8MN8ZfGO7F
+X4j/D9ReD8k=
+   "], {{0, 0}, {97, 49}}, {0, 1}],
+  Frame->True,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotLabel->FormBox[
+   "\"Rule 30 from a single black cell\"", TraditionalForm]]], "Output",
+ CellLabel->"Out[1]= ",
+ CellID->1538319232,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"]
+}, Open  ]],
+
+Cell["What is new, and what is reused", "Section",
+ CellID->1392207227,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+
+Cell["\<\
+Luis Perez Morales and Claude (Fable 5.1) proved that every finite \
+perturbation of the period-three ether erodes into an initially matching \
+prefix, and that there is no finite ether wall of any width (submission \
+R30-20261024-1fc962, kit PR #10). Their proof follows the first defect. Of \
+its 24 local states, 23 have a decreasing potential. A run of the remaining \
+bad state advances by at least eight columns per step, whereas the rightmost \
+defect moves by one.\
+\>", "Text",
+ CellID->705466992,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+
+Cell[TextData[{
+ "A white tail is an infinite perturbation of the ether, with no rightmost \
+defect. The new ",
+ Cell[BoxData["erosion_bounded"], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+ " needs only a defect witness at a position at most R+(t-T) for every t>=T. \
+The first defect cannot exceed that witness. The earlier bad-state and \
+potential arguments then apply. A white tail supplies R=W+12: its support \
+grows at most one cell per step, and among the next twelve ether cells there \
+is a black cell. The bound twelve is convenient, not claimed optimal. This \
+changes the permitted right sides, with no finite width or temporal-clock \
+limit."
+}], "Text",
+ CellID->1350516518,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
+
+Cell["\<\
+PR #11 contains the new catalog module and explicitly depends on #10. The \
+source below carries both proofs because #10 is not installed in the current \
+reference kit. The earlier proof, its certificate and its potential remain \
+credited to their original authors. No priority claim is made for those \
+results.\
+\>", "Text",
+ CellID->907546795,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
+
+Cell["An explicit driven evolution", "Section",
+ CellID->814772321,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
+
+Cell["\<\
+The boundary here is imposed externally. The image shows the difference from \
+the matching ether for a finite right word; the initially matching prefix has \
+length fourteen, and first departs at time twenty-four. This is one \
+illustration, not the proof of the unbounded quantifiers.\
+\>", "Text",
+ CellID->1054628905,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"etherColumns", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", 
+      RowBox[{
+       RowBox[{"FromDigits", "[", 
+        RowBox[{"#", ",", "2"}], "]"}], ",", "2", ",", "3"}], "]"}], "&"}], 
+    " ", "/@", "\n", "  ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<001\>\"", ",", "\"\<001\>\"", ",", "\"\<011\>\"", 
+      ",", "\"\<110\>\"", ",", "\"\<010\>\"", ",", "\"\<010\>\"", 
+      ",", "\"\<110\>\"", ",", "\"\<101\>\"", ",", "\"\<100\>\"", 
+      ",", "\"\<100\>\"", ",", "\"\<101\>\"", ",", "\"\<011\>\""}], "}"}]}]}],
+   ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ether", "[", 
+    RowBox[{"j_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"etherColumns", "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"j", ",", "12"}], "]"}], "+", "1"}], ",", 
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"t", ",", "3"}], "]"}], "+", "1"}]}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"halfStep", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{"BitXor", "[", 
+    RowBox[{
+     RowBox[{"BitOr", "[", 
+      RowBox[{
+       RowBox[{"BitShiftLeft", "[", 
+        RowBox[{"a", ",", "1"}], "]"}], ",", "b"}], "]"}], ",", 
+     RowBox[{"BitOr", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"a", ",", "1"}], "]"}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"exampleRows", "=", 
+   RowBox[{"FoldList", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"halfStep", "[", 
+       RowBox[{"#1", ",", 
+        RowBox[{"ether", "[", 
+         RowBox[{"4", ",", "#2"}], "]"}]}], "]"}], "&"}], ",", 
+     "17619461964066119253545154634814", ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "39"}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"exampleDifference", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"BitXor", "[", 
+      RowBox[{
+       RowBox[{"BitAnd", "[", 
+        RowBox[{
+         RowBox[{"BitShiftRight", "[", 
+          RowBox[{
+           RowBox[{"exampleRows", "[", 
+            RowBox[{"[", 
+             RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", 
+           RowBox[{"p", "-", "1"}]}], "]"}], ",", "1"}], "]"}], ",", "\n", 
+       "  ", 
+       RowBox[{"ether", "[", 
+        RowBox[{
+         RowBox[{"4", "+", "p"}], ",", "t"}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "40"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", "1", ",", "120"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"exampleDifference", ",", 
+   RowBox[{"Frame", "->", "True"}], ",", 
+   RowBox[{"ImageSize", "->", "Large"}], ",", "\n", "  ", 
+   RowBox[{
+   "PlotLabel", 
+    "->", "\"\<Black marks a defect from the ether; the first fourteen \
+columns depart at time 24\>\""}]}], "]"}]}], "Input",
+ CellLabel->"In[2]:= ",
+ CellID->1347158791,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJx9lNl1VDEQRLvJhE/SIQQnwC/hM4xVVbclvfGxPWCpl9r08+vP768fVfXr
+9fP39dPfX/X+en12rT+uT90o/en/9zpc/30f+q7OV02rZ6XaJ7re7xrX6taq
+7dLR96RSf23n7o2j1dElaNoaqFXcOTdqTDLI8GU21IsFYUvo52C0GCuzibZh
+uQb6m6z6PgQy4EaTVaGPztbsKeiC2lamTI9uaAGAAl7YwA5jH7fKEsEEXmxD
+ExHIocbjsvvwZ2rRIOTVvpJ5lNTGF7HB89i92DRr0hUxMiQpzLJPY3AIMQYb
+6dAXYEZkgUkRst1dFKORktoAD9OFY/YXX3CXfTOmQX7EKJqdeAdHGguYbNlj
+2WDmQhVqjGoO9vsRLzM0yLMtJxuHTluPCtAxO8/2+KJE6zMASSP92ppOGQJx
++l0W2QezgUomu46Fg+08EKrDZ4tI48mz2a2ElkYWWq8BKZM+S+kV4uAzvQAQ
+luPgOGLhNzQhdfKiZoaM2ftYkTtCGKzy+e5RbWcvtDHmHkU99OXmMd3EOe3k
+XRAQxcc+FA+NtheFd/WHuXuyYUH4NNAYyWKl5hybqJhwiw7fygwItmMCh3iF
+IbC8vuOlR8v9h7FEf2gUhXYOohjjOy6nt7wpy5RG7x8bpSHBmrnO1uDj9HRh
+JMlcC12DaxK0it1IMYQzgl0GGzmJtuAWGQshYGOEaJuvwG1wXp0QHpH4XvA0
+ThWtdsvwt5+DC14YZzgrvRxcEwy731IM/q80N4DVHDd65R7oVr31DI7R6jZW
+dhu9kYIRjp6zBAo5QtoPSs7BfAucTWRyqkzyM8D45eWR5AfAtq8cPHrRKXyo
+RgKzk2IQwe9MX/G6V+Bs+suxKACrCVz10+TkEJkN4wLmBhOKF8JqFh2uPsdi
+JnhyYvBaNFpCjt6eCu324dnA4IgbZuxYPRiSK7ZKtqHH4OqjwkmLf7koj4kN
+lz1oSvmhfazEP+GFM80vdI+ZQnG1JTUjrNf78sizQw9j1sZe5drQIiZPHjpn
+n3lO+vCP3E+YHVyy3YGGerP2zHPHMfyFlwTty/cRosVFYjzt8WksPIOCqG53
+RRgso+yAQWC9TS4sDEU7nSm2+EiqvCroDFue/Q9ZZgz5
+   "], {{0, 0}, {120, 41}}, {0, 1}],
+  Frame->True,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->Large,
+  Method->{
+   "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotLabel->FormBox[
+   "\"Black marks a defect from the ether; the first fourteen columns depart \
+at time 24\"", TraditionalForm]]], "Output",
+ CellLabel->"Out[2]= ",
+ CellID->978705560,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"]
+}, Open  ]],
+
+Cell["Independent built-in Rule 30 controls", "Section",
+ CellID->17830494,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"],
+
+Cell["\<\
+The following twelve computations use finite arrays with margins large enough \
+to isolate each causal cone. Until the first prefix departure, the physical \
+boundary is still the matching ether, so it agrees with the imposed driver. \
+No agreement after that time is asserted. All data is embedded here. The \
+scalar update and every departure time are checked against built-in Rule 30. \
+These finite controls check examples and coordinates, not the theorem.\
+\>", "Text",
+ CellID->1589986527,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "A", " ", "periodic", " ", "array", " ", "with", " ", "margins", " ", 
+     "isolates", " ", "a", " ", "genuine", " ", "full", " ", "Rule", " ", 
+     "30", " ", "causal", " ", 
+     RowBox[{"cone", ".", "\n", "   ", "Up"}], " ", "to", " ", "the", " ", 
+     "first", " ", "prefix", " ", "departure"}], ",", " ", 
+    RowBox[{
+    "its", " ", "boundary", " ", "remains", " ", "the", " ", "matching", " ", 
+     
+     RowBox[{"ether", ".", "\n", "   ", "It"}], " ", "is", " ", "not", " ", 
+     "claimed", " ", "to", " ", "reproduce", " ", "a", " ", "forced", " ", 
+     "boundary", " ", "after", " ", "that", " ", 
+     RowBox[{"departure", "."}]}]}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", "whiteTailErosionReport", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"whiteTailErosionReport", "[", "data_Association", "]"}], " ", ":=",
+      " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cols", ",", "eth", ",", "advance", ",", "cases"}], "}"}], ",",
+        "\n", "  ", 
+       RowBox[{
+        RowBox[{"cols", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"IntegerDigits", "[", 
+            RowBox[{
+             RowBox[{"FromDigits", "[", 
+              RowBox[{"#", ",", "2"}], "]"}], ",", "2", ",", "3"}], "]"}], 
+           "&"}], " ", "/@", "\n", "    ", 
+          RowBox[{"{", 
+           
+           RowBox[{"\"\<001\>\"", ",", "\"\<001\>\"", ",", "\"\<011\>\"", 
+            ",", "\"\<110\>\"", ",", "\"\<010\>\"", ",", "\"\<010\>\"", 
+            ",", "\"\<110\>\"", ",", "\"\<101\>\"", ",", "\"\<100\>\"", 
+            ",", "\"\<100\>\"", ",", "\"\<101\>\"", ",", "\"\<011\>\""}], 
+           "}"}]}]}], ";", "\n", "  ", 
+        RowBox[{
+         RowBox[{"eth", "[", 
+          RowBox[{"j_", ",", "t_"}], "]"}], " ", ":=", " ", 
+         RowBox[{"cols", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Mod", "[", 
+              RowBox[{"j", ",", "12"}], "]"}], "+", "1"}], ",", 
+            RowBox[{
+             RowBox[{"Mod", "[", 
+              RowBox[{"t", ",", "3"}], "]"}], "+", "1"}]}], "]"}], "]"}]}], ";",
+         "\n", "  ", 
+        RowBox[{
+         RowBox[{"advance", "[", 
+          RowBox[{"a_", ",", "b_"}], "]"}], " ", ":=", " ", 
+         RowBox[{"BitXor", "[", 
+          RowBox[{
+           RowBox[{"BitOr", "[", 
+            RowBox[{
+             RowBox[{"BitShiftLeft", "[", 
+              RowBox[{"a", ",", "1"}], "]"}], ",", "b"}], "]"}], ",", 
+           RowBox[{"BitOr", "[", 
+            RowBox[{"a", ",", 
+             RowBox[{"BitShiftRight", "[", 
+              RowBox[{"a", ",", "1"}], "]"}]}], "]"}]}], "]"}]}], ";", "\n", 
+        "  ", 
+        RowBox[{"cases", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"j", "=", 
+                RowBox[{"c", "[", "\"\<attachment\>\"", "]"}]}], ",", 
+               RowBox[{"phase", "=", 
+                RowBox[{"c", "[", "\"\<phase\>\"", "]"}]}], ",", 
+               RowBox[{"k", "=", 
+                RowBox[{"c", "[", "\"\<prefix\>\"", "]"}]}], ",", "\n", 
+               "      ", 
+               RowBox[{"w", "=", 
+                RowBox[{"c", "[", "\"\<support_bound\>\"", "]"}]}], ",", 
+               RowBox[{"word", "=", 
+                RowBox[{"FromDigits", "[", 
+                 RowBox[{"c", "[", "\"\<initial_right_word\>\"", "]"}], 
+                 "]"}]}], ",", "\n", "      ", 
+               RowBox[{"d", "=", 
+                RowBox[{"c", "[", "\"\<first_departure\>\"", "]"}]}], ",", 
+               "left", ",", "initial", ",", "ca", ",", "rows", ",", "first", ",",
+                "ok", ",", 
+               RowBox[{"cells", "=", "0"}]}], "}"}], ",", "\n", "    ", 
+             RowBox[{
+              RowBox[{"left", "=", 
+               RowBox[{"d", "+", "3"}]}], ";", "\n", "    ", 
+              RowBox[{"initial", "=", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"eth", "[", 
+                    RowBox[{
+                    RowBox[{"j", "+", "p"}], ",", "phase"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"p", ",", 
+                    RowBox[{"-", "left"}], ",", "0"}], "}"}]}], "]"}], ",", 
+                 "\n", "      ", 
+                 RowBox[{"Reverse", "[", 
+                  RowBox[{"IntegerDigits", "[", 
+                   RowBox[{"word", ",", "2", ",", "w"}], "]"}], "]"}], ",", 
+                 RowBox[{"ConstantArray", "[", 
+                  RowBox[{"0", ",", 
+                   RowBox[{
+                    RowBox[{"2", "*", "d"}], "+", "4"}]}], "]"}]}], "]"}]}], ";",
+               "\n", "    ", 
+              RowBox[{"ca", "=", 
+               RowBox[{"CellularAutomaton", "[", 
+                RowBox[{"30", ",", "initial", ",", "d"}], "]"}]}], ";", "\n", 
+              "    ", 
+              RowBox[{"rows", "=", 
+               RowBox[{"FoldList", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"advance", "[", 
+                   RowBox[{"#1", ",", 
+                    RowBox[{"eth", "[", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"#2", "+", "phase"}]}], "]"}]}], "]"}], "&"}], ",",
+                  "word", ",", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0", ",", 
+                   RowBox[{"d", "-", "1"}]}], "]"}]}], "]"}]}], ";", "\n", 
+              "    ", 
+              RowBox[{"first", "=", 
+               RowBox[{"SelectFirst", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0", ",", "d"}], "]"}], ",", 
+                 RowBox[{"Function", "[", 
+                  RowBox[{"t", ",", "\n", "      ", 
+                   RowBox[{"AnyTrue", "[", 
+                    RowBox[{
+                    RowBox[{"Range", "[", 
+                    RowBox[{"1", ",", "k"}], "]"}], ",", 
+                    RowBox[{"Function", "[", 
+                    RowBox[{"p", ",", "\n", "        ", 
+                    RowBox[{
+                    RowBox[{"BitAnd", "[", 
+                    RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"rows", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"p", "-", "1"}]}], "]"}], ",", "1"}], "]"}], "!=", 
+                    RowBox[{"eth", "[", 
+                    RowBox[{
+                    RowBox[{"j", "+", "p"}], ",", 
+                    RowBox[{"t", "+", "phase"}]}], "]"}]}]}], "]"}]}], 
+                    "]"}]}], "]"}], ",", 
+                 RowBox[{"Missing", "[", "\"\<None\>\"", "]"}]}], "]"}]}], ";",
+               "\n", "    ", 
+              RowBox[{"ok", "=", 
+               RowBox[{"And", "@@", 
+                RowBox[{"Flatten", "@", 
+                 RowBox[{"Table", "[", "\n", "      ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"cells", "++"}], ";", "\n", "      ", 
+                    RowBox[{
+                    RowBox[{"ca", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "1"}], ",", 
+                    RowBox[{"left", "+", "1", "+", "p"}]}], "]"}], "]"}], "==", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"p", "==", "0"}], ",", 
+                    RowBox[{"eth", "[", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"t", "+", "phase"}]}], "]"}], ",", "\n", 
+                    "        ", 
+                    RowBox[{"BitAnd", "[", 
+                    RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"rows", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"p", "-", "1"}]}], "]"}], ",", "1"}], "]"}]}], 
+                    "]"}]}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"t", ",", "0", ",", "d"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"p", ",", "0", ",", 
+                    RowBox[{"w", "+", "t", "+", "1"}]}], "}"}]}], "]"}]}]}]}],
+               ";", "\n", "    ", 
+              RowBox[{"<|", 
+               RowBox[{
+                RowBox[{"\"\<Attachment\>\"", "->", "j"}], ",", 
+                RowBox[{"\"\<Phase\>\"", "->", "phase"}], ",", 
+                RowBox[{"\"\<Prefix\>\"", "->", "k"}], ",", 
+                RowBox[{"\"\<SupportBound\>\"", "->", "w"}], ",", "\n", 
+                "      ", 
+                RowBox[{"\"\<FirstDeparture\>\"", "->", "first"}], ",", 
+                RowBox[{"\"\<ExpectedFirstDeparture\>\"", "->", "d"}], ",", 
+                "\n", "      ", 
+                RowBox[{"\"\<DepartureMatchesPython\>\"", "->", 
+                 RowBox[{"(", 
+                  RowBox[{"first", "===", "d"}], ")"}]}], ",", "\n", "      ", 
+                
+                RowBox[{"\"\<BuiltinConeMatchesDrivenHalfUntilDeparture\>\"", 
+                 "->", "ok"}], ",", "\n", "      ", 
+                RowBox[{"\"\<ScalarCellsCompared\>\"", "->", "cells"}], ",", 
+                "\n", "      ", 
+                RowBox[{"\"\<SupportBoundHolds\>\"", "->", 
+                 RowBox[{"And", "@@", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"rows", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"w", "+", "t"}]}], "]"}], "==", "0"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"t", ",", "0", ",", "d"}], "}"}]}], "]"}]}]}], ",",
+                 "\n", "      ", 
+                RowBox[{"\"\<ErosionBoundHolds\>\"", "->", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"IntegerQ", "[", "first", "]"}], "&&", 
+                   RowBox[{"first", "<=", 
+                    RowBox[{"c", "[", "\"\<proposed_bound\>\"", "]"}]}]}], 
+                  ")"}]}]}], "|>"}]}]}], "\n", "  ", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"c", ",", 
+             RowBox[{"data", "[", "\"\<cases\>\"", "]"}]}], "}"}]}], "]"}]}], 
+        ";", "\n", "  ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<FiniteControlsOnly\>\"", "->", "True"}], ",", 
+          RowBox[{"\"\<LeanVerifiedByThisCalculation\>\"", "->", "False"}], ",",
+           "\n", "    ", 
+          RowBox[{"\"\<FullProblemClaim\>\"", "->", "False"}], ",", 
+          RowBox[{"\"\<Cases\>\"", "->", "cases"}], ",", 
+          RowBox[{"\"\<BuiltinRule30Cones\>\"", "->", 
+           RowBox[{"Length", "[", "cases", "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<ScalarCellsCompared\>\"", "->", 
+           RowBox[{"Total", "[", 
+            RowBox[{"Lookup", "[", 
+             RowBox[{"cases", ",", "\"\<ScalarCellsCompared\>\""}], "]"}], 
+            "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<AllPassed\>\"", "->", 
+           RowBox[{"And", "@@", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"Lookup", "[", 
+              RowBox[{"cases", ",", 
+               RowBox[{"{", 
+                
+                RowBox[{"\"\<DepartureMatchesPython\>\"", ",", "\n", 
+                 "      ", \
+"\"\<BuiltinConeMatchesDrivenHalfUntilDeparture\>\"", 
+                 ",", "\"\<SupportBoundHolds\>\"", 
+                 ",", "\"\<ErosionBoundHolds\>\""}], "}"}]}], "]"}], 
+             "]"}]}]}]}], "|>"}]}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"controlData", "=", 
+     RowBox[{"ImportString", "[", 
+      RowBox[{"\"\<{\n  \\\"finite_controls_only\\\": true,\n  \\\"cases\\\": \
+[\n    {\n      \\\"attachment\\\": 0,\n      \\\"phase\\\": 0,\n      \
+\\\"prefix\\\": 32,\n      \\\"support_bound\\\": 116,\n      \
+\\\"initial_right_word\\\": \\\"56963983190260599989561929729197028\\\",\n    \
+  \\\"first_departure\\\": 3,\n      \\\"proposed_bound\\\": 294\n    },\n    \
+{\n      \\\"attachment\\\": 1,\n      \\\"phase\\\": 1,\n      \
+\\\"prefix\\\": 36,\n      \\\"support_bound\\\": 76,\n      \
+\\\"initial_right_word\\\": \\\"58642512549868977910303\\\",\n      \
+\\\"first_departure\\\": 1,\n      \\\"proposed_bound\\\": 162\n    },\n    {\
+\n      \\\"attachment\\\": 2,\n      \\\"phase\\\": 2,\n      \
+\\\"prefix\\\": 40,\n      \\\"support_bound\\\": 55,\n      \
+\\\"initial_right_word\\\": \\\"34016757596884880\\\",\n      \
+\\\"first_departure\\\": 1,\n      \\\"proposed_bound\\\": 87\n    },\n    {\n\
+      \\\"attachment\\\": 3,\n      \\\"phase\\\": 0,\n      \\\"prefix\\\": \
+44,\n      \\\"support_bound\\\": 52,\n      \\\"initial_right_word\\\": \
+\\\"800206036125820\\\",\n      \\\"first_departure\\\": 1,\n      \
+\\\"proposed_bound\\\": 66\n    },\n    {\n      \\\"attachment\\\": 4,\n     \
+ \\\"phase\\\": 1,\n      \\\"prefix\\\": 48,\n      \\\"support_bound\\\": \
+83,\n      \\\"initial_right_word\\\": \\\"8629809367931677344808515\\\",\n   \
+   \\\"first_departure\\\": 3,\n      \\\"proposed_bound\\\": 147\n    },\n   \
+ {\n      \\\"attachment\\\": 5,\n      \\\"phase\\\": 2,\n      \\\"prefix\\\
+\": 52,\n      \\\"support_bound\\\": 75,\n      \\\"initial_right_word\\\": \
+\\\"11700816299850777698802\\\",\n      \\\"first_departure\\\": 10,\n      \
+\\\"proposed_bound\\\": 111\n    },\n    {\n      \\\"attachment\\\": 6,\n    \
+  \\\"phase\\\": 0,\n      \\\"prefix\\\": 56,\n      \\\"support_bound\\\": \
+78,\n      \\\"initial_right_word\\\": \\\"87525265382851466033423\\\",\n     \
+ \\\"first_departure\\\": 7,\n      \\\"proposed_bound\\\": 108\n    },\n    \
+{\n      \\\"attachment\\\": 7,\n      \\\"phase\\\": 1,\n      \
+\\\"prefix\\\": 60,\n      \\\"support_bound\\\": 146,\n      \
+\\\"initial_right_word\\\": \
+\\\"68426782507760338885044922217537794691860424\\\",\n      \
+\\\"first_departure\\\": 4,\n      \\\"proposed_bound\\\": 300\n    },\n    {\
+\n      \\\"attachment\\\": 8,\n      \\\"phase\\\": 2,\n      \
+\\\"prefix\\\": 64,\n      \\\"support_bound\\\": 156,\n      \
+\\\"initial_right_word\\\": \
+\\\"49772258798252757785227112814440235883766735934\\\",\n      \
+\\\"first_departure\\\": 3,\n      \\\"proposed_bound\\\": 318\n    },\n    {\
+\n      \\\"attachment\\\": 9,\n      \\\"phase\\\": 0,\n      \
+\\\"prefix\\\": 68,\n      \\\"support_bound\\\": 72,\n      \
+\\\"initial_right_word\\\": \\\"629432638811059396385\\\",\n      \
+\\\"first_departure\\\": 1,\n      \\\"proposed_bound\\\": 54\n    },\n    {\n\
+      \\\"attachment\\\": 10,\n      \\\"phase\\\": 1,\n      \\\"prefix\\\": \
+72,\n      \\\"support_bound\\\": 98,\n      \\\"initial_right_word\\\": \
+\\\"303710684545532457505271025913\\\",\n      \\\"first_departure\\\": 4,\n  \
+    \\\"proposed_bound\\\": 120\n    },\n    {\n      \\\"attachment\\\": 11,\
+\n      \\\"phase\\\": 2,\n      \\\"prefix\\\": 76,\n      \\\"support_bound\
+\\\": 118,\n      \\\"initial_right_word\\\": \
+\\\"226304793136432445021942277919505543\\\",\n      \\\"first_departure\\\": \
+7,\n      \\\"proposed_bound\\\": 168\n    }\n  ]\n}\n\>\"", 
+       ",", "\"\<RawJSON\>\""}], "]"}]}], ";"}], "\n", 
+   RowBox[{"whiteTailErosionReport", "[", "controlData", "]"}]}]}]], "Input",
+ CellLabel->"In[3]:= ",
+ CellID->428691732,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"FiniteControlsOnly\"\>", "\[Rule]", "True"}], ",", 
+   RowBox[{"\<\"LeanVerifiedByThisCalculation\"\>", "\[Rule]", "False"}], ",", 
+   RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+   RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "0"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "0"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "32"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "116"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "478"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "36"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "76"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "157"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "2"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "2"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "40"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "55"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "115"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "0"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "44"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "52"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "109"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "4"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "48"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "83"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "346"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "5"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "2"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "52"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "75"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "10"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "10"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "902"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "6"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "0"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "56"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "78"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "7"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "7"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "668"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "7"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "60"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "146"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "4"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "4"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "750"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "8"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "2"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "64"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "156"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "3"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "638"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "9"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "0"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "68"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "72"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "149"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "10"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "72"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "98"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "4"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "4"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "510"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"Attachment\"\>", "\[Rule]", "11"}], ",", 
+        RowBox[{"\<\"Phase\"\>", "\[Rule]", "2"}], ",", 
+        RowBox[{"\<\"Prefix\"\>", "\[Rule]", "76"}], ",", 
+        RowBox[{"\<\"SupportBound\"\>", "\[Rule]", "118"}], ",", 
+        RowBox[{"\<\"FirstDeparture\"\>", "\[Rule]", "7"}], ",", 
+        RowBox[{"\<\"ExpectedFirstDeparture\"\>", "\[Rule]", "7"}], ",", 
+        RowBox[{"\<\"DepartureMatchesPython\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"BuiltinConeMatchesDrivenHalfUntilDeparture\"\>", "\[Rule]",
+          "True"}], ",", 
+        RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "988"}], ",", 
+        RowBox[{"\<\"SupportBoundHolds\"\>", "\[Rule]", "True"}], ",", 
+        RowBox[{"\<\"ErosionBoundHolds\"\>", "\[Rule]", "True"}]}], 
+       "\[RightAssociation]"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"BuiltinRule30Cones\"\>", "\[Rule]", "12"}], ",", 
+   RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "5810"}], ",", 
+   RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[3]= ",
+ CellID->1641250213,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"]
+}, Open  ]],
+
+Cell["The full Lean proof", "Section",
+ CellID->67888809,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+
+Cell[TextData[{
+ "The source contains the unchanged mathematical proof bodies of PR #10 at \
+f6885abec122a9dcbb3160cb69312323bc075dc1 and of the new module at \
+765143dc2bf6d4b85f91df3a60433d80ae30ff85. Only their module/import/export \
+wrappers are removed for this single-file environment. Three named aliases \
+expose the new claims under ",
+ Cell[BoxData["Rule30Submission"], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+ ". No unmerged module is imported."
+}], "Text",
+ CellID->1432876021,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Wolfram`LeanLink`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$Rule30PrizeKit", "=", 
+   RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[4]:= ",
+ CellID->876231958,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rule30Submission", "=", 
+  RowBox[{"LeanImportString", "[", 
+   RowBox[{"\"\<import Rule30PrizeKit\\nimport \
+Ruliology.CellularAutomata.Rule30Prize\\nimport \
+Ruliology.CellularAutomata.Rule30EtherThree\\n\\n/-!\\n# Rule 30, least \
+period 3: the ether erodes, so there is no wall of any width\\n\\n**Partial \
+result.** Setting of `Rule30EtherThree`: `F` is a rule-30 evolution of the \
+columns\\n`p \[GreaterEqual] 1` (`IsR30 F`) whose column `0` is ether column \
+`j0` with phase offset `s` from time `t1` on.\\nThe ether value of column `p` \
+at time `t` is `ether3 (j0 + p) (t + s)`.\\n\\n* `erosion3_fin`: if at time \
+`t1` the columns `1..k` carry the ether, the columns beyond `k + w`\\n  carry \
+the ether, and some column does not, then at some time `t \[LessEqual] t1 + 3 \
+w + 6` one of the\\n  columns `1..k` differs from the ether. A finite \
+perturbation always eats into the ether, at\\n  average speed at least `2/5` \
+once it is in its wake.\\n* `no_wall`: for every attachment column `a` and \
+every width `b \[GreaterEqual] 1`, a predicate `W` with\\n  `WallOK a b W` is \
+empty. This extends the kernel certificate `no_wall_le_12`\\n  \
+(`Rule30EtherThreeNoWall`) from widths `\[LessEqual] 12` to all widths. So \
+the period-3 ether-and-wall\\n  family of `Rule30EtherThree` is empty, and \
+`absorption3_excludes` is vacuous for every wall:\\n  the ether-and-wall \
+route to least period 3 is closed. The open statements for least period 3\\n  \
+(`AbsorptionT t001`, `Q001`, `C3s001`, `C3w(011)`) do not involve walls and \
+remain open.\\n\\n**The argument.** Let the *front* `D` be the leftmost \
+column that differs from the ether\\n(`Front`). Its *state* is the class of \
+column `D`, `(j0 + D + 4 (t + s)) mod 12` (`cls`), together\\nwith whether \
+column `D + 1` is also a defect (`ubit`): 24 states. Columns `D - 2, D - 1` \
+are ether,\\nso the next front and its state depend only on the class and on \
+the columns `D + 1 .. D + 4`.\\nA kernel check over these 576 local patterns \
+(`cert_all`) shows:\\n\\n* exactly one state, `B = (class 10, D + 1 \
+defective)`, can send the front three or more columns to\\n  the right in one \
+step; every other next front lies in `D - 1 .. D + 2` and is not `B`;\\n* \
+from `B` the front either moves by exactly `+2` into a good state, or jumps \
+right by `\[GreaterEqual] 3`;\\n  if it lands in `B` again, the class \
+equation forces a jump of at least `8`;\\n* a potential `\[Psi] \[Element] \
+[0, 10]` on the 23 good states (`psiTab`) satisfies\\n  `5 \[CapitalDelta]D + \
+2 + \[Psi](new) \[LessEqual] \[Psi](old)` on every step from a good state.\\n\
+\\n`front_step` turns this into a statement about `F` (for `D \[GreaterEqual] \
+2`; column `0` is forced, not\\ncomputed). Hence the good states are closed \
+and `5 D + 2 t + \[Psi]` does not increase (`wake_good`):\\nthe front moves \
+left at average speed at least `2/5`. For a finite perturbation the rightmost\
+\\ndefect `R` moves right by exactly one column per step (`redge_step`: rule \
+30 is permutive in its\\nleft input) and `D \[LessEqual] R`. A `B \
+\[RightArrow] B` step gains `\[GreaterEqual] 8` on `R`'s `1`, so the initial \
+run of `B` steps\\nis shorter than `(R - D) / 7 + 1 \[LessEqual] (w - 1) / 7 \
++ 1` (`run_bad`); after it the front is good and at\\nmost `w + n + 1` \
+columns right of `k`, and the potential brings it to `\[LessEqual] k` in \
+time. The arithmetic\\ngives `3 w + 6`.\\n\\nFor `no_wall`: from a wall state \
+at phase `< 3`, put the ether on columns `1..k`\\n(`k \[Congruent] a mod \
+12`), the strip on `k + 1 .. k + b`, a flipped cell at `k + b + 1` and the \
+ether beyond\\n(`wallCfg`), and drive column `0` with the ether \
+(`Rule30Ether.drv`). `trap_invariant3` keeps\\ncolumns `1..k` ether forever, \
+and `erosion3_fin` (with `w = b + 1`) breaks them.\\n\\nThe certificate and \
+the potential come from an exhaustive computation (two independent \
+code\\npaths); here they are checked by the kernel (`decide +kernel`, about \
+two seconds).\\n\\n**Source.** Luis Perez Morales and Claude (Fable 5.1), \
+Rule 30 Prize submission\\n`R30-20261024-1fc962`, ported to core \
+Lean.\\n-/\\n\\n\\n\\nnamespace Ruliology.CellularAutomata\\nnamespace \
+Rule30EtherThree\\n\\nopen Rule30Jen Rule30Ether\\n\\n/-! ### The local \
+certificate -/\\n\\n/-- The potential `\[Psi]` on front states `(class, next \
+column defective)`. -/\\ndef psiTab (g : Nat) (u : Bool) : Nat :=\\n  (if u \
+then [0, 1, 2, 3, 4, 5, 0, 7, 2, 3, 0, 2] else [0, 1, 2, 0, 10, 5, 6, 7, 8, \
+9, 4, 5]).getD g 0\\n\\n/-- The single bad front state `B = (class 10, next \
+column defective)`. -/\\ndef isBad (g : Nat) (u : Bool) : Bool := g == 10 && \
+u\\n\\n/-- New cells at columns `D - 1 + i` (`i \[LessEqual] 4`) when columns \
+`D - 2, D - 1` carry the ether, column `D`\\nis a defect, and columns `D + 1 \
+.. D + 4` are `x1 .. x4`; column `D` is ether column `c`, phase \
+`\[CurlyPhi]`. -/\\ndef nC (c \[CurlyPhi] : Nat) (x1 x2 x3 x4 : Bool) : Nat \
+\[RightArrow] Bool\\n  | 0 => rule (ether3 (c + 10) \[CurlyPhi]) (ether3 (c + \
+11) \[CurlyPhi]) (!ether3 c \[CurlyPhi])\\n  | 1 => rule (ether3 (c + 11) \
+\[CurlyPhi]) (!ether3 c \[CurlyPhi]) x1\\n  | 2 => rule (!ether3 c \
+\[CurlyPhi]) x1 x2\\n  | 3 => rule x1 x2 x3\\n  | _ => rule x2 x3 x4\\n\\n/-- \
+Whether the new cell at column `D - 1 + i` is a defect. -/\\ndef dC (c \
+\[CurlyPhi] : Nat) (x1 x2 x3 x4 : Bool) (i : Nat) : Bool :=\\n  nC c \
+\[CurlyPhi] x1 x2 x3 x4 i != ether3 (c + 11 + i) (\[CurlyPhi] + 1)\\n\\n/-- \
+Whether column `D + 1` is a defect. -/\\ndef uC (c \[CurlyPhi] : Nat) (x1 : \
+Bool) : Bool := x1 != ether3 (c + 1) \[CurlyPhi]\\n\\n/-- The new front `D - \
+1 + i` is good, and the potential drops. -/\\nabbrev stepGood (c \[CurlyPhi] \
+: Nat) (x1 x2 x3 x4 : Bool) (i : Nat) : Prop :=\\n  isBad ((c + 4 * \
+\[CurlyPhi] + i + 3) % 12) (dC c \[CurlyPhi] x1 x2 x3 x4 (i + 1)) = false \
+\[And]\\n  (isBad ((c + 4 * \[CurlyPhi]) % 12) (uC c \[CurlyPhi] x1) = true \
+\[RightArrow] i = 3) \[And]\\n  (isBad ((c + 4 * \[CurlyPhi]) % 12) (uC c \
+\[CurlyPhi] x1) = false \[RightArrow]\\n    5 * i + 2 + psiTab ((c + 4 * \
+\[CurlyPhi] + i + 3) % 12) (dC c \[CurlyPhi] x1 x2 x3 x4 (i + 1)) \
+\[LessEqual]\\n      psiTab ((c + 4 * \[CurlyPhi]) % 12) (uC c \[CurlyPhi] \
+x1) + 5)\\n\\n/-- The certificate for one local pattern. -/\\nabbrev certAt \
+(c \[CurlyPhi] : Nat) (x1 x2 x3 x4 : Bool) : Prop :=\\n  (\[ForAll] i, i < 4 \
+\[RightArrow] (\[ForAll] j, j < i \[RightArrow] dC c \[CurlyPhi] x1 x2 x3 x4 \
+j = false) \[RightArrow] dC c \[CurlyPhi] x1 x2 x3 x4 i = true \
+\[RightArrow]\\n    stepGood c \[CurlyPhi] x1 x2 x3 x4 i) \[And]\\n  ((\
+\[ForAll] j, j < 4 \[RightArrow] dC c \[CurlyPhi] x1 x2 x3 x4 j = false) \
+\[RightArrow] isBad ((c + 4 * \[CurlyPhi]) % 12) (uC c \[CurlyPhi] x1) = \
+true)\\n\\nset_option synthInstance.maxSize 1024 in\\nset_option \
+synthInstance.maxHeartbeats 400000 in\\n/-- **The local certificate** (12 \
+ether columns \[Times] 3 phases \[Times] 16 right patterns = 576 cases). \
+-/\\ntheorem cert_all : \[ForAll] c, c < 12 \[RightArrow] \[ForAll] \
+\[CurlyPhi], \[CurlyPhi] < 3 \[RightArrow] \[ForAll] x1 x2 x3 x4 : Bool, \
+certAt c \[CurlyPhi] x1 x2 x3 x4 := by\\n  decide +kernel\\n\\ntheorem \
+psiTab_le : \[ForAll] g, g < 12 \[RightArrow] \[ForAll] u, psiTab g u \
+\[LessEqual] 10 := by decide\\n\\n/-! ### Fronts of an evolution \
+-/\\n\\nsection\\nvariable (F : Nat \[RightArrow] Nat \[RightArrow] Bool) (j0 \
+s : Nat)\\n\\n/-- The ether value at column `p`, time `t`. -/\\ndef eth (j0 s \
+p t : Nat) : Bool := ether3 (j0 + p) (t + s)\\n\\n/-- `D` is the front at \
+time `t`: columns `0 .. D - 1` are ether, column `D` is not. -/\\ndef Front \
+(t D : Nat) : Prop := (\[ForAll] p, p < D \[RightArrow] F t p = eth j0 s p t) \
+\[And] F t D \[NotEqual] eth j0 s D t\\n\\n/-- `R` is the right edge at time \
+`t`: column `R` is a defect and every column right of it is ether. -/\\ndef \
+REdge (t R : Nat) : Prop := F t R \[NotEqual] eth j0 s R t \[And] \[ForAll] \
+p, R < p \[RightArrow] F t p = eth j0 s p t\\n\\n/-- The class of column `D` \
+at time `t`. -/\\ndef cls (D t : Nat) : Nat := (j0 + D + 4 * (t + s)) % 12\\n\
+\\n/-- Whether column `D + 1` is a defect at time `t`. -/\\ndef ubit (t D : \
+Nat) : Bool := F t (D + 1) != eth j0 s (D + 1) t\\n\\n/-- The front state at \
+`(t, D)` is the bad state `B`. -/\\ndef IsB (t D : Nat) : Prop := isBad (cls \
+j0 s D t) (ubit F j0 s t D) = true\\n\\n/-- The potential of the front state. \
+-/\\ndef psiF (t D : Nat) : Nat := psiTab (cls j0 s D t) (ubit F j0 s t D)\\n\
+\\nend\\n\\ntheorem eth_rule (j0 s q t : Nat) :\\n    eth j0 s (q + 1) (t + \
+1) = rule (eth j0 s q t) (eth j0 s (q + 1) t) (eth j0 s (q + 2) t) := by\\n  \
+unfold eth\\n  rw [show t + 1 + s = (t + s) + 1 by omega, ether3_rule,\\n    \
+ether3_congr (j := j0 + (q + 1) + 11) (j' := j0 + q) (by omega) rfl,\\n    \
+show j0 + (q + 1) + 1 = j0 + (q + 2) by omega]\\n\\ntheorem rule_flip (a b c \
+: Bool) : rule (!a) b c = !rule a b c := by\\n  cases a <;> cases b <;> cases \
+c <;> rfl\\n\\ntheorem ne_eth {a b : Bool} (h : a \[NotEqual] b) : a = !b := \
+by cases a <;> cases b <;> simp_all\\n\\ntheorem psiF_le (F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (j0 s t D : Nat) : psiF F j0 s t D \
+\[LessEqual] 10 :=\\n  psiTab_le _ (Nat.mod_lt _ (by decide)) _\\n\\ntheorem \
+isB_cls {F : Nat \[RightArrow] Nat \[RightArrow] Bool} {j0 s t D : Nat} (h : \
+IsB F j0 s t D) : cls j0 s D t = 10 := by\\n  unfold IsB isBad at h\\n  simp \
+only [Bool.and_eq_true, beq_iff_eq] at h\\n  exact h.1\\n\\n/-- The ether \
+prefix shrinks by at most one column per step. -/\\ntheorem prefix_step {F : \
+Nat \[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F) {j0 s t D : Nat}\\n  \
+  (h0 : F (t + 1) 0 = eth j0 s 0 (t + 1)) (hpre : \[ForAll] p, p < D \
+\[RightArrow] F t p = eth j0 s p t) :\\n    \[ForAll] p, p + 1 < D \
+\[RightArrow] F (t + 1) p = eth j0 s p (t + 1) := by\\n  intro p hp\\n  \
+rcases p with _ | q\\n  \[CenterDot] exact h0\\n  \[CenterDot] rw [hF t q, \
+eth_rule, hpre q (by omega), hpre (q + 1) (by omega), hpre (q + 2) (by \
+omega)]\\n\\n/-- **The right edge moves right by exactly one column per \
+step** (rule 30 is permutive in its left input). -/\\ntheorem redge_step {F : \
+Nat \[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F) {j0 s t R : Nat} (h \
+: REdge F j0 s t R) :\\n    REdge F j0 s (t + 1) (R + 1) := by\\n  refine \
+\:27e8?_, fun p hp => ?_\:27e9\\n  \[CenterDot] rw [hF t R, eth_rule, ne_eth \
+h.1, h.2 (R + 1) (by omega), h.2 (R + 2) (by omega), rule_flip]\\n    cases \
+rule (eth j0 s R t) (eth j0 s (R + 1) t) (eth j0 s (R + 2) t) <;> decide\\n  \
+\[CenterDot] obtain \:27e8q, rfl\:27e9 : \[Exists] q, p = q + 1 := \:27e8p - \
+1, by omega\:27e9\\n    rw [hF t q, eth_rule, h.2 q (by omega), h.2 (q + 1) \
+(by omega), h.2 (q + 2) (by omega)]\\n\\ntheorem redge_add {F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F) {j0 s t R : Nat} (h : \
+REdge F j0 s t R) :\\n    \[ForAll] n, REdge F j0 s (t + n) (R + n)\\n  | 0 \
+=> h\\n  | n + 1 => redge_step hF (redge_add hF h n)\\n\\ntheorem \
+front_le_redge {F : Nat \[RightArrow] Nat \[RightArrow] Bool} {j0 s t D R : \
+Nat} (hD : Front F j0 s t D)\\n    (hR : REdge F j0 s t R) : D \[LessEqual] R \
+:= by\\n  refine Nat.le_of_not_lt fun h => hR.1 (hD.1 R h)\\n\\n/-- A least \
+witness (core Lean only). -/\\ntheorem exists_least {P : Nat \[RightArrow] \
+Prop} (n : Nat) (hn : P n) : \[Exists] m, P m \[And] \[ForAll] q, q < m \
+\[RightArrow] \[Not] P q := by\\n  induction n using Nat.strongRecOn with\\n  \
+| ind n ih =>\\n    by_cases h : \[Exists] q, q < n \[And] P q\\n    \
+\[CenterDot] obtain \:27e8q, hq, hPq\:27e9 := h; exact ih q hq hPq\\n    \
+\[CenterDot] exact \:27e8n, hn, fun q hq hPq => h \:27e8q, hq, \
+hPq\:27e9\:27e9\\n\\n/-- **One step of the front** (certified by `cert_all`). \
+Assumes the front is at `D \[GreaterEqual] 2` (column `0`\\nis forced, so the \
+local relaxation is only valid there) and that some defect exists at `t + 1`.\
+\\nFrom a good state the next state is good and `5 D + \[Psi]` drops by at \
+least `2`; from `B` the front\\neither moves by exactly `+2` into a good \
+state or jumps right by at least `3`. -/\\ntheorem front_step {F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F) {j0 s t D : Nat}\\n    \
+(h0 : F (t + 1) 0 = eth j0 s 0 (t + 1)) (hD2 : 2 \[LessEqual] D) (hfr : Front \
+F j0 s t D)\\n    (hex : \[Exists] p, F (t + 1) p \[NotEqual] eth j0 s p (t + \
+1)) :\\n    \[Exists] D', Front F j0 s (t + 1) D' \[And] D \[LessEqual] D' + \
+1 \[And]\\n      ((\[Not] IsB F j0 s t D \[And] \[Not] IsB F j0 s (t + 1) D' \
+\[And]\\n          5 * D' + 2 + psiF F j0 s (t + 1) D' \[LessEqual] 5 * D + \
+psiF F j0 s t D) \[Or]\\n        (IsB F j0 s t D \[And] \[Not] IsB F j0 s (t \
++ 1) D' \[And] D' = D + 2) \[Or]\\n        (IsB F j0 s t D \[And] D + 3 \
+\[LessEqual] D')) := by\\n  classical\\n  obtain \:27e8E, rfl\:27e9 : \
+\[Exists] E, D = E + 2 := \:27e8D - 2, by omega\:27e9\\n  obtain \:27e8c, hc\
+\:27e9 : \[Exists] c, c = (j0 + (E + 2)) % 12 := \:27e8_, rfl\:27e9\\n  \
+obtain \:27e8\[CurlyPhi], h\[CurlyPhi]\:27e9 : \[Exists] \[CurlyPhi], \
+\[CurlyPhi] = (t + s) % 3 := \:27e8_, rfl\:27e9\\n  -- the row at time `t`\\n \
+ have x0 : F t E = ether3 (c + 10) \[CurlyPhi] := by\\n    rw [hfr.1 E (by \
+omega)]; exact ether3_congr (by omega) (by omega)\\n  have x1 : F t (E + 1) = \
+ether3 (c + 11) \[CurlyPhi] := by\\n    rw [hfr.1 (E + 1) (by omega)]; exact \
+ether3_congr (by omega) (by omega)\\n  have x2 : F t (E + 2) = !ether3 c \
+\[CurlyPhi] := by\\n    rw [ne_eth hfr.2, show eth j0 s (E + 2) t = ether3 c \
+\[CurlyPhi] from ether3_congr (by omega) (by omega)]\\n  generalize hy1 : F t \
+(E + 3) = y1\\n  generalize hy2 : F t (E + 4) = y2\\n  generalize hy3 : F t \
+(E + 5) = y3\\n  generalize hy4 : F t (E + 6) = y4\\n  -- the row at time `t \
++ 1`\\n  have hn : \[ForAll] i, i \[LessEqual] 4 \[RightArrow] F (t + 1) (E + \
+1 + i) = nC c \[CurlyPhi] y1 y2 y3 y4 i := by\\n    intro i hi\\n    have hr \
+:= hF t (E + i)\\n    rw [show E + i + 1 = E + 1 + i by omega] at hr\\n    rw \
+[hr]\\n    rcases (by omega : i = 0 \[Or] i = 1 \[Or] i = 2 \[Or] i = 3 \[Or] \
+i = 4) with rfl | rfl | rfl | rfl | rfl\\n    \[CenterDot] simp only \
+[Nat.add_zero]; rw [x0, x1, x2]; rfl\\n    \[CenterDot] rw [show E + 1 + 1 = \
+E + 2 by omega, show E + 1 + 2 = E + 3 by omega, x1, x2, hy1]; rfl\\n    \
+\[CenterDot] rw [show E + 2 + 1 = E + 3 by omega, show E + 2 + 2 = E + 4 by \
+omega, x2, hy1, hy2]; rfl\\n    \[CenterDot] rw [show E + 3 + 1 = E + 4 by \
+omega, show E + 3 + 2 = E + 5 by omega, hy1, hy2, hy3]; rfl\\n    \
+\[CenterDot] rw [show E + 4 + 1 = E + 5 by omega, show E + 4 + 2 = E + 6 by \
+omega, hy2, hy3, hy4]; rfl\\n  have he : \[ForAll] i, eth j0 s (E + 1 + i) (t \
++ 1) = ether3 (c + 11 + i) (\[CurlyPhi] + 1) :=\\n    fun i => ether3_congr \
+(by omega) (by omega)\\n  have hd : \[ForAll] i, i \[LessEqual] 4 \
+\[RightArrow]\\n      (dC c \[CurlyPhi] y1 y2 y3 y4 i = true \
+\[LeftRightArrow] F (t + 1) (E + 1 + i) \[NotEqual] eth j0 s (E + 1 + i) (t + \
+1)) := by\\n    intro i hi\\n    unfold dC; rw [hn i hi, he i, bne_iff_ne]\\n \
+ -- the front state at time `t`\\n  have hcls : cls j0 s (E + 2) t = (c + 4 * \
+\[CurlyPhi]) % 12 := by unfold cls; omega\\n  have hub : ubit F j0 s t (E + \
+2) = uC c \[CurlyPhi] y1 := by\\n    unfold ubit uC\\n    rw [show E + 2 + 1 \
+= E + 3 by omega, hy1,\\n      show eth j0 s (E + 3) t = ether3 (c + 1) \
+\[CurlyPhi] from ether3_congr (by omega) (by omega)]\\n  -- the new front\\n  \
+obtain \:27e8D', hsp, hmin\:27e9 : \[Exists] D', F (t + 1) D' \[NotEqual] eth \
+j0 s D' (t + 1) \[And]\\n      \[ForAll] p, p < D' \[RightArrow] F (t + 1) p \
+= eth j0 s p (t + 1) :=\\n    by\\n      obtain \:27e8p0, hp0\:27e9 := hex\\n \
+     obtain \:27e8m, hm, hmin\:27e9 := exists_least (P := fun p => F (t + 1) \
+p \[NotEqual] eth j0 s p (t + 1)) p0 hp0\\n      exact \:27e8m, hm, fun p hp \
+=> Classical.not_not.1 (hmin p hp)\:27e9\\n  have hpre := prefix_step hF h0 \
+hfr.1\\n  have hD'1 : E + 1 \[LessEqual] D' := by\\n    refine \
+Nat.le_of_not_lt fun h => hsp (hpre D' (by omega))\\n  obtain \:27e8i, rfl\
+\:27e9 : \[Exists] i, D' = E + 1 + i := \:27e8D' - (E + 1), by omega\:27e9\\n \
+ refine \:27e8E + 1 + i, \:27e8hmin, hsp\:27e9, by omega, ?_\:27e9\\n  have \
+hbefore : \[ForAll] j, j < i \[RightArrow] j \[LessEqual] 4 \[RightArrow] dC \
+c \[CurlyPhi] y1 y2 y3 y4 j = false := by\\n    intro j hj hj4\\n    cases h \
+: dC c \[CurlyPhi] y1 y2 y3 y4 j\\n    \[CenterDot] rfl\\n    \[CenterDot] \
+exact absurd (hmin (E + 1 + j) (by omega)) ((hd j hj4).1 h)\\n  have cert := \
+cert_all c (by omega) \[CurlyPhi] (by omega) y1 y2 y3 y4\\n  have hIsB : IsB \
+F j0 s t (E + 2) \[LeftRightArrow] isBad ((c + 4 * \[CurlyPhi]) % 12) (uC c \
+\[CurlyPhi] y1) = true := by\\n    unfold IsB; rw [hcls, hub]\\n  by_cases \
+hi4 : i < 4\\n  \[CenterDot] have hdi : dC c \[CurlyPhi] y1 y2 y3 y4 i = true \
+:= (hd i (by omega)).2 hsp\\n    have hg := cert.1 i hi4 (fun j hj => hbefore \
+j hj (by omega)) hdi\\n    have hcls' : cls j0 s (E + 1 + i) (t + 1) = (c + 4 \
+* \[CurlyPhi] + i + 3) % 12 := by unfold cls; omega\\n    have hub' : ubit F \
+j0 s (t + 1) (E + 1 + i) = dC c \[CurlyPhi] y1 y2 y3 y4 (i + 1) := by\\n      \
+unfold ubit dC\\n      rw [show E + 1 + i + 1 = E + 1 + (i + 1) by omega, hn \
+(i + 1) (by omega), he (i + 1),\\n        show c + 11 + (i + 1) = c + 11 + (i \
++ 1) from rfl]\\n    have hnB' : \[Not] IsB F j0 s (t + 1) (E + 1 + i) := \
+by\\n      unfold IsB; rw [hcls', hub', hg.1]; decide\\n    by_cases hB : \
+isBad ((c + 4 * \[CurlyPhi]) % 12) (uC c \[CurlyPhi] y1) = true\\n    \
+\[CenterDot] exact Or.inr (Or.inl \:27e8hIsB.2 hB, hnB', by have := hg.2.1 \
+hB; omega\:27e9)\\n    \[CenterDot] refine Or.inl \:27e8fun h => hB (hIsB.1 \
+h), hnB', ?_\:27e9\\n      have hp := hg.2.2 (by simpa using hB)\\n      \
+unfold psiF; rw [hcls', hub', hcls, hub]\\n      omega\\n  \[CenterDot] have \
+hB := cert.2 (fun j hj => hbefore j (by omega) (by omega))\\n    exact Or.inr \
+(Or.inr \:27e8hIsB.2 hB, by omega\:27e9)\\n\\n/-! ### The good set is closed, \
+and the front erodes at speed `2/5` in it -/\\n\\n/-- **(a) The wake.** Once \
+the front state is good it stays good, and `5 D + 2 n + \[Psi]` \
+never\\nincreases, until the front reaches a column `\[LessEqual] k`. This \
+holds for any right side, as long as a\\ndefect exists at every time. \
+-/\\ntheorem wake_good {F : Nat \[RightArrow] Nat \[RightArrow] Bool} (hF : \
+IsR30 F) {j0 s t1 k : Nat} (hk : 1 \[LessEqual] k)\\n    (h0 : \[ForAll] t, \
+t1 \[LessEqual] t \[RightArrow] F t 0 = eth j0 s 0 t)\\n    (hex : \[ForAll] \
+t, t1 \[LessEqual] t \[RightArrow] \[Exists] p, F t p \[NotEqual] eth j0 s p \
+t) :\\n    \[ForAll] n t D, t1 \[LessEqual] t \[RightArrow] Front F j0 s t D \
+\[RightArrow] \[Not] IsB F j0 s t D \[RightArrow]\\n      (\[Exists] t', t \
+\[LessEqual] t' \[And] t' \[LessEqual] t + n \[And] \[Exists] p, 1 \
+\[LessEqual] p \[And] p \[LessEqual] k \[And] F t' p \[NotEqual] eth j0 s p \
+t') \[Or]\\n      (\[Exists] D', Front F j0 s (t + n) D' \[And] \[Not] IsB F \
+j0 s (t + n) D' \[And]\\n        5 * D' + 2 * n + psiF F j0 s (t + n) D' \
+\[LessEqual] 5 * D + psiF F j0 s t D) := by\\n  intro n\\n  induction n \
+with\\n  | zero =>\\n    intro t D _ hD hB\\n    refine Or.inr \:27e8D, hD, \
+hB, ?_\:27e9\\n    show 5 * D + 2 * 0 + psiF F j0 s t D \[LessEqual] _\\n    \
+omega\\n  | succ n ih =>\\n    intro t D ht hD hB\\n    rcases ih t D ht hD \
+hB with \:27e8t', h1, h2, hp\:27e9 | \:27e8D', hD', hB', hpot\:27e9\\n    \
+\[CenterDot] exact Or.inl \:27e8t', h1, by omega, hp\:27e9\\n    \[CenterDot] \
+by_cases hDk : D' \[LessEqual] k\\n      \[CenterDot] refine Or.inl \:27e8t + \
+n, by omega, by omega, D', ?_, hDk, hD'.2\:27e9\\n        refine \
+Nat.pos_of_ne_zero fun h => hD'.2 ?_\\n        subst h; exact h0 (t + n) (by \
+omega)\\n      \[CenterDot] obtain \:27e8D'', hD'', -, h | h | h\:27e9 :=\\n  \
+        front_step hF (h0 (t + n + 1) (by omega)) (by omega) hD' (hex (t + n \
++ 1) (by omega))\\n        \[CenterDot] refine Or.inr \:27e8D'', ?_, ?_, ?_\
+\:27e9\\n          \[CenterDot] rw [show t + (n + 1) = t + n + 1 by omega]; \
+exact hD''\\n          \[CenterDot] rw [show t + (n + 1) = t + n + 1 by \
+omega]; exact h.2.1\\n          \[CenterDot] rw [show t + (n + 1) = t + n + 1 \
+by omega]; omega\\n        \[CenterDot] exact absurd h.1 hB'\\n        \
+\[CenterDot] exact absurd h.1 hB'\\n\\n/-! ### (b) The bad state: a run of \
+`B` steps is short -/\\n\\n/-- From `B`, while `R - D < 7 m`, the front \
+reaches a good state within `m` steps: each `B \[RightArrow] B`\\nstep moves \
+the front right by at least `8` (class equation), while the right edge moves \
+by `1`. -/\\ntheorem run_bad {F : Nat \[RightArrow] Nat \[RightArrow] Bool} \
+(hF : IsR30 F) {j0 s t1 : Nat}\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \
+\[RightArrow] F t 0 = eth j0 s 0 t) :\\n    \[ForAll] m t D R, t1 \
+\[LessEqual] t \[RightArrow] 2 \[LessEqual] D \[RightArrow] Front F j0 s t D \
+\[RightArrow] IsB F j0 s t D \[RightArrow] REdge F j0 s t R \[RightArrow]\\n  \
+    R < D + 7 * m \[RightArrow]\\n      \[Exists] n, n < m \[And] \[Exists] \
+D', Front F j0 s (t + n + 1) D' \[And] \[Not] IsB F j0 s (t + n + 1) D' \
+\[And] 2 \[LessEqual] D' := by\\n  intro m\\n  induction m with\\n  | zero =>\
+\\n    intro t D R _ _ hD _ hR hRD\\n    have := front_le_redge hD hR; \
+omega\\n  | succ m ih =>\\n    intro t D R ht hD2 hD hB hR hRD\\n    have hR1 \
+:= redge_step hF hR\\n    obtain \:27e8D', hD', hle, h | h | h\:27e9 := \
+front_step hF (h0 (t + 1) (by omega)) hD2 hD \:27e8R + 1, hR1.1\:27e9\\n    \
+\[CenterDot] exact absurd hB h.1\\n    \[CenterDot] exact \:27e80, by omega, \
+D', hD', h.2.1, by omega\:27e9\\n    \[CenterDot] by_cases hB' : IsB F j0 s \
+(t + 1) D'\\n      \[CenterDot] have c1 := isB_cls hB\\n        have c2 := \
+isB_cls hB'\\n        unfold cls at c1 c2\\n        have h8 : D + 8 \
+\[LessEqual] D' := by omega\\n        have hD'R := front_le_redge hD' hR1\\n  \
+      obtain \:27e8n, hn, D'', h1, h2, h3\:27e9 :=\\n          ih (t + 1) D' \
+(R + 1) (by omega) (by omega) hD' hB' hR1 (by omega)\\n        refine \:27e8n \
++ 1, by omega, D'', ?_, ?_, h3\:27e9\\n        \[CenterDot] rw [show t + (n + \
+1) + 1 = t + 1 + n + 1 by omega]; exact h1\\n        \[CenterDot] rw [show t \
++ (n + 1) + 1 = t + 1 + n + 1 by omega]; exact h2\\n      \[CenterDot] exact \
+\:27e80, by omega, D', hD', hB', by omega\:27e9\\n\\n/-! ### (c) Erosion of a \
+finite perturbation -/\\n\\n/-- **Erosion3-fin.** Let `F` be a rule-30 \
+evolution of the columns `p \[GreaterEqual] 1` whose column `0` is\\nether \
+column `j0` (phase offset `s`) from time `t1` on. If at time `t1` the columns \
+`1..k` carry the\\nether, the columns beyond `k + w` carry the ether, and \
+some column does not, then within `3 w + 6`\\nsteps one of the columns `1..k` \
+leaves the ether. -/\\ntheorem erosion3_fin {F : Nat \[RightArrow] Nat \
+\[RightArrow] Bool} (hF : IsR30 F) (j0 s k w t1 : Nat) (hk : 1 \[LessEqual] \
+k)\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] F t 0 = ether3 j0 \
+(t + s))\\n    (hL : \[ForAll] p, 1 \[LessEqual] p \[RightArrow] p \
+\[LessEqual] k \[RightArrow] F t1 p = ether3 (j0 + p) (t1 + s))\\n    (hR : \
+\[ForAll] p, k + w < p \[RightArrow] F t1 p = ether3 (j0 + p) (t1 + s))\\n    \
+(hD : \[Exists] p, F t1 p \[NotEqual] ether3 (j0 + p) (t1 + s)) :\\n    \
+\[Exists] t, t1 \[LessEqual] t \[And] t \[LessEqual] t1 + 3 * w + 6 \[And]\\n \
+     \[Exists] p, 1 \[LessEqual] p \[And] p \[LessEqual] k \[And] F t p \
+\[NotEqual] ether3 (j0 + p) (t + s) := by\\n  have h0' : \[ForAll] t, t1 \
+\[LessEqual] t \[RightArrow] F t 0 = eth j0 s 0 t := fun t ht => by\\n    rw \
+[h0 t ht]; unfold eth; rw [Nat.add_zero]\\n  obtain \:27e8p0, hp0\:27e9 := hD\
+\\n  have hp0' : F t1 p0 \[NotEqual] eth j0 s p0 t1 := hp0\\n  -- the right \
+edge at time `t1`\\n  obtain \:27e8R0, hQ, hminQ\:27e9 := exists_least (P := \
+fun m => \[ForAll] q, m < q \[RightArrow] F t1 q = eth j0 s q t1)\\n    (k + \
+w) (fun q hq => hR q hq)\\n  have hp0R : p0 \[LessEqual] R0 := \
+Nat.le_of_not_lt fun h => hp0' (hQ p0 h)\\n  have hp0k : k < p0 := by\\n    \
+refine Nat.lt_of_not_le fun h => hp0' ?_\\n    rcases Nat.eq_zero_or_pos p0 \
+with h1 | h1\\n    \[CenterDot] subst h1; exact h0' t1 (Nat.le_refl _)\\n    \
+\[CenterDot] exact hL p0 h1 h\\n  have hRw : R0 \[LessEqual] k + w := \
+Nat.le_of_not_lt fun h => hminQ (k + w) h (fun q hq => hR q hq)\\n  obtain \
+\:27e8m', hm'\:27e9 : \[Exists] m', R0 = m' + 1 := \:27e8R0 - 1, by omega\
+\:27e9\\n  have hRdef : F t1 R0 \[NotEqual] eth j0 s R0 t1 := by\\n    intro \
+hne\\n    refine hminQ m' (by omega) (fun q hq => ?_)\\n    by_cases hq' : q \
+= R0\\n    \[CenterDot] subst hq'; exact hne\\n    \[CenterDot] exact hQ q \
+(by omega)\\n  have hRE : REdge F j0 s t1 R0 := \:27e8hRdef, hQ\:27e9\\n  \
+have hex : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] \[Exists] p, F t p \
+\[NotEqual] eth j0 s p t := by\\n    intro t ht\\n    have h := redge_add hF \
+hRE (t - t1)\\n    rw [show t1 + (t - t1) = t by omega] at h\\n    exact \
+\:27e8_, h.1\:27e9\\n  -- the front at time `t1`\\n  obtain \:27e8D1, hD1, \
+hminD\:27e9 := exists_least (P := fun p => F t1 p \[NotEqual] eth j0 s p t1) \
+p0 hp0'\\n  have hfr1 : Front F j0 s t1 D1 := \:27e8fun p hp => \
+Classical.not_not.1 (hminD p hp), hD1\:27e9\\n  have hD1k : k < D1 := by\\n   \
+ refine Nat.lt_of_not_le fun h => hD1 ?_\\n    rcases Nat.eq_zero_or_pos D1 \
+with h1 | h1\\n    \[CenterDot] subst h1; exact h0' t1 (Nat.le_refl _)\\n    \
+\[CenterDot] exact hL D1 h1 h\\n  have hD1R := front_le_redge hfr1 hRE\\n  -- \
+the good phase\\n  have finish : \[ForAll] t0 D0, t1 \[LessEqual] t0 \
+\[RightArrow] Front F j0 s t0 D0 \[RightArrow] \[Not] IsB F j0 s t0 D0 \
+\[RightArrow]\\n      \[Exists] t, t0 \[LessEqual] t \[And] t \[LessEqual] t0 \
++ (5 * (D0 - k) + 5) / 2 + 1 \[And]\\n        \[Exists] p, 1 \[LessEqual] p \
+\[And] p \[LessEqual] k \[And] F t p \[NotEqual] eth j0 s p t := by\\n    \
+intro t0 D0 ht0 hD0 hB0\\n    rcases wake_good hF hk h0' hex ((5 * (D0 - k) + \
+5) / 2 + 1) t0 D0 ht0 hD0 hB0 with\\n      \:27e8t', h1, h2, hp\:27e9 | \
+\:27e8D', hD', -, hpot\:27e9\\n    \[CenterDot] exact \:27e8t', h1, h2, hp\
+\:27e9\\n    \[CenterDot] have h\[Psi] := psiF_le F j0 s t0 D0\\n      \
+by_cases hDk : D' \[LessEqual] k\\n      \[CenterDot] refine \:27e8t0 + ((5 * \
+(D0 - k) + 5) / 2 + 1), by omega, by omega, D', ?_, hDk, hD'.2\:27e9\\n       \
+ refine Nat.pos_of_ne_zero fun h => hD'.2 ?_\\n        subst h; exact h0' _ \
+(by omega)\\n      \[CenterDot] omega\\n  by_cases hB1 : IsB F j0 s t1 D1\\n  \
+\[CenterDot] obtain \:27e8n, hn, D0, hD0, hB0, -\:27e9 :=\\n      run_bad hF \
+h0' ((R0 - D1) / 7 + 1) t1 D1 R0 (Nat.le_refl _) (by omega) hfr1 hB1 hRE (by \
+omega)\\n    have hD0R := front_le_redge hD0 (redge_add hF hRE (n + 1))\\n    \
+obtain \:27e8t, h1, h2, hp\:27e9 := finish (t1 + n + 1) D0 (by omega) hD0 hB0\
+\\n    exact \:27e8t, by omega, by omega, hp\:27e9\\n  \[CenterDot] obtain \
+\:27e8t, h1, h2, hp\:27e9 := finish t1 D1 (Nat.le_refl _) hfr1 hB1\\n    \
+exact \:27e8t, h1, by omega, hp\:27e9\\n\\n/-! ### Corollary: no period-3 \
+wall of any width -/\\n\\n/-- The initial right half used against a wall \
+state `r` of width `b` attached at column `k`:\\nether, the strip, one \
+flipped cell at `k + b + 1`, ether. -/\\ndef wallCfg (\[CurlyPhi] k b r : \
+Nat) (p : Nat) : Bool :=\\n  if k < p \[And] p \[LessEqual] k + b then \
+r.testBit (p - k - 1)\\n  else if p = k + b + 1 then !ether3 p \[CurlyPhi] \
+else ether3 p \[CurlyPhi]\\n\\n/-- **No period-3 wall of any width.** For \
+every attachment column `a` and every width `b \[GreaterEqual] 1`, \
+a\\npredicate `W` with `WallOK a b W` is empty. This extends `no_wall_le_12` \
+to all widths. -/\\ntheorem no_wall (a b : Nat) (hb : 0 < b) {W : Nat \
+\[RightArrow] Nat \[RightArrow] Prop} (hW : WallOK a b W) :\\n    \[ForAll] \
+\[CurlyPhi] r, \[Not] W \[CurlyPhi] r := by\\n  have key : \[ForAll] \
+\[CurlyPhi] r, \[CurlyPhi] < 3 \[RightArrow] \[Not] W \[CurlyPhi] r := by\\n  \
+  intro \[CurlyPhi] r h\[CurlyPhi] hWr\\n    obtain \:27e8k, hk\:27e9 : \
+\[Exists] k, k = a % 12 + 12 := \:27e8_, rfl\:27e9\\n    have hF := drv_isR30 \
+(fun t => ether3 0 (t + \[CurlyPhi])) (wallCfg \[CurlyPhi] k b r)\\n    have \
+h0 : \[ForAll] t, 0 \[LessEqual] t \[RightArrow]\\n        drv (fun t => \
+ether3 0 (t + \[CurlyPhi])) (wallCfg \[CurlyPhi] k b r) t 0 = ether3 0 (t + \
+\[CurlyPhi]) :=\\n      fun t _ => drv_col0 _ _ t\\n    have hE : \[ForAll] \
+p, 1 \[LessEqual] p \[RightArrow] p \[LessEqual] k \[RightArrow]\\n        \
+drv (fun t => ether3 0 (t + \[CurlyPhi])) (wallCfg \[CurlyPhi] k b r) 0 p = \
+ether3 (0 + p) (0 + \[CurlyPhi]) := by\\n      intro p h1 h2\\n      rw \
+[drv_init _ _ p h1, Nat.zero_add, Nat.zero_add]\\n      unfold wallCfg\\n     \
+ simp [show \[Not] (k < p \[And] p \[LessEqual] k + b) by omega, show p \
+\[NotEqual] k + b + 1 by omega]\\n    have hr : EncF (drv (fun t => ether3 0 \
+(t + \[CurlyPhi])) (wallCfg \[CurlyPhi] k b r)) b 0 k r := by\\n      refine \
+\:27e8hW.1 \[CurlyPhi] r hWr, fun i hi => ?_\:27e9\\n      rw [drv_init _ _ _ \
+(by omega)]\\n      unfold wallCfg\\n      simp [show k < k + 1 + i \[And] k \
++ 1 + i \[LessEqual] k + b by omega, show k + 1 + i - k - 1 = i by omega]\\n  \
+  have inv := trap_invariant3 hF hW hb 0 \[CurlyPhi] k 0 (by omega) h0 hE r \
+hr\\n      (by rw [Nat.zero_add, Nat.mod_eq_of_lt h\[CurlyPhi]]; exact \
+hWr)\\n    obtain \:27e8t, -, -, p, hp1, hpk, hne\:27e9 := erosion3_fin hF 0 \
+\[CurlyPhi] k (b + 1) 0 (by omega) h0 hE\\n      (fun p hp => by\\n        rw \
+[drv_init _ _ p (by omega), Nat.zero_add, Nat.zero_add]\\n        unfold \
+wallCfg\\n        simp [show \[Not] (k < p \[And] p \[LessEqual] k + b) by \
+omega, show p \[NotEqual] k + b + 1 by omega])\\n      \:27e8k + b + 1, by\\n \
+       rw [drv_init _ _ _ (by omega), Nat.zero_add, Nat.zero_add]\\n        \
+unfold wallCfg\\n        simp [show \[Not] (k < k + b + 1 \[And] k + b + 1 \
+\[LessEqual] k + b) by omega]\:27e9\\n    have e := (inv t).1 p hpk\\n    rw \
+[show 0 + t = t from Nat.zero_add t] at e\\n    exact hne e\\n  intro \
+\[CurlyPhi] r hWr\\n  exact key ((\[CurlyPhi] + 1) % 3) _ (Nat.mod_lt _ (by \
+decide)) (hW.2.2 \[CurlyPhi] r false hWr)\\n\\nend Rule30EtherThree\\nend \
+Ruliology.CellularAutomata\\n\\n/-!\\n# Period-three ether erosion with a \
+white right tail\\n\\nResearch extension of Luis Perez Morales and Claude's \
+independently replayed\\nPR 10 (`f6885abec122a9dcbb3160cb69312323bc075dc1`). \
+Their front certificate and\\ngood-state potential are used unchanged. This \
+file replaces the finite\\nperturbation's rightmost defect by a linearly \
+bounded witness of a defect.\\nThe dependency is not yet part of the \
+reference kit at 2f63afd.\\n\\nThis concerns an ether-driven right half. It \
+does not exclude a period-three\\ncenter column and does not prove any prize \
+problem.\\n-/\\n\\n\\n\\nnamespace \
+Ruliology.CellularAutomata.Rule30WhiteTailErosion\\n\\nopen Rule30Jen \
+Rule30Ether Rule30EtherThree\\n\\ntheorem front_le_witness {F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool} {j0 s t D R : Nat}\\n    (hD : Front F \
+j0 s t D)\\n    (hR : \[Exists] p, p \[LessEqual] R \[And] F t p \[NotEqual] \
+eth j0 s p t) : D \[LessEqual] R := by\\n  obtain \:27e8p, hp, hne\:27e9 := \
+hR\\n  exact Nat.le_of_not_lt fun h => hne (hD.1 p (by omega))\\n\\n/-- The \
+earlier bad-state argument needs only a defect witness of speed one. \
+-/\\ntheorem run_bad_bounded {F : Nat \[RightArrow] Nat \[RightArrow] Bool} \
+(hF : IsR30 F) {j0 s t1 R : Nat}\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \
+\[RightArrow] F t 0 = eth j0 s 0 t)\\n    (hbound : \[ForAll] t, t1 \
+\[LessEqual] t \[RightArrow] \[Exists] p, p \[LessEqual] R + (t - t1) \[And] \
+F t p \[NotEqual] eth j0 s p t) :\\n    \[ForAll] m t D, t1 \[LessEqual] t \
+\[RightArrow] 2 \[LessEqual] D \[RightArrow] Front F j0 s t D \[RightArrow] \
+IsB F j0 s t D \[RightArrow]\\n      R + (t - t1) < D + 7 * m \
+\[RightArrow]\\n      \[Exists] n, n < m \[And] \[Exists] D', Front F j0 s (t \
++ n + 1) D' \[And]\\n        \[Not] IsB F j0 s (t + n + 1) D' \[And] 2 \
+\[LessEqual] D' := by\\n  intro m\\n  induction m with\\n  | zero =>\\n      \
+intro t D ht _ hD _ hRD\\n      have := front_le_witness hD (hbound t ht)\\n  \
+    omega\\n  | succ m ih =>\\n      intro t D ht hD2 hD hB hRD\\n      \
+obtain \:27e8p, hp, hne\:27e9 := hbound (t + 1) (by omega)\\n      obtain \
+\:27e8D', hD', hle, h | h | h\:27e9 :=\\n        front_step hF (h0 (t + 1) \
+(by omega)) hD2 hD \:27e8p, hne\:27e9\\n      \[CenterDot] exact absurd hB \
+h.1\\n      \[CenterDot] exact \:27e80, by omega, D', hD', h.2.1, by omega\
+\:27e9\\n      \[CenterDot] by_cases hB' : IsB F j0 s (t + 1) D'\\n        \
+\[CenterDot] have c1 := isB_cls hB\\n          have c2 := isB_cls hB'\\n      \
+    unfold cls at c1 c2\\n          have h8 : D + 8 \[LessEqual] D' := by \
+omega\\n          obtain \:27e8n, hn, D'', h1, h2, h3\:27e9 :=\\n            \
+ih (t + 1) D' (by omega) (by omega) hD' hB' (by omega)\\n          refine \
+\:27e8n + 1, by omega, D'', ?_, ?_, h3\:27e9\\n          \[CenterDot] rw \
+[show t + (n + 1) + 1 = t + 1 + n + 1 by omega]; exact h1\\n          \
+\[CenterDot] rw [show t + (n + 1) + 1 = t + 1 + n + 1 by omega]; exact h2\\n  \
+      \[CenterDot] exact \:27e80, by omega, D', hD', hB', by \
+omega\:27e9\\n\\n/-- Erosion holds whenever some defect remains below an edge \
+of speed one. -/\\ntheorem erosion_bounded {F : Nat \[RightArrow] Nat \
+\[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s t1 R k : Nat) (hk : 1 \
+\[LessEqual] k)\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] F t \
+0 = eth j0 s 0 t)\\n    (hbound : \[ForAll] t, t1 \[LessEqual] t \
+\[RightArrow] \[Exists] p, p \[LessEqual] R + (t - t1) \[And] F t p \
+\[NotEqual] eth j0 s p t) :\\n    \[Exists] t, t1 \[LessEqual] t \[And] t \
+\[LessEqual] t1 + 3 * (R - k) + 6 \[And]\\n      \[Exists] p, 1 \[LessEqual] \
+p \[And] p \[LessEqual] k \[And] F t p \[NotEqual] eth j0 s p t := by\\n  \
+have hex : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] \[Exists] p, F t p \
+\[NotEqual] eth j0 s p t := by\\n    intro t ht\\n    obtain \:27e8p, _, hp\
+\:27e9 := hbound t ht\\n    exact \:27e8p, hp\:27e9\\n  obtain \:27e8p, _, hp\
+\:27e9 := hbound t1 (Nat.le_refl _)\\n  obtain \:27e8D1, hD1, hmin\:27e9 \
+:=\\n    exists_least (P := fun q => F t1 q \[NotEqual] eth j0 s q t1) p \
+hp\\n  have hfr1 : Front F j0 s t1 D1 :=\\n    \:27e8fun q hq => \
+Classical.not_not.1 (hmin q hq), hD1\:27e9\\n  have hpos : 1 \[LessEqual] D1 \
+:= by\\n    refine Nat.pos_of_ne_zero fun hz => ?_\\n    subst hz\\n    exact \
+hD1 (h0 t1 (Nat.le_refl _))\\n  by_cases hDk : D1 \[LessEqual] k\\n  \
+\[CenterDot] exact \:27e8t1, by omega, by omega, D1, hpos, hDk, hD1\:27e9\\n  \
+have hD1R : D1 \[LessEqual] R := by\\n    simpa only [Nat.sub_self, \
+Nat.add_zero] using front_le_witness hfr1 (hbound t1 (Nat.le_refl _))\\n  \
+have finish : \[ForAll] t0 D0, t1 \[LessEqual] t0 \[RightArrow] Front F j0 s \
+t0 D0 \[RightArrow] \[Not] IsB F j0 s t0 D0 \[RightArrow]\\n      \[Exists] \
+t, t0 \[LessEqual] t \[And] t \[LessEqual] t0 + (5 * (D0 - k) + 5) / 2 + 1 \
+\[And]\\n        \[Exists] p, 1 \[LessEqual] p \[And] p \[LessEqual] k \[And] \
+F t p \[NotEqual] eth j0 s p t := by\\n    intro t0 D0 ht0 hD0 hB0\\n    \
+rcases wake_good hF hk h0 hex ((5 * (D0 - k) + 5) / 2 + 1) t0 D0 ht0 hD0 hB0 \
+with\\n      \:27e8t', h1, h2, hp\:27e9 | \:27e8D', hD', _, hpot\:27e9\\n    \
+\[CenterDot] exact \:27e8t', h1, h2, hp\:27e9\\n    \[CenterDot] have hpsi := \
+psiF_le F j0 s t0 D0\\n      by_cases hD'k : D' \[LessEqual] k\\n      \
+\[CenterDot] refine \:27e8t0 + ((5 * (D0 - k) + 5) / 2 + 1), by omega, by \
+omega,\\n          D', ?_, hD'k, hD'.2\:27e9\\n        refine \
+Nat.pos_of_ne_zero fun hz => ?_\\n        subst hz\\n        exact hD'.2 (h0 \
+_ (by omega))\\n      \[CenterDot] omega\\n  by_cases hB1 : IsB F j0 s t1 \
+D1\\n  \[CenterDot] obtain \:27e8n, hn, D0, hD0, hB0, _\:27e9 :=\\n      \
+run_bad_bounded hF h0 hbound ((R - D1) / 7 + 1) t1 D1\\n        (Nat.le_refl \
+_) (by omega) hfr1 hB1 (by omega)\\n    have hD0R := front_le_witness hD0 \
+(hbound (t1 + n + 1) (by omega))\\n    obtain \:27e8t, h1, h2, hp\:27e9 := \
+finish (t1 + n + 1) D0 (by omega) hD0 hB0\\n    exact \:27e8t, by omega, by \
+omega, hp\:27e9\\n  \[CenterDot] obtain \:27e8t, h1, h2, hp\:27e9 := finish \
+t1 D1 (Nat.le_refl _) hfr1 hB1\\n    exact \:27e8t, h1, by omega, hp\:27e9\\n\
+\\n/-- A white right tail remains white beyond a support bound of speed one. \
+-/\\ntheorem white_tail_evol {F : Nat \[RightArrow] Nat \[RightArrow] Bool} \
+(hF : IsR30 F) (t1 W : Nat)\\n    (hW : \[ForAll] p, W < p \[RightArrow] F t1 \
+p = false) :\\n    \[ForAll] n p, W + n < p \[RightArrow] F (t1 + n) p = \
+false := by\\n  intro n\\n  induction n with\\n  | zero => simpa only \
+[Nat.add_zero] using hW\\n  | succ n ih =>\\n      intro p hp\\n      obtain \
+\:27e8q, rfl\:27e9 : \[Exists] q, p = q + 1 := \:27e8p - 1, by omega\:27e9\\n \
+     rw [show t1 + (n + 1) = (t1 + n) + 1 by omega, hF,\\n        ih q (by \
+omega), ih (q + 1) (by omega), ih (q + 2) (by omega)]\\n      \
+rfl\\n\\nprivate theorem black_within_small : \[ForAll] j : Fin 12, \[ForAll] \
+s : Fin 3,\\n    \[Exists] r : Fin 12, ether3 (j.val + r.val + 1) s.val = \
+true := by decide +kernel\\n\\ntheorem ether_black_within (j s : Nat) :\\n    \
+\[Exists] r, r < 12 \[And] ether3 (j + r + 1) s = true := by\\n  obtain \
+\:27e8r, hr\:27e9 := black_within_small \:27e8j % 12, Nat.mod_lt _ (by \
+decide)\:27e9\\n    \:27e8s % 3, Nat.mod_lt _ (by decide)\:27e9\\n  refine \
+\:27e8r.val, r.isLt, ?_\:27e9\\n  have hc : ether3 (j + r.val + 1) s = ether3 \
+(j % 12 + r.val + 1) (s % 3) :=\\n    ether3_congr (by omega) (by omega)\\n  \
+rw [hc]\\n  exact hr\\n\\n/-- A finite white-tailed right half always has a \
+nearby defect from the ether. -/\\ntheorem white_tail_defect {F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s t1 W : Nat) \
+(hW : \[ForAll] p, W < p \[RightArrow] F t1 p = false) (n : Nat) :\\n    \
+\[Exists] p, p \[LessEqual] W + 12 + n \[And] F (t1 + n) p \[NotEqual] eth j0 \
+s p (t1 + n) := by\\n  obtain \:27e8r, hr, hblack\:27e9 := ether_black_within \
+(j0 + (W + n)) (t1 + n + s)\\n  refine \:27e8W + n + r + 1, by omega, \
+?_\:27e9\\n  have hf := white_tail_evol hF t1 W hW n (W + n + r + 1) (by \
+omega)\\n  have he : eth j0 s (W + n + r + 1) (t1 + n) = true := by\\n    \
+simpa only [eth, Nat.add_assoc] using hblack\\n  rw [hf, he]\\n  \
+decide\\n\\n/-- White tails, an infinite perturbation of the ether, also \
+erode any prefix. -/\\ntheorem white_tail_erosion {F : Nat \[RightArrow] Nat \
+\[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s t1 W k : Nat) (hk : 1 \
+\[LessEqual] k)\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] F t \
+0 = eth j0 s 0 t)\\n    (hW : \[ForAll] p, W < p \[RightArrow] F t1 p = \
+false) :\\n    \[Exists] t, t1 \[LessEqual] t \[And] t \[LessEqual] t1 + 3 * \
+(W + 12 - k) + 6 \[And]\\n      \[Exists] p, 1 \[LessEqual] p \[And] p \
+\[LessEqual] k \[And] F t p \[NotEqual] eth j0 s p t := by\\n  apply \
+erosion_bounded hF j0 s t1 (W + 12) k hk h0\\n  intro t ht\\n  have h := \
+white_tail_defect hF j0 s t1 W hW (t - t1)\\n  simpa only [Nat.add_sub_of_le \
+ht] using h\\n\\n/-- The first right column departs from the matching ether \
+arbitrarily late. -/\\ntheorem white_tail_often_departs {F : Nat \
+\[RightArrow] Nat \[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s t1 W : \
+Nat)\\n    (h0 : \[ForAll] t, t1 \[LessEqual] t \[RightArrow] F t 0 = eth j0 \
+s 0 t)\\n    (hW : \[ForAll] p, W < p \[RightArrow] F t1 p = false) :\\n    \
+\[ForAll] T, \[Exists] t, T \[LessEqual] t \[And] F t 1 \[NotEqual] eth j0 s \
+1 t := by\\n  intro T\\n  obtain \:27e8t, ht, _, p, hp, hpk, hne\:27e9 :=\\n  \
+  white_tail_erosion hF j0 s (t1 + T) (W + T) 1 (by decide)\\n      (fun t ht \
+=> h0 t (by omega)) (white_tail_evol hF t1 W hW T)\\n  have heq : p = 1 := by \
+omega\\n  subst heq\\n  exact \:27e8t, by omega, hne\:27e9\\n\\nend \
+Ruliology.CellularAutomata.Rule30WhiteTailErosion\\n\\nnamespace \
+Rule30Submission\\n\\nopen Ruliology.CellularAutomata\\nopen Rule30Ether \
+Rule30EtherThree\\n\\ntheorem erosion_bounded {F : Nat \[RightArrow] Nat \
+\[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s T R k : Nat) (hk : 1 \
+\[LessEqual] k)\\n    (h0 : \[ForAll] t, T \[LessEqual] t \[RightArrow] F t 0 \
+= eth j0 s 0 t)\\n    (hbound : \[ForAll] t, T \[LessEqual] t \[RightArrow] \
+\[Exists] p, p \[LessEqual] R + (t - T) \[And] F t p \[NotEqual] eth j0 s p \
+t) :\\n    \[Exists] t, T \[LessEqual] t \[And] t \[LessEqual] T + 3 * (R - \
+k) + 6 \[And]\\n      \[Exists] p, 1 \[LessEqual] p \[And] p \[LessEqual] k \
+\[And] F t p \[NotEqual] eth j0 s p t :=\\n  \
+Rule30WhiteTailErosion.erosion_bounded hF j0 s T R k hk h0 \
+hbound\\n\\ntheorem white_tail_erosion {F : Nat \[RightArrow] Nat \
+\[RightArrow] Bool} (hF : IsR30 F)\\n    (j0 s T W k : Nat) (hk : 1 \
+\[LessEqual] k)\\n    (h0 : \[ForAll] t, T \[LessEqual] t \[RightArrow] F t 0 \
+= eth j0 s 0 t)\\n    (hW : \[ForAll] p, W < p \[RightArrow] F T p = false) :\
+\\n    \[Exists] t, T \[LessEqual] t \[And] t \[LessEqual] T + 3 * (W + 12 - \
+k) + 6 \[And]\\n      \[Exists] p, 1 \[LessEqual] p \[And] p \[LessEqual] k \
+\[And] F t p \[NotEqual] eth j0 s p t :=\\n  \
+Rule30WhiteTailErosion.white_tail_erosion hF j0 s T W k hk h0 hW\\n\\ntheorem \
+white_tail_often_departs {F : Nat \[RightArrow] Nat \[RightArrow] Bool} (hF : \
+IsR30 F)\\n    (j0 s T W : Nat)\\n    (h0 : \[ForAll] t, T \[LessEqual] t \
+\[RightArrow] F t 0 = eth j0 s 0 t)\\n    (hW : \[ForAll] p, W < p \
+\[RightArrow] F T p = false) :\\n    \[ForAll] N, \[Exists] t, N \[LessEqual] \
+t \[And] F t 1 \[NotEqual] eth j0 s 1 t :=\\n  \
+Rule30WhiteTailErosion.white_tail_often_departs hF j0 s T W h0 hW\\n\\nend \
+Rule30Submission\\n\>\"", ",", 
+    RowBox[{"\"\<ProjectDir\>\"", "->", "$Rule30PrizeKit"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[5]:= ",
+ CellID->1274972605,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["LeanEnvironment",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Hue[0.6, 0.5, 0.8], 
+              DiskBox[{0, 0}]}, ImageSize -> 12], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Constants: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["45", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Kinds: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"  ", "\"  \"", 
+                    TemplateBox[{"30", "\" \"", 
+                    StyleBox["\"theorem\"", 
+                    GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+                    TemplateBox[{"15", "\" \"", 
+                    StyleBox["\"def\"", 
+                    GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+                   "RowWithSeparators"], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Hue[0.6, 0.5, 0.8], 
+              DiskBox[{0, 0}]}, ImageSize -> 12], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Constants: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["45", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Kinds: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TemplateBox[{"  ", "\"  \"", 
+                    TemplateBox[{"30", "\" \"", 
+                    StyleBox["\"theorem\"", 
+                    GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+                    TemplateBox[{"15", "\" \"", 
+                    StyleBox["\"def\"", 
+                    GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+                   "RowWithSeparators"], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Handle: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox["1", Bold, StripOnInput -> False], 
+                  "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Wolfram`LeanLink`LeanEnvironment[<|
+   "Ruliology.CellularAutomata.Rule30EtherThree.isB_cls" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.isB_cls", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.front_step" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.front_step", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.cls" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.cls", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.eth.eq_1" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.eth.eq_1", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.ne_eth" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.ne_eth", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.redge_add" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.redge_add", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.no_wall" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.no_wall", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.redge_step" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.redge_step", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.eth" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.eth", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.certAt" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.certAt", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.isBad" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.isBad", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.cert_all" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.cert_all", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.exists_least" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.exists_least", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.front_le_witness" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.front_le_witness", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.ether_black_within" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.ether_black_within",
+        "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_often_\
+departs" -> Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_often_\
+departs", "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.psiTab_le" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.psiTab_le", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.wallCfg" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.wallCfg", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.IsB" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.IsB", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_defect" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_defect", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.uC" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.uC", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "_private.LeanLinkTmp33396439576947493532x587392.0.Ruliology.\
+CellularAutomata.Rule30WhiteTailErosion.black_within_small" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "_private.LeanLinkTmp33396439576947493532x587392.0.Ruliology.\
+CellularAutomata.Rule30WhiteTailErosion.black_within_small", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.prefix_step" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.prefix_step", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Rule30Submission.white_tail_erosion" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Rule30Submission.white_tail_erosion", "Kind" -> "theorem", 
+       "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.run_bad" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.run_bad", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.ubit" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.ubit", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.stepGood" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.stepGood", 
+       "Kind" -> "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.front_le_redge" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.front_le_redge", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.eth_rule" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.eth_rule", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.run_bad_bounded" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.run_bad_bounded", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Rule30Submission.white_tail_often_departs" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Rule30Submission.white_tail_often_departs", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.erosion3_fin" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.erosion3_fin", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.wake_good" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.wake_good", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.psiF" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.psiF", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.REdge" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.REdge", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.erosion_bounded" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.erosion_bounded", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Rule30Submission.erosion_bounded" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Rule30Submission.erosion_bounded", "Kind" -> "theorem", 
+       "_Handle" -> 1|>], "Ruliology.CellularAutomata.Rule30EtherThree.Front" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.Front", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.rule_flip" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.rule_flip", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.nC" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.nC", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.psiF_le" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.psiF_le", "Kind" -> 
+       "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.psiTab" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.psiTab", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30EtherThree.dC" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> "Ruliology.CellularAutomata.Rule30EtherThree.dC", "Kind" -> 
+       "def", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_evol" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_evol", 
+       "Kind" -> "theorem", "_Handle" -> 1|>], 
+    "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_erosion" -> 
+    Wolfram`LeanLink`LeanTerm[<|
+      "Name" -> 
+       "Ruliology.CellularAutomata.Rule30WhiteTailErosion.white_tail_erosion",
+        "Kind" -> "theorem", "_Handle" -> 1|>], "_Handle" -> 1|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellLabel->"Out[5]= ",
+ CellID->332869178,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"]
+}, Open  ]],
+
+Cell["Formal statements and full kernel replay", "Section",
+ CellID->1967685850,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"],
+
+Cell["\<\
+The following checks replay the entire module, including the carried \
+dependency. The headline statements and their axioms are read directly from \
+the same evaluated Lean environment.\
+\>", "Text",
+ CellID->1044562475,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"rule30KernelCheck", "=", 
+   RowBox[{
+    RowBox[{
+    "rule30Submission", "[", "\"\<Rule30Submission.white_tail_erosion\>\"", 
+     "]"}], "[", "\"\<KernelCheck\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{"<|", 
+  RowBox[{
+   RowBox[{"\"\<FullModuleReplay\>\"", "->", "rule30KernelCheck"}], ",", "\n",
+    "  ", 
+   RowBox[{"\"\<Headlines\>\"", "->", 
+    RowBox[{"Association", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"name", "->", 
+        RowBox[{"<|", "\n", "    ", 
+         RowBox[{
+          RowBox[{"\"\<Type\>\"", "->", 
+           RowBox[{
+            RowBox[{"rule30Submission", "[", "name", "]"}], 
+            "[", "\"\<TypeForm\>\"", "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<Axioms\>\"", "->", 
+           RowBox[{
+            RowBox[{"rule30Submission", "[", "name", "]"}], 
+            "[", "\"\<Axioms\>\"", "]"}]}]}], "|>"}]}], ",", "\n", "    ", 
+       RowBox[{"{", 
+        RowBox[{"name", ",", 
+         RowBox[{"{", 
+          
+          RowBox[{"\"\<Rule30Submission.erosion_bounded\>\"", 
+           ",", "\"\<Rule30Submission.white_tail_erosion\>\"", ",", "\n", 
+           "      ", "\"\<Rule30Submission.white_tail_often_departs\>\""}], 
+          "}"}]}], "}"}]}], "]"}]}]}]}], "|>"}]}], "Input",
+ CellLabel->"In[6]:= ",
+ CellID->1772362660,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"FullModuleReplay\"\>", "\[Rule]", 
+    InterpretationBox[
+     RowBox[{
+      TagBox["Success",
+       "SummaryHead"], "[", 
+      DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+       "Ready"}, 
+       TemplateBox[{
+         PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SummaryBoxOpener"]], 
+                 ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                 None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                 "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               FrameBox[
+                StyleBox["\"\[Checkmark]\"", 
+                 Directive[
+                  RGBColor[
+                  0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+                  25], StripOnInput -> False], ContentPadding -> False, 
+                FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+                StripOnInput -> False], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"The kernel accepts all 182 declarations of \
+LeanLinkTmp33396439576947493532x587392.\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"LeanLinkTmp33396439576947493532x587392\"", 
+                    "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}], True -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SummaryBoxCloser"]], 
+                 ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                 None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                 "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               FrameBox[
+                StyleBox["\"\[Checkmark]\"", 
+                 Directive[
+                  RGBColor[
+                  0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+                  25], StripOnInput -> False], ContentPadding -> False, 
+                FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+                StripOnInput -> False], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"The kernel accepts all 182 declarations of \
+LeanLinkTmp33396439576947493532x587392.\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"LeanLinkTmp33396439576947493532x587392\"", 
+                    "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"],
+                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["182", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"KernelChecked\"", "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+        "SummaryPanel"],
+       DynamicModuleValues:>{}], "]"}],
+     Success[
+     "KernelChecked", <|
+      "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
+       "MessageParameters" -> {182, "LeanLinkTmp33396439576947493532x587392"},
+        "Module" -> "LeanLinkTmp33396439576947493532x587392", "Declarations" -> 
+       182|>],
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}], ",", 
+   RowBox[{"\<\"Headlines\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"Rule30Submission.erosion_bounded\"\>", "\[Rule]", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", 
+          "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \
+\[RightArrow] Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \
+\[RightArrow]\\n    \[ForAll] (j0 s T R k : \:2115),\\n      1 \[LessEqual] k \
+\[RightArrow]\\n        (\[ForAll] (t : \:2115), T \[LessEqual] t \
+\[RightArrow] F t 0 = Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s 0 \
+t) \[RightArrow]\\n          (\[ForAll] (t : \:2115), T \[LessEqual] t \
+\[RightArrow] \[Exists] p \[LessEqual] R + (t - T), F t p \[NotEqual] \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s p t) \[RightArrow]\\n    \
+        \[Exists] t,\\n              T \[LessEqual] t \[And]\\n               \
+ t \[LessEqual] T + 3 * (R - k) + 6 \[And]\\n                  \[Exists] p, 1 \
+\[LessEqual] p \[And] p \[LessEqual] k \[And] F t p \[NotEqual] \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s p t\"\>"}], ",", 
+         RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+          RowBox[{"{", 
+           
+           RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
+            ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}], ",", 
+      RowBox[{"\<\"Rule30Submission.white_tail_erosion\"\>", "\[Rule]", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", 
+          "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \
+\[RightArrow] Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \
+\[RightArrow]\\n    \[ForAll] (j0 s T W k : \:2115),\\n      1 \[LessEqual] k \
+\[RightArrow]\\n        (\[ForAll] (t : \:2115), T \[LessEqual] t \
+\[RightArrow] F t 0 = Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s 0 \
+t) \[RightArrow]\\n          (\[ForAll] (p : \:2115), W < p \[RightArrow] F T \
+p = false) \[RightArrow]\\n            \[Exists] t,\\n              T \
+\[LessEqual] t \[And]\\n                t \[LessEqual] T + 3 * (W + 12 - k) + \
+6 \[And]\\n                  \[Exists] p, 1 \[LessEqual] p \[And] p \
+\[LessEqual] k \[And] F t p \[NotEqual] \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s p t\"\>"}], ",", 
+         RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+          RowBox[{"{", 
+           
+           RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
+            ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}], ",", 
+      RowBox[{"\<\"Rule30Submission.white_tail_often_departs\"\>", "\[Rule]", 
+       
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"Type\"\>", 
+          "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \
+\[RightArrow] Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \
+\[RightArrow]\\n    \[ForAll] (j0 s T W : \:2115),\\n      (\[ForAll] (t : \
+\:2115), T \[LessEqual] t \[RightArrow] F t 0 = \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s 0 t) \[RightArrow]\\n    \
+    (\[ForAll] (p : \:2115), W < p \[RightArrow] F T p = false) \[RightArrow]\
+\\n          \[ForAll] (N : \:2115), \[Exists] t, N \[LessEqual] t \[And] F t \
+1 \[NotEqual] Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s 1 t\"\>"}],
+          ",", 
+         RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+          RowBox[{"{", 
+           
+           RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
+            ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[6]= ",
+ CellID->35498422,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The first new lemma removes the rightmost-defect premise. ",
+ Cell[BoxData[
+  RowBox[{"white_tail", "_evol"}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "1f908cf3-3c70-d55a-45af-25bdb50abfa0"],
+ " proves the support bound by induction; ",
+ Cell[BoxData[
+  RowBox[{"white_tail", "_defect"}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "5dac66ba-272d-3627-0b54-7fe452d99d0d"],
+ " uses the ether's spatial period to supply the general theorem's witness. \
+The final lemma restarts at an arbitrary later time to prove arbitrarily late \
+departures. These statements expose the remaining hypotheses, rather than \
+assuming any unproved finite-support or center-period reduction."
+}], "Text",
+ CellID->1384978530,ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Association", "@", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"name", "->", 
+     RowBox[{
+      RowBox[{"rule30Submission", "[", "\n", "  ", 
+       RowBox[{"\"\<Ruliology.CellularAutomata.Rule30WhiteTailErosion.\>\"", "<>",
+         "name"}], "]"}], "[", "\"\<TypeForm\>\"", "]"}]}], ",", "\n", "  ", 
+    RowBox[{"{", 
+     RowBox[{"name", ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<run_bad_bounded\>\"", ",", "\"\<white_tail_evol\>\"", 
+        ",", "\"\<white_tail_defect\>\""}], "}"}]}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[7]:= ",
+ CellID->1407158826,ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"run_bad_bounded\"\>", 
+    "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \[RightArrow] \
+Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \[RightArrow]\\n    \
+\[ForAll] {j0 s t1 R : \:2115},\\n      (\[ForAll] (t : \:2115), t1 \
+\[LessEqual] t \[RightArrow] F t 0 = \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s 0 t) \[RightArrow]\\n    \
+    (\[ForAll] (t : \:2115), t1 \[LessEqual] t \[RightArrow] \[Exists] p \
+\[LessEqual] R + (t - t1), F t p \[NotEqual] \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s p t) \[RightArrow]\\n    \
+      \[ForAll] (m t D : \:2115),\\n            t1 \[LessEqual] t \
+\[RightArrow]\\n              2 \[LessEqual] D \[RightArrow]\\n               \
+ Ruliology.CellularAutomata.Rule30EtherThree.Front F j0 s t D \
+\[RightArrow]\\n                  \
+Ruliology.CellularAutomata.Rule30EtherThree.IsB F j0 s t D \[RightArrow]\\n   \
+                 R + (t - t1) < D + 7 * m \[RightArrow]\\n                    \
+  \[Exists] n < m,\\n                        \[Exists] D',\\n                 \
+         Ruliology.CellularAutomata.Rule30EtherThree.Front F j0 s (t + n + 1) \
+D' \[And]\\n                            \
+\[Not]Ruliology.CellularAutomata.Rule30EtherThree.IsB F j0 s (t + n + 1) D' \
+\[And] 2 \[LessEqual] D'\"\>"}], ",", 
+   RowBox[{"\<\"white_tail_evol\"\>", 
+    "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \[RightArrow] \
+Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \[RightArrow]\\n    \
+\[ForAll] (t1 W : \:2115), (\[ForAll] (p : \:2115), W < p \[RightArrow] F t1 \
+p = false) \[RightArrow] \[ForAll] (n p : \:2115), W + n < p \[RightArrow] F \
+(t1 + n) p = false\"\>"}], ",", 
+   RowBox[{"\<\"white_tail_defect\"\>", 
+    "\[Rule]", "\<\"\[ForAll] {F : \:2115 \[RightArrow] \:2115 \[RightArrow] \
+Bool},\\n  Ruliology.CellularAutomata.Rule30Ether.IsR30 F \[RightArrow]\\n    \
+\[ForAll] (j0 s t1 W : \:2115),\\n      (\[ForAll] (p : \:2115), W < p \
+\[RightArrow] F t1 p = false) \[RightArrow]\\n        \[ForAll] (n : \:2115), \
+\[Exists] p \[LessEqual] W + 12 + n, F (t1 + n) p \[NotEqual] \
+Ruliology.CellularAutomata.Rule30EtherThree.eth j0 s p (t1 + n)\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[7]= ",
+ CellID->1138490425,ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10"]
+}, Open  ]],
+
+Cell["What remains open", "Section",
+ CellID->1609367578,ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63"],
+
+Cell[TextData[{
+ "The prize's center column is not an ether-driven boundary supplied by this \
+theorem. No proof of ",
+ Cell[BoxData["Q001"], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "4ebf3687-f906-130d-7644-afe0f8b37e57"],
+ ", ",
+ Cell[BoxData[
+  RowBox[{"C3w", 
+   RowBox[{"(", "011", ")"}]}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "65de4a87-3471-cd9f-13e6-63e1bd0597e5"],
+ ", or any center-period exclusion is obtained. For arbitrary infinite right \
+sides, the bounded defect-witness premise is not established. Finding such a \
+premise where the full coupled problem requires it is additional mathematical \
+work. Local verification of this essay is not a Prize Committee decision or \
+an official submission status."
+}], "Text",
+ CellID->1541450781,ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0"],
+
+Cell["References", "Section",
+ CellID->1657269721,ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4"],
+
+Cell[TextData[{
+ "Luis Perez Morales and Claude (Fable 5.1), ",
+ ButtonBox["The Period-3 Ether Erodes",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-\
+20261024-1fc962"], None}],
+ ", ",
+ ButtonBox["kit PR #10",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/WolframInstitute/Rule30PrizeKit/pull/10"], 
+    None}],
+ "."
+}], "Item",
+ CellID->1140508347,ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25"],
+
+Cell[TextData[{
+ "Troy Lowry with OpenAI Codex, ",
+ ButtonBox["white-tail extension, kit PR #11",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/WolframInstitute/Rule30PrizeKit/pull/11"], 
+    None}],
+ "."
+}], "Item",
+ CellID->496109794,ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78"],
+
+Cell[TextData[{
+ ButtonBox["Reference kit at 2f63afd",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/WolframInstitute/Rule30PrizeKit/tree/\
+2f63afda261888e04ec57237290e723190914a1d"], None}],
+ ", including the ether definition and unchanged checker."
+}], "Item",
+ CellID->108435171,ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1"]
+},
+LightDark->"Light",
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[560, 20, 143, 1, 70, "Title",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+ CellID->874461601],
+Cell[705, 23, 138, 1, 70, "Author",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+ CellID->36768919],
+Cell[845, 26, 1252, 17, 70, "Abstract",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+ CellID->1699946459],
+Cell[2083, 45, 120, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+ CellID->1535504786],
+Cell[2205, 48, 365, 6, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+ CellID->1208482393],
+Cell[2567, 56, 191, 4, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+ CellID->28909615],
+Cell[2757, 62, 729, 17, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+ CellID->193832008],
+Cell[3472, 81, 320, 5, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+ CellID->684317082],
+Cell[CellGroupData[{
+Cell[3812, 90, 629, 17, 70, "Input",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
+ CellID->24617741],
+Cell[4427, 109, 1648, 34, 70, "Output",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
+ CellID->1538319232]
+}, Open  ]],
+Cell[6056, 146, 127, 1, 70, "Section",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
+ CellID->1392207227],
+Cell[6185, 149, 580, 9, 70, "Text",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
+ CellID->705466992],
+Cell[6759, 160, 818, 14, 70, "Text",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
+ CellID->1350516518],
+Cell[7566, 176, 420, 7, 70, "Text",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
+ CellID->907546795],
+Cell[7982, 185, 123, 1, 70, "Section",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
+ CellID->814772321],
+Cell[8107, 188, 392, 6, 70, "Text",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
+ CellID->1054628905],
+Cell[CellGroupData[{
+Cell[8518, 198, 3052, 86, 70, "Input",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
+ CellID->1347158791],
+Cell[11487, 286, 2125, 42, 70, "Output",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
+ CellID->978705560]
+}, Open  ]],
+Cell[13585, 331, 131, 1, 70, "Section",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
+ CellID->17830494],
+Cell[13718, 334, 568, 8, 70, "Text",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
+ CellID->1589986527],
+Cell[CellGroupData[{
+Cell[14303, 346, 16153, 327, 70, "Input",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
+ CellID->428691732],
+Cell[30132, 675, 11349, 194, 70, "Output",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
+ CellID->1641250213]
+}, Open  ]],
+Cell[41302, 872, 113, 1, 70, "Section",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
+ CellID->67888809],
+Cell[41417, 875, 618, 11, 70, "Text",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
+ CellID->1432876021],
+Cell[42027, 888, 338, 8, 70, "Input",ExpressionUUID->"6ea251ed-865f-e03c-1652-48b733ebb306",
+ CellID->876231958],
+Cell[CellGroupData[{
+Cell[42382, 900, 42674, 556, 70, "Input",ExpressionUUID->"25a0bfbe-b1d4-2428-535f-36fbc0668f72",
+ CellID->1274972605],
+Cell[84503, 1458, 15470, 301, 70, "Output",ExpressionUUID->"04786d0e-016a-d127-2c07-8568b01ca00d",
+ CellID->332869178]
+}, Open  ]],
+Cell[99687, 1762, 136, 1, 70, "Section",ExpressionUUID->"2d15b43a-cd49-5244-5b2a-2e67e4fc20ae",
+ CellID->1967685850],
+Cell[99825, 1765, 290, 5, 70, "Text",ExpressionUUID->"2d1ff276-b82a-c3ca-5b24-f43039dc9110",
+ CellID->1044562475],
+Cell[CellGroupData[{
+Cell[100135, 1774, 1426, 35, 70, "Input",ExpressionUUID->"14fd1512-f616-8834-3c82-8d5f83a0db1e",
+ CellID->1772362660],
+Cell[101529, 1811, 10273, 197, 70, "Output",ExpressionUUID->"66c67103-72a1-9427-0efe-696d0755ff0d",
+ CellID->35498422]
+}, Open  ]],
+Cell[111620, 2011, 837, 16, 70, "Text",ExpressionUUID->"48c794f4-84f6-2bfc-78fc-0dbe2c8379c6",
+ CellID->1384978530],
+Cell[CellGroupData[{
+Cell[112466, 2031, 675, 16, 70, "Input",ExpressionUUID->"58ee7ecb-1370-1005-0896-7795a605636f",
+ CellID->1407158826],
+Cell[113128, 2049, 2429, 38, 70, "Output",ExpressionUUID->"11d04a92-cbef-a8a5-47e0-63dfed9bfa8f",
+ CellID->1138490425]
+}, Open  ]],
+Cell[115534, 2090, 113, 1, 70, "Section",ExpressionUUID->"7d9821c9-0e61-bc6d-2ba7-b893ab1506b7",
+ CellID->1609367578],
+Cell[115649, 2093, 874, 18, 70, "Text",ExpressionUUID->"3181a460-bc62-f1ee-67be-3e4a3514c334",
+ CellID->1541450781],
+Cell[116508, 2113, 106, 1, 70, "Section",ExpressionUUID->"3937e1d4-04c3-e55a-68cc-f89ead77cfa0",
+ CellID->1657269721],
+Cell[116616, 2116, 514, 15, 70, "Item",ExpressionUUID->"6b45e796-37a7-eecc-197a-fed04253b416",
+ CellID->1140508347],
+Cell[117118, 2133, 324, 9, 70, "Item",ExpressionUUID->"5e187950-8ca2-2ab2-0638-711a25577898",
+ CellID->496109794],
+Cell[117436, 2144, 369, 8, 70, "Item",ExpressionUUID->"250a2d7c-9b81-05b0-5309-c5261e346f9a",
+ CellID->108435171]
+}
+]
+*)
+
+(* End of internal cache information *)
