@@ -1,0 +1,81 @@
+{
+  "AllPassed": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "optimizer_used": false,
+  "forward_update": "independent cellwise Rule 30",
+  "features": "independent scalar maxima with Kadane subarray scans",
+  "results": [
+    {
+      "file": "paired-gap-rank-probe.json",
+      "transition_domain": "nested",
+      "features": 782,
+      "certificate_terms": 67,
+      "AllPassed": true,
+      "minimum_gain": "0",
+      "positive_weighted_reward": "47315719989639191132438157851058959992",
+      "lags": [],
+      "seed_time_range": null
+    },
+    {
+      "file": "restart-gap-rank-probe.json",
+      "transition_domain": "restart",
+      "features": 782,
+      "certificate_terms": 118,
+      "AllPassed": true,
+      "minimum_gain": "0",
+      "positive_weighted_reward": "6321320837951906680779367218641790702860035703757233731315133322261534184110501361077777202",
+      "lags": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        30
+      ],
+      "seed_time_range": null
+    },
+    {
+      "file": "seed-gap-rank-probe.json",
+      "transition_domain": "seed",
+      "features": 782,
+      "certificate_terms": 87,
+      "AllPassed": true,
+      "minimum_gain": "0",
+      "positive_weighted_reward": "19204243740589622019599341379179085241815368917239541082116323653971989833469212",
+      "lags": [
+        2,
+        3,
+        4,
+        8,
+        16,
+        32
+      ],
+      "seed_time_range": [
+        1,
+        255
+      ]
+    }
+  ]
+}

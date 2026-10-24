@@ -132,3 +132,9 @@ The remaining gap is an all-length descent or another structural argument
 for every possible eventual period and transient. No finite training fit,
 random validation batch, finite prefix realization, or bounded-period check
 fills that gap.
+
+A later [gap-maximum experiment](paired-gap-rank-notes.md) accounts for white
+gap lengths using prefix, suffix and subarray maxima. Exact arithmetic
+certificates reject that fixed nonnegative cone even on actual single-seed
+restart pairs. It does not repair the one-step descent condition, and it
+does not rule out ranks sampled at longer return intervals.

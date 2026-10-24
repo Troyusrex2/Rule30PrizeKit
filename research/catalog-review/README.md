@@ -27,11 +27,11 @@ results. Its [complete core build](pr1-current-reference-build-report.json)
 passes for all 112 source modules. The 25 contributed proof sources are
 unchanged, their compiled artifacts remain byte-identical to the freshly
 replayed artifacts, and the import conflict with upstream has been resolved.
-The README credits AIOvernight's stronger `10111` threshold of nine.
+The README credits AIOvernight's stronger single-seed `10111` threshold of nine.
 
 The [previous final replay](pr1-report.json) at `3b8cae7` and
 [earlier build/replay history](pr1-build-and-replay-history.json)
-records first-build resource measurements and explicitly identifies reused,
+record first-build resource measurements and explicitly identify reused,
 byte-identical proof artifacts during intermediate wrapper fixes. The
 [separate measurements](pr1-build-measurements.json) force all 21 main modules
 to rebuild; each regenerated `.olean` is byte-identical to its verified input.
