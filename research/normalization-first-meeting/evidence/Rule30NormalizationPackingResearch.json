@@ -1,0 +1,210 @@
+{
+  "module": "Rule30NormalizationPackingResearch",
+  "source_sha256": "c27119fec70f3312301c2cdd31451e0e0c086cb9c5c7e05f1348820bbe6e386f",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "compile_seconds": 6.25,
+  "replay_seconds": 9.891,
+  "numeric_normalizer_equivalence_proved": false,
+  "infinite_trace_completeness_proved": false,
+  "full_problem_solved": false,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30NormalizationMachineResearch.View",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.bool_nat_le",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.relStep_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.symbol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.symbol_bits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.symbol_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.tailNext_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.Valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.decode_encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.e0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.e1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.e2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.ha",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.hb",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30NormalizationMachineResearch.View.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30NormalizationMachineResearch.View.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.View.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.mk.sizeOf_spec",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.decode_encode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.symbol_lt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.symbol_bits",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.relStep_lt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30NormalizationPackingResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 43,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

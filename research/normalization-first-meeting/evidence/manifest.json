@@ -1,0 +1,166 @@
+{
+  "verdict": "pass",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "modules": [
+    {
+      "module": "Rule30NormalizationMachineResearch",
+      "source_sha256": "d44cd1b3afd2f0edfc66213d2c8b069fd1ee5ba4cb65ee64646b5294bb788a71",
+      "constants": 54,
+      "headlines": [
+        "checked"
+      ],
+      "compile_seconds": 59.391,
+      "replay_seconds": 58.797
+    },
+    {
+      "module": "Rule30NormalizationMachineSoundnessResearch",
+      "source_sha256": "3625c215c6b7296dbd230c703581c0fca9208ed124375d644270a7a7a9761519",
+      "constants": 23,
+      "headlines": [
+        "initial_member",
+        "step_member",
+        "run_member",
+        "all_input_lengths_safe"
+      ],
+      "compile_seconds": 5.735,
+      "replay_seconds": 9.922
+    },
+    {
+      "module": "Rule30NormalizationWindowResearch",
+      "source_sha256": "a4e7ff24c95f144fea63cc4ddfdec6ec4c3ef21b0669acb2f7ab6f6bc3622bc9",
+      "constants": 43,
+      "headlines": [
+        "Phi_testBit",
+        "first_exact",
+        "second_exact",
+        "history_succ"
+      ],
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.906
+    },
+    {
+      "module": "Rule30NormalizationPackingResearch",
+      "source_sha256": "c27119fec70f3312301c2cdd31451e0e0c086cb9c5c7e05f1348820bbe6e386f",
+      "constants": 43,
+      "headlines": [
+        "View.decode_encode",
+        "symbol_lt",
+        "symbol_bits",
+        "relStep_lt"
+      ],
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.891
+    },
+    {
+      "module": "Rule30NormalizationStreamResearch",
+      "source_sha256": "0fe1530510b45616e838ebd164e9cf207f02f56588845dc32440953dc3733613",
+      "constants": 43,
+      "headlines": [
+        "View.encode_advance",
+        "View.advance_valid",
+        "View.run_encode",
+        "safe_after_input"
+      ],
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.922
+    },
+    {
+      "module": "Rule30NormalizationActualInputResearch",
+      "source_sha256": "5660f8002b5e54b215212ffc7f0285da01e8a02b978197c4ccf386ddc9392e37",
+      "constants": 48,
+      "headlines": [
+        "centerCode_succ",
+        "actualView_advance",
+        "actualInput_run",
+        "actual_input_safe"
+      ],
+      "compile_seconds": 6.234,
+      "replay_seconds": 9.891
+    },
+    {
+      "module": "Rule30NormalizationRelationResearch",
+      "source_sha256": "596dddb87ade64ecc62d3a3d68857deca9a488c810c27003054d2c41edeb7c47",
+      "constants": 71,
+      "headlines": [
+        "relationRun_code",
+        "identAt_iff",
+        "validAt_iff",
+        "relationRun_accept_iff"
+      ],
+      "compile_seconds": 6.766,
+      "replay_seconds": 10.422
+    },
+    {
+      "module": "Rule30NormalizationCommonCutResearch",
+      "source_sha256": "5849b02d4c9f39ffbf0b1e8b21f6de40b97d32428aacc7c764946d919f58a0f3",
+      "constants": 50,
+      "headlines": [
+        "flush_actual",
+        "View.accept_encode",
+        "relationRun_full_iff",
+        "two_step_common_cut"
+      ],
+      "compile_seconds": 6.781,
+      "replay_seconds": 10.422
+    },
+    {
+      "module": "Rule30NormalizationTailLanguageResearch",
+      "source_sha256": "304045d1005f3c2738488e178d31ca5d804a104be051c81b4991f039732fe886",
+      "constants": 67,
+      "headlines": [
+        "tailFold_accept_iff",
+        "tailRun_accept_iff",
+        "rowRelated_iff_stripeRelated",
+        "two_step_stripe_related"
+      ],
+      "compile_seconds": 6.25,
+      "replay_seconds": 9.922
+    },
+    {
+      "module": "Rule30NormalizationFirstMeetingResearch",
+      "source_sha256": "baa8ca9791526909a50fdf365d52e79b6dd55213f06730c235bc95426a720bb9",
+      "constants": 20,
+      "headlines": [
+        "stripe_meeting_is_early",
+        "no_delayed_stripe_meeting"
+      ],
+      "compile_seconds": 6.297,
+      "replay_seconds": 9.906
+    },
+    {
+      "module": "Rule30StripePreservationResearch",
+      "source_sha256": "2b9517bc1c001618ec32f48313c99110b3185a9c9a9dfe1318711d6e157e2ad6",
+      "constants": 22,
+      "headlines": [
+        "preservesTwo_pool",
+        "StripeRelated.center_pair",
+        "preservesTwo_after_actual",
+        "stripe_related_preserves_two"
+      ],
+      "compile_seconds": 26.047,
+      "replay_seconds": 29.687
+    },
+    {
+      "module": "Rule30StripeTraceResearch",
+      "source_sha256": "22db5d24305c98b29b54b2f0fc03ef8ad3b4beb0e9da2f214662985ceb036e4d",
+      "constants": 8,
+      "headlines": [
+        "phiRows_add",
+        "stripe_related_same_trace",
+        "stripe_related_same_prefix",
+        "eventually_stripe_iff_early"
+      ],
+      "compile_seconds": 6.266,
+      "replay_seconds": 9.906
+    }
+  ],
+  "all_size_actual_row_stripe_implication_proved": true,
+  "all_finite_times_early_stripe_meeting_proved": true,
+  "stripe_relation_preserved_every_two_steps_proved": true,
+  "stripe_relation_implies_equal_entire_center_trace_proved": true,
+  "numeric_normalizer_equivalence_proved": false,
+  "infinite_trace_completeness_proved": false,
+  "full_problem_solved": false
+}

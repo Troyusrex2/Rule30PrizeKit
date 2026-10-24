@@ -1,0 +1,101 @@
+{
+  "module": "Rule30NormalizationFirstMeetingResearch",
+  "source_sha256": "baa8ca9791526909a50fdf365d52e79b6dd55213f06730c235bc95426a720bb9",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "compile_seconds": 6.297,
+  "replay_seconds": 9.906,
+  "numeric_normalizer_equivalence_proved": false,
+  "infinite_trace_completeness_proved": false,
+  "full_problem_solved": false,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.SameCenterPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.no_delayed_stripe_meeting",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.phiRows",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.sameCenterPrefix_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_meeting_is_early",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.phiRows.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_meeting_is_early",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.no_delayed_stripe_meeting",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30NormalizationFirstMeetingResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 20,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

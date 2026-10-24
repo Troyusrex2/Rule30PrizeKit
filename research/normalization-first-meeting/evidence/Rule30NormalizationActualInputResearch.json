@@ -1,0 +1,212 @@
+{
+  "module": "Rule30NormalizationActualInputResearch",
+  "source_sha256": "5660f8002b5e54b215212ffc7f0285da01e8a02b978197c4ccf386ddc9392e37",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "compile_seconds": 6.234,
+  "replay_seconds": 9.891,
+  "numeric_normalizer_equivalence_proved": false,
+  "infinite_trace_completeness_proved": false,
+  "full_problem_solved": false,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.actualInput",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualInput_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.actualLetter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.actualView",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualView_advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualView_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actual_input_safe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.centerCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_allow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_marker",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.relationRun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.View.run_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualInput.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualLetter.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualView.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.initialView.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.nextCode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.relationRun.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.relationRun.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.relationRun.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30NormalizationMachineResearch.relationRun.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.centerCode_succ",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualView_advance",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actualInput_run",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.actual_input_safe",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30NormalizationActualInputResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 48,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

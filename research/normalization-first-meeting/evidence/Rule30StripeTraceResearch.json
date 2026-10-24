@@ -1,0 +1,105 @@
+{
+  "module": "Rule30StripeTraceResearch",
+  "source_sha256": "22db5d24305c98b29b54b2f0fc03ef8ad3b4beb0e9da2f214662985ceb036e4d",
+  "kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "compile_seconds": 6.266,
+  "replay_seconds": 9.906,
+  "numeric_normalizer_equivalence_proved": false,
+  "infinite_trace_completeness_proved": false,
+  "full_problem_solved": false,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.eventually_stripe_iff_early",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows_two_start",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_related_same_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_related_same_trace",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.phiRows_add",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_related_same_trace",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.stripe_related_same_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30NormalizationMachineResearch.eventually_stripe_iff_early",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30StripeTraceResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
