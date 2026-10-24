@@ -697,6 +697,30 @@ theorem. At clock 128 it stops at two million states, leaving 81,785 queued;
 that run is incomplete and supports no all-width conclusion. Neither experiment
 concerns the vertical center's eventual periodicity.
 
+## The moving-frame coordinate must remain explicit
+
+`Rule30MovingFrameBarrierResearch.lean` verifies the packed update
+`T(a) = a XOR ((a << 1) OR (a << 2))` against the official Rule 30 evolution.
+Its index counts from the moving **right** edge: bit `k` at time `t` is the
+physical cell at `t-k`. Consequently the vertical center is bit `t` of `T^t(1)`.
+This is a known reencoding, not a new nonperiodicity theorem.
+
+The module gives an unbounded countermodel to a tempting inference from this
+description. For the binary counter `1+2t`, bit zero is permanently black, every
+other fixed bit has an exact power-of-two period growing without bound, and
+those least periods remain minimal after any transient. Nevertheless bit `t`
+is white at every time `t >= 3`. Thus fixed-index orbit-period facts alone do
+not imply nonperiodicity at the increasing index. The countermodel is not a
+Rule 30 orbit and does not rule out arguments using additional Rule 30 facts.
+
+All 87 generated declarations and nine headlines passed full kernel replay in
+the [working catalog](moving-frame-evidence/catalog/report.json) and the
+[pinned reference](moving-frame-evidence/pinned/report.json), with unchanged
+checkers and no new axioms. The [independent Wolfram controls](wolfram-moving-frame.json)
+compare 257 complete rows with built-in `CellularAutomaton[30, ...]`, eight
+binary-counter periods, and 1,022 odd-counter diagonal values. All pass.
+No novelty or prize claim is made for this diagnostic.
+
 ## Reproduction commands
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -734,6 +758,8 @@ python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parit
 python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed --reward free-flip --spatial-base 3/2
 python research/overnight/prefix_feature_obstruction_controls.py
 python research/overnight/aged_prefix_rank_probe.py --max-width 20
+python research/overnight/verify_moving_frame.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_moving_frame.py --lake /path/to/lake
 python research/overnight/temporal_profile_probe.py --clock 64
 python research/overnight/controlled_response_controls.py
 python research/overnight/controlled_response_normal_form.py --max-width 22
