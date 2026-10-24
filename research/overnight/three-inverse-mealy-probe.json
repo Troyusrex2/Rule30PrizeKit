@@ -1,0 +1,1479 @@
+{
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "C3w_proved": false,
+  "finite_encoder_proved": false,
+  "symbols": 16,
+  "controls": {
+    "independent_forward_checks": 64,
+    "causal_prefix_checks": 64,
+    "AllPassed": true
+  },
+  "results": [
+    {
+      "continuation_symbols": 1,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 8,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 16,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 22,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            16,
+            20,
+            22,
+            24,
+            26,
+            28,
+            32,
+            34,
+            36,
+            40
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 30,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            12,
+            18,
+            20,
+            24,
+            28,
+            30,
+            32,
+            38,
+            40,
+            46,
+            48
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 32,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            32,
+            36,
+            46,
+            48,
+            50
+          ]
+        },
+        {
+          "prefix_symbols": 9,
+          "distinct_continuation_functions": 32,
+          "prefixes": 512,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            40,
+            46
+          ]
+        },
+        {
+          "prefix_symbols": 10,
+          "distinct_continuation_functions": 32,
+          "prefixes": 1024,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            6,
+            8,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            46
+          ]
+        },
+        {
+          "prefix_symbols": 11,
+          "distinct_continuation_functions": 32,
+          "prefixes": 2048,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            36,
+            40,
+            44,
+            46,
+            48,
+            64,
+            68,
+            86
+          ]
+        },
+        {
+          "prefix_symbols": 12,
+          "distinct_continuation_functions": 32,
+          "prefixes": 4096,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            48,
+            56,
+            64,
+            72
+          ]
+        },
+        {
+          "prefix_symbols": 13,
+          "distinct_continuation_functions": 32,
+          "prefixes": 8192,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            38,
+            40,
+            44,
+            48,
+            56,
+            64,
+            72
+          ]
+        },
+        {
+          "prefix_symbols": 14,
+          "distinct_continuation_functions": 32,
+          "prefixes": 16384,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            16,
+            18,
+            20,
+            24,
+            40,
+            44,
+            48,
+            56,
+            64,
+            76,
+            86,
+            88,
+            120
+          ]
+        },
+        {
+          "prefix_symbols": 15,
+          "distinct_continuation_functions": 32,
+          "prefixes": 32768,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            16,
+            24,
+            32,
+            36,
+            40,
+            56,
+            72,
+            80,
+            96,
+            116,
+            120,
+            128,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "continuation_symbols": 2,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 9,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 17,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 32,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 59,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 109,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 9,
+          "distinct_continuation_functions": 198,
+          "prefixes": 512,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 10,
+          "distinct_continuation_functions": 355,
+          "prefixes": 1024,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            6,
+            8,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44
+          ]
+        },
+        {
+          "prefix_symbols": 11,
+          "distinct_continuation_functions": 637,
+          "prefixes": 2048,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48
+          ]
+        },
+        {
+          "prefix_symbols": 12,
+          "distinct_continuation_functions": 1112,
+          "prefixes": 4096,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48,
+            56
+          ]
+        },
+        {
+          "prefix_symbols": 13,
+          "distinct_continuation_functions": 1976,
+          "prefixes": 8192,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            48,
+            56,
+            64
+          ]
+        },
+        {
+          "prefix_symbols": 14,
+          "distinct_continuation_functions": 3418,
+          "prefixes": 16384,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            40,
+            44,
+            48,
+            56,
+            64,
+            68,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "continuation_symbols": 3,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 9,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 17,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 32,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 59,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 110,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 9,
+          "distinct_continuation_functions": 199,
+          "prefixes": 512,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 10,
+          "distinct_continuation_functions": 357,
+          "prefixes": 1024,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            6,
+            8,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44
+          ]
+        },
+        {
+          "prefix_symbols": 11,
+          "distinct_continuation_functions": 639,
+          "prefixes": 2048,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48
+          ]
+        },
+        {
+          "prefix_symbols": 12,
+          "distinct_continuation_functions": 1137,
+          "prefixes": 4096,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48,
+            56
+          ]
+        },
+        {
+          "prefix_symbols": 13,
+          "distinct_continuation_functions": 2032,
+          "prefixes": 8192,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            48,
+            56,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "continuation_symbols": 4,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 9,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 17,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 32,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 59,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 110,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 9,
+          "distinct_continuation_functions": 199,
+          "prefixes": 512,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 10,
+          "distinct_continuation_functions": 357,
+          "prefixes": 1024,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            6,
+            8,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44
+          ]
+        },
+        {
+          "prefix_symbols": 11,
+          "distinct_continuation_functions": 639,
+          "prefixes": 2048,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48
+          ]
+        },
+        {
+          "prefix_symbols": 12,
+          "distinct_continuation_functions": 1137,
+          "prefixes": 4096,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            18,
+            20,
+            24,
+            32,
+            36,
+            38,
+            40,
+            44,
+            46,
+            48,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "continuation_symbols": 6,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 9,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 17,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 32,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 59,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 110,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 9,
+          "distinct_continuation_functions": 199,
+          "prefixes": 512,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        },
+        {
+          "prefix_symbols": 10,
+          "distinct_continuation_functions": 357,
+          "prefixes": 1024,
+          "representative_prefixes_first_16": [
+            0,
+            4,
+            6,
+            8,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38,
+            40,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "continuation_symbols": 8,
+      "levels": [
+        {
+          "prefix_symbols": 0,
+          "distinct_continuation_functions": 1,
+          "prefixes": 1,
+          "representative_prefixes_first_16": [
+            0
+          ]
+        },
+        {
+          "prefix_symbols": 1,
+          "distinct_continuation_functions": 2,
+          "prefixes": 2,
+          "representative_prefixes_first_16": [
+            0,
+            1
+          ]
+        },
+        {
+          "prefix_symbols": 2,
+          "distinct_continuation_functions": 3,
+          "prefixes": 4,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "prefix_symbols": 3,
+          "distinct_continuation_functions": 5,
+          "prefixes": 8,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "prefix_symbols": 4,
+          "distinct_continuation_functions": 9,
+          "prefixes": 16,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15
+          ]
+        },
+        {
+          "prefix_symbols": 5,
+          "distinct_continuation_functions": 17,
+          "prefixes": 32,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
+        },
+        {
+          "prefix_symbols": 6,
+          "distinct_continuation_functions": 32,
+          "prefixes": 64,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "prefix_symbols": 7,
+          "distinct_continuation_functions": 59,
+          "prefixes": 128,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "prefix_symbols": 8,
+          "distinct_continuation_functions": 110,
+          "prefixes": 256,
+          "representative_prefixes_first_16": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            38
+          ]
+        }
+      ]
+    }
+  ],
+  "all_input_words_enumerated": 65536,
+  "seconds": 1.1753465999936452
+}

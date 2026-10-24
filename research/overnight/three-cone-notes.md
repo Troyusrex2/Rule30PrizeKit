@@ -154,3 +154,47 @@ variation estimate, a termination invariant with additional structure, or
 a direct trace-separation proof. The certificate method alone supplies none
 of those steps, and solving this period-three constraint alone would still
 not settle every possible eventual period.
+
+## Two further simplifications tested
+
+`three_inverse_mealy_probe.py` treats the inverse construction as a causal
+code: one free temporal bit is read, and three initial spatial bits are
+emitted. Two prefixes require different states in a deterministic Mealy
+encoder if some common continuation produces different subsequent output.
+The script compares the complete continuation functions, rather than just
+one selected continuation. With sixteen free bits exhaustively enumerated,
+two-symbol continuations distinguish **3,418** residual functions after
+fourteen input symbols. Four-symbol continuations distinguish **1,137**
+after twelve input symbols. One-symbol continuations reach only 32 distinct
+functions. See [the finite report](three-inverse-mealy-probe.json).
+
+These are exact finite lower bounds on states for an encoder valid on those
+prefixes. They reject a small-state simplification. They do **not** prove
+that no finite-state encoder exists: each fixed continuation length permits
+only finitely many signatures. Sixty-four independently simulated forward
+traces and sixty-four causal-prefix controls pass. No claim here has been
+kernel certified.
+
+`three_white_block_probe.py` checks another proposed simplification: a
+spatial run of empty three-cell blocks might permit at most one or two
+changes in its associated free temporal modes. Exhaustive enumeration of
+all 65,536 sixteen-bit mode words disproves those proposed bounds. The mode
+word **10890** reconstructs the initial row **246298651725408** (both packed
+least-significant bit first). Its zero blocks at indices **11 through 14**
+correspond to four alternating modes, hence **three internal changes**.
+There is also a change on entering the run; this latter transition is not
+counted as internal. Independent scalar and packed forward simulations
+reproduce the entire prescribed 48-bit trace.
+
+The [report](three-white-block-probe.json) also records the maximum of
+`variation - 2 * number_of_nonzero_blocks` over these same finite words:
+**-5**. This does not establish a uniform variation estimate. Charging
+changes separately to each empty gap is invalid; any such proof needs to
+account for information carried from preceding nonempty blocks.
+
+Reproduce the finite diagnostics from the repository root:
+
+```powershell
+python research/overnight/three_inverse_mealy_probe.py --symbols 16 --continuations 1 2 3 4 --output research/overnight/three-inverse-mealy-probe.json
+python research/overnight/three_white_block_probe.py --symbols 16 --output research/overnight/three-white-block-probe.json
+```
