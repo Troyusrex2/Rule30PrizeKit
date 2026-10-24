@@ -79,5 +79,68 @@ graph certificate. Even an exact certificate would still require a Lean
 proof of graph coverage and of the connection to `C3w w011` before a
 period-three exclusion could be claimed. No ranking has been verified.
 
+The incremental runs use HiGHS 1.15.1 through an isolated optional `highspy`
+installation; the system Python environment is not modified. The binding
+reuses a simplex basis when adding cuts. A toy incremental update and all
+reported history reconstructions pass. The newer run imports every history
+from the earlier one before retirement; subset checks are saved in the
+retired reports. An intentionally terminated superseded job is not a solver
+failure or an infeasibility result.
+
+## Bulk-flow diagnostics: exact arithmetic, still not Lean verified
+
+Finite-word cuts alone can miss an obstruction which appears when a spatial
+cycle is repeated arbitrarily often. The cycle oracle found 64 positive
+cycles in a fitted score and completed one to a scalar-checked finite
+counterexample. Adding cycle inequalities made the fitted norm grow sharply;
+the resulting solver again reached its time limit, without an infeasibility
+certificate.
+
+An exact integer calculation provides a stronger diagnostic. Every one of
+the 16,384 fourteen-bit input windows is evolved through six bulk Rule 30
+steps and projected into the history graph, at all twelve spatial phases
+and all eight head-mode triples. The resulting 1,572,864 transition instances
+give positive weight to all 115,968 bulk edges. Inflow equals outflow at every
+vertex, the total feature gain is exactly zero, and there is no flip charge
+on these transitions. Consequently the proposed bulk rank inequalities,
+if they all hold, must all be tight. This is checked by integer arithmetic in
+`period_three_bulk_flow.py`; it has not been certified by Lean.
+
+Eliminating bulk graph potentials gives 44,160 distinct primitive cycle
+equalities on 768 formal bulk coefficients. Their coefficients have absolute
+value at most two; the longest spanning-tree path is 24, so the bounded
+integer computation cannot overflow. The classification probe verifies 192
+independent nullvectors exactly and finds 576 independent constraint rows
+modulo 1,000,003. Of those nullvectors, 48 are unused all-zero-pattern columns
+which the actual model fixes to zero. The remaining 144 are spatial
+coboundaries: differences of neighboring one-cell potential values. For a
+finite zero-tailed row their sum reduces to a head-boundary value, already
+represented by the four head-mode constants.
+
+The initial classification guess failed because it treated the omitted
+zero-pattern feature as a counted density. The corrected calculation
+explicitly includes those 48 unused coefficient columns; all integer and
+modular checks now pass. These are exact-arithmetic research results, not
+Lean theorems or an exact Farkas certificate.
+
+The prefix part has a much smaller explicit obstruction. Starting with
+3680 gives the packed three-step histories
+
+    3680 -> 25783 -> 227424 -> 1640567.
+
+Both packed and independent scalar evolution agree. All four words meet
+the three-phase and necessary first-defect restrictions; every first defect
+is at index three, and their head bits are 0,1,0,1. The complete prefix-only
+feature signatures of `(25783,3680)` and `(1640567,227424)` are identical.
+They cannot support a score which decreases at both intermediate head flips.
+`period_three_prefix_cycle_probe.py` checks these finite identities exactly.
+
+This gives a concrete reason to stop enlarging this particular additive
+feature family. The bridge from the computed bulk classification to a fully
+Lean-verified general rank obstruction remains unfinished. No impossibility
+result for arbitrary rankings, no period-three exclusion, and no prize result
+is claimed. The complete objective still requires a different unbounded
+argument about the center column.
+
 The objective remains the complete center-column problem. This route
 targets its open period-three subcase; it does not address every period.
