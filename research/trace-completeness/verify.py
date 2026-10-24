@@ -1,4 +1,4 @@
-"""Fully replay the forcing laws, horizon obstruction, and inverse trace code."""
+"""Fully replay the forcing laws, horizon obstructions, and inverse trace code."""
 import argparse
 import hashlib
 import importlib.util
@@ -17,7 +17,10 @@ ITEMS=[('Rule30PairedForcingResearch',['local_polarization','paired_difference_s
            'pair58_no_early_stripe','linear_full_recovery_counterexample']),
        ('Rule30InverseTraceResearch',['InverseTrace.inversePrefix_lt','InverseTrace.inversePrefix_right',
           'InverseTrace.inversePrefix_realizes','InverseTrace.finite_trace_code_injective',
-          'InverseTrace.inversePrefix_unique'])]
+          'InverseTrace.inversePrefix_unique']),
+       ('Rule30EdgeHorizonObstructionResearch',['pair13_prefix','pair13_difference',
+          'pair13_distinct_edges','edge_horizon_2n_minus_c_counterexample',
+          'edge_horizon_2n_minus_one_counterexample'])]
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

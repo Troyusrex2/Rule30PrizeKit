@@ -55,10 +55,25 @@ Both rows have the same highest bit, hence the same physical left edge.
 The example therefore rejects the proposed full-row horizon without
 refuting an edge-only bound or EdgeObservable.
 
-All three proof modules passed full replay with the unchanged official checker
+All four proof modules passed full replay with the unchanged official checker
 at `2f63afda261888e04ec57237290e723190914a1d`: **9 forcing-law declarations,
-8 counterexample declarations, and 52 inverse-code declarations**, with thirteen
-selected headlines and only standard axioms. See [the complete reports](evidence/report.json).
+8 full-row counterexample declarations, 52 inverse-code declarations, and
+9 edge-horizon obstruction declarations**, with eighteen selected headlines and
+only standard axioms. See [the complete reports](evidence/report.json).
+
+## Rejected tighter edge horizons
+
+The candidate `2*n+2` must be distinguished from two tempting tighter bounds.
+`Rule30EdgeHorizonObstructionResearch.lean` proves that rows **77 and 56**,
+both below `2^7`, have different highest black bits (`6` and `5`) yet equal
+center observations at index `c=1` for every `t < 13`. They first differ at
+`t=13`. Their physical left edges are `-5` and `-4` in this frame.
+
+Consequently **neither `2*n-c` nor `2*n-1` observations suffice in general**:
+both proposed horizons are 13 for this pair. This is an edge-only obstruction,
+unlike the same-edge pair 33/45 above. It does not refute `2*n+2`, contradict
+EdgeObservable, or settle a prize problem. The complete prefix, next difference,
+and the two rejected universal bounds are kernel-checked.
 
 ## Exact inverse codes, with the right prefix supplied
 
@@ -133,6 +148,31 @@ than forty observations; it verifies that the pair separates by time 512.
 Its unresolved finite collision is not an infinite-trace counterexample.
 All experiment reports explicitly mark completeness and Problem 1 unproved.
 
+The [two-limb vector probe](vector-edge-horizon-probe.json) subsequently
+enumerated every nonzero row below `2^n` in **12 selected domains**: widths
+20, 22, and 24, with four center indices per width. It computed **88080372
+row traces**, each with 64 observations; no counterexample to `2*n+2` was found.
+A [separate width-24, center-1 domain](vector-edge-c1-probe.json) enumerated
+16777215 rows and also found none. This is selected-center coverage, not every
+center at those widths and not an unbounded proof.
+
+The NumPy implementation uses two unsigned 64-bit limbs. Truncation above bit
+127 is safe for the observed indices because `Phi` at a given index depends
+only on that index and lower indices. Before the large domains, 512 comparisons
+with Python integer evolution exercise carries across the limb boundary;
+independent direct checks cover 21076 small different-edge pairs. Every reported
+maximal-delay witness is also checked by Python integers. The sorting argument
+and domain guards are the same as above; a stopped domain is never listed as
+complete. NumPy results are numerical evidence, not Lean proofs.
+
+The [bounded solver search](solver-edge-horizon-probe.json) asks for a row with
+highest bit 31 and a nonzero row with a smaller highest bit, at center index 8,
+sharing the first 66 observations. Its result is **unknown (timeout)**, not
+UNSAT and not evidence that this domain satisfies the candidate bound. The
+solver model is independently checked on all 4032 pairs in a small domain
+using physical truth-table evolution: 13 observations admit a collision there,
+while 14 do not. No solver UNSAT result is used as a Lean premise.
+
 ## Reproduce
 
 Prepare the reference kit and first run the twelve-module
@@ -146,10 +186,17 @@ python research/trace-completeness/edge_completeness_width_probe.py
 python research/trace-completeness/control_probes.py
 python research/trace-completeness/inverse_trace_gap_probe.py
 python research/trace-completeness/inverse_section_probe.py
+python research/trace-completeness/vector_edge_horizon_probe.py
+python research/trace-completeness/vector_edge_horizon_probe.py --widths 24 --centers 1 --output research/trace-completeness/vector-edge-c1-probe.json
+python research/trace-completeness/solver_edge_horizon_probe.py
 ```
 
 The proof runner checks prerequisite source hashes and the original checker,
-guards every owned compiler/replay process, and freshly replays all three modules.
+guards every owned compiler/replay process, and freshly replays all four modules.
 The enumeration and gap probes have separate time and memory guards and report
 partial scope on interruption. The section probe uses the fixed workloads
 described above. Logs and Python caches are ignored.
+The vector probe requires NumPy; the optional bounded solver probe requires
+`z3-solver`. The saved runs used NumPy 1.26.4 and Z3 5.3.1. The solver has a
+45-second default timeout and a 1536 MB internal memory limit; its saved run
+also used the compiler runner's external time and memory guard.
