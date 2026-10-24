@@ -112,6 +112,22 @@ descent constraints were only fitted at bounded lengths. Even a feasible
 fit would still require an all-length descent proof and Lean replay.
 None of these numerical models is used as a Lean premise.
 
+The subsequent `three_inverse_reachable_lp.py` removes the ribbon
+overapproximation and fits the same nonnegative variation score on actual
+histories through depth 42: 98,294 transitions, 97 variables. This finite
+system is also numerically infeasible. Thus the failure of this particular
+nonnegative two-diagonal score is not explained solely by spurious abstract
+ribbons. No exact Farkas or Lean impossibility theorem is claimed.
+
+`three_inverse_variation_beam.py` directly searches for violations of
+`variation <= C*initial_weight + K`, retaining 1,024 states through depth
+1,536. The factor-one run finds variation 392 with weight 341, requiring
+`K >= 51`. Factor-two and factor-three runs find no positive score. These
+are incomplete searches, not proofs of either estimate. Every saved row,
+weight and variation count is independently forward checked. The estimates
+remain hypotheses; increasing a failed local score window without a new
+invariant is not an established route to proving them.
+
 ## Audit and full-problem route
 
 The latest PR heads and official kit main were unchanged at the 09:00 UTC
