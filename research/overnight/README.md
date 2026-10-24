@@ -13,6 +13,7 @@ The public upstream pull requests were checked at these exact heads:
 | [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4), original revision: `0^q10111`, every `q ≥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
 | PR 4, reviewed revision: general `0^q10111` theorem only | `993cb1b61164a1833788881128437ee9fb943627` | All 132 declarations and the directly stated headline passed full pinned-checker replay. |
 | [AIOvernight, PR 5](https://github.com/WolframInstitute/Rule30PrizeKit/pull/5): 56 even black observations force 17 initial black cells | `8f6a97973c59b5a45ed676794cbcd3adb467e96a` | Independent full replay passed: 1,236 data declarations and 346 public declarations. No official private status inferred. |
+| [Luis Perez Morales and Claude, PR 8](https://github.com/WolframInstitute/Rule30PrizeKit/pull/8): linear run bounds and logarithmic color counts | `01331034d24ce8d49774086cd46f9236d0a3509f` | All 194 declarations and all 12 headline statements passed the unchanged pinned checker. [Exact-revision evidence](center-runs-evidence/report.json). |
 
 The first result is an unbounded word-family exclusion. The second is a finite
 quantitative bound, with an unrestricted initial tail. Its reviewer requests a
@@ -33,6 +34,14 @@ unbounded finite-support result. The [new exact-revision audit](reviewed-whitepa
 records its source hashes and all 132 declaration checks. The remote pull
 reference was fetched directly before checking it; the earlier API listing
 still displayed its previous head.
+
+The next full PR listing found PR 8, published at 04:00 UTC. Its original
+commit was incorporated into this research branch with its original author
+attribution after independent replay. The sole import-list conflict was
+resolved by retaining both lists; the mathematical source is unchanged.
+Its run bounds and logarithmic counts do not exclude a nonconstant eventual
+period. They provide quantitative recurrence that can strengthen the sparse
+ranking obstruction. These are the contributors' results, not ours.
 
 The sparse proof was also compiled and replayed under diagnostic module names
 without native C generation: [full diagnostic record](contribution-audit/sparse-noC-verification.json).
@@ -465,7 +474,50 @@ de Bruijn graphs for additive-energy inequalities is standard; see
 No general conservation-law theorem from that survey is assumed in the Lean
 proof or used to infer a result about Rule 30 here.
 
-## Controlled right-half responses
+## An explicit lower bound on any hypothetical ranking
+
+`Rule30QuantitativeRankResearch.lean` uses the newly audited PR 8 results:
+every seed-center window `[a,2a]`, `a>=1`, contains both colors. The three-cell
+start is exactly the single seed after one step, so its center must flip at
+least `m` times by time `2^m-1`. Consequently **every** hypothetical
+`Rule30PairedTraceResearch.FlipRanking V` satisfies
+
+```text
+m <= V (outerFive (2^m+2)) innerThree.
+```
+
+The initial rows still contain just five and three black cells. This makes
+the earlier unbounded-rank obstruction explicit: candidates must grow at
+least logarithmically along these radii. It constructs no ranking function
+and excludes no additional temporal period.
+
+All 27 new declarations and five headlines passed full kernel replay in
+both [the working catalog](quantitative-rank-evidence/catalog/report.json)
+and [the pinned reference](quantitative-rank-evidence/pinned/report.json).
+Both runs also replayed the exact dependencies: the 14-declaration edge
+module, 99-declaration paired-row module, and all 194 declarations and 12
+headlines of the original PR 8 module. The integrated catalog build passed
+all 95 jobs. Thirteen finite controls using Wolfram's built-in Rule 30,
+through horizon 4095, passed; see `quantitative-rank-check.wl` and
+`wolfram-quantitative-rank-check.json`. These samples do not replace the
+unbounded proof.
+
+## Correlated descent experiments
+
+`lag_correlated_potential.py` strengthens the earlier product-row experiment:
+it computes both compared observations from one row using the actual Rule 30
+time evolution. The marker enforces center alternation and equality across a
+two-step time shift. The proposed nonnegative potential counts local patterns
+separately on each side of the center, with affine distance weights.
+
+Four tested sufficient graph-certificate systems were numerically infeasible:
+pattern lengths two and four, with one-step and two-step descent. Each passed
+128 independent scalar evolution and exact feature-accounting controls.
+This is no exact arithmetic refutation and no Lean theorem. It rejects these
+particular sufficient additive-certificate models, even after retaining the
+time-shift relationship; it does not rule out a nonlocal ranking function.
+
+## Exact controlled right-half responses
 
 `Rule30ControlledResponseResearch.lean` proves an exact equivalence for
 **every boundary input**, at every observation horizon. Number right-hand
@@ -538,6 +590,13 @@ python research/overnight/verify_empty_reduction.py --project /path/to/pinned-ki
 python research/overnight/verify_diagonal_suffix.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_paired_trace.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_paired_trace.py --lake /path/to/lake
+python research/overnight/audit_center_runs.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_controlled_response.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_quantitative_rank.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_quantitative_rank.py --lake /path/to/lake
+python research/overnight/controlled_response_controls.py
+python research/overnight/controlled_response_normal_form.py --max-width 22
+python research/overnight/lag_correlated_potential.py --lag 2 --stride 2 --radius 4 --alternate
 python research/overnight/pair_containment_potential.py --radius 3 --reward flip --graph-degree 2
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
