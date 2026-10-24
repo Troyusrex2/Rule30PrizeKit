@@ -11,7 +11,6 @@ from pathlib import Path
 import random
 from time import perf_counter
 
-import z3
 
 
 def inverse(head, boundary, length):
@@ -54,6 +53,7 @@ def controls():
 
 
 def search(width, cycles, timeout_ms):
+    import z3
     started = perf_counter()
     length = 3*cycles
     assert 0 < width < length

@@ -1,0 +1,1867 @@
+{
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "FlipRanking_proved": false,
+  "scope": "Actual pairs and nonnegative ordered-pair counts plus arbitrary PSD prefix-count quadratics",
+  "max_initial_width": 6,
+  "actual_pairs": 52,
+  "gram_feature_controls_passed": true,
+  "rounds": [
+    {
+      "iteration": 0,
+      "square_features": 40,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "dual_gain": -0.1532921810699588
+        },
+        {
+          "group": 1,
+          "charge": [
+            1,
+            0,
+            -1,
+            1
+          ],
+          "dual_gain": -0.6532921810699591
+        },
+        {
+          "group": 2,
+          "charge": [
+            0,
+            0,
+            2,
+            -1
+          ],
+          "dual_gain": -2.9845679012345654
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            0,
+            -2,
+            1
+          ],
+          "dual_gain": -3.3045267489711936
+        }
+      ]
+    },
+    {
+      "iteration": 1,
+      "square_features": 44,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            0,
+            3,
+            0,
+            -2
+          ],
+          "dual_gain": -0.8442408376963484
+        },
+        {
+          "group": 1,
+          "charge": [
+            0,
+            4,
+            -1,
+            -1
+          ],
+          "dual_gain": -0.347513089005288
+        },
+        {
+          "group": 2,
+          "charge": [
+            1,
+            -1,
+            3,
+            -2
+          ],
+          "dual_gain": -2.8056282722512895
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            -2,
+            1,
+            0
+          ],
+          "dual_gain": -0.16099476439791638
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "square_features": 48,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            0,
+            6,
+            -1,
+            -5
+          ],
+          "dual_gain": -0.5176126832259742
+        },
+        {
+          "group": 1,
+          "charge": [
+            0,
+            2,
+            -1,
+            0
+          ],
+          "dual_gain": -0.0033519554889198666
+        },
+        {
+          "group": 2,
+          "charge": [
+            1,
+            -1,
+            2,
+            -1
+          ],
+          "dual_gain": -0.9177453177163455
+        },
+        {
+          "group": 4,
+          "charge": [
+            2,
+            -1,
+            0,
+            0
+          ],
+          "dual_gain": -0.41075835127427096
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "square_features": 52,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            0,
+            3,
+            -1,
+            -2
+          ],
+          "dual_gain": -0.17617339907745677
+        },
+        {
+          "group": 1,
+          "charge": [
+            0,
+            4,
+            -1,
+            0
+          ],
+          "dual_gain": -0.3375529076051049
+        },
+        {
+          "group": 2,
+          "charge": [
+            1,
+            -2,
+            7,
+            -3
+          ],
+          "dual_gain": -4.150564847661116
+        },
+        {
+          "group": 4,
+          "charge": [
+            2,
+            -3,
+            1,
+            1
+          ],
+          "dual_gain": -1.0123291031334856
+        }
+      ]
+    },
+    {
+      "iteration": 4,
+      "square_features": 56,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            0,
+            6,
+            0,
+            -5
+          ],
+          "dual_gain": -0.03186268602684361
+        },
+        {
+          "group": 2,
+          "charge": [
+            1,
+            -1,
+            7,
+            -4
+          ],
+          "dual_gain": -4.313050151899118
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "dual_gain": -0.32134993539528756
+        }
+      ]
+    },
+    {
+      "iteration": 5,
+      "square_features": 59,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            3,
+            6,
+            0,
+            -5
+          ],
+          "dual_gain": -0.16759502422842054
+        },
+        {
+          "group": 2,
+          "charge": [
+            1,
+            -2,
+            7,
+            -4
+          ],
+          "dual_gain": -0.7735945452829105
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            -3,
+            3,
+            0
+          ],
+          "dual_gain": -0.8214391894519864
+        }
+      ]
+    },
+    {
+      "iteration": 6,
+      "square_features": 62,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            1,
+            13,
+            0,
+            -10
+          ],
+          "dual_gain": -2.008174053353139
+        },
+        {
+          "group": 2,
+          "charge": [
+            3,
+            -3,
+            13,
+            -8
+          ],
+          "dual_gain": -2.363080289915384
+        },
+        {
+          "group": 4,
+          "charge": [
+            5,
+            -6,
+            0,
+            2
+          ],
+          "dual_gain": -1.4575227005023415
+        }
+      ]
+    },
+    {
+      "iteration": 7,
+      "square_features": 65,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            6,
+            4,
+            0,
+            -3
+          ],
+          "dual_gain": -0.7609645688520823
+        },
+        {
+          "group": 2,
+          "charge": [
+            2,
+            -3,
+            14,
+            -8
+          ],
+          "dual_gain": -2.258786648647348
+        },
+        {
+          "group": 4,
+          "charge": [
+            2,
+            0,
+            -7,
+            3
+          ],
+          "dual_gain": -0.2612755254093706
+        }
+      ]
+    },
+    {
+      "iteration": 8,
+      "square_features": 68,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            3,
+            2,
+            -1,
+            -1
+          ],
+          "dual_gain": -0.04800233880907567
+        },
+        {
+          "group": 1,
+          "charge": [
+            3,
+            3,
+            -1,
+            0
+          ],
+          "dual_gain": -0.09908957434785898
+        },
+        {
+          "group": 2,
+          "charge": [
+            2,
+            -2,
+            7,
+            -4
+          ],
+          "dual_gain": -0.4829551873164091
+        },
+        {
+          "group": 4,
+          "charge": [
+            3,
+            -2,
+            -1,
+            1
+          ],
+          "dual_gain": -0.5476917973353599
+        }
+      ]
+    },
+    {
+      "iteration": 9,
+      "square_features": 72,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            7,
+            3,
+            -1,
+            -2
+          ],
+          "dual_gain": -0.4299904390617282
+        },
+        {
+          "group": 2,
+          "charge": [
+            3,
+            -3,
+            14,
+            -7
+          ],
+          "dual_gain": -0.5344183517848364
+        },
+        {
+          "group": 4,
+          "charge": [
+            3,
+            -3,
+            0,
+            1
+          ],
+          "dual_gain": -0.33123650470312205
+        }
+      ]
+    },
+    {
+      "iteration": 10,
+      "square_features": 75,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            9,
+            10,
+            -1,
+            -8
+          ],
+          "dual_gain": -0.6172225336408417
+        },
+        {
+          "group": 2,
+          "charge": [
+            2,
+            -2,
+            9,
+            -5
+          ],
+          "dual_gain": -0.5008410581578655
+        },
+        {
+          "group": 4,
+          "charge": [
+            5,
+            -6,
+            1,
+            2
+          ],
+          "dual_gain": -0.6420372433223331
+        }
+      ]
+    },
+    {
+      "iteration": 11,
+      "square_features": 78,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            23,
+            18,
+            -2,
+            -13
+          ],
+          "dual_gain": -1.843119752577378
+        },
+        {
+          "group": 2,
+          "charge": [
+            4,
+            -5,
+            27,
+            -15
+          ],
+          "dual_gain": -2.8750659244162193
+        },
+        {
+          "group": 4,
+          "charge": [
+            2,
+            -1,
+            -3,
+            2
+          ],
+          "dual_gain": -0.058613856653227714
+        }
+      ]
+    },
+    {
+      "iteration": 12,
+      "square_features": 81,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            54,
+            29,
+            -6,
+            -19
+          ],
+          "dual_gain": -1.590164287517137
+        },
+        {
+          "group": 2,
+          "charge": [
+            5,
+            -5,
+            27,
+            -16
+          ],
+          "dual_gain": -2.882177985799437
+        },
+        {
+          "group": 4,
+          "charge": [
+            5,
+            0,
+            -14,
+            6
+          ],
+          "dual_gain": -2.4089516271104507
+        }
+      ]
+    },
+    {
+      "iteration": 13,
+      "square_features": 84,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            18,
+            22,
+            -4,
+            -15
+          ],
+          "dual_gain": -1.2542193882190138
+        },
+        {
+          "group": 2,
+          "charge": [
+            5,
+            -5,
+            27,
+            -15
+          ],
+          "dual_gain": -1.7658247594570469
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            -5,
+            6,
+            -1
+          ],
+          "dual_gain": -0.39257226854481697
+        }
+      ]
+    },
+    {
+      "iteration": 14,
+      "square_features": 87,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            45,
+            37,
+            -6,
+            -25
+          ],
+          "dual_gain": -0.300095054877481
+        },
+        {
+          "group": 2,
+          "charge": [
+            10,
+            -11,
+            54,
+            -30
+          ],
+          "dual_gain": -0.06648527645352686
+        },
+        {
+          "group": 4,
+          "charge": [
+            8,
+            -4,
+            -11,
+            7
+          ],
+          "dual_gain": -2.184985694379151
+        }
+      ]
+    },
+    {
+      "iteration": 15,
+      "square_features": 90,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            25,
+            16,
+            -3,
+            -11
+          ],
+          "dual_gain": -0.3326889295518536
+        },
+        {
+          "group": 2,
+          "charge": [
+            9,
+            -10,
+            55,
+            -30
+          ],
+          "dual_gain": -2.36681963763904
+        },
+        {
+          "group": 4,
+          "charge": [
+            4,
+            -6,
+            3,
+            1
+          ],
+          "dual_gain": -0.3247909228675052
+        }
+      ]
+    },
+    {
+      "iteration": 16,
+      "square_features": 93,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            12,
+            9,
+            -2,
+            -6
+          ],
+          "dual_gain": -0.044801812364361246
+        },
+        {
+          "group": 2,
+          "charge": [
+            4,
+            -4,
+            27,
+            -15
+          ],
+          "dual_gain": -0.6609141496974154
+        },
+        {
+          "group": 4,
+          "charge": [
+            9,
+            -12,
+            -1,
+            5
+          ],
+          "dual_gain": -2.8527546889635795
+        }
+      ]
+    },
+    {
+      "iteration": 17,
+      "square_features": 96,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            30,
+            10,
+            -2,
+            -7
+          ],
+          "dual_gain": -0.20861605665595295
+        },
+        {
+          "group": 2,
+          "charge": [
+            9,
+            -11,
+            55,
+            -30
+          ],
+          "dual_gain": -1.0325700845508194
+        },
+        {
+          "group": 4,
+          "charge": [
+            1,
+            3,
+            -7,
+            2
+          ],
+          "dual_gain": -0.42783945758708875
+        }
+      ]
+    },
+    {
+      "iteration": 18,
+      "square_features": 99,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            25,
+            16,
+            -2,
+            -11
+          ],
+          "dual_gain": -0.030301138196113797
+        },
+        {
+          "group": 2,
+          "charge": [
+            10,
+            -11,
+            55,
+            -30
+          ],
+          "dual_gain": -0.5803146191848967
+        },
+        {
+          "group": 4,
+          "charge": [
+            5,
+            -4,
+            -3,
+            3
+          ],
+          "dual_gain": -0.06566716436093412
+        }
+      ]
+    },
+    {
+      "iteration": 19,
+      "square_features": 102,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            8,
+            11,
+            -1,
+            -8
+          ],
+          "dual_gain": -0.011042153747400363
+        },
+        {
+          "group": 2,
+          "charge": [
+            10,
+            -12,
+            55,
+            -30
+          ],
+          "dual_gain": -0.6997050354236407
+        },
+        {
+          "group": 4,
+          "charge": [
+            19,
+            -16,
+            -15,
+            13
+          ],
+          "dual_gain": -6.748079860998175
+        }
+      ]
+    },
+    {
+      "iteration": 20,
+      "square_features": 105,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            28,
+            47,
+            -5,
+            -33
+          ],
+          "dual_gain": -1.387403639579503
+        },
+        {
+          "group": 2,
+          "charge": [
+            20,
+            -21,
+            109,
+            -60
+          ],
+          "dual_gain": -2.4181096566225193
+        },
+        {
+          "group": 4,
+          "charge": [
+            6,
+            -12,
+            8,
+            1
+          ],
+          "dual_gain": -1.4701706646348995
+        }
+      ]
+    },
+    {
+      "iteration": 21,
+      "square_features": 108,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            14,
+            7,
+            -1,
+            -5
+          ],
+          "dual_gain": -0.016279795837279565
+        },
+        {
+          "group": 2,
+          "charge": [
+            11,
+            -12,
+            54,
+            -30
+          ],
+          "dual_gain": -0.10527051645715346
+        },
+        {
+          "group": 4,
+          "charge": [
+            21,
+            -17,
+            -13,
+            12
+          ],
+          "dual_gain": -3.035948264092095
+        }
+      ]
+    },
+    {
+      "iteration": 22,
+      "square_features": 111,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            24,
+            17,
+            -2,
+            -12
+          ],
+          "dual_gain": -0.1382356662290955
+        },
+        {
+          "group": 2,
+          "charge": [
+            3,
+            -3,
+            14,
+            -8
+          ],
+          "dual_gain": -0.05804023645252787
+        },
+        {
+          "group": 4,
+          "charge": [
+            4,
+            3,
+            -14,
+            5
+          ],
+          "dual_gain": -0.2797099726594041
+        }
+      ]
+    },
+    {
+      "iteration": 23,
+      "square_features": 114,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            57,
+            24,
+            -5,
+            -16
+          ],
+          "dual_gain": -0.47693033135233875
+        },
+        {
+          "group": 2,
+          "charge": [
+            11,
+            -11,
+            54,
+            -30
+          ],
+          "dual_gain": -1.6577981051395128
+        },
+        {
+          "group": 4,
+          "charge": [
+            19,
+            -12,
+            -19,
+            13
+          ],
+          "dual_gain": -0.7742570129200139
+        }
+      ]
+    },
+    {
+      "iteration": 24,
+      "square_features": 117,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            56,
+            25,
+            -4,
+            -17
+          ],
+          "dual_gain": -0.23696996159866401
+        },
+        {
+          "group": 2,
+          "charge": [
+            21,
+            -22,
+            109,
+            -60
+          ],
+          "dual_gain": -1.3666811660443443
+        },
+        {
+          "group": 4,
+          "charge": [
+            20,
+            -23,
+            -1,
+            9
+          ],
+          "dual_gain": -1.3836069953818644
+        }
+      ]
+    },
+    {
+      "iteration": 25,
+      "square_features": 120,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            50,
+            33,
+            -5,
+            -23
+          ],
+          "dual_gain": -0.35381911511936615
+        },
+        {
+          "group": 2,
+          "charge": [
+            43,
+            -43,
+            218,
+            -120
+          ],
+          "dual_gain": -1.0663714715555557
+        },
+        {
+          "group": 4,
+          "charge": [
+            3,
+            -18,
+            26,
+            -5
+          ],
+          "dual_gain": -0.6247077702405406
+        }
+      ]
+    },
+    {
+      "iteration": 26,
+      "square_features": 123,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            109,
+            54,
+            -9,
+            -37
+          ],
+          "dual_gain": -0.6568650180246323
+        },
+        {
+          "group": 2,
+          "charge": [
+            21,
+            -21,
+            109,
+            -60
+          ],
+          "dual_gain": -0.2329367982869428
+        },
+        {
+          "group": 4,
+          "charge": [
+            10,
+            -9,
+            -6,
+            6
+          ],
+          "dual_gain": -0.03753243768758985
+        }
+      ]
+    },
+    {
+      "iteration": 27,
+      "square_features": 126,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            104,
+            61,
+            -11,
+            -42
+          ],
+          "dual_gain": -0.16281794802711147
+        },
+        {
+          "group": 2,
+          "charge": [
+            21,
+            -21,
+            109,
+            -61
+          ],
+          "dual_gain": -2.16207328110076
+        },
+        {
+          "group": 4,
+          "charge": [
+            41,
+            -41,
+            -16,
+            23
+          ],
+          "dual_gain": -1.3740959007164122
+        }
+      ]
+    },
+    {
+      "iteration": 28,
+      "square_features": 129,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            103,
+            62,
+            -10,
+            -43
+          ],
+          "dual_gain": -0.07057380188038209
+        },
+        {
+          "group": 2,
+          "charge": [
+            42,
+            -43,
+            218,
+            -120
+          ],
+          "dual_gain": -2.5375177060994076
+        },
+        {
+          "group": 4,
+          "charge": [
+            9,
+            -22,
+            21,
+            -1
+          ],
+          "dual_gain": -0.05438632932791165
+        }
+      ]
+    },
+    {
+      "iteration": 29,
+      "square_features": 132,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            200,
+            131,
+            -18,
+            -91
+          ],
+          "dual_gain": -1.7829475620316089
+        },
+        {
+          "group": 2,
+          "charge": [
+            41,
+            -43,
+            218,
+            -120
+          ],
+          "dual_gain": -2.0127082265407807
+        },
+        {
+          "group": 4,
+          "charge": [
+            4,
+            0,
+            -9,
+            4
+          ],
+          "dual_gain": -0.03413947919973559
+        }
+      ]
+    },
+    {
+      "iteration": 30,
+      "square_features": 135,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            50,
+            32,
+            -5,
+            -22
+          ],
+          "dual_gain": -0.011857790272476798
+        },
+        {
+          "group": 2,
+          "charge": [
+            43,
+            -43,
+            217,
+            -121
+          ],
+          "dual_gain": -3.1700039803917264
+        },
+        {
+          "group": 4,
+          "charge": [
+            13,
+            15,
+            -57,
+            20
+          ],
+          "dual_gain": -0.7740111031424917
+        }
+      ]
+    },
+    {
+      "iteration": 31,
+      "square_features": 138,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            22,
+            19,
+            -3,
+            -13
+          ],
+          "dual_gain": -0.012863468750123452
+        },
+        {
+          "group": 4,
+          "charge": [
+            32,
+            -50,
+            22,
+            9
+          ],
+          "dual_gain": -0.6580863747108197
+        }
+      ]
+    },
+    {
+      "iteration": 32,
+      "square_features": 140,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            211,
+            119,
+            -20,
+            -82
+          ],
+          "dual_gain": -0.7649923014902456
+        },
+        {
+          "group": 2,
+          "charge": [
+            41,
+            -42,
+            218,
+            -120
+          ],
+          "dual_gain": -1.4634481731421403
+        },
+        {
+          "group": 4,
+          "charge": [
+            79,
+            -60,
+            -63,
+            51
+          ],
+          "dual_gain": -1.7472868768738579
+        }
+      ]
+    },
+    {
+      "iteration": 33,
+      "square_features": 143,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            202,
+            128,
+            -21,
+            -88
+          ],
+          "dual_gain": -0.4493607764904066
+        },
+        {
+          "group": 2,
+          "charge": [
+            42,
+            -42,
+            218,
+            -121
+          ],
+          "dual_gain": -3.0633864416203664
+        },
+        {
+          "group": 4,
+          "charge": [
+            10,
+            -11,
+            -2,
+            5
+          ],
+          "dual_gain": -0.00070239351598822
+        }
+      ]
+    },
+    {
+      "iteration": 34,
+      "square_features": 146,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            87,
+            77,
+            -11,
+            -53
+          ],
+          "dual_gain": -0.019900450697122096
+        },
+        {
+          "group": 4,
+          "charge": [
+            79,
+            -93,
+            -6,
+            38
+          ],
+          "dual_gain": -1.643349662298263
+        }
+      ]
+    },
+    {
+      "iteration": 35,
+      "square_features": 148,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            86,
+            77,
+            -11,
+            -54
+          ],
+          "dual_gain": -0.1103693598662403
+        },
+        {
+          "group": 4,
+          "charge": [
+            73,
+            -99,
+            19,
+            29
+          ],
+          "dual_gain": -0.3829326488599918
+        }
+      ]
+    },
+    {
+      "iteration": 36,
+      "square_features": 150,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            88,
+            76,
+            -11,
+            -53
+          ],
+          "dual_gain": -0.43804769255668674
+        },
+        {
+          "group": 4,
+          "charge": [
+            55,
+            -167,
+            185,
+            -20
+          ],
+          "dual_gain": -2.2348971692919406
+        }
+      ]
+    },
+    {
+      "iteration": 37,
+      "square_features": 152,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            51,
+            32,
+            -5,
+            -22
+          ],
+          "dual_gain": -0.00016271115318833296
+        },
+        {
+          "group": 2,
+          "charge": [
+            42,
+            -43,
+            218,
+            -121
+          ],
+          "dual_gain": -1.7424625815918944
+        },
+        {
+          "group": 4,
+          "charge": [
+            81,
+            -88,
+            -19,
+            42
+          ],
+          "dual_gain": -0.04375413766877756
+        }
+      ]
+    },
+    {
+      "iteration": 38,
+      "square_features": 155,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": [
+        {
+          "group": 0,
+          "charge": [
+            104,
+            61,
+            -10,
+            -42
+          ],
+          "dual_gain": -0.04462347988499893
+        },
+        {
+          "group": 4,
+          "charge": [
+            78,
+            -95,
+            2,
+            35
+          ],
+          "dual_gain": -0.4568341406497467
+        }
+      ]
+    },
+    {
+      "iteration": 39,
+      "square_features": 157,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "dual_status": 0,
+      "added_squares": []
+    }
+  ],
+  "candidate_accepted": false,
+  "all_squares_refuted_by_exact_dual": false,
+  "seconds": 0.45748270000331104,
+  "exact_dual": {
+    "passed": false,
+    "combined_reward": 544155675374737859468417946275470132494232097898327260207899676,
+    "linear_gain_min": -2418359258347013523472292816069026107758723755638930,
+    "principal_minors": [
+      [
+        553705929555888422821237079946554147878226526455407272897600,
+        728518293847781476369681194714064432063889309241755031086350906,
+        307222940097732874161276270091083956794542524104732002219650304,
+        1317675000090429098548569730257059395085307886085802624253460410,
+        403078308837030361853261495084962256302207358457976293287082784969078899365470473021597450374508453180358905319796919465600,
+        126781694028506920895068785820982480244527838498633736253191182480004131455634606990943302564124257919474214385677314967900,
+        729297870521201055139244244705962073989926940685614443545238559624795507170621575193721983373328856757478308288507498256000,
+        106336716405629285166434676577854868185243291716556954418310041152869195968066602939076304603000906450457676435144883186174208,
+        3107528531763340883322867827351746932603841827875248121760723303154909442278341471054150155095196525308498523421459512719296,
+        210832599915972400227813463615273404415730533293812929899793235373245424950916181349495026065949148380624871824321210631850240,
+        29717296224001638529262389709883393273231911343463462754546400058026882373245611581014006818932715582631695888148258965522478599262450778090072905773795451480103532442162253574929155800,
+        1693117062270523628681656977579231383893216108854765876148639458411405651802793465690576599223587612916586059561859668167623871401877034558302882291164742248444844146067340768776089600,
+        62761520666757829879530810696294162358246578374454724812728605525405129262266640420386437655657859839274876393135554462082367168632935797630595726170068857317141624871314964171261559000,
+        168618749991208174274089247236541585681702274978056984996883665372513063295323281673115201378370003310488983206922844641590155726403341034494530248971184694516766423878713280492719929344,
+        -165682014147752757673814122265574799029085799537924365741919812506846727823167300275501263769676075661089244341442240446146087036419298127692080349266133790234404375188254636046683585114265642419418853879095583332961962257843033161596334585600
+      ],
+      [
+        8243630196495035753204855202101926721476413068231213591843750,
+        158342491278957196632375530253638236662078709927316692585530000,
+        983391262006436168406708467485261020509034740746363928512473438,
+        1579015936508897397231752003506877165755626508763539277359409184,
+        1305010352239038049512306056657165346754348411608706647776130864354446167358514092308416323556700570506473696187770851740000,
+        7716748676052806998801456171787080864957702447511339576698533884703888199046509853641970151059043464474254399666871948190000,
+        13015597093925933348047764798346089072433039668200916644278157519420007772660084506670439767866882356223133855865020899960000,
+        24260948188833624390769743987570468772140272264593849026342880561472157199845021414664088528824898639602662922933002380913884,
+        103603556825896289389509670997136666586152032981690939757895921476966906274219162583399055197828019280225273097986940908610496,
+        888672836053648026766293234944148670758551745917555385149369574073054268057257049056691800219933709571530909907372669741474992,
+        145877479616508913819246954975214666796296260482803838427197649305107435076907877694122438952022928902739474106696548753965157520610923723138314585228466402578434307196801783443835025000,
+        853860381782181892490114313799870951303376479559049679998214154989889197741068621372812815360818651426793541166910763077095463388722327309425536356769402378640894458127674687187828240000,
+        6744565956067217056895108310228920598816029506417210282152277525890844090976961700525422785753111136504627911671226940929911582415738581328112366968427267860992681937059448611649718340000,
+        15280189858557089181311146835205454019251846966422141061198863930445673289365620865778319792091276466268761917993182703300147941191778726037713462149628974910713504115725103352313007169664,
+        90635494697469251192919053521211151067629055954216738495878284169248883181561049923171541817520734426391980750403198930058682749209889128217487878632014155626170858798801121751358807028988288025292266774465421250932609977811837364618218987958400000
+      ],
+      [
+        796918934315960685219285258570360314067360362934699833990392440,
+        1456725942189766630868370044962262571141538887971763583264252770,
+        578834140677125071332941454272809055846259062114147548612739774,
+        1719470939754959903691151488481622327539549649267899391965609362,
+        863559893798684221440624592804205182657600999488121572790193100627852333093111382765114218458592250081935344417008149334268400,
+        451106623531269852508787453557209242628463687894010049933287959517384863887356406951660490601884719981025733512643257239806060,
+        1299041486575494929069366757767597122479863179753525739435561945626652553012733008421026974082841740655537951250348562644960780,
+        720735460755515306183105974589964390886512550483822784501344282991317621393661803521387973686221029992745784564847324440036696,
+        2408973844417026285777403112884346366263280755349878375007227663548712104012128924073540002958385278454690676419140715572707156,
+        75080962030415104121005367640792144134377836295020459444327639122901615523433261595959876640376755224931829184416397079091788,
+        425937415773580249486037946585049848800072996198494109591865167911016327264567688715296979564563777620966013395655667921630866245892411828386193416732129558990178413738864868387590794859640,
+        1394832395799246820530436083659296470668923614301298919590367120965716941286928279597859082247059803708652891630175902845324648184454849755585807840558190488989686942088475675306424961090840,
+        52757853646368696111258998174485262135091280580528335585243562286882654937858311177045687554015176559594248232241242799830566509579615059267272094296293302120030607469628060972106653302720,
+        51162983758089210932954245447140518782052367062399230156599547811266290791226042083233365310395561554188504892857130550688630301226996893278263825090406237307313703919065386666662131640176,
+        -19710216527841510063620425306532590288140578435697570194297105262450805935166019480261104025680696804204778479734340543209127202046472253478522174922053541433886106707225959753537934386828642961870722950801695246746615522193671890541513151808163760
+      ],
+      [
+        274340518739849211341759556821901472898160787546032532010069310,
+        1975069166668047735143231725567483052278847566044363595945593928,
+        1169940421409915547742664712040891616581603451831955881114556099,
+        1071156070081396962141410041182664116047039371983744871281840349,
+        426527098408884025643485661681676006086255018689844982622642868789092899346872789314919652771794698308085130383230991591098080,
+        318417746353604137491149512093980441536273587432876277529071334541231211349649937746361627863431539006217530439227167718946065,
+        260042627844948627200430590948625887692655415981884861041187920033226554668425063217818734722801959084402255388739912688013965,
+        1431197889635759460695769905299351902895153381542989350710083190911693526367858765710318601007759161331462323546026639339497847,
+        1650202349078060272679504219458696184528142189998897758412213067456760992129709792193010396771380713588476610327580631300087703,
+        1117307046555610772501498682144732720199866032773622069264367124829645696857113489251107888981722377188984664865060202990787667,
+        284827044693655092340787309976835172196348155223982660079097711795936808081240126521216351962152254602081916049316409681378665404609767496886362915377564321621501239266122018916611972297170,
+        347608372873102963259533676734274895479899094146115062531659135802512282943901488513246981220058406298091413412435118806715396476338898593827763560320355392607557039325483361520985809712130,
+        271069889517806597384934535965040680977093613286815846550011068658079162288272356036075939318980727657780773282601178886466297993491770470257016374469984530074957362562417699602297256305870,
+        1191844714266956394513326475685394857789508741978809191294142840088997887645731878014622256533783276644308871490422613890034546023946895148739276531645048618380755778089368983434374480337860,
+        229473870076431971307266113850970976913224615224185775330517833622862647710229085825066253361698463648046453814279921414901283148244010278984470790097305741947790155118007441153149304270769336856935515068789678182249687332688474918314909985381715658300
+      ],
+      [
+        499939687966488254650982263744254266674304322159882711971181114,
+        1109724771634287249276476940073971796123406670723649707692377420,
+        948342652733235458094626986223150504217913842389024300057291878,
+        3224969100136994715557526322021991801936657245744224363885633190,
+        197969441120242195817906967195107030832853692478188924401155634559011946483216335635330577593161223063427974648080045296448756,
+        278686841397337037758565147753174779929806936259497891419408273475736820657761899289854075693659229048436300354527461365851051,
+        1381487273214725646896075747699852379378027965631088617131897776942699808783880849872317728950119360700233575591356354956125899,
+        56329121557083555237817324525046061946348262997514774433320943286371021649464050692708429864065086562419191052520143710053284,
+        954154061665068461847857966423322036399834361702896031550288663292521665476690023390425121770356838263997385976808261420294200,
+        282967390036618792035726133010355907396462281594902243140093361703219505998693392509020159722932166149076528039755847480258451,
+        745860515994760075696136657904454693964874107717659842101282917180572622104732198053580419303182464156706801267689717286824439020131436257671192238871840478783179290568991292202741740,
+        -3334348620272673464111929112161278985199029139089591582248965477665210022560791140152451911759545190945231812489733817626117954177075968286070382393655366863791557587810470557967751940,
+        -29931582539911759576952766934923217038679129739529713919105247655468588422809455283991379856988378165215618260024389142416063538475924337995111895698990001015266295150350919487852038060,
+        -8728414328552983324844743303864735135053052739147814193680045766905944916692263923551852239937347347021191875330027532039758252395441717431116079601507101957600597569888990302905362660,
+        -131694695329666022594776694760590933058030685373533214603801703366225237564681383798876318747364010494510345834041250592144510344114512582271292419716077689621645077060586295759165660617904156256340300538039608835387511497273906486565907726000
+      ]
+    ],
+    "gram_gains": [
+      [
+        [
+          553705929555888422821237079946554147878226526455407272897600,
+          553705929555888422821237079946554147878226526455407272897600,
+          6582512407827370484741143962262264277841733488864991773150950,
+          553705929555888422821237079946554147878226526455407272897600
+        ],
+        [
+          553705929555888422821237079946554147878226526455407272897600,
+          728518293847781476369681194714064432063889309241755031086350906,
+          342754745766226027930131056802421495783624214405080513455773904,
+          978183425733635791795732092662672922517791149839445088272686858
+        ],
+        [
+          6582512407827370484741143962262264277841733488864991773150950,
+          342754745766226027930131056802421495783624214405080513455773904,
+          307222940097732874161276270091083956794542524104732002219650304,
+          440439993307930266864190529309505519448308532029766058269784880
+        ],
+        [
+          553705929555888422821237079946554147878226526455407272897600,
+          978183425733635791795732092662672922517791149839445088272686858,
+          440439993307930266864190529309505519448308532029766058269784880,
+          1317675000090429098548569730257059395085307886085802624253460410
+        ]
+      ],
+      [
+        [
+          8243630196495035753204855202101926721476413068231213591843750,
+          553705929555888422821237079946554147878226526455407272897600,
+          19747537223482111454223431886786792833525200466594975319452850,
+          1107411859111776845642474159893108295756453052910814545795200
+        ],
+        [
+          553705929555888422821237079946554147878226526455407272897600,
+          158342491278957196632375530253638236662078709927316692585530000,
+          362562648571558190217452501215765604282795599237434970446877954,
+          382650964104493309504677846458227480198160029819955039658961752
+        ],
+        [
+          19747537223482111454223431886786792833525200466594975319452850,
+          362562648571558190217452501215765604282795599237434970446877954,
+          983391262006436168406708467485261020509034740746363928512473438,
+          814934131373886727214773593943273764786907360439363235464757860
+        ],
+        [
+          1107411859111776845642474159893108295756453052910814545795200,
+          382650964104493309504677846458227480198160029819955039658961752,
+          814934131373886727214773593943273764786907360439363235464757860,
+          1579015936508897397231752003506877165755626508763539277359409184
+        ]
+      ],
+      [
+        [
+          796918934315960685219285258570360314067360362934699833990392440,
+          545282121146107590413191375613479314996182549237205083740236480,
+          100882421674142662499775235572346984334521419865502023440648550,
+          266903470043555550122028684500495901474420562031280494810021750
+        ],
+        [
+          545282121146107590413191375613479314996182549237205083740236480,
+          1456725942189766630868370044962262571141538887971763583264252770,
+          349953208577909220909467223751104378484522885034402956627927222,
+          309554648431324862592026890068904696123179407423850034219715828
+        ],
+        [
+          100882421674142662499775235572346984334521419865502023440648550,
+          349953208577909220909467223751104378484522885034402956627927222,
+          578834140677125071332941454272809055846259062114147548612739774,
+          959274476780204866304773128900290275489891273446840919645085820
+        ],
+        [
+          266903470043555550122028684500495901474420562031280494810021750,
+          309554648431324862592026890068904696123179407423850034219715828,
+          959274476780204866304773128900290275489891273446840919645085820,
+          1719470939754959903691151488481622327539549649267899391965609362
+        ]
+      ],
+      [
+        [
+          274340518739849211341759556821901472898160787546032532010069310,
+          339579742213680775638785365288485648030696892855714028193152460,
+          50441210837071331249887617786173492167260709932751011720324275,
+          183899113843759701871971145703614245126142014328871617971677515
+        ],
+        [
+          339579742213680775638785365288485648030696892855714028193152460,
+          1975069166668047735143231725567483052278847566044363595945593928,
+          937824804283607671038815333272675515469412407870585545355654095,
+          682205964228564454475089002050098519079896126225545095958825513
+        ],
+        [
+          50441210837071331249887617786173492167260709932751011720324275,
+          937824804283607671038815333272675515469412407870585545355654095,
+          1169940421409915547742664712040891616581603451831955881114556099,
+          368621401265862235938055179642631136423838338266820952024469122
+        ],
+        [
+          183899113843759701871971145703614245126142014328871617971677515,
+          682205964228564454475089002050098519079896126225545095958825513,
+          368621401265862235938055179642631136423838338266820952024469122,
+          1071156070081396962141410041182664116047039371983744871281840349
+        ]
+      ],
+      [
+        [
+          499939687966488254650982263744254266674304322159882711971181114,
+          597349156640641627794336709069078865411208980838708300907051182,
+          442071587523365300149770040826442587757157312112969284018360679,
+          480419371392671785148490328185843440814614514547742641420298569
+        ],
+        [
+          597349156640641627794336709069078865411208980838708300907051182,
+          1109724771634287249276476940073971796123406670723649707692377420,
+          998033171882758784767776399067497690763497377918746214225430426,
+          1620084576962601309927956587320628453529771040411241734373962340
+        ],
+        [
+          442071587523365300149770040826442587757157312112969284018360679,
+          998033171882758784767776399067497690763497377918746214225430426,
+          948342652733235458094626986223150504217913842389024300057291878,
+          1665955690098033200179663787772312174807000587414938802491235287
+        ],
+        [
+          480419371392671785148490328185843440814614514547742641420298569,
+          1620084576962601309927956587320628453529771040411241734373962340,
+          1665955690098033200179663787772312174807000587414938802491235287,
+          3224969100136994715557526322021991801936657245744224363885633190
+        ]
+      ]
+    ],
+    "chosen": [
+      {
+        "multiplier": 5759307528326682062917787923619006896814241508597722026070600,
+        "outer": "17",
+        "inner": "10",
+        "center_index": 2,
+        "reward": 0
+      },
+      {
+        "multiplier": 82231085249115507937085437358675990091604406851162013938332600,
+        "outer": "35",
+        "inner": "18",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 6028806478271482061919906882315710129963506962409584500253350,
+        "outer": "39",
+        "inner": "22",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 94584888028601112678057227976801385754646860378360306978579400,
+        "outer": "39",
+        "inner": "30",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 30447281792472837701006406787309426586552701671026419407632880,
+        "outer": "43",
+        "inner": "26",
+        "center_index": 2,
+        "reward": 0
+      },
+      {
+        "multiplier": 35223737925745507960453600059711581095655382477718160862850200,
+        "outer": "47",
+        "inner": "30",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 16682054479586964566190065358553187133342218125022322362796000,
+        "outer": "51",
+        "inner": "18",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 135686699325322580217933008586007337323846870265117817908783550,
+        "outer": "55",
+        "inner": "30",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 173164697958538815623957462973458386817294626312081646383406976,
+        "outer": "57",
+        "inner": "18",
+        "center_index": 2,
+        "reward": 1
+      },
+      {
+        "multiplier": 26390415213159532772062588375606372777013118321219448764255000,
+        "outer": "35",
+        "inner": "22",
+        "center_index": 3,
+        "reward": 0
+      },
+      {
+        "multiplier": 3014403239135741030959953441157855064981753481204792250126675,
+        "outer": "43",
+        "inner": "26",
+        "center_index": 3,
+        "reward": 0
+      },
+      {
+        "multiplier": 553705929555888422821237079946554147878226526455407272897600,
+        "outer": "47",
+        "inner": "30",
+        "center_index": 3,
+        "reward": 1
+      },
+      {
+        "multiplier": 9141390455333620996792198335731166212068571979129062471868600,
+        "outer": "55",
+        "inner": "20",
+        "center_index": 3,
+        "reward": 0
+      },
+      {
+        "multiplier": 3014403239135741030959953441157855064981753481204792250126675,
+        "outer": "59",
+        "inner": "26",
+        "center_index": 3,
+        "reward": 0
+      }
+    ]
+  }
+}

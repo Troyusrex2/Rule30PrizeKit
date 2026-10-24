@@ -1,0 +1,44 @@
+(* Independent CA30 and Gram accounting for an exact discovery certificate.
+   This calculation is not a Lean proof or a prize solution. *)
+nonlocalCheckDir=DirectoryName[$InputFileName];
+ClearAll[nonlocalSeedReport];
+nonlocalSeedReport[]:=Module[{data,certificate,cases,maxT,ca,pack,packedStep,rows,
+    gram,featureGrams,gains,checks={},cellChecks,headChecks={},gramMatches},
+  data=Import[FileNameJoin[{nonlocalCheckDir,"seed-nonlocal-sdp-color-lag2-refined.json"}],"RawJSON"];
+  certificate=Last[data["results"]]["rational_dual_attempt"];
+  cases=certificate["chosen"];
+  maxT=Max[Lookup[cases,"center_index"]]+1;
+  ca=CellularAutomaton[30,{{1},0},maxT];
+  pack[t_]:=FromDigits[Reverse[Take[ca[[t+1]],{maxT-t+1,maxT+t+1}]],2];
+  packedStep[a_]:=BitXor[BitShiftLeft[a,2],BitOr[BitShiftLeft[a,1],a]];
+  rows=NestList[packedStep,1,maxT];
+  cellChecks=And@@Table[pack[t]==rows[[t+1]],{t,0,maxT}];
+  gram[word_]:=Module[{vectors},vectors=Accumulate[UnitVector[4,#+1]&/@word];
+    If[vectors=={},ConstantArray[0,{4,4}],Transpose[vectors].vectors]];
+  featureGrams[a_,b_,c_]:=Module[{word,left,right,counts},
+    word=Table[BitAnd[BitShiftRight[a,k],1]+2*BitAnd[BitShiftRight[b,k],1],
+      {k,0,IntegerLength[a,2]-1}];
+    left=Take[word,c];right=Drop[word,c+1];counts=Table[Count[word,k],{k,0,3}];
+    {gram[left],gram[Reverse[left]],gram[right],gram[Reverse[right]],Outer[Times,counts,counts]}];
+  gains=ConstantArray[0,{10,4,4}];
+  Do[Module[{a=FromDigits[s["outer"]],b=FromDigits[s["inner"]],c=s["center_index"],
+      weight=s["multiplier"],t,na,nb,oldmode,newmode,old,new,reward},
+    t=c-2;na=packedStep[a];nb=packedStep[b];
+    AppendTo[checks,a==pack[t+2]&&b==BitShiftLeft[pack[t],2]];
+    oldmode=BitAnd[BitShiftRight[a,c],1];newmode=BitAnd[BitShiftRight[na,c+1],1];
+    reward=Boole[oldmode!=newmode];
+    AppendTo[headChecks,oldmode==BitAnd[BitShiftRight[b,c],1]&&
+      newmode==BitAnd[BitShiftRight[nb,c+1],1]&&reward==s["reward"]];
+    old=featureGrams[a,b,c];new=featureGrams[na,nb,c+1];
+    Do[gains[[5*oldmode+j]]-=weight*old[[j]];
+       gains[[5*newmode+j]]+=weight*new[[j]],{j,1,5}]
+  ],{s,cases}];
+  gramMatches=(gains==certificate["gram_gains"]);
+  <|"FiniteControlsOnly"->True,"LeanVerifiedByThisCalculation"->False,"FullProblemClaim"->False,
+    "BuiltinSeedRowsCompared"->maxT+1,"CellsCovered"->(maxT+1)^2,
+    "CertificateCases"->Length[cases],"BuiltinRowsMatchPacked"->cellChecks,
+    "EveryClaimedRestartIsActualSeed"->And@@checks,
+    "EveryHeadConditionAndRewardMatches"->And@@headChecks,
+    "AllTenWeightedGramMatricesMatch"->gramMatches,
+    "AllPassed"->(cellChecks&&And@@checks&&And@@headChecks&&gramMatches)|>
+];

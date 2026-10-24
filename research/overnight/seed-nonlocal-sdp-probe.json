@@ -1,0 +1,647 @@
+{
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "rank_proved": false,
+  "single_seed_only": true,
+  "conic_controls": {
+    "known_trace_minimum_two": true,
+    "off_diagonal_sqrt_two_scaling": true
+  },
+  "mirror_packing_controls": 338,
+  "lags": [
+    2,
+    16
+  ],
+  "results": [
+    {
+      "status": "PrimalInfeasible",
+      "solve_time": 0.0136741,
+      "iterations": 8,
+      "objective": null,
+      "actual_training_pairs": 56,
+      "candidate_accepted": false,
+      "rational_dual_attempt": {
+        "passed": true,
+        "combined_reward": 100000,
+        "linear_gain_min": 0,
+        "principal_minors": [
+          [
+            4869766,
+            6469875,
+            1180953,
+            2282711,
+            5628618203886,
+            2269714079277,
+            5359416785290,
+            2931887549354,
+            7175749428644,
+            989077766747,
+            2385780835501669433,
+            5892265102344483836,
+            1768150918347720371,
+            2306630701041064389,
+            1848776828281121090143402
+          ],
+          [
+            3337699,
+            6306106,
+            2640869,
+            2282085,
+            6113430691950,
+            4802749311542,
+            1800109464390,
+            8326289184850,
+            8246213941086,
+            1788902978121,
+            7725128517985826444,
+            2968898619273088464,
+            1343033854897443849,
+            5501138438095027686,
+            684488310067872744958818
+          ],
+          [
+            5598761,
+            4538439,
+            3268858,
+            2150235,
+            9155369045115,
+            15412547399674,
+            1473909239810,
+            10683544013618,
+            2711687111036,
+            4676660010701,
+            21496542887982879754,
+            1857999073678322341,
+            2382788098072444931,
+            5853076977406823721,
+            2965408357274214909940051
+          ],
+          [
+            5780557,
+            8643965,
+            1769460,
+            1413209,
+            14026403806741,
+            8871409473891,
+            4591900093249,
+            10089698158784,
+            7104566752741,
+            2154243350915,
+            14866071782609695691,
+            10624492980874914537,
+            6798581139572490074,
+            8292250049098698851,
+            11181613095088987172385498
+          ],
+          [
+            1984107,
+            2816691,
+            693744,
+            824724,
+            1601410083536,
+            829488187679,
+            749191424472,
+            489456657423,
+            700752304700,
+            133007845680,
+            238817738372618592,
+            394132714938924756,
+            120581159310346284,
+            84236831430879036,
+            34333840469598064002532
+          ]
+        ],
+        "gram_gains": [
+          [
+            [
+              4869766,
+              5087058,
+              1865811,
+              2399344
+            ],
+            [
+              5087058,
+              6469875,
+              2169961,
+              2755559
+            ],
+            [
+              1865811,
+              2169961,
+              1180953,
+              1306406
+            ],
+            [
+              2399344,
+              2755559,
+              1306406,
+              2282711
+            ]
+          ],
+          [
+            [
+              3337699,
+              3864512,
+              2002917,
+              2411805
+            ],
+            [
+              3864512,
+              6306106,
+              2885708,
+              2478882
+            ],
+            [
+              2002917,
+              2885708,
+              2640869,
+              2058588
+            ],
+            [
+              2411805,
+              2478882,
+              2058588,
+              2282085
+            ]
+          ],
+          [
+            [
+              5598761,
+              4031658,
+              1699708,
+              3250345
+            ],
+            [
+              4031658,
+              4538439,
+              2037638,
+              2654623
+            ],
+            [
+              1699708,
+              2037638,
+              3268858,
+              1533673
+            ],
+            [
+              3250345,
+              2654623,
+              1533673,
+              2150235
+            ]
+          ],
+          [
+            [
+              5780557,
+              5995042,
+              1164927,
+              1891358
+            ],
+            [
+              5995042,
+              8643965,
+              2281546,
+              2260788
+            ],
+            [
+              1164927,
+              2281546,
+              1769460,
+              588535
+            ],
+            [
+              1891358,
+              2260788,
+              588535,
+              1413209
+            ]
+          ],
+          [
+            [
+              1984107,
+              1996799,
+              739577,
+              941886
+            ],
+            [
+              1996799,
+              2816691,
+              1210209,
+              1273672
+            ],
+            [
+              739577,
+              1210209,
+              693744,
+              662676
+            ],
+            [
+              941886,
+              1273672,
+              662676,
+              824724
+            ]
+          ]
+        ],
+        "chosen": [
+          {
+            "multiplier": 2945,
+            "outer": "1915",
+            "inner": "112",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 4170,
+            "outer": "463739",
+            "inner": "1792",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 3372,
+            "outer": "124220283",
+            "inner": "28672",
+            "center_index": 13,
+            "reward": 1
+          },
+          {
+            "multiplier": 2644,
+            "outer": "4354074387",
+            "inner": "229376",
+            "center_index": 16,
+            "reward": 1
+          },
+          {
+            "multiplier": 2135,
+            "outer": "32379",
+            "inner": "608",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 5363,
+            "outer": "18245395",
+            "inner": "19456",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 3278,
+            "outer": "309475859",
+            "inner": "77824",
+            "center_index": 14,
+            "reward": 1
+          },
+          {
+            "multiplier": 3412,
+            "outer": "82642024979",
+            "inner": "1245184",
+            "center_index": 18,
+            "reward": 1
+          },
+          {
+            "multiplier": 3245,
+            "outer": "67347",
+            "inner": "3936",
+            "center_index": 8,
+            "reward": 0
+          },
+          {
+            "multiplier": 2503,
+            "outer": "2134808187",
+            "inner": "503808",
+            "center_index": 15,
+            "reward": 0
+          },
+          {
+            "multiplier": 2319,
+            "outer": "67347",
+            "inner": "4400",
+            "center_index": 8,
+            "reward": 0
+          },
+          {
+            "multiplier": 2301,
+            "outer": "2134808187",
+            "inner": "563200",
+            "center_index": 15,
+            "reward": 0
+          },
+          {
+            "multiplier": 7162,
+            "outer": "463739",
+            "inner": "30640",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 874,
+            "outer": "124220283",
+            "inner": "490240",
+            "center_index": 13,
+            "reward": 1
+          },
+          {
+            "multiplier": 976,
+            "outer": "4354074387",
+            "inner": "3921920",
+            "center_index": 16,
+            "reward": 1
+          },
+          {
+            "multiplier": 8558,
+            "outer": "530573137531",
+            "inner": "31375360",
+            "center_index": 19,
+            "reward": 1
+          },
+          {
+            "multiplier": 9649,
+            "outer": "1276435",
+            "inner": "74032",
+            "center_index": 10,
+            "reward": 0
+          },
+          {
+            "multiplier": 4963,
+            "outer": "8001147",
+            "inner": "148064",
+            "center_index": 11,
+            "reward": 0
+          },
+          {
+            "multiplier": 3468,
+            "outer": "30225757051",
+            "inner": "9476096",
+            "center_index": 17,
+            "reward": 0
+          },
+          {
+            "multiplier": 990,
+            "outer": "1175676118803",
+            "inner": "75808768",
+            "center_index": 20,
+            "reward": 0
+          },
+          {
+            "multiplier": 13659,
+            "outer": "18245395",
+            "inner": "1036128",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 1788,
+            "outer": "309475859",
+            "inner": "4144512",
+            "center_index": 14,
+            "reward": 1
+          },
+          {
+            "multiplier": 3836,
+            "outer": "82642024979",
+            "inner": "66312192",
+            "center_index": 18,
+            "reward": 1
+          },
+          {
+            "multiplier": 1194,
+            "outer": "8199373878139",
+            "inner": "530497536",
+            "center_index": 21,
+            "reward": 1
+          },
+          {
+            "multiplier": 4423,
+            "outer": "2134808187",
+            "inner": "8620416",
+            "center_index": 15,
+            "reward": 0
+          },
+          {
+            "multiplier": 1781,
+            "outer": "19977819994643",
+            "inner": "1103413248",
+            "center_index": 22,
+            "reward": 0
+          },
+          {
+            "multiplier": 519,
+            "outer": "139441424012923",
+            "inner": "2206826496",
+            "center_index": 23,
+            "reward": 0
+          },
+          {
+            "multiplier": 2851,
+            "outer": "124220283",
+            "inner": "7419824",
+            "center_index": 13,
+            "reward": 1
+          },
+          {
+            "multiplier": 2509,
+            "outer": "4354074387",
+            "inner": "59358592",
+            "center_index": 16,
+            "reward": 1
+          },
+          {
+            "multiplier": 1156,
+            "outer": "530573137531",
+            "inner": "474868736",
+            "center_index": 19,
+            "reward": 1
+          },
+          {
+            "multiplier": 2615,
+            "outer": "286691477808915",
+            "inner": "15195799552",
+            "center_index": 24,
+            "reward": 1
+          },
+          {
+            "multiplier": 3725,
+            "outer": "30225757051",
+            "inner": "163383680",
+            "center_index": 17,
+            "reward": 0
+          },
+          {
+            "multiplier": 2402,
+            "outer": "1175676118803",
+            "inner": "1307069440",
+            "center_index": 20,
+            "reward": 0
+          },
+          {
+            "multiplier": 2291,
+            "outer": "30225757051",
+            "inner": "512073408",
+            "center_index": 17,
+            "reward": 0
+          },
+          {
+            "multiplier": 1513,
+            "outer": "1175676118803",
+            "inner": "4096587264",
+            "center_index": 20,
+            "reward": 0
+          },
+          {
+            "multiplier": 1227,
+            "outer": "309475859",
+            "inner": "72981580",
+            "center_index": 14,
+            "reward": 1
+          },
+          {
+            "multiplier": 1737,
+            "outer": "82642024979",
+            "inner": "1167705280",
+            "center_index": 18,
+            "reward": 1
+          },
+          {
+            "multiplier": 835,
+            "outer": "8199373878139",
+            "inner": "9341642240",
+            "center_index": 21,
+            "reward": 1
+          },
+          {
+            "multiplier": 4863,
+            "outer": "2004433876841339",
+            "inner": "149466275840",
+            "center_index": 25,
+            "reward": 1
+          },
+          {
+            "multiplier": 476,
+            "outer": "34563553646843515",
+            "inner": "597865103360",
+            "center_index": 27,
+            "reward": 1
+          },
+          {
+            "multiplier": 314,
+            "outer": "4354074387",
+            "inner": "993762264",
+            "center_index": 16,
+            "reward": 1
+          },
+          {
+            "multiplier": 1574,
+            "outer": "530573137531",
+            "inner": "7950098112",
+            "center_index": 19,
+            "reward": 1
+          },
+          {
+            "multiplier": 2196,
+            "outer": "286691477808915",
+            "inner": "254403139584",
+            "center_index": 24,
+            "reward": 1
+          },
+          {
+            "multiplier": 1909,
+            "outer": "5421800950151699",
+            "inner": "1017612558336",
+            "center_index": 26,
+            "reward": 1
+          },
+          {
+            "multiplier": 1725,
+            "outer": "82642024979",
+            "inner": "4951613744",
+            "center_index": 18,
+            "reward": 1
+          },
+          {
+            "multiplier": 2043,
+            "outer": "8199373878139",
+            "inner": "39612909952",
+            "center_index": 21,
+            "reward": 1
+          },
+          {
+            "multiplier": 1473,
+            "outer": "2004433876841339",
+            "inner": "633806559232",
+            "center_index": 25,
+            "reward": 1
+          },
+          {
+            "multiplier": 956,
+            "outer": "34563553646843515",
+            "inner": "2535226236928",
+            "center_index": 27,
+            "reward": 1
+          },
+          {
+            "multiplier": 1275,
+            "outer": "19977819994643",
+            "inner": "273255447936",
+            "center_index": 22,
+            "reward": 0
+          },
+          {
+            "multiplier": 1359,
+            "outer": "139441424012923",
+            "inner": "546510895872",
+            "center_index": 23,
+            "reward": 0
+          },
+          {
+            "multiplier": 898,
+            "outer": "77953756128470803",
+            "inner": "17488348667904",
+            "center_index": 28,
+            "reward": 0
+          },
+          {
+            "multiplier": 743,
+            "outer": "535433110028055419",
+            "inner": "34976697335808",
+            "center_index": 29,
+            "reward": 0
+          },
+          {
+            "multiplier": 1352,
+            "outer": "530573137531",
+            "inner": "34832595096",
+            "center_index": 19,
+            "reward": 1
+          },
+          {
+            "multiplier": 2020,
+            "outer": "286691477808915",
+            "inner": "1114643043072",
+            "center_index": 24,
+            "reward": 1
+          },
+          {
+            "multiplier": 314,
+            "outer": "5421800950151699",
+            "inner": "4458572172288",
+            "center_index": 26,
+            "reward": 1
+          },
+          {
+            "multiplier": 489,
+            "outer": "1316891645684038163",
+            "inner": "71337154756608",
+            "center_index": 30,
+            "reward": 1
+          }
+        ],
+        "common_denominator": 100000
+      },
+      "floating_infeasibility_is_not_a_proof": true,
+      "max_seed_time": 16
+    }
+  ],
+  "seconds": 0.1594392999977572
+}

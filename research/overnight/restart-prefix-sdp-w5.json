@@ -1,0 +1,1433 @@
+{
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "rank_proved": false,
+  "solver_version": "0.11.1",
+  "conic_controls": {
+    "known_trace_minimum_two": true,
+    "off_diagonal_sqrt_two_scaling": true
+  },
+  "restart_controls": {
+    "independent_scalar_lag_cases": 128,
+    "restart_commutation_controls": 128,
+    "AllPassed": true
+  },
+  "inner_width": 5,
+  "training_lags": [
+    2,
+    10
+  ],
+  "iterations": [
+    {
+      "status": "AlmostPrimalInfeasible",
+      "solve_time": 0.0174814,
+      "iterations": 11,
+      "objective": null,
+      "actual_training_pairs": 67,
+      "candidate_accepted": false,
+      "rational_dual_attempt": {
+        "passed": false,
+        "combined_reward": 1000001,
+        "linear_gain_min": -3,
+        "principal_minors": [
+          [
+            7890354,
+            22716185,
+            3160017,
+            3291366,
+            75386010433634,
+            9523906250393,
+            18984710175080,
+            39461747474520,
+            28894589806866,
+            8762244510722,
+            88007036300784679903,
+            92337097685907119776,
+            22905557745680982610,
+            46281853406940015472,
+            103040270026626171385974942
+          ],
+          [
+            5335145,
+            13658273,
+            10288512,
+            6171234,
+            48988326324601,
+            14269060887119,
+            20786506680626,
+            84307680406512,
+            43021419291038,
+            56554701022908,
+            116322642398673659071,
+            135108734558230188206,
+            43138023849752565018,
+            254679071059669100220,
+            102223184641588927065128062
+          ],
+          [
+            11452836,
+            18537658,
+            4193463,
+            5922935,
+            158331391167047,
+            38306466940412,
+            59639157238904,
+            47490392833554,
+            59342035210130,
+            18205402629656,
+            389304174102549202193,
+            506802396735664094577,
+            162533903225926983012,
+            147964975227720513248,
+            1212220299845988427577620720
+          ],
+          [
+            7932933,
+            31240957,
+            2270956,
+            1496168,
+            107350567666865,
+            6915816549923,
+            9830296280520,
+            42638990802748,
+            28542324247151,
+            2605533793583,
+            92654385426837925783,
+            96941679873148306027,
+            7900871367290282995,
+            38120454136684491239,
+            77672268277699875272839532
+          ],
+          [
+            7286040,
+            13214350,
+            4115360,
+            3377290,
+            50342577388304,
+            12463613616911,
+            9053724556071,
+            7157657063711,
+            3406475386291,
+            1039841522044,
+            21492607915334974122,
+            7382932435769875418,
+            2787563298123552098,
+            1038654270533716882,
+            2246293153610785285987600
+          ]
+        ],
+        "gram_gains": [
+          [
+            [
+              7890354,
+              10190816,
+              3925525,
+              2642978
+            ],
+            [
+              10190816,
+              22716185,
+              5685225,
+              6772938
+            ],
+            [
+              3925525,
+              5685225,
+              3160017,
+              1280050
+            ],
+            [
+              2642978,
+              6772938,
+              1280050,
+              3291366
+            ]
+          ],
+          [
+            [
+              5335145,
+              4886772,
+              6373511,
+              3483952
+            ],
+            [
+              4886772,
+              13658273,
+              7497708,
+              6423938
+            ],
+            [
+              6373511,
+              7497708,
+              10288512,
+              2634030
+            ],
+            [
+              3483952,
+              6423938,
+              2634030,
+              6171234
+            ]
+          ],
+          [
+            [
+              11452836,
+              7346929,
+              3117784,
+              2862734
+            ],
+            [
+              7346929,
+              18537658,
+              5499690,
+              7103190
+            ],
+            [
+              3117784,
+              5499690,
+              4193463,
+              2575307
+            ],
+            [
+              2862734,
+              7103190,
+              2575307,
+              5922935
+            ]
+          ],
+          [
+            [
+              7932933,
+              11852504,
+              3331595,
+              1427832
+            ],
+            [
+              11852504,
+              31240957,
+              5320512,
+              4266075
+            ],
+            [
+              3331595,
+              5320512,
+              2270956,
+              890055
+            ],
+            [
+              1427832,
+              4266075,
+              890055,
+              1496168
+            ]
+          ],
+          [
+            [
+              7286040,
+              6777736,
+              4185817,
+              3943773
+            ],
+            [
+              6777736,
+              13214350,
+              6871983,
+              6420453
+            ],
+            [
+              4185817,
+              6871983,
+              4115360,
+              3585934
+            ],
+            [
+              3943773,
+              6420453,
+              3585934,
+              3377290
+            ]
+          ]
+        ],
+        "chosen": [
+          {
+            "multiplier": 4664,
+            "outer": "21011",
+            "inner": "320",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 8583,
+            "outer": "1915",
+            "inner": "112",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 6469,
+            "outer": "463739",
+            "inner": "1792",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 30571,
+            "outer": "907",
+            "inner": "72",
+            "center_index": 4,
+            "reward": 1
+          },
+          {
+            "multiplier": 5136,
+            "outer": "15675",
+            "inner": "288",
+            "center_index": 6,
+            "reward": 1
+          },
+          {
+            "multiplier": 3512,
+            "outer": "603155",
+            "inner": "2304",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 8452,
+            "outer": "15675",
+            "inner": "288",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 4435,
+            "outer": "242171",
+            "inner": "1152",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 1492,
+            "outer": "8473875",
+            "inner": "9216",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 5208,
+            "outer": "2939",
+            "inner": "176",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 3247,
+            "outer": "725883",
+            "inner": "2816",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 11952,
+            "outer": "12819",
+            "inner": "352",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 8544,
+            "outer": "53779",
+            "inner": "832",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 22395,
+            "outer": "211",
+            "inner": "52",
+            "center_index": 4,
+            "reward": 0
+          },
+          {
+            "multiplier": 22488,
+            "outer": "179835",
+            "inner": "1664",
+            "center_index": 9,
+            "reward": 0
+          },
+          {
+            "multiplier": 8457,
+            "outer": "4027",
+            "inner": "240",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 2066,
+            "outer": "2328339",
+            "inner": "7680",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 50685,
+            "outer": "999035",
+            "inner": "3840",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 74666,
+            "outer": "79123",
+            "inner": "1088",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 3213,
+            "outer": "19203859",
+            "inner": "17408",
+            "center_index": 11,
+            "reward": 1
+          },
+          {
+            "multiplier": 1551,
+            "outer": "19203859",
+            "inner": "17408",
+            "center_index": 12,
+            "reward": 0
+          },
+          {
+            "multiplier": 12216,
+            "outer": "4179",
+            "inner": "272",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 6061,
+            "outer": "1135123",
+            "inner": "4352",
+            "center_index": 11,
+            "reward": 1
+          },
+          {
+            "multiplier": 39127,
+            "outer": "1915",
+            "inner": "152",
+            "center_index": 4,
+            "reward": 1
+          },
+          {
+            "multiplier": 2518,
+            "outer": "32379",
+            "inner": "608",
+            "center_index": 6,
+            "reward": 1
+          },
+          {
+            "multiplier": 2180,
+            "outer": "8001147",
+            "inner": "9728",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 9315,
+            "outer": "32379",
+            "inner": "608",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 14961,
+            "outer": "18245395",
+            "inner": "19456",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 30325,
+            "outer": "275",
+            "inner": "76",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 57295,
+            "outer": "32379",
+            "inner": "608",
+            "center_index": 8,
+            "reward": 1
+          },
+          {
+            "multiplier": 46710,
+            "outer": "463739",
+            "inner": "2432",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 3762,
+            "outer": "86547",
+            "inner": "1344",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 98486,
+            "outer": "339",
+            "inner": "84",
+            "center_index": 4,
+            "reward": 0
+          },
+          {
+            "multiplier": 4148,
+            "outer": "441979",
+            "inner": "2688",
+            "center_index": 9,
+            "reward": 0
+          },
+          {
+            "multiplier": 59115,
+            "outer": "339",
+            "inner": "84",
+            "center_index": 5,
+            "reward": 0
+          },
+          {
+            "multiplier": 65754,
+            "outer": "1723",
+            "inner": "168",
+            "center_index": 6,
+            "reward": 0
+          },
+          {
+            "multiplier": 6344,
+            "outer": "6075",
+            "inner": "368",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 1626,
+            "outer": "6522643",
+            "inner": "11776",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 7371,
+            "outer": "1523323",
+            "inner": "5888",
+            "center_index": 10,
+            "reward": 1
+          },
+          {
+            "multiplier": 23147,
+            "outer": "6522643",
+            "inner": "11776",
+            "center_index": 12,
+            "reward": 0
+          },
+          {
+            "multiplier": 73707,
+            "outer": "1419",
+            "inner": "200",
+            "center_index": 4,
+            "reward": 1
+          },
+          {
+            "multiplier": 23561,
+            "outer": "23867",
+            "inner": "800",
+            "center_index": 6,
+            "reward": 1
+          },
+          {
+            "multiplier": 34033,
+            "outer": "1651731",
+            "inner": "6400",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 48220,
+            "outer": "23867",
+            "inner": "800",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 9443,
+            "outer": "373243",
+            "inner": "3200",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 2675,
+            "outer": "25251091",
+            "inner": "25600",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 6760,
+            "outer": "6579",
+            "inner": "400",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 3610,
+            "outer": "23867",
+            "inner": "800",
+            "center_index": 8,
+            "reward": 0
+          },
+          {
+            "multiplier": 8123,
+            "outer": "7035",
+            "inner": "432",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 6267,
+            "outer": "1774459",
+            "inner": "6912",
+            "center_index": 9,
+            "reward": 1
+          },
+          {
+            "multiplier": 105194,
+            "outer": "21011",
+            "inner": "864",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 3497,
+            "outer": "114299",
+            "inner": "1728",
+            "center_index": 9,
+            "reward": 0
+          },
+          {
+            "multiplier": 8826,
+            "outer": "122899",
+            "inner": "1856",
+            "center_index": 7,
+            "reward": 0
+          },
+          {
+            "multiplier": 7156,
+            "outer": "286843",
+            "inner": "3712",
+            "center_index": 8,
+            "reward": 0
+          },
+          {
+            "multiplier": 6733,
+            "outer": "499",
+            "inner": "116",
+            "center_index": 4,
+            "reward": 0
+          },
+          {
+            "multiplier": 2188,
+            "outer": "32993811",
+            "inner": "29696",
+            "center_index": 12,
+            "reward": 0
+          },
+          {
+            "multiplier": 27624,
+            "outer": "499",
+            "inner": "116",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 4051,
+            "outer": "20475",
+            "inner": "928",
+            "center_index": 8,
+            "reward": 1
+          },
+          {
+            "multiplier": 1199,
+            "outer": "32993811",
+            "inner": "29696",
+            "center_index": 13,
+            "reward": 1
+          },
+          {
+            "multiplier": 30862,
+            "outer": "7739",
+            "inner": "496",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 58464,
+            "outer": "120315",
+            "inner": "1984",
+            "center_index": 7,
+            "reward": 1
+          },
+          {
+            "multiplier": 7418,
+            "outer": "30269307",
+            "inner": "31744",
+            "center_index": 11,
+            "reward": 1
+          },
+          {
+            "multiplier": 116895,
+            "outer": "1267",
+            "inner": "248",
+            "center_index": 5,
+            "reward": 1
+          },
+          {
+            "multiplier": 20767,
+            "outer": "120315",
+            "inner": "1984",
+            "center_index": 8,
+            "reward": 1
+          },
+          {
+            "multiplier": 15119,
+            "outer": "30269307",
+            "inner": "31744",
+            "center_index": 12,
+            "reward": 1
+          },
+          {
+            "multiplier": 9142,
+            "outer": "1267",
+            "inner": "248",
+            "center_index": 6,
+            "reward": 1
+          },
+          {
+            "multiplier": 50190,
+            "outer": "4364563",
+            "inner": "15872",
+            "center_index": 12,
+            "reward": 1
+          }
+        ],
+        "common_denominator": 1000000
+      },
+      "floating_infeasibility_is_not_a_proof": true
+    }
+  ],
+  "result": {
+    "status": "AlmostPrimalInfeasible",
+    "solve_time": 0.0174814,
+    "iterations": 11,
+    "objective": null,
+    "actual_training_pairs": 67,
+    "candidate_accepted": false,
+    "rational_dual_attempt": {
+      "passed": false,
+      "combined_reward": 1000001,
+      "linear_gain_min": -3,
+      "principal_minors": [
+        [
+          7890354,
+          22716185,
+          3160017,
+          3291366,
+          75386010433634,
+          9523906250393,
+          18984710175080,
+          39461747474520,
+          28894589806866,
+          8762244510722,
+          88007036300784679903,
+          92337097685907119776,
+          22905557745680982610,
+          46281853406940015472,
+          103040270026626171385974942
+        ],
+        [
+          5335145,
+          13658273,
+          10288512,
+          6171234,
+          48988326324601,
+          14269060887119,
+          20786506680626,
+          84307680406512,
+          43021419291038,
+          56554701022908,
+          116322642398673659071,
+          135108734558230188206,
+          43138023849752565018,
+          254679071059669100220,
+          102223184641588927065128062
+        ],
+        [
+          11452836,
+          18537658,
+          4193463,
+          5922935,
+          158331391167047,
+          38306466940412,
+          59639157238904,
+          47490392833554,
+          59342035210130,
+          18205402629656,
+          389304174102549202193,
+          506802396735664094577,
+          162533903225926983012,
+          147964975227720513248,
+          1212220299845988427577620720
+        ],
+        [
+          7932933,
+          31240957,
+          2270956,
+          1496168,
+          107350567666865,
+          6915816549923,
+          9830296280520,
+          42638990802748,
+          28542324247151,
+          2605533793583,
+          92654385426837925783,
+          96941679873148306027,
+          7900871367290282995,
+          38120454136684491239,
+          77672268277699875272839532
+        ],
+        [
+          7286040,
+          13214350,
+          4115360,
+          3377290,
+          50342577388304,
+          12463613616911,
+          9053724556071,
+          7157657063711,
+          3406475386291,
+          1039841522044,
+          21492607915334974122,
+          7382932435769875418,
+          2787563298123552098,
+          1038654270533716882,
+          2246293153610785285987600
+        ]
+      ],
+      "gram_gains": [
+        [
+          [
+            7890354,
+            10190816,
+            3925525,
+            2642978
+          ],
+          [
+            10190816,
+            22716185,
+            5685225,
+            6772938
+          ],
+          [
+            3925525,
+            5685225,
+            3160017,
+            1280050
+          ],
+          [
+            2642978,
+            6772938,
+            1280050,
+            3291366
+          ]
+        ],
+        [
+          [
+            5335145,
+            4886772,
+            6373511,
+            3483952
+          ],
+          [
+            4886772,
+            13658273,
+            7497708,
+            6423938
+          ],
+          [
+            6373511,
+            7497708,
+            10288512,
+            2634030
+          ],
+          [
+            3483952,
+            6423938,
+            2634030,
+            6171234
+          ]
+        ],
+        [
+          [
+            11452836,
+            7346929,
+            3117784,
+            2862734
+          ],
+          [
+            7346929,
+            18537658,
+            5499690,
+            7103190
+          ],
+          [
+            3117784,
+            5499690,
+            4193463,
+            2575307
+          ],
+          [
+            2862734,
+            7103190,
+            2575307,
+            5922935
+          ]
+        ],
+        [
+          [
+            7932933,
+            11852504,
+            3331595,
+            1427832
+          ],
+          [
+            11852504,
+            31240957,
+            5320512,
+            4266075
+          ],
+          [
+            3331595,
+            5320512,
+            2270956,
+            890055
+          ],
+          [
+            1427832,
+            4266075,
+            890055,
+            1496168
+          ]
+        ],
+        [
+          [
+            7286040,
+            6777736,
+            4185817,
+            3943773
+          ],
+          [
+            6777736,
+            13214350,
+            6871983,
+            6420453
+          ],
+          [
+            4185817,
+            6871983,
+            4115360,
+            3585934
+          ],
+          [
+            3943773,
+            6420453,
+            3585934,
+            3377290
+          ]
+        ]
+      ],
+      "chosen": [
+        {
+          "multiplier": 4664,
+          "outer": "21011",
+          "inner": "320",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 8583,
+          "outer": "1915",
+          "inner": "112",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 6469,
+          "outer": "463739",
+          "inner": "1792",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 30571,
+          "outer": "907",
+          "inner": "72",
+          "center_index": 4,
+          "reward": 1
+        },
+        {
+          "multiplier": 5136,
+          "outer": "15675",
+          "inner": "288",
+          "center_index": 6,
+          "reward": 1
+        },
+        {
+          "multiplier": 3512,
+          "outer": "603155",
+          "inner": "2304",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 8452,
+          "outer": "15675",
+          "inner": "288",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 4435,
+          "outer": "242171",
+          "inner": "1152",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 1492,
+          "outer": "8473875",
+          "inner": "9216",
+          "center_index": 12,
+          "reward": 1
+        },
+        {
+          "multiplier": 5208,
+          "outer": "2939",
+          "inner": "176",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 3247,
+          "outer": "725883",
+          "inner": "2816",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 11952,
+          "outer": "12819",
+          "inner": "352",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 8544,
+          "outer": "53779",
+          "inner": "832",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 22395,
+          "outer": "211",
+          "inner": "52",
+          "center_index": 4,
+          "reward": 0
+        },
+        {
+          "multiplier": 22488,
+          "outer": "179835",
+          "inner": "1664",
+          "center_index": 9,
+          "reward": 0
+        },
+        {
+          "multiplier": 8457,
+          "outer": "4027",
+          "inner": "240",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 2066,
+          "outer": "2328339",
+          "inner": "7680",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 50685,
+          "outer": "999035",
+          "inner": "3840",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 74666,
+          "outer": "79123",
+          "inner": "1088",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 3213,
+          "outer": "19203859",
+          "inner": "17408",
+          "center_index": 11,
+          "reward": 1
+        },
+        {
+          "multiplier": 1551,
+          "outer": "19203859",
+          "inner": "17408",
+          "center_index": 12,
+          "reward": 0
+        },
+        {
+          "multiplier": 12216,
+          "outer": "4179",
+          "inner": "272",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 6061,
+          "outer": "1135123",
+          "inner": "4352",
+          "center_index": 11,
+          "reward": 1
+        },
+        {
+          "multiplier": 39127,
+          "outer": "1915",
+          "inner": "152",
+          "center_index": 4,
+          "reward": 1
+        },
+        {
+          "multiplier": 2518,
+          "outer": "32379",
+          "inner": "608",
+          "center_index": 6,
+          "reward": 1
+        },
+        {
+          "multiplier": 2180,
+          "outer": "8001147",
+          "inner": "9728",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 9315,
+          "outer": "32379",
+          "inner": "608",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 14961,
+          "outer": "18245395",
+          "inner": "19456",
+          "center_index": 12,
+          "reward": 1
+        },
+        {
+          "multiplier": 30325,
+          "outer": "275",
+          "inner": "76",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 57295,
+          "outer": "32379",
+          "inner": "608",
+          "center_index": 8,
+          "reward": 1
+        },
+        {
+          "multiplier": 46710,
+          "outer": "463739",
+          "inner": "2432",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 3762,
+          "outer": "86547",
+          "inner": "1344",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 98486,
+          "outer": "339",
+          "inner": "84",
+          "center_index": 4,
+          "reward": 0
+        },
+        {
+          "multiplier": 4148,
+          "outer": "441979",
+          "inner": "2688",
+          "center_index": 9,
+          "reward": 0
+        },
+        {
+          "multiplier": 59115,
+          "outer": "339",
+          "inner": "84",
+          "center_index": 5,
+          "reward": 0
+        },
+        {
+          "multiplier": 65754,
+          "outer": "1723",
+          "inner": "168",
+          "center_index": 6,
+          "reward": 0
+        },
+        {
+          "multiplier": 6344,
+          "outer": "6075",
+          "inner": "368",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 1626,
+          "outer": "6522643",
+          "inner": "11776",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 7371,
+          "outer": "1523323",
+          "inner": "5888",
+          "center_index": 10,
+          "reward": 1
+        },
+        {
+          "multiplier": 23147,
+          "outer": "6522643",
+          "inner": "11776",
+          "center_index": 12,
+          "reward": 0
+        },
+        {
+          "multiplier": 73707,
+          "outer": "1419",
+          "inner": "200",
+          "center_index": 4,
+          "reward": 1
+        },
+        {
+          "multiplier": 23561,
+          "outer": "23867",
+          "inner": "800",
+          "center_index": 6,
+          "reward": 1
+        },
+        {
+          "multiplier": 34033,
+          "outer": "1651731",
+          "inner": "6400",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 48220,
+          "outer": "23867",
+          "inner": "800",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 9443,
+          "outer": "373243",
+          "inner": "3200",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 2675,
+          "outer": "25251091",
+          "inner": "25600",
+          "center_index": 12,
+          "reward": 1
+        },
+        {
+          "multiplier": 6760,
+          "outer": "6579",
+          "inner": "400",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 3610,
+          "outer": "23867",
+          "inner": "800",
+          "center_index": 8,
+          "reward": 0
+        },
+        {
+          "multiplier": 8123,
+          "outer": "7035",
+          "inner": "432",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 6267,
+          "outer": "1774459",
+          "inner": "6912",
+          "center_index": 9,
+          "reward": 1
+        },
+        {
+          "multiplier": 105194,
+          "outer": "21011",
+          "inner": "864",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 3497,
+          "outer": "114299",
+          "inner": "1728",
+          "center_index": 9,
+          "reward": 0
+        },
+        {
+          "multiplier": 8826,
+          "outer": "122899",
+          "inner": "1856",
+          "center_index": 7,
+          "reward": 0
+        },
+        {
+          "multiplier": 7156,
+          "outer": "286843",
+          "inner": "3712",
+          "center_index": 8,
+          "reward": 0
+        },
+        {
+          "multiplier": 6733,
+          "outer": "499",
+          "inner": "116",
+          "center_index": 4,
+          "reward": 0
+        },
+        {
+          "multiplier": 2188,
+          "outer": "32993811",
+          "inner": "29696",
+          "center_index": 12,
+          "reward": 0
+        },
+        {
+          "multiplier": 27624,
+          "outer": "499",
+          "inner": "116",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 4051,
+          "outer": "20475",
+          "inner": "928",
+          "center_index": 8,
+          "reward": 1
+        },
+        {
+          "multiplier": 1199,
+          "outer": "32993811",
+          "inner": "29696",
+          "center_index": 13,
+          "reward": 1
+        },
+        {
+          "multiplier": 30862,
+          "outer": "7739",
+          "inner": "496",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 58464,
+          "outer": "120315",
+          "inner": "1984",
+          "center_index": 7,
+          "reward": 1
+        },
+        {
+          "multiplier": 7418,
+          "outer": "30269307",
+          "inner": "31744",
+          "center_index": 11,
+          "reward": 1
+        },
+        {
+          "multiplier": 116895,
+          "outer": "1267",
+          "inner": "248",
+          "center_index": 5,
+          "reward": 1
+        },
+        {
+          "multiplier": 20767,
+          "outer": "120315",
+          "inner": "1984",
+          "center_index": 8,
+          "reward": 1
+        },
+        {
+          "multiplier": 15119,
+          "outer": "30269307",
+          "inner": "31744",
+          "center_index": 12,
+          "reward": 1
+        },
+        {
+          "multiplier": 9142,
+          "outer": "1267",
+          "inner": "248",
+          "center_index": 6,
+          "reward": 1
+        },
+        {
+          "multiplier": 50190,
+          "outer": "4364563",
+          "inner": "15872",
+          "center_index": 12,
+          "reward": 1
+        }
+      ],
+      "common_denominator": 1000000
+    },
+    "floating_infeasibility_is_not_a_proof": true
+  },
+  "seconds": 0.16491579999274109
+}
