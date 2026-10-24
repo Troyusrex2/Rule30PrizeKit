@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.EdgeObservable","standardAxioms":true},{"kind":"def","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.HasLeftEdge","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.edges_equal_of_nonnegative","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.hasLeftEdge_evol","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.no_eventuallyPeriodic_of_edgeObservable","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.problem1_of_edgeObservable","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30Realization.seed.eq_1","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch.problem1_of_edgeObservable","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Ruliology.CellularAutomata.Rule30TraceEdgeResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":14,"ok":true},"verdict":"pass","verifiedTargets":[]}

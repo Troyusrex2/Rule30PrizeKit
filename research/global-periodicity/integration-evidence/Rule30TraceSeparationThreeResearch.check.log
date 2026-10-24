@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch.certificate_two_three","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch.separate_minus_two_minus_three","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch.separate_minus_two_minus_three","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":2,"ok":true},"verdict":"pass","verifiedTargets":[]}
