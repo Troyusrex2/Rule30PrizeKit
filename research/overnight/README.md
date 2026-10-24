@@ -613,6 +613,58 @@ finiteness cannot simply be dropped from a proposed classification of that
 observation. The counterexample and experimental period tests have not been
 formalized in Lean and are not proof premises.
 
+## Stripe-prefix ranks: necessary condition and exact failed models
+
+`Rule30StripePrefixResearch.lean` proves that the first deviation from the fixed
+stripe of a finite `InX` row is at an even depth. The same holds after each
+two-step update. This follows from the kit's pivot theorem; it is not a new
+period exclusion. The module also states an **open** integer ranking condition
+on these accepted transitions and proves that constructing such a ranking would
+give Q01. Its lower bound is required on accepted transitions, including the
+following transition when bounding a later row in an infinite constrained orbit.
+No ranking satisfying the condition has been constructed.
+
+The unchanged checker replayed all 26 declarations and six headlines in both
+the [working catalog](stripe-prefix-evidence/catalog/report.json) and the
+[pinned reference](stripe-prefix-evidence/pinned/report.json).
+
+`stripe_prefix_dfa_potential.py` tracks this whole-prefix restriction, spatial
+parity, and optionally the parity of the number of preceding black cells. It
+searches additive scores for nonzero windows of length two or four. All four
+recorded numerical searches were infeasible; each passed 128 independent scalar
+update and exact feature-accounting controls. Floating-point infeasibility is
+not an exact refutation.
+
+For three of these four classes we now have something stronger:
+`Rule30PrefixRankObstructionResearch.lean` proves exact finite accepted
+transitions whose feature vectors are unchanged. Using depth one as the low bit:
+
+| Window length | Prefix black-count parity | Actual two-step transition |
+|---|---|---|
+| 2 | Either included or omitted | 203 -> 803 |
+| 4 | Omitted | 143659 -> 805387 |
+
+Both endpoints have finite support and first stripe defect at depth two. The
+module connects the packed updates to the official `zrow` for every depth,
+proves equality of the scores for **arbitrary integer weights**, and deduces
+that no rank with these features can meet the proposed strict descent. This
+obstruction does not depend on nonnegative weights or a solver. It does not
+exclude longer windows, different automata, or other types of ranking.
+All 41 declarations and ten headlines passed full unchanged-checker replay in
+the [working catalog](prefix-rank-obstruction-evidence/catalog/report.json) and
+[pinned reference](prefix-rank-obstruction-evidence/pinned/report.json).
+
+`temporal_profile_probe.py` investigates a separate diagonal observability
+conjecture by integrating temporal columns from the zero right boundary. The
+clock-64 graph exhausts its 171,780 profile-pair states, so the algorithm covers
+all finite widths whose **full diagonal orbit period divides 64**. It finds no
+head-period loss or counterexample to the proposed head/OR response normal form.
+It checks 256 represented rows by independent whole-row evolution and every
+width-ten word. This is an **untrusted finite-clock experiment**, not a Lean
+theorem. At clock 128 it stops at two million states, leaving 81,785 queued;
+that run is incomplete and supports no all-width conclusion. Neither experiment
+concerns the vertical center's eventual periodicity.
+
 ## Reproduction commands
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -642,6 +694,12 @@ python research/overnight/audit_center_runs.py --project /path/to/pinned-kit --l
 python research/overnight/verify_controlled_response.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_quantitative_rank.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_quantitative_rank.py --lake /path/to/lake
+python research/overnight/verify_stripe_prefix.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_stripe_prefix.py --lake /path/to/lake
+python research/overnight/verify_prefix_rank_obstruction.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_prefix_rank_obstruction.py --lake /path/to/lake
+python research/overnight/stripe_prefix_dfa_potential.py --radius 4 --ones-parity --signed
+python research/overnight/temporal_profile_probe.py --clock 64
 python research/overnight/controlled_response_controls.py
 python research/overnight/controlled_response_normal_form.py --max-width 22
 python research/overnight/lag_correlated_potential.py --lag 2 --stride 2 --radius 4 --alternate

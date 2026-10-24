@@ -606,6 +606,58 @@
       "seconds": 9.297
     },
     {
+      "report": "stripe-prefix-dfa-r2-parity-signed.json",
+      "sha256": "cc89aad9439835c2c8bdcd24657cece9f45372a643948eeccfb126ff4127aea8",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "seconds": 0.047,
+      "prefix_dfa_states": 12,
+      "tracks_prefix_ones_parity": true,
+      "pattern_length": 2,
+      "signed_weights_with_accepted_path_lower_bound": true
+    },
+    {
+      "report": "stripe-prefix-dfa-r2.json",
+      "sha256": "23caf374a3c011f9730518ee21ec402318d08d86edf3d09911b2c8d4e8ec0474",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "seconds": 0.015,
+      "prefix_dfa_states": 6,
+      "tracks_prefix_ones_parity": false,
+      "pattern_length": 2,
+      "signed_weights_with_accepted_path_lower_bound": false
+    },
+    {
+      "report": "stripe-prefix-dfa-r4-parity-signed.json",
+      "sha256": "3d4eefa405e92f52541a1f306cfd2dc92ec57ee37b8831b510372deb2294bd2d",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "seconds": 0.36,
+      "prefix_dfa_states": 12,
+      "tracks_prefix_ones_parity": true,
+      "pattern_length": 4,
+      "signed_weights_with_accepted_path_lower_bound": true
+    },
+    {
+      "report": "stripe-prefix-dfa-r4-signed.json",
+      "sha256": "f3dcf3260c45b0578e6a43fde0c814fe1583e5914e990f10e9bc485a8bc3dda4",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "seconds": 0.063,
+      "prefix_dfa_states": 6,
+      "tracks_prefix_ones_parity": false,
+      "pattern_length": 4,
+      "signed_weights_with_accepted_path_lower_bound": true
+    },
+    {
       "report": "transducer-potential-r3-head16.json",
       "sha256": "e041e562d44aea542b6b3ecf9a0619457f1b5a1ad81b4f880053fe5a28d098e6",
       "status": 2,

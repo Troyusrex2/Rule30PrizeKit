@@ -7,7 +7,7 @@ here = Path(__file__).resolve().parent
 patterns = ['transducer-potential-*.json', 'cycle-transducer-*.json', 'controlled-transducer-*.json',
             'position-transducer-*.json', 'front-transducer-*.json', 'front-distance-*.json',
             'history-transducer-*.json', 'inversion-potential-*.json', 'pair-containment-potential-*.json',
-            'lag-correlated-potential-*.json']
+            'lag-correlated-potential-*.json', 'stripe-prefix-dfa-*.json']
 entries = []
 for path in sorted({p for pattern in patterns for p in here.glob(pattern)}):
     report = json.loads(path.read_text(encoding='utf-8'))
@@ -18,7 +18,9 @@ for path in sorted({p for pattern in patterns for p in here.glob(pattern)}):
     for key in ['radius', 'degree', 'exact_retained_history', 'head_history', 'controller_length',
                 'front_parity', 'signed_weights_with_graph_lower_bound', 'seconds', 'actual_elapsed_seconds',
                 'reward_mode', 'auxiliary_graph_degree', 'signed_weights_with_uniform_graph_lower_bound',
-                'lag', 'stride', 'require_alternation', 'local_pattern_length', 'graph_window']:
+                'lag', 'stride', 'require_alternation', 'local_pattern_length', 'graph_window',
+                'prefix_dfa_states', 'tracks_prefix_ones_parity', 'pattern_length',
+                'signed_weights_with_accepted_path_lower_bound']:
         if key in report: entry[key] = report[key]
     entries.append(entry)
 result = {'Lean_verified_results': False, 'prize_problem_proved': False, 'entries': entries}
