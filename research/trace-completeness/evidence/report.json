@@ -6,8 +6,8 @@
     {
       "module": "Rule30PairedForcingResearch",
       "source_sha256": "1f898fdf08fd83c26eeb91ab76770a535827c42097c69fdbc984be22d827d8b8",
-      "compile_seconds": 6.25,
-      "replay_seconds": 9.39,
+      "compile_seconds": 6.265,
+      "replay_seconds": 9.375,
       "check": {
         "claim": "partial",
         "declared": [
@@ -107,8 +107,8 @@
     {
       "module": "Rule30TraceHorizonCounterexampleResearch",
       "source_sha256": "f5e5cf46fe4802521bbf6b65e422a7a05c76b8ac706309a82b2d3b5a42180173",
-      "compile_seconds": 6.25,
-      "replay_seconds": 9.875,
+      "compile_seconds": 6.281,
+      "replay_seconds": 9.922,
       "check": {
         "claim": "partial",
         "declared": [
@@ -201,6 +201,220 @@
         "reasons": [],
         "replay": {
           "constants": 8,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "Rule30InverseTraceResearch",
+      "source_sha256": "f29745bed61d860cfd8503ab94d6a4d0e39b34bfd616ee54c5607a09bfb73ba8",
+      "compile_seconds": 6.266,
+      "replay_seconds": 9.906,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.bit_response",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.bit_xor_phi",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.bit_xor_phiRows",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix_bit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix_lt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix_top",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.finite_trace_code_injective",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_lt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_realizes",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_right",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_unique",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.prefixEq_before",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.prefixEq_phi",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.prefixEq_phiRows",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.xor_common",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.xor_false_iff",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.xor_solve",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.xor_twice",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.extendPrefix.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_lt",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_right",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_realizes",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.finite_trace_code_injective",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30NormalizationMachineResearch.InverseTrace.inversePrefix_unique",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30InverseTraceResearch",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 52,
           "ok": true
         },
         "verdict": "pass",

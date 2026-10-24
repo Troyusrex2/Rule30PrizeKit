@@ -1,4 +1,4 @@
-"""Fully replay the paired forcing laws and a rejected recovery-horizon claim."""
+"""Fully replay the forcing laws, horizon obstruction, and inverse trace code."""
 import argparse
 import hashlib
 import importlib.util
@@ -14,7 +14,10 @@ NS='Rule30NormalizationMachineResearch.'
 ITEMS=[('Rule30PairedForcingResearch',['local_polarization','paired_difference_step',
                                      'local_center_gate','same_center_gate']),
        ('Rule30TraceHorizonCounterexampleResearch',['pair58_prefix','pair58_difference',
-           'pair58_no_early_stripe','linear_full_recovery_counterexample'])]
+           'pair58_no_early_stripe','linear_full_recovery_counterexample']),
+       ('Rule30InverseTraceResearch',['InverseTrace.inversePrefix_lt','InverseTrace.inversePrefix_right',
+          'InverseTrace.inversePrefix_realizes','InverseTrace.finite_trace_code_injective',
+          'InverseTrace.inversePrefix_unique'])]
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
