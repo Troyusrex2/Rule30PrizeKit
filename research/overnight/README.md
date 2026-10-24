@@ -819,3 +819,25 @@ its source hash. The first sparse
 certificate audit also stopped at its resource guard without a pass. A later
 exact-source replay without C emission passed as described above. Neither
 interrupted ordinary build is recorded as successful verification.
+
+## Local clock masking and period-three candidate checks
+
+[`Rule30ClockMaskResearch`](../../lean/Ruliology/CellularAutomata/Rule30ClockMaskResearch.lean)
+proves a local obstruction with explicit clock premises. For H=2n, if a
+column has period 2H, the next reverses color after H, and the next two have
+period H, their first-pair OR cannot have period H. One more predecessor
+cannot have period H either. The usual triangular updates are required.
+All 13 declarations and five selected headlines pass the unchanged checker
+in [the working environment](clock-mask-evidence/catalog/report.json) and
+[the pinned environment](clock-mask-evidence/pinned/report.json).
+The [Wolfram controls](wolfram-clock-mask-check.json) pass 192 qualifying
+finite cases and ten independent built-in Rule 30 causal-cone comparisons.
+The arbitrary-prefix extension and finite-tail period nonloss remain open;
+this is not a center-column theorem.
+
+[The notes](clock-mask-notes.md) separate that proof from rejected period-three
+ranking fits and unverified fixed-clock graph experiments. The new
+period-three numerical searches found no ranking and are not claimed as Lean
+results. [The finite feedback notes](feedback-erasure-notes.md) document the
+separate actual-feedback theorem and independent audit of PR 10's all-width
+period-three ether erosion, credited to Luis Perez Morales and Claude.
