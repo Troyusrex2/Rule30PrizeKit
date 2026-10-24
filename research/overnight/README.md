@@ -474,8 +474,6 @@ de Bruijn graphs for additive-energy inequalities is standard; see
 No general conservation-law theorem from that survey is assumed in the Lean
 proof or used to infer a result about Rule 30 here.
 
-## An explicit lower bound on any hypothetical ranking
-
 ## Exact return criterion for the eight-column identity
 
 `Rule30ExactReturnResearch.lean` characterizes the full return, rather than
@@ -506,6 +504,14 @@ all 4096 finite zero-tail words of width twelve, including 129 spaced words,
 and found the actual transformed gate already violates the condition at
 cycle zero of the sampled 1024-cycle window. These finite controls support,
 and do not replace, the unbounded proofs.
+
+The [clean contribution, PR 7](https://github.com/WolframInstitute/Rule30PrizeKit/pull/7),
+now includes this exact criterion. Its nine modules total 744 replayed
+declarations; the pinned standalone essay and a fresh LeanLink notebook
+both replayed all 744 with thirteen headline checks. The core catalog build
+passed all 80 jobs, and the saved notebook has zero message cells and exact
+source correspondence. It remains prepared for human review, with no new
+prize API submission.
 
 ## Quantitative ranking obstruction
 
@@ -597,6 +603,15 @@ left halves at every later time, even with the actual feedback through the
 center. In particular, `tail_011_center` and `tail_101_center` prove the two
 terminal rewrites preserve the complete center trace behind any initial left
 half. The converse is not proved.
+
+`q_period_loss_probe.py` is a separate finite experiment on the triangular
+diagonal map: through width eighteen, the head trace detects each finite
+state's full orbit period. This is not an unbounded theorem or a statement
+about the vertical center. A spatially periodic right tail gives a six-cycle
+with first-two-cell OR constantly one while Q squared is not the identity;
+finiteness cannot simply be dropped from a proposed classification of that
+observation. The counterexample and experimental period tests have not been
+formalized in Lean and are not proof premises.
 
 ## Reproduction commands
 

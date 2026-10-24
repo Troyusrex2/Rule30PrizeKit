@@ -1,0 +1,184 @@
+{
+  "finite_experiments_only": true,
+  "Lean_verified": false,
+  "unbounded_head_period_theorem_proved": false,
+  "prize_problem_proved": false,
+  "cases": [
+    {
+      "width": 2,
+      "states": 4,
+      "head_partition_refinement_rounds": 2,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 3,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 3,
+      "states": 8,
+      "head_partition_refinement_rounds": 2,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 5,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 4,
+      "states": 16,
+      "head_partition_refinement_rounds": 3,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 7,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 5,
+      "states": 32,
+      "head_partition_refinement_rounds": 5,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 9,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 6,
+      "states": 64,
+      "head_partition_refinement_rounds": 8,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 11,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 7,
+      "states": 128,
+      "head_partition_refinement_rounds": 9,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 13,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 8,
+      "states": 256,
+      "head_partition_refinement_rounds": 14,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 15,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 9,
+      "states": 512,
+      "head_partition_refinement_rounds": 18,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 17,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 10,
+      "states": 1024,
+      "head_partition_refinement_rounds": 26,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 19,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 11,
+      "states": 2048,
+      "head_partition_refinement_rounds": 33,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 21,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 12,
+      "states": 4096,
+      "head_partition_refinement_rounds": 33,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 23,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 13,
+      "states": 8192,
+      "head_partition_refinement_rounds": 33,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 25,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 14,
+      "states": 16384,
+      "head_partition_refinement_rounds": 38,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 27,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 15,
+      "states": 32768,
+      "head_partition_refinement_rounds": 43,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 29,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 16,
+      "states": 65536,
+      "head_partition_refinement_rounds": 45,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 31,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 17,
+      "states": 131072,
+      "head_partition_refinement_rounds": 48,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 33,
+      "constant_or_expected_count_matches": true
+    },
+    {
+      "width": 18,
+      "states": 262144,
+      "head_partition_refinement_rounds": 49,
+      "period_loss_states": 0,
+      "first_loss_state": null,
+      "constant_or_states": 35,
+      "constant_or_expected_count_matches": true
+    }
+  ],
+  "periodic_right_tail_counterexample": {
+    "spatial_period": 10,
+    "temporal_cycle": [
+      973,
+      58,
+      549,
+      446,
+      833,
+      177
+    ],
+    "head_cycle": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "head_or_next_always_one": true,
+    "Q_squared_is_identity": false,
+    "Lean_verified": false
+  },
+  "seconds": 2.046
+}
