@@ -856,3 +856,19 @@ center-column gaps. The [Wolfram controls](wolfram-finite-clock16-check.json)
 match 36,564 independently computed Rule 30 cells; the Python controls also
 include finite widths up to 200. This is included in public PR 9, with no
 new prize API submission.
+
+## Terminal rewrites preserve every full-state return time
+
+[`Rule30TerminalClockResearch`](../../lean/Ruliology/CellularAutomata/Rule30TerminalClockResearch.lean)
+proves that the known terminal response rewrites preserve all equality
+relations between full Q-orbit states, for arbitrary shared prefixes and
+all times. In particular every full-state return time is preserved, with no
+clock bound. All fifty declarations pass both unchanged checkers; see
+[the evidence](terminal-clock-evidence/pinned/report.json) and
+[the notes](terminal-clock-notes.md). The proof is included in public PR 9.
+Response-rewrite completeness and arbitrary head-clock detection remain open.
+
+The same notes record an independent pinned-kernel audit of four public
+`ghywel/placego` proof files: 215 declarations and twenty concrete headlines
+pass, with proof bodies unchanged and upstream credit retained. The
+[audit record](external-profile-audit/report.json) links exact source revisions.

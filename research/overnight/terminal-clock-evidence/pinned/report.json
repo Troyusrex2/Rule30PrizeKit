@@ -1,0 +1,429 @@
+{
+  "verdict": "pass",
+  "checker_modified": false,
+  "full_problem_claim": false,
+  "scope": "Known terminal rewrites preserve full Q-state orbit equality for every prefix and clock",
+  "response_rewrite_completeness_proved": false,
+  "arbitrary_head_clock_detection_proved": false,
+  "source_sha256": "e560681ff8e176cb9f2a480ace2e7d6764c8c904501c7e7afca1664cf6b24a07",
+  "project_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.deflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.deflate_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.inflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.inflate_prepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.iterate_equal_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_deflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_diagonal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_inflate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_iterate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_equal_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.tail_011_return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.tail_101_return_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ControlledResponseResearch.word.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.below",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.brecOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.brecOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.trans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.deflate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.inflate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_iterate.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.below.base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.below.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.below.cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.Linked.below.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.linked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.RewriteEq.below.trans",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_inflate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_deflate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_response",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_diagonal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_iterate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.iterate_equal_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.linked_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.tail_011_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.tail_101_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_response",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_equal_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TerminalClockResearch.rewrite_return_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30TerminalClockResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 50,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

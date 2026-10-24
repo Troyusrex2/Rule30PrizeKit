@@ -1,0 +1,765 @@
+{
+  "repository": "ghywel/placego",
+  "head_commit": "61fd612bb2c6f8fdd3a5667d5a8885d45f97195f",
+  "upstream_credit": "ghywel/placego public research; Lean files credit Local (2026-10-09)",
+  "pinned_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "checker_modified": false,
+  "proof_bodies_unchanged": true,
+  "adaptation": "replace umbrella Mathlib import by selected Mathlib imports and official Rule30Prize; normalize line endings only",
+  "official_review_status_claimed": false,
+  "full_problem_claim": false,
+  "modules": [
+    {
+      "module": "RootedReturn",
+      "source_url": "https://raw.githubusercontent.com/ghywel/placego/61fd612bb2c6f8fdd3a5667d5a8885d45f97195f/tests/probes/lean/RootedReturn.lean",
+      "source_sha256": "47c2e7206ca93565f2abf87d517817d16c3a4a344a1946512f052f1e7a7ae8f2",
+      "adapted_sha256": "bfee7a099350ee8ebb4a69888a22b67fe565dfe760bebfe65b66ef42c2dda7e1",
+      "compile_seconds": 18.657,
+      "replay_seconds": 16.047,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "RootedReturn.St",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.child_exists",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.child_unique",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RootedReturn.orbit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.rooted_walk_returns",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.step_injective",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.terminates",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RootedReturn.walkStep",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.walkStep_spec",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.orbit.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.orbit.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RootedReturn.orbit.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RootedReturn.orbit.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RootedReturn.step_injective",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RootedReturn.child_unique",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RootedReturn.child_exists",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RootedReturn.rooted_walk_returns",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30ExternalRootedReturnNarrowReview",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 24,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "ParityMask",
+      "source_url": "https://raw.githubusercontent.com/ghywel/placego/61fd612bb2c6f8fdd3a5667d5a8885d45f97195f/tests/probes/lean/ParityMask.lean",
+      "source_sha256": "5bef9cd1abb3df9831ae631cc4d49eb3dd9f11a586c16c18c3c0ad6d70b384ec",
+      "adapted_sha256": "528e4d3747eebec7c5762083bcd9fc5e6d7e7f732d0e40cf75b3ba21d8e217e5",
+      "compile_seconds": 18.656,
+      "replay_seconds": 16.61,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "ParityMask.at_most_one_pred",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ParityMask.diff",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.diff_eq_cases",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.diff_even",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.live_has_pred",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.odd_driver_no_pred",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ParityMask.parity",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.parity_compl",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.diff.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ParityMask.parity.congr_simp",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ParityMask.diff_eq_cases",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ParityMask.parity_compl",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ParityMask.at_most_one_pred",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ParityMask.diff_even",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ParityMask.odd_driver_no_pred",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30ExternalParityMaskNarrowReview",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 12,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "JenPow2",
+      "source_url": "https://raw.githubusercontent.com/ghywel/placego/61fd612bb2c6f8fdd3a5667d5a8885d45f97195f/tests/probes/lean/JenPow2.lean",
+      "source_sha256": "2ae7989726ff69ffb7e9c1d4cb91864990e8e00629fd3576f443e2432669ce46",
+      "adapted_sha256": "bd05811dfb527aa0fad032377cfaca37087339c92abc67955b072a700542a624",
+      "compile_seconds": 23.39,
+      "replay_seconds": 19.25,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "JenPow2.D",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.D0",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.D1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.D2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.D_back",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.D_succ",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.Dneg",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "JenPow2.EvB",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "JenPow2.EvW",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.back",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.constraint",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.det",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.down",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.edge",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "JenPow2.ev",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.ev_succ",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.ext_window",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.forced_periodic",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.fwd",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.infinitely_many_black",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.infinitely_many_white",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.jen_pow2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.lemma_B2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.lemma_B2_quant",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.lemma_B3_sharp",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.mono_eventually",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.no_adjacent_white",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.per_gcd",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.per_iter",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.per_mul",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.per_sub",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.pigeon",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.reset",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.run_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.run_bound_gcd",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "JenPow2.step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "JenPow2.white_then_black",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "JenPow2.ev.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.jen_pow2",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.run_bound",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.run_bound_gcd",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.lemma_B2_quant",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.lemma_B2",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.infinitely_many_white",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.no_adjacent_white",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.white_then_black",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "JenPow2.infinitely_many_black",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30ExternalJenPow2NarrowReview",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 151,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "BlackLock",
+      "source_url": "https://raw.githubusercontent.com/ghywel/placego/61fd612bb2c6f8fdd3a5667d5a8885d45f97195f/tests/probes/lean/BlackLock.lean",
+      "source_sha256": "ef22bc8000bee9a9bc6985466d6dd50fc02f0ea3033f93cb58f2c49c7d9349d5",
+      "adapted_sha256": "8a1eeca7a3d6ef182a8850a43a22b4db5f4d887b1ef5d6e781e2da28bfc2c188",
+      "compile_seconds": 20.797,
+      "replay_seconds": 18.187,
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "BlackLock.S5",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.allS5",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.blk",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.lock9",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.lock_persists",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.mem_all",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.mem_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.not_locked8",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.reach",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.reach9_locked",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.run9",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.blk.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.blk.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.reach.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.reach.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "BlackLock.reach.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "BlackLock.reach.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "BlackLock.lock9",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "BlackLock.lock_persists",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30ExternalBlackLockNarrowReview",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 28,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ],
+  "verdict": "pass",
+  "audited_modules": 4,
+  "replayed_constants": 215,
+  "selected_concrete_headlines": 20,
+  "generic_theorems": "Fully replayed; universe-polymorphic generic theorems are not selected as headlines"
+}
