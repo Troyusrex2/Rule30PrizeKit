@@ -1,0 +1,74 @@
+{
+  "finite_experiments_only": true,
+  "z3_version": "5.3.1",
+  "coupled_right_realizability_claim": false,
+  "results": [
+    {
+      "start_depth": 8,
+      "white_gap": 8,
+      "depth": 15,
+      "status": "unsat",
+      "seconds": 0.094
+    },
+    {
+      "start_depth": 16,
+      "white_gap": 8,
+      "depth": 23,
+      "status": "unsat",
+      "seconds": 0.062
+    },
+    {
+      "start_depth": 24,
+      "white_gap": 8,
+      "depth": 31,
+      "status": "sat",
+      "seconds": 0.235,
+      "initial_prefix": "1010110111000011100110000000000",
+      "free_prefix": "110111011011011",
+      "independently_checked": true
+    },
+    {
+      "start_depth": 32,
+      "white_gap": 8,
+      "depth": 39,
+      "status": "sat",
+      "seconds": 0.594,
+      "initial_prefix": "101011011000000101110001000011100000000",
+      "free_prefix": "1101011110111010111",
+      "independently_checked": true
+    },
+    {
+      "start_depth": 48,
+      "white_gap": 8,
+      "depth": 55,
+      "status": "sat",
+      "seconds": 2.953,
+      "initial_prefix": "1011111010101101111101110010110000001110100101100000000",
+      "free_prefix": "101111010101011011011010110",
+      "independently_checked": true
+    },
+    {
+      "start_depth": 64,
+      "white_gap": 8,
+      "depth": 71,
+      "status": "unknown",
+      "seconds": 21.766,
+      "reason": "timeout"
+    },
+    {
+      "start_depth": 32,
+      "white_gap": 16,
+      "depth": 47,
+      "status": "unsat",
+      "seconds": 5.875
+    },
+    {
+      "start_depth": 64,
+      "white_gap": 16,
+      "depth": 79,
+      "status": "unknown",
+      "seconds": 21.953,
+      "reason": "timeout"
+    }
+  ]
+}

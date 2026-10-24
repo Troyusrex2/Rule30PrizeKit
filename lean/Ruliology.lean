@@ -58,6 +58,9 @@ public import Ruliology.CellularAutomata.Rule30TraceAmbiguityResearch
 public import Ruliology.CellularAutomata.Rule30TraceSeparationResearch
 public import Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch
 public import Ruliology.CellularAutomata.Rule30ColumnSeparationResearch
+public import Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch
+public import Ruliology.CellularAutomata.Rule30PackedReconstructionResearch
+public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch
 
 /-!
 # Rule 30 Prize: Lean snapshot
