@@ -10,7 +10,9 @@ modules = {'Rule30SpacingRenormalizationResearch': 'Spacing',
            'Rule30SpacingGapCounterexampleResearch': 'Gap',
            'Rule30DrivenPrefixResearch': 'Driven',
            'Rule30Certificates.DrivenEmptyWall': 'DrivenWall',
-           'Rule30EmptyGateSpacingResearch': 'EmptyGate'}
+           'Rule30EmptyGateSpacingResearch': 'EmptyGate',
+           'Rule30Certificates.DrivenEmptyCore': 'DrivenCore',
+           'Rule30EmptyGateLanguageResearch': 'EmptyLanguage'}
 parts = []
 for module in modules:
     source = (ROOT/'lean/Ruliology/CellularAutomata'/Path(module.replace('.','/')).with_suffix('.lean')).read_text(encoding='utf-8')
@@ -19,6 +21,10 @@ for module in modules:
     for old, new in modules.items():
         source = source.replace('Ruliology.CellularAutomata.'+old, 'Rule30Submission.'+new)
         source = source.replace(old, 'Rule30Submission.'+new)
+    source = source.replace('DrivenEmptyCore.', 'Rule30Submission.DrivenCore.')
+    # The data namespaces are renamed above; their former parent namespace
+    # is not present in this standalone import closure.
+    source = source.replace(' Rule30Certificates\n', '\n')
     parts.append(source.strip())
 source = ('import Ruliology.CellularAutomata.Rule30ZeroBoundary\n'
           'import Ruliology.CellularAutomata.Rule30Prize\n\n'
@@ -31,7 +37,9 @@ headlines = ['Rule30Submission.Spacing.reconstruction_translate',
              'Rule30Submission.Gap.no_uniform_gap_bound_sixteen',
              'Rule30Submission.EmptyGate.empty_spaced',
              'Rule30Submission.EmptyGate.empty_next_gap',
-             'Rule30Submission.EmptyGate.transformed_empty_not_spaced']
+             'Rule30Submission.EmptyGate.transformed_empty_not_spaced',
+             'Rule30Submission.EmptyLanguage.no_successive_short_gaps',
+             'Rule30Submission.EmptyLanguage.windowWord_allowed']
 config = {'SourceFile':'Rule30RenormalizationStandalone.lean',
           'EssayFile':'renormalization-essay.md','Headlines':headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config,indent=2)+'\n',encoding='utf-8',newline='\n')
@@ -43,7 +51,7 @@ Name: Empty-right gate spacing and the limits of reconstruction iteration
 Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-24
 Description: An all-time driven-gate invariant, reconstruction identity and exact iteration obstruction
-Abstract: A certified 16-cell forward invariant proves exact spacings three or five in the empty-right driven gate from white cycle 146 onward. Its eight-column reconstruction translation applies once, but the required spacing fails after transformation. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
+Abstract: Certified 16-cell forward invariants prove exact spacings three or five in the empty-right driven gate from white cycle 146 onward, and exclude consecutive gaps of three from cycle 155 onward. Its eight-column reconstruction translation applies once, but the required spacing fails after transformation. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
 Keywords: [Rule 30, reconstruction, renormalization, Lean, counterexamples]
 ---
 
@@ -88,6 +96,14 @@ eighteen-bit cases, including every possibility for the two unseen right cells.
 It checks both closure and six-cycle gate observations. Induction therefore
 proves, at every later time, that black observations are separated by exactly
 three or five cycles, and that no six-cycle gate window is all white.
+
+At white cycle 155, physical time 311, the actual prefix enters a smaller,
+closed 740-state wall. The refined certificate proves that every eight-bit
+gate window, encoded earliest bit first in the least significant position,
+belongs to {8,9,16,18,33,36,66,72,132,144}. Thus two gaps of three cannot occur
+consecutively. The certificate covers all 2,960 possible two-bit tail
+transitions, and induction again covers all future times. This refinement is
+a constraint on the gate, not a proof of infinite reconstructed support.
 
 The packed engine is proved equal to the kit's driven evolution, with explicit
 tail-dependence lemmas. The search that generated the wall is untrusted; every
