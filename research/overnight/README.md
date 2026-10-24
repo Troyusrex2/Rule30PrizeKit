@@ -841,3 +841,18 @@ period-three numerical searches found no ranking and are not claimed as Lean
 results. [The finite feedback notes](feedback-erasure-notes.md) document the
 separate actual-feedback theorem and independent audit of PR 10's all-width
 period-three ether erosion, credited to Luis Perez Morales and Claude.
+
+## Arbitrary-width detection at full clock sixteen
+
+[`Rule30FiniteClockCertificateResearch`](../../lean/Ruliology/CellularAutomata/Rule30FiniteClockCertificateResearch.lean)
+proves a generic temporal-profile certificate checker sound for every finite
+spatial width. The [clock-sixteen instance](../../lean/Ruliology/CellularAutomata/Rule30FiniteClockSixteenResearch.lean)
+checks 68 pairs and every head-clock residue. For finite x with Q^16(x)=x,
+any eventual head period H gives Q^H(x)=x, with no bound on width or transient.
+Both modules pass full replay in the [working](finite-clock-evidence/catalog/report.json)
+and [pinned](finite-clock-evidence/pinned/report.json) environments.
+The [notes](finite-clock16-notes.md) state the remaining arbitrary-clock and
+center-column gaps. The [Wolfram controls](wolfram-finite-clock16-check.json)
+match 36,564 independently computed Rule 30 cells; the Python controls also
+include finite widths up to 200. This is included in public PR 9, with no
+new prize API submission.
