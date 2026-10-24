@@ -47,16 +47,23 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--samples', type=int, default=256)
     ap.add_argument('--depth', type=int, default=4096)
+    ap.add_argument('--isolated-three', action='store_true')
     args = ap.parse_args()
     rng = random.Random(20261024)
     began = time.monotonic()
     best = None
     report = {'finite_observations_only': True, 'right_realizability_claim': False,
               'seed': 20261024, 'depth': args.depth, 'samples': args.samples,
-              'witness': None}
-    target = Path(__file__).parent / 'spacing35-row-probe.json'
+              'isolated_three': args.isolated_three, 'witness': None}
+    target = Path(__file__).parent / ('isolated-three-row-probe.json' if args.isolated_three
+                                     else 'spacing35-row-probe.json')
     for sample in range(args.samples):
-        gaps = [rng.choice([3, 5]) for _ in range(32)]
+        gaps = []
+        for _ in range(32):
+            gaps.append(5 if args.isolated_three and gaps and gaps[-1] == 3
+                        else rng.choice([3, 5]))
+        if args.isolated_three:
+            gaps[-1] = 5
         row = initial_row(gaps, args.depth)
         check_forward(gaps, row, args.depth)
         bits = ''.join(str((row >> k) & 1) for k in range(args.depth))

@@ -69,4 +69,14 @@ theorem seventeen_white (j : Nat) (hj : j < 17) :
     (fun t ht => boundary_bits ⟨t,ht⟩) (528+j) 0 (by omega)).1
   exact h.symm.trans (window_check ⟨j,hj⟩)
 
+/-- Spacing-three/five gates do not force a black initial cell in every
+seventeen-cell interval, even when the gate itself is periodic. -/
+theorem no_uniform_gap_bound_sixteen :
+    ¬ (∀ G : Nat → Bool, (∀ r, G r = true → Next35 G r) →
+      ∀ n, 1 ≤ n → ∃ j, j ≤ 16 ∧ recon (boundary G) (n+j) 0 = true) := by
+  intro h
+  obtain ⟨j, hj, hb⟩ := h gate31 gate31_gaps 528 (by decide)
+  rw [seventeen_white j (by omega)] at hb
+  exact Bool.noConfusion hb
+
 end Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch

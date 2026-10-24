@@ -81,7 +81,7 @@
     },
     {
       "module": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch",
-      "source_sha256": "5336a316c14b8aa1472ebdac9921b8da6dc355640b62263f082a774479a2208a",
+      "source_sha256": "5d71335a53a99c1b1aa0009066f7626a7cb3aa87af13e9e92f3de4699f20d9c0",
       "check": {
         "claim": "partial",
         "declared": [
@@ -123,6 +123,11 @@
           {
             "kind": "theorem",
             "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.gate31_spaced",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.no_uniform_gap_bound_sixteen",
             "standardAxioms": true
           },
           {
@@ -182,6 +187,18 @@
             "ok": true,
             "problems": [],
             "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.no_uniform_gap_bound_sixteen",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
           }
         ],
         "importsStatements": true,
@@ -190,7 +207,7 @@
         "official": [],
         "reasons": [],
         "replay": {
-          "constants": 13,
+          "constants": 15,
           "ok": true
         },
         "verdict": "pass",
@@ -198,5 +215,5 @@
       }
     }
   ],
-  "project_commit": "7bd978ac3bd3410c503ce2d77abbac0424760572"
+  "project_commit": "f94afe243c82a8072f614352b4edc191f6828c03"
 }

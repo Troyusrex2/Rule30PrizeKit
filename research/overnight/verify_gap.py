@@ -11,7 +11,8 @@ ROOT = HERE.parents[1]
 PREFIX = 'Ruliology.CellularAutomata.'
 TARGETS = {
     'Rule30PackedReconstructionResearch': ['packed_sound'],
-    'Rule30SpacingGapCounterexampleResearch': ['gate31_gaps', 'gate31_spaced', 'seventeen_white'],
+    'Rule30SpacingGapCounterexampleResearch': ['gate31_gaps', 'gate31_spaced', 'seventeen_white',
+                                             'no_uniform_gap_bound_sixteen'],
 }
 spec = importlib.util.spec_from_file_location('audit', HERE / 'audit_contributions.py')
 audit = importlib.util.module_from_spec(spec)

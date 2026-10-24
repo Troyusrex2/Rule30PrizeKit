@@ -1,9 +1,8 @@
 {
-  "verdict": "running",
-  "standalone_core_catalog_build": false,
+  "verdict": "pass",
+  "standalone_core_catalog_build": true,
   "parallel_cold_build_resource_guard_triggered": true,
   "full_problem_claim": false,
-  "module_count": 90,
   "completed": [
     {
       "module": "Ruliology.CellularAutomata.Rule30Predecessors",
@@ -296,6 +295,81 @@
     {
       "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M2Chunk0",
       "seconds": 37.532
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M2Chunk1",
+      "seconds": 36.438
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M2Chunk2",
+      "seconds": 38.062
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M2Chunk3",
+      "seconds": 38.11
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M2",
+      "seconds": 2.609
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk0",
+      "seconds": 35.875
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk1",
+      "seconds": 35.891
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk2",
+      "seconds": 40.265
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk3",
+      "seconds": 36.469
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk4",
+      "seconds": 38.016
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk5",
+      "seconds": 36.953
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk6",
+      "seconds": 36.422
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3Chunk7",
+      "seconds": 38.125
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.TraceSepH15M3",
+      "seconds": 3.64
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30TraceSeparationThreeResearch",
+      "seconds": 1.563
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ColumnSeparationResearch",
+      "seconds": 0.515
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch",
+      "seconds": 0.516
+    },
+    {
+      "module": "Ruliology",
+      "seconds": 1.562
     }
-  ]
+  ],
+  "root_source_sha256": "9b4ffa5ad3d8510d4279aee63898e8049e4cedf608da07201380713ba24864d6",
+  "explicit_build_target_count": 90,
+  "additional_cached_dependencies_in_final_root_build": [
+    "Ruliology.CellularAutomata.Rule30PackedReconstructionResearch",
+    "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch"
+  ],
+  "note": "The root import list gained two already checked, cached modules during the dependency-ordered run. The final Ruliology target built that complete current root."
 }

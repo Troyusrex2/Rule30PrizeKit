@@ -86,7 +86,7 @@
     },
     {
       "module": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch",
-      "source_sha256": "885688df1c125ce30eaec72e63990a24cd10bb8c0a58ee14f87df78e6531c826",
+      "source_sha256": "f08dcd08721571f351be0dc53fd0bf409b234faa23b26e16951cd83c71327ad1",
       "check": {
         "claim": "partial",
         "declared": [
@@ -128,6 +128,11 @@
           {
             "kind": "theorem",
             "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.gate31_spaced",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.no_uniform_gap_bound_sixteen",
             "standardAxioms": true
           },
           {
@@ -187,6 +192,18 @@
             "ok": true,
             "problems": [],
             "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch.no_uniform_gap_bound_sixteen",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
           }
         ],
         "importsStatements": true,
@@ -195,7 +212,7 @@
         "official": [],
         "reasons": [],
         "replay": {
-          "constants": 13,
+          "constants": 15,
           "ok": true
         },
         "verdict": "pass",

@@ -10,7 +10,7 @@ The public upstream pull requests were checked at these exact heads:
 
 | Contribution | Source head | Independent check |
 |---|---|---|
-| [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4): `0^q10111`, every `q ≥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
+| [AIOvernight, PR 4](https://github.com/WolframInstitute/Rule30PrizeKit/pull/4): `0^q10111`, every `q â‰¥ 9`, and 87 words | `f8ebd2facca7ea202be29556fa82bbd462280578` | The unchanged reference checker replayed the certificate's 1,131 constants and the public module's 219 constants. Both passed. |
 | [AIOvernight, PR 5](https://github.com/WolframInstitute/Rule30PrizeKit/pull/5): 56 even black observations force 17 initial black cells | `8f6a97973c59b5a45ed676794cbcd3adb467e96a` | Build and replay in progress; not yet used as a verified premise. |
 
 The first result is an unbounded word-family exclusion. The second is a finite
@@ -46,7 +46,7 @@ D G(r)   = G(r+2) xor G(r+4).
 Say `G` is spaced if no two black cells have distance one or two. The new
 core-only module proves:
 
-1. For every depth `m ≥ 1` and every time `t`,
+1. For every depth `m â‰¥ 1` and every time `t`,
    `recon b_G (m+8) t = recon b_(D G) m t`, provided `G` is spaced.
 2. If `lam b_G` is white beyond width `W`, then `lam b_(D G)` is white
    beyond `W-8`.
@@ -89,7 +89,8 @@ every gate index, and `seventeen_white` proves all seventeen cells. The
 companion `Rule30PackedReconstructionResearch.packed_sound` proves that the
 finite packed computation agrees with the actual `Rule30ZeroBoundary.recon`
 inside its cone. It does not assume the numerical computation is sound.
-The unchanged checker replayed all 13 constants of each module in both the
+The unchanged checker replayed all 13 packed-engine constants and 15
+counterexample-module constants in both the
 [working](gap-evidence/catalog/report.json) and
 [pinned](gap-evidence/pinned/report.json) environments, with standard axioms
 only. Wolfram's separate scalar reconstruction
@@ -100,6 +101,7 @@ depths. It does not refute a larger uniform bound, does not show this periodic
 gate comes from a finite driven right half, and does not refute the prize
 conjecture. The cited morpholib work reports its small-depth table; the
 counterexample here addresses extrapolating that table to all depths.
+`no_uniform_gap_bound_sixteen` states the failed universal bound directly.
 
 ## Falsification experiments
 
@@ -152,7 +154,9 @@ above. The Python verification runners use `psutil`; symbolic experiments use
 compiled artifacts are not part of this branch.
 
 The first full-catalog cold build hit its per-job memory guard under parallel
-compilation. The dependency-ordered runner avoids that peak. The first sparse
+compilation. The dependency-ordered runner then passed the complete standalone
+core catalog; [the build record](core-build.json) includes the final root and
+its source hash. The first sparse
 certificate audit also stopped at its resource guard without a pass; an exact
 source retry uses a longer time limit while retaining the already checked
 padded-word passes. Neither interrupted attempt is recorded as verification.
