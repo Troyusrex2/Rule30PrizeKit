@@ -65,14 +65,51 @@ replies are [PR 1](https://github.com/WolframInstitute/Rule30PrizeKit/pull/1#iss
 [PR 6](https://github.com/WolframInstitute/Rule30PrizeKit/pull/6#issuecomment-6382841220),
 [PR 7](https://github.com/WolframInstitute/Rule30PrizeKit/pull/7#issuecomment-6382841609),
 and [PR 9](https://github.com/WolframInstitute/Rule30PrizeKit/pull/9#issuecomment-6382842023).
-These are addressed reviews, not claims that the PRs have been merged.
+PR 1 remains open. The maintainer has now incorporated PRs 6, 7 and 9 into
+official main, with the direct commits
+[`570fc7f`](https://github.com/WolframInstitute/Rule30PrizeKit/commit/570fc7f195a4b4558993fa66aaa654ca69a9fd6e),
+[`c24caf5`](https://github.com/WolframInstitute/Rule30PrizeKit/commit/c24caf5c34b07bea433da9344605458bf085ed81),
+and [`9f4b63f`](https://github.com/WolframInstitute/Rule30PrizeKit/commit/9f4b63f038c24101d6ace7b5f5fa4f8a45414494).
+All sixteen incorporated sources are byte-identical to their reviewed heads.
+GitHub marks these PRs closed rather than merged; the files and commits on
+main establish their incorporation. See the
+[source correspondence record](upstream-incorporation-report.json).
+
+## Current reference environment
+
+The verifier's environment API now names official kit commit
+`2f63afda261888e04ec57237290e723190914a1d`, with Lean 4.35.0,
+Mathlib `56a005855ea17e0b0958f73ec801ae140b0a1679`, and LeanLink 1.2.1.
+The checker bytes have not changed. The official Problem 1 and `cell` source
+files differ from the previous pinned revision only in module/export wrappers;
+`Rule30Realization` additionally renames two deprecated proof aliases. The
+definitions are unchanged. The historical pinned reports above retain their
+original commits. The source correspondence record checks these transformations.
+
+Fresh full kernel replay at the new reference commit passes for all seventeen
+modules added since `cc6867c`: **886 declarations and 61 headlines**. This
+includes our sixteen incorporated modules and AIOvernight's
+`Rule30WhitePad10111` (132 declarations, one headline). The latter proves the
+stronger threshold nine for that tail; it is credited to AIOvernight, OpenAI
+Codex and Claude Code in the official README. No additional temporal period
+is excluded by our audit. See [the new replay report](current-reference-replay-report.json).
+
+The initial parallel whole-catalog build stopped at its memory resource
+guard after all seventeen kernel replays had passed. The subsequent
+[sequential build](current-reference-sequential-build-report.json) passes
+for all **87 core source modules**, including the catalog root. The builder
+below uses dependency order and retains the same resource guards and proof
+settings. The complete root build with the unrelated Mathlib equivalences
+was not run in this compatibility check.
 
 ## Human verification and outside contributions
 
 The signed Wolfram status API now tags
 [R30-20261024-ad6cac](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-ad6cac),
 **Distinct spatial column traces with an explicit uniform bound**, as
-**Lean Verified** and **Human Verified**. See the
+**Lean Verified**, **Human Verified**, and **Kit Contribution**. The signed
+status identifies the incorporated `Rule30ColumnSeparation` module at
+`570fc7f195a4b4558993fa66aaa654ca69a9fd6e`. See the
 [minimal status record](human-verification-status.json). That reviewed result
 separates distinct spatial column traces from time zero; temporal
 nonperiodicity remains open.
@@ -107,6 +144,16 @@ checkout. Its immutable comparison base is `cc6867c`; it checks the original
 checker bytes, source hashes, full kernel replay, selected headlines, and
 standard axioms, with time and memory guards. `--skip-build` replays already
 built modules without running build commands.
+
+For the complete core catalog on a machine that needs to limit compiler
+concurrency:
+
+```text
+python research/catalog-review/build_catalog_sequential.py --project <checkout> --lake <lake> --output <build-evidence-directory>
+```
+
+This is a build, not kernel replay. It hashes every source before and after,
+builds modules in dependency order, and changes no project or machine settings.
 
 ```text
 python research/catalog-review/audit_consolidation.py --project <PR-1-checkout>

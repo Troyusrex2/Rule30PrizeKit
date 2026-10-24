@@ -1,0 +1,164 @@
+{
+  "checked_at_utc": "2026-10-24T11:26:17.322031+00:00",
+  "official_kit_commit": "2f63afda261888e04ec57237290e723190914a1d",
+  "full_problem_solved": false,
+  "incorporation_commits": {
+    "6": "570fc7f195a4b4558993fa66aaa654ca69a9fd6e",
+    "7": "c24caf5c34b07bea433da9344605458bf085ed81",
+    "9": "9f4b63f038c24101d6ace7b5f5fa4f8a45414494"
+  },
+  "pull_request_states": {
+    "1": "open",
+    "6": "closed",
+    "7": "closed",
+    "9": "closed"
+  },
+  "note": "The maintainer incorporated these modules with direct commits on main; GitHub reports the PRs closed rather than merged.",
+  "source_comparison": [
+    {
+      "pr": 6,
+      "reviewed_head": "b94808b0110f3e0859ed26590b8c9d7a2337e2ae",
+      "modules": [
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30ColumnSeparation.lean",
+          "byte_identical": true,
+          "sha256": "d7f9c2e9c50e014ee5ad5f5beb556799d69fa134f5e661aafee05a8dc5c54354"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30TraceAmbiguity.lean",
+          "byte_identical": true,
+          "sha256": "c0d18b2baa343ce7770fe838e6ff3d766e784dcf4c47082b2586b0608d74e487"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30TraceEdge.lean",
+          "byte_identical": true,
+          "sha256": "458f22ffa401e81440f6c2e4d039f02523af19186cbd92a2879667f5fa7e3ded"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30TraceMerge.lean",
+          "byte_identical": true,
+          "sha256": "48c995fd4aa963dd106b7c53bc4aaf5945ee17e11c5f5f23536ff08bea9f3a48"
+        }
+      ]
+    },
+    {
+      "pr": 7,
+      "reviewed_head": "f58b7f7e8350285cfd9e205c34489530569399c1",
+      "modules": [
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30DrivenPrefix.lean",
+          "byte_identical": true,
+          "sha256": "7be112c4105a8f94196eb8fe08335238df415d53176146ffcd847e6cd3b988dc"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30ExactReturn.lean",
+          "byte_identical": true,
+          "sha256": "91dd9eec11168384fd82d7ff01b52593339ef250f5e4aef26666757d97faa3e1"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30PackedReconstruction.lean",
+          "byte_identical": true,
+          "sha256": "cd6d5a58a936d03d160916c7c659e42b9747e4a3120924b95016d1e0062f2087"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30SpacingGapCounterexample.lean",
+          "byte_identical": true,
+          "sha256": "02f2fd3b1a82df92fd9418ae00ce1fa70f140f60da19351f5a7aa3d11f2d77e7"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30SpacingRenormalization.lean",
+          "byte_identical": true,
+          "sha256": "81599e80c7b8befeb0f33dfd917c40107fc0034b9958a1db90fb440799eb9579"
+        }
+      ]
+    },
+    {
+      "pr": 9,
+      "reviewed_head": "51d7d4d6c400f21df315a3d781a8031ff1b986ef",
+      "modules": [
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30ClockMask.lean",
+          "byte_identical": true,
+          "sha256": "b0ec0d01e18e88c167ca2762b4cd50714bd67f31982e656a0a07d2cb2514a6b1"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30ControlledResponse.lean",
+          "byte_identical": true,
+          "sha256": "7a9c994a18fb5dbf55373926b9c58da067e7e928c374ce5f9fe75f9d6ca68b8a"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30FeedbackErasure.lean",
+          "byte_identical": true,
+          "sha256": "4556054ed1efd7c27b1066732e1ce278830112d76515602b518435be1f89f00a"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30FiniteClockCertificate.lean",
+          "byte_identical": true,
+          "sha256": "a3bfe323f65f2edda2ce2088d51d053958c6ce716e9afa8ac351ad842cce3ba1"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30FiniteClockSixteen.lean",
+          "byte_identical": true,
+          "sha256": "7d78c73be44e937b6ab28fe22b20c7e50aeea4dde6f82e1640fe3fea1fdfc71a"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30PeriodicProfileCounter.lean",
+          "byte_identical": true,
+          "sha256": "9417cedc6b02509bd19e1ce2ceb42af40fa8950f2575b5dfa2c90147e0c55eb4"
+        },
+        {
+          "path": "lean/Ruliology/CellularAutomata/Rule30TerminalClock.lean",
+          "byte_identical": true,
+          "sha256": "d000fe8baee0fcc4cf0b9107417b1aa7f25842bff3c974f1612dc660e8b30508"
+        }
+      ]
+    }
+  ],
+  "official_statement_comparison": {
+    "previous_pinned_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+    "current_pinned_commit": "2f63afda261888e04ec57237290e723190914a1d",
+    "files": [
+      {
+        "path": "lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+        "old_sha256": "451db5cf002a71e72e814b2dd46ad6e6d78a217068ba6d619bc45e9bc9d19115",
+        "new_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+        "body_preserved_except_module_wrappers_and_listed_aliases": true,
+        "proof_alias_renames": {}
+      },
+      {
+        "path": "lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+        "old_sha256": "25989e0f55516b82b11dd848ed32c93d964ca0561a5e14752a2ac8ce70652b63",
+        "new_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+        "body_preserved_except_module_wrappers_and_listed_aliases": true,
+        "proof_alias_renames": {}
+      },
+      {
+        "path": "lean/Ruliology/CellularAutomata/Rule30Realization.lean",
+        "old_sha256": "292d8c02fc299fdfd06dfa65c582ad3ed2f96972d827e359377ecf1f2d125ec7",
+        "new_sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5",
+        "body_preserved_except_module_wrappers_and_listed_aliases": true,
+        "proof_alias_renames": {
+          "if_pos": "ite_eq_left",
+          "if_neg": "ite_eq_right"
+        }
+      },
+      {
+        "path": "Check.lean",
+        "byte_identical": true,
+        "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+      }
+    ]
+  },
+  "reference_environment": {
+    "kit": {
+      "repository": "https://github.com/WolframInstitute/Rule30PrizeKit",
+      "commit": "2f63afda261888e04ec57237290e723190914a1d",
+      "url": "https://github.com/WolframInstitute/Rule30PrizeKit/tree/2f63afda261888e04ec57237290e723190914a1d",
+      "date": "2026-10-24T15:14:17+05:00"
+    },
+    "lean": "4.35.0",
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "leanlink": "1.2.1"
+  },
+  "reference_environment_url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/api/environment"
+}
