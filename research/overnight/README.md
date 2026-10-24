@@ -316,6 +316,52 @@ overapproximation. They do not refute the desired estimate. An unbounded
 transducer certificate would additionally need graph-potential inequalities
 covering every transition and endpoint; that proof has not been supplied.
 
+## Refined empty-gate language and all-length synthesis
+
+`Rule30Certificates.DrivenEmptyCore` and `Rule30EmptyGateLanguageResearch`
+refine the preceding gate result. From white cycle 155 (physical time 311),
+the actual empty-right prefix remains in a closed 740-state wall. Every
+eight-bit gate window, with its earliest bit in the least significant position,
+belongs to `[8,9,16,18,33,36,66,72,132,144]`. In particular, a gap of three
+cannot immediately follow another gap of three. These statements hold at
+**all subsequent times**. They do not establish `CQ01Empty` or Problem 1.
+
+All **294 generated declarations** passed full replay with the unchanged
+checker in the [working](empty-language-evidence/catalog/report.json) and
+[pinned](empty-language-evidence/pinned/report.json) environments. The
+[independent Wolfram controls](wolfram-empty-core-check.json) confirm all
+2,960 tail transitions, all observations, 256 cellwise update controls, and
+the exact first entry at cycle 155 with prefix 38682. The generator report
+describes an untrusted computation; verification belongs to the separate
+kernel replay reports.
+
+The transducer synthesis scripts replace finite-width training with a finite
+set of graph inequalities sufficient for **every word length**. Sources impose
+a legal boundary history; edges implement the prefix-xor/OR recurrence;
+terminal edges impose the white suffix that finite support would eventually
+require. Auxiliary signed vertex potentials telescope along arbitrary paths.
+The sought nonnegative ribbon potential would decrease at every cycle, or
+only at short or long gate gaps. Neither potential has been found.
+
+`synthesize_transducer_potential.py` tests single steps;
+`synthesize_cycle_transducer_potential.py` groups two steps;
+`synthesize_controlled_cycle_potential.py` uses longer gate histories from the
+740-state automaton. Only the eight-bit language above has been formally
+exported from that automaton; larger extracted controllers remain unverified.
+`synthesize_position_transducer_potential.py` additionally permits polynomial
+weights in the spatial position and polynomial auxiliary graph potentials.
+Its coefficient inequalities suffice for all positions, but can be stronger
+than necessary. Independent feature-accounting controls compare each scan
+with the directly computed whole-word feature difference.
+
+The numerical reports are **not Lean results**. Infeasibility rejects only the
+specified abstraction and coefficient class. Two cycle-model reports contain
+Farkas combinations checked with exact Python integer arithmetic: auxiliary
+terms cancel and nonnegative potential terms have a negative right-hand sum.
+These refute the corresponding finite LP systems, not the Rule 30 conjecture.
+`synthesize_inversion_potential.py` tests a separate ordered-pair feature class
+on finite samples and is not an all-length certificate method.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -335,6 +381,8 @@ python research/overnight/verify_eventual_relations.py --project /path/to/pinned
 python research/overnight/verify_eventual_relations.py --lake /path/to/lake
 python research/overnight/verify_driven_wall.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_driven_wall.py --lake /path/to/lake
+python research/overnight/verify_driven_wall.py --project /path/to/pinned-kit --lake /path/to/lake --language-core
+python research/overnight/verify_driven_wall.py --lake /path/to/lake --language-core
 python research/overnight/verify_empty_reduction.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_diagonal_suffix.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/build_core_sequential.py --lake /path/to/lake

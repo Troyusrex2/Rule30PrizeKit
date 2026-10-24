@@ -1,0 +1,1234 @@
+{
+  "finite_graph_synthesis_only": true,
+  "Lean_proof": false,
+  "CQ01Empty_proved": false,
+  "all_length_certificate_form": true,
+  "radius": 3,
+  "head_history": 8,
+  "white_suffix": 2,
+  "potential_variables": 485,
+  "auxiliary_variables": 576,
+  "inequalities": 1368,
+  "cases": [
+    {
+      "case": [
+        0,
+        0,
+        1
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    },
+    {
+      "case": [
+        0,
+        1,
+        1
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    },
+    {
+      "case": [
+        0,
+        2,
+        0
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    },
+    {
+      "case": [
+        0,
+        2,
+        1
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    },
+    {
+      "case": [
+        0,
+        3,
+        1
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    },
+    {
+      "case": [
+        0,
+        4,
+        0
+      ],
+      "vertices": 96,
+      "sources": 2,
+      "terminal_edges": 2,
+      "inequalities": 228
+    }
+  ],
+  "status": 2,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+  "controls": {
+    "selected_actual_words": 72,
+    "controller_cases": 6,
+    "symbolic_feature_accounting_passed": true
+  },
+  "grouped_reconstruction_steps": 2,
+  "reward_mode": "short-gap",
+  "seconds": 0.11,
+  "farkas": {
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "Lean_kernel_checked": false,
+    "exact_arithmetic_checked": true,
+    "scope": "this finite graph potential LP only",
+    "scale": 1,
+    "right_hand_sum": -1,
+    "support_rows": [
+      {
+        "index": 1,
+        "multiplier": 1,
+        "row": [
+          [
+            9,
+            -2
+          ],
+          [
+            14,
+            -1
+          ],
+          [
+            19,
+            -2
+          ],
+          [
+            20,
+            -1
+          ],
+          [
+            51,
+            -1
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            105,
+            1
+          ],
+          [
+            106,
+            1
+          ],
+          [
+            109,
+            1
+          ],
+          [
+            114,
+            1
+          ],
+          [
+            116,
+            1
+          ],
+          [
+            117,
+            1
+          ],
+          [
+            122,
+            1
+          ],
+          [
+            141,
+            1
+          ],
+          [
+            480,
+            -1
+          ],
+          [
+            481,
+            1
+          ],
+          [
+            499,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "source",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "vertex": [
+            0,
+            1,
+            3,
+            2,
+            0
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "multiplier": 1,
+        "row": [
+          [
+            0,
+            -1
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            485,
+            1
+          ],
+          [
+            486,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 30,
+        "multiplier": 1,
+        "row": [
+          [
+            20,
+            -1
+          ],
+          [
+            109,
+            1
+          ],
+          [
+            499,
+            1
+          ],
+          [
+            522,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              0,
+              1,
+              3,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              2,
+              1,
+              1
+            ],
+            20,
+            13,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "index": 89,
+        "multiplier": 1,
+        "row": [
+          [
+            14,
+            -1
+          ],
+          [
+            114,
+            1
+          ],
+          [
+            522,
+            1
+          ],
+          [
+            575,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              1,
+              2,
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1,
+              2,
+              0
+            ],
+            14,
+            18,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "index": 166,
+        "multiplier": 1,
+        "row": [
+          [
+            9,
+            -1
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            485,
+            -1
+          ],
+          [
+            554,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              2,
+              2,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 214,
+        "multiplier": 1,
+        "row": [
+          [
+            19,
+            -1
+          ],
+          [
+            105,
+            1
+          ],
+          [
+            554,
+            -1
+          ],
+          [
+            575,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              3,
+              1,
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              1
+            ],
+            19,
+            9,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 226,
+        "multiplier": 1,
+        "row": [
+          [
+            0,
+            -1
+          ],
+          [
+            64,
+            -1
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            160,
+            1
+          ],
+          [
+            486,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "terminal",
+          "case": [
+            0,
+            0,
+            1
+          ],
+          "edge": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 229,
+        "multiplier": 1,
+        "row": [
+          [
+            96,
+            -1
+          ],
+          [
+            105,
+            -1
+          ],
+          [
+            106,
+            -1
+          ],
+          [
+            109,
+            -1
+          ],
+          [
+            114,
+            -1
+          ],
+          [
+            116,
+            -1
+          ],
+          [
+            141,
+            -1
+          ],
+          [
+            198,
+            1
+          ],
+          [
+            205,
+            3
+          ],
+          [
+            210,
+            2
+          ],
+          [
+            218,
+            1
+          ],
+          [
+            221,
+            1
+          ],
+          [
+            237,
+            1
+          ],
+          [
+            481,
+            -1
+          ],
+          [
+            482,
+            1
+          ],
+          [
+            639,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "source",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "vertex": [
+            2,
+            1,
+            0,
+            3,
+            0
+          ]
+        }
+      },
+      {
+        "index": 286,
+        "multiplier": 1,
+        "row": [
+          [
+            114,
+            -1
+          ],
+          [
+            210,
+            1
+          ],
+          [
+            609,
+            1
+          ],
+          [
+            648,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              1,
+              1,
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              1,
+              2,
+              1
+            ],
+            18,
+            18,
+            0,
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "index": 332,
+        "multiplier": 1,
+        "row": [
+          [
+            122,
+            -1
+          ],
+          [
+            201,
+            1
+          ],
+          [
+            624,
+            1
+          ],
+          [
+            649,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              1,
+              3,
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            26,
+            9,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 363,
+        "multiplier": 1,
+        "row": [
+          [
+            117,
+            -1
+          ],
+          [
+            211,
+            1
+          ],
+          [
+            624,
+            -1
+          ],
+          [
+            639,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              2,
+              1,
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1,
+              2,
+              1
+            ],
+            21,
+            19,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "index": 389,
+        "multiplier": 1,
+        "row": [
+          [
+            109,
+            -1
+          ],
+          [
+            205,
+            1
+          ],
+          [
+            609,
+            -1
+          ],
+          [
+            648,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              2,
+              2,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              2,
+              1,
+              0
+            ],
+            13,
+            13,
+            1,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "index": 390,
+        "multiplier": 1,
+        "row": [
+          [
+            105,
+            -1
+          ],
+          [
+            192,
+            1
+          ],
+          [
+            582,
+            -1
+          ],
+          [
+            649,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 454,
+        "multiplier": 1,
+        "row": [
+          [
+            96,
+            -1
+          ],
+          [
+            160,
+            -1
+          ],
+          [
+            192,
+            1
+          ],
+          [
+            256,
+            1
+          ],
+          [
+            582,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "terminal",
+          "case": [
+            0,
+            1,
+            1
+          ],
+          "edge": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 456,
+        "multiplier": 1,
+        "row": [
+          [
+            9,
+            2
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            51,
+            1
+          ],
+          [
+            205,
+            -2
+          ],
+          [
+            210,
+            -2
+          ],
+          [
+            218,
+            -1
+          ],
+          [
+            221,
+            -1
+          ],
+          [
+            237,
+            -1
+          ],
+          [
+            480,
+            1
+          ],
+          [
+            482,
+            -1
+          ],
+          [
+            747,
+            -1
+          ]
+        ],
+        "rhs": -1,
+        "description": {
+          "kind": "source",
+          "case": [
+            0,
+            2,
+            0
+          ],
+          "vertex": [
+            2,
+            2,
+            2,
+            3,
+            0
+          ]
+        }
+      },
+      {
+        "index": 512,
+        "multiplier": 1,
+        "row": [
+          [
+            9,
+            1
+          ],
+          [
+            210,
+            -1
+          ],
+          [
+            704,
+            1
+          ],
+          [
+            745,
+            -1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            2,
+            0
+          ],
+          "edge": [
+            [
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            18,
+            9,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 618,
+        "multiplier": 1,
+        "row": [
+          [
+            0,
+            1
+          ],
+          [
+            201,
+            -1
+          ],
+          [
+            678,
+            -1
+          ],
+          [
+            745,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            2,
+            0
+          ],
+          "edge": [
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "index": 629,
+        "multiplier": 1,
+        "row": [
+          [
+            19,
+            1
+          ],
+          [
+            205,
+            -1
+          ],
+          [
+            704,
+            -1
+          ],
+          [
+            747,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "bulk",
+          "case": [
+            0,
+            2,
+            0
+          ],
+          "edge": [
+            [
+              2,
+              2,
+              2,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            13,
+            19,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "index": 682,
+        "multiplier": 1,
+        "row": [
+          [
+            0,
+            1
+          ],
+          [
+            64,
+            1
+          ],
+          [
+            192,
+            -1
+          ],
+          [
+            256,
+            -1
+          ],
+          [
+            678,
+            1
+          ]
+        ],
+        "rhs": 0,
+        "description": {
+          "kind": "terminal",
+          "case": [
+            0,
+            2,
+            0
+          ],
+          "edge": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "remaining_potential_coefficients": [
+      [
+        96,
+        2
+      ],
+      [
+        192,
+        1
+      ],
+      [
+        198,
+        1
+      ],
+      [
+        205,
+        1
+      ],
+      [
+        211,
+        1
+      ]
+    ],
+    "remaining_auxiliary_coefficients": []
+  }
+}
