@@ -37,6 +37,7 @@ public import Ruliology.CellularAutomata.Rule30PeriodTwoWidth6
 public import Ruliology.CellularAutomata.Rule30EtherThree
 public import Ruliology.CellularAutomata.Rule30EtherThreeNoWall
 public import Ruliology.CellularAutomata.Rule30EtherThreeErosion
+public import Ruliology.CellularAutomata.Rule30WhiteTailErosion
 public import Ruliology.CellularAutomata.Rule30EtherThreeTrap
 public import Ruliology.CellularAutomata.Rule30EtherThreeReach
 public import Ruliology.CellularAutomata.Rule30EtherThreeLeft
