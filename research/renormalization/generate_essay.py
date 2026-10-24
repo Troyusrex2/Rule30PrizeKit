@@ -7,10 +7,13 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 modules = {'Rule30SpacingRenormalizationResearch': 'Spacing',
            'Rule30PackedReconstructionResearch': 'Packed',
-           'Rule30SpacingGapCounterexampleResearch': 'Gap'}
+           'Rule30SpacingGapCounterexampleResearch': 'Gap',
+           'Rule30DrivenPrefixResearch': 'Driven',
+           'Rule30Certificates.DrivenEmptyWall': 'DrivenWall',
+           'Rule30EmptyGateSpacingResearch': 'EmptyGate'}
 parts = []
 for module in modules:
-    source = (ROOT/'lean/Ruliology/CellularAutomata'/(module+'.lean')).read_text(encoding='utf-8')
+    source = (ROOT/'lean/Ruliology/CellularAutomata'/Path(module.replace('.','/')).with_suffix('.lean')).read_text(encoding='utf-8')
     source = source.removeprefix('module\n').replace('@[expose] public section','')
     source = re.sub(r'^public import .*\n', '', source, flags=re.MULTILINE)
     for old, new in modules.items():
@@ -19,12 +22,16 @@ for module in modules:
     parts.append(source.strip())
 source = ('import Ruliology.CellularAutomata.Rule30ZeroBoundary\n'
           'import Ruliology.CellularAutomata.Rule30Prize\n\n'
+          'import Ruliology.CellularAutomata.Rule30PeriodTwoSideways\n\n'
           'open Ruliology.CellularAutomata\n\n'+'\n\n'.join(parts)+'\n')
 (HERE/'Rule30RenormalizationStandalone.lean').write_text(source,encoding='utf-8',newline='\n')
 headlines = ['Rule30Submission.Spacing.reconstruction_translate',
              'Rule30Submission.Spacing.transform_spaced_iff',
              'Rule30Submission.Spacing.second_translation_fails',
-             'Rule30Submission.Gap.no_uniform_gap_bound_sixteen']
+             'Rule30Submission.Gap.no_uniform_gap_bound_sixteen',
+             'Rule30Submission.EmptyGate.empty_spaced',
+             'Rule30Submission.EmptyGate.empty_next_gap',
+             'Rule30Submission.EmptyGate.transformed_empty_not_spaced']
 config = {'SourceFile':'Rule30RenormalizationStandalone.lean',
           'EssayFile':'renormalization-essay.md','Headlines':headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config,indent=2)+'\n',encoding='utf-8',newline='\n')
@@ -32,20 +39,22 @@ probe = (HERE/'spacing-probe.wl').read_text(encoding='utf-8')
 gap_probe = (HERE/'spacing-gap-probe.wl').read_text(encoding='utf-8').split('\n',1)[1]
 essay = '''---
 Template: ComputationalEssay
-Name: An eight-column reconstruction identity and the limits of its iteration
+Name: Empty-right gate spacing and the limits of reconstruction iteration
 Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-24
-Description: A core Lean identity, exact preservation criterion and checked counterexamples
-Abstract: For a spaced boundary gate, Rule 30 sideways reconstruction translates eight columns by a simple gate transform. The spacing survives exactly when the original gate is white from index four onward. A period-five gate disproves unconditional iteration, and a period-31 spacing-three/five gate produces seventeen consecutive white initial cells. No prize problem or eventual period two is excluded.
+Description: An all-time driven-gate invariant, reconstruction identity and exact iteration obstruction
+Abstract: A certified 16-cell forward invariant proves exact spacings three or five in the empty-right driven gate from white cycle 146 onward. Its eight-column reconstruction translation applies once, but the required spacing fails after transformation. Two checked examples also refute unconditional iteration and a universal sixteen-cell white-gap bound. The reconstructed left row is not proved infinite, and no prize problem or eventual period two is excluded.
 Keywords: [Rule 30, reconstruction, renormalization, Lean, counterexamples]
 ---
 
 ## Scope and source
 
 This essay is prepared for human review and has not been submitted to the prize
-API. It proves a partial structural identity and identifies two gaps in stronger
-extrapolations. It does not exclude eventual period two or solve a prize problem.
-No finite driven-right realization of the example gates is asserted.
+API. It proves an unbounded driven-gate spacing theorem, a structural identity,
+and exact obstructions to stronger extrapolations. It does not prove CQ01Empty,
+exclude eventual period two or solve a prize problem. The empty-right gate is
+realized by the actual driven system; no finite-right realization of the separate
+period-five or period-31 example gates is asserted.
 
 The one-step identity follows the informal identity in
 [morpholib Theorem 14](https://github.com/fractastical/morpholib/blob/777865115483d310f72f0b9511b45409e330a8f5/docs/RULE30_PRIZE_SUBMISSION.md).
@@ -68,6 +77,28 @@ An initial support bound W transfers to W-8. The preservation criterion is
 exact: D G is spaced if and only if G(r+4)=0 for every r. Thus this particular
 spacing hypothesis cannot be carried through a second step for an infinite
 gate. Other renormalizations remain possible.
+
+## The actual empty-right gate
+
+Let u(s) be position one at physical time 2s+1 of the right half driven by an
+alternating black-first center, starting with an entirely white right half.
+Set G(r)=u(146+r). A forward invariant of 13,937 sixteen-cell prefixes contains
+the actual prefix at physical time 293. The certificate checks all 262,144
+eighteen-bit cases, including every possibility for the two unseen right cells.
+It checks both closure and six-cycle gate observations. Induction therefore
+proves, at every later time, that black observations are separated by exactly
+three or five cycles, and that no six-cycle gate window is all white.
+
+The packed engine is proved equal to the kit's driven evolution, with explicit
+tail-dependence lemmas. The search that generated the wall is untrusted; every
+certificate case is checked by ordinary kernel reduction. There are no native
+decision procedures or added axioms.
+
+The translation applies once to this actual spaced gate. Its transform is
+provably not spaced, so the same lemma cannot be iterated on it. Infinitely
+many black gate observations do not establish infinitely many black cells in
+the reconstructed initial left row. That remaining assertion is CQ01Empty,
+which this essay leaves open.
 
 ## Independent finite observations
 

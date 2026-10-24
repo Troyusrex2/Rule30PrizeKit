@@ -10,16 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       160,          7]
-NotebookDataLength[     50026,       1039]
-NotebookOptionsPosition[     47104,        975]
-NotebookOutlinePosition[     47446,        990]
-CellTagsIndexPosition[     47403,        987]
+NotebookDataLength[    102405,       1752]
+NotebookOptionsPosition[     99021,       1680]
+NotebookOutlinePosition[     99363,       1695]
+CellTagsIndexPosition[     99320,       1692]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell["\<\
-An eight-column reconstruction identity and the limits of its iteration\
+Empty-right gate spacing and the limits of reconstruction iteration\
 \>", "Title",
  CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
 
@@ -27,12 +27,12 @@ Cell["Troy Lowry; OpenAI Codex \[Bullet] 2026-10-24", "Author",
  CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
 
 Cell["\<\
-For a spaced boundary gate, Rule 30 sideways reconstruction translates eight \
-columns by a simple gate transform. The spacing survives exactly when the \
-original gate is white from index four onward. A period-five gate disproves \
-unconditional iteration, and a period-31 spacing-three/five gate produces \
-seventeen consecutive white initial cells. No prize problem or eventual \
-period two is excluded.\
+A certified 16-cell forward invariant proves exact spacings three or five in \
+the empty-right driven gate from white cycle 146 onward. Its eight-column \
+reconstruction translation applies once, but the required spacing fails after \
+transformation. Two checked examples also refute unconditional iteration and \
+a universal sixteen-cell white-gap bound. The reconstructed left row is not \
+proved infinite, and no prize problem or eventual period two is excluded.\
 \>", "Abstract",
  CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
 
@@ -41,9 +41,11 @@ Cell["Scope and source", "Section",
 
 Cell["\<\
 This essay is prepared for human review and has not been submitted to the \
-prize API. It proves a partial structural identity and identifies two gaps in \
-stronger extrapolations. It does not exclude eventual period two or solve a \
-prize problem. No finite driven-right realization of the example gates is \
+prize API. It proves an unbounded driven-gate spacing theorem, a structural \
+identity, and exact obstructions to stronger extrapolations. It does not \
+prove CQ01Empty, exclude eventual period two or solve a prize problem. The \
+empty-right gate is realized by the actual driven system; no finite-right \
+realization of the separate period-five or period-31 example gates is \
 asserted.\
 \>", "Text",
  CellID->1208482393,ExpressionUUID->"25a568a6-87a2-527f-535a-810032572145"],
@@ -85,8 +87,41 @@ infinite gate. Other renormalizations remain possible.\
 \>", "Text",
  CellID->1392207227,ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8"],
 
-Cell["Independent finite observations", "Section",
+Cell["The actual empty-right gate", "Section",
  CellID->705466992,ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0"],
+
+Cell["\<\
+Let u(s) be position one at physical time 2s+1 of the right half driven by an \
+alternating black-first center, starting with an entirely white right half. \
+Set G(r)=u(146+r). A forward invariant of 13,937 sixteen-cell prefixes \
+contains the actual prefix at physical time 293. The certificate checks all \
+262,144 eighteen-bit cases, including every possibility for the two unseen \
+right cells. It checks both closure and six-cycle gate observations. \
+Induction therefore proves, at every later time, that black observations are \
+separated by exactly three or five cycles, and that no six-cycle gate window \
+is all white.\
+\>", "Text",
+ CellID->1350516518,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"],
+
+Cell["\<\
+The packed engine is proved equal to the kit's driven evolution, with \
+explicit tail-dependence lemmas. The search that generated the wall is \
+untrusted; every certificate case is checked by ordinary kernel reduction. \
+There are no native decision procedures or added axioms.\
+\>", "Text",
+ CellID->907546795,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+
+Cell["\<\
+The translation applies once to this actual spaced gate. Its transform is \
+provably not spaced, so the same lemma cannot be iterated on it. Infinitely \
+many black gate observations do not establish infinitely many black cells in \
+the reconstructed initial left row. That remaining assertion is CQ01Empty, \
+which this essay leaves open.\
+\>", "Text",
+ CellID->814772321,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+
+Cell["Independent finite observations", "Section",
+ CellID->1054628905,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
 
 Cell["\<\
 The following scalar reconstruction compares 12,800 cells. It also checks a \
@@ -95,7 +130,7 @@ white initial cells at depths 528 through 544 for a period-31 gate whose \
 black spacings are only three or five. These observations are independently \
 connected to the kit's scalar reconstruction by Lean below.\
 \>", "Text",
- CellID->1350516518,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"],
+ CellID->2043779557,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
 
 Cell[CellGroupData[{
 
@@ -475,7 +510,7 @@ Cell[BoxData[
      RowBox[{"spacingReport", "[", "]"}], ",", " ", 
      RowBox[{"spacingGapReport", "[", "]"}]}], "}"}]}]}]], "Input",
  CellLabel->"In[1]:= ",
- CellID->1384872354,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+ CellID->752027822,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -522,7 +557,7 @@ Cell[BoxData[
      RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}]}], 
     "\[RightAssociation]"}]}], "}"}]], "Output",
  CellLabel->"Out[1]= ",
- CellID->442542230,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"]
+ CellID->1824396994,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"]
 }, Open  ]],
 
 Cell["\<\
@@ -531,10 +566,10 @@ transformed formula gives black. The period-31 example rules out a universal \
 maximum white gap of sixteen under the spacing-three/five restriction alone. \
 It does not rule out every larger gap bound.\
 \>", "Text",
- CellID->814772321,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+ CellID->1589986527,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
 
 Cell["Exact embedded Lean source and full kernel replay", "Section",
- CellID->1054628905,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
+ CellID->943101875,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
 
 Cell["\<\
 The code imports only the kit's core reconstruction and official statement \
@@ -542,7 +577,7 @@ modules. The packed-cone soundness theorem states its finite light-cone \
 bound. The proof contains no new axioms, native decision procedure or custom \
 elaborator.\
 \>", "Text",
- CellID->2043779557,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
+ CellID->67888809,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
 
 Cell[BoxData[{
  RowBox[{
@@ -552,7 +587,7 @@ Cell[BoxData[{
    RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
   ";"}]}], "Input",
  CellLabel->"In[2]:= ",
- CellID->17830494,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
+ CellID->1432876021,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"],
 
 Cell[CellGroupData[{
 
@@ -562,7 +597,8 @@ Cell[BoxData[{
    RowBox[{"LeanImportString", "[", 
     RowBox[{"\"\<import \
 Ruliology.CellularAutomata.Rule30ZeroBoundary\\nimport \
-Ruliology.CellularAutomata.Rule30Prize\\n\\nopen \
+Ruliology.CellularAutomata.Rule30Prize\\n\\nimport \
+Ruliology.CellularAutomata.Rule30PeriodTwoSideways\\n\\nopen \
 Ruliology.CellularAutomata\\n\\n/-!\\n# An eight-column reconstruction \
 identity and the condition needed to iterate it\\n\\nThe boundary history is \
 `!G 0, 1, !G 1, 1, ...`. If the black gate\\npositions have spacing at least \
@@ -741,7 +777,645 @@ r) \[RightArrow]\\n      \[ForAll] n, 1 \[LessEqual] n \[RightArrow] \
 \[Exists] j, j \[LessEqual] 16 \[And] recon (boundary G) (n+j) 0 = true) := \
 by\\n  intro h\\n  obtain \:27e8j, hj, hb\:27e9 := h gate31 gate31_gaps 528 \
 (by decide)\\n  rw [seventeen_white j (by omega)] at hb\\n  exact \
-Bool.noConfusion hb\\n\\nend Rule30Submission.Gap\\n\>\"", ",", "\n", "  ", 
+Bool.noConfusion hb\\n\\nend Rule30Submission.Gap\\n\\n/-!\\n# Packed \
+prefixes of the alternating-driven right half\\n\\nThe packed update \
+represents spatial cells at positions 1,2,..., in low to\\nhigh bits. The \
+prefix agreement lemmas retain the exact dependence on the\\nunrepresented \
+tail. No finite-prefix observation is assumed to be \
+invariant.\\n-/\\n\\n\\n\\nnamespace Rule30Submission.Driven\\n\\nopen \
+Rule30Jen Rule30Ether Rule30PeriodTwoCoupled Rule30PeriodTwoSideways\\n\\ndef \
+step (b : Bool) (a : Nat) : Nat :=\\n  ((a <<< 1) ||| b.toNat) ^^^ (a ||| (a \
+>>> 1))\\n\\ntheorem step_bit (b : Bool) (a j : Nat) :\\n    (step b \
+a).testBit j = xor (if j=0 then b else a.testBit (j-1))\\n      (a.testBit j \
+|| a.testBit (j+1)) := by\\n  simp only \
+[step,Nat.testBit_xor,Nat.testBit_or,Nat.testBit_shiftLeft,\\n    \
+Nat.testBit_shiftRight,Nat.testBit_bool_toNat]\\n  cases j <;> simp \
+[Nat.add_comm]\\n\\ntheorem step_agree (b : Bool) {a c k : Nat}\\n    (h : \
+\[ForAll] j, j<k+1 \[RightArrow] a.testBit j=c.testBit j) :\\n    \[ForAll] \
+j, j<k \[RightArrow] (step b a).testBit j=(step b c).testBit j := by\\n  \
+intro j hj\\n  rw [step_bit,step_bit,h j (by omega),h (j+1) (by omega)]\\n  \
+by_cases h0 : j=0\\n  \[CenterDot] simp [h0]\\n  \[CenterDot] simp [h0,h \
+(j-1) (by omega)]\\n\\ndef packed (c : Nat \[RightArrow] Bool) (a : Nat) : \
+Nat \[RightArrow] Nat\\n  | 0 => a\\n  | t+1 => step (c t) (packed c a \
+t)\\n\\ntheorem packed_sound (c R : Nat \[RightArrow] Bool) (a : Nat)\\n    \
+(ha : \[ForAll] j, a.testBit j=R (j+1)) : \[ForAll] t j,\\n    (packed c a \
+t).testBit j=drv c R t (j+1) := by\\n  intro t\\n  induction t with\\n  | \
+zero => intro j; simpa [packed,drv] using ha j\\n  | succ t ih =>\\n      \
+intro j\\n      rw [packed,step_bit]\\n      cases j with\\n      | zero => \
+simp [drv,rule,ih,drv_col0]\\n      | succ j => simp \
+[drv,rule,ih,Nat.add_assoc]\\n\\ndef double (a : Nat) : Nat := step true \
+(step false a)\\n\\ndef white : Nat \[RightArrow] Nat\\n  | 0 => 1\\n  | n+1 \
+=> double (white n)\\n\\ntheorem packed_white : \[ForAll] n, packed altCol 0 \
+(2*n+1)=white n\\n  | 0 => by decide\\n  | n+1 => by\\n      rw [show \
+2*(n+1)+1=(2*n+1+1)+1 by omega,packed,packed]\\n      rw [show \
+2*n+1+1=2*(n+1) by omega,altCol_even,altCol_odd,packed_white]\\n      \
+rfl\\n\\ntheorem white_sound (n j : Nat) :\\n    (white n).testBit j=drv \
+altCol empty (2*n+1) (j+1) := by\\n  rw [\[LeftArrow] packed_white]\\n  exact \
+packed_sound altCol empty 0 (by intro j; simp [empty]) (2*n+1) j\\n\\ntheorem \
+white_gate (n : Nat) : (white n).testBit 0=u empty n := white_sound n \
+0\\n\\ntheorem double_agree {a c k : Nat}\\n    (h : \[ForAll] j, j<k+2 \
+\[RightArrow] a.testBit j=c.testBit j) :\\n    \[ForAll] j, j<k \[RightArrow] \
+(double a).testBit j=(double c).testBit j := by\\n  exact step_agree true \
+(step_agree false (by intro j hj; exact h j (by omega)))\\n\\ndef iterate (a \
+: Nat) : Nat \[RightArrow] Nat\\n  | 0 => a\\n  | n+1 => double (iterate a n)\
+\\n\\ntheorem iterate_agree : \[ForAll] n {a c k : Nat},\\n    (\[ForAll] j, \
+j<k+2*n \[RightArrow] a.testBit j=c.testBit j) \[RightArrow]\\n    \[ForAll] \
+j, j<k \[RightArrow] (iterate a n).testBit j=(iterate c n).testBit j\\n  | \
+0,a,c,k,h => by simpa [iterate] using h\\n  | n+1,a,c,k,h => by\\n      apply \
+double_agree\\n      apply iterate_agree n\\n      intro j hj\\n      exact h \
+j (by omega)\\n\\ntheorem iterate_white (r n : Nat) : iterate (white r) \
+n=white (r+n) := by\\n  induction n with\\n  | zero => rfl\\n  | succ n ih => \
+rw [iterate,ih,show r+(n+1)=(r+n)+1 by omega,white]\\n\\ntheorem \
+double_prefix (a k : Nat) : double a % 2^k=double (a % 2^(k+2)) % 2^k := \
+by\\n  apply Nat.eq_of_testBit_eq\\n  intro j\\n  rw \
+[Nat.testBit_mod_two_pow,Nat.testBit_mod_two_pow]\\n  by_cases hj : j<k\\n  \
+\[CenterDot] simp only [hj,decide_true,Bool.true_and]\\n    apply \
+double_agree (k:=k)\\n    \[CenterDot] intro i hi\\n      rw \
+[Nat.testBit_mod_two_pow]\\n      simp [hi]\\n    \[CenterDot] exact hj\\n  \
+\[CenterDot] simp [hj]\\n\\ntheorem iterate_mod_bit (a k n j : Nat) (hj : \
+j+2*n<k) :\\n    (iterate (a % 2^k) n).testBit j=(iterate a n).testBit j := \
+by\\n  apply iterate_agree n (k:=j+1)\\n  \[CenterDot] intro i hi\\n    rw \
+[Nat.testBit_mod_two_pow]\\n    simp [show i<k by omega]\\n  \[CenterDot] \
+omega\\n\\n/-- The local gate window needed for exact spacings three or five. \
+-/\\ndef Window (f : Nat \[RightArrow] Bool) (r : Nat) : Prop :=\\n  (f r && \
+f (r+1))=false \[And] (f r && f (r+2))=false \[And]\\n  (f r=true \
+\[RightArrow]\\n    (f (r+3)=true \[And] f (r+4)=false \[And] f (r+5)=false) \
+\[Or]\\n    (f (r+3)=false \[And] f (r+4)=false \[And] f (r+5)=true)) \
+\[And]\\n  (f r || f (r+1) || f (r+2) || f (r+3) || f (r+4) || f \
+(r+5))=true\\n\\ninstance (f : Nat \[RightArrow] Bool) (r : Nat) : Decidable \
+(Window f r) := inferInstanceAs\\n  (Decidable ((f r && f (r+1))=false \[And] \
+(f r && f (r+2))=false \[And]\\n  (f r=true \[RightArrow]\\n    (f (r+3)=true \
+\[And] f (r+4)=false \[And] f (r+5)=false) \[Or]\\n    (f (r+3)=false \[And] \
+f (r+4)=false \[And] f (r+5)=true)) \[And]\\n  (f r || f (r+1) || f (r+2) || \
+f (r+3) || f (r+4) || f (r+5))=true))\\n\\ndef Observe (a : Nat) : Prop := \
+Window (fun n => (iterate a n).testBit 0) 0\\n\\ninstance (a : Nat) : \
+Decidable (Observe a) := inferInstanceAs\\n  (Decidable (Window (fun n => \
+(iterate a n).testBit 0) 0))\\n\\ntheorem observe_trim (a : Nat) : Observe (a \
+% 2^18) \[LeftRightArrow] Observe a := by\\n  simp only \
+[Observe,Window,Nat.zero_add]\\n  rw [iterate_mod_bit a 18 0 0 (by \
+decide),iterate_mod_bit a 18 1 0 (by decide),\\n    iterate_mod_bit a 18 2 0 \
+(by decide),iterate_mod_bit a 18 3 0 (by decide),\\n    iterate_mod_bit a 18 \
+4 0 (by decide),iterate_mod_bit a 18 5 0 (by decide)]\\n\\nend \
+Rule30Submission.Driven\\n\\n/-! Untrusted generated wall data; every \
+membership, observation and\\ntransition case is checked below by ordinary \
+kernel reduction. -/\\n\\n\\n\\nnamespace \
+Rule30Submission.DrivenWall\\n\\nopen Rule30Submission.Driven\\n\\ndef \
+wallMask : Nat := \
+0x94c0051014c00840008005900580c0400100048014c08044544010400540810004c000801540\
+88400480159010c040441900059051c00c4414c005000400050010c005004140c84081c0159010\
+c0c0448100048014c0814451c005c0058004808080149004c0c044810005901580c00400801590\
+5440c4001400058000c0404001c0158011808844014005800580c0400100149014c0c100544014\
+4015c0800005c001c0154088448480159010c040448100059011c0804014c00400144085000540\
+0110110048448480059014404044810011005080844050c015d005c000808100049054c0814419\
+0005900500c8048180158054c0c40041c005900540c4049400058014c088440580159015804044\
+0580051014c0840054c014401540804005c0011015c0884480800590148040448100059051c008\
+4014c005000400050010c005004140c84081c0159010c0c8448100048014c0814451c005c00580\
+048081001100508084400100059005c0c0448d801590544044401180058001c045401080050004\
+c0484080c015801080c8440100048014c0814451c005c005c00400154001505100484484801590\
+004048440980159051c0844014c0050014c0050005c001c0154088448480159010c04044808014\
+9014c0c14411c01510058001040100149014c0c10001c01590148040440140058054c084441180\
+059015c0c5001540051054c0c844848015900480c8000100048014c08044554014401500c4c004\
+c0140010c0884005800590148040441900059051c00c4414c005000400050010c0051001c04840\
+01c005801080c0408100048014c0814451c01580058001008080149004408140890005900580c8\
+44048015905440c4001540058001c0c04005c0158051808844054005800580c4400180149014c0\
+c9045440144015c0800005c001d0154088448480159010c040448100059011c0804054c0040014\
+408500154001505100484484801590004048448100141054c0814451c015401540840001000480\
+14c08044810005900500c80480c0158055c0880004c0059005c08004154015800440c8448d4005\
+900580c4400180141054c0c4005040144005c0c48015c01480148088408080059010c040448100\
+059014c0804404c005401440050010c0050005c048408500058010c0cc408100048014c0804451\
+c005c005c000008180110014c081448100159015c040040480159054c0c4405180058001c04544\
+10c0051045c0c84481c0159010c0c8448100049054c0814455c005c005c0048005400110118048\
+448d801590144048441900059054c0cc405480145011c0050015c0015015c0884481c005901480\
+40440100049014c0844451c0158005c001801580051014c0c4000480159014c0c04405c0159055\
+40844014c0059005c0054015c0150054c0484085c005900580c0408100049054c0814454400040\
+15c08440154000801480884401c0059010c0c0448100059051c00c4414c005000400050010c005\
+101140c84489c0158010c0c0400100048014c0844451c01580058001048080149054c0c0448100\
+05901580c004848015905440c4001540158001c0c04001c00580508088440c4005900580c44005\
+00140014c08000544014401540814004c00180154088400480159010c040448900059015c08844\
+044005001440850015400110118008408cc0159014c040448180151051c0844414c005c005c001\
+048100048014c08144190005900500c80481c0159054c0c000414005900540c4049400058014c0\
+884405c01590158040441580051014c0c40054c014401540854015c0015015c0884481c0059014\
+8040448900059051c0084414c005500440050010c0051045c0c84481c0159010c0c84481000490\
+54c0814455c005c005c0048081001100548084401900059015c0c4448d80159054404440118015\
+8001c0454010c0050005c048408500058010c0cc408100048014c0804451c005c005c000000540\
+0110518048440480159014c0c044810015905140c44414c005001140850015c014801480884080\
+80059010c040448100149004c0844414c00510058001040180141054c0c40009c0059014804004\
+8d40059054c081440440059015c045448480050014c088448cc0159004c0c0400500051054c0c0\
+00544010401540854014c0011054c0804001801590148040440000059051c0084414c005400400\
+050010c0051041c0c8448180158010c0c8448100049054c0814451c005c005c004808100110050\
+8084400900059015c0c40484800590544044401100058001c0454015401580044088440c400590\
+0580c4408580151054c0c0005440144005c0844005400080140088440080159010c04044810005\
+9010c0804004c004001440850005400110110048440080059010c040448100110014c0804451c0\
+15d0050001008100048014c08144190005900500c8048100058014c0800001c015900540800481\
+c0158011808844014005800580c0400100149014c0c1005440144015c0c10005c001c015408844\
+8480159010c040448100059011c0804014c00400144085001080050004c0484080c015801080c8\
+440100048014c0814451c005c005c004008100140014c08044098015901580c804848015905440\
+44005100059001c0454010c0051004c0484001c0058010c0c0400100049014c0804451c0158005\
+80010004c01000154088400480159014c0c0448100059055c08844044015001440850014c01480\
+10c0884005800590148040448100048014c0814451c005c0058004800100048014c080448d8015\
+9014404044008005905080844055c0059015c0054495c0050014c0c84401c015900580c4400100\
+048054c0844454c0144015c0804005c001c0154088448480159010c040448100059051c00c4414\
+c005000480050010c0051041c0c8448180158010c0c8448100049054c0814451c005c005c00480\
+8100149004c08444810005900580c044808005905440c4001480158014c0c04005c0158051c0c8\
+44844005800580c0400580148054c0c000544014400540c10004c01000154088400480159014c0\
+c0448100059055c08844554015501440850005400110118048448d801590144048448100110054\
+80844054c015d005c000808100049054c08144190005900500c84481c0159055c0c40045c00590\
+0540c4049400058054c0884484801590058040440500051054c0c000544010401540854004c001\
+1051c0884004801590148040448100059051c0084014c005000400050010c0050045c0c84081c0\
+159010c0c0448100048014c0814455c005c0058004808180151051c084440100059005c0c0448c\
+c015905540c4401180059001c045401080051015c0484080c015800080c8401180048014c08044\
+51c005d005c0040415c0015051804844858015901040c84411c0159055c0844054c0054014c005\
+0005c001d0154088448480159010c040448080149054c0c04411c01510058001000180149014c0\
+c90401801590148040440540058014c084445180059015c0c5401540151055c0c8448480159004\
+80c8000100048015c0804455c014401540c4c014c0148010c088400d801590148040449d000590\
+51c00c4414c015000480050011c0051005c0484081c0058010c0c0408100049054c0814451c015\
+80058001008080149004c08140890005901580c8440480159054c0c4441540158011c0c04485c0\
+15905180c844054005800580c4400180149014c0c9045440144015c0c10005c001d0554088448c\
+80159010c0c0448100059015c0844054c0040014408500154001505100484484c0159000c04844\
+8100149054c0814451c01540154084800100048014c08144810005900500c80485c0158055c088\
+0004c0059005c081041540158005c0c8448d40059015c0cc408580151055c0c4005440144005c0\
+c440154000801480884401c0159014c0c0448100059014c0884445c014c0144085001080051001\
+c048408900158010c0c8408100048014c0814451c005c0058004c08100111014c0804489001590\
+15c0c444848015905440c4005140058001c0454410c0051041c0c8448180158010c0c844810004\
+9054c0814451c005c005c00480154001501100484484c00590144040440980159050c0cc4051c0\
+044015c0850015c0011055c0c04481c015901480c0441100049054c0854451c01590058000c005\
+00051054c0cc008480159010c040448cc0159014c0c14414c0059005c085409580155055c0c844\
+01c00590148080401180048014c080445440144015c084c014c0148010c0c84485c00590148040\
+441900059055c00c4454c015000480050010c0051004c0484409c0158010c0c4400100049014c0\
+844451c0158005c001808180140055408440810005900580c8440480159054c0c4401540158010\
+c0c04481c0158011808844014005800580c0400100149014c0c1005440144015c0c10005c001c0\
+154088448480159010c040448100059011c0804014c00400144085001540015051004844848015\
+90004048448100140014c0804451c01540154084800100048014c08144810005900500c80480c0\
+158055c0800004c00590054080048580050014c088448cc0159004c0c4401580151055c0c00054\
+4010401540854014c0011054c0884001801590148040440000059051c0084414c0054004000500\
+10c0051045c0c8448180158010c0c8448100049054c0814451c005c005c0048081001100548084\
+401900059015c0c4448c801590544044401100058001c0454010c0050001c04840850005801080\
+c8408100049054c0814451c005c005c0048015400150110048440080059010c040448100059051\
+c08c4014c0050011c0850005c001c0154088448480159010c040448080149014c0c04411c01510\
+058001008580151054c0c00005800590148040440c40059014c081440440059015c04544940005\
+8014c088440dc01590158040441580051014c0c40054c014401540854015c0015015c0884481c0\
+0590148040448900059051c0084414c005500440050010c0051045c0c84481c0159010c0c84481\
+00049054c0c14455c005c015c0048481801100548085401d40059015c0c4448d80159054c04440\
+1180158001c045401540158004c0c8448d4005900580c4401180141055c0c4005040144005c0c4\
+8015c01480148088408480159010c040448900059014c0884405c0054014400500054001105180\
+48440480159014c0c0448180119054c0814455c0155015c041008100048014c080448100059005\
+00c8048500058054c0cc0005c015900540c00401c00580548088448d4005900580c44005001400\
+14c0c000544014401540814004c00180154088400480159010c040448900059015c08844044005\
+001440850010c005004140c84089c0159010c0c0448100048014c0814451c005c0058004c08180\
+151051c084448100059005c0c0448cc015905540c4405180058001c0454010c005101140c84489\
+c0158010c0c0400100048014c0844451c015800580010405c001d0154088448480159010c04044\
+8100059011c0804054c0040014408500154000801480884401c0059010c0c0440100048014c080\
+4451c005d005c004008100049054c08144848015900040484485c0059054c0814454c0159015c0\
+c54495c0050014c0084001c005900580c0400100048014c08444544010401540804004c0008015\
+4088440480159010c040448100059051c00c4414c005000400050010c0051041c0c84481801580\
+10c0c8448100049054c0814451c005c005c004808100149004c08444810005900580c044008005\
+905440c4001480158000c0404001c0158011c08844804005800580c0400100148014c0c0005440\
+14400540c10004c00000154088400480159010c040448100059011c08040144004001440850005\
+400110110048448480059014404044810011005080844050c015d005c000808100049054c08144\
+190005900500c8048180158055c0c40041c005900540c4049400058054c0884484801590058040\
+440500051014c08000544010401540804004c0011011c0884004801590148040448100059051c0\
+084014c005000400050010c005004140c84081c0159010c0c0448100048014c0814451c005c005\
+8004808180151051c084440100059005c0c0448cc015905540c4401180058001c0454010800510\
+04c0484080c015800080c8400100048014c0804451c005d005c004001540015051004844848015\
+90004048441180159051c0844054c0050014c0050005c001d0154088448480159010c040448080\
+149054c0c04411c01510058001000180149014c0c90401801590148040440540058014c0844451\
+80059015c0c5401540051054c0c844848015900480c8000100048014c08044554014401500c4c0\
+04c0140010c0884005800590148040441900059051c00c4414c005000400050010c0051001c048\
+4001c005801080c0408100048014c0814451c01580058001008080149004408140890005900580\
+c844048015905440c4001540058001c0c04005c0158051808844054005800580c4400180149014\
+c0c9045440144015c0800005c001d0154088448480159010c040448100059011c0804054c00400\
+14408500154001505100484484801590004048448100141054c0814451c0154015408400010004\
+8014c08044810005900500c80480c0158055c0880004c0059005c08004154015800440c8448d40\
+05900580c4400180141054c0c4005040144005c0c40015400080148088400080059010c0404481\
+00059014c0804404c00440144005001080050001c048408100058010c0c8408100048014c08044\
+51c005c0058000008100110014c080448100159015c04004048015905440c4005100058001c045\
+4410c0051041c0c8448180158010c0c8448100049054c0814451c005c005c00480054001101100\
+484484800590144040440900059050c0cc405080044011c0050015c0011015c0804481c0059014\
+8040440100049014c0844451c01580058000800500051014c0c4000480159010c0404404c01590\
+1440804014c0059005c0054015c0150054c0484085c005900580c0408100049054c08144544000\
+4015c08440154000801480884401c0059010c0c0448100059051c00c4414c005000400050010c0\
+05101140c84489c0158010c0c0400100048014c0844451c01580058001048080149054c0c04481\
+0005901580c004848015905440c4001540158001c0c04001c00580548088448d4005900580c440\
+0500140014c0c000544014401540814004c00180154088400480159010c040448900059015c088\
+44044005001440850015400110518008408cc0159014c040448180151051c0844414c005c005c0\
+01048100048014c081449d0005900500c80489c0159054c0c000414015900540c4049400058014\
+c088440dc01590158040441580051014c0c40054c014401540854015c0015015c0884481c00590\
+148040448900059051c0084414c005500440050010c0051045c0c84481c0159010c0c844810004\
+9054c0c14455c005c015c0048481801100548085401d40059015c0c4448d80159054c044401180\
+158001c0454010c0050005c048408500058010c0cc408100048014c0804451c005c005c0000005\
+400110518048440480159014c0c0448140159055c0c44454c015001140850015c0148014808840\
+8480159010c040448100149005c0844414c00590058001841180141055c0c40009c00590148040\
+048d40059054c0814404c0059015c045448580050014c088448cc0159004c0c4401580151055c0\
+c000544010401540854014c0011054c0884001801590148040440000059051c0084414c0054004\
+00050010c0051045c0c8448180158010c0c8448100049054c0814451c005c005c0048081001100\
+548084401900059015c0c4448c801590544044401100058001c0454015401580044088440c4005\
+900580c4408580151054c0c0005440144005c0844005c001c0154088448480159010c040448100\
+059011c0804014c004001440850015400150110048440080059010c040448180110014c0804451\
+c015d0054001008100049054c08144190005900500c8048500058014c0800001c015900540c004\
+81c0158011808844014005800580c0400100149014c0c1005440144015c0c10005c001c0154088\
+448480159010c040448100059011c0804014c00400144085001080050004c0484080c015801080\
+c8440100048014c0814451c005c005c004008100140014c08044098015901580c8048480159054\
+4044005100059001c0454010c0051004c0484409c0158010c0c4400100049014c0844451c01580\
+05c0018004c01000154088400480159014c0c0448100059055c08844554015501440850014c014\
+8010c0c84485c00590148040448100049054c0814455c005c005c004801180048014c080448d80\
+15901440484401c005905480844055c0059015c0854415c0150054c0484085c005900580c04081\
+00049054c081445440004015c08440154000801480884401c0059010c0c0448100059051c00c44\
+14c005000400050010c005101140c84489c0158010c0c0400100048014c0844451c01580058001\
+048080149054c0c044810005901580c004848015905440c4001540158001c0c04001c005805080\
+88440c4005900580c4400500140014c08000544014401540814004c00180154088400480159010\
+c040448900059015c08844044005001440850015400110118008408cc0159014c0404481801510\
+51c0844414c005c005c001048100048014c08144190005900500c80481c0159054c0c000414005\
+900540c4049400058014c0884405c01590158040441580051014c0c40054c014401540854015c0\
+015015c0884481c00590148040448900059051c0084414c005500440050010c0051045c0c84481\
+c0159010c0c8448100049054c0814455c005c005c0048081001100548084401900059015c0c444\
+8d801590544044401180158001c0454010c0050005c048408500058010c0cc408100048014c080\
+4451c005c005c0000005400110518048440480159014c0c044810015905140c44414c005001140\
+850015c01480148088408080059010c040448100149004c0844414c00510058001040180141054\
+c0c40009c00590148040048d40059054c081440440059015c045441500151055c0c84400800590\
+048080000100048014c0804454401440154084c014c0148010c088400580059014804044190005\
+9051c00c4414c015000480050010c0051004c0484001c0058010c0c0400100049014c0804451c0\
+1580058001008080140004408040810005900580c8440480159054c0c4401540158010c0c04481\
+c0158011808844014005800580c0400100149014c0c1005440144015c0c10005c001c015408844\
+8480159010c040448100059011c0804014c0040014408500154001505100484484801590004048\
+448100140014c0804451c01540154084800100048014c08144810005900500c80480c0158055c0\
+800004c005900540800415401580044088440c4005900580c4408580151054c0c0005440144005\
+c0844005400080140088440080159010c040448100059010c0804004c004001440850010800500\
+01c04840810005801080c8408100048014c0814451c005c0058004808100110014c08044810005\
+901580c004008005905440c4001100058001c0454010c0051041c0c8448180158010c0c8448100\
+049054c0814451c005c005c00480054001101100484484800590144040440900059050c0cc4050\
+80044011c0050014c0011054c0804001801590148040440100048014c0844451c0158005800000\
+0500051054c0c0008480159010c040448cc0159014c0c04414c0059005c085401540051054c0c8\
+44848015900480c8000100048014c08044554014401500c4c004c0140010c08840058005901480\
+40441900059051c00c4414c005000400050010c0051001c0484001c005801080c0408100048014\
+c0814451c01580058001008080149004408140890005900580c844048015905440c40015400580\
+01c0c04005c0158051808844054005800580c4400180149014c0c9045440144015c0800005c001\
+d0154088448480159010c040448100059011c0804054c004001440850015400150510048448480\
+1590004048448100141054c0814451c01540154084000100048014c08044810005900500c80480\
+c0158055c0880004c0059005c080048400050014c0884404c01590048040400500051014c0c400\
+544010401540854015c0011015c0804481c00590148040440800059051c0084414c00540040005\
+0010c0051041c0c8448180158010c0c8448100049054c0814451c005c005c00480810011005080\
+84400900059015c0c40484800590544044401100158001c045401080050001c048408100058010\
+c0c8408100048014c0804451c005c00580000005400110510048440480159010c0404481001590\
+5140c44014c005001140050015400080148088400080059010c040448100149004c0844414c005\
+10058001000180141054c0c40001c00590148040048d40059054c081440440059015c045449400\
+058014c0884404801590058040440500051014c08000544010401540804004c0011011c0884000\
+800590148040448100059051c0084014c005000400050010c005004140c84081c0159010c0c044\
+8100048014c0814451c005c00580048081001100508084400100059005c0c0448c801590544044\
+401180058001c0454001c0158011808844014005800580c0400100149014c0c1005440144015c0\
+800005c001c0154088448480159010c040448100059011c0804014c00400144085001540015051\
+00484484801590004048448100140014c0804451c01540154084000100048014c0804481000590\
+0500c80480c0158055c0800004c005900540800401c0158011808844004005800580c040010014\
+8014c0c000544014400540800004c00000154088400480159010c040448100059011c080401440\
+04001440850010c0051041c0c8448180158010c0c8448100049054c0814451c005c005c0048081\
+001100508084400900059015c0c40484800590544044401100058001c0454010c005004140c840\
+8180158010c0c0448100048014c0814451c005c00580048005400080140088400080059010c040\
+448100059010c0804004c004001440050004c00080154088400480159010c040448100048014c0\
+804451c005c0058000000100048014c080440080059010c040440080059014c0804414c0059005\
+40c544\\n\\ndef wall (q : Nat) : Bool := wallMask.testBit (q % \
+65536)\\n\\ndef Good (q : Nat) : Prop := wall q=true \[RightArrow] Observe q \
+\[And] wall (double q)=true\\n\\ninstance (q : Nat) : Decidable (Good q) := \
+inferInstanceAs\\n  (Decidable (wall q=true \[RightArrow] Observe q \[And] \
+wall (double q)=true))\\n\\ndef checkBlock (base : Nat) : Bool :=\\n  \
+(List.range 1024).all (fun j => decide (Good (base+j)))\\n\\nset_option \
+maxRecDepth 1000000\\nset_option maxHeartbeats 0\\n\\ntheorem block0 : \
+checkBlock 0=true := by decide\\ntheorem block1 : checkBlock 1024=true := by \
+decide\\ntheorem block2 : checkBlock 2048=true := by decide\\ntheorem block3 \
+: checkBlock 3072=true := by decide\\ntheorem block4 : checkBlock 4096=true \
+:= by decide\\ntheorem block5 : checkBlock 5120=true := by decide\\ntheorem \
+block6 : checkBlock 6144=true := by decide\\ntheorem block7 : checkBlock \
+7168=true := by decide\\ntheorem block8 : checkBlock 8192=true := by \
+decide\\ntheorem block9 : checkBlock 9216=true := by decide\\ntheorem block10 \
+: checkBlock 10240=true := by decide\\ntheorem block11 : checkBlock \
+11264=true := by decide\\ntheorem block12 : checkBlock 12288=true := by \
+decide\\ntheorem block13 : checkBlock 13312=true := by decide\\ntheorem \
+block14 : checkBlock 14336=true := by decide\\ntheorem block15 : checkBlock \
+15360=true := by decide\\ntheorem block16 : checkBlock 16384=true := by \
+decide\\ntheorem block17 : checkBlock 17408=true := by decide\\ntheorem \
+block18 : checkBlock 18432=true := by decide\\ntheorem block19 : checkBlock \
+19456=true := by decide\\ntheorem block20 : checkBlock 20480=true := by \
+decide\\ntheorem block21 : checkBlock 21504=true := by decide\\ntheorem \
+block22 : checkBlock 22528=true := by decide\\ntheorem block23 : checkBlock \
+23552=true := by decide\\ntheorem block24 : checkBlock 24576=true := by \
+decide\\ntheorem block25 : checkBlock 25600=true := by decide\\ntheorem \
+block26 : checkBlock 26624=true := by decide\\ntheorem block27 : checkBlock \
+27648=true := by decide\\ntheorem block28 : checkBlock 28672=true := by \
+decide\\ntheorem block29 : checkBlock 29696=true := by decide\\ntheorem \
+block30 : checkBlock 30720=true := by decide\\ntheorem block31 : checkBlock \
+31744=true := by decide\\ntheorem block32 : checkBlock 32768=true := by \
+decide\\ntheorem block33 : checkBlock 33792=true := by decide\\ntheorem \
+block34 : checkBlock 34816=true := by decide\\ntheorem block35 : checkBlock \
+35840=true := by decide\\ntheorem block36 : checkBlock 36864=true := by \
+decide\\ntheorem block37 : checkBlock 37888=true := by decide\\ntheorem \
+block38 : checkBlock 38912=true := by decide\\ntheorem block39 : checkBlock \
+39936=true := by decide\\ntheorem block40 : checkBlock 40960=true := by \
+decide\\ntheorem block41 : checkBlock 41984=true := by decide\\ntheorem \
+block42 : checkBlock 43008=true := by decide\\ntheorem block43 : checkBlock \
+44032=true := by decide\\ntheorem block44 : checkBlock 45056=true := by \
+decide\\ntheorem block45 : checkBlock 46080=true := by decide\\ntheorem \
+block46 : checkBlock 47104=true := by decide\\ntheorem block47 : checkBlock \
+48128=true := by decide\\ntheorem block48 : checkBlock 49152=true := by \
+decide\\ntheorem block49 : checkBlock 50176=true := by decide\\ntheorem \
+block50 : checkBlock 51200=true := by decide\\ntheorem block51 : checkBlock \
+52224=true := by decide\\ntheorem block52 : checkBlock 53248=true := by \
+decide\\ntheorem block53 : checkBlock 54272=true := by decide\\ntheorem \
+block54 : checkBlock 55296=true := by decide\\ntheorem block55 : checkBlock \
+56320=true := by decide\\ntheorem block56 : checkBlock 57344=true := by \
+decide\\ntheorem block57 : checkBlock 58368=true := by decide\\ntheorem \
+block58 : checkBlock 59392=true := by decide\\ntheorem block59 : checkBlock \
+60416=true := by decide\\ntheorem block60 : checkBlock 61440=true := by \
+decide\\ntheorem block61 : checkBlock 62464=true := by decide\\ntheorem \
+block62 : checkBlock 63488=true := by decide\\ntheorem block63 : checkBlock \
+64512=true := by decide\\ntheorem block64 : checkBlock 65536=true := by \
+decide\\ntheorem block65 : checkBlock 66560=true := by decide\\ntheorem \
+block66 : checkBlock 67584=true := by decide\\ntheorem block67 : checkBlock \
+68608=true := by decide\\ntheorem block68 : checkBlock 69632=true := by \
+decide\\ntheorem block69 : checkBlock 70656=true := by decide\\ntheorem \
+block70 : checkBlock 71680=true := by decide\\ntheorem block71 : checkBlock \
+72704=true := by decide\\ntheorem block72 : checkBlock 73728=true := by \
+decide\\ntheorem block73 : checkBlock 74752=true := by decide\\ntheorem \
+block74 : checkBlock 75776=true := by decide\\ntheorem block75 : checkBlock \
+76800=true := by decide\\ntheorem block76 : checkBlock 77824=true := by \
+decide\\ntheorem block77 : checkBlock 78848=true := by decide\\ntheorem \
+block78 : checkBlock 79872=true := by decide\\ntheorem block79 : checkBlock \
+80896=true := by decide\\ntheorem block80 : checkBlock 81920=true := by \
+decide\\ntheorem block81 : checkBlock 82944=true := by decide\\ntheorem \
+block82 : checkBlock 83968=true := by decide\\ntheorem block83 : checkBlock \
+84992=true := by decide\\ntheorem block84 : checkBlock 86016=true := by \
+decide\\ntheorem block85 : checkBlock 87040=true := by decide\\ntheorem \
+block86 : checkBlock 88064=true := by decide\\ntheorem block87 : checkBlock \
+89088=true := by decide\\ntheorem block88 : checkBlock 90112=true := by \
+decide\\ntheorem block89 : checkBlock 91136=true := by decide\\ntheorem \
+block90 : checkBlock 92160=true := by decide\\ntheorem block91 : checkBlock \
+93184=true := by decide\\ntheorem block92 : checkBlock 94208=true := by \
+decide\\ntheorem block93 : checkBlock 95232=true := by decide\\ntheorem \
+block94 : checkBlock 96256=true := by decide\\ntheorem block95 : checkBlock \
+97280=true := by decide\\ntheorem block96 : checkBlock 98304=true := by \
+decide\\ntheorem block97 : checkBlock 99328=true := by decide\\ntheorem \
+block98 : checkBlock 100352=true := by decide\\ntheorem block99 : checkBlock \
+101376=true := by decide\\ntheorem block100 : checkBlock 102400=true := by \
+decide\\ntheorem block101 : checkBlock 103424=true := by decide\\ntheorem \
+block102 : checkBlock 104448=true := by decide\\ntheorem block103 : \
+checkBlock 105472=true := by decide\\ntheorem block104 : checkBlock \
+106496=true := by decide\\ntheorem block105 : checkBlock 107520=true := by \
+decide\\ntheorem block106 : checkBlock 108544=true := by decide\\ntheorem \
+block107 : checkBlock 109568=true := by decide\\ntheorem block108 : \
+checkBlock 110592=true := by decide\\ntheorem block109 : checkBlock \
+111616=true := by decide\\ntheorem block110 : checkBlock 112640=true := by \
+decide\\ntheorem block111 : checkBlock 113664=true := by decide\\ntheorem \
+block112 : checkBlock 114688=true := by decide\\ntheorem block113 : \
+checkBlock 115712=true := by decide\\ntheorem block114 : checkBlock \
+116736=true := by decide\\ntheorem block115 : checkBlock 117760=true := by \
+decide\\ntheorem block116 : checkBlock 118784=true := by decide\\ntheorem \
+block117 : checkBlock 119808=true := by decide\\ntheorem block118 : \
+checkBlock 120832=true := by decide\\ntheorem block119 : checkBlock \
+121856=true := by decide\\ntheorem block120 : checkBlock 122880=true := by \
+decide\\ntheorem block121 : checkBlock 123904=true := by decide\\ntheorem \
+block122 : checkBlock 124928=true := by decide\\ntheorem block123 : \
+checkBlock 125952=true := by decide\\ntheorem block124 : checkBlock \
+126976=true := by decide\\ntheorem block125 : checkBlock 128000=true := by \
+decide\\ntheorem block126 : checkBlock 129024=true := by decide\\ntheorem \
+block127 : checkBlock 130048=true := by decide\\ntheorem block128 : \
+checkBlock 131072=true := by decide\\ntheorem block129 : checkBlock \
+132096=true := by decide\\ntheorem block130 : checkBlock 133120=true := by \
+decide\\ntheorem block131 : checkBlock 134144=true := by decide\\ntheorem \
+block132 : checkBlock 135168=true := by decide\\ntheorem block133 : \
+checkBlock 136192=true := by decide\\ntheorem block134 : checkBlock \
+137216=true := by decide\\ntheorem block135 : checkBlock 138240=true := by \
+decide\\ntheorem block136 : checkBlock 139264=true := by decide\\ntheorem \
+block137 : checkBlock 140288=true := by decide\\ntheorem block138 : \
+checkBlock 141312=true := by decide\\ntheorem block139 : checkBlock \
+142336=true := by decide\\ntheorem block140 : checkBlock 143360=true := by \
+decide\\ntheorem block141 : checkBlock 144384=true := by decide\\ntheorem \
+block142 : checkBlock 145408=true := by decide\\ntheorem block143 : \
+checkBlock 146432=true := by decide\\ntheorem block144 : checkBlock \
+147456=true := by decide\\ntheorem block145 : checkBlock 148480=true := by \
+decide\\ntheorem block146 : checkBlock 149504=true := by decide\\ntheorem \
+block147 : checkBlock 150528=true := by decide\\ntheorem block148 : \
+checkBlock 151552=true := by decide\\ntheorem block149 : checkBlock \
+152576=true := by decide\\ntheorem block150 : checkBlock 153600=true := by \
+decide\\ntheorem block151 : checkBlock 154624=true := by decide\\ntheorem \
+block152 : checkBlock 155648=true := by decide\\ntheorem block153 : \
+checkBlock 156672=true := by decide\\ntheorem block154 : checkBlock \
+157696=true := by decide\\ntheorem block155 : checkBlock 158720=true := by \
+decide\\ntheorem block156 : checkBlock 159744=true := by decide\\ntheorem \
+block157 : checkBlock 160768=true := by decide\\ntheorem block158 : \
+checkBlock 161792=true := by decide\\ntheorem block159 : checkBlock \
+162816=true := by decide\\ntheorem block160 : checkBlock 163840=true := by \
+decide\\ntheorem block161 : checkBlock 164864=true := by decide\\ntheorem \
+block162 : checkBlock 165888=true := by decide\\ntheorem block163 : \
+checkBlock 166912=true := by decide\\ntheorem block164 : checkBlock \
+167936=true := by decide\\ntheorem block165 : checkBlock 168960=true := by \
+decide\\ntheorem block166 : checkBlock 169984=true := by decide\\ntheorem \
+block167 : checkBlock 171008=true := by decide\\ntheorem block168 : \
+checkBlock 172032=true := by decide\\ntheorem block169 : checkBlock \
+173056=true := by decide\\ntheorem block170 : checkBlock 174080=true := by \
+decide\\ntheorem block171 : checkBlock 175104=true := by decide\\ntheorem \
+block172 : checkBlock 176128=true := by decide\\ntheorem block173 : \
+checkBlock 177152=true := by decide\\ntheorem block174 : checkBlock \
+178176=true := by decide\\ntheorem block175 : checkBlock 179200=true := by \
+decide\\ntheorem block176 : checkBlock 180224=true := by decide\\ntheorem \
+block177 : checkBlock 181248=true := by decide\\ntheorem block178 : \
+checkBlock 182272=true := by decide\\ntheorem block179 : checkBlock \
+183296=true := by decide\\ntheorem block180 : checkBlock 184320=true := by \
+decide\\ntheorem block181 : checkBlock 185344=true := by decide\\ntheorem \
+block182 : checkBlock 186368=true := by decide\\ntheorem block183 : \
+checkBlock 187392=true := by decide\\ntheorem block184 : checkBlock \
+188416=true := by decide\\ntheorem block185 : checkBlock 189440=true := by \
+decide\\ntheorem block186 : checkBlock 190464=true := by decide\\ntheorem \
+block187 : checkBlock 191488=true := by decide\\ntheorem block188 : \
+checkBlock 192512=true := by decide\\ntheorem block189 : checkBlock \
+193536=true := by decide\\ntheorem block190 : checkBlock 194560=true := by \
+decide\\ntheorem block191 : checkBlock 195584=true := by decide\\ntheorem \
+block192 : checkBlock 196608=true := by decide\\ntheorem block193 : \
+checkBlock 197632=true := by decide\\ntheorem block194 : checkBlock \
+198656=true := by decide\\ntheorem block195 : checkBlock 199680=true := by \
+decide\\ntheorem block196 : checkBlock 200704=true := by decide\\ntheorem \
+block197 : checkBlock 201728=true := by decide\\ntheorem block198 : \
+checkBlock 202752=true := by decide\\ntheorem block199 : checkBlock \
+203776=true := by decide\\ntheorem block200 : checkBlock 204800=true := by \
+decide\\ntheorem block201 : checkBlock 205824=true := by decide\\ntheorem \
+block202 : checkBlock 206848=true := by decide\\ntheorem block203 : \
+checkBlock 207872=true := by decide\\ntheorem block204 : checkBlock \
+208896=true := by decide\\ntheorem block205 : checkBlock 209920=true := by \
+decide\\ntheorem block206 : checkBlock 210944=true := by decide\\ntheorem \
+block207 : checkBlock 211968=true := by decide\\ntheorem block208 : \
+checkBlock 212992=true := by decide\\ntheorem block209 : checkBlock \
+214016=true := by decide\\ntheorem block210 : checkBlock 215040=true := by \
+decide\\ntheorem block211 : checkBlock 216064=true := by decide\\ntheorem \
+block212 : checkBlock 217088=true := by decide\\ntheorem block213 : \
+checkBlock 218112=true := by decide\\ntheorem block214 : checkBlock \
+219136=true := by decide\\ntheorem block215 : checkBlock 220160=true := by \
+decide\\ntheorem block216 : checkBlock 221184=true := by decide\\ntheorem \
+block217 : checkBlock 222208=true := by decide\\ntheorem block218 : \
+checkBlock 223232=true := by decide\\ntheorem block219 : checkBlock \
+224256=true := by decide\\ntheorem block220 : checkBlock 225280=true := by \
+decide\\ntheorem block221 : checkBlock 226304=true := by decide\\ntheorem \
+block222 : checkBlock 227328=true := by decide\\ntheorem block223 : \
+checkBlock 228352=true := by decide\\ntheorem block224 : checkBlock \
+229376=true := by decide\\ntheorem block225 : checkBlock 230400=true := by \
+decide\\ntheorem block226 : checkBlock 231424=true := by decide\\ntheorem \
+block227 : checkBlock 232448=true := by decide\\ntheorem block228 : \
+checkBlock 233472=true := by decide\\ntheorem block229 : checkBlock \
+234496=true := by decide\\ntheorem block230 : checkBlock 235520=true := by \
+decide\\ntheorem block231 : checkBlock 236544=true := by decide\\ntheorem \
+block232 : checkBlock 237568=true := by decide\\ntheorem block233 : \
+checkBlock 238592=true := by decide\\ntheorem block234 : checkBlock \
+239616=true := by decide\\ntheorem block235 : checkBlock 240640=true := by \
+decide\\ntheorem block236 : checkBlock 241664=true := by decide\\ntheorem \
+block237 : checkBlock 242688=true := by decide\\ntheorem block238 : \
+checkBlock 243712=true := by decide\\ntheorem block239 : checkBlock \
+244736=true := by decide\\ntheorem block240 : checkBlock 245760=true := by \
+decide\\ntheorem block241 : checkBlock 246784=true := by decide\\ntheorem \
+block242 : checkBlock 247808=true := by decide\\ntheorem block243 : \
+checkBlock 248832=true := by decide\\ntheorem block244 : checkBlock \
+249856=true := by decide\\ntheorem block245 : checkBlock 250880=true := by \
+decide\\ntheorem block246 : checkBlock 251904=true := by decide\\ntheorem \
+block247 : checkBlock 252928=true := by decide\\ntheorem block248 : \
+checkBlock 253952=true := by decide\\ntheorem block249 : checkBlock \
+254976=true := by decide\\ntheorem block250 : checkBlock 256000=true := by \
+decide\\ntheorem block251 : checkBlock 257024=true := by decide\\ntheorem \
+block252 : checkBlock 258048=true := by decide\\ntheorem block253 : \
+checkBlock 259072=true := by decide\\ntheorem block254 : checkBlock \
+260096=true := by decide\\ntheorem block255 : checkBlock 261120=true := by \
+decide\\n\\ntheorem all_blocks : \[ForAll] n, n<256 \[RightArrow] checkBlock \
+(1024*n)=true\\n  | 0,_ => block0\\n  | 1,_ => block1\\n  | 2,_ => block2\\n  \
+| 3,_ => block3\\n  | 4,_ => block4\\n  | 5,_ => block5\\n  | 6,_ => \
+block6\\n  | 7,_ => block7\\n  | 8,_ => block8\\n  | 9,_ => block9\\n  | 10,_ \
+=> block10\\n  | 11,_ => block11\\n  | 12,_ => block12\\n  | 13,_ => \
+block13\\n  | 14,_ => block14\\n  | 15,_ => block15\\n  | 16,_ => block16\\n  \
+| 17,_ => block17\\n  | 18,_ => block18\\n  | 19,_ => block19\\n  | 20,_ => \
+block20\\n  | 21,_ => block21\\n  | 22,_ => block22\\n  | 23,_ => block23\\n  \
+| 24,_ => block24\\n  | 25,_ => block25\\n  | 26,_ => block26\\n  | 27,_ => \
+block27\\n  | 28,_ => block28\\n  | 29,_ => block29\\n  | 30,_ => block30\\n  \
+| 31,_ => block31\\n  | 32,_ => block32\\n  | 33,_ => block33\\n  | 34,_ => \
+block34\\n  | 35,_ => block35\\n  | 36,_ => block36\\n  | 37,_ => block37\\n  \
+| 38,_ => block38\\n  | 39,_ => block39\\n  | 40,_ => block40\\n  | 41,_ => \
+block41\\n  | 42,_ => block42\\n  | 43,_ => block43\\n  | 44,_ => block44\\n  \
+| 45,_ => block45\\n  | 46,_ => block46\\n  | 47,_ => block47\\n  | 48,_ => \
+block48\\n  | 49,_ => block49\\n  | 50,_ => block50\\n  | 51,_ => block51\\n  \
+| 52,_ => block52\\n  | 53,_ => block53\\n  | 54,_ => block54\\n  | 55,_ => \
+block55\\n  | 56,_ => block56\\n  | 57,_ => block57\\n  | 58,_ => block58\\n  \
+| 59,_ => block59\\n  | 60,_ => block60\\n  | 61,_ => block61\\n  | 62,_ => \
+block62\\n  | 63,_ => block63\\n  | 64,_ => block64\\n  | 65,_ => block65\\n  \
+| 66,_ => block66\\n  | 67,_ => block67\\n  | 68,_ => block68\\n  | 69,_ => \
+block69\\n  | 70,_ => block70\\n  | 71,_ => block71\\n  | 72,_ => block72\\n  \
+| 73,_ => block73\\n  | 74,_ => block74\\n  | 75,_ => block75\\n  | 76,_ => \
+block76\\n  | 77,_ => block77\\n  | 78,_ => block78\\n  | 79,_ => block79\\n  \
+| 80,_ => block80\\n  | 81,_ => block81\\n  | 82,_ => block82\\n  | 83,_ => \
+block83\\n  | 84,_ => block84\\n  | 85,_ => block85\\n  | 86,_ => block86\\n  \
+| 87,_ => block87\\n  | 88,_ => block88\\n  | 89,_ => block89\\n  | 90,_ => \
+block90\\n  | 91,_ => block91\\n  | 92,_ => block92\\n  | 93,_ => block93\\n  \
+| 94,_ => block94\\n  | 95,_ => block95\\n  | 96,_ => block96\\n  | 97,_ => \
+block97\\n  | 98,_ => block98\\n  | 99,_ => block99\\n  | 100,_ => \
+block100\\n  | 101,_ => block101\\n  | 102,_ => block102\\n  | 103,_ => \
+block103\\n  | 104,_ => block104\\n  | 105,_ => block105\\n  | 106,_ => \
+block106\\n  | 107,_ => block107\\n  | 108,_ => block108\\n  | 109,_ => \
+block109\\n  | 110,_ => block110\\n  | 111,_ => block111\\n  | 112,_ => \
+block112\\n  | 113,_ => block113\\n  | 114,_ => block114\\n  | 115,_ => \
+block115\\n  | 116,_ => block116\\n  | 117,_ => block117\\n  | 118,_ => \
+block118\\n  | 119,_ => block119\\n  | 120,_ => block120\\n  | 121,_ => \
+block121\\n  | 122,_ => block122\\n  | 123,_ => block123\\n  | 124,_ => \
+block124\\n  | 125,_ => block125\\n  | 126,_ => block126\\n  | 127,_ => \
+block127\\n  | 128,_ => block128\\n  | 129,_ => block129\\n  | 130,_ => \
+block130\\n  | 131,_ => block131\\n  | 132,_ => block132\\n  | 133,_ => \
+block133\\n  | 134,_ => block134\\n  | 135,_ => block135\\n  | 136,_ => \
+block136\\n  | 137,_ => block137\\n  | 138,_ => block138\\n  | 139,_ => \
+block139\\n  | 140,_ => block140\\n  | 141,_ => block141\\n  | 142,_ => \
+block142\\n  | 143,_ => block143\\n  | 144,_ => block144\\n  | 145,_ => \
+block145\\n  | 146,_ => block146\\n  | 147,_ => block147\\n  | 148,_ => \
+block148\\n  | 149,_ => block149\\n  | 150,_ => block150\\n  | 151,_ => \
+block151\\n  | 152,_ => block152\\n  | 153,_ => block153\\n  | 154,_ => \
+block154\\n  | 155,_ => block155\\n  | 156,_ => block156\\n  | 157,_ => \
+block157\\n  | 158,_ => block158\\n  | 159,_ => block159\\n  | 160,_ => \
+block160\\n  | 161,_ => block161\\n  | 162,_ => block162\\n  | 163,_ => \
+block163\\n  | 164,_ => block164\\n  | 165,_ => block165\\n  | 166,_ => \
+block166\\n  | 167,_ => block167\\n  | 168,_ => block168\\n  | 169,_ => \
+block169\\n  | 170,_ => block170\\n  | 171,_ => block171\\n  | 172,_ => \
+block172\\n  | 173,_ => block173\\n  | 174,_ => block174\\n  | 175,_ => \
+block175\\n  | 176,_ => block176\\n  | 177,_ => block177\\n  | 178,_ => \
+block178\\n  | 179,_ => block179\\n  | 180,_ => block180\\n  | 181,_ => \
+block181\\n  | 182,_ => block182\\n  | 183,_ => block183\\n  | 184,_ => \
+block184\\n  | 185,_ => block185\\n  | 186,_ => block186\\n  | 187,_ => \
+block187\\n  | 188,_ => block188\\n  | 189,_ => block189\\n  | 190,_ => \
+block190\\n  | 191,_ => block191\\n  | 192,_ => block192\\n  | 193,_ => \
+block193\\n  | 194,_ => block194\\n  | 195,_ => block195\\n  | 196,_ => \
+block196\\n  | 197,_ => block197\\n  | 198,_ => block198\\n  | 199,_ => \
+block199\\n  | 200,_ => block200\\n  | 201,_ => block201\\n  | 202,_ => \
+block202\\n  | 203,_ => block203\\n  | 204,_ => block204\\n  | 205,_ => \
+block205\\n  | 206,_ => block206\\n  | 207,_ => block207\\n  | 208,_ => \
+block208\\n  | 209,_ => block209\\n  | 210,_ => block210\\n  | 211,_ => \
+block211\\n  | 212,_ => block212\\n  | 213,_ => block213\\n  | 214,_ => \
+block214\\n  | 215,_ => block215\\n  | 216,_ => block216\\n  | 217,_ => \
+block217\\n  | 218,_ => block218\\n  | 219,_ => block219\\n  | 220,_ => \
+block220\\n  | 221,_ => block221\\n  | 222,_ => block222\\n  | 223,_ => \
+block223\\n  | 224,_ => block224\\n  | 225,_ => block225\\n  | 226,_ => \
+block226\\n  | 227,_ => block227\\n  | 228,_ => block228\\n  | 229,_ => \
+block229\\n  | 230,_ => block230\\n  | 231,_ => block231\\n  | 232,_ => \
+block232\\n  | 233,_ => block233\\n  | 234,_ => block234\\n  | 235,_ => \
+block235\\n  | 236,_ => block236\\n  | 237,_ => block237\\n  | 238,_ => \
+block238\\n  | 239,_ => block239\\n  | 240,_ => block240\\n  | 241,_ => \
+block241\\n  | 242,_ => block242\\n  | 243,_ => block243\\n  | 244,_ => \
+block244\\n  | 245,_ => block245\\n  | 246,_ => block246\\n  | 247,_ => \
+block247\\n  | 248,_ => block248\\n  | 249,_ => block249\\n  | 250,_ => \
+block250\\n  | 251,_ => block251\\n  | 252,_ => block252\\n  | 253,_ => \
+block253\\n  | 254,_ => block254\\n  | 255,_ => block255\\n  | n+256,h => by \
+omega\\n\\ntheorem good_all (q : Nat) (hq : q<262144) : Good q := by\\n  have \
+hb := all_blocks (q/1024) (by omega)\\n  have he := (List.all_eq_true.mp hb) \
+(q%1024) (List.mem_range.mpr (Nat.mod_lt _ (by decide)))\\n  have hh : \
+1024*(q/1024)+q%1024=q := by omega\\n  rw [hh] at he\\n  exact \
+of_decide_eq_true he\\n\\ntheorem entry : wall (white 146)=true := by \
+decide\\n\\nend Rule30Submission.DrivenWall\\n\\n/-!\\n# Eventual spacings \
+three or five in the empty-right driven gate\\n\\nThis is a certified forward \
+invariant of the driven right half, not a proof\\nthat its reconstructed left \
+row is infinite. In particular it does not prove\\n`CQ01Empty`, `CQ01`, \
+`Q01`, or any prize problem.\\n-/\\n\\n\\n\\nnamespace \
+Rule30Submission.EmptyGate\\n\\nopen Rule30Submission.Driven \
+Rule30Submission.DrivenWall\\nopen Rule30PeriodTwoSideways \
+Rule30Submission.Spacing\\n\\ntheorem wall_trim (a : Nat) : wall (a % \
+2^18)=wall a := by\\n  unfold wall\\n  rw [Nat.mod_mod_of_dvd a (by decide : \
+65536 \[Divides] 2^18)]\\n\\n/-- The two unseen right cells range over every \
+possibility in `good_all`. -/\\ntheorem wall_step (a : Nat) (ha : wall \
+a=true) : Observe a \[And] wall (double a)=true := by\\n  have ht : wall (a % \
+262144)=true := by\\n    change wall (a % 2^18)=true\\n    rw [wall_trim]\\n  \
+  exact ha\\n  have hg := good_all (a%262144) (Nat.mod_lt _ (by decide)) \
+ht\\n  refine \:27e8(observe_trim a).mp hg.1,?_\:27e9\\n  have he : wall \
+(double (a % 2^18))=wall (double a) := by\\n    unfold wall\\n    rw [\
+\[LeftArrow] double_prefix a 16]\\n  rw [he] at hg\\n  exact \
+hg.2\\n\\ntheorem white_wall : \[ForAll] n, wall (white (146+n))=true\\n  | 0 \
+=> entry\\n  | n+1 => by\\n      rw [show 146+(n+1)=(146+n)+1 by omega,white]\
+\\n      exact (wall_step _ (white_wall n)).2\\n\\ndef gate (r : Nat) : Bool \
+:= u empty (146+r)\\n\\n/-- Every six-cycle window obeys the exact gate \
+restrictions, at all later times. -/\\ntheorem empty_windows (r : Nat) : \
+Window gate r := by\\n  have ho := (wall_step _ (white_wall r)).1\\n  simpa \
+only [Observe,Window,gate,Nat.zero_add,Nat.add_zero,iterate_white,white_gate,\
+Nat.add_assoc] using ho\\n\\n/-- Black gate positions are never separated by \
+one or two cycles. -/\\ntheorem empty_spaced : Spaced gate := by\\n  intro \
+r\\n  exact \:27e8(empty_windows r).1,(empty_windows r).2.1\:27e9\\n\\n/-- \
+After a black observation, the next black observation is exactly three or \
+five cycles later. -/\\ntheorem empty_next_gap (r : Nat) (hr : gate r=true) :\
+\\n    (gate (r+3)=true \[And] gate (r+4)=false \[And] gate (r+5)=false) \
+\[Or]\\n    (gate (r+3)=false \[And] gate (r+4)=false \[And] gate (r+5)=true) \
+:=\\n  (empty_windows r).2.2.1 hr\\n\\ntheorem empty_no_six_white (r : Nat) :\
+\\n    (gate r || gate (r+1) || gate (r+2) || gate (r+3) || gate (r+4) || \
+gate (r+5))=true :=\\n  (empty_windows r).2.2.2\\n\\ntheorem \
+empty_black_after (r : Nat) : \[Exists] s, r\[LessEqual]s \[And] gate s=true \
+:= by\\n  have h := empty_no_six_white r\\n  simp only [Bool.or_eq_true] at h\
+\\n  rcases h with ((((ha | hb) | hc) | hd) | he) | hf\\n  \[CenterDot] exact \
+\:27e8r,Nat.le_refl _,ha\:27e9\\n  \[CenterDot] exact \:27e8r+1,by omega,hb\
+\:27e9\\n  \[CenterDot] exact \:27e8r+2,by omega,hc\:27e9\\n  \[CenterDot] \
+exact \:27e8r+3,by omega,hd\:27e9\\n  \[CenterDot] exact \:27e8r+4,by \
+omega,he\:27e9\\n  \[CenterDot] exact \:27e8r+5,by omega,hf\:27e9\\n\\n/-- \
+The previously formalized translation applies once to this actual driven \
+gate. -/\\ntheorem empty_reconstruction_translate (m t : Nat) :\\n    \
+Rule30ZeroBoundary.recon (boundary gate) (m+9) t =\\n      \
+Rule30ZeroBoundary.recon (boundary (transform gate)) (m+1) t :=\\n  \
+reconstruction_translate gate empty_spaced m t\\n\\n/-- The one-step \
+reconstruction transform still cannot be iterated on this actual driven gate. \
+-/\\ntheorem transformed_empty_not_spaced : \[Not] Spaced (transform gate) := \
+by\\n  intro h\\n  have hz := (transform_spaced_iff gate empty_spaced).mp \
+h\\n  have hw := empty_no_six_white 4\\n  rw [hz 0,hz 1,hz 2,hz 3,hz 4,hz 5] \
+at hw\\n  contradiction\\n\\nend Rule30Submission.EmptyGate\\n\>\"", ",", 
+     "\n", "  ", 
      RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}], ",", 
      " ", 
      RowBox[{"\"\<IncludeInternal\>\"", " ", "->", " ", "True"}]}], "]"}]}], 
@@ -755,7 +1429,7 @@ Bool.noConfusion hb\\n\\nend Rule30Submission.Gap\\n\>\"", ",", "\n", "  ",
     "[", "\"\<KernelCheck\>\"", "]"}]}], 
   ";"}], "\n", "rule30KernelCheck"}], "Input",
  CellLabel->"In[3]:= ",
- CellID->506665461,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
+ CellID->1435697913,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -791,14 +1465,14 @@ Cell[BoxData[
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 73 declarations of \
-LeanLinkTmp33396158764265443123x314511.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 424 declarations of \
+LeanLinkTmp33396184375944630536x139800.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396158764265443123x314511\"", 
+                 "\"LeanLinkTmp33396184375944630536x139800\"", 
                   "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
@@ -838,20 +1512,20 @@ LeanLinkTmp33396158764265443123x314511.\"", "SummaryItem"]}]}, {
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 73 declarations of \
-LeanLinkTmp33396158764265443123x314511.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 424 declarations of \
+LeanLinkTmp33396184375944630536x139800.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396158764265443123x314511\"", 
+                 "\"LeanLinkTmp33396184375944630536x139800\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["73", "SummaryItem"]}]}, {
+                 TagBox["424", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
@@ -876,14 +1550,14 @@ LeanLinkTmp33396158764265443123x314511.\"", "SummaryItem"]}]}, {
   Success[
   "KernelChecked", <|
    "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
-    "MessageParameters" -> {73, "LeanLinkTmp33396158764265443123x314511"}, 
-    "Module" -> "LeanLinkTmp33396158764265443123x314511", "Declarations" -> 
-    73|>],
+    "MessageParameters" -> {424, "LeanLinkTmp33396184375944630536x139800"}, 
+    "Module" -> "LeanLinkTmp33396184375944630536x139800", "Declarations" -> 
+    424|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellLabel->"Out[3]= ",
- CellID->855724595,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"]
+ CellID->1033213401,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -895,8 +1569,11 @@ Cell[BoxData[{
     RowBox[{"\"\<Rule30Submission.Spacing.reconstruction_translate\>\"", ",", 
      " ", "\"\<Rule30Submission.Spacing.transform_spaced_iff\>\"", ",", 
      " ", "\"\<Rule30Submission.Spacing.second_translation_fails\>\"", ",", 
-     " ", "\"\<Rule30Submission.Gap.no_uniform_gap_bound_sixteen\>\""}], 
-    "}"}]}], ";"}], "\n", 
+     " ", "\"\<Rule30Submission.Gap.no_uniform_gap_bound_sixteen\>\"", ",", 
+     " ", "\"\<Rule30Submission.EmptyGate.empty_spaced\>\"", ",", 
+     " ", "\"\<Rule30Submission.EmptyGate.empty_next_gap\>\"", ",", 
+     " ", "\"\<Rule30Submission.EmptyGate.transformed_empty_not_spaced\>\""}],
+     "}"}]}], ";"}], "\n", 
  RowBox[{"Table", "[", 
   RowBox[{
    RowBox[{"<|", 
@@ -914,7 +1591,7 @@ Cell[BoxData[{
     RowBox[{"name", ",", " ", "renormalizationHeadlines"}], "}"}]}], 
   "]"}]}], "Input",
  CellLabel->"In[4]:= ",
- CellID->428691732,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
+ CellID->1274972605,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -955,9 +1632,37 @@ Cell[BoxData[
      RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.EmptyGate.empty_spaced\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.EmptyGate.empty_next_gap\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", "\<\"Rule30Submission.EmptyGate.transformed_empty_not_spaced\
+\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
     "\[RightAssociation]"}]}], "}"}]], "Output",
  CellLabel->"Out[4]= ",
- CellID->1641250213,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"]
+ CellID->332869178,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -967,16 +1672,16 @@ these partial claims. The universal sixteen-cell bound is negated directly in \
  Cell[BoxData[
   RowBox[{"no_uniform", "_gap", "_bound", "_sixteen"}]], "InlineFormula",
   FontSize->0.9 Inherited,ExpressionUUID->
-  "76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+  "3bf5a20e-c541-e06e-698a-446becf5b2b4"],
  ". A passing partial headline check does not establish an official prize \
 target, and human review remains separate."
 }], "Text",
- CellID->67888809,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"]
+ CellID->1967685850,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"]
 },
 LightDark->"Light",
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"
+ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"
 ]
 (* End of Notebook Content *)
 
@@ -989,58 +1694,66 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903",
+Cell[560, 20, 170, 3, 70, "Title",ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02",
  CellID->874461601],
-Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4",
+Cell[730, 25, 138, 1, 70, "Author",ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9",
  CellID->36768919],
-Cell[874, 28, 518, 8, 70, "Abstract",ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e",
+Cell[870, 28, 577, 8, 70, "Abstract",ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6",
  CellID->1699946459],
-Cell[1387, 38, 112, 1, 70, "Section",ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3",
+Cell[1442, 38, 112, 1, 70, "Section",ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd",
  CellID->1535504786],
-Cell[1501, 41, 426, 7, 70, "Text",ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02",
+Cell[1556, 41, 572, 9, 70, "Text",ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8",
  CellID->1208482393],
-Cell[1923, 50, 750, 14, 70, "Text",ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9",
+Cell[2122, 52, 750, 14, 70, "Text",ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5",
  CellID->28909615],
-Cell[2662, 66, 134, 1, 70, "Section",ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6",
+Cell[2861, 68, 134, 1, 70, "Section",ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0",
  CellID->193832008],
-Cell[2798, 69, 324, 5, 70, "Text",ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd",
+Cell[2997, 71, 324, 5, 70, "Text",ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d",
  CellID->684317082],
-Cell[3120, 76, 134, 1, 70, "Text",ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8",
+Cell[3319, 78, 134, 1, 70, "Text",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
  CellID->528485616],
-Cell[3256, 79, 386, 6, 70, "Text",ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5",
+Cell[3455, 81, 386, 6, 70, "Text",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
  CellID->1392207227],
-Cell[3639, 87, 126, 1, 70, "Section",ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0",
+Cell[3838, 89, 122, 1, 70, "Section",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
  CellID->705466992],
-Cell[3767, 90, 475, 7, 70, "Text",ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d",
+Cell[3962, 92, 739, 11, 70, "Text",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
  CellID->1350516518],
-Cell[CellGroupData[{
-Cell[4260, 101, 16040, 376, 70, "Input",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
- CellID->1384872354],
-Cell[19927, 479, 2308, 45, 70, "Output",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
- CellID->442542230]
-}, Open  ]],
-Cell[22205, 527, 382, 6, 70, "Text",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
+Cell[4693, 105, 383, 6, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+ CellID->907546795],
+Cell[5073, 113, 445, 7, 70, "Text",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
  CellID->814772321],
-Cell[22584, 535, 145, 1, 70, "Section",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
+Cell[5514, 122, 127, 1, 70, "Section",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
  CellID->1054628905],
-Cell[22731, 538, 347, 6, 70, "Text",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+Cell[5643, 125, 475, 7, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
  CellID->2043779557],
-Cell[23075, 546, 347, 8, 70, "Input",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
- CellID->17830494],
 Cell[CellGroupData[{
-Cell[23439, 558, 14525, 199, 70, "Input",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
- CellID->506665461],
-Cell[37768, 759, 6017, 126, 70, "Output",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
- CellID->855724595]
+Cell[6136, 136, 16039, 376, 70, "Input",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+ CellID->752027822],
+Cell[21802, 514, 2309, 45, 70, "Output",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+ CellID->1824396994]
+}, Open  ]],
+Cell[24081, 562, 383, 6, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+ CellID->1589986527],
+Cell[24461, 570, 144, 1, 70, "Section",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+ CellID->943101875],
+Cell[24607, 573, 345, 6, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+ CellID->67888809],
+Cell[24949, 581, 349, 8, 70, "Input",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+ CellID->1432876021],
+Cell[CellGroupData[{
+Cell[25315, 593, 63770, 838, 70, "Input",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+ CellID->1435697913],
+Cell[88250, 1433, 6023, 126, 70, "Output",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+ CellID->1033213401]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43696, 890, 1143, 26, 70, "Input",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
- CellID->428691732],
-Cell[44816, 918, 1751, 41, 70, "Output",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
- CellID->1641250213]
+Cell[94184, 1564, 1366, 29, 70, "Input",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+ CellID->1274972605],
+Cell[95524, 1595, 2986, 69, 70, "Output",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+ CellID->332869178]
 }, Open  ]],
-Cell[46541, 962, 570, 11, 70, "Text",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
- CellID->67888809]
+Cell[98456, 1667, 572, 11, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+ CellID->1967685850]
 }
 ]
 *)

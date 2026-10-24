@@ -1,15 +1,33 @@
-# Reconstruction identity and limits of its iteration
+# Empty-right gate spacing and limits of reconstruction iteration
 
 **No prize problem or eventual period two is excluded here.** This contribution
-formalizes an unbounded reconstruction identity, states its exact iteration
-condition, and gives two checked counterexamples to stronger extrapolations.
+proves an all-time spacing property of the empty-right driven gate, formalizes
+an unbounded reconstruction identity, and identifies its exact iteration limit.
+
+Let `u(s)` be position one at physical time `2s+1` of the alternating-driven
+right half starting entirely white, as in `Rule30PeriodTwoSideways.u empty`.
+For `G(r)=u(146+r)`, Lean proves that black observations have exact successive
+spacings **three or five**. No six-cycle gate window is entirely white.
+
+The proof uses a 16-cell forward invariant with 13,937 states. It checks all
+262,144 eighteen-bit cases, including every value of the two unseen right
+cells, for both closure and the required gate observations. The actual orbit
+enters at white cycle 146, physical time 293, with prefix 49415. An induction
+then covers every future time. The packed engine is proved equal to the kit's
+driven evolution; the program that searched for the invariant is untrusted.
+
+This is a property of the actual empty-right driven gate. **It does not prove
+`CQ01Empty`: infinitely many black gate observations do not establish infinitely
+many black cells in the reconstructed initial left row.** The transformed
+actual gate is provably not spaced, so the eight-column identity below still
+cannot be iterated by reusing its spacing hypothesis.
 
 Let `G : Nat → Bool`, and reconstruct leftwards from the white wall and the
 boundary history `!G(0),1,!G(1),1,...`. Write
 `D G(r) = G(r+2) xor G(r+4)`. A gate is *spaced* when no two black cells have
 distance one or two.
 
-The three core-only modules prove:
+The six core-only modules also prove:
 
 - **Exact translation.** For a spaced gate, at every depth `m≥1` and every
   time `t`, `recon b_G (m+8) t = recon b_(D G) m t`. An initial support bound
@@ -32,7 +50,7 @@ light-cone bound. The certificate uses ordinary kernel evaluation. There are
 no custom elaborators, external decision procedures or added axioms.
 
 These results do not rule out other renormalizations or a larger gap bound.
-No finite driven-right realization of either example is asserted. In
+No finite driven-right realization of either periodic example is asserted. In
 particular, a periodic boundary gate is not a counterexample to Problem 1.
 
 The one-step identity follows the informal identity in
@@ -45,14 +63,15 @@ advertised in the prose, which is not used as a premise here.
 
 Credit for the informal one-step identity belongs to the cited morpholib work.
 The Lean formalization, support transfer, preservation criterion, finite-cone
-engine and counterexamples here were developed by Troy Lowry with OpenAI
+engines, driven-gate invariant and counterexamples here were developed by Troy Lowry with OpenAI
 Codex. No claim of literature priority is made.
 
-All **73 generated constants** were replayed by the unchanged checker in the
+All **424 generated constants** were replayed by the unchanged checker in the
 working catalog and the pinned reference kit
 `cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554`, with standard axioms only:
 [spacing reference check](spacing-pinned-verification.json),
-[packed engine and gap reference check](gap-pinned-verification.json).
+[packed engine and gap reference check](gap-pinned-verification.json),
+[driven engine, all certificate leaves and infinite induction](driven-wall-pinned-verification.json).
 The reference copies remove only module/export wrappers; proof bodies are
 unchanged. The clean contribution's build and replay are recorded in
 `catalog-verification.json`. This is independent local verification, not a
@@ -62,6 +81,10 @@ The independent Wolfram checks compare 12,800 reconstructed cells and
 reproduce both counterexamples:
 [translation check](wolfram-spacing-probe.json),
 [seventeen-cell gap](wolfram-spacing-gap-probe.json).
+An additional [Wolfram check](wolfram-driven-wall-check.json) checks all 55,748
+wall transitions, every observation, 256 independent vector-update controls,
+and the entry time and prefix. This finite computation supports the certificate;
+the unbounded statement is the Lean induction.
 
 Reproduce the clean catalog check with Lean 4.35.0 and Python's `psutil`:
 
@@ -77,10 +100,13 @@ are distinguished from the all-time Lean statements throughout.
 
 The [evaluated notebook](renormalization-essay.nb) embeds the exact
 [standalone source](Rule30RenormalizationStandalone.lean).
-The unchanged CLI checker and LeanLink each replayed all 73 declarations;
+The unchanged CLI checker and LeanLink each replayed all 424 declarations;
 the saved notebook has zero message cells and its source round-trip matches.
 See [CLI verification](standalone-verification.json) and
 [notebook verification](renormalization-essay.nb.verification.json).
+The [reading export](renormalization-essay-evaluated.md) was inspected through
+the notebook reader; that display abbreviates large cells, while the notebook
+and standalone file retain the complete exact source.
 
 It is prepared for human review and **has not been submitted to the prize
 API**. New submission consent is still required. To regenerate the essay,
@@ -90,3 +116,9 @@ The builder disables conversion caching, inspects the saved notebook and never
 submits anything. `IncludeInternal -> True` exposes ordinary theorem names
 containing `.rec`, which LeanLink's default display filter otherwise hides;
 it does not change the kernel check.
+
+`generate_driven_wall.py` reproduces the untrusted wall search with NumPy and
+emits the same checked source. Ordinary catalog builds and kernel replay do not
+depend on Python, NumPy or the generator. `verify_standalone.py --project
+/path/to/pinned-kit --lake /path/to/lake` checks the exact essay source without
+generating native C artifacts.

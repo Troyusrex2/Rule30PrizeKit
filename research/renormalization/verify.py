@@ -1,4 +1,4 @@
-"""Build the core catalog and replay every declaration in all three new modules."""
+"""Build the core catalog and replay every declaration in all six new modules."""
 import argparse
 import hashlib
 import json
@@ -18,6 +18,10 @@ TARGETS = {
     'Rule30PackedReconstructionResearch': ['packed_sound'],
     'Rule30SpacingGapCounterexampleResearch': ['gate31_gaps', 'gate31_spaced',
         'seventeen_white', 'no_uniform_gap_bound_sixteen'],
+    'Rule30DrivenPrefixResearch': ['packed_sound', 'double_prefix', 'iterate_mod_bit'],
+    'Rule30Certificates.DrivenEmptyWall': ['good_all', 'entry'],
+    'Rule30EmptyGateSpacingResearch': ['empty_windows', 'empty_spaced', 'empty_next_gap',
+        'empty_black_after', 'empty_reconstruction_translate', 'transformed_empty_not_spaced'],
 }
 
 
@@ -65,7 +69,9 @@ def main():
     evidence = HERE / 'evidence'
     evidence.mkdir(exist_ok=True)
     report = {'verdict': 'running', 'full_problem_claim': False,
-              'period_two_excluded': False, 'finite_right_realizability_claim': False,
+              'period_two_excluded': False, 'CQ01Empty_proved': False,
+              'example_gate31_finite_right_realizability_claim': False,
+              'empty_right_gate_spacing_proved': True,
               'checker_modified': False, 'modules': []}
     target = HERE / 'catalog-verification.json'
     target.write_text(json.dumps(report)+'\n', encoding='utf-8', newline='\n')
@@ -73,7 +79,8 @@ def main():
     assert (ROOT/'Check.lean').read_bytes().replace(b'\r\n',b'\n') == expected
     root = (ROOT/'lean/Ruliology.lean').read_text(encoding='utf-8')
     for stem in TARGETS:
-        assert 'public import '+PREFIX+stem in root
+        if not stem.startswith('Rule30Certificates.'):
+            assert 'public import '+PREFIX+stem in root
     report['core_build_seconds'] = run([args.lake, 'build', 'Ruliology'], ROOT/'lean', evidence/'core-build.log')
     report['standalone_core_catalog_build'] = True
     for stem, headlines in TARGETS.items():
@@ -88,7 +95,7 @@ def main():
                            if s.startswith('{')][-1])
         assert data['verdict']=='pass' and data['replay']['ok'] and not data['newAxioms']
         assert all(h['ok'] for h in data['headlines'])
-        source = ROOT/'lean/Ruliology/CellularAutomata'/(stem+'.lean')
+        source = ROOT/'lean/Ruliology/CellularAutomata'/Path(stem.replace('.','/')).with_suffix('.lean')
         report['modules'].append({'module':module,
             'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(), 'check':data})
         target.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')

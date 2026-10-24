@@ -55,6 +55,8 @@ public import Ruliology.CellularAutomata.Rule30WhiteEnd
 public import Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch
 public import Ruliology.CellularAutomata.Rule30PackedReconstructionResearch
 public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexampleResearch
+public import Ruliology.CellularAutomata.Rule30DrivenPrefixResearch
+public import Ruliology.CellularAutomata.Rule30EmptyGateSpacingResearch
 
 /-!
 # Rule 30 Prize: Lean snapshot
