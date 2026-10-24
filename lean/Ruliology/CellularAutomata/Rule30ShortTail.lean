@@ -15,6 +15,7 @@ Rotating white prefixes and suffixes gives every binary tail of length at most f
 namespace Ruliology.CellularAutomata.Rule30ShortTail
 open Rule30Jen Rule30Realization Rule30StripCertificates Rule30WhitePadding
 open Rule30WordRotation
+open Rule30Certificates.WhitePaddingFamilies
 
 theorem certificateF (r : Nat) (hr : 21 ≤ r) :
     stripCert (List.replicate r false ++ CheapTails.tailF) 8 2 = true := by
