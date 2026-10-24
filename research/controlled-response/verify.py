@@ -1,4 +1,4 @@
-"""Build the standalone core catalog serially, then fully replay all four modules."""
+"""Build the standalone core catalog serially, then fully replay all six modules."""
 import argparse
 import hashlib
 import json
@@ -30,7 +30,13 @@ TARGETS = {
         'center_not_eventually_constant', 'right_head_not_eventually_constant',
         'finite_feedback_counterexample'],
     'Rule30ClockMaskResearch': ['no_constant_OR_at_onset','OR_not_half_period',
-        'predecessor_not_half_period','iterate_column_step','orbit_onset_not_constant_OR']}
+        'predecessor_not_half_period','iterate_column_step','orbit_onset_not_constant_OR'],
+    'Rule30FiniteClockCertificateResearch': ['covered_predecessor','covers_finite_family',
+        'finite_family_clock_detected','finite_state_clock_detected',
+        'finite_state_eventual_clock_detected','eventual_period_is_period'],
+    'Rule30FiniteClockSixteenResearch': ['pool16_checked','detection16_checked',
+        'detection16_all_head_clocks','period_detected','period8_detected','period4_detected',
+        'period2_detected','period1_detected','eventual_period_detected','period_loss_requires_infinite_tail']}
 
 
 def run(argv, cwd, log):

@@ -910,3 +910,429 @@ theorem orbit_onset_not_constant_OR (x : State) (k n : Nat)
     simpa only [Nat.add_assoc] using iterate_column_step x (k+2) t
 
 end Rule30Submission.Clocks
+
+/-!
+# Finite temporal-profile certificates for arbitrary finite spatial widths
+
+A checked pool of temporal profile pairs is closed under adjoining a column
+on the left. Starting from the finite zero tail therefore covers every finite
+width at the specified full clock. A separately checked property can propagate
+a shorter head clock to every spatial column. The clock size is explicit;
+this module does not establish an arbitrary-clock induction or a prize result.
+-/
+
+
+
+namespace Rule30Submission.FiniteClockCertificate
+
+open Rule30Submission.Response
+
+structure Node where
+  b : Nat
+  c : Nat
+  a0 : Nat
+  a1 : Nat
+deriving DecidableEq, Repr
+
+def pat (P a t : Nat) : Bool := a.testBit (t%P)
+
+def accum (u : Nat → Bool) : Nat → Bool
+  | 0 => false
+  | t+1 => xor (accum u t) (u t)
+
+def forcing (P b c t : Nat) : Bool := pat P b t || pat P c t
+
+def pairMem (pool : List Node) (b c : Nat) : Bool :=
+  pool.any fun e => decide (e.b=b ∧ e.c=c)
+
+theorem pairMem_iff (pool : List Node) (b c : Nat) :
+    pairMem pool b c=true ↔ ∃ e, e∈pool ∧ e.b=b ∧ e.c=c := by
+  simp [pairMem,List.any_eq_true]
+
+def nodeCheck (P : Nat) (pool : List Node) (e : Node) : Bool :=
+  ((List.range P).all fun t => decide (pat P e.a0 t=accum (forcing P e.b e.c) t)) &&
+  ((List.range P).all fun t => decide (pat P e.a1 t= !accum (forcing P e.b e.c) t)) &&
+  (if accum (forcing P e.b e.c) P then true
+   else pairMem pool e.a0 e.b && pairMem pool e.a1 e.b)
+
+def poolCheck (P : Nat) (pool : List Node) : Bool :=
+  pairMem pool 0 0 && pool.all (nodeCheck P pool)
+
+def Covered (P : Nat) (pool : List Node) (f g : Nat → Bool) : Prop :=
+  ∃ e, e∈pool ∧ (∀ t, f t=pat P e.b t) ∧ (∀ t, g t=pat P e.c t)
+
+theorem periodic_mod {P : Nat} {f : Nat → Bool}
+    (h : ∀ t, f (t+P)=f t) : ∀ t, f t=f (t%P) := by
+  intro t
+  have key : ∀ n r, f (r+P*n)=f r := by
+    intro n
+    induction n with
+    | zero => intro r; simp
+    | succ n ih =>
+        intro r
+        rw [show r+P*(n+1)=(r+P*n)+P by rw [Nat.mul_add,Nat.mul_one,Nat.add_assoc],h,ih]
+  simpa only [Nat.mod_add_div] using key (t/P) (t%P)
+
+theorem periodic_add_mul {P : Nat} {f : Nat → Bool}
+    (h : ∀ t, f (t+P)=f t) : ∀ n t, f (t+P*n)=f t := by
+  intro n
+  induction n with
+  | zero => intro t; simp
+  | succ n ih =>
+      intro t
+      rw [show t+P*(n+1)=(t+P*n)+P by rw [Nat.mul_add,Nat.mul_one,Nat.add_assoc],h,ih]
+
+/-- On a purely periodic sequence an eventual period already holds from time zero. -/
+theorem eventual_period_is_period (P H T : Nat) (hP : 0<P) (f : Nat → Bool)
+    (hp : ∀ t, f (t+P)=f t) (he : ∀ t, T≤t → f (t+H)=f t) :
+    ∀ t, f (t+H)=f t := by
+  have bound : ∀ n, n≤P*n := by
+    intro n
+    induction n with
+    | zero => simp
+    | succ n ih => rw [Nat.mul_succ]; omega
+  intro t
+  have h := he (t+P*T) (by have := bound T; omega)
+  rw [show t+P*T+H=(t+H)+P*T by omega,periodic_add_mul hp,periodic_add_mul hp] at h
+  exact h
+
+theorem accum_solution (f u : Nat → Bool)
+    (hf : ∀ t, f (t+1)=xor (f t) (u t)) :
+    ∀ t, f t=xor (f 0) (accum u t) := by
+  intro t
+  induction t with
+  | zero => simp [accum]
+  | succ t ih =>
+      rw [hf,accum,ih]
+      cases f 0 <;> cases accum u t <;> cases u t <;> rfl
+
+theorem accum_return_false (P : Nat) (f u : Nat → Bool)
+    (hf : ∀ t, f (t+1)=xor (f t) (u t)) (hp : f P=f 0) :
+    accum u P=false := by
+  have h := accum_solution f u hf P
+  rw [hp] at h
+  cases ha : f 0 <;> cases hb : accum u P <;> simp [ha,hb] at h ⊢
+
+theorem pat_mod (P a t : Nat) : pat P a (t%P)=pat P a t := by
+  simp [pat]
+
+theorem covered_zero (P : Nat) (pool : List Node) (h : pairMem pool 0 0=true) :
+    Covered P pool (fun _ => false) (fun _ => false) := by
+  obtain ⟨e,he,hb,hc⟩ := (pairMem_iff pool 0 0).mp h
+  refine ⟨e,he,?_,?_⟩ <;> intro t
+  · rw [hb]; simp [pat]
+  · rw [hc]; simp [pat]
+
+theorem covered_predecessor (P : Nat) (hP : 0<P) (pool : List Node)
+    (hcheck : poolCheck P pool=true) (f g h : Nat → Bool)
+    (hf : ∀ t, f (t+1)=xor (f t) (g t || h t))
+    (hp : ∀ t, f (t+P)=f t) (hcover : Covered P pool g h) :
+    Covered P pool f g := by
+  obtain ⟨e,he,hg,hh⟩ := hcover
+  have hchecks : pairMem pool 0 0=true ∧ pool.all (nodeCheck P pool)=true := by
+    simpa only [poolCheck,Bool.and_eq_true] using hcheck
+  have hall := hchecks.2
+  have hc := List.all_eq_true.mp hall e he
+  simp only [nodeCheck,Bool.and_eq_true] at hc
+  have hforce : ∀ t, f (t+1)=xor (f t) (forcing P e.b e.c t) := by
+    intro t
+    rw [hf,hg,hh]
+    rfl
+  have hret : accum (forcing P e.b e.c) P=false :=
+    accum_return_false P f _ hforce (by simpa using hp 0)
+  have hclosed : pairMem pool e.a0 e.b=true ∧ pairMem pool e.a1 e.b=true := by
+    simpa only [hret,Bool.false_eq_true,ite_false,Bool.and_eq_true] using hc.2
+  have hsol := accum_solution f _ hforce
+  cases hf0 : f 0 with
+  | false =>
+      obtain ⟨a,ha,ha0,hab⟩ := (pairMem_iff pool e.a0 e.b).mp hclosed.1
+      refine ⟨a,ha,?_,?_⟩
+      · intro t
+        rw [ha0,periodic_mod hp t,hsol,hf0]
+        have ht := List.all_eq_true.mp hc.1.1 (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))
+        have heq := of_decide_eq_true ht
+        simpa only [Bool.false_xor,pat_mod] using heq.symm
+      · intro t; rw [hab,hg]
+  | true =>
+      obtain ⟨a,ha,ha1,hab⟩ := (pairMem_iff pool e.a1 e.b).mp hclosed.2
+      refine ⟨a,ha,?_,?_⟩
+      · intro t
+        rw [ha1,periodic_mod hp t,hsol,hf0]
+        have ht := List.all_eq_true.mp hc.1.2 (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))
+        have heq := of_decide_eq_true ht
+        simpa only [Bool.true_xor,pat_mod] using heq.symm
+      · intro t; rw [hab,hg]
+
+/-- Pool closure covers every spatial width; no width bound is part of the certificate. -/
+theorem covers_finite_family (P : Nat) (hP : 0<P) (pool : List Node)
+    (hcheck : poolCheck P pool=true) (x : Nat → Nat → Bool) (W : Nat)
+    (hstep : ∀ k t, x k (t+1)=xor (x k t) (x (k+1) t || x (k+2) t))
+    (hper : ∀ k t, x k (t+P)=x k t)
+    (hzero : ∀ k, W≤k → ∀ t, x k t=false) :
+    ∀ k, Covered P pool (x k) (x (k+1)) := by
+  have descend : ∀ n k, W≤k+n → Covered P pool (x k) (x (k+1)) := by
+    intro n
+    induction n with
+    | zero =>
+        intro k hk
+        have h0 : x k=(fun _ => false) := funext (hzero k (by omega))
+        have h1 : x (k+1)=(fun _ => false) := funext (hzero (k+1) (by omega))
+        rw [h0,h1]
+        have hchecks : pairMem pool 0 0=true ∧ pool.all (nodeCheck P pool)=true := by
+          simpa only [poolCheck,Bool.and_eq_true] using hcheck
+        exact covered_zero P pool hchecks.1
+    | succ n ih =>
+        intro k hk
+        apply covered_predecessor P hP pool hcheck (x k) (x (k+1)) (x (k+2))
+          (hstep k) (hper k)
+        simpa only [Nat.add_assoc] using ih (k+1) (by omega)
+  intro k
+  exact descend W k (by omega)
+
+def periodCheck (P H a : Nat) : Bool :=
+  (List.range P).all fun t => decide (pat P a (t+H)=pat P a t)
+
+theorem periodCheck_iff (P H a : Nat) (hP : 0<P) :
+    periodCheck P H a=true ↔ ∀ t, pat P a (t+H)=pat P a t := by
+  constructor
+  · intro h t
+    have hh := List.all_eq_true.mp h (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))
+    have heq := of_decide_eq_true hh
+    simpa only [pat,Nat.add_mod,Nat.mod_mod] using heq
+  · intro h
+    apply List.all_eq_true.mpr
+    intro t ht
+    exact decide_eq_true (h t)
+
+def detectionCheck (P H : Nat) (pool : List Node) : Bool :=
+  pool.all fun e => if periodCheck P H e.b then periodCheck P H e.c else true
+
+theorem periodCheck_mod_clock (P H a : Nat) :
+    periodCheck P (H%P) a=periodCheck P H a := by
+  simp [periodCheck,pat,Nat.add_mod]
+
+theorem detectionCheck_mod_clock (P H : Nat) (pool : List Node) :
+    detectionCheck P (H%P) pool=detectionCheck P H pool := by
+  simp only [detectionCheck,periodCheck_mod_clock]
+
+theorem covered_period_propagates (P H : Nat) (hP : 0<P) (pool : List Node)
+    (hdetect : detectionCheck P H pool=true) {f g : Nat → Bool}
+    (hcover : Covered P pool f g) (hf : ∀ t, f (t+H)=f t) :
+    ∀ t, g (t+H)=g t := by
+  obtain ⟨e,he,hfcode,hgcode⟩ := hcover
+  have hb : periodCheck P H e.b=true := (periodCheck_iff P H e.b hP).mpr (by
+    intro t
+    rw [← hfcode,← hfcode,hf])
+  have hc := List.all_eq_true.mp hdetect e he
+  simp only [hb,ite_true] at hc
+  have hcp := (periodCheck_iff P H e.c hP).mp hc
+  intro t
+  rw [hgcode,hgcode,hcp]
+
+/-- A successful detection check turns one head clock into a clock for every column. -/
+theorem finite_family_clock_detected (P H : Nat) (hP : 0<P) (pool : List Node)
+    (hcheck : poolCheck P pool=true) (hdetect : detectionCheck P H pool=true)
+    (x : Nat → Nat → Bool) (W : Nat)
+    (hstep : ∀ k t, x k (t+1)=xor (x k t) (x (k+1) t || x (k+2) t))
+    (hper : ∀ k t, x k (t+P)=x k t)
+    (hzero : ∀ k, W≤k → ∀ t, x k t=false)
+    (hhead : ∀ t, x 0 (t+H)=x 0 t) : ∀ k t, x k (t+H)=x k t := by
+  have covered := covers_finite_family P hP pool hcheck x W hstep hper hzero
+  intro k
+  induction k with
+  | zero => exact hhead
+  | succ k ih => exact covered_period_propagates P H hP pool hdetect (covered k) ih
+
+theorem iterate_restart (x : State) (a : Nat) :
+    ∀ b, iterate (iterate x a) b=iterate x (a+b)
+  | 0 => rfl
+  | b+1 => by rw [iterate,iterate_restart x a b]; rfl
+
+theorem iterate_period_of_return (x : State) (P : Nat) (hp : iterate x P=x) :
+    ∀ t, iterate x (t+P)=iterate x t := by
+  intro t
+  rw [Nat.add_comm t P,← iterate_restart,hp]
+
+theorem iterate_zero_tail (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false) :
+    ∀ t k, W≤k → iterate x t k=false := by
+  intro t
+  induction t with
+  | zero => exact hx
+  | succ t ih =>
+      intro k hk
+      change xor (iterate x t k) (iterate x t (k+1) || iterate x t (k+2))=false
+      rw [ih k hk,ih (k+1) (by omega),ih (k+2) (by omega)]
+      rfl
+
+/-- Specialization to the actual triangular map, with finite support and full clock explicit. -/
+theorem finite_state_clock_detected (P H : Nat) (hP : 0<P) (pool : List Node)
+    (hcheck : poolCheck P pool=true) (hdetect : detectionCheck P H pool=true)
+    (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x P=x)
+    (hhead : ∀ t, iterate x (t+H) 0=iterate x t 0) : iterate x H=x := by
+  have hper := iterate_period_of_return x P hfull
+  have hfin := iterate_zero_tail x W hx
+  have hall := finite_family_clock_detected P H hP pool hcheck hdetect
+    (fun k t => iterate x t k) W (fun _ _ => rfl)
+    (fun k t => congrFun (hper t) k) (fun k hk t => hfin t k hk) hhead
+  funext k
+  simpa only [Nat.zero_add,iterate] using hall k 0
+
+theorem finite_state_eventual_clock_detected (P H : Nat) (hP : 0<P) (pool : List Node)
+    (hcheck : poolCheck P pool=true) (hdetect : detectionCheck P H pool=true)
+    (x : State) (W T : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x P=x)
+    (hhead : ∀ t, T≤t → iterate x (t+H) 0=iterate x t 0) : iterate x H=x := by
+  apply finite_state_clock_detected P H hP pool hcheck hdetect x W hx hfull
+  exact eventual_period_is_period P H T hP (fun t => iterate x t 0)
+    (fun t => congrFun (iterate_period_of_return x P hfull t) 0) hhead
+
+end Rule30Submission.FiniteClockCertificate
+
+/-!
+# A clock-sixteen certificate, valid at every finite spatial width
+
+This checks temporal profile closure and shorter-clock detection using the
+unchanged Lean kernel. The full clock is fixed at sixteen; no center-column
+period or arbitrary-clock theorem is asserted.
+-/
+
+
+
+namespace Rule30Submission.FiniteClockSixteen
+
+open Rule30Submission.Response Rule30Submission.FiniteClockCertificate
+
+def pool16 : List Node := [
+  Node.mk 0 0 0 65535,
+  Node.mk 65535 0 43690 21845,
+  Node.mk 43690 65535 43690 21845,
+  Node.mk 21845 65535 43690 21845,
+  Node.mk 43690 43690 52428 13107,
+  Node.mk 21845 43690 43690 21845,
+  Node.mk 43690 21845 43690 21845,
+  Node.mk 21845 21845 26214 39321,
+  Node.mk 52428 43690 46260 19275,
+  Node.mk 13107 43690 53970 11565,
+  Node.mk 26214 21845 23130 42405,
+  Node.mk 39321 21845 38550 26985,
+  Node.mk 46260 52428 43176 22359,
+  Node.mk 19275 52428 35466 30069,
+  Node.mk 53970 13107 41634 23901,
+  Node.mk 11565 13107 10794 54741,
+  Node.mk 23130 26214 21588 43947,
+  Node.mk 42405 26214 47802 17733,
+  Node.mk 38550 39321 60138 5397,
+  Node.mk 26985 39321 44718 20817,
+  Node.mk 43176 46260 55080 10455,
+  Node.mk 22359 46260 42330 23205,
+  Node.mk 35466 19275 36210 29325,
+  Node.mk 30069 19275 21930 43605,
+  Node.mk 41634 53970 41820 23715,
+  Node.mk 23901 53970 38250 27285,
+  Node.mk 10794 11565 13770 51765,
+  Node.mk 54741 11565 43350 22185,
+  Node.mk 21588 23130 27540 37995,
+  Node.mk 43947 23130 44370 21165,
+  Node.mk 47802 42405 54570 10965,
+  Node.mk 17733 42405 47430 18105,
+  Node.mk 60138 38550 43860 21675,
+  Node.mk 5397 38550 58650 6885,
+  Node.mk 44718 26985 46410 19125,
+  Node.mk 20817 26985 20910 44625,
+  Node.mk 55080 43176 21808 43727,
+  Node.mk 10455 43176 12458 53077,
+  Node.mk 42330 22359 23146 42389,
+  Node.mk 23205 22359 38234 27301,
+  Node.mk 36210 35466 2732 62803,
+  Node.mk 29325 35466 21258 44277,
+  Node.mk 21930 30069 42666 22869,
+  Node.mk 43605 30069 21926 43609,
+  Node.mk 41820 41634 15700 49835,
+  Node.mk 23715 41634 21698 43837,
+  Node.mk 38250 23901 27050 38485,
+  Node.mk 27285 23901 43670 21865,
+  Node.mk 13770 10794 54604 10931,
+  Node.mk 51765 10794 19498 46037,
+  Node.mk 43350 54741 22170 43365,
+  Node.mk 22185 54741 25942 39593,
+  Node.mk 27540 21588 43672 21863,
+  Node.mk 37995 21588 26538 38997,
+  Node.mk 44370 43947 13650 51885,
+  Node.mk 21165 43947 21194 44341,
+  Node.mk 54570 47802 21804 43731,
+  Node.mk 10965 47802 11434 54101,
+  Node.mk 47430 17733 22138 43397,
+  Node.mk 18105 17733 34134 31401,
+  Node.mk 43860 60138 19796 45739,
+  Node.mk 21675 60138 21682 43853,
+  Node.mk 58650 5397 23018 42517,
+  Node.mk 6885 5397 60070 5465,
+  Node.mk 46410 44718 10932 54603,
+  Node.mk 19125 44718 19242 46293,
+  Node.mk 20910 20817 40618 24917,
+  Node.mk 44625 20817 21918 43617]
+
+set_option maxRecDepth 10000 in
+set_option maxHeartbeats 4000000 in
+theorem pool16_checked : poolCheck 16 pool16=true := by decide +kernel
+
+set_option maxRecDepth 10000 in
+set_option maxHeartbeats 4000000 in
+theorem detection16_checked :
+    (List.range 16).all (fun H => detectionCheck 16 H pool16)=true := by decide +kernel
+
+theorem detection16_all_head_clocks (H : Nat) : detectionCheck 16 H pool16=true := by
+  have h := List.all_eq_true.mp detection16_checked (H%16)
+    (List.mem_range.mpr (Nat.mod_lt _ (by decide)))
+  simpa only [detectionCheck_mod_clock] using h
+
+/-- No finite-width orbit whose full clock divides sixteen can hide a shorter head clock. -/
+theorem period_detected (x : State) (W H : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, iterate x (t+H) 0=iterate x t 0) : iterate x H=x := by
+  exact finite_state_clock_detected 16 H (by decide) pool16 pool16_checked
+    (detection16_all_head_clocks H) x W hx hfull hhead
+
+theorem period8_detected (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, iterate x (t+8) 0=iterate x t 0) : iterate x 8=x :=
+  period_detected x W 8 hx hfull hhead
+
+theorem period4_detected (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, iterate x (t+4) 0=iterate x t 0) : iterate x 4=x :=
+  period_detected x W 4 hx hfull hhead
+
+theorem period2_detected (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, iterate x (t+2) 0=iterate x t 0) : iterate x 2=x :=
+  period_detected x W 2 hx hfull hhead
+
+theorem period1_detected (x : State) (W : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, iterate x (t+1) 0=iterate x t 0) : iterate x 1=x :=
+  period_detected x W 1 hx hfull hhead
+
+theorem eventual_period_detected (x : State) (W H T : Nat) (hx : ∀ k, W≤k → x k=false)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, T≤t → iterate x (t+H) 0=iterate x t 0) : iterate x H=x := by
+  exact finite_state_eventual_clock_detected 16 H (by decide) pool16 pool16_checked
+    (detection16_all_head_clocks H) x W T hx hfull hhead
+
+/-- A hidden shorter head clock in this full-clock range requires an infinite initial tail. -/
+theorem period_loss_requires_infinite_tail (x : State) (H T : Nat)
+    (hfull : iterate x 16=x)
+    (hhead : ∀ t, T≤t → iterate x (t+H) 0=iterate x t 0)
+    (hloss : iterate x H≠x) : ∀ W, ∃ k, W≤k ∧ x k=true := by
+  intro W
+  apply Classical.byContradiction
+  intro hnone
+  have hfin : ∀ k, W≤k → x k=false := by
+    intro k hk
+    cases hb : x k with
+    | false => rfl
+    | true => exact False.elim (hnone ⟨k,hk,hb⟩)
+  exact hloss (eventual_period_detected x W H T hfin hfull hhead)
+
+end Rule30Submission.FiniteClockSixteen

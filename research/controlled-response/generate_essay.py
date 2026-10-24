@@ -1,4 +1,4 @@
-"""Embed the complete four-module proof in a review essay; never submit it."""
+"""Embed the complete six-module proof in a review essay; never submit it."""
 import hashlib
 import json
 from pathlib import Path
@@ -9,7 +9,9 @@ ROOT = HERE.parents[1]
 modules = {'Rule30ControlledResponseResearch': 'Response',
            'Rule30PeriodicProfileCounterResearch': 'Profiles',
            'Rule30FeedbackErasureResearch': 'Feedback',
-           'Rule30ClockMaskResearch': 'Clocks'}
+           'Rule30ClockMaskResearch': 'Clocks',
+           'Rule30FiniteClockCertificateResearch': 'FiniteClockCertificate',
+           'Rule30FiniteClockSixteenResearch': 'FiniteClockSixteen'}
 parts, manifest = [], []
 for module in modules:
     path = ROOT/'lean/Ruliology/CellularAutomata'/(module+'.lean')
@@ -38,6 +40,10 @@ headlines += ['Rule30Submission.Feedback.'+h for h in [
     'white_step_erases_distinction', 'same_left_forever', 'finite_feedback_counterexample']]
 headlines += ['Rule30Submission.Clocks.'+h for h in [
     'no_constant_OR_at_onset', 'OR_not_half_period', 'predecessor_not_half_period']]
+headlines += ['Rule30Submission.FiniteClockCertificate.'+h for h in [
+    'finite_family_clock_detected', 'finite_state_eventual_clock_detected']]
+headlines += ['Rule30Submission.FiniteClockSixteen.'+h for h in [
+    'eventual_period_detected', 'period_loss_requires_infinite_tail']]
 config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
           'EssayFile': 'controlled-response-essay.md', 'Headlines': headlines}
 (HERE/'notebook-config.json').write_text(json.dumps(config, indent=2)+'\n', encoding='utf-8', newline='\n')
@@ -46,14 +52,14 @@ config = {'SourceFile': 'Rule30ControlledResponseStandalone.lean',
     'standalone_changes': 'Only module/import/export wrappers and namespaces adapted',
     'full_problem_claim': False}, indent=2)+'\n', encoding='utf-8', newline='\n')
 probes = '\n'.join((HERE/name).read_text(encoding='utf-8') for name in
-                   ['controlled-response-check.wl', 'profile-counter-check.wl', 'feedback-erasure-check.wl', 'clock-mask-check.wl'])
+                   ['controlled-response-check.wl', 'profile-counter-check.wl', 'feedback-erasure-check.wl', 'clock-mask-check.wl', 'finite-clock16-check.wl'])
 essay = '''---
 Template: ComputationalEssay
 Name: Controlled responses and finite-support observability limits in Rule 30
 Author: Troy Lowry; OpenAI Codex
 Date: 2026-10-24
 Description: Arbitrary-driver response equivalence, sound terminal rewrites, finite feedback erasure, and explicit infinite-tail counterexamples
-Abstract: Responses of a right half to every left-boundary input are characterized exactly by two observations of a triangular diagonal map. Terminal rewrites 011 to 01 and 101 to 11 preserve the complete center trace with every common initial left half. Explicit eight-periodic infinite tails show that OR alone need not recover the head and that a period-two head need not detect a full period-eight state. Finite feedback can erase an initial distinction even when the common output is not eventually constant. Finite-tail completeness and the Rule 30 Prize problems remain open.
+Abstract: Responses of a right half to every left-boundary input are characterized exactly by two observations of a triangular diagonal map. Terminal rewrites 011 to 01 and 101 to 11 preserve the complete center trace with every common initial left half. Explicit eight-periodic infinite tails show that OR alone need not recover the head and that a period-two head need not detect a full period-eight state. Finite feedback can erase an initial distinction even when the common output is not eventually constant. A checked finite-profile certificate also proves head-period detection for every finite width at full clock sixteen. Finite-tail completeness and the Rule 30 Prize problems remain open.
 Keywords: [Rule 30, controlled systems, observability, Lean, infinite tails]
 ---
 
@@ -164,6 +170,30 @@ prefix propagation, a finite-tail period-detection theorem, or center-column
 nonperiodicity. In particular, the even half-clock and full-clock premises
 must not be dropped. No literature-priority claim is made.
 
+## A fixed-clock theorem covering every finite width
+
+There is now a positive finite-tail result at full clock sixteen. For every
+finitely supported x with Q^16(x)=x, any eventual head period H is a period
+of the entire state: Q^H(x)=x. The spatial width, the transient, and H are
+arbitrary. The full-clock assumption is retained explicitly. This is a
+triangular-orbit theorem, rather than a statement about a vertical center.
+
+The proof checks a pool of 68 pairs of temporal profiles. Every pair in the
+pool has either no consistent predecessor column at this full clock, or
+both possible predecessors are again in the pool. Starting from the finite
+zero tail, induction covers every finite spatial width. A second check
+propagates a head period through every pair. All head-clock residues modulo
+sixteen are checked, and periodicity reduces every natural H to its residue.
+A purely periodic orbit turns any eventual head period into a period from
+time zero, so no transient bound is needed.
+
+The finite search that generated the pool is not trusted. The generic Lean
+checker proves the soundness of the closure and detection checks; the
+concrete checks are evaluated by the kernel. This establishes neither an
+arbitrary-full-clock induction nor a center-column prize result. The earlier
+infinite-tail period-loss example satisfies the full-clock bound and
+illustrates why the finite-support premise matters.
+
 ## Independent finite controls
 
 The first calculation compares terminal rewrites in 104 complete Rule 30
@@ -172,12 +202,14 @@ all three profile tables with built-in Rule 30 on finite causal cones. The
 third checks eight actual-feedback examples, including the all-white left
 half, at both the center and the right head through time 128. The fourth
 checks 192 qualifying clock cases among 512 finite starts and compares ten
-whole-row Q evolutions with built-in Rule 30 on slanted causal cones.
+whole-row Q evolutions with built-in Rule 30 on slanted causal cones. The
+fifth independently checks eight further cones for finite tails whose
+widths extend well beyond the clock bound.
 These controls do not replace the unbounded kernel proofs.
 
 ```wl
 '''+probes+'''
-{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[], clockMaskReport[]}
+{controlledResponseReport[], profileCounterReport[], feedbackErasureReport[], clockMaskReport[], finiteClock16Report[]}
 ```
 
 The diagram shows eight times, from top to bottom, and the first twelve cells
@@ -191,7 +223,7 @@ profileCounterDiagram[]
 
 ## Exact embedded proof and full kernel replay
 
-The source below contains all four complete catalog modules, with only imports,
+The source below contains all six complete catalog modules, with only imports,
 module/export wrappers and namespace names adapted for a standalone file.
 It imports only official core modules and uses no additional axioms or native
 decision procedures. A passing partial check does not establish an official

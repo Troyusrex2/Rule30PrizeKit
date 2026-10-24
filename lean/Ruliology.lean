@@ -56,6 +56,8 @@ public import Ruliology.CellularAutomata.Rule30ControlledResponseResearch
 public import Ruliology.CellularAutomata.Rule30PeriodicProfileCounterResearch
 public import Ruliology.CellularAutomata.Rule30FeedbackErasureResearch
 public import Ruliology.CellularAutomata.Rule30ClockMaskResearch
+public import Ruliology.CellularAutomata.Rule30FiniteClockCertificateResearch
+public import Ruliology.CellularAutomata.Rule30FiniteClockSixteenResearch
 
 /-!
 # Rule 30 Prize: Lean snapshot

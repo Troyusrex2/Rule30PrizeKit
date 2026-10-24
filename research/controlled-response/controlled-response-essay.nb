@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       160,          7]
-NotebookDataLength[    274837,       5183]
-NotebookOptionsPosition[    269918,       5083]
-NotebookOutlinePosition[    270260,       5098]
-CellTagsIndexPosition[    270217,       5095]
+NotebookDataLength[    310499,       5783]
+NotebookOptionsPosition[    305122,       5675]
+NotebookOutlinePosition[    305464,       5690]
+CellTagsIndexPosition[    305421,       5687]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,8 +33,10 @@ exactly by two observations of a triangular diagonal map. Terminal rewrites \
 initial left half. Explicit eight-periodic infinite tails show that OR alone \
 need not recover the head and that a period-two head need not detect a full \
 period-eight state. Finite feedback can erase an initial distinction even \
-when the common output is not eventually constant. Finite-tail completeness \
-and the Rule 30 Prize problems remain open.\
+when the common output is not eventually constant. A checked finite-profile \
+certificate also proves head-period detection for every finite width at full \
+clock sixteen. Finite-tail completeness and the Rule 30 Prize problems remain \
+open.\
 \>", "Abstract",
  CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
 
@@ -201,8 +203,42 @@ must not be dropped. No literature-priority claim is made.\
 \>", "Text",
  CellID->1044562475,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"],
 
-Cell["Independent finite controls", "Section",
+Cell["A fixed-clock theorem covering every finite width", "Section",
  CellID->1653200050,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+
+Cell["\<\
+There is now a positive finite-tail result at full clock sixteen. For every \
+finitely supported x with Q^16(x)=x, any eventual head period H is a period \
+of the entire state: Q^H(x)=x. The spatial width, the transient, and H are \
+arbitrary. The full-clock assumption is retained explicitly. This is a \
+triangular-orbit theorem, rather than a statement about a vertical center.\
+\>", "Text",
+ CellID->1384978530,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+
+Cell["\<\
+The proof checks a pool of 68 pairs of temporal profiles. Every pair in the \
+pool has either no consistent predecessor column at this full clock, or both \
+possible predecessors are again in the pool. Starting from the finite zero \
+tail, induction covers every finite spatial width. A second check propagates \
+a head period through every pair. All head-clock residues modulo sixteen are \
+checked, and periodicity reduces every natural H to its residue. A purely \
+periodic orbit turns any eventual head period into a period from time zero, \
+so no transient bound is needed.\
+\>", "Text",
+ CellID->519689844,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+
+Cell["\<\
+The finite search that generated the pool is not trusted. The generic Lean \
+checker proves the soundness of the closure and detection checks; the \
+concrete checks are evaluated by the kernel. This establishes neither an \
+arbitrary-full-clock induction nor a center-column prize result. The earlier \
+infinite-tail period-loss example satisfies the full-clock bound and \
+illustrates why the finite-support premise matters.\
+\>", "Text",
+ CellID->1609367578,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"],
+
+Cell["Independent finite controls", "Section",
+ CellID->1541450781,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
 
 Cell["\<\
 The first calculation compares terminal rewrites in 104 complete Rule 30 \
@@ -211,10 +247,12 @@ all three profile tables with built-in Rule 30 on finite causal cones. The \
 third checks eight actual-feedback examples, including the all-white left \
 half, at both the center and the right head through time 128. The fourth \
 checks 192 qualifying clock cases among 512 finite starts and compares ten \
-whole-row Q evolutions with built-in Rule 30 on slanted causal cones. These \
-controls do not replace the unbounded kernel proofs.\
+whole-row Q evolutions with built-in Rule 30 on slanted causal cones. The \
+fifth independently checks eight further cones for finite tails whose widths \
+extend well beyond the clock bound. These controls do not replace the \
+unbounded kernel proofs.\
 \>", "Text",
- CellID->1384978530,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+ CellID->1657269721,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
 
 Cell[CellGroupData[{
 
@@ -1009,14 +1047,184 @@ Cell[BoxData[
             ")"}]}], ",", 
           RowBox[{"\"\<Cases\>\"", "->", "cases"}]}], "|>"}]}]}], "\n", 
       "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Finite", " ", "controls", " ", "using", " ", "independent", " ", 
+      "built"}], "-", 
+     RowBox[{"in", " ", "Rule", " ", "30", " ", "causal", " ", 
+      RowBox[{"cones", "."}]}]}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "finiteClock16Report", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"finiteClock16SampleWords", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "1071292029505993517027974728227441735014801995855195223534253", ",", 
+       "3148244321913096809142", ",", "1650586719047173699865498955", ",", 
+       "9514984618039732540388573129663300909218310819", ",", 
+       "2043327387821185144477796036200412244824985496244802899", ",", 
+       "5230918112822233969863157852673055346751962870386695427400", ",", 
+       "15011998757901638", ",", 
+       "31178701596392595588345276431280704419326560916806"}], "}"}]}], ";"}],
+    "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"finiteClock16Report", "[", "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"words", "=", "finiteClock16SampleWords"}], ",", "q", ",", 
+         RowBox[{"h", "=", "32"}], ",", "cases"}], "}"}], ",", "\n", "  ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"q", "[", "x_", "]"}], " ", ":=", " ", 
+         RowBox[{"BitXor", "[", 
+          RowBox[{"x", ",", 
+           RowBox[{"BitOr", "[", 
+            RowBox[{
+             RowBox[{"BitShiftRight", "[", 
+              RowBox[{"x", ",", "1"}], "]"}], ",", 
+             RowBox[{"BitShiftRight", "[", 
+              RowBox[{"x", ",", "2"}], "]"}]}], "]"}]}], "]"}]}], ";", "\n", 
+        "  ", 
+        RowBox[{"cases", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"w", "=", 
+                RowBox[{"IntegerLength", "[", 
+                 RowBox[{"a", ",", "2"}], "]"}]}], ",", "initial", ",", "ca", 
+               ",", "iter", ",", "checks", ",", "head", ",", "hs"}], "}"}], ",",
+              "\n", "    ", 
+             RowBox[{
+              RowBox[{"initial", "=", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"ConstantArray", "[", 
+                  RowBox[{"0", ",", 
+                   RowBox[{"h", "+", "1"}]}], "]"}], ",", 
+                 RowBox[{"Reverse", "[", 
+                  RowBox[{"IntegerDigits", "[", 
+                   RowBox[{"a", ",", "2"}], "]"}], "]"}], ",", 
+                 RowBox[{"ConstantArray", "[", 
+                  RowBox[{"0", ",", 
+                   RowBox[{
+                    RowBox[{"3", "*", "h"}], "+", "1"}]}], "]"}]}], "]"}]}], ";",
+               "\n", "    ", 
+              RowBox[{"ca", "=", 
+               RowBox[{"CellularAutomaton", "[", 
+                RowBox[{"30", ",", "initial", ",", "h"}], "]"}]}], ";", 
+              RowBox[{"iter", "=", 
+               RowBox[{"NestList", "[", 
+                RowBox[{"q", ",", "a", ",", "h"}], "]"}]}], ";", "\n", "    ", 
+              RowBox[{"checks", "=", 
+               RowBox[{"Flatten", "@", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"ca", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "1"}], ",", 
+                    RowBox[{"h", "+", "2", "+", "k", "+", "t"}]}], "]"}], 
+                    "]"}], "==", 
+                   RowBox[{"BitAnd", "[", 
+                    RowBox[{
+                    RowBox[{"BitShiftRight", "[", 
+                    RowBox[{
+                    RowBox[{"iter", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"t", "+", "1"}], "]"}], "]"}], ",", "k"}], "]"}], 
+                    ",", "1"}], "]"}]}], ",", "\n", "      ", 
+                  RowBox[{"{", 
+                   RowBox[{"t", ",", "0", ",", "h"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"k", ",", "0", ",", 
+                    RowBox[{"w", "-", "1"}]}], "}"}]}], "]"}]}]}], ";", "\n", 
+              "    ", 
+              RowBox[{"head", "=", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"BitAnd", "[", 
+                  RowBox[{"#", ",", "1"}], "]"}], "&"}], " ", "/@", " ", 
+                RowBox[{"Take", "[", 
+                 RowBox[{"iter", ",", "16"}], "]"}]}]}], ";", "\n", "    ", 
+              RowBox[{"hs", "=", 
+               RowBox[{"Select", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0", ",", "15"}], "]"}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"RotateLeft", "[", 
+                    RowBox[{"head", ",", "#"}], "]"}], "===", "head"}], 
+                  "&"}]}], "]"}]}], ";", "\n", "    ", 
+              RowBox[{"<|", 
+               RowBox[{
+                RowBox[{"\"\<Width\>\"", "->", "w"}], ",", 
+                RowBox[{"\"\<FullClockReturns\>\"", "->", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"iter", "[", 
+                    RowBox[{"[", "17", "]"}], "]"}], "==", "a"}], ")"}]}], ",", 
+                RowBox[{"\"\<ScalarCellsCompared\>\"", "->", 
+                 RowBox[{"Length", "[", "checks", "]"}]}], ",", "\n", 
+                "      ", 
+                RowBox[{"\"\<BuiltinConeMatchesQ\>\"", "->", 
+                 RowBox[{"And", "@@", "checks"}]}], ",", "\n", "      ", 
+                RowBox[{"\"\<HeadClocksDetected\>\"", "->", 
+                 RowBox[{"And", "@@", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"iter", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"H", "+", "1"}], "]"}], "]"}], "==", "a"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"H", ",", "hs"}], "}"}]}], "]"}]}]}]}], 
+               "|>"}]}]}], "\n", "  ", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", "words"}], "}"}]}], "]"}]}], ";", "\n", "  ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<FiniteControlsOnly\>\"", "->", "True"}], ",", 
+          RowBox[{"\"\<LeanVerifiedByThisCalculation\>\"", "->", "False"}], ",",
+           "\n", "    ", 
+          RowBox[{"\"\<FullProblemClaim\>\"", "->", "False"}], ",", 
+          RowBox[{"\"\<BuiltinRule30Cones\>\"", "->", 
+           RowBox[{"Length", "[", "cases", "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<ScalarCellsCompared\>\"", "->", 
+           RowBox[{"Total", "[", 
+            RowBox[{"Lookup", "[", 
+             RowBox[{"cases", ",", "\"\<ScalarCellsCompared\>\""}], "]"}], 
+            "]"}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<AllPassed\>\"", "->", 
+           RowBox[{"And", "@@", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"Lookup", "[", 
+              RowBox[{"cases", ",", 
+               RowBox[{"{", 
+                
+                RowBox[{"\"\<FullClockReturns\>\"", 
+                 ",", "\"\<BuiltinConeMatchesQ\>\"", 
+                 ",", "\"\<HeadClocksDetected\>\""}], "}"}]}], "]"}], 
+             "]"}]}]}], ",", "\n", "    ", 
+          RowBox[{"\"\<Cases\>\"", "->", "cases"}]}], "|>"}]}]}], "\n", 
+      "]"}]}], ";"}], "\n", "\n", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"controlledResponseReport", "[", "]"}], ",", " ", 
      RowBox[{"profileCounterReport", "[", "]"}], ",", " ", 
      RowBox[{"feedbackErasureReport", "[", "]"}], ",", " ", 
-     RowBox[{"clockMaskReport", "[", "]"}]}], "}"}]}]}]], "Input",
+     RowBox[{"clockMaskReport", "[", "]"}], ",", " ", 
+     RowBox[{"finiteClock16Report", "[", "]"}]}], "}"}]}]}]], "Input",
  CellLabel->"In[1]:= ",
- CellID->1407158826,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+ CellID->2048061839,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -3903,9 +4111,85 @@ Cell[BoxData[
           
           RowBox[{"\<\"PredecessorNotHalfPeriodicWhenPresent\"\>", "\[Rule]", 
            "True"}]}], "\[RightAssociation]"}]}], "}"}]}]}], 
-    "\[RightAssociation]"}]}], "}"}]], "Output",
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"FiniteControlsOnly\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"LeanVerifiedByThisCalculation\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"FullProblemClaim\"\>", "\[Rule]", "False"}], ",", 
+     RowBox[{"\<\"BuiltinRule30Cones\"\>", "\[Rule]", "8"}], ",", 
+     RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "36564"}], ",", 
+     RowBox[{"\<\"AllPassed\"\>", "\[Rule]", "True"}], ",", 
+     RowBox[{"\<\"Cases\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "200"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "6600"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "72"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "2376"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "91"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "3003"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "153"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "5049"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "181"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "5973"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "192"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "6336"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "54"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "1782"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}], ",", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"Width\"\>", "\[Rule]", "165"}], ",", 
+          RowBox[{"\<\"FullClockReturns\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"ScalarCellsCompared\"\>", "\[Rule]", "5445"}], ",", 
+          RowBox[{"\<\"BuiltinConeMatchesQ\"\>", "\[Rule]", "True"}], ",", 
+          RowBox[{"\<\"HeadClocksDetected\"\>", "\[Rule]", "True"}]}], 
+         "\[RightAssociation]"}]}], "}"}]}]}], "\[RightAssociation]"}]}], 
+  "}"}]], "Output",
  CellLabel->"Out[1]= ",
- CellID->1138490425,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"]
+ CellID->1680809496,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"]
 }, Open  ]],
 
 Cell["\<\
@@ -3914,14 +4198,14 @@ of each infinite row. Black squares are black cells. The right tail repeats \
 from position four. The last panel's first column alternates while later \
 columns require eight times to repeat; the all-time claims are proved below.\
 \>", "Text",
- CellID->1609367578,ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"],
+ CellID->496109794,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"profileCounterDiagram", "[", "]"}]], "Input",
  CellLabel->"In[2]:= ",
- CellID->692927338,ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9"],
+ CellID->1897438500,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {InsetBox[
@@ -4083,20 +4367,20 @@ Cell[BoxData[
   PlotRange->{{0, 1032.}, {-260.177525, 0}},
   PlotRangePadding->Automatic]], "Output",
  CellLabel->"Out[2]= ",
- CellID->160879640,ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6"]
+ CellID->206965717,ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0"]
 }, Open  ]],
 
 Cell["Exact embedded proof and full kernel replay", "Section",
- CellID->1657269721,ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd"],
+ CellID->829388421,ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d"],
 
 Cell["\<\
-The source below contains all four complete catalog modules, with only \
+The source below contains all six complete catalog modules, with only \
 imports, module/export wrappers and namespace names adapted for a standalone \
 file. It imports only official core modules and uses no additional axioms or \
 native decision procedures. A passing partial check does not establish an \
 official prize target.\
 \>", "Text",
- CellID->1140508347,ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8"],
+ CellID->203008389,ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b"],
 
 Cell[BoxData[{
  RowBox[{
@@ -4106,7 +4390,7 @@ Cell[BoxData[{
    RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
   ";"}]}], "Input",
  CellLabel->"In[3]:= ",
- CellID->496109794,ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5"],
+ CellID->1090263105,ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f"],
 
 Cell[CellGroupData[{
 
@@ -4648,8 +4932,265 @@ iterate x t k)\\n    (fun t => iterate x t (k+1)) (fun t => iterate x t \
  (iterate_column_step x k) ?_ ?_ ha hb hc hd\\n  \[CenterDot] intro t\\n    \
 simpa only [Nat.add_assoc] using iterate_column_step x (k+1) t\\n  \
 \[CenterDot] intro t\\n    simpa only [Nat.add_assoc] using \
-iterate_column_step x (k+2) t\\n\\nend Rule30Submission.Clocks\\n\>\"", ",", 
-     "\n", "  ", 
+iterate_column_step x (k+2) t\\n\\nend Rule30Submission.Clocks\\n\\n/-!\\n# \
+Finite temporal-profile certificates for arbitrary finite spatial \
+widths\\n\\nA checked pool of temporal profile pairs is closed under \
+adjoining a column\\non the left. Starting from the finite zero tail \
+therefore covers every finite\\nwidth at the specified full clock. A \
+separately checked property can propagate\\na shorter head clock to every \
+spatial column. The clock size is explicit;\\nthis module does not establish \
+an arbitrary-clock induction or a prize result.\\n-/\\n\\n\\n\\nnamespace \
+Rule30Submission.FiniteClockCertificate\\n\\nopen \
+Rule30Submission.Response\\n\\nstructure Node where\\n  b : Nat\\n  c : \
+Nat\\n  a0 : Nat\\n  a1 : Nat\\nderiving DecidableEq, Repr\\n\\ndef pat (P a \
+t : Nat) : Bool := a.testBit (t%P)\\n\\ndef accum (u : Nat \[RightArrow] \
+Bool) : Nat \[RightArrow] Bool\\n  | 0 => false\\n  | t+1 => xor (accum u t) \
+(u t)\\n\\ndef forcing (P b c t : Nat) : Bool := pat P b t || pat P c \
+t\\n\\ndef pairMem (pool : List Node) (b c : Nat) : Bool :=\\n  pool.any fun \
+e => decide (e.b=b \[And] e.c=c)\\n\\ntheorem pairMem_iff (pool : List Node) \
+(b c : Nat) :\\n    pairMem pool b c=true \[LeftRightArrow] \[Exists] e, e\
+\[Element]pool \[And] e.b=b \[And] e.c=c := by\\n  simp \
+[pairMem,List.any_eq_true]\\n\\ndef nodeCheck (P : Nat) (pool : List Node) (e \
+: Node) : Bool :=\\n  ((List.range P).all fun t => decide (pat P e.a0 t=accum \
+(forcing P e.b e.c) t)) &&\\n  ((List.range P).all fun t => decide (pat P \
+e.a1 t= !accum (forcing P e.b e.c) t)) &&\\n  (if accum (forcing P e.b e.c) P \
+then true\\n   else pairMem pool e.a0 e.b && pairMem pool e.a1 e.b)\\n\\ndef \
+poolCheck (P : Nat) (pool : List Node) : Bool :=\\n  pairMem pool 0 0 && \
+pool.all (nodeCheck P pool)\\n\\ndef Covered (P : Nat) (pool : List Node) (f \
+g : Nat \[RightArrow] Bool) : Prop :=\\n  \[Exists] e, e\[Element]pool \[And] \
+(\[ForAll] t, f t=pat P e.b t) \[And] (\[ForAll] t, g t=pat P e.c \
+t)\\n\\ntheorem periodic_mod {P : Nat} {f : Nat \[RightArrow] Bool}\\n    (h \
+: \[ForAll] t, f (t+P)=f t) : \[ForAll] t, f t=f (t%P) := by\\n  intro t\\n  \
+have key : \[ForAll] n r, f (r+P*n)=f r := by\\n    intro n\\n    induction n \
+with\\n    | zero => intro r; simp\\n    | succ n ih =>\\n        intro r\\n  \
+      rw [show r+P*(n+1)=(r+P*n)+P by rw \
+[Nat.mul_add,Nat.mul_one,Nat.add_assoc],h,ih]\\n  simpa only \
+[Nat.mod_add_div] using key (t/P) (t%P)\\n\\ntheorem periodic_add_mul {P : \
+Nat} {f : Nat \[RightArrow] Bool}\\n    (h : \[ForAll] t, f (t+P)=f t) : \
+\[ForAll] n t, f (t+P*n)=f t := by\\n  intro n\\n  induction n with\\n  | \
+zero => intro t; simp\\n  | succ n ih =>\\n      intro t\\n      rw [show \
+t+P*(n+1)=(t+P*n)+P by rw \
+[Nat.mul_add,Nat.mul_one,Nat.add_assoc],h,ih]\\n\\n/-- On a purely periodic \
+sequence an eventual period already holds from time zero. -/\\ntheorem \
+eventual_period_is_period (P H T : Nat) (hP : 0<P) (f : Nat \[RightArrow] \
+Bool)\\n    (hp : \[ForAll] t, f (t+P)=f t) (he : \[ForAll] t, T\[LessEqual]t \
+\[RightArrow] f (t+H)=f t) :\\n    \[ForAll] t, f (t+H)=f t := by\\n  have \
+bound : \[ForAll] n, n\[LessEqual]P*n := by\\n    intro n\\n    induction n \
+with\\n    | zero => simp\\n    | succ n ih => rw [Nat.mul_succ]; omega\\n  \
+intro t\\n  have h := he (t+P*T) (by have := bound T; omega)\\n  rw [show \
+t+P*T+H=(t+H)+P*T by omega,periodic_add_mul hp,periodic_add_mul hp] at h\\n  \
+exact h\\n\\ntheorem accum_solution (f u : Nat \[RightArrow] Bool)\\n    (hf \
+: \[ForAll] t, f (t+1)=xor (f t) (u t)) :\\n    \[ForAll] t, f t=xor (f 0) \
+(accum u t) := by\\n  intro t\\n  induction t with\\n  | zero => simp [accum]\
+\\n  | succ t ih =>\\n      rw [hf,accum,ih]\\n      cases f 0 <;> cases \
+accum u t <;> cases u t <;> rfl\\n\\ntheorem accum_return_false (P : Nat) (f \
+u : Nat \[RightArrow] Bool)\\n    (hf : \[ForAll] t, f (t+1)=xor (f t) (u t)) \
+(hp : f P=f 0) :\\n    accum u P=false := by\\n  have h := accum_solution f u \
+hf P\\n  rw [hp] at h\\n  cases ha : f 0 <;> cases hb : accum u P <;> simp \
+[ha,hb] at h \[RightTee]\\n\\ntheorem pat_mod (P a t : Nat) : pat P a \
+(t%P)=pat P a t := by\\n  simp [pat]\\n\\ntheorem covered_zero (P : Nat) \
+(pool : List Node) (h : pairMem pool 0 0=true) :\\n    Covered P pool (fun _ \
+=> false) (fun _ => false) := by\\n  obtain \:27e8e,he,hb,hc\:27e9 := \
+(pairMem_iff pool 0 0).mp h\\n  refine \:27e8e,he,?_,?_\:27e9 <;> intro t\\n  \
+\[CenterDot] rw [hb]; simp [pat]\\n  \[CenterDot] rw [hc]; simp \
+[pat]\\n\\ntheorem covered_predecessor (P : Nat) (hP : 0<P) (pool : List \
+Node)\\n    (hcheck : poolCheck P pool=true) (f g h : Nat \[RightArrow] Bool)\
+\\n    (hf : \[ForAll] t, f (t+1)=xor (f t) (g t || h t))\\n    (hp : \
+\[ForAll] t, f (t+P)=f t) (hcover : Covered P pool g h) :\\n    Covered P \
+pool f g := by\\n  obtain \:27e8e,he,hg,hh\:27e9 := hcover\\n  have hchecks : \
+pairMem pool 0 0=true \[And] pool.all (nodeCheck P pool)=true := by\\n    \
+simpa only [poolCheck,Bool.and_eq_true] using hcheck\\n  have hall := \
+hchecks.2\\n  have hc := List.all_eq_true.mp hall e he\\n  simp only \
+[nodeCheck,Bool.and_eq_true] at hc\\n  have hforce : \[ForAll] t, f (t+1)=xor \
+(f t) (forcing P e.b e.c t) := by\\n    intro t\\n    rw [hf,hg,hh]\\n    rfl\
+\\n  have hret : accum (forcing P e.b e.c) P=false :=\\n    \
+accum_return_false P f _ hforce (by simpa using hp 0)\\n  have hclosed : \
+pairMem pool e.a0 e.b=true \[And] pairMem pool e.a1 e.b=true := by\\n    \
+simpa only [hret,Bool.false_eq_true,ite_false,Bool.and_eq_true] using hc.2\\n \
+ have hsol := accum_solution f _ hforce\\n  cases hf0 : f 0 with\\n  | false \
+=>\\n      obtain \:27e8a,ha,ha0,hab\:27e9 := (pairMem_iff pool e.a0 e.b).mp \
+hclosed.1\\n      refine \:27e8a,ha,?_,?_\:27e9\\n      \[CenterDot] intro \
+t\\n        rw [ha0,periodic_mod hp t,hsol,hf0]\\n        have ht := \
+List.all_eq_true.mp hc.1.1 (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))\\n    \
+    have heq := of_decide_eq_true ht\\n        simpa only \
+[Bool.false_xor,pat_mod] using heq.symm\\n      \[CenterDot] intro t; rw \
+[hab,hg]\\n  | true =>\\n      obtain \:27e8a,ha,ha1,hab\:27e9 := \
+(pairMem_iff pool e.a1 e.b).mp hclosed.2\\n      refine \
+\:27e8a,ha,?_,?_\:27e9\\n      \[CenterDot] intro t\\n        rw \
+[ha1,periodic_mod hp t,hsol,hf0]\\n        have ht := List.all_eq_true.mp \
+hc.1.2 (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))\\n        have heq := \
+of_decide_eq_true ht\\n        simpa only [Bool.true_xor,pat_mod] using \
+heq.symm\\n      \[CenterDot] intro t; rw [hab,hg]\\n\\n/-- Pool closure \
+covers every spatial width; no width bound is part of the certificate. \
+-/\\ntheorem covers_finite_family (P : Nat) (hP : 0<P) (pool : List Node)\\n  \
+  (hcheck : poolCheck P pool=true) (x : Nat \[RightArrow] Nat \[RightArrow] \
+Bool) (W : Nat)\\n    (hstep : \[ForAll] k t, x k (t+1)=xor (x k t) (x (k+1) \
+t || x (k+2) t))\\n    (hper : \[ForAll] k t, x k (t+P)=x k t)\\n    (hzero : \
+\[ForAll] k, W\[LessEqual]k \[RightArrow] \[ForAll] t, x k t=false) :\\n    \
+\[ForAll] k, Covered P pool (x k) (x (k+1)) := by\\n  have descend : \
+\[ForAll] n k, W\[LessEqual]k+n \[RightArrow] Covered P pool (x k) (x (k+1)) \
+:= by\\n    intro n\\n    induction n with\\n    | zero =>\\n        intro k \
+hk\\n        have h0 : x k=(fun _ => false) := funext (hzero k (by omega))\\n \
+       have h1 : x (k+1)=(fun _ => false) := funext (hzero (k+1) (by \
+omega))\\n        rw [h0,h1]\\n        have hchecks : pairMem pool 0 0=true \
+\[And] pool.all (nodeCheck P pool)=true := by\\n          simpa only \
+[poolCheck,Bool.and_eq_true] using hcheck\\n        exact covered_zero P pool \
+hchecks.1\\n    | succ n ih =>\\n        intro k hk\\n        apply \
+covered_predecessor P hP pool hcheck (x k) (x (k+1)) (x (k+2))\\n          \
+(hstep k) (hper k)\\n        simpa only [Nat.add_assoc] using ih (k+1) (by \
+omega)\\n  intro k\\n  exact descend W k (by omega)\\n\\ndef periodCheck (P H \
+a : Nat) : Bool :=\\n  (List.range P).all fun t => decide (pat P a (t+H)=pat \
+P a t)\\n\\ntheorem periodCheck_iff (P H a : Nat) (hP : 0<P) :\\n    \
+periodCheck P H a=true \[LeftRightArrow] \[ForAll] t, pat P a (t+H)=pat P a t \
+:= by\\n  constructor\\n  \[CenterDot] intro h t\\n    have hh := \
+List.all_eq_true.mp h (t%P) (List.mem_range.mpr (Nat.mod_lt _ hP))\\n    have \
+heq := of_decide_eq_true hh\\n    simpa only [pat,Nat.add_mod,Nat.mod_mod] \
+using heq\\n  \[CenterDot] intro h\\n    apply List.all_eq_true.mpr\\n    \
+intro t ht\\n    exact decide_eq_true (h t)\\n\\ndef detectionCheck (P H : \
+Nat) (pool : List Node) : Bool :=\\n  pool.all fun e => if periodCheck P H \
+e.b then periodCheck P H e.c else true\\n\\ntheorem periodCheck_mod_clock (P \
+H a : Nat) :\\n    periodCheck P (H%P) a=periodCheck P H a := by\\n  simp \
+[periodCheck,pat,Nat.add_mod]\\n\\ntheorem detectionCheck_mod_clock (P H : \
+Nat) (pool : List Node) :\\n    detectionCheck P (H%P) pool=detectionCheck P \
+H pool := by\\n  simp only \
+[detectionCheck,periodCheck_mod_clock]\\n\\ntheorem covered_period_propagates \
+(P H : Nat) (hP : 0<P) (pool : List Node)\\n    (hdetect : detectionCheck P H \
+pool=true) {f g : Nat \[RightArrow] Bool}\\n    (hcover : Covered P pool f g) \
+(hf : \[ForAll] t, f (t+H)=f t) :\\n    \[ForAll] t, g (t+H)=g t := by\\n  \
+obtain \:27e8e,he,hfcode,hgcode\:27e9 := hcover\\n  have hb : periodCheck P H \
+e.b=true := (periodCheck_iff P H e.b hP).mpr (by\\n    intro t\\n    rw [\
+\[LeftArrow] hfcode,\[LeftArrow] hfcode,hf])\\n  have hc := \
+List.all_eq_true.mp hdetect e he\\n  simp only [hb,ite_true] at hc\\n  have \
+hcp := (periodCheck_iff P H e.c hP).mp hc\\n  intro t\\n  rw \
+[hgcode,hgcode,hcp]\\n\\n/-- A successful detection check turns one head \
+clock into a clock for every column. -/\\ntheorem \
+finite_family_clock_detected (P H : Nat) (hP : 0<P) (pool : List Node)\\n    \
+(hcheck : poolCheck P pool=true) (hdetect : detectionCheck P H pool=true)\\n  \
+  (x : Nat \[RightArrow] Nat \[RightArrow] Bool) (W : Nat)\\n    (hstep : \
+\[ForAll] k t, x k (t+1)=xor (x k t) (x (k+1) t || x (k+2) t))\\n    (hper : \
+\[ForAll] k t, x k (t+P)=x k t)\\n    (hzero : \[ForAll] k, W\[LessEqual]k \
+\[RightArrow] \[ForAll] t, x k t=false)\\n    (hhead : \[ForAll] t, x 0 \
+(t+H)=x 0 t) : \[ForAll] k t, x k (t+H)=x k t := by\\n  have covered := \
+covers_finite_family P hP pool hcheck x W hstep hper hzero\\n  intro k\\n  \
+induction k with\\n  | zero => exact hhead\\n  | succ k ih => exact \
+covered_period_propagates P H hP pool hdetect (covered k) ih\\n\\ntheorem \
+iterate_restart (x : State) (a : Nat) :\\n    \[ForAll] b, iterate (iterate x \
+a) b=iterate x (a+b)\\n  | 0 => rfl\\n  | b+1 => by rw \
+[iterate,iterate_restart x a b]; rfl\\n\\ntheorem iterate_period_of_return (x \
+: State) (P : Nat) (hp : iterate x P=x) :\\n    \[ForAll] t, iterate x \
+(t+P)=iterate x t := by\\n  intro t\\n  rw [Nat.add_comm t P,\[LeftArrow] \
+iterate_restart,hp]\\n\\ntheorem iterate_zero_tail (x : State) (W : Nat) (hx \
+: \[ForAll] k, W\[LessEqual]k \[RightArrow] x k=false) :\\n    \[ForAll] t k, \
+W\[LessEqual]k \[RightArrow] iterate x t k=false := by\\n  intro t\\n  \
+induction t with\\n  | zero => exact hx\\n  | succ t ih =>\\n      intro k hk\
+\\n      change xor (iterate x t k) (iterate x t (k+1) || iterate x t \
+(k+2))=false\\n      rw [ih k hk,ih (k+1) (by omega),ih (k+2) (by omega)]\\n  \
+    rfl\\n\\n/-- Specialization to the actual triangular map, with finite \
+support and full clock explicit. -/\\ntheorem finite_state_clock_detected (P \
+H : Nat) (hP : 0<P) (pool : List Node)\\n    (hcheck : poolCheck P pool=true) \
+(hdetect : detectionCheck P H pool=true)\\n    (x : State) (W : Nat) (hx : \
+\[ForAll] k, W\[LessEqual]k \[RightArrow] x k=false)\\n    (hfull : iterate x \
+P=x)\\n    (hhead : \[ForAll] t, iterate x (t+H) 0=iterate x t 0) : iterate x \
+H=x := by\\n  have hper := iterate_period_of_return x P hfull\\n  have hfin \
+:= iterate_zero_tail x W hx\\n  have hall := finite_family_clock_detected P H \
+hP pool hcheck hdetect\\n    (fun k t => iterate x t k) W (fun _ _ => rfl)\\n \
+   (fun k t => congrFun (hper t) k) (fun k hk t => hfin t k hk) hhead\\n  \
+funext k\\n  simpa only [Nat.zero_add,iterate] using hall k 0\\n\\ntheorem \
+finite_state_eventual_clock_detected (P H : Nat) (hP : 0<P) (pool : List \
+Node)\\n    (hcheck : poolCheck P pool=true) (hdetect : detectionCheck P H \
+pool=true)\\n    (x : State) (W T : Nat) (hx : \[ForAll] k, W\[LessEqual]k \
+\[RightArrow] x k=false)\\n    (hfull : iterate x P=x)\\n    (hhead : \
+\[ForAll] t, T\[LessEqual]t \[RightArrow] iterate x (t+H) 0=iterate x t 0) : \
+iterate x H=x := by\\n  apply finite_state_clock_detected P H hP pool hcheck \
+hdetect x W hx hfull\\n  exact eventual_period_is_period P H T hP (fun t => \
+iterate x t 0)\\n    (fun t => congrFun (iterate_period_of_return x P hfull \
+t) 0) hhead\\n\\nend Rule30Submission.FiniteClockCertificate\\n\\n/-!\\n# A \
+clock-sixteen certificate, valid at every finite spatial width\\n\\nThis \
+checks temporal profile closure and shorter-clock detection using \
+the\\nunchanged Lean kernel. The full clock is fixed at sixteen; no \
+center-column\\nperiod or arbitrary-clock theorem is \
+asserted.\\n-/\\n\\n\\n\\nnamespace \
+Rule30Submission.FiniteClockSixteen\\n\\nopen Rule30Submission.Response \
+Rule30Submission.FiniteClockCertificate\\n\\ndef pool16 : List Node := [\\n  \
+Node.mk 0 0 0 65535,\\n  Node.mk 65535 0 43690 21845,\\n  Node.mk 43690 65535 \
+43690 21845,\\n  Node.mk 21845 65535 43690 21845,\\n  Node.mk 43690 43690 \
+52428 13107,\\n  Node.mk 21845 43690 43690 21845,\\n  Node.mk 43690 21845 \
+43690 21845,\\n  Node.mk 21845 21845 26214 39321,\\n  Node.mk 52428 43690 \
+46260 19275,\\n  Node.mk 13107 43690 53970 11565,\\n  Node.mk 26214 21845 \
+23130 42405,\\n  Node.mk 39321 21845 38550 26985,\\n  Node.mk 46260 52428 \
+43176 22359,\\n  Node.mk 19275 52428 35466 30069,\\n  Node.mk 53970 13107 \
+41634 23901,\\n  Node.mk 11565 13107 10794 54741,\\n  Node.mk 23130 26214 \
+21588 43947,\\n  Node.mk 42405 26214 47802 17733,\\n  Node.mk 38550 39321 \
+60138 5397,\\n  Node.mk 26985 39321 44718 20817,\\n  Node.mk 43176 46260 \
+55080 10455,\\n  Node.mk 22359 46260 42330 23205,\\n  Node.mk 35466 19275 \
+36210 29325,\\n  Node.mk 30069 19275 21930 43605,\\n  Node.mk 41634 53970 \
+41820 23715,\\n  Node.mk 23901 53970 38250 27285,\\n  Node.mk 10794 11565 \
+13770 51765,\\n  Node.mk 54741 11565 43350 22185,\\n  Node.mk 21588 23130 \
+27540 37995,\\n  Node.mk 43947 23130 44370 21165,\\n  Node.mk 47802 42405 \
+54570 10965,\\n  Node.mk 17733 42405 47430 18105,\\n  Node.mk 60138 38550 \
+43860 21675,\\n  Node.mk 5397 38550 58650 6885,\\n  Node.mk 44718 26985 46410 \
+19125,\\n  Node.mk 20817 26985 20910 44625,\\n  Node.mk 55080 43176 21808 \
+43727,\\n  Node.mk 10455 43176 12458 53077,\\n  Node.mk 42330 22359 23146 \
+42389,\\n  Node.mk 23205 22359 38234 27301,\\n  Node.mk 36210 35466 2732 \
+62803,\\n  Node.mk 29325 35466 21258 44277,\\n  Node.mk 21930 30069 42666 \
+22869,\\n  Node.mk 43605 30069 21926 43609,\\n  Node.mk 41820 41634 15700 \
+49835,\\n  Node.mk 23715 41634 21698 43837,\\n  Node.mk 38250 23901 27050 \
+38485,\\n  Node.mk 27285 23901 43670 21865,\\n  Node.mk 13770 10794 54604 \
+10931,\\n  Node.mk 51765 10794 19498 46037,\\n  Node.mk 43350 54741 22170 \
+43365,\\n  Node.mk 22185 54741 25942 39593,\\n  Node.mk 27540 21588 43672 \
+21863,\\n  Node.mk 37995 21588 26538 38997,\\n  Node.mk 44370 43947 13650 \
+51885,\\n  Node.mk 21165 43947 21194 44341,\\n  Node.mk 54570 47802 21804 \
+43731,\\n  Node.mk 10965 47802 11434 54101,\\n  Node.mk 47430 17733 22138 \
+43397,\\n  Node.mk 18105 17733 34134 31401,\\n  Node.mk 43860 60138 19796 \
+45739,\\n  Node.mk 21675 60138 21682 43853,\\n  Node.mk 58650 5397 23018 \
+42517,\\n  Node.mk 6885 5397 60070 5465,\\n  Node.mk 46410 44718 10932 54603,\
+\\n  Node.mk 19125 44718 19242 46293,\\n  Node.mk 20910 20817 40618 24917,\\n \
+ Node.mk 44625 20817 21918 43617]\\n\\nset_option maxRecDepth 10000 \
+in\\nset_option maxHeartbeats 4000000 in\\ntheorem pool16_checked : poolCheck \
+16 pool16=true := by decide +kernel\\n\\nset_option maxRecDepth 10000 \
+in\\nset_option maxHeartbeats 4000000 in\\ntheorem detection16_checked :\\n   \
+ (List.range 16).all (fun H => detectionCheck 16 H pool16)=true := by decide \
++kernel\\n\\ntheorem detection16_all_head_clocks (H : Nat) : detectionCheck \
+16 H pool16=true := by\\n  have h := List.all_eq_true.mp detection16_checked \
+(H%16)\\n    (List.mem_range.mpr (Nat.mod_lt _ (by decide)))\\n  simpa only \
+[detectionCheck_mod_clock] using h\\n\\n/-- No finite-width orbit whose full \
+clock divides sixteen can hide a shorter head clock. -/\\ntheorem \
+period_detected (x : State) (W H : Nat) (hx : \[ForAll] k, W\[LessEqual]k \
+\[RightArrow] x k=false)\\n    (hfull : iterate x 16=x)\\n    (hhead : \
+\[ForAll] t, iterate x (t+H) 0=iterate x t 0) : iterate x H=x := by\\n  exact \
+finite_state_clock_detected 16 H (by decide) pool16 pool16_checked\\n    \
+(detection16_all_head_clocks H) x W hx hfull hhead\\n\\ntheorem \
+period8_detected (x : State) (W : Nat) (hx : \[ForAll] k, W\[LessEqual]k \
+\[RightArrow] x k=false)\\n    (hfull : iterate x 16=x)\\n    (hhead : \
+\[ForAll] t, iterate x (t+8) 0=iterate x t 0) : iterate x 8=x :=\\n  \
+period_detected x W 8 hx hfull hhead\\n\\ntheorem period4_detected (x : \
+State) (W : Nat) (hx : \[ForAll] k, W\[LessEqual]k \[RightArrow] x \
+k=false)\\n    (hfull : iterate x 16=x)\\n    (hhead : \[ForAll] t, iterate x \
+(t+4) 0=iterate x t 0) : iterate x 4=x :=\\n  period_detected x W 4 hx hfull \
+hhead\\n\\ntheorem period2_detected (x : State) (W : Nat) (hx : \[ForAll] k, \
+W\[LessEqual]k \[RightArrow] x k=false)\\n    (hfull : iterate x 16=x)\\n    \
+(hhead : \[ForAll] t, iterate x (t+2) 0=iterate x t 0) : iterate x 2=x :=\\n  \
+period_detected x W 2 hx hfull hhead\\n\\ntheorem period1_detected (x : \
+State) (W : Nat) (hx : \[ForAll] k, W\[LessEqual]k \[RightArrow] x \
+k=false)\\n    (hfull : iterate x 16=x)\\n    (hhead : \[ForAll] t, iterate x \
+(t+1) 0=iterate x t 0) : iterate x 1=x :=\\n  period_detected x W 1 hx hfull \
+hhead\\n\\ntheorem eventual_period_detected (x : State) (W H T : Nat) (hx : \
+\[ForAll] k, W\[LessEqual]k \[RightArrow] x k=false)\\n    (hfull : iterate x \
+16=x)\\n    (hhead : \[ForAll] t, T\[LessEqual]t \[RightArrow] iterate x \
+(t+H) 0=iterate x t 0) : iterate x H=x := by\\n  exact \
+finite_state_eventual_clock_detected 16 H (by decide) pool16 \
+pool16_checked\\n    (detection16_all_head_clocks H) x W T hx hfull \
+hhead\\n\\n/-- A hidden shorter head clock in this full-clock range requires \
+an infinite initial tail. -/\\ntheorem period_loss_requires_infinite_tail (x \
+: State) (H T : Nat)\\n    (hfull : iterate x 16=x)\\n    (hhead : \[ForAll] \
+t, T\[LessEqual]t \[RightArrow] iterate x (t+H) 0=iterate x t 0)\\n    (hloss \
+: iterate x H\[NotEqual]x) : \[ForAll] W, \[Exists] k, W\[LessEqual]k \[And] \
+x k=true := by\\n  intro W\\n  apply Classical.byContradiction\\n  intro \
+hnone\\n  have hfin : \[ForAll] k, W\[LessEqual]k \[RightArrow] x k=false := \
+by\\n    intro k hk\\n    cases hb : x k with\\n    | false => rfl\\n    | \
+true => exact False.elim (hnone \:27e8k,hk,hb\:27e9)\\n  exact hloss \
+(eventual_period_detected x W H T hfin hfull hhead)\\n\\nend \
+Rule30Submission.FiniteClockSixteen\\n\>\"", ",", "\n", "  ", 
      RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}], ",", 
      " ", 
      RowBox[{"\"\<IncludeInternal\>\"", " ", "->", " ", "True"}]}], "]"}]}], 
@@ -4663,7 +5204,7 @@ iterate_column_step x (k+2) t\\n\\nend Rule30Submission.Clocks\\n\>\"", ",",
      "]"}], "[", "\"\<KernelCheck\>\"", "]"}]}], 
   ";"}], "\n", "rule30KernelCheck"}], "Input",
  CellLabel->"In[4]:= ",
- CellID->1897438500,ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0"],
+ CellID->702809756,ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4699,14 +5240,14 @@ Cell[BoxData[
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 251 declarations of \
-LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 345 declarations of \
+LeanLinkTmp33396298899343087507x751256.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396284824939074513x464895\"", 
+                 "\"LeanLinkTmp33396298899343087507x751256\"", 
                   "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
@@ -4746,20 +5287,20 @@ LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
                   TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"The kernel accepts all 251 declarations of \
-LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
+                 "\"The kernel accepts all 345 declarations of \
+LeanLinkTmp33396298899343087507x751256.\"", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                  TagBox[
-                 "\"LeanLinkTmp33396284824939074513x464895\"", 
+                 "\"LeanLinkTmp33396298899343087507x751256\"", 
                   "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                 TagBox["251", "SummaryItem"]}]}, {
+                 TagBox["345", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox[
                   TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
@@ -4784,14 +5325,14 @@ LeanLinkTmp33396284824939074513x464895.\"", "SummaryItem"]}]}, {
   Success[
   "KernelChecked", <|
    "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
-    "MessageParameters" -> {251, "LeanLinkTmp33396284824939074513x464895"}, 
-    "Module" -> "LeanLinkTmp33396284824939074513x464895", "Declarations" -> 
-    251|>],
+    "MessageParameters" -> {345, "LeanLinkTmp33396298899343087507x751256"}, 
+    "Module" -> "LeanLinkTmp33396298899343087507x751256", "Declarations" -> 
+    345|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellLabel->"Out[4]= ",
- CellID->206965717,ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d"]
+ CellID->392836123,ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4823,8 +5364,15 @@ Cell[BoxData[{
      " ", "\"\<Rule30Submission.Feedback.finite_feedback_counterexample\>\"", 
      ",", " ", "\"\<Rule30Submission.Clocks.no_constant_OR_at_onset\>\"", ",",
       " ", "\"\<Rule30Submission.Clocks.OR_not_half_period\>\"", ",", 
-     " ", "\"\<Rule30Submission.Clocks.predecessor_not_half_period\>\""}], 
-    "}"}]}], ";"}], "\n", 
+     " ", "\"\<Rule30Submission.Clocks.predecessor_not_half_period\>\"", ",", 
+     " ", "\"\<Rule30Submission.FiniteClockCertificate.finite_family_clock_\
+detected\>\"", ",", 
+     " ", "\"\<Rule30Submission.FiniteClockCertificate.finite_state_eventual_\
+clock_detected\>\"", ",", 
+     " ", "\"\<Rule30Submission.FiniteClockSixteen.eventual_period_detected\>\
+\"", ",", 
+     " ", "\"\<Rule30Submission.FiniteClockSixteen.period_loss_requires_\
+infinite_tail\>\""}], "}"}]}], ";"}], "\n", 
  RowBox[{"Table", "[", 
   RowBox[{
    RowBox[{"<|", 
@@ -4842,7 +5390,7 @@ Cell[BoxData[{
     RowBox[{"name", ",", " ", "responseHeadlines"}], "}"}]}], "]"}]}], "Input",\
 
  CellLabel->"In[5]:= ",
- CellID->525840340,ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b"],
+ CellID->201914069,ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -5069,9 +5617,53 @@ Cell[BoxData[
      RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
-    "\[RightAssociation]"}]}], "}"}]], "Output",
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.FiniteClockCertificate.finite_family_clock_detected\"\>\
+"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.FiniteClockCertificate.finite_state_eventual_clock_\
+detected\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.FiniteClockSixteen.eventual_period_detected\"\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Quot.sound\"\>", ",", "\<\"propext\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Theorem\"\>", 
+      "\[Rule]", \
+"\<\"Rule30Submission.FiniteClockSixteen.period_loss_requires_infinite_tail\"\
+\>"}], ",", 
+     RowBox[{"\<\"Kind\"\>", "\[Rule]", "\<\"theorem\"\>"}], ",", 
+     RowBox[{"\<\"Axioms\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Classical.choice\"\>", ",", "\<\"Quot.sound\"\>", 
+        ",", "\<\"propext\"\>"}], "}"}]}]}], "\[RightAssociation]"}]}], 
+  "}"}]], "Output",
  CellLabel->"Out[5]= ",
- CellID->1708324045,ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f"]
+ CellID->607076188,ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5"]
 }, Open  ]],
 
 Cell["\<\
@@ -5079,12 +5671,12 @@ Finite-tail normal-form completeness, actual fixed-driver trace rigidity and \
 the full center-column problem remain open. No new prize essay is submitted \
 by this build.\
 \>", "Text",
- CellID->203008389,ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10"]
+ CellID->807053435,ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0"]
 },
 LightDark->"Light",
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63"
+ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4"
 ]
 (* End of Notebook Content *)
 
@@ -5097,94 +5689,102 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+Cell[560, 20, 174, 3, 70, "Title",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
  CellID->874461601],
-Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
+Cell[734, 25, 138, 1, 70, "Author",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
  CellID->36768919],
-Cell[874, 28, 700, 10, 70, "Abstract",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
+Cell[874, 28, 823, 12, 70, "Abstract",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
  CellID->1699946459],
-Cell[1567, 40, 116, 1, 70, "Section",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
+Cell[1688, 42, 116, 1, 70, "Section",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
  CellID->1535504786],
-Cell[1685, 43, 405, 6, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+Cell[1806, 45, 405, 6, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
  CellID->1208482393],
-Cell[2087, 51, 552, 8, 70, "Text",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+Cell[2208, 53, 552, 8, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
  CellID->28909615],
-Cell[2634, 61, 121, 1, 70, "Section",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+Cell[2755, 63, 121, 1, 70, "Section",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
  CellID->193832008],
-Cell[2757, 64, 198, 4, 70, "Text",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+Cell[2878, 66, 198, 4, 70, "Text",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
  CellID->684317082],
-Cell[2954, 70, 193, 4, 70, "Text",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+Cell[3075, 72, 193, 4, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
  CellID->528485616],
-Cell[3146, 76, 544, 8, 70, "Text",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+Cell[3267, 78, 544, 8, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
  CellID->1392207227],
-Cell[3685, 86, 651, 10, 70, "Text",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+Cell[3806, 88, 651, 10, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
  CellID->705466992],
-Cell[4329, 98, 575, 9, 70, "Text",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+Cell[4450, 100, 575, 9, 70, "Text",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
  CellID->1350516518],
-Cell[4898, 109, 134, 1, 70, "Section",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+Cell[5019, 111, 134, 1, 70, "Section",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
  CellID->907546795],
-Cell[5034, 112, 636, 9, 70, "Text",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+Cell[5155, 114, 636, 9, 70, "Text",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
  CellID->814772321],
-Cell[5664, 123, 644, 9, 70, "Text",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+Cell[5785, 125, 644, 9, 70, "Text",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
  CellID->1054628905],
-Cell[6302, 134, 145, 1, 70, "Section",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+Cell[6423, 136, 145, 1, 70, "Section",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
  CellID->2043779557],
-Cell[6449, 137, 169, 3, 70, "Text",ExpressionUUID->"644cc522-c7c4-9b18-0c73-dc8ff276e662",
+Cell[6570, 139, 169, 3, 70, "Text",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
  CellID->17830494],
-Cell[6618, 142, 150, 1, 70, "Text",ExpressionUUID->"2de8c8f9-eaf3-8e90-5b97-e1a28e87d4fa",
+Cell[6739, 144, 150, 1, 70, "Text",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
  CellID->1589986527],
-Cell[6770, 145, 538, 8, 70, "Text",ExpressionUUID->"6801f052-da94-0b6f-183e-ea1fdf2159b5",
+Cell[6891, 147, 538, 8, 70, "Text",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
  CellID->943101875],
-Cell[7303, 155, 464, 7, 70, "Text",ExpressionUUID->"0daf8e98-7628-e40b-3b54-27c203c2cf51",
+Cell[7424, 157, 464, 7, 70, "Text",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
  CellID->67888809],
-Cell[7763, 164, 404, 6, 70, "Text",ExpressionUUID->"7b6211f5-475c-1194-2911-88bf72e963fe",
+Cell[7884, 166, 404, 6, 70, "Text",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
  CellID->1432876021],
-Cell[8164, 172, 145, 1, 70, "Section",ExpressionUUID->"7c8f7bdf-2493-8d8a-24b5-72994d27d7d0",
+Cell[8285, 174, 145, 1, 70, "Section",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
  CellID->876231958],
-Cell[8311, 175, 600, 9, 70, "Text",ExpressionUUID->"14e8dcaf-74c9-37ba-3c97-d5097d7d9d80",
+Cell[8432, 177, 600, 9, 70, "Text",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
  CellID->1020575516],
-Cell[8905, 186, 447, 7, 70, "Text",ExpressionUUID->"5d5cbd3a-e88d-ee42-0b63-35678939b4a8",
+Cell[9026, 188, 447, 7, 70, "Text",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
  CellID->1967685850],
-Cell[9348, 195, 399, 6, 70, "Text",ExpressionUUID->"3b7fe4cc-5889-7f4e-6904-fd96593c4594",
+Cell[9469, 197, 399, 6, 70, "Text",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
  CellID->1044562475],
-Cell[9744, 203, 123, 1, 70, "Section",ExpressionUUID->"6cb5c01f-62f5-68e0-144a-da5916803aca",
+Cell[9865, 205, 145, 1, 70, "Section",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
  CellID->1653200050],
-Cell[9869, 206, 699, 10, 70, "Text",ExpressionUUID->"55f417ec-7166-d78d-038b-8eb60010bdd7",
+Cell[10012, 208, 487, 7, 70, "Text",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
  CellID->1384978530],
-Cell[CellGroupData[{
-Cell[10583, 220, 36615, 798, 70, "Input",ExpressionUUID->"4b6e5dad-9702-0c1f-7916-54f722b75765",
- CellID->1407158826],
-Cell[46403, 1020, 158002, 2887, 70, "Output",ExpressionUUID->"1d359769-845f-cd94-44ca-0f332deb97fe",
- CellID->1138490425]
-}, Open  ]],
-Cell[201533, 3910, 415, 6, 70, "Text",ExpressionUUID->"2055bfee-d4b5-7aa2-506a-36cbdd404888",
+Cell[10495, 217, 687, 10, 70, "Text",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
+ CellID->519689844],
+Cell[11175, 229, 533, 8, 70, "Text",ExpressionUUID->"6ea251ed-865f-e03c-1652-48b733ebb306",
  CellID->1609367578],
-Cell[CellGroupData[{
-Cell[201967, 3920, 171, 3, 70, "Input",ExpressionUUID->"64c30c0d-1857-1b13-0cf0-a65799e26679",
- CellID->692927338],
-Cell[202138, 3925, 7878, 160, 70, "Output",ExpressionUUID->"46632a09-cc5f-b0ef-6e10-cc52e5eb0235",
- CellID->160879640]
-}, Open  ]],
-Cell[209871, 4088, 139, 1, 70, "Section",ExpressionUUID->"6ea251ed-865f-e03c-1652-48b733ebb306",
+Cell[11703, 239, 123, 1, 70, "Section",ExpressionUUID->"25a0bfbe-b1d4-2428-535f-36fbc0668f72",
+ CellID->1541450781],
+Cell[11828, 242, 822, 12, 70, "Text",ExpressionUUID->"04786d0e-016a-d127-2c07-8568b01ca00d",
  CellID->1657269721],
-Cell[210012, 4091, 436, 7, 70, "Text",ExpressionUUID->"25a0bfbe-b1d4-2428-535f-36fbc0668f72",
- CellID->1140508347],
-Cell[210444, 4100, 348, 8, 70, "Input",ExpressionUUID->"04786d0e-016a-d127-2c07-8568b01ca00d",
+Cell[CellGroupData[{
+Cell[12663, 258, 44267, 968, 70, "Input",ExpressionUUID->"2d15b43a-cd49-5244-5b2a-2e67e4fc20ae",
+ CellID->2048061839],
+Cell[55965, 1228, 162302, 2963, 70, "Output",ExpressionUUID->"2d1ff276-b82a-c3ca-5b24-f43039dc9110",
+ CellID->1680809496]
+}, Open  ]],
+Cell[215319, 4194, 414, 6, 70, "Text",ExpressionUUID->"14fd1512-f616-8834-3c82-8d5f83a0db1e",
  CellID->496109794],
 Cell[CellGroupData[{
-Cell[210809, 4112, 41082, 553, 70, "Input",ExpressionUUID->"2d15b43a-cd49-5244-5b2a-2e67e4fc20ae",
+Cell[215752, 4204, 172, 3, 70, "Input",ExpressionUUID->"66c67103-72a1-9427-0efe-696d0755ff0d",
  CellID->1897438500],
-Cell[251341, 4667, 6022, 126, 70, "Output",ExpressionUUID->"2d1ff276-b82a-c3ca-5b24-f43039dc9110",
+Cell[215924, 4209, 7878, 160, 70, "Output",ExpressionUUID->"48c794f4-84f6-2bfc-78fc-0dbe2c8379c6",
  CellID->206965717]
 }, Open  ]],
+Cell[223657, 4372, 138, 1, 70, "Section",ExpressionUUID->"58ee7ecb-1370-1005-0896-7795a605636f",
+ CellID->829388421],
+Cell[223797, 4375, 434, 7, 70, "Text",ExpressionUUID->"11d04a92-cbef-a8a5-47e0-63dfed9bfa8f",
+ CellID->203008389],
+Cell[224227, 4384, 349, 8, 70, "Input",ExpressionUUID->"7d9821c9-0e61-bc6d-2ba7-b893ab1506b7",
+ CellID->1090263105],
 Cell[CellGroupData[{
-Cell[257274, 4798, 2590, 46, 70, "Input",ExpressionUUID->"14fd1512-f616-8834-3c82-8d5f83a0db1e",
- CellID->525840340],
-Cell[259821, 4846, 10035, 227, 70, "Output",ExpressionUUID->"66c67103-72a1-9427-0efe-696d0755ff0d",
- CellID->1708324045]
+Cell[224593, 4396, 60615, 810, 70, "Input",ExpressionUUID->"3181a460-bc62-f1ee-67be-3e4a3514c334",
+ CellID->702809756],
+Cell[284401, 5208, 6022, 126, 70, "Output",ExpressionUUID->"3937e1d4-04c3-e55a-68cc-f89ead77cfa0",
+ CellID->392836123]
 }, Open  ]],
-Cell[269644, 5076, 275, 5, 70, "Text",ExpressionUUID->"48c794f4-84f6-2bfc-78fc-0dbe2c8379c6",
- CellID->203008389]
+Cell[CellGroupData[{
+Cell[290334, 5339, 2986, 53, 70, "Input",ExpressionUUID->"6b45e796-37a7-eecc-197a-fed04253b416",
+ CellID->201914069],
+Cell[293270, 5394, 11834, 271, 70, "Output",ExpressionUUID->"5e187950-8ca2-2ab2-0638-711a25577898",
+ CellID->607076188]
+}, Open  ]],
+Cell[304848, 5668, 275, 5, 70, "Text",ExpressionUUID->"250a2d7c-9b81-05b0-5309-c5261e346f9a",
+ CellID->807053435]
 }
 ]
 *)

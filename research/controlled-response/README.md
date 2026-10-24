@@ -1,6 +1,6 @@
 # Controlled right-half responses and finite-support limits
 
-This contribution contains four core Lean modules, developed by Troy Lowry with
+This contribution contains six core Lean modules, developed by Troy Lowry with
 OpenAI Codex. Problem 1 remains open. No literature-priority claim is made.
 
 `Rule30ControlledResponseResearch` characterizes equal head responses to **all**
@@ -39,6 +39,14 @@ period H. One more predecessor cannot have period H either. Every update and
 clock hypothesis is explicit. This does not extend the clock through an
 arbitrary prefix or prove finite-tail period nonloss.
 
+`Rule30FiniteClockCertificateResearch` supplies a generic soundness proof for
+finite temporal-profile certificates. `Rule30FiniteClockSixteenResearch`
+checks 68 profile pairs: for every finite triangular orbit with full clock
+dividing sixteen, any eventual head period is a period of the whole state.
+Spatial width and transient are unbounded, and the head period is arbitrary.
+The bound on the full clock is explicit. This gives no arbitrary-clock
+induction and excludes no vertical center-column period.
+
 The [review essay](controlled-response-essay.md) embeds the exact standalone
 proof; the [evaluated notebook](controlled-response-essay.nb) carries that source
 and its full LeanLink replay. The [diagram](profile-counter-figure.png) is
@@ -47,19 +55,22 @@ exported from its saved output. The notebook has not been sent to the prize API.
 Validation records:
 
 - [Catalog build and replay](catalog-verification.json): the standalone core
-  catalog is built in dependency order, then every declaration in all four new
+  catalog is built in dependency order, then every declaration in all six new
   modules is replayed with the unchanged checker.
-- [Pinned standalone replay](standalone-verification.json): all 251 declarations
-  and 24 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
+- [Pinned standalone replay](standalone-verification.json): all 345 declarations
+  and 28 selected headlines pass at kit commit `cc1e0e0`, with standard axioms.
 - [Fresh-kernel notebook inspection](controlled-response-essay.nb.verification.json):
   exact saved source, all declarations replayed, standard headline axioms,
   zero message cells, and independently checked computation outputs.
 - [Wolfram controls](wolfram-independent-controls.json): 104 full Rule 30 rewrite
   experiments, eight actual-feedback examples, 792 scalar cells in three profile
-  cones, 192 qualifying clock cases, and ten additional built-in Rule 30 cones.
+  cones, 192 qualifying clock cases, ten additional built-in Rule 30 cones,
+  and eight finite-clock certificate cones with 36,564 compared scalar cells.
 - [Python response controls](controlled_response_controls.json): exact response-tree
   partitions compared with the nonbranching signatures at widths 1 through 7
   and horizons 1 through 20.
+- [Finite-clock controls](finite_clock16_controls.json): every word below 2^14
+  and 128 expanded words up to width 200 accompany the arbitrary-width proof.
 - [Profile discovery and controls](periodic_profile_counter_controls.json):
   independent integer evolution checks 12,288 cells. The finite search is not
   a premise of the unbounded Lean proof.
@@ -70,6 +81,8 @@ Reproduce with Lean 4.35.0, Python with `psutil`, and Wolfram with LeanLink:
 python research/controlled-response/verify.py --lake /path/to/lake
 python research/controlled-response/generate_essay.py
 python research/controlled-response/verify_standalone.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/controlled-response/generate_finite_clock16.py
+python research/controlled-response/finite_clock16_controls.py
 python research/controlled-response/controlled_response_controls.py
 python research/controlled-response/periodic_profile_counter_controls.py
 ```

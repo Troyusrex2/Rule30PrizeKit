@@ -4,10 +4,10 @@
   "prize_API_submitted": false,
   "full_problem_claim": false,
   "finite_tail_completeness_proved": false,
-  "source_sha256": "d13bdd7d1353d700e7e3553892179e59acb1c09ff10d3f7a27d87a00f31c570e",
+  "source_sha256": "48e5e171b096cb22614d65ff15db40c4f7c2a4439fd301d322630a217424b075",
   "kit_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
-  "build_seconds": 6.735,
-  "check_seconds": 11.422,
+  "build_seconds": 8.313,
+  "check_seconds": 13.484,
   "native_C_emitted": false,
   "check": {
     "claim": "partial",
@@ -150,6 +150,221 @@
       {
         "kind": "theorem",
         "name": "Rule30Submission.Feedback.white_step_erases_distinction",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Covered",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30Submission.FiniteClockCertificate.Node",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.accum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.accum_return_false",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.accum_solution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.covered_period_propagates",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.covered_predecessor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.covered_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.covers_finite_family",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.detectionCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.detectionCheck_mod_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.eventual_period_is_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.finite_family_clock_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.finite_state_clock_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.finite_state_eventual_clock_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.forcing",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.instDecidableEqNode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.instReprNode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.iterate_period_of_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.iterate_restart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.iterate_zero_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.nodeCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.pairMem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.pairMem_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.pat",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.pat_mod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.periodCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.periodCheck_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.periodCheck_mod_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.periodic_add_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.periodic_mod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.poolCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.detection16_all_head_clocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.detection16_checked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.eventual_period_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period1_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period2_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period4_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period8_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period_detected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period_loss_requires_infinite_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockSixteen.pool16",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.pool16_checked",
         "standardAxioms": true
       },
       {
@@ -603,6 +818,121 @@
         "standardAxioms": true
       },
       {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.a0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.a1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.b",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.c",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.accum.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.accum.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.accum.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.detectionCheck.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.instDecidableEqNode.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.instReprNode.repr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.iterate_restart.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.nodeCheck.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.pairMem.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.pat.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.periodCheck.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.poolCheck.eq_1",
+        "standardAxioms": true
+      },
+      {
         "kind": "theorem",
         "name": "Rule30Submission.Profiles.frame.eq_1",
         "standardAxioms": true
@@ -780,6 +1110,31 @@
       {
         "kind": "theorem",
         "name": "Rule30Submission.Response.word.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.Node.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.FiniteClockCertificate.instDecidableEqNode.decEq.match_1",
         "standardAxioms": true
       }
     ],
@@ -1071,6 +1426,55 @@
         "ok": true,
         "problems": [],
         "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.finite_family_clock_detected",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockCertificate.finite_state_eventual_clock_detected",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.eventual_period_detected",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.FiniteClockSixteen.period_loss_requires_infinite_tail",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
       }
     ],
     "importsStatements": true,
@@ -1079,7 +1483,7 @@
     "official": [],
     "reasons": [],
     "replay": {
-      "constants": 251,
+      "constants": 345,
       "ok": true
     },
     "verdict": "pass",
