@@ -898,3 +898,16 @@ the width-eight certificate is a regression test, not a new numerical bound.
 See [the full scope, rejected candidates and controls](three-cone-notes.md).
 Neither certificate existence at every width, an unbounded density estimate,
 `C3w(011)`, nor the full prize statement has been proved.
+
+## White-tail erosion beyond finite ether perturbations
+
+[`Rule30WhiteTailErosionResearch`](Rule30WhiteTailErosionResearch.lean) extends
+Luis Perez Morales and Claude's PR 10 argument to right halves with white
+tails. A defect witness bounded by a speed-one edge replaces the rightmost
+defect. Every finite-support right half driven by the period-three ether
+departs from any matching prefix within an explicit linear deadline; column
+one departs arbitrarily late. All 48 declarations and eight headlines pass
+full kernel replay at both historical and current reference commits. The
+unchanged dependency is separately replayed in both. Independent Python and
+built-in Wolfram controls pass. See [the statement, credit and limitations](white-tail-erosion-notes.md).
+Neither a period-three center exclusion nor a prize solution is proved.
