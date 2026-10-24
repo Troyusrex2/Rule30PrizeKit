@@ -1,0 +1,358 @@
+{
+  "verdict": "pass",
+  "scope": "conditional all-period reductions and unbounded sparse-family barriers",
+  "NestedNoncoincidence_proved": false,
+  "FlipRanking_constructed": false,
+  "full_problem_claim": false,
+  "checker_modified": false,
+  "source_sha256": "406bdea314855fcf0777fd946986b4e64b3ebf969ed154ba03536d53e36289fa",
+  "project_commit": "cc1e0e0e7c1ae8c971aec5c14aaabb47c7b8c554",
+  "dependency_check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.EdgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.HasLeftEdge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.edges_equal_of_nonnegative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.hasLeftEdge_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.no_eventuallyPeriodic_of_edgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.problem1_of_edgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Realization.seed.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch.problem1_of_edgeObservable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30TraceEdgeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 14,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.BlackCountLe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.FlipRanking",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.HasRightEdge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.Nested",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.NestedNoncoincidence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.Spans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.flipCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.innerThree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.inner_black_count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.inner_finite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.inner_spans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.nested_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.nested_noncoincidence_of_edgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.nested_noncoincidence_of_flipRanking",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.no_black_count_separation_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.no_eventuallyPeriodic_of_nested_noncoincidence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.no_uniform_sparse_flip_rank",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outerFive",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outer_black_count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outer_eq_inner",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outer_finite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outer_spans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.problem1_of_flipRanking",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.problem1_of_nested_noncoincidence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.right_edge_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.spans_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.sparse_agreement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.sparse_flip_charge_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.sparse_nested",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.flipCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.flipCount.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.flipCount.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.flipCount.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.innerThree.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.outerFive.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.nested_evol",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.problem1_of_nested_noncoincidence",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.nested_noncoincidence_of_flipRanking",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.problem1_of_flipRanking",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.sparse_agreement",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.no_black_count_separation_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PairedTraceResearch.no_uniform_sparse_flip_rank",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30PairedTraceResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 99,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

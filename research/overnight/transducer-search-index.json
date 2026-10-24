@@ -77,7 +77,8 @@
       "Lean_verified": false,
       "radius": 3,
       "head_history": 8,
-      "seconds": 0.14
+      "seconds": 0.14,
+      "reward_mode": "long-gap"
     },
     {
       "report": "cycle-transducer-potential-r3-head8-short-gap.json",
@@ -88,7 +89,8 @@
       "Lean_verified": false,
       "radius": 3,
       "head_history": 8,
-      "seconds": 0.11
+      "seconds": 0.11,
+      "reward_mode": "short-gap"
     },
     {
       "report": "cycle-transducer-potential-r3-head8.json",
@@ -110,7 +112,8 @@
       "Lean_verified": false,
       "radius": 4,
       "head_history": 8,
-      "seconds": 0.188
+      "seconds": 0.188,
+      "reward_mode": "short-gap"
     },
     {
       "report": "front-distance-r3-head8-memory7-parity0-short-gap.json",
@@ -368,6 +371,144 @@
       "exact_arithmetic_LP_refutation": false,
       "Lean_verified": false,
       "seconds": 0.203
+    },
+    {
+      "report": "pair-containment-potential-r1-signed.json",
+      "sha256": "c30063dff833c7f5bd18e4ac90e1a43f19446f24f770a916ab35acd86d285097",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 1,
+      "seconds": 0.047,
+      "signed_weights_with_uniform_graph_lower_bound": true
+    },
+    {
+      "report": "pair-containment-potential-r1.json",
+      "sha256": "27407a87e1b3eca492ce3fd545880b26a93a93bd0a29e6310286aa24bf0e0c1b",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 1,
+      "seconds": 0.047
+    },
+    {
+      "report": "pair-containment-potential-r2-flip-graph-degree2.json",
+      "sha256": "668f15dac57e03498f67bf0eab07dfc208cb9864f4c5ad42aa97927ceb2f1766",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 2,
+      "seconds": 0.094,
+      "reward_mode": "flip",
+      "auxiliary_graph_degree": 2,
+      "signed_weights_with_uniform_graph_lower_bound": false
+    },
+    {
+      "report": "pair-containment-potential-r2-flip.json",
+      "sha256": "a38d050a24749a6b5d52590f92619d010e9447ef9fa1e6776d4824a6eb6ccd72",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 2,
+      "seconds": 0.078,
+      "reward_mode": "flip",
+      "signed_weights_with_uniform_graph_lower_bound": false
+    },
+    {
+      "report": "pair-containment-potential-r2-signed-flip-graph-degree2.json",
+      "sha256": "22567dd387c7d7ef55d3525447cb789fbce4c29e85dcce24dc59b7dc1f709eee",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 2,
+      "seconds": 0.469,
+      "reward_mode": "flip",
+      "auxiliary_graph_degree": 2,
+      "signed_weights_with_uniform_graph_lower_bound": true
+    },
+    {
+      "report": "pair-containment-potential-r2-signed.json",
+      "sha256": "c6341c5294e57fca97152ae7dbf0f36d35e808053009348cf7565cd3fb9f45ed",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 2,
+      "seconds": 0.281,
+      "signed_weights_with_uniform_graph_lower_bound": true
+    },
+    {
+      "report": "pair-containment-potential-r2.json",
+      "sha256": "36025f2d58429b0f07cadcabe502531cf62bb85345f8b33f04a969803454c023",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 2,
+      "seconds": 0.078
+    },
+    {
+      "report": "pair-containment-potential-r3-flip-graph-degree2.json",
+      "sha256": "8e9e662a5d37cf94eb8645038c3c313d02657dc8a4214f37df1d1c26c62e5748",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 3,
+      "seconds": 2.688,
+      "reward_mode": "flip",
+      "auxiliary_graph_degree": 2,
+      "signed_weights_with_uniform_graph_lower_bound": false
+    },
+    {
+      "report": "pair-containment-potential-r3-flip.json",
+      "sha256": "e430b32b79f501ce534023176ae63a56fb7c7aa80517acd56847cac3cf74764d",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 3,
+      "seconds": 0.703,
+      "reward_mode": "flip",
+      "signed_weights_with_uniform_graph_lower_bound": false
+    },
+    {
+      "report": "pair-containment-potential-r3-signed-rise.json",
+      "sha256": "3c999641bea0ba23a954eeb89fd4f44b8fdbb41489f1baa578875afeb37e9c8a",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 3,
+      "seconds": 6.188,
+      "reward_mode": "rise",
+      "signed_weights_with_uniform_graph_lower_bound": true
+    },
+    {
+      "report": "pair-containment-potential-r3-signed.json",
+      "sha256": "2271c7fdb3cf8729f2baa5b4c346398a62113ed4b15ba120576a638439bce42f",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 3,
+      "seconds": 5.687,
+      "signed_weights_with_uniform_graph_lower_bound": true
+    },
+    {
+      "report": "pair-containment-potential-r3.json",
+      "sha256": "331c1b009f79e295789d83a5547198f086de23a56a9a2f1374d457c21230607b",
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "exact_arithmetic_LP_refutation": false,
+      "Lean_verified": false,
+      "radius": 3,
+      "seconds": 0.828
     },
     {
       "report": "position-transducer-r3-degree1-head8-memory7-short-gap.json",

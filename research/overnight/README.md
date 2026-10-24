@@ -399,6 +399,72 @@ recoding gives twelve eight-bit words and fails to preserve the input
 language. This rejects that tested fixed-depth return, not every possible
 renormalization or the prize conjecture. The probe has not been Lean verified.
 
+## Paired rows: an all-period target and a verified sparse-family obstruction
+
+`Rule30PairedTraceResearch` investigates a weaker target than arbitrary edge
+recovery. `NestedNoncoincidence` says that two finite rows cannot have equal
+complete center traces when the outer row's support strictly contains the
+inner row's support and the inner support straddles zero. This is **OPEN**.
+The module proves that it would exclude every eventual period for every
+nonzero finite start, and hence imply the exact official Problem 1. A later
+row has both support edges strictly outside those of the earlier row; a
+restart puts the center inside both supports.
+
+It also defines the **OPEN** `FlipRanking` hypothesis. A natural-valued
+potential need only be nonincreasing while the two center observations agree,
+with a drop at a color change. The kit's existing period-one theorem implies
+that color changes occur infinitely often. Thus such a potential would imply
+the noncoincidence statement and the full prize statement. No such potential
+is constructed.
+
+Two unbounded limitations are proved, rather than inferred from samples.
+The inner row is black at `-1,0,1`; the outer row adds black cells at
+`-(H+3),H+3`. Both are finite and strictly nested, have at most three and five
+black cells respectively, and their center observations agree at every time
+`t <= H`, for **every H**. Therefore no separation horizon depending only on
+the initial black counts can work. More strongly, every `FlipRanking` must
+have unbounded initial values on this sparse family: a uniform initial bound
+would bound all color changes of the inner row, contradicting the period-one
+theorem. This does not prohibit potentials that depend on distance, width,
+or other unbounded positional information. No novelty claim is made for the
+causality construction.
+
+All **99 generated declarations**, including seven headlines and the sparse
+rank obstruction, passed full replay in the
+[working](paired-trace-evidence/catalog/report.json) and
+[pinned](paired-trace-evidence/pinned/report.json) environments. The earlier
+14-declaration edge-reduction dependency was also replayed in each. An initial
+pinned build found that dependency absent from this isolated audit worktree;
+the runner now copies its exact source with module/export wrappers removed,
+refuses to overwrite different source, and checks it explicitly. The
+[independent Wolfram samples](wolfram-paired-trace-check.json) use the built-in
+Rule 30 automaton at eight horizons through 1,024 and confirm five/three
+initial black counts and matching prefixes. The all-horizons results belong
+to the Lean proof.
+
+`pair_containment_potential.py` tests a global route to this target. It scans
+arbitrary-length words over the four pair states, checks the strict nesting
+language and the current/next center agreement, and applies the exact product
+Rule 30 update. The row potential counts local patterns separately on each
+side of zero and weights them by distance. Affine or quadratic auxiliary
+vertex polynomials give sufficient inequalities for all spatial positions.
+Variants charge every step, every color change, or only white-to-black
+changes. Signed-weight variants seek a second graph certificate that bounds
+the potential below along surviving pairs. That pathwise lower bound suffices
+for an infinite-trace contradiction; it is not automatically a natural-valued
+`FlipRanking` on every finite-prefix transition.
+
+All twelve tested systems were numerically infeasible, at local window sizes
+one through three. Each passed independent scalar updates and exact whole-row
+feature accounting on 128 nested pairs. Infeasibility rejects these particular
+sufficient graph-certificate systems; it does not refute the open target,
+every distance-sensitive potential, or a certificate with a different form.
+The solver outcomes have **not** been Lean verified. The use of finite
+de Bruijn graphs for additive-energy inequalities is standard; see
+[Taati, Section 3.2](https://siamak.isoperimetric.info/articles/handbook09.pdf).
+No general conservation-law theorem from that survey is assumed in the Lean
+proof or used to infer a result about Rule 30 here.
+
 ## Reproduction
 
 Use Lean 4.35.0 and the kit's unchanged `Check.lean`. Give the audit runner
@@ -422,6 +488,9 @@ python research/overnight/verify_driven_wall.py --project /path/to/pinned-kit --
 python research/overnight/verify_driven_wall.py --lake /path/to/lake --language-core
 python research/overnight/verify_empty_reduction.py --project /path/to/pinned-kit --lake /path/to/lake
 python research/overnight/verify_diagonal_suffix.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_paired_trace.py --project /path/to/pinned-kit --lake /path/to/lake
+python research/overnight/verify_paired_trace.py --lake /path/to/lake
+python research/overnight/pair_containment_potential.py --radius 3 --reward flip --graph-degree 2
 python research/overnight/build_core_sequential.py --lake /path/to/lake
 python research/overnight/forced_row_identities.py --free-bits 18
 python research/overnight/driven_spacing_probe.py --samples 96 --cycles 16384
