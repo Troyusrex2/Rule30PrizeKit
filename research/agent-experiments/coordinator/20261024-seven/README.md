@@ -1,5 +1,11 @@
 # Seven-response experiment record
 
+A [signed prefix-rank obstruction on actual finite images](FINITE-IMAGE-PREFIX-BARRIER.md)
+removes the earlier nonimage-row caveat at scale one. Its three new modules
+passed full kernel replay of 200 owned declarations. The report also records
+26 controlled searches beyond that theorem's domain, with numerical unknowns
+preserved. The prize problem remains open.
+
 A [checked prefix-rank obstruction and finite-past model](PREFIX-RANK-FINITE-PAST.md)
 adds 144 kernel-replayed declarations. It distinguishes a genuine obstruction
 on the forward-only search domain from rows with actual finite predecessors,
