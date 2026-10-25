@@ -1,0 +1,777 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "canonical_seed": 1,
+  "right_prefix_bits": 257,
+  "r_cap": 128,
+  "time_cap": 512,
+  "independent_difference_controls": 1089,
+  "even_odd_profile_duplicate_counterexamples": [
+    {
+      "r": 3,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 4,
+      "even_phase": 8,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 5,
+      "even_phase": 6,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 6,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 7,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 8,
+      "even_phase": 8,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 9,
+      "even_phase": 86,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 10,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 11,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 12,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 13,
+      "even_phase": 12,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 14,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 15,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 16,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 17,
+      "even_phase": 16,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 18,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 19,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 20,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 21,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 22,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 23,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 24,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 25,
+      "even_phase": 40,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 26,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 27,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 28,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 29,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 30,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 31,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 32,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 33,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 34,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 35,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 36,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 37,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 38,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 39,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 40,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 41,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 42,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 43,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 44,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 45,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 46,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 47,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 48,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 49,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 50,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 51,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 52,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 53,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 54,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 55,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 56,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 57,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 58,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 59,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 60,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 61,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 62,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 63,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 64,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 65,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 66,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 67,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 68,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 69,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 70,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 71,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 72,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 73,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 74,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 75,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 76,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 77,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 78,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 79,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 80,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 81,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 82,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 83,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 84,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 85,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 86,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 87,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 88,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 89,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 90,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 91,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 92,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 93,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 94,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 95,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 96,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 97,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 98,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 99,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 100,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 101,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 102,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 103,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 104,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 105,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 106,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 107,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 108,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 109,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 110,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 111,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 112,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 113,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 114,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 115,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 116,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 117,
+      "even_phase": 14,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 118,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 119,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 120,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 121,
+      "even_phase": 18,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 122,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 123,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 124,
+      "even_phase": 10,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 125,
+      "even_phase": 14,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 126,
+      "even_phase": 4,
+      "C_even": 1,
+      "C_odd": 0
+    },
+    {
+      "r": 127,
+      "even_phase": 4,
+      "C_even": 0,
+      "C_odd": 1
+    },
+    {
+      "r": 128,
+      "even_phase": 10,
+      "C_even": 0,
+      "C_odd": 1
+    }
+  ],
+  "first_pair_counterexample": {
+    "r": 3,
+    "even_phase": 4,
+    "C_even": 0,
+    "C_odd": 1
+  },
+  "parity_augmented_33_coordinate_aliases": [],
+  "scope": "Canonical finite prefix tests only. No infinite projection closure, clock recovery, center nonperiodicity or generic-state result follows from absence of aliases.",
+  "elapsed_seconds": 0.09399999998277053
+}

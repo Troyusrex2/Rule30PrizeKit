@@ -10,7 +10,9 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
-[Delayed defects and unbounded spatial periods](research/agent-experiments/coordinator/20261025-delayed-periods/REPORT.md): a single synthetic temporal defect gives a family whose eventual spatial periods are unbounded, with a quantitative Lean proof proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25). Every member is itself spatially periodic. The evaluated essay draft is awaiting human review and has not been submitted. Problem 1 remains open. [Previous feedback and period-lifting work](research/agent-experiments/coordinator/20261025-finite-feedback/REPORT.md) is retained unchanged.
+[Exact finite source observers](research/agent-experiments/coordinator/20261025-source-observer/REPORT.md): a new research lead with 2,891 independently checked certificates, explicit deadline counterexamples and solver timeouts. **The required universal theorem and Problem1 remain open; this is not a new Lean result.**
+
+The latest proved contribution is [delayed defects and unbounded spatial periods](research/agent-experiments/coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25). Every member is itself spatially periodic. Its evaluated essay draft awaits human review and has not been submitted. [Previous feedback and period-lifting work](research/agent-experiments/coordinator/20261025-finite-feedback/REPORT.md) is retained unchanged.
 
 ## Setup
 

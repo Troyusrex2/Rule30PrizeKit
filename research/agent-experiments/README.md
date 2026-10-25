@@ -8,6 +8,10 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest research lead, not a Lean theorem:** [exact finite source observers](coordinator/20261025-source-observer/REPORT.md). Independent backward checks validate 2,891 finite certificates; existence for every canonical time-shift pair is unproved. Includes an explicit failed deadline estimate and all solver timeouts.
+
+**Latest proved contribution:** [delayed defects and unbounded spatial periods](coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25). A uniform quantitative result for synthetic starts; every member is itself periodic. The canonical center problem remains open.
+
 **New actual-return result:** [first-return source cancellation and echo information loss](coordinator/20261025-return-depth/REPORT.md): 155 additional constants passed full replay. The first even return-depth channel cancels the outer source exactly; the complete higher remainder remains open. An autonomous reader of this echo profile is also refuted.
 
 **New upstream contribution:** [PR23](https://github.com/WolframInstitute/Rule30PrizeKit/pull/23) ports the uniform dyadic source theorem to the core catalog. [Exact source, build, full replay and GitHub readback](coordinator/20261025-source-catalog/REPORT.md). Open for review; the full prize remains unsolved.
