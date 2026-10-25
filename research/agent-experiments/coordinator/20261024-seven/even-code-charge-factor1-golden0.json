@@ -1,0 +1,41 @@
+{
+  "records": [
+    {
+      "free_prefix_length": 1,
+      "complete_no00_domain": 2,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 2,
+      "complete_no00_domain": 3,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 3,
+      "complete_no00_domain": 5,
+      "violations": 1,
+      "charge_bound_holds_on_domain": false,
+      "seconds": 0.0,
+      "counterexample": {
+        "free": [
+          0,
+          1,
+          0
+        ],
+        "even_code": 1,
+        "even_black_count": 1,
+        "free_zero_count": 2,
+        "golden_violation": null
+      }
+    }
+  ],
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "factor": 1,
+  "no11111_constraint": false,
+  "tested_claim": "factor * black even-code cells >= free zeros"
+}

@@ -1,0 +1,105 @@
+{
+  "records": [
+    {
+      "free_prefix_length": 1,
+      "complete_no00_domain": 2,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 2,
+      "complete_no00_domain": 3,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 3,
+      "complete_no00_domain": 5,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.016
+    },
+    {
+      "free_prefix_length": 4,
+      "complete_no00_domain": 8,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 5,
+      "complete_no00_domain": 13,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 6,
+      "complete_no00_domain": 21,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 7,
+      "complete_no00_domain": 34,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 8,
+      "complete_no00_domain": 55,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 9,
+      "complete_no00_domain": 89,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 10,
+      "complete_no00_domain": 144,
+      "violations": 0,
+      "charge_bound_holds_on_domain": true,
+      "seconds": 0.0
+    },
+    {
+      "free_prefix_length": 11,
+      "complete_no00_domain": 233,
+      "violations": 2,
+      "charge_bound_holds_on_domain": false,
+      "seconds": 0.016,
+      "counterexample": {
+        "free": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "even_code": 9,
+        "even_black_count": 2,
+        "free_zero_count": 5,
+        "golden_violation": null
+      }
+    }
+  ],
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "factor": 2,
+  "no11111_constraint": false,
+  "tested_claim": "factor * black even-code cells >= free zeros"
+}
