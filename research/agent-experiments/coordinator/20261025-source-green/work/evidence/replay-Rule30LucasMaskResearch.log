@@ -1,0 +1,12 @@
+
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\source-green-20261025T1610\owned-verifier\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30LucasMaskResearch.choose_odd_submask","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30LucasMaskResearch.choose_odd_submask","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30LucasMaskResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":12,"ok":true},"verdict":"pass","verifiedTargets":[]}
+
+{"verdict": "pass", "module": "Rule30LucasMaskResearch", "replay": {"constants": 12, "ok": true}, "headlines": ["Rule30LucasMaskResearch.choose_odd_submask"]}

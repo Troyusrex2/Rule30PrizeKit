@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New complete source bridge:** [the actual Rule90 source sum and deep remainder](coordinator/20261025-source-green/REPORT.md). All-time Duhamel/binomial proofs now connect the earlier mask theorem to the actual center; 59 additional constants passed full kernel replay. The unrestricted deep remainder and full prize remain open.
+
 **New checked source result:** [dyadic run-boundary sources](coordinator/20261025-dyadic-sources/REPORT.md): a unique mask-selected event in a growing strip, fully kernel replayed. The Green/Duhamel bridge and unbounded interior control remain open. Also records a failed determinant-wall rule and exact cancellation at time 7.
 
 **Latest experiments:** [global credit, source-aware gaps and renewal clocks](coordinator/20261025-global-credit-tests/REPORT.md). Fitted ranks fail exact held-out checks; solver timeouts and unresolved global classes are kept distinct. No new theorem or prize solution is claimed.

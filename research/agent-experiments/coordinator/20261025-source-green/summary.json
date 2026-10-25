@@ -1,0 +1,65 @@
+{
+  "full_problem_solved": false,
+  "new_kernel_replayed_constants": 59,
+  "count_includes_generated_declarations": true,
+  "replayed_dependency_constants": 56,
+  "catalog_port_constants": 56,
+  "catalog_port_duplicates_previous_mathematics": true,
+  "modules": {
+    "Rule30DyadicSourceResearch": {
+      "source_sha256": "d7c0bf05aa6ba3b450be856f97c1f682514a41a051e2f47d00a69f38c34eb036",
+      "replay": {
+        "constants": 56,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30DyadicSourceResearch.selected_event_iff_outer"
+      ]
+    },
+    "Rule30LucasMaskResearch": {
+      "source_sha256": "f773b0d2ef207811982f24d29cff55015df7a1b54554448b26b36418d8ecab0b",
+      "replay": {
+        "constants": 12,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30LucasMaskResearch.choose_odd_submask"
+      ]
+    },
+    "Rule30SourceSeriesResearch": {
+      "source_sha256": "9e3735803ecf1c3b12c71233fb77a77bf94b20cdc6322b8eb76127c40d443432",
+      "replay": {
+        "constants": 25,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30SourceSeriesResearch.center_source_sum",
+        "Rule30SourceSeriesResearch.kernel_coeff",
+        "Rule30SourceSeriesResearch.row_succ"
+      ]
+    },
+    "Rule30DyadicSourceSumResearch": {
+      "source_sha256": "a6124014fc8743703199ba7ed65246ec2db7b66451a83b2dd7090c7aea61a74e",
+      "replay": {
+        "constants": 22,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30DyadicSourceSumResearch.center_eq_one_add_deep_sources",
+        "Rule30DyadicSourceSumResearch.shallow_sum",
+        "Rule30DyadicSourceSumResearch.shallow_term_eq"
+      ]
+    }
+  },
+  "bridge_status": "Complete and kernel checked; no shallow-mask-to-full-sum gap remains.",
+  "remaining_problem": "No control of the complete unbounded-depth remainder or eventual nonperiodicity.",
+  "jobs": [
+    "replay-Rule30DyadicSourceResearch",
+    "replay-Rule30LucasMaskResearch",
+    "replay-Rule30SourceSeriesResearch",
+    "replay-Rule30DyadicSourceSumResearch",
+    "green_controls",
+    "deep_channels",
+    "check_catalog"
+  ]
+}
