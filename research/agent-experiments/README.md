@@ -13,6 +13,8 @@ proves that bounded excess above the minimum Golden zero density forces
 eventual period five, giving a weaker sufficient counting target for CQ01.
 It also records the complete numerical search over 65,536 two-state readers
 and the unsuccessful drift searches. The counting target remains unproved.
+Use its [corrected byte manifest](coordinator/20261024-seven/UNIFORM-READERS-CORRECTION.md)
+when auditing the archived worker checkpoints.
 
 The [memory and new counting-target report](coordinator/20261024-seven/MEMORY-AND-NEW-TARGET.md)
 records the larger worker's full kernel checks, a partitioned budget-eight
