@@ -1,0 +1,106 @@
+{
+  "module": "Rule30GoldenBudget8C600Part0313Research",
+  "source_sha256": "ca19c5ca194198cc9658e7016457e6e2c10c1495ec7c686c7dac9e683b555efe",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "machine_label": "G913",
+  "full_problem_solved": false,
+  "build": {
+    "exit_code": 0,
+    "seconds": 4.796,
+    "peak_tree_rss_gib": 1.06,
+    "minimum_free_gib": 40.242,
+    "guard_stop": null,
+    "limits": {
+      "seconds": 300,
+      "rss_gib": 8,
+      "minimum_free_gib": 16
+    }
+  },
+  "replay": {
+    "exit_code": 0,
+    "seconds": 5.205,
+    "peak_tree_rss_gib": 1.505,
+    "minimum_free_gib": 37.817,
+    "guard_stop": null,
+    "limits": {
+      "seconds": 300,
+      "rss_gib": 8,
+      "minimum_free_gib": 16
+    }
+  },
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.cert",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.literal_cert",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.path_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudget8C600Part0313Research.q",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.path_eq",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.literal_cert",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudget8C600Part0313Research.cert",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenBudget8C600Part0313Research",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 5,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "object_hashes": {
+    "Rule30GoldenBudget8C600Part0313Research.olean": "5cce52d788ee699126bbc6d027eb7f69b9d17e10ac328d8a94aaf7196de22ccd"
+  }
+}

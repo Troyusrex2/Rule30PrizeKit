@@ -1,0 +1,62 @@
+{
+  "actual_right_traces_only": true,
+  "both_spatial_zero_edges": true,
+  "contexts": [
+    21,
+    23,
+    27,
+    29,
+    30,
+    42,
+    43,
+    45,
+    46,
+    47,
+    53,
+    54,
+    55,
+    58,
+    59,
+    61
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "training_depths": [
+    6,
+    127
+  ],
+  "heldout_depths": [
+    256,
+    511
+  ],
+  "records": [
+    {
+      "block": 1,
+      "position_parity_counts": false,
+      "matrix_dimension": 4,
+      "contexts": 16,
+      "constraints": 1997,
+      "heldout_edges": 703,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.094
+    },
+    {
+      "block": 1,
+      "position_parity_counts": true,
+      "matrix_dimension": 8,
+      "contexts": 16,
+      "constraints": 1997,
+      "heldout_edges": 703,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.344
+    }
+  ],
+  "homogeneous_no_constant_feature": true,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 1.453
+}

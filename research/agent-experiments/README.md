@@ -8,7 +8,14 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
-The latest [coupled-language and counting report](coordinator/20261024-seven/COUPLED-LANGUAGE.md)
+The [memory and new counting-target report](coordinator/20261024-seven/MEMORY-AND-NEW-TARGET.md)
+records the larger worker's full kernel checks, a partitioned budget-eight
+certificate, and a weaker open target counting both odd and even spatial
+coordinates. It includes an exact obstruction to a restricted count rank
+and new reader, stack and spatial-flux failures. The new counting premises
+remain unproved; this is not a near-complete prize solution.
+
+The [coupled-language and counting report](coordinator/20261024-seven/COUPLED-LANGUAGE.md)
 adds two kernel-checked forbidden words, a checked population certificate,
 and a proved reduction of CQ01 to an explicitly open counting inequality.
 It also preserves the finite language censuses, failed ranking searches and
@@ -289,6 +296,12 @@ at least 2 GiB system memory free, and 300 seconds. Stop only your own process
 tree when a guard triggers. Separate build directories prevent agents from
 clobbering each other. Do not change the computer's configuration or repeat
 Wolfram activation/cloud-login steps.
+
+The isolated 64 GB worker uses the explicit per-experiment limits in the
+[memory report](coordinator/20261024-seven/MEMORY-AND-NEW-TARGET.md): 24 GiB
+for one large probe replay, or three concurrent 8 GiB partition jobs, with
+at least 16 GiB system RAM free. These exceptions do not change the original
+host's limits. Record resource stops separately from successful proof checks.
 
 Local full kernel replay, Wolfram backend verification, human review, kit
 adoption, and a prize award are different statuses. Record the status actually

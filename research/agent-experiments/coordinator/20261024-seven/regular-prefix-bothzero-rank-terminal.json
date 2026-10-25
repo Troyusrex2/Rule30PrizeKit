@@ -1,0 +1,2954 @@
+{
+  "actual_right_traces_only": true,
+  "zero_odd_and_even_edges_only": true,
+  "terminal_onehot_features": true,
+  "training_edges": 2030,
+  "heldout_edges": 693,
+  "training_depths": [
+    6,
+    127
+  ],
+  "heldout_depths": [
+    256,
+    511
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "records": [
+    {
+      "model": 0,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 1,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 2,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 3,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 4,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 5,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 6,
+      "kind": "parity",
+      "reader_states": 2,
+      "variables": 176,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 7,
+      "kind": "last_letter",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 8,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 9,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          3,
+          7,
+          6,
+          3
+        ],
+        [
+          7,
+          6,
+          0,
+          2
+        ],
+        [
+          5,
+          4,
+          7,
+          6
+        ],
+        [
+          0,
+          3,
+          3,
+          5
+        ],
+        [
+          4,
+          5,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          1,
+          4,
+          7
+        ],
+        [
+          6,
+          2,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 10,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          7,
+          2,
+          0,
+          4
+        ],
+        [
+          5,
+          10,
+          2,
+          6
+        ],
+        [
+          0,
+          1,
+          6,
+          3
+        ],
+        [
+          3,
+          5,
+          1,
+          10
+        ],
+        [
+          1,
+          8,
+          5,
+          8
+        ],
+        [
+          6,
+          0,
+          7,
+          9
+        ],
+        [
+          9,
+          7,
+          4,
+          0
+        ],
+        [
+          2,
+          9,
+          8,
+          1
+        ],
+        [
+          10,
+          3,
+          3,
+          5
+        ],
+        [
+          4,
+          6,
+          9,
+          7
+        ],
+        [
+          8,
+          4,
+          10,
+          2
+        ]
+      ]
+    },
+    {
+      "model": 11,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          15,
+          10,
+          0,
+          5
+        ],
+        [
+          10,
+          8,
+          12,
+          8
+        ],
+        [
+          3,
+          0,
+          14,
+          10
+        ],
+        [
+          5,
+          3,
+          1,
+          9
+        ],
+        [
+          0,
+          6,
+          2,
+          15
+        ],
+        [
+          9,
+          14,
+          7,
+          4
+        ],
+        [
+          14,
+          15,
+          3,
+          13
+        ],
+        [
+          12,
+          9,
+          9,
+          11
+        ],
+        [
+          7,
+          1,
+          5,
+          3
+        ],
+        [
+          8,
+          13,
+          11,
+          7
+        ],
+        [
+          6,
+          7,
+          6,
+          1
+        ],
+        [
+          13,
+          11,
+          4,
+          0
+        ],
+        [
+          11,
+          12,
+          8,
+          2
+        ],
+        [
+          4,
+          2,
+          10,
+          14
+        ],
+        [
+          2,
+          5,
+          13,
+          12
+        ],
+        [
+          1,
+          4,
+          15,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 12,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          3,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 13,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          3,
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          7
+        ],
+        [
+          4,
+          4,
+          6,
+          0
+        ],
+        [
+          5,
+          7,
+          4,
+          3
+        ],
+        [
+          6,
+          3,
+          3,
+          5
+        ],
+        [
+          0,
+          5,
+          5,
+          4
+        ],
+        [
+          1,
+          6,
+          1,
+          1
+        ],
+        [
+          7,
+          0,
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 14,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          7,
+          2,
+          7,
+          6
+        ],
+        [
+          6,
+          0,
+          10,
+          5
+        ],
+        [
+          2,
+          6,
+          9,
+          0
+        ],
+        [
+          8,
+          9,
+          8,
+          9
+        ],
+        [
+          0,
+          3,
+          2,
+          7
+        ],
+        [
+          1,
+          1,
+          5,
+          10
+        ],
+        [
+          10,
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          7,
+          3,
+          4
+        ],
+        [
+          3,
+          8,
+          6,
+          8
+        ],
+        [
+          9,
+          10,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 15,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          9,
+          6,
+          7
+        ],
+        [
+          3,
+          15,
+          1,
+          6
+        ],
+        [
+          7,
+          14,
+          14,
+          9
+        ],
+        [
+          8,
+          10,
+          10,
+          5
+        ],
+        [
+          13,
+          5,
+          7,
+          1
+        ],
+        [
+          14,
+          7,
+          8,
+          14
+        ],
+        [
+          12,
+          2,
+          11,
+          4
+        ],
+        [
+          15,
+          4,
+          2,
+          2
+        ],
+        [
+          11,
+          6,
+          15,
+          13
+        ],
+        [
+          5,
+          1,
+          3,
+          8
+        ],
+        [
+          1,
+          8,
+          12,
+          3
+        ],
+        [
+          6,
+          3,
+          0,
+          12
+        ],
+        [
+          2,
+          0,
+          9,
+          0
+        ],
+        [
+          10,
+          11,
+          5,
+          15
+        ],
+        [
+          9,
+          12,
+          13,
+          11
+        ],
+        [
+          4,
+          13,
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "model": 16,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          0,
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 17,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          7,
+          7,
+          5,
+          4
+        ],
+        [
+          4,
+          1,
+          0,
+          6
+        ],
+        [
+          1,
+          2,
+          7,
+          7
+        ],
+        [
+          6,
+          6,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          6,
+          0
+        ],
+        [
+          5,
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          4,
+          3,
+          3
+        ],
+        [
+          0,
+          5,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "model": 18,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          6,
+          10,
+          4,
+          4
+        ],
+        [
+          0,
+          9,
+          7,
+          3
+        ],
+        [
+          2,
+          0,
+          3,
+          5
+        ],
+        [
+          4,
+          8,
+          6,
+          7
+        ],
+        [
+          7,
+          1,
+          9,
+          9
+        ],
+        [
+          5,
+          4,
+          8,
+          0
+        ],
+        [
+          1,
+          7,
+          5,
+          2
+        ],
+        [
+          8,
+          3,
+          10,
+          8
+        ],
+        [
+          10,
+          5,
+          1,
+          10
+        ],
+        [
+          9,
+          6,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 19,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          0,
+          7,
+          5,
+          3
+        ],
+        [
+          11,
+          0,
+          11,
+          10
+        ],
+        [
+          3,
+          12,
+          2,
+          9
+        ],
+        [
+          6,
+          3,
+          9,
+          7
+        ],
+        [
+          9,
+          14,
+          15,
+          15
+        ],
+        [
+          14,
+          15,
+          7,
+          6
+        ],
+        [
+          8,
+          9,
+          6,
+          13
+        ],
+        [
+          7,
+          4,
+          8,
+          2
+        ],
+        [
+          10,
+          6,
+          13,
+          14
+        ],
+        [
+          5,
+          8,
+          14,
+          12
+        ],
+        [
+          2,
+          2,
+          10,
+          8
+        ],
+        [
+          15,
+          11,
+          12,
+          1
+        ],
+        [
+          13,
+          1,
+          0,
+          11
+        ],
+        [
+          4,
+          13,
+          1,
+          5
+        ],
+        [
+          12,
+          5,
+          4,
+          4
+        ],
+        [
+          1,
+          10,
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "model": 20,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          3,
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 21,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          6,
+          1,
+          7,
+          2
+        ],
+        [
+          4,
+          7,
+          3,
+          4
+        ],
+        [
+          1,
+          4,
+          4,
+          7
+        ],
+        [
+          0,
+          0,
+          1,
+          3
+        ],
+        [
+          5,
+          6,
+          2,
+          5
+        ],
+        [
+          3,
+          3,
+          6,
+          6
+        ],
+        [
+          7,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 22,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          6,
+          1,
+          7,
+          9
+        ],
+        [
+          10,
+          3,
+          3,
+          6
+        ],
+        [
+          3,
+          10,
+          10,
+          1
+        ],
+        [
+          7,
+          0,
+          6,
+          2
+        ],
+        [
+          2,
+          7,
+          5,
+          8
+        ],
+        [
+          0,
+          2,
+          8,
+          4
+        ],
+        [
+          5,
+          9,
+          0,
+          7
+        ],
+        [
+          1,
+          8,
+          2,
+          3
+        ],
+        [
+          4,
+          4,
+          4,
+          10
+        ],
+        [
+          9,
+          6,
+          9,
+          0
+        ],
+        [
+          8,
+          5,
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "model": 23,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          5,
+          15,
+          12,
+          13
+        ],
+        [
+          14,
+          1,
+          11,
+          1
+        ],
+        [
+          3,
+          4,
+          4,
+          15
+        ],
+        [
+          7,
+          0,
+          8,
+          7
+        ],
+        [
+          9,
+          11,
+          14,
+          8
+        ],
+        [
+          13,
+          14,
+          9,
+          3
+        ],
+        [
+          4,
+          12,
+          2,
+          9
+        ],
+        [
+          0,
+          2,
+          10,
+          6
+        ],
+        [
+          10,
+          9,
+          6,
+          10
+        ],
+        [
+          8,
+          7,
+          1,
+          2
+        ],
+        [
+          6,
+          5,
+          3,
+          11
+        ],
+        [
+          1,
+          3,
+          0,
+          0
+        ],
+        [
+          11,
+          8,
+          7,
+          14
+        ],
+        [
+          15,
+          6,
+          5,
+          12
+        ],
+        [
+          12,
+          13,
+          13,
+          5
+        ],
+        [
+          2,
+          10,
+          15,
+          4
+        ]
+      ]
+    },
+    {
+      "model": 24,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 25,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          7,
+          5,
+          3,
+          0
+        ],
+        [
+          2,
+          4,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          1,
+          4
+        ],
+        [
+          0,
+          6,
+          5,
+          7
+        ],
+        [
+          1,
+          7,
+          7,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          6
+        ],
+        [
+          6,
+          0,
+          2,
+          5
+        ],
+        [
+          5,
+          2,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "model": 26,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          4,
+          7,
+          7,
+          6
+        ],
+        [
+          9,
+          8,
+          10,
+          5
+        ],
+        [
+          7,
+          10,
+          4,
+          8
+        ],
+        [
+          3,
+          1,
+          0,
+          7
+        ],
+        [
+          8,
+          5,
+          1,
+          9
+        ],
+        [
+          2,
+          4,
+          3,
+          10
+        ],
+        [
+          6,
+          0,
+          2,
+          4
+        ],
+        [
+          5,
+          6,
+          8,
+          2
+        ],
+        [
+          1,
+          3,
+          9,
+          3
+        ],
+        [
+          0,
+          2,
+          5,
+          0
+        ],
+        [
+          10,
+          9,
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 27,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          3,
+          11,
+          9,
+          4
+        ],
+        [
+          14,
+          13,
+          8,
+          3
+        ],
+        [
+          7,
+          1,
+          11,
+          12
+        ],
+        [
+          12,
+          3,
+          6,
+          10
+        ],
+        [
+          1,
+          0,
+          13,
+          1
+        ],
+        [
+          6,
+          12,
+          10,
+          6
+        ],
+        [
+          10,
+          7,
+          0,
+          9
+        ],
+        [
+          8,
+          4,
+          3,
+          5
+        ],
+        [
+          4,
+          15,
+          1,
+          13
+        ],
+        [
+          11,
+          9,
+          5,
+          0
+        ],
+        [
+          5,
+          2,
+          12,
+          11
+        ],
+        [
+          2,
+          10,
+          4,
+          15
+        ],
+        [
+          0,
+          8,
+          2,
+          7
+        ],
+        [
+          9,
+          5,
+          7,
+          14
+        ],
+        [
+          15,
+          14,
+          15,
+          8
+        ],
+        [
+          13,
+          6,
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "model": 28,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          3,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "model": 29,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          2,
+          4,
+          7
+        ],
+        [
+          0,
+          3,
+          3,
+          6
+        ],
+        [
+          2,
+          5,
+          7,
+          5
+        ],
+        [
+          7,
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          6,
+          5,
+          0
+        ],
+        [
+          3,
+          1,
+          2,
+          4
+        ],
+        [
+          6,
+          4,
+          6,
+          1
+        ],
+        [
+          5,
+          7,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 30,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          10,
+          1,
+          5,
+          3
+        ],
+        [
+          2,
+          8,
+          1,
+          2
+        ],
+        [
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          5,
+          5,
+          3,
+          8
+        ],
+        [
+          7,
+          9,
+          6,
+          6
+        ],
+        [
+          9,
+          4,
+          10,
+          1
+        ],
+        [
+          4,
+          0,
+          4,
+          5
+        ],
+        [
+          0,
+          10,
+          0,
+          4
+        ],
+        [
+          1,
+          6,
+          9,
+          7
+        ],
+        [
+          8,
+          2,
+          7,
+          0
+        ],
+        [
+          3,
+          3,
+          2,
+          10
+        ]
+      ]
+    },
+    {
+      "model": 31,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          6,
+          10,
+          7,
+          4
+        ],
+        [
+          5,
+          8,
+          13,
+          5
+        ],
+        [
+          4,
+          14,
+          8,
+          2
+        ],
+        [
+          7,
+          0,
+          11,
+          8
+        ],
+        [
+          10,
+          11,
+          1,
+          10
+        ],
+        [
+          13,
+          2,
+          0,
+          13
+        ],
+        [
+          11,
+          12,
+          4,
+          7
+        ],
+        [
+          9,
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          5,
+          10,
+          3
+        ],
+        [
+          12,
+          9,
+          2,
+          6
+        ],
+        [
+          8,
+          15,
+          5,
+          15
+        ],
+        [
+          2,
+          7,
+          6,
+          9
+        ],
+        [
+          15,
+          6,
+          12,
+          12
+        ],
+        [
+          1,
+          3,
+          15,
+          14
+        ],
+        [
+          3,
+          1,
+          9,
+          0
+        ],
+        [
+          14,
+          13,
+          14,
+          11
+        ]
+      ]
+    },
+    {
+      "model": 32,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 33,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          7,
+          6,
+          3,
+          3
+        ],
+        [
+          4,
+          0,
+          7,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          6
+        ],
+        [
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          1,
+          7,
+          6,
+          0
+        ],
+        [
+          0,
+          2,
+          5,
+          4
+        ],
+        [
+          6,
+          1,
+          1,
+          5
+        ],
+        [
+          5,
+          5,
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "model": 34,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          2,
+          1,
+          7,
+          4
+        ],
+        [
+          10,
+          7,
+          10,
+          3
+        ],
+        [
+          1,
+          6,
+          1,
+          2
+        ],
+        [
+          8,
+          0,
+          9,
+          10
+        ],
+        [
+          7,
+          3,
+          5,
+          9
+        ],
+        [
+          0,
+          2,
+          3,
+          8
+        ],
+        [
+          6,
+          10,
+          2,
+          6
+        ],
+        [
+          9,
+          8,
+          0,
+          0
+        ],
+        [
+          3,
+          9,
+          6,
+          7
+        ],
+        [
+          4,
+          4,
+          4,
+          5
+        ],
+        [
+          5,
+          5,
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 35,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          5,
+          11,
+          15,
+          9
+        ],
+        [
+          10,
+          10,
+          14,
+          8
+        ],
+        [
+          4,
+          5,
+          12,
+          10
+        ],
+        [
+          8,
+          3,
+          5,
+          12
+        ],
+        [
+          6,
+          14,
+          6,
+          0
+        ],
+        [
+          11,
+          13,
+          2,
+          1
+        ],
+        [
+          9,
+          7,
+          13,
+          5
+        ],
+        [
+          1,
+          2,
+          0,
+          4
+        ],
+        [
+          3,
+          12,
+          7,
+          7
+        ],
+        [
+          7,
+          4,
+          11,
+          2
+        ],
+        [
+          0,
+          9,
+          9,
+          13
+        ],
+        [
+          2,
+          15,
+          8,
+          3
+        ],
+        [
+          15,
+          8,
+          4,
+          14
+        ],
+        [
+          14,
+          0,
+          10,
+          15
+        ],
+        [
+          13,
+          1,
+          3,
+          6
+        ],
+        [
+          12,
+          6,
+          1,
+          11
+        ]
+      ]
+    },
+    {
+      "model": 36,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          3,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 37,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          5,
+          1,
+          3,
+          5
+        ],
+        [
+          6,
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          5,
+          6,
+          7
+        ],
+        [
+          0,
+          4,
+          4,
+          1
+        ],
+        [
+          2,
+          7,
+          7,
+          4
+        ],
+        [
+          7,
+          6,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 38,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          2,
+          9,
+          5
+        ],
+        [
+          3,
+          6,
+          1,
+          7
+        ],
+        [
+          10,
+          9,
+          5,
+          4
+        ],
+        [
+          2,
+          3,
+          10,
+          9
+        ],
+        [
+          4,
+          10,
+          8,
+          2
+        ],
+        [
+          7,
+          8,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          7,
+          2,
+          6
+        ],
+        [
+          6,
+          1,
+          3,
+          10
+        ],
+        [
+          9,
+          4,
+          4,
+          3
+        ],
+        [
+          8,
+          5,
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "model": 39,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          15,
+          10,
+          15,
+          2
+        ],
+        [
+          9,
+          9,
+          7,
+          6
+        ],
+        [
+          11,
+          15,
+          4,
+          0
+        ],
+        [
+          2,
+          3,
+          14,
+          10
+        ],
+        [
+          3,
+          8,
+          12,
+          4
+        ],
+        [
+          14,
+          6,
+          13,
+          12
+        ],
+        [
+          5,
+          14,
+          3,
+          7
+        ],
+        [
+          4,
+          0,
+          0,
+          8
+        ],
+        [
+          10,
+          5,
+          1,
+          3
+        ],
+        [
+          13,
+          7,
+          9,
+          14
+        ],
+        [
+          7,
+          2,
+          2,
+          9
+        ],
+        [
+          12,
+          11,
+          5,
+          5
+        ],
+        [
+          8,
+          1,
+          10,
+          11
+        ],
+        [
+          6,
+          12,
+          8,
+          1
+        ],
+        [
+          1,
+          4,
+          6,
+          15
+        ],
+        [
+          0,
+          13,
+          11,
+          13
+        ]
+      ]
+    },
+    {
+      "model": 40,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          2,
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "model": 41,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          6,
+          4,
+          2,
+          4
+        ],
+        [
+          5,
+          0,
+          1,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          0
+        ],
+        [
+          4,
+          1,
+          6,
+          2
+        ],
+        [
+          2,
+          6,
+          0,
+          7
+        ],
+        [
+          3,
+          3,
+          7,
+          5
+        ],
+        [
+          0,
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          7,
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 42,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          7,
+          4,
+          9,
+          5
+        ],
+        [
+          1,
+          7,
+          6,
+          1
+        ],
+        [
+          2,
+          10,
+          1,
+          2
+        ],
+        [
+          4,
+          8,
+          5,
+          8
+        ],
+        [
+          9,
+          5,
+          3,
+          7
+        ],
+        [
+          5,
+          0,
+          0,
+          10
+        ],
+        [
+          6,
+          2,
+          10,
+          0
+        ],
+        [
+          10,
+          3,
+          7,
+          4
+        ],
+        [
+          3,
+          9,
+          4,
+          9
+        ],
+        [
+          0,
+          6,
+          8,
+          6
+        ],
+        [
+          8,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "model": 43,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          11,
+          2,
+          0,
+          15
+        ],
+        [
+          13,
+          9,
+          8,
+          5
+        ],
+        [
+          3,
+          14,
+          10,
+          6
+        ],
+        [
+          1,
+          0,
+          13,
+          12
+        ],
+        [
+          5,
+          1,
+          9,
+          9
+        ],
+        [
+          8,
+          15,
+          1,
+          14
+        ],
+        [
+          14,
+          13,
+          15,
+          8
+        ],
+        [
+          4,
+          5,
+          5,
+          3
+        ],
+        [
+          12,
+          11,
+          12,
+          13
+        ],
+        [
+          0,
+          8,
+          6,
+          11
+        ],
+        [
+          15,
+          4,
+          11,
+          4
+        ],
+        [
+          7,
+          7,
+          4,
+          2
+        ],
+        [
+          6,
+          6,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          14,
+          7
+        ],
+        [
+          10,
+          12,
+          7,
+          10
+        ],
+        [
+          9,
+          10,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 44,
+      "kind": "permutation",
+      "reader_states": 4,
+      "variables": 336,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          1,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "model": 45,
+      "kind": "permutation",
+      "reader_states": 8,
+      "variables": 656,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "transition_table": [
+        [
+          7,
+          4,
+          6,
+          4
+        ],
+        [
+          6,
+          2,
+          0,
+          3
+        ],
+        [
+          4,
+          7,
+          7,
+          2
+        ],
+        [
+          0,
+          1,
+          3,
+          5
+        ],
+        [
+          5,
+          3,
+          5,
+          0
+        ],
+        [
+          2,
+          6,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          7
+        ],
+        [
+          3,
+          5,
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 46,
+      "kind": "permutation",
+      "reader_states": 11,
+      "variables": 896,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          7,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          4,
+          0,
+          2
+        ],
+        [
+          8,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          9,
+          2,
+          8
+        ],
+        [
+          1,
+          6,
+          10,
+          7
+        ],
+        [
+          9,
+          7,
+          7,
+          3
+        ],
+        [
+          10,
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          4
+        ],
+        [
+          4,
+          10,
+          4,
+          10
+        ],
+        [
+          5,
+          1,
+          5,
+          9
+        ],
+        [
+          2,
+          0,
+          9,
+          6
+        ]
+      ]
+    },
+    {
+      "model": 47,
+      "kind": "permutation",
+      "reader_states": 16,
+      "variables": 1296,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "transition_table": [
+        [
+          11,
+          13,
+          12,
+          12
+        ],
+        [
+          4,
+          11,
+          1,
+          15
+        ],
+        [
+          10,
+          14,
+          15,
+          7
+        ],
+        [
+          0,
+          5,
+          7,
+          8
+        ],
+        [
+          7,
+          9,
+          5,
+          10
+        ],
+        [
+          5,
+          1,
+          0,
+          13
+        ],
+        [
+          8,
+          12,
+          13,
+          9
+        ],
+        [
+          6,
+          8,
+          6,
+          3
+        ],
+        [
+          1,
+          10,
+          2,
+          2
+        ],
+        [
+          14,
+          6,
+          10,
+          0
+        ],
+        [
+          12,
+          15,
+          9,
+          5
+        ],
+        [
+          13,
+          7,
+          8,
+          11
+        ],
+        [
+          9,
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          3,
+          4
+        ],
+        [
+          15,
+          2,
+          11,
+          14
+        ],
+        [
+          2,
+          4,
+          14,
+          6
+        ]
+      ]
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 20.094
+}

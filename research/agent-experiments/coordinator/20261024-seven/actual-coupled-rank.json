@@ -1,0 +1,44 @@
+{
+  "actual_right_dynamics_enforced": true,
+  "training_initial_rows": 68,
+  "heldout_initial_rows": 13,
+  "training_depths": [
+    6,
+    127
+  ],
+  "heldout_depths": [
+    256,
+    511
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "records": [
+    {
+      "features": "letter_counts",
+      "phases": 16,
+      "constraints": 4007,
+      "variables": 80,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "heldout_edges": 1525,
+      "actual_dominance_witness": null
+    },
+    {
+      "features": "nonlocal_stack_and_counts",
+      "phases": 16,
+      "constraints": 4007,
+      "variables": 1040,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "heldout_edges": 1525,
+      "actual_dominance_witness": null
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 22.625
+}

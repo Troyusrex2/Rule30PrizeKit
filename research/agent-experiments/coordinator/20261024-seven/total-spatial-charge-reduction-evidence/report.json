@@ -1,0 +1,150 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "4f3ed2b28d8b81f6cd0b81d54234dc1eb3d82887f7e815afb960d1a5bdef590f",
+  "build_seconds": 6.344,
+  "replay_seconds": 10.046,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.CQ01_of_no00_spatial_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.CQ01_of_spatial_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TotalSpatialChargeReductionResearch.No00SpatialCharge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TotalSpatialChargeReductionResearch.SpatialCharge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount_le_cutoff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount_le_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.not_finSupp_psi_of_spatial_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount_le_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.blackCount_le_cutoff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.not_finSupp_psi_of_spatial_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.CQ01_of_spatial_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TotalSpatialChargeReductionResearch.CQ01_of_no00_spatial_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30TotalSpatialChargeReductionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 23,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

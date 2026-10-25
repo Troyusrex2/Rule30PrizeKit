@@ -1,0 +1,66 @@
+{
+  "module": "Rule30GoldenCompactJoinSmoke4Research",
+  "source_sha256": "2471eb6582fcb40bb7bf5cf696794c367e284f8174631c91e9326b0b099a3097",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "full_problem_solved": false,
+  "build": {
+    "exit_code": 0,
+    "seconds": 0.502,
+    "peak_tree_rss_gib": 0.25,
+    "minimum_free_gib": 40.651,
+    "guard_stop": null,
+    "limits": {
+      "seconds": 300,
+      "rss_gib": 4,
+      "minimum_free_gib": 16
+    }
+  },
+  "replay": {
+    "exit_code": 0,
+    "seconds": 1.137,
+    "peak_tree_rss_gib": 0.712,
+    "minimum_free_gib": 39.28,
+    "guard_stop": null,
+    "limits": {
+      "seconds": 300,
+      "rss_gib": 4,
+      "minimum_free_gib": 16
+    }
+  },
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactJoinSmoke4Research.joined",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactJoinSmoke4Research.joined",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenCompactJoinSmoke4Research",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 3,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

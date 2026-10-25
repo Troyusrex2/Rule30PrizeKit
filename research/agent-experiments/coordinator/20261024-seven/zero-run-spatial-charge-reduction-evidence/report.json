@@ -1,0 +1,107 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "30775071bc4008620ed07a8a3445a7cba134b3dd9e5fb9dcb0cb57fa7525662e",
+  "build_seconds": 6.312,
+  "replay_seconds": 9.469,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.CQ01_of_zero_run_spatial_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.ZeroRunSpatialCharge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.no00_charge_of_zero_run_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns_eq_zeros_of_no00",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.zeroRuns_eq_zeros_of_no00",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.no00_charge_of_zero_run_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ZeroRunSpatialChargeReductionResearch.CQ01_of_zero_run_spatial_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ZeroRunSpatialChargeReductionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 15,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

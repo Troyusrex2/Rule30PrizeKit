@@ -1,0 +1,45 @@
+{
+  "actual_right_dynamics_enforced": true,
+  "zero_odd_and_even_edges_only": true,
+  "training_initial_rows": 68,
+  "heldout_initial_rows": 13,
+  "training_depths": [
+    6,
+    127
+  ],
+  "heldout_depths": [
+    256,
+    511
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "records": [
+    {
+      "features": "letter_counts",
+      "phases": 16,
+      "constraints": 2030,
+      "variables": 80,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "heldout_edges": 693,
+      "actual_dominance_witness": null
+    },
+    {
+      "features": "nonlocal_stack_and_counts",
+      "phases": 16,
+      "constraints": 2030,
+      "variables": 1040,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)",
+      "heldout_edges": 693,
+      "actual_dominance_witness": null
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 9.641
+}

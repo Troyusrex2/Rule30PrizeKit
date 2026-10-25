@@ -1,0 +1,54 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "69e061da4c98fe1c753c686be5a6beb461ef2690c7c798aaac46ebd979cfd99d",
+  "build_seconds": 6.313,
+  "replay_seconds": 10.0,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30BothZeroCountRankObstructionResearch.energy",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BothZeroCountRankObstructionResearch.no_natural_count_rank_for_five_constraints",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BothZeroCountRankObstructionResearch.energy.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BothZeroCountRankObstructionResearch.no_natural_count_rank_for_five_constraints",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30BothZeroCountRankObstructionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 4,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

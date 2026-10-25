@@ -1,0 +1,57 @@
+{
+  "machine_label": "G913",
+  "module": "Rule30GoldenCompactLeafProbeResearch",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "source_sha256": "ecf810db4f07da8884e074d53ae440ab65e024a89f3a52a4ce971cbc18f83f2b",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "object_hashes": {
+    "Rule30GoldenCompactLeafProbeResearch.olean": "0e3bd3a1c934f3a18946c13768fcfa3cf9d1965fffff8ee468aae3d6e40e4bd5"
+  },
+  "full_problem_solved": false,
+  "replay": {
+    "exit_code": 0,
+    "seconds": 88.584,
+    "peak_tree_rss_gib": 16.379,
+    "minimum_free_gib": 29.456,
+    "guard_stop": null,
+    "limits": {
+      "seconds": 300,
+      "rss_gib": 24,
+      "minimum_free_gib": 16
+    }
+  },
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactLeafProbeResearch.cert",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactLeafProbeResearch.cert",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenCompactLeafProbeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 2,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

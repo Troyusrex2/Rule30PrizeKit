@@ -1,0 +1,77 @@
+{
+  "family": "signed column-window flux with finite spatial telescope",
+  "records": [
+    {
+      "window": 1,
+      "variables": 4,
+      "constraints": 5588,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "window": 2,
+      "variables": 25,
+      "constraints": 5588,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "window": 3,
+      "variables": 110,
+      "constraints": 5588,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "window": 4,
+      "variables": 451,
+      "constraints": 5588,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "training_max_residual": 1.3322676295501878e-15,
+      "heldout_length7_violations": 1318,
+      "first_failures": [
+        {
+          "word": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual": 0.06554446305959
+        },
+        {
+          "word": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            3
+          ],
+          "residual": 0.07751027246380238
+        },
+        {
+          "word": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            2
+          ],
+          "residual": 0.05291330370228298
+        }
+      ]
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_bound_proved": false,
+  "full_problem_solved": false,
+  "seconds": 0.641
+}

@@ -1,0 +1,112 @@
+{
+  "actual_right_traces_only": true,
+  "both_spatial_zero_edges": true,
+  "contexts": [
+    21,
+    23,
+    27,
+    29,
+    30,
+    42,
+    43,
+    45,
+    46,
+    47,
+    53,
+    54,
+    55,
+    58,
+    59,
+    61
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "training_depths": [
+    6,
+    127
+  ],
+  "heldout_depths": [
+    256,
+    511
+  ],
+  "records": [
+    {
+      "block": 1,
+      "position_parity_counts": false,
+      "matrix_dimension": 5,
+      "contexts": 16,
+      "constraints": 1997,
+      "heldout_edges": 703,
+      "solver_status": "optimal",
+      "solver_seconds": 0.219,
+      "training_max_residual": 2.0840673187194625e-08,
+      "minimum_eigenvalue": -1.97515810681354e-08,
+      "heldout_violations": 282,
+      "first_failures": [
+        {
+          "width": 258,
+          "residual": 0.066043667947973
+        },
+        {
+          "width": 259,
+          "residual": 0.53083782788097
+        },
+        {
+          "width": 265,
+          "residual": 1.287844706098876
+        },
+        {
+          "width": 270,
+          "residual": 1.3138880901677732
+        },
+        {
+          "width": 279,
+          "residual": 0.005577749903952434
+        }
+      ]
+    },
+    {
+      "block": 1,
+      "position_parity_counts": true,
+      "matrix_dimension": 9,
+      "contexts": 16,
+      "constraints": 1997,
+      "heldout_edges": 703,
+      "solver_status": "optimal_inaccurate",
+      "solver_seconds": 3.828,
+      "training_max_residual": 2.0536901175205458e-06,
+      "minimum_eigenvalue": -2.1349246575287307e-06,
+      "heldout_violations": 437,
+      "first_failures": [
+        {
+          "width": 258,
+          "residual": 1.255772906693037
+        },
+        {
+          "width": 265,
+          "residual": 1.7049028734630336
+        },
+        {
+          "width": 270,
+          "residual": 1.869147038885222
+        },
+        {
+          "width": 279,
+          "residual": 0.0017109260534502457
+        },
+        {
+          "width": 280,
+          "residual": 1.9952857044178471
+        }
+      ]
+    }
+  ],
+  "homogeneous_no_constant_feature": false,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 5.531
+}

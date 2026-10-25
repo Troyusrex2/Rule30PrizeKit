@@ -1,0 +1,42 @@
+{
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true,
+    "inverse_pair_insertion_controls": 208
+  },
+  "training_widths": [
+    16,
+    256
+  ],
+  "heldout_widths": [
+    512,
+    1024
+  ],
+  "feature_family": "nonnegative stack length, cyclic norm, prefix and suffix maxima",
+  "feature_count": 61,
+  "records": [
+    {
+      "block": 1,
+      "phases": 16,
+      "constraints": 1712,
+      "variables": 976,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "heldout_edges": 629
+    },
+    {
+      "block": 4,
+      "phases": 16,
+      "constraints": 583,
+      "variables": 976,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "heldout_edges": 247
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 11.641
+}
