@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Upstream contribution:** [PR21](https://github.com/WolframInstitute/Rule30PrizeKit/pull/21) contains the uniform conservation proof as a core catalog module. [Build, full replay and scope](coordinator/20261025-conservation-catalog/REPORT.md). Open for review; absent from the current reference kit.
+
 **Latest checked experiment:** [a strict cycle rules out one causal block-rank template](coordinator/20261025-causal-block-cycle/REPORT.md), including ordinal-valued ranks. Larger contexts and cross-block credit remain open.
 
 **Previous checked additions:** [uniform conservation classification and exact ancestry frontier](coordinator/20261025-greedy-and-conservation/REPORT.md).
