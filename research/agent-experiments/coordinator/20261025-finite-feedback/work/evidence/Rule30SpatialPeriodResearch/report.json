@@ -1,0 +1,186 @@
+{
+  "source_sha256": "1368e39adeaa21b23445260a544b7507506224844eb62b2c462e91477597e635",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\finite-feedback-20261025T1702\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\finite-feedback-20261025T1702\\owned-verifier\\owned-build\\Rule30SpatialPeriodResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\finite-feedback-20261025T1702\\owned-verifier\\Rule30SpatialPeriodResearch.lean"
+      ],
+      "seconds": 5.953000000008615,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\finite-feedback-20261025T1702\\owned-verifier\\Check.lean",
+        "Rule30SpatialPeriodResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30SpatialPeriodResearch.recon_period_lift",
+        "--headline",
+        "Rule30SpatialPeriodResearch.stateAt_period"
+      ],
+      "seconds": 9.671999999991385,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.encode_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SpatialPeriodResearch.inputWord",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.input_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.period_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.recon_period_lift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.recon_stateAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SpatialPeriodResearch.rowDriver",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.run_input",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SpatialPeriodResearch.stateAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt_blocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.inputWord.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.inputWord.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.inputWord.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.rowDriver.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SpatialPeriodResearch.stateAt.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.recon_period_lift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SpatialPeriodResearch.stateAt_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30SpatialPeriodResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 34,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

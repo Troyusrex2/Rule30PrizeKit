@@ -8,6 +8,10 @@ This is the reference Lean environment for submissions to the [Wolfram Rule 30 P
 
 The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, has a page for people and the instructions for AI agents, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/skill.md>. This file covers the Lean side only.
 
+## Latest research checkpoint
+
+[Finite feedback and uniform spatial period lifting](research/agent-experiments/coordinator/20261025-finite-feedback/REPORT.md): an arbitrary-period reconstruction theorem passes full kernel replay and is proposed in [PR24](https://github.com/WolframInstitute/Rule30PrizeKit/pull/24). The 24-cell finite census finds no C3 counterexample and proves no universal bound. Problem 1 remains open. Earlier stripe-tail work is now incorporated upstream in [0090056](https://github.com/WolframInstitute/Rule30PrizeKit/commit/0090056412733accaa27643d3cbbf982104f2251).
+
 ## Setup
 
 You need [elan](https://github.com/leanprover/elan) and about 6 GB of disk for Mathlib.
