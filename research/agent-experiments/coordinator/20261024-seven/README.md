@@ -1,5 +1,11 @@
 # Seven-response experiment record
 
+The [uniform integer-geometric finite-image obstruction](INTEGER-GEOMETRIC-FINITE-IMAGE-BARRIER.md)
+extends the signed prefix-rank barrier to every integer scale at least one.
+Four new modules passed full kernel replay of 126 owned declarations. The
+specified single-background reader is ruled out on the stated domain;
+other readers and the prize question remain open.
+
 A [signed prefix-rank obstruction on actual finite images](FINITE-IMAGE-PREFIX-BARRIER.md)
 removes the earlier nonimage-row caveat at scale one. Its three new modules
 passed full kernel replay of 200 owned declarations. The report also records

@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.gauge_suffix","standardAxioms":true},{"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.score_shifted","standardAxioms":true},{"kind":"def","name":"Rule30WeightedSuffixPumpResearch.shiftedCost","standardAxioms":true},{"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.suffix_loop_nonnegative","standardAxioms":true},{"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.shiftedCost.eq_1","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.score_shifted","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.gauge_suffix","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30WeightedSuffixPumpResearch.suffix_loop_nonnegative","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30WeightedSuffixPumpResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":9,"ok":true},"verdict":"pass","verifiedTargets":[]}
