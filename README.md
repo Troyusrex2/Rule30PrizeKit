@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Position-dependent scores and finite physical XOR rectangles](research/agent-experiments/coordinator/20261025-staggered-charges/REPORT.md): a uniform one-cell parity obstruction and an all-time counterexample to a four-history rigidity shortcut. Both sources pass full kernel replay. The canonical center problem remains open.
+
 [All-width product parity conservation](research/agent-experiments/coordinator/20261025-product-parity/REPORT.md), proposed in [PR27](https://github.com/WolframInstitute/Rule30PrizeKit/pull/27): every cyclic local parity charge for four Rule30 updates is a constant plus a spatial coboundary, at every window width and for any family of Boolean coordinates. Core-only full kernel replay passes. This rules out a conservation strategy, not the prize problem.
 
 [Common-gauge certificates and a history-assumption obstruction](research/agent-experiments/coordinator/20261025-common-gauge/REPORT.md): independent finite replay of 1,120 certificates at 820 distinct canonical time pairs; an exact finite counterexample to weakening a proposed short deadline to support geometry and four edge cells. **No unbounded observer theorem, new Lean result or prize solution is claimed.**

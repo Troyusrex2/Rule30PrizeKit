@@ -1,0 +1,334 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\staggered-charge-20261025T2150\owned-verifier\Rule30WeightedCellResearch.lean:69:25: error: unsolved goals
+case false
+h : Nat → Bool → Bool → Fin 2
+⊢ chargeAux h 0
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                false]].getD
+          ↑0 [])
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                false]].getD
+          ↑(if false = true then 2 else 0) []) +
+      (chargeAux h 0
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  false]].getD
+            ↑1 [])
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  false]].getD
+            ↑(if false = true then 2 else 0) []) +
+        (chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑2 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑(if false = true then 2 else 0) []) +
+          chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑3 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑(if false = true then 2 else 0) []))) =
+    0
+
+case true
+h : Nat → Bool → Bool → Fin 2
+⊢ chargeAux h 0
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                false]].getD
+          ↑0 [])
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                false],
+              [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                false]].getD
+          ↑(if True then 2 else 0) []) +
+      (chargeAux h 0
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  false]].getD
+            ↑1 [])
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, false, false, false, false, true, false, false, false,
+                  false],
+                [false, false, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  false]].getD
+            ↑(if True then 2 else 0) []) +
+        (chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑2 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑(if True then 2 else 0) []) +
+          chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑3 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, true, false, false, false, false, false, false, false, false, false,
+                    false, false],
+                  [false, false, false, false, false, false, false, false, false, false, false, true, false, false,
+                    false, false],
+                  [false, false, false, false, true, false, false, false, false, false, false, true, false, false,
+                    false, false]].getD
+              ↑(if True then 2 else 0) []))) =
+    0
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\staggered-charge-20261025T2150\owned-verifier\Rule30WeightedCellResearch.lean:70:71: warning: This simp argument is unused:
+  chargeAux
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mixedBefore, selector, before, beforeRows, charge]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\staggered-charge-20261025T2150\owned-verifier\Rule30WeightedCellResearch.lean:76:45: error: unsolved goals
+case false
+h : Nat → Bool → Bool → Fin 2
+⊢ chargeAux h 0
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                true],
+              [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                true]].getD
+          ↑0 [])
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                true],
+              [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                true]].getD
+          ↑(if false = true then 2 else 0) []) +
+      (chargeAux h 0
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                  true],
+                [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  true]].getD
+            ↑1 [])
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                  true],
+                [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  true]].getD
+            ↑(if false = true then 2 else 0) []) +
+        (chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑2 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑(if false = true then 2 else 0) []) +
+          chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑3 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑(if false = true then 2 else 0) []))) =
+    h 7 false false + h 7 true false
+
+case true
+h : Nat → Bool → Bool → Fin 2
+⊢ chargeAux h 0
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                true],
+              [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                true]].getD
+          ↑0 [])
+        ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                false],
+              [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                false],
+              [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                true],
+              [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                true]].getD
+          ↑(if True then 2 else 0) []) +
+      (chargeAux h 0
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                  true],
+                [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  true]].getD
+            ↑1 [])
+          ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                  false],
+                [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                  false],
+                [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                  true],
+                [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                  true]].getD
+            ↑(if True then 2 else 0) []) +
+        (chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑2 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑(if True then 2 else 0) []) +
+          chargeAux h 0
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑3 [])
+            ([[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+                    false],
+                  [true, true, false, false, true, false, false, false, true, false, false, false, false, false, false,
+                    false],
+                  [false, false, false, false, false, false, false, true, true, false, false, true, false, false, false,
+                    true],
+                  [true, true, false, false, true, false, false, false, false, false, false, true, false, false, false,
+                    true]].getD
+              ↑(if True then 2 else 0) []))) =
+    h 7 false true + h 7 true true
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\staggered-charge-20261025T2150\owned-verifier\Rule30WeightedCellResearch.lean:77:68: warning: This simp argument is unused:
+  chargeAux
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mixedAfter, selector, after, afterRows, charge]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

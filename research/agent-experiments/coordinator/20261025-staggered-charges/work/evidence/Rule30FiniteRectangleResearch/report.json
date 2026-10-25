@@ -1,0 +1,313 @@
+{
+  "source_sha256": "655544a7825e5351918920364fa73a5cce207d9b0ddccb260e9a53f4a72ddbab",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\staggered-charge-20261025T2150\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\staggered-charge-20261025T2150\\owned-verifier\\owned-build\\Rule30FiniteRectangleResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\staggered-charge-20261025T2150\\owned-verifier\\Rule30FiniteRectangleResearch.lean"
+      ],
+      "seconds": 6.062000000005355,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\staggered-charge-20261025T2150\\owned-verifier\\Check.lean",
+        "Rule30FiniteRectangleResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30FiniteRectangleResearch.finite_rectangle",
+        "--headline",
+        "Rule30FiniteRectangleResearch.physical_step",
+        "--headline",
+        "Rule30FiniteRectangleResearch.initial_support",
+        "--headline",
+        "Rule30FiniteRectangleResearch.initial_distinct",
+        "--headline",
+        "Rule30FiniteRectangleResearch.two_prefix"
+      ],
+      "seconds": 9.890999999974156,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.even_shape",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.evol_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.finiteStart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.finite_rectangle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.initial_distinct",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.initial_support",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.march",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.march_true_ge3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.nextTail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.odd_shape",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.pair_difference_independent_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.physical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.physical_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix_true_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.tailEvol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.two_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.wall",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.wall_march",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.evol.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.evol.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.evol.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.evol.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.finiteStart.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.march.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.march.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.march.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.march.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.nextTail.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.physical.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix.eq_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteRectangleResearch.seedPrefix.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.wall.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.finite_rectangle",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.physical_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.initial_support",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.initial_distinct",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteRectangleResearch.two_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FiniteRectangleResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 72,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
