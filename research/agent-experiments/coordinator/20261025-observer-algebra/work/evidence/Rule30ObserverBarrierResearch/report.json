@@ -1,0 +1,631 @@
+{
+  "source_sha256": "9ebc49b9bbe7b9b53a062b278590f94add3b4b1272d674518f1f57bf5999606e",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\observer-algebra-20261025T1910\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\observer-algebra-20261025T1910\\owned-verifier\\owned-build\\Rule30ObserverBarrierResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\observer-algebra-20261025T1910\\owned-verifier\\Rule30ObserverBarrierResearch.lean"
+      ],
+      "seconds": 7.10999999998603,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\observer-algebra-20261025T1910\\owned-verifier\\Check.lean",
+        "Rule30ObserverBarrierResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ObserverBarrierResearch.unobservable",
+        "--headline",
+        "Rule30ObserverBarrierResearch.H_any_gauge",
+        "--headline",
+        "Rule30ObserverBarrierResearch.H_center",
+        "--headline",
+        "Rule30ObserverBarrierResearch.backgrounds_vacuum",
+        "--headline",
+        "Rule30ObserverBarrierResearch.recombination_is_not_physical",
+        "--headline",
+        "Rule30ObserverBarrierResearch.actual_center_diverges",
+        "--headline",
+        "Rule30ObserverBarrierResearch.curvature",
+        "--headline",
+        "Rule30ObserverBarrierResearch.initial_subset",
+        "--headline",
+        "Rule30ObserverBarrierResearch.backgrounds_no_left_bound",
+        "--headline",
+        "Rule30ObserverBarrierResearch.Front.mode_left_edge",
+        "--headline",
+        "Rule30ObserverBarrierResearch.Front.actual_difference"
+      ],
+      "seconds": 10.812000000005355,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.A",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.B",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.H",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_any_gauge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_wedge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.actual_center_diverges",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.addEvol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.add_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.add_reflect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.backgrounds_no_left_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.backgrounds_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.backgrounds_vacuum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.curvature",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.finite_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.gaugeEvol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gaugeEvol_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gauge_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.gauged",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.h0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.h1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h1_reflect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.h2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h2_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h2_reflect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.image",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.image0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.image_reflect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.initial_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.lin",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.lin_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.lin_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.mix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.mix_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.pair_difference_gauged",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.phase_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.recombination_is_not_physical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.run0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run0_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run0_wedge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run_wedge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.shifted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.source_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.source_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.unobservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.wedge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.wedge_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.A.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.B.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.actual_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.Front.mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.mode_left_edge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.Front.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.H.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.addEvol.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.addEvol.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.addEvol.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ObserverBarrierResearch.addEvol.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.delta.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gaugeEvol.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gaugeEvol.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gaugeEvol.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.gauged.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h0.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h1.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.h2.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.image.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.image0.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.lin.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.mix.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.run0.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.shifted.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.wedge.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.mode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.mode.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.mode.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.step.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.unobservable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_any_gauge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.H_center",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.backgrounds_vacuum",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.recombination_is_not_physical",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.actual_center_diverges",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.curvature",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.initial_subset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.backgrounds_no_left_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.mode_left_edge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ObserverBarrierResearch.Front.actual_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ObserverBarrierResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 185,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

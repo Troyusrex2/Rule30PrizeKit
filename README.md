@@ -10,9 +10,9 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
-[Exact finite source observers](research/agent-experiments/coordinator/20261025-source-observer/REPORT.md): a new research lead with 2,891 independently checked certificates, explicit deadline counterexamples and solver timeouts. **The required universal theorem and Problem1 remain open; this is not a new Lean result.**
+[Divided-difference observers and an all-time warning](research/agent-experiments/coordinator/20261025-observer-algebra/REPORT.md), proposed in [PR26](https://github.com/WolframInstitute/Rule30PrizeKit/pull/26): exact physical-pair representation, a moving-frontier theorem, and a family of gauge-invariant auxiliary modes that stay invisible forever in infinite initial backgrounds. Full kernel replay passes. **This does not refute the finite-background observer conjecture or solve Problem1.**
 
-The latest proved contribution is [delayed defects and unbounded spatial periods](research/agent-experiments/coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25). Every member is itself spatially periodic. Its evaluated essay draft awaits human review and has not been submitted. [Previous feedback and period-lifting work](research/agent-experiments/coordinator/20261025-finite-feedback/REPORT.md) is retained unchanged.
+[Earlier exact source-observer experiments](research/agent-experiments/coordinator/20261025-source-observer/REPORT.md) remain finite evidence. [Delayed defects and unbounded spatial periods](research/agent-experiments/coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25), concern synthetic starts whose members are themselves periodic. Its essay is being repackaged with the skill-required root import before human review; no new essay has been submitted.
 
 ## Setup
 

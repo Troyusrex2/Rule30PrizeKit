@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New kernel-checked observer tools and limitation:** [PR26 and exact proof](coordinator/20261025-observer-algebra/REPORT.md). Every gauge represents the actual pair difference, and a left-edge theorem retains initial support geometry. A uniform all-time counterexample uses infinite initial backgrounds, so the original finite-background conjecture and Problem1 remain open. Includes the exact nonlinear recombination error and a comparison figure.
+
 **Latest research lead, not a Lean theorem:** [exact finite source observers](coordinator/20261025-source-observer/REPORT.md). Independent backward checks validate 2,891 finite certificates; existence for every canonical time-shift pair is unproved. Includes an explicit failed deadline estimate and all solver timeouts.
 
 **Latest proved contribution:** [delayed defects and unbounded spatial periods](coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25). A uniform quantitative result for synthetic starts; every member is itself periodic. The canonical center problem remains open.
