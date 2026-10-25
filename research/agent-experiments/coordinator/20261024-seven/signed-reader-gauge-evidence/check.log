@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30SignedReaderGaugeResearch.energy","standardAxioms":true},{"kind":"def","name":"Rule30SignedReaderGaugeResearch.gaugeCost","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.gauge_energy","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.initial_energy_preserved","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.energy.eq_1","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.energy.eq_2","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.energy.eq_def","standardAxioms":true},{"kind":"def","name":"Rule30SignedReaderGaugeResearch.energy.match_1","standardAxioms":true},{"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.gaugeCost.eq_1","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.gauge_energy","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30SignedReaderGaugeResearch.initial_energy_preserved","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30SignedReaderGaugeResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":17,"ok":true},"verdict":"pass","verifiedTargets":[]}

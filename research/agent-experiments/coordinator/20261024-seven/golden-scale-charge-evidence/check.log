@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.CQ01_of_scale_charges","standardAxioms":true},{"kind":"def","name":"Rule30GoldenScaleChargeResearch.ScaleCharge","standardAxioms":true},{"kind":"def","name":"Rule30GoldenScaleChargeResearch.ScaleCharges","standardAxioms":true},{"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.not_finSupp_psi_of_scale_charges","standardAxioms":true},{"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.scale_charges_of_critical_charge","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.scale_charges_of_critical_charge","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.not_finSupp_psi_of_scale_charges","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GoldenScaleChargeResearch.CQ01_of_scale_charges","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30GoldenScaleChargeResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":9,"ok":true},"verdict":"pass","verifiedTargets":[]}
