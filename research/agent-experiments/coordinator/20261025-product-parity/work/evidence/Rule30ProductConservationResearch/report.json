@@ -1,0 +1,651 @@
+{
+  "source_sha256": "42950a6b85e7bbe227ff544affd0eb1bd2cfe452a14a86992564bb2317423bf2",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\inverse-seam-20261025T2110\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\inverse-seam-20261025T2110\\owned-verifier\\owned-build\\Rule30ProductConservationResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\inverse-seam-20261025T2110\\owned-verifier\\Rule30ProductConservationResearch.lean"
+      ],
+      "seconds": 17.453000000008615,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\inverse-seam-20261025T2110\\owned-verifier\\Check.lean",
+        "Rule30ProductConservationResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ProductConservationResearch.all_groups",
+        "--headline",
+        "Rule30ProductConservationResearch.paired_F2_exact",
+        "--headline",
+        "Rule30ProductConservationResearch.paired_F2",
+        "--headline",
+        "Rule30ProductConservationResearch.paired_F2_semantics"
+      ],
+      "seconds": 17.95299999997951,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cell",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.all_groups",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.all_widths",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.bxor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.bxor_cancel",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.bxor_self",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.bxor_zero_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2_exact",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2_semantics",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.zeroCell",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.cyclic_conserved_iff_trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.gradient_weight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.local_conserved_cyclic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.local_conserved_iff_trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.run_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Classification.trivial_conserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.Conserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.conserved_rectangle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.four",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.getD_append_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.image",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image_nine",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image_preimage",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image_rectangle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image_white_suffix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.potential",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.preimage",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.preimage_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.preimage_suffix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.q",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.q9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.q9_diag",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.q9_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.q9_right_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.q_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.q_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.rule",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.scalarQ9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.scalarShrink",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.scalar_diag",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.scalar_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.scalar_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.shorten_density",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.shorter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.shrink",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.Balanced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.CyclicConserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.balanced_gradient",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.cyclic_conserved_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.cyclic_conserved_trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run_formula",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run_reset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.shift_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.weight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.weight_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.conserved_of_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.crop_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.crop_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.crop_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.crop_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Descent.reducedPotential",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.shorten_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.shorter_conserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.tail_take_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Descent.transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.transport_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.transport_last_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Descent.transport_reduced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Triviality.Trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Triviality.conserved_trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Triviality.trivial_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.conserved_one_constant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.conserved_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Word.crop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.crop_outer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.four_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.four_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.image_append_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.image_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.image_eq_four",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.image_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.image_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.shrink_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.four.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.image.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.image.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.preimage.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.preimage.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Corner.preimage.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.scalarShrink.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Corner.shrink.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ProductConservationResearch.Cycle.run.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.shift.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.weight.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.weight.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Cycle.weight.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.Word.crop.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.all_groups",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2_exact",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ProductConservationResearch.paired_F2_semantics",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ProductConservationResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 189,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New uniform theorem:** [product parity classification and checked controls](coordinator/20261025-product-parity/REPORT.md), [PR27](https://github.com/WolframInstitute/Rule30PrizeKit/pull/27). All widths, mixed histories and no supplied-current hypothesis; 207 core declarations pass full replay. Includes the arbitrary-group research companion and precise failed inverse bounds. Problem1 remains open.
+
 **New finite common-field investigation:** [certificates and scope counterexamples](coordinator/20261025-common-gauge/REPORT.md). All 820 canonical pairs through older time 40 admit independently checked finite certificates in the tested construction. Support-only and four-edge-cell shortcuts to the short deadline are refuted by actual finite trace collisions. These are Python experiments; the full unbounded argument remains open.
 
 **New kernel-checked observer tools and limitation:** [PR26 and exact proof](coordinator/20261025-observer-algebra/REPORT.md). Every gauge represents the actual pair difference, and a left-edge theorem retains initial support geometry. A uniform all-time counterexample uses infinite initial backgrounds, so the original finite-background conjecture and Problem1 remain open. Includes the exact nonlinear recombination error and a comparison figure.

@@ -1,0 +1,14 @@
+root=DirectoryName[$InputFileName];
+pattern=CellularAutomaton[30,{{1},0},32];
+a=ConstantArray[1,5];b=ConstantArray[1,5];
+afterA=Last[CellularAutomaton[30,a,4]];
+afterB=Last[CellularAutomaton[30,b,4]];
+mixedBefore=Mod[Total[MapThread[BitAnd,{a,b}]],2];
+mixedAfter=Mod[Total[MapThread[BitAnd,{afterA,afterB}]],2];
+ok=({mixedBefore,mixedAfter}==={1,0})&&Length[pattern]===33;
+record=<|"pass"->ok,"mixedBefore"->mixedBefore,"mixedAfter"->mixedAfter,
+ "patternDimensions"->Dimensions[pattern],"sourceEvaluated"->False,
+ "builtNotebook"->False,"freshNotebookVerified"->False,"submitted"->False|>;
+Export[FileNameJoin[{root,"exploration-check.json"}],record,"RawJSON"];
+Print[ExportString[record,"RawJSON"]];
+Exit[If[TrueQ[ok],0,2]];

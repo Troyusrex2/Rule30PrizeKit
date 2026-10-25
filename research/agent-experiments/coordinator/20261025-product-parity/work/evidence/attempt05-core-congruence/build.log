@@ -1,0 +1,19 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductParityResearch.lean:606:13: error(lean.unknownIdentifier): Unknown identifier `congrArg₂`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductParityResearch.lean:588:44: error: unsolved goals
+ι : Type u
+n : Nat
+cost : List (Cell ι) → Fin 2
+hc : Balanced n cost
+z : List (Cell ι) := List.replicate n zeroCell
+p : List (Cell ι) → Fin 2 := fun xs => weight cost xs z
+xs : List (Cell ι)
+hl : xs.length = n
+b : Cell ι
+hz : z.length = n
+hs : (shift xs b).length = n
+hr : run xs z = z
+hsr : run (shift xs b) z = z
+hzx : run z xs = xs
+h0 : weight cost xs z + weight cost z xs = 0
+h1 : cost (xs ++ [b]) + (weight cost (shift xs b) z + weight cost z xs) = 0
+⊢ cost (xs ++ [b]) = weight cost xs z - weight cost (shift xs b) z

@@ -1,0 +1,144 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "records": [
+    {
+      "U": 1,
+      "V": 0,
+      "through": 2,
+      "negative_hex": "0x3",
+      "center_trace_hex": "0x5",
+      "right_column_hex": "0x2",
+      "first_black_depth_beyond_V": 1,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    {
+      "U": 3,
+      "V": 0,
+      "through": 4,
+      "negative_hex": "0x6",
+      "center_trace_hex": "0x7",
+      "right_column_hex": "0x2",
+      "first_black_depth_beyond_V": 2,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 2
+    },
+    {
+      "U": 3,
+      "V": 1,
+      "through": 4,
+      "negative_hex": "0x6",
+      "center_trace_hex": "0x7",
+      "right_column_hex": "0x1",
+      "first_black_depth_beyond_V": 2,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    {
+      "U": 4,
+      "V": 0,
+      "through": 5,
+      "negative_hex": "0x4",
+      "center_trace_hex": "0x33",
+      "right_column_hex": "0x1a",
+      "first_black_depth_beyond_V": 3,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 3
+    },
+    {
+      "U": 4,
+      "V": 1,
+      "through": 5,
+      "negative_hex": "0x4",
+      "center_trace_hex": "0x33",
+      "right_column_hex": "0x19",
+      "first_black_depth_beyond_V": 3,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    {
+      "U": 4,
+      "V": 3,
+      "through": 5,
+      "negative_hex": "0x10",
+      "center_trace_hex": "0x33",
+      "right_column_hex": "0x1d",
+      "first_black_depth_beyond_V": 5,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 2
+    },
+    {
+      "U": 5,
+      "V": 0,
+      "through": 6,
+      "negative_hex": "0x9",
+      "center_trace_hex": "0x19",
+      "right_column_hex": "0x2e",
+      "first_black_depth_beyond_V": 1,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    {
+      "U": 5,
+      "V": 1,
+      "through": 6,
+      "negative_hex": "0x1f",
+      "center_trace_hex": "0x19",
+      "right_column_hex": "0xd",
+      "first_black_depth_beyond_V": 2,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 2
+    },
+    {
+      "U": 5,
+      "V": 3,
+      "through": 6,
+      "negative_hex": "0x3b",
+      "center_trace_hex": "0x19",
+      "right_column_hex": "0x1",
+      "first_black_depth_beyond_V": 4,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    {
+      "U": 5,
+      "V": 4,
+      "through": 6,
+      "negative_hex": "0x9",
+      "center_trace_hex": "0x19",
+      "right_column_hex": "0x2e",
+      "first_black_depth_beyond_V": null,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    }
+  ],
+  "failure": {
+    "short": {
+      "U": 5,
+      "V": 4,
+      "through": 6,
+      "negative_hex": "0x9",
+      "center_trace_hex": "0x19",
+      "right_column_hex": "0x2e",
+      "first_black_depth_beyond_V": null,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    },
+    "extended": {
+      "U": 5,
+      "V": 4,
+      "through": 148,
+      "negative_hex": "0x4bf832a5860355697284652f30717ce805909",
+      "center_trace_hex": "0x15c72ef880b6c71a41d4787ead4c3573ae4d19",
+      "right_column_hex": "0x5702a10feda05c279470f0a2167865d2075ee",
+      "first_black_depth_beyond_V": 9,
+      "initial_center_matches_younger": true,
+      "first_actual_canonical_center_disagreement": 1
+    }
+  },
+  "stop": "short_deadline_refuted",
+  "seconds": 0.0,
+  "scope": "Only pairs with matching initial center are tested. A no-escape prefix refutes the proposed finite deadline, not the all-time escape criterion or P1."
+}

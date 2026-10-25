@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "head": "e8c90a07b761b08e7738b93d74cd5bf6f0e23c3c",
+  "remote_head": "e8c90a07b761b08e7738b93d74cd5bf6f0e23c3c",
+  "PR": {
+    "baseRefName": "main",
+    "body": "Classifies finite-window parity scores of every positive width on any coordinatewise product of Rule 30. Four-step cyclic conservation holds exactly for a constant plus a spatial coboundary, including nonlinear scores mixing two histories. The cyclic formulation constructs a local current as part of the proof, and the converse is included.\n\nThis extends the range descent in #21 from scalar integer densities to mod-two product densities. Arbitrary-length preimages with eight trailing white cells give the endpoint rectangle identity; current transport shortens the density until the constant one-cell case. The core-only module uses small kernel-checked Boolean/Fin2 identities and proves the unbounded result by induction. Its semantics theorem identifies the image with exactly four shrinking Rule 30 updates.\n\nThe PR adds the module, public import and catalog row. It does not settle a prize problem, exclude nonconservative ranks or nonlocal invariants, or claim literature novelty. A separately checked research companion generalizes the argument to arbitrary additive commutative coefficient groups; this catalog module needs no Mathlib.\n\nValidation at verifier pin 0090056412733accaa27643d3cbbf982104f2251:\n\n- `lake build Ruliology.CellularAutomata.Rule30ProductParity` passes in the core catalog.\n- The unchanged official checker accepts all 207 declarations and the four headlines `all_ensembles`, `paired_F2_exact`, `paired_F2` and `paired_F2_semantics`, with no new axioms.\n- Cold build plus replay: 13.22 seconds, 0.90 GB sampled peak owned RSS under the ordinary resource guard.\n- Independent scalar-ring checks match the preliminary width 1\u20134 spaces on 5,888 rings. These finite controls are separate from the uniform Lean proof.\n",
+    "files": [
+      {
+        "path": "lean/README.md",
+        "additions": 1,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "lean/Ruliology.lean",
+        "additions": 1,
+        "deletions": 0,
+        "changeType": "MODIFIED"
+      },
+      {
+        "path": "lean/Ruliology/CellularAutomata/Rule30ProductParity.lean",
+        "additions": 755,
+        "deletions": 0,
+        "changeType": "ADDED"
+      }
+    ],
+    "headRefOid": "e8c90a07b761b08e7738b93d74cd5bf6f0e23c3c",
+    "state": "OPEN",
+    "url": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/27"
+  },
+  "source_sha256": "e75ceef148b81aae06eaaed2a8e4eee36039a02e4772027eea0e56a87afa3d4c",
+  "source_url": "https://raw.githubusercontent.com/Troyusrex2/Rule30PrizeKit/e8c90a07b761b08e7738b93d74cd5bf6f0e23c3c/lean/Ruliology/CellularAutomata/Rule30ProductParity.lean",
+  "tracked_tree_clean": true,
+  "full_problem_solved": false
+}

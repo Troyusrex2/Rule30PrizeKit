@@ -1,0 +1,98 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:21:40: error: Tactic `rfl` failed: The left-hand side
+  bxor (bxor a b) b i
+is not definitionally equal to the right-hand side
+  false
+
+case false.false
+ι : Type u
+a b : Cell ι
+i : ι
+⊢ bxor (bxor a b) b i = false
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:21:40: error: Tactic `rfl` failed: The left-hand side
+  bxor (bxor a b) b i
+is not definitionally equal to the right-hand side
+  false
+
+case false.true
+ι : Type u
+a b : Cell ι
+i : ι
+⊢ bxor (bxor a b) b i = false
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:21:40: error: Tactic `rfl` failed: The left-hand side
+  bxor (bxor a b) b i
+is not definitionally equal to the right-hand side
+  true
+
+case true.false
+ι : Type u
+a b : Cell ι
+i : ι
+⊢ bxor (bxor a b) b i = true
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:21:40: error: Tactic `rfl` failed: The left-hand side
+  bxor (bxor a b) b i
+is not definitionally equal to the right-hand side
+  true
+
+case true.true
+ι : Type u
+a b : Cell ι
+i : ι
+⊢ bxor (bxor a b) b i = true
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:23:26: error: Tactic `rfl` failed: The left-hand side
+  bxor a a i
+is not definitionally equal to the right-hand side
+  zeroCell i
+
+case false
+ι : Type u
+a : Cell ι
+i : ι
+⊢ bxor a a i = zeroCell i
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:23:26: error: Tactic `rfl` failed: The left-hand side
+  bxor a a i
+is not definitionally equal to the right-hand side
+  zeroCell i
+
+case true
+ι : Type u
+a : Cell ι
+i : ι
+⊢ bxor a a i = zeroCell i
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:25:26: error: Tactic `rfl` failed: The left-hand side
+  bxor zeroCell a i
+is not definitionally equal to the right-hand side
+  false
+
+case false
+ι : Type u
+a : Cell ι
+i : ι
+⊢ bxor zeroCell a i = false
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:25:26: error: Tactic `rfl` failed: The left-hand side
+  bxor zeroCell a i
+is not definitionally equal to the right-hand side
+  true
+
+case true
+ι : Type u
+a : Cell ι
+i : ι
+⊢ bxor zeroCell a i = true
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:183:39: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:183:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:415:40: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:415:40: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:500:41: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\inverse-seam-20261025T2110\owned-verifier\Rule30ProductConservationResearch.lean:500:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
