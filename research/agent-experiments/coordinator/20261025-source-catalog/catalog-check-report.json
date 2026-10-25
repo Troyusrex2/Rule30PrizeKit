@@ -1,0 +1,179 @@
+{
+  "source_sha256": "51e48fc3ac0f6ee649d390482d2e63944f4e3ff5581d0ce93238d49494509e0b",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "core_lake_build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "build",
+        "Ruliology.CellularAutomata.Rule30RunBoundarySources"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\dyadic-source-catalog-20261025\\lean",
+      "seconds": 5.312000000005355,
+      "exit_code": 0
+    },
+    {
+      "stage": "kernel_check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\current-reference-3eca-20261024\\Check.lean",
+        "Ruliology.CellularAutomata.Rule30RunBoundarySources",
+        "--claim",
+        "partial",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30RunBoundarySources.selected_event_iff_outer",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_physical",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30RunBoundarySources.rule90_source_identity"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\dyadic-source-catalog-20261025\\lean",
+      "seconds": 3.8289999999979045,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.R_at_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.R_at_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.R_last_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.R_period_pow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.SelectedEvent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.outer_kernel_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.rule90_source_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.selected_event_iff_outer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_dyadic_kernel_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_last_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_outer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_period_pow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_physical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_zero_before_cone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_zero_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.selected_event_iff_outer",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.source_physical",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RunBoundarySources.rule90_source_identity",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30RunBoundarySources",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 56,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New upstream contribution:** [PR23](https://github.com/WolframInstitute/Rule30PrizeKit/pull/23) ports the uniform dyadic source theorem to the core catalog. [Exact source, build, full replay and GitHub readback](coordinator/20261025-source-catalog/REPORT.md). Open for review; the full prize remains unsolved.
+
 **New complete source bridge:** [the actual Rule90 source sum and deep remainder](coordinator/20261025-source-green/REPORT.md). All-time Duhamel/binomial proofs now connect the earlier mask theorem to the actual center; 59 additional constants passed full kernel replay. The unrestricted deep remainder and full prize remain open.
 
 **New checked source result:** [dyadic run-boundary sources](coordinator/20261025-dyadic-sources/REPORT.md): a unique mask-selected event in a growing strip, fully kernel replayed. The Green/Duhamel bridge and unbounded interior control remain open. Also records a failed determinant-wall rule and exact cancellation at time 7.
