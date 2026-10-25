@@ -1,5 +1,10 @@
 # Seven-response experiment record
 
+A [fully checked critical-charge obstruction](CRITICAL-CHARGE-ONE.md)
+rules out coefficient one even with arbitrary additive slack, using an
+explicit finite right seed and the official coupled reconstruction. The
+general charging target and prize question remain open.
+
 The [complete-state search follow-up](FULL-STATE-SEARCH.md) releases exact
 finite-row transducer controls, unsuccessful graph ranks and learned
 readers, actual-lifetime labels, and an independent replay of a stronger
