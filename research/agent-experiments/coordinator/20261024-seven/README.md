@@ -1,5 +1,11 @@
 # Seven-response experiment record
 
+The [generic absorbing-prefix barrier](GENERIC-ABSORBING-PREFIX-BARRIER.md)
+now quantifies over every natural-state reader that becomes absorbing on
+the specified ether prefix, with no bound on its number of states. It
+retains actual finite predecessors, signed costs and every integer geometric
+scale at least one. Its 21 owned declarations passed full kernel replay.
+
 The [uniform integer-geometric finite-image obstruction](INTEGER-GEOMETRIC-FINITE-IMAGE-BARRIER.md)
 extends the signed prefix-rank barrier to every integer scale at least one.
 Four new modules passed full kernel replay of 126 owned declarations. The
