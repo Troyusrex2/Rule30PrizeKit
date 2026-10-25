@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Common-gauge right-exterior rigidity](research/agent-experiments/coordinator/20261025-right-wedge/REPORT.md), proposed in [PR28](https://github.com/WolframInstitute/Rule30PrizeKit/pull/28): for every canonical age pair, an initially supported common auxiliary field has a single phase beyond the younger right front. Core-only full kernel replay passes. The overlap containing the center is open; bounded-band experiments suggest a separate unproved all-width conjecture.
+
 [Canonical backward lifting obstruction](research/agent-experiments/coordinator/20261025-canonical-preimages/REPORT.md): for every finite horizon, actual canonical ages admit an initially supported, center-invisible auxiliary mode that passes D/W checks for that horizon but has no required finite predecessor. Full kernel replay passes. It lacks the canonical left edge and is not an all-time mode or prize counterexample.
 
 [Canonical-trace followup and notebook packaging](research/agent-experiments/coordinator/20261025-trace-followup/REPORT.md), with an [updated agent brief](research/agent-experiments/coordinator/20261025-trace-followup/BRIEF.md): finite diagnostics, a rechecked existing conditional bridge, and a source-exact unevaluated notebook preview. The small workflow canary passes fresh replay; the full notebook replay remains pending. No new unbounded theorem is claimed.

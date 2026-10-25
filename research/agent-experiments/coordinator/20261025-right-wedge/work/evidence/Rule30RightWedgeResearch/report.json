@@ -1,0 +1,241 @@
+{
+  "source_sha256": "4ff35fb8f901b162e072aaa14977022ee247c9f7340d44d35302ca36a65da966",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-wedge-20261025T2325\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-wedge-20261025T2325\\owned-verifier\\owned-build\\Rule30RightWedgeResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-wedge-20261025T2325\\owned-verifier\\Rule30RightWedgeResearch.lean"
+      ],
+      "seconds": 6.297000000020489,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-wedge-20261025T2325\\owned-verifier\\Check.lean",
+        "Rule30RightWedgeResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30RightWedgeResearch.right_wedge_phase_through",
+        "--headline",
+        "Rule30RightWedgeResearch.right_wedge_phase",
+        "--headline",
+        "Rule30RightWedgeResearch.right_wedge_phase_subset"
+      ],
+      "seconds": 10.639999999984866,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.Common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.CommonThrough",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.Mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.dStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.mode_right_edge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.mode_right_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.rightA",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.rightH",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_cut_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_cut_common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_cut_common_through",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_cut_driven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase_through",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RightWedgeResearch.site",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.site_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.site_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.site_neighbor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.site_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.subset_right_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.younger_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.dStep.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.delta.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.rightA.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.rightH.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.site.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase_through",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RightWedgeResearch.right_wedge_phase_subset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30RightWedgeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 49,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

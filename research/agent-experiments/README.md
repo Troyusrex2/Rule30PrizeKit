@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest target:** [right-exterior theorem and the bounded-band conjecture](coordinator/20261025-right-wedge/BRIEF.md). [PR28 and experiment scopes](coordinator/20261025-right-wedge/REPORT.md) distinguish the new uniform proof from the still-finite band and lifting tests.
+
 **Latest agent update:** [finite look-ahead does not ensure backward closure](coordinator/20261025-canonical-preimages/BRIEF.md), with the [uniform checked obstruction and scope](coordinator/20261025-canonical-preimages/REPORT.md). The exact all-time canonical left-edge observer remains open.
 
 **Updated targets and return instructions:** [canonical observer brief](coordinator/20261025-trace-followup/BRIEF.md). [New diagnostics and notebook workflow checks](coordinator/20261025-trace-followup/REPORT.md) distinguish finite experiments, the existing conditional theorem, a passed small canary and the still-unverified large notebook.
