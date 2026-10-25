@@ -1,0 +1,6074 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "records": [
+    {
+      "U": 1,
+      "V": 0,
+      "through": 36,
+      "joint_gauges": false,
+      "variables": 721,
+      "equations": 755,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 718
+      },
+      "identity_controls": 1296,
+      "edge_forced": true,
+      "edge_component_size": 722,
+      "zero_component_size": 722
+    },
+    {
+      "U": 2,
+      "V": 0,
+      "through": 40,
+      "joint_gauges": false,
+      "variables": 921,
+      "equations": 957,
+      "rounds": 6,
+      "merges_by_kind": {
+        "observation": 10,
+        "dynamics": 911
+      },
+      "identity_controls": 1600,
+      "edge_forced": true,
+      "edge_component_size": 922,
+      "zero_component_size": 922
+    },
+    {
+      "U": 2,
+      "V": 1,
+      "through": 40,
+      "joint_gauges": false,
+      "variables": 921,
+      "equations": 957,
+      "rounds": 5,
+      "merges_by_kind": {
+        "observation": 12,
+        "dynamics": 909
+      },
+      "identity_controls": 1600,
+      "edge_forced": true,
+      "edge_component_size": 922,
+      "zero_component_size": 922
+    },
+    {
+      "U": 3,
+      "V": 0,
+      "through": 44,
+      "joint_gauges": false,
+      "variables": 1143,
+      "equations": 1181,
+      "rounds": 14,
+      "merges_by_kind": {
+        "observation": 43,
+        "dynamics": 864
+      },
+      "identity_controls": 1936,
+      "edge_forced": true,
+      "edge_component_size": 802,
+      "zero_component_size": 802
+    },
+    {
+      "U": 3,
+      "V": 1,
+      "through": 44,
+      "joint_gauges": false,
+      "variables": 1143,
+      "equations": 1181,
+      "rounds": 7,
+      "merges_by_kind": {
+        "observation": 45,
+        "dynamics": 1098
+      },
+      "identity_controls": 1936,
+      "edge_forced": true,
+      "edge_component_size": 1144,
+      "zero_component_size": 1144
+    },
+    {
+      "U": 3,
+      "V": 2,
+      "through": 44,
+      "joint_gauges": false,
+      "variables": 1143,
+      "equations": 1181,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 45,
+        "dynamics": 1098
+      },
+      "identity_controls": 1936,
+      "edge_forced": true,
+      "edge_component_size": 1144,
+      "zero_component_size": 1144
+    },
+    {
+      "U": 4,
+      "V": 0,
+      "through": 48,
+      "joint_gauges": false,
+      "variables": 1389,
+      "equations": 1429,
+      "rounds": 13,
+      "merges_by_kind": {
+        "observation": 49,
+        "dynamics": 1025
+      },
+      "identity_controls": 2304,
+      "edge_forced": true,
+      "edge_component_size": 921,
+      "zero_component_size": 921
+    },
+    {
+      "U": 4,
+      "V": 1,
+      "through": 48,
+      "joint_gauges": false,
+      "variables": 1389,
+      "equations": 1429,
+      "rounds": 14,
+      "merges_by_kind": {
+        "observation": 49,
+        "dynamics": 1034
+      },
+      "identity_controls": 2304,
+      "edge_forced": true,
+      "edge_component_size": 948,
+      "zero_component_size": 948
+    },
+    {
+      "U": 4,
+      "V": 2,
+      "through": 48,
+      "joint_gauges": false,
+      "variables": 1389,
+      "equations": 1429,
+      "rounds": 9,
+      "merges_by_kind": {
+        "observation": 49,
+        "dynamics": 1340
+      },
+      "identity_controls": 2304,
+      "edge_forced": true,
+      "edge_component_size": 1390,
+      "zero_component_size": 1390
+    },
+    {
+      "U": 4,
+      "V": 3,
+      "through": 48,
+      "joint_gauges": false,
+      "variables": 1389,
+      "equations": 1429,
+      "rounds": 8,
+      "merges_by_kind": {
+        "observation": 49,
+        "dynamics": 1339
+      },
+      "identity_controls": 2304,
+      "edge_forced": true,
+      "edge_component_size": 1165,
+      "zero_component_size": 1165
+    },
+    {
+      "U": 5,
+      "V": 0,
+      "through": 52,
+      "joint_gauges": false,
+      "variables": 1657,
+      "equations": 1699,
+      "rounds": 8,
+      "merges_by_kind": {
+        "observation": 53,
+        "dynamics": 1160
+      },
+      "identity_controls": 2704,
+      "edge_forced": true,
+      "edge_component_size": 990,
+      "zero_component_size": 990
+    },
+    {
+      "U": 5,
+      "V": 1,
+      "through": 52,
+      "joint_gauges": false,
+      "variables": 1657,
+      "equations": 1699,
+      "rounds": 14,
+      "merges_by_kind": {
+        "observation": 53,
+        "dynamics": 1209
+      },
+      "identity_controls": 2704,
+      "edge_forced": true,
+      "edge_component_size": 1071,
+      "zero_component_size": 1071
+    },
+    {
+      "U": 5,
+      "V": 2,
+      "through": 52,
+      "joint_gauges": false,
+      "variables": 1657,
+      "equations": 1699,
+      "rounds": 14,
+      "merges_by_kind": {
+        "observation": 53,
+        "dynamics": 1221
+      },
+      "identity_controls": 2704,
+      "edge_forced": true,
+      "edge_component_size": 1099,
+      "zero_component_size": 1099
+    },
+    {
+      "U": 5,
+      "V": 3,
+      "through": 52,
+      "joint_gauges": false,
+      "variables": 1657,
+      "equations": 1699,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 53,
+        "dynamics": 1261
+      },
+      "identity_controls": 2704,
+      "edge_forced": true,
+      "edge_component_size": 1143,
+      "zero_component_size": 1143
+    },
+    {
+      "U": 5,
+      "V": 4,
+      "through": 52,
+      "joint_gauges": false,
+      "variables": 1657,
+      "equations": 1699,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 53,
+        "dynamics": 1254
+      },
+      "identity_controls": 2704,
+      "edge_forced": true,
+      "edge_component_size": 1082,
+      "zero_component_size": 1082
+    },
+    {
+      "U": 6,
+      "V": 0,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 10,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1353
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1204,
+      "zero_component_size": 1204
+    },
+    {
+      "U": 6,
+      "V": 1,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 10,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1346
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1154,
+      "zero_component_size": 1154
+    },
+    {
+      "U": 6,
+      "V": 2,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1417
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1262,
+      "zero_component_size": 1262
+    },
+    {
+      "U": 6,
+      "V": 3,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1411
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1257,
+      "zero_component_size": 1257
+    },
+    {
+      "U": 6,
+      "V": 4,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 14,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1453
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1271,
+      "zero_component_size": 1271
+    },
+    {
+      "U": 6,
+      "V": 5,
+      "through": 56,
+      "joint_gauges": false,
+      "variables": 1949,
+      "equations": 1993,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 57,
+        "dynamics": 1457
+      },
+      "identity_controls": 3136,
+      "edge_forced": true,
+      "edge_component_size": 1268,
+      "zero_component_size": 1268
+    },
+    {
+      "U": 7,
+      "V": 0,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 11,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1572
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1404,
+      "zero_component_size": 1404
+    },
+    {
+      "U": 7,
+      "V": 1,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 10,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1553
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1366,
+      "zero_component_size": 1366
+    },
+    {
+      "U": 7,
+      "V": 2,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1545
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1316,
+      "zero_component_size": 1316
+    },
+    {
+      "U": 7,
+      "V": 3,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 16,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1608
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1422,
+      "zero_component_size": 1422
+    },
+    {
+      "U": 7,
+      "V": 4,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1608
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1425,
+      "zero_component_size": 1425
+    },
+    {
+      "U": 7,
+      "V": 5,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1656
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1439,
+      "zero_component_size": 1439
+    },
+    {
+      "U": 7,
+      "V": 6,
+      "through": 60,
+      "joint_gauges": false,
+      "variables": 2263,
+      "equations": 2309,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 61,
+        "dynamics": 1660
+      },
+      "identity_controls": 3600,
+      "edge_forced": true,
+      "edge_component_size": 1437,
+      "zero_component_size": 1437
+    },
+    {
+      "U": 8,
+      "V": 0,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 11,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1795
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1586,
+      "zero_component_size": 1586
+    },
+    {
+      "U": 8,
+      "V": 1,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1848
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1657,
+      "zero_component_size": 1657
+    },
+    {
+      "U": 8,
+      "V": 2,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1766
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1548,
+      "zero_component_size": 1548
+    },
+    {
+      "U": 8,
+      "V": 3,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1787
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1516,
+      "zero_component_size": 1516
+    },
+    {
+      "U": 8,
+      "V": 4,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 16,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1848
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1622,
+      "zero_component_size": 1622
+    },
+    {
+      "U": 8,
+      "V": 5,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 16,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1827
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1607,
+      "zero_component_size": 1607
+    },
+    {
+      "U": 8,
+      "V": 6,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1909
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1668,
+      "zero_component_size": 1668
+    },
+    {
+      "U": 8,
+      "V": 7,
+      "through": 64,
+      "joint_gauges": false,
+      "variables": 2601,
+      "equations": 2649,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 65,
+        "dynamics": 1906
+      },
+      "identity_controls": 4096,
+      "edge_forced": true,
+      "edge_component_size": 1640,
+      "zero_component_size": 1640
+    },
+    {
+      "U": 9,
+      "V": 0,
+      "through": 68,
+      "joint_gauges": false,
+      "variables": 2961,
+      "equations": 3011,
+      "rounds": 12,
+      "merges_by_kind": {
+        "observation": 69,
+        "dynamics": 1985
+      },
+      "identity_controls": 4624,
+      "edge_forced": true,
+      "edge_component_size": 1750,
+      "zero_component_size": 1750
+    },
+    {
+      "U": 9,
+      "V": 1,
+      "through": 68,
+      "joint_gauges": false,
+      "variables": 2961,
+      "equations": 3011,
+      "rounds": 15,
+      "merges_by_kind": {
+        "observation": 69,
+        "dynamics": 1245
+      },
+      "identity_controls": 4624,
+      "edge_forced": false,
+      "edge_component_size": 75,
+      "zero_component_size": 417,
+      "single_gauge_dense_certificate": {
+        "observed_through": 12,
+        "rank": 13,
+        "certificate_times": [
+          6,
+          10,
+          12
+        ],
+        "certificate_weight": 3,
+        "actual_output_parity": 1
+      }
+    },
+    {
+      "U": 1,
+      "V": 0,
+      "through": 36,
+      "joint_gauges": true,
+      "variables": 721,
+      "equations": 1328,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 718,
+        "wedge": 1
+      },
+      "identity_controls": 2592,
+      "edge_forced": true,
+      "edge_component_size": 722,
+      "zero_component_size": 722
+    },
+    {
+      "U": 2,
+      "V": 0,
+      "through": 40,
+      "joint_gauges": true,
+      "variables": 921,
+      "equations": 1668,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 916,
+        "wedge": 4
+      },
+      "identity_controls": 3200,
+      "edge_forced": true,
+      "edge_component_size": 922,
+      "zero_component_size": 922
+    },
+    {
+      "U": 2,
+      "V": 1,
+      "through": 40,
+      "joint_gauges": true,
+      "variables": 921,
+      "equations": 1682,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 916,
+        "wedge": 4
+      },
+      "identity_controls": 3200,
+      "edge_forced": true,
+      "edge_component_size": 922,
+      "zero_component_size": 922
+    },
+    {
+      "U": 3,
+      "V": 0,
+      "through": 44,
+      "joint_gauges": true,
+      "variables": 1143,
+      "equations": 2005,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1136,
+        "wedge": 5
+      },
+      "identity_controls": 3872,
+      "edge_forced": true,
+      "edge_component_size": 1144,
+      "zero_component_size": 1144
+    },
+    {
+      "U": 3,
+      "V": 1,
+      "through": 44,
+      "joint_gauges": true,
+      "variables": 1143,
+      "equations": 2063,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1136,
+        "wedge": 5
+      },
+      "identity_controls": 3872,
+      "edge_forced": true,
+      "edge_component_size": 1144,
+      "zero_component_size": 1144
+    },
+    {
+      "U": 3,
+      "V": 2,
+      "through": 44,
+      "joint_gauges": true,
+      "variables": 1143,
+      "equations": 2088,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1136,
+        "wedge": 5
+      },
+      "identity_controls": 3872,
+      "edge_forced": true,
+      "edge_component_size": 1144,
+      "zero_component_size": 1144
+    },
+    {
+      "U": 4,
+      "V": 0,
+      "through": 48,
+      "joint_gauges": true,
+      "variables": 1389,
+      "equations": 2458,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 1350,
+        "wedge": 35
+      },
+      "identity_controls": 4608,
+      "edge_forced": true,
+      "edge_component_size": 1390,
+      "zero_component_size": 1390
+    },
+    {
+      "U": 4,
+      "V": 1,
+      "through": 48,
+      "joint_gauges": true,
+      "variables": 1389,
+      "equations": 2421,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1356,
+        "wedge": 31
+      },
+      "identity_controls": 4608,
+      "edge_forced": true,
+      "edge_component_size": 1390,
+      "zero_component_size": 1390
+    },
+    {
+      "U": 4,
+      "V": 2,
+      "through": 48,
+      "joint_gauges": true,
+      "variables": 1389,
+      "equations": 2509,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 1377,
+        "wedge": 11
+      },
+      "identity_controls": 4608,
+      "edge_forced": true,
+      "edge_component_size": 1390,
+      "zero_component_size": 1390
+    },
+    {
+      "U": 4,
+      "V": 3,
+      "through": 48,
+      "joint_gauges": true,
+      "variables": 1389,
+      "equations": 2528,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1377,
+        "wedge": 10
+      },
+      "identity_controls": 4608,
+      "edge_forced": true,
+      "edge_component_size": 1390,
+      "zero_component_size": 1390
+    },
+    {
+      "U": 5,
+      "V": 0,
+      "through": 52,
+      "joint_gauges": true,
+      "variables": 1657,
+      "equations": 2827,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 1621,
+        "wedge": 33
+      },
+      "identity_controls": 5408,
+      "edge_forced": true,
+      "edge_component_size": 1658,
+      "zero_component_size": 1658
+    },
+    {
+      "U": 5,
+      "V": 1,
+      "through": 52,
+      "joint_gauges": true,
+      "variables": 1657,
+      "equations": 2942,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 1614,
+        "wedge": 39
+      },
+      "identity_controls": 5408,
+      "edge_forced": true,
+      "edge_component_size": 1658,
+      "zero_component_size": 1658
+    },
+    {
+      "U": 5,
+      "V": 2,
+      "through": 52,
+      "joint_gauges": true,
+      "variables": 1657,
+      "equations": 2890,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1622,
+        "wedge": 33
+      },
+      "identity_controls": 5408,
+      "edge_forced": true,
+      "edge_component_size": 1658,
+      "zero_component_size": 1658
+    },
+    {
+      "U": 5,
+      "V": 3,
+      "through": 52,
+      "joint_gauges": true,
+      "variables": 1657,
+      "equations": 2965,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1643,
+        "wedge": 12
+      },
+      "identity_controls": 5408,
+      "edge_forced": true,
+      "edge_component_size": 1658,
+      "zero_component_size": 1658
+    },
+    {
+      "U": 5,
+      "V": 4,
+      "through": 52,
+      "joint_gauges": true,
+      "variables": 1657,
+      "equations": 2988,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 1641,
+        "wedge": 14
+      },
+      "identity_controls": 5408,
+      "edge_forced": true,
+      "edge_component_size": 1658,
+      "zero_component_size": 1658
+    },
+    {
+      "U": 6,
+      "V": 0,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3443,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 1907,
+        "wedge": 41
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 6,
+      "V": 1,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3334,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 1895,
+        "wedge": 51
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 6,
+      "V": 2,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3465,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 1902,
+        "wedge": 44
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 6,
+      "V": 3,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3409,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 1910,
+        "wedge": 38
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 6,
+      "V": 4,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3478,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 1933,
+        "wedge": 15
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 6,
+      "V": 5,
+      "through": 56,
+      "joint_gauges": true,
+      "variables": 1949,
+      "equations": 3501,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 1933,
+        "wedge": 15
+      },
+      "identity_controls": 6272,
+      "edge_forced": true,
+      "edge_component_size": 1950,
+      "zero_component_size": 1950
+    },
+    {
+      "U": 7,
+      "V": 0,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 3933,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2221,
+        "wedge": 40
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 1,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 4003,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2220,
+        "wedge": 41
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 2,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 3881,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 2206,
+        "wedge": 53
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 3,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 4029,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 2215,
+        "wedge": 45
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 4,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 3943,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2221,
+        "wedge": 40
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 5,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 4038,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 2242,
+        "wedge": 20
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 7,
+      "V": 6,
+      "through": 60,
+      "joint_gauges": true,
+      "variables": 2263,
+      "equations": 4055,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2240,
+        "wedge": 21
+      },
+      "identity_controls": 7200,
+      "edge_forced": true,
+      "edge_component_size": 2264,
+      "zero_component_size": 2264
+    },
+    {
+      "U": 8,
+      "V": 0,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4502,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 2517,
+        "wedge": 79
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 1,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4526,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2546,
+        "wedge": 53
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 2,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4609,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 2549,
+        "wedge": 51
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 3,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4478,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 2533,
+        "wedge": 65
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 4,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4611,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 6,
+        "dynamics": 2537,
+        "wedge": 58
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 5,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4508,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2551,
+        "wedge": 48
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 6,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4614,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 2576,
+        "wedge": 24
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 8,
+      "V": 7,
+      "through": 64,
+      "joint_gauges": true,
+      "variables": 2601,
+      "equations": 4641,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 2574,
+        "wedge": 26
+      },
+      "identity_controls": 8192,
+      "edge_forced": true,
+      "edge_component_size": 2602,
+      "zero_component_size": 2602
+    },
+    {
+      "U": 9,
+      "V": 0,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5210,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 2876,
+        "wedge": 81
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 1,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5115,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 2876,
+        "wedge": 81
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 2,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5163,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 2904,
+        "wedge": 55
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 3,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5263,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 2906,
+        "wedge": 52
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 4,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5107,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 2892,
+        "wedge": 65
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 5,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5257,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 2894,
+        "wedge": 62
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 6,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5137,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 2908,
+        "wedge": 50
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 7,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5252,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 2934,
+        "wedge": 26
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 9,
+      "V": 8,
+      "through": 68,
+      "joint_gauges": true,
+      "variables": 2961,
+      "equations": 5277,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 2931,
+        "wedge": 27
+      },
+      "identity_controls": 9248,
+      "edge_forced": true,
+      "edge_component_size": 2962,
+      "zero_component_size": 2962
+    },
+    {
+      "U": 10,
+      "V": 0,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5860,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3282,
+        "wedge": 61
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 1,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5881,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3224,
+        "wedge": 118
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 2,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5784,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3253,
+        "wedge": 89
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 3,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5820,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 3284,
+        "wedge": 60
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 4,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5938,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3284,
+        "wedge": 59
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 5,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5768,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3271,
+        "wedge": 71
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 6,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5940,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 3273,
+        "wedge": 68
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 7,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5801,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3287,
+        "wedge": 56
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 8,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5929,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3311,
+        "wedge": 32
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 10,
+      "V": 9,
+      "through": 72,
+      "joint_gauges": true,
+      "variables": 3345,
+      "equations": 5958,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3316,
+        "wedge": 27
+      },
+      "identity_controls": 10368,
+      "edge_forced": true,
+      "edge_component_size": 3346,
+      "zero_component_size": 3346
+    },
+    {
+      "U": 11,
+      "V": 0,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6491,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3684,
+        "wedge": 65
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 1,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6577,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3683,
+        "wedge": 65
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 2,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6587,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3626,
+        "wedge": 122
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 3,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6500,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3651,
+        "wedge": 98
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 4,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6534,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3690,
+        "wedge": 59
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 5,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6648,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 3689,
+        "wedge": 59
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 6,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6472,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 3665,
+        "wedge": 81
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 7,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6650,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 3677,
+        "wedge": 70
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 8,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6539,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3691,
+        "wedge": 58
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 9,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6641,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3716,
+        "wedge": 33
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 11,
+      "V": 10,
+      "through": 76,
+      "joint_gauges": true,
+      "variables": 3751,
+      "equations": 6689,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 3716,
+        "wedge": 33
+      },
+      "identity_controls": 11552,
+      "edge_forced": true,
+      "edge_component_size": 3752,
+      "zero_component_size": 3752
+    },
+    {
+      "U": 12,
+      "V": 0,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7157,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4109,
+        "wedge": 70
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 1,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7236,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 4108,
+        "wedge": 72
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 2,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7329,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4105,
+        "wedge": 73
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 3,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7358,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4047,
+        "wedge": 132
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 4,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7233,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4070,
+        "wedge": 109
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 5,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7265,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4105,
+        "wedge": 74
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 6,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7402,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4105,
+        "wedge": 74
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 7,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7230,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4079,
+        "wedge": 99
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 8,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7421,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4104,
+        "wedge": 75
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 9,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7303,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 4118,
+        "wedge": 62
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 10,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7413,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4146,
+        "wedge": 32
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 12,
+      "V": 11,
+      "through": 80,
+      "joint_gauges": true,
+      "variables": 4181,
+      "equations": 7450,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4146,
+        "wedge": 33
+      },
+      "identity_controls": 12800,
+      "edge_forced": true,
+      "edge_component_size": 4182,
+      "zero_component_size": 4182
+    },
+    {
+      "U": 13,
+      "V": 0,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8080,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4552,
+        "wedge": 78
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 1,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 7922,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 4555,
+        "wedge": 73
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 2,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8015,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4560,
+        "wedge": 70
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 3,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8130,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4560,
+        "wedge": 70
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 4,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8149,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4496,
+        "wedge": 134
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 5,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8029,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 4520,
+        "wedge": 109
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 6,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8055,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 4553,
+        "wedge": 76
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 7,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8183,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4559,
+        "wedge": 72
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 8,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8027,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4532,
+        "wedge": 98
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 9,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8234,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 4511,
+        "wedge": 118
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 10,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8095,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4568,
+        "wedge": 62
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 11,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8202,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4592,
+        "wedge": 39
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 13,
+      "V": 12,
+      "through": 84,
+      "joint_gauges": true,
+      "variables": 4633,
+      "equations": 8253,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 4593,
+        "wedge": 39
+      },
+      "identity_controls": 14112,
+      "edge_forced": true,
+      "edge_component_size": 4634,
+      "zero_component_size": 4634
+    },
+    {
+      "U": 14,
+      "V": 0,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9028,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5028,
+        "wedge": 80
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 1,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8896,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5023,
+        "wedge": 85
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 2,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8763,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5023,
+        "wedge": 83
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 3,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8816,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5027,
+        "wedge": 80
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 4,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8948,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5025,
+        "wedge": 83
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 5,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9007,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4964,
+        "wedge": 143
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 6,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8849,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 4988,
+        "wedge": 117
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 7,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8917,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 5020,
+        "wedge": 84
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 8,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9047,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5032,
+        "wedge": 76
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 9,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8855,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 4997,
+        "wedge": 110
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 10,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9051,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 4983,
+        "wedge": 123
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 11,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 8934,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5029,
+        "wedge": 77
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 12,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9025,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5059,
+        "wedge": 47
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 14,
+      "V": 13,
+      "through": 88,
+      "joint_gauges": true,
+      "variables": 5109,
+      "equations": 9088,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5069,
+        "wedge": 39
+      },
+      "identity_controls": 15488,
+      "edge_forced": true,
+      "edge_component_size": 5110,
+      "zero_component_size": 5110
+    },
+    {
+      "U": 15,
+      "V": 0,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9702,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 5521,
+        "wedge": 82
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 1,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9895,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5524,
+        "wedge": 80
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 2,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9750,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5524,
+        "wedge": 81
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 3,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9626,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5523,
+        "wedge": 81
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 4,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9649,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 7,
+        "dynamics": 5516,
+        "wedge": 84
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 5,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9805,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 5521,
+        "wedge": 82
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 6,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9875,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5461,
+        "wedge": 144
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 7,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9744,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5487,
+        "wedge": 117
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 8,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9781,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 5521,
+        "wedge": 81
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 9,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9930,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5529,
+        "wedge": 75
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 10,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9754,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5497,
+        "wedge": 108
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 11,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9932,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5481,
+        "wedge": 124
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 12,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9801,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 5529,
+        "wedge": 75
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 13,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9914,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5560,
+        "wedge": 45
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 15,
+      "V": 14,
+      "through": 92,
+      "joint_gauges": true,
+      "variables": 5607,
+      "equations": 9965,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 5565,
+        "wedge": 41
+      },
+      "identity_controls": 16928,
+      "edge_forced": true,
+      "edge_component_size": 5608,
+      "zero_component_size": 5608
+    },
+    {
+      "U": 16,
+      "V": 0,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10838,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6038,
+        "wedge": 89
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 1,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10605,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6033,
+        "wedge": 94
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 2,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10806,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 6039,
+        "wedge": 89
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 3,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10650,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6035,
+        "wedge": 92
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 4,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10545,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6038,
+        "wedge": 89
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 5,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10548,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 6034,
+        "wedge": 90
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 6,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10716,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6039,
+        "wedge": 88
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 7,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10785,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5963,
+        "wedge": 164
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 8,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10647,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 5997,
+        "wedge": 128
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 9,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10667,
+      "rounds": 5,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6027,
+        "wedge": 99
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 10,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10822,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6039,
+        "wedge": 88
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 11,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10674,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5942,
+        "wedge": 185
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 12,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10835,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 5990,
+        "wedge": 137
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 13,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10715,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6037,
+        "wedge": 89
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 14,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10852,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 6072,
+        "wedge": 56
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 16,
+      "V": 15,
+      "through": 96,
+      "joint_gauges": true,
+      "variables": 6129,
+      "equations": 10903,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6075,
+        "wedge": 52
+      },
+      "identity_controls": 18432,
+      "edge_forced": true,
+      "edge_component_size": 6130,
+      "zero_component_size": 6130
+    },
+    {
+      "U": 17,
+      "V": 0,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11621,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6573,
+        "wedge": 98
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 1,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11815,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6577,
+        "wedge": 94
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 2,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11517,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6572,
+        "wedge": 98
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 3,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11805,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6575,
+        "wedge": 95
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 4,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11610,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6567,
+        "wedge": 104
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 5,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11508,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6577,
+        "wedge": 94
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 6,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11499,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 6565,
+        "wedge": 103
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 7,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11697,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6575,
+        "wedge": 95
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 8,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11775,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6509,
+        "wedge": 162
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 9,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11575,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6542,
+        "wedge": 128
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 10,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11637,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 6571,
+        "wedge": 98
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 11,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11777,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 6574,
+        "wedge": 94
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 12,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11627,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 6484,
+        "wedge": 186
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 13,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11798,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 6530,
+        "wedge": 141
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 14,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11673,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 6582,
+        "wedge": 86
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 15,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11819,
+      "rounds": 2,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 6613,
+        "wedge": 59
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 17,
+      "V": 16,
+      "through": 100,
+      "joint_gauges": true,
+      "variables": 6673,
+      "equations": 11866,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 6617,
+        "wedge": 55
+      },
+      "identity_controls": 20000,
+      "edge_forced": true,
+      "edge_component_size": 6674,
+      "zero_component_size": 6674
+    },
+    {
+      "U": 18,
+      "V": 0,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12624,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7133,
+        "wedge": 107
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 1,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12602,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7132,
+        "wedge": 108
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 2,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12805,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7131,
+        "wedge": 107
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 3,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12487,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7134,
+        "wedge": 106
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 4,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12789,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7138,
+        "wedge": 101
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 5,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12599,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7124,
+        "wedge": 116
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 6,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12506,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7139,
+        "wedge": 100
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 7,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12475,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 7118,
+        "wedge": 119
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 8,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12718,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7138,
+        "wedge": 102
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 9,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12745,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7068,
+        "wedge": 171
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 10,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12549,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7094,
+        "wedge": 144
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 11,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12647,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7133,
+        "wedge": 106
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 12,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12797,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7142,
+        "wedge": 96
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 13,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12614,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7031,
+        "wedge": 208
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 14,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12809,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7079,
+        "wedge": 159
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 15,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12654,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7146,
+        "wedge": 92
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 16,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12805,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7183,
+        "wedge": 57
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 18,
+      "V": 17,
+      "through": 104,
+      "joint_gauges": true,
+      "variables": 7241,
+      "equations": 12854,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7188,
+        "wedge": 51
+      },
+      "identity_controls": 21632,
+      "edge_forced": true,
+      "edge_component_size": 7242,
+      "zero_component_size": 7242
+    },
+    {
+      "U": 19,
+      "V": 0,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13643,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7723,
+        "wedge": 105
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 1,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13633,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7706,
+        "wedge": 122
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 2,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13605,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7725,
+        "wedge": 104
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 3,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13808,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7724,
+        "wedge": 104
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 4,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13474,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7724,
+        "wedge": 104
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 5,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13824,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 7715,
+        "wedge": 111
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 6,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13632,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7718,
+        "wedge": 111
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 7,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13540,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7725,
+        "wedge": 104
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 8,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13459,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 7712,
+        "wedge": 115
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 9,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13741,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 7722,
+        "wedge": 105
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 10,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13754,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7654,
+        "wedge": 174
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 11,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13557,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7686,
+        "wedge": 143
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 12,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13700,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7725,
+        "wedge": 104
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 13,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13822,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7730,
+        "wedge": 98
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 14,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13646,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 7615,
+        "wedge": 214
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 15,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13840,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 7663,
+        "wedge": 165
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 16,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13693,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 7733,
+        "wedge": 93
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 17,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13817,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7779,
+        "wedge": 51
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 19,
+      "V": 18,
+      "through": 108,
+      "joint_gauges": true,
+      "variables": 7831,
+      "equations": 13859,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 7777,
+        "wedge": 53
+      },
+      "identity_controls": 23328,
+      "edge_forced": true,
+      "edge_component_size": 7832,
+      "zero_component_size": 7832
+    },
+    {
+      "U": 20,
+      "V": 0,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14817,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8319,
+        "wedge": 124
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 1,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14711,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8331,
+        "wedge": 113
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 2,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14706,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8313,
+        "wedge": 130
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 3,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14681,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8328,
+        "wedge": 116
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 4,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14848,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8330,
+        "wedge": 114
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 5,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14533,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8327,
+        "wedge": 116
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 6,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14916,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8321,
+        "wedge": 121
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 7,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14704,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8317,
+        "wedge": 126
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 8,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14626,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8325,
+        "wedge": 119
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 9,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14513,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8315,
+        "wedge": 128
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 10,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14831,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8323,
+        "wedge": 118
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 11,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14844,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 8254,
+        "wedge": 186
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 12,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14623,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8290,
+        "wedge": 152
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 13,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14760,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8328,
+        "wedge": 116
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 14,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14908,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8329,
+        "wedge": 113
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 15,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14679,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8214,
+        "wedge": 229
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 16,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14913,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8278,
+        "wedge": 165
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 17,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14776,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8341,
+        "wedge": 100
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 18,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14871,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8362,
+        "wedge": 81
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 20,
+      "V": 19,
+      "through": 112,
+      "joint_gauges": true,
+      "variables": 8445,
+      "equations": 14903,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8391,
+        "wedge": 53
+      },
+      "identity_controls": 25088,
+      "edge_forced": true,
+      "edge_component_size": 8446,
+      "zero_component_size": 8446
+    },
+    {
+      "U": 21,
+      "V": 0,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15774,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8950,
+        "wedge": 129
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 1,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15917,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8953,
+        "wedge": 125
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 2,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15830,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8946,
+        "wedge": 131
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 3,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15817,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8945,
+        "wedge": 133
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 4,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15816,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8956,
+        "wedge": 122
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 5,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15963,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8952,
+        "wedge": 127
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 6,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15625,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8954,
+        "wedge": 123
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 7,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 16056,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8953,
+        "wedge": 124
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 8,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15824,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8955,
+        "wedge": 124
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 9,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15705,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8951,
+        "wedge": 128
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 10,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15626,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8949,
+        "wedge": 128
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 11,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15968,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8954,
+        "wedge": 123
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 12,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15990,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8885,
+        "wedge": 192
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 13,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15745,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8910,
+        "wedge": 168
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 14,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15865,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8963,
+        "wedge": 114
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 15,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 16013,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8967,
+        "wedge": 111
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 16,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15809,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 8846,
+        "wedge": 233
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 17,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 16001,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 8888,
+        "wedge": 190
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 18,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15904,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 8964,
+        "wedge": 113
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 19,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 15980,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 8995,
+        "wedge": 85
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 21,
+      "V": 20,
+      "through": 116,
+      "joint_gauges": true,
+      "variables": 9081,
+      "equations": 16009,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9015,
+        "wedge": 64
+      },
+      "identity_controls": 26912,
+      "edge_forced": true,
+      "edge_component_size": 9082,
+      "zero_component_size": 9082
+    },
+    {
+      "U": 22,
+      "V": 0,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16974,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9608,
+        "wedge": 131
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 1,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16918,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9600,
+        "wedge": 139
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 2,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17090,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9612,
+        "wedge": 127
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 3,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16972,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 9605,
+        "wedge": 133
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 4,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16987,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9603,
+        "wedge": 136
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 5,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16987,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9611,
+        "wedge": 128
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 6,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17106,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 9609,
+        "wedge": 131
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 7,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16760,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 9607,
+        "wedge": 131
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 8,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17234,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9611,
+        "wedge": 128
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 9,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16973,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9613,
+        "wedge": 126
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 10,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16884,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 9613,
+        "wedge": 127
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 11,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16762,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9602,
+        "wedge": 137
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 12,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17171,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 9615,
+        "wedge": 123
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 13,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17144,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 9533,
+        "wedge": 205
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 14,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16894,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 9565,
+        "wedge": 173
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 15,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17030,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9622,
+        "wedge": 117
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 16,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17152,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9626,
+        "wedge": 113
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 17,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 16984,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9496,
+        "wedge": 243
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 18,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17161,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9542,
+        "wedge": 197
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 19,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17063,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 9612,
+        "wedge": 127
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 20,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17116,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 9660,
+        "wedge": 80
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 22,
+      "V": 21,
+      "through": 120,
+      "joint_gauges": true,
+      "variables": 9741,
+      "equations": 17152,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 9667,
+        "wedge": 73
+      },
+      "identity_controls": 28800,
+      "edge_forced": true,
+      "edge_component_size": 9742,
+      "zero_component_size": 9742
+    },
+    {
+      "U": 23,
+      "V": 0,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18200,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 5,
+        "dynamics": 10279,
+        "wedge": 139
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 1,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18174,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10295,
+        "wedge": 125
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 2,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18122,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10288,
+        "wedge": 133
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 3,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18305,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10298,
+        "wedge": 122
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 4,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18174,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10291,
+        "wedge": 128
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 5,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18183,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10291,
+        "wedge": 129
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 6,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18196,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10298,
+        "wedge": 123
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 7,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18307,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10297,
+        "wedge": 124
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 8,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 17952,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 6,
+        "dynamics": 10294,
+        "wedge": 123
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 9,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18441,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10293,
+        "wedge": 126
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 10,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18172,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10300,
+        "wedge": 121
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 11,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18051,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10297,
+        "wedge": 123
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 12,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 17945,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10291,
+        "wedge": 129
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 13,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18380,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10296,
+        "wedge": 123
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 14,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18363,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10217,
+        "wedge": 204
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 15,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18078,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10239,
+        "wedge": 180
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 16,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18221,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10296,
+        "wedge": 124
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 17,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18345,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10310,
+        "wedge": 111
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 18,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18177,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10170,
+        "wedge": 250
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 19,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18362,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10218,
+        "wedge": 202
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 20,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18255,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10293,
+        "wedge": 128
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 21,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18310,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 10346,
+        "wedge": 76
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 23,
+      "V": 22,
+      "through": 124,
+      "joint_gauges": true,
+      "variables": 10423,
+      "equations": 18331,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10341,
+        "wedge": 80
+      },
+      "identity_controls": 30752,
+      "edge_forced": true,
+      "edge_component_size": 10424,
+      "zero_component_size": 10424
+    },
+    {
+      "U": 24,
+      "V": 0,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19469,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10987,
+        "wedge": 140
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 1,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19431,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10971,
+        "wedge": 155
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 2,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19412,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 10992,
+        "wedge": 136
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 3,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19346,
+      "rounds": 4,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10974,
+        "wedge": 151
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 4,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19560,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10993,
+        "wedge": 134
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 5,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19412,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10990,
+        "wedge": 137
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 6,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19431,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 10992,
+        "wedge": 136
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 7,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19383,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10999,
+        "wedge": 128
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 8,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19558,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10996,
+        "wedge": 130
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 9,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19152,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 4,
+        "dynamics": 10995,
+        "wedge": 130
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 10,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19697,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10987,
+        "wedge": 140
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 11,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19405,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10989,
+        "wedge": 138
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 12,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19256,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10995,
+        "wedge": 132
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 13,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19154,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10991,
+        "wedge": 135
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 14,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19637,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10992,
+        "wedge": 135
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 15,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19597,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10907,
+        "wedge": 219
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 16,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19297,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10931,
+        "wedge": 195
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 17,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19463,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 10985,
+        "wedge": 143
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 18,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19563,
+      "rounds": 5,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10990,
+        "wedge": 137
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 19,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19395,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 10860,
+        "wedge": 266
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 20,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19596,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 10920,
+        "wedge": 207
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 21,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19498,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 1,
+        "dynamics": 10991,
+        "wedge": 137
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 22,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19556,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 3,
+        "dynamics": 11031,
+        "wedge": 95
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    },
+    {
+      "U": 24,
+      "V": 23,
+      "through": 128,
+      "joint_gauges": true,
+      "variables": 11129,
+      "equations": 19613,
+      "rounds": 3,
+      "merges_by_kind": {
+        "observation": 2,
+        "dynamics": 11046,
+        "wedge": 81
+      },
+      "identity_controls": 32768,
+      "edge_forced": true,
+      "edge_component_size": 11130,
+      "zero_component_size": 11130
+    }
+  ],
+  "stops": [
+    {
+      "joint": false,
+      "reason": "sparse_contraction_insufficient",
+      "U": 9,
+      "V": 1
+    }
+  ],
+  "seconds": 21.57799999997951,
+  "scope": "Common-gauge field constraints are stronger than one auxiliary evolution. Actual pair differences satisfy them. Sparse contraction failures refute only this finite proof method."
+}

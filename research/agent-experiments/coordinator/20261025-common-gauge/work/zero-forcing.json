@@ -1,0 +1,149 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "records": [
+    {
+      "U": 1,
+      "V": 0,
+      "rule": 30,
+      "through": 36,
+      "variables": 684,
+      "equations": 718,
+      "forced_variables": 684,
+      "edge_forced": true,
+      "left_unknown": 0,
+      "remaining_sizes": {
+        "0": 718,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    {
+      "U": 2,
+      "V": 0,
+      "rule": 30,
+      "through": 40,
+      "variables": 880,
+      "equations": 916,
+      "forced_variables": 550,
+      "edge_forced": true,
+      "left_unknown": 1,
+      "remaining_sizes": {
+        "0": 582,
+        "1": 0,
+        "2": 122,
+        "3": 145,
+        "4": 67
+      }
+    },
+    {
+      "U": 2,
+      "V": 1,
+      "rule": 30,
+      "through": 40,
+      "variables": 880,
+      "equations": 916,
+      "forced_variables": 880,
+      "edge_forced": true,
+      "left_unknown": 0,
+      "remaining_sizes": {
+        "0": 916,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    {
+      "U": 3,
+      "V": 0,
+      "rule": 30,
+      "through": 44,
+      "variables": 1098,
+      "equations": 1136,
+      "forced_variables": 649,
+      "edge_forced": true,
+      "left_unknown": 0,
+      "remaining_sizes": {
+        "0": 682,
+        "1": 0,
+        "2": 148,
+        "3": 209,
+        "4": 97
+      }
+    },
+    {
+      "U": 3,
+      "V": 1,
+      "rule": 30,
+      "through": 44,
+      "variables": 1098,
+      "equations": 1136,
+      "forced_variables": 677,
+      "edge_forced": true,
+      "left_unknown": 0,
+      "remaining_sizes": {
+        "0": 710,
+        "1": 0,
+        "2": 153,
+        "3": 183,
+        "4": 90
+      }
+    },
+    {
+      "U": 3,
+      "V": 2,
+      "rule": 30,
+      "through": 44,
+      "variables": 1098,
+      "equations": 1136,
+      "forced_variables": 1098,
+      "edge_forced": true,
+      "left_unknown": 0,
+      "remaining_sizes": {
+        "0": 1136,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    {
+      "U": 4,
+      "V": 0,
+      "rule": 30,
+      "through": 48,
+      "variables": 1340,
+      "equations": 1380,
+      "forced_variables": 112,
+      "edge_forced": false,
+      "left_unknown": 572,
+      "remaining_sizes": {
+        "0": 112,
+        "1": 0,
+        "2": 433,
+        "3": 601,
+        "4": 234
+      },
+      "dense_certificate": {
+        "observed_through": 8,
+        "rank": 7,
+        "certificate_times": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "certificate_weight": 4,
+        "actual_output_parity": 1
+      },
+      "dense_unresolved": false
+    }
+  ],
+  "stop": "sparse_peeling_insufficient",
+  "seconds": 0.030999999988125637,
+  "scope": "Exact finite-cone sparse zero forcing. A failure is not an observer or prize counterexample; it shows that genuine linear combinations beyond degree-one peeling are needed."
+}

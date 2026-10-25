@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Common-gauge certificates and a history-assumption obstruction](research/agent-experiments/coordinator/20261025-common-gauge/REPORT.md): independent finite replay of 1,120 certificates at 820 distinct canonical time pairs; an exact finite counterexample to weakening a proposed short deadline to support geometry and four edge cells. **No unbounded observer theorem, new Lean result or prize solution is claimed.**
+
 [Divided-difference observers and an all-time warning](research/agent-experiments/coordinator/20261025-observer-algebra/REPORT.md), proposed in [PR26](https://github.com/WolframInstitute/Rule30PrizeKit/pull/26): exact physical-pair representation, a moving-frontier theorem, and a family of gauge-invariant auxiliary modes that stay invisible forever in infinite initial backgrounds. Full kernel replay passes. **This does not refute the finite-background observer conjecture or solve Problem1.**
 
 [Earlier exact source-observer experiments](research/agent-experiments/coordinator/20261025-source-observer/REPORT.md) remain finite evidence. [Delayed defects and unbounded spatial periods](research/agent-experiments/coordinator/20261025-delayed-periods/REPORT.md), proposed in [PR25](https://github.com/WolframInstitute/Rule30PrizeKit/pull/25), concern synthetic starts whose members are themselves periodic. Its essay is being repackaged with the skill-required root import before human review; no new essay has been submitted.

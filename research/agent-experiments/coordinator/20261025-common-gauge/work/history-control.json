@@ -1,0 +1,128 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "tested": 4,
+  "seconds": 0.015000000013969839,
+  "record": {
+    "U": 2,
+    "source_radius": 2,
+    "B_radius": 1,
+    "A_cells": [
+      -2,
+      -1,
+      2
+    ],
+    "B_cells": [
+      1
+    ],
+    "B_is_canonical": false,
+    "matching_trace_through": 2,
+    "trace": [
+      0,
+      1,
+      1
+    ],
+    "first_actual_center_disagreement": 3,
+    "capped_future_through": 40,
+    "initial_pair_hex": [
+      "0x13",
+      "0x8"
+    ],
+    "sparse_N_equals_U": {
+      "U": 2,
+      "V": 0,
+      "rule": 30,
+      "through": 2,
+      "initial_pair_hex": [
+        "0x13",
+        "0x8"
+      ],
+      "edge_forced": false,
+      "rows": [],
+      "observation_times": [],
+      "first_actual_center_disagreement": null,
+      "variables": 9,
+      "equations": 10,
+      "rounds": 3,
+      "merges_by_kind": {
+        "O": 3,
+        "D": 4,
+        "W": 1
+      },
+      "identity_controls": 8,
+      "certificate_rows": 0,
+      "maximum_certificate_time": null
+    },
+    "later_sparse_certificate": {
+      "U": 2,
+      "V": 0,
+      "rule": 30,
+      "through": 40,
+      "initial_pair_hex": [
+        "0x13",
+        "0x8"
+      ],
+      "edge_forced": true,
+      "rows": [
+        [
+          "D",
+          0,
+          -2
+        ],
+        [
+          "W",
+          0,
+          -2
+        ],
+        [
+          "D",
+          0,
+          -1
+        ],
+        [
+          "O",
+          1,
+          0
+        ],
+        [
+          "D",
+          1,
+          -1
+        ],
+        [
+          "D",
+          1,
+          0
+        ],
+        [
+          "D",
+          2,
+          0
+        ],
+        [
+          "O",
+          3,
+          0
+        ]
+      ],
+      "observation_times": [
+        1,
+        3
+      ],
+      "first_actual_center_disagreement": 3,
+      "variables": 921,
+      "equations": 1557,
+      "rounds": 2,
+      "merges_by_kind": {
+        "O": 3,
+        "D": 914,
+        "W": 4
+      },
+      "identity_controls": 3200,
+      "certificate_rows": 8,
+      "maximum_certificate_time": 3
+    }
+  },
+  "scope": "A finite matching trace for noncanonical B rules out replacing shared single-seed history by support-radius geometry in an N=U argument. No all-time counterexample."
+}

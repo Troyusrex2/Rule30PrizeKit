@@ -1,0 +1,22 @@
+{
+  "id": "R30-20261025-017d83",
+  "status": "Lean Verified",
+  "checked_at": "2026-10-25T09:59:56Z",
+  "source_sha256": "3cec3f654b7ab060fe8bd5ba3165fd32de85ac9f668f1aeed2981df6411b2da3",
+  "source_bytes": 53606,
+  "verified_headlines": [
+    "Rule30Submission.stripe_five_tail",
+    "Rule30Submission.stripe_four_tail_all",
+    "Rule30Submission.family5_of_class",
+    "Rule30Submission.cyc_13_0"
+  ],
+  "abstract_new_names_present_in_source": {
+    "stripe_four_tail_all": true,
+    "stripe_five_tail": true,
+    "cyc_13_0": true,
+    "liftSegFast_sound": true
+  },
+  "source_prefix": "import Ruliology.CellularAutomata.Rule30Prize\nimport Ruliology.CellularAutomata.Rule30ZeroBoundaryStripe\nimport Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFamily\nimport Ruliology.CellularAutomata.Rule30Certificates.ZeroBoundaryStripeCycles3\nimport Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour\n\nset_option maxRecDepth 200000\nset_option maxHeartbeats 0\n\nnamespace Rule30Submission\n\nopen Ruliology.CellularAutomata\nopen Ruliology.CellularAutomata.Rule30ZeroBoundary\nopen Ruliology.CellularAutomata.Rule30ZeroBoundaryStripe\nopen Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront\nopen Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.StripeCycles0\nopen Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.StripeCycles1\nopen Ruliology.CellularAutomata.Rule30ZeroBound",
+  "adopted": false,
+  "scope": "Public verifier evidence audited; no new result used without source/dependency checks."
+}

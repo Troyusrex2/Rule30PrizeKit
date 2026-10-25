@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New finite common-field investigation:** [certificates and scope counterexamples](coordinator/20261025-common-gauge/REPORT.md). All 820 canonical pairs through older time 40 admit independently checked finite certificates in the tested construction. Support-only and four-edge-cell shortcuts to the short deadline are refuted by actual finite trace collisions. These are Python experiments; the full unbounded argument remains open.
+
 **New kernel-checked observer tools and limitation:** [PR26 and exact proof](coordinator/20261025-observer-algebra/REPORT.md). Every gauge represents the actual pair difference, and a left-edge theorem retains initial support geometry. A uniform all-time counterexample uses infinite initial backgrounds, so the original finite-background conjecture and Problem1 remain open. Includes the exact nonlinear recombination error and a comparison figure.
 
 **Latest research lead, not a Lean theorem:** [exact finite source observers](coordinator/20261025-source-observer/REPORT.md). Independent backward checks validate 2,891 finite certificates; existence for every canonical time-shift pair is unproved. Includes an explicit failed deadline estimate and all solver timeouts.
