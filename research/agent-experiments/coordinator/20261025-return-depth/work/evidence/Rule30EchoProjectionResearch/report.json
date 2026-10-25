@@ -1,0 +1,178 @@
+{
+  "source_sha256": "20e9562c0ed487b3f540babc94de489585b5eb04e3902fd9040d0abd113db0b0",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\owned-build\\Rule30EchoProjectionResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\Rule30EchoProjectionResearch.lean"
+      ],
+      "seconds": 6.094000000011874,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\Check.lean",
+        "Rule30EchoProjectionResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30EchoProjectionResearch.no_autonomous_profile",
+        "--headline",
+        "Rule30EchoProjectionResearch.initial_profiles_equal",
+        "--headline",
+        "Rule30EchoProjectionResearch.next_profiles_differ"
+      ],
+      "seconds": 10.10899999999674,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30EchoProjectionResearch.channel",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.channel_initial_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.channel_two_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.channel_zero_depth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.initial_profiles_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.next_profiles_differ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.no_autonomous_profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EchoProjectionResearch.parity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.parity_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EchoProjectionResearch.profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.source_near_left_edge_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.channel.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.parity.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.parity.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.parity.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30EchoProjectionResearch.parity.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.no_autonomous_profile",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.initial_profiles_equal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30EchoProjectionResearch.next_profiles_differ",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30EchoProjectionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 36,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

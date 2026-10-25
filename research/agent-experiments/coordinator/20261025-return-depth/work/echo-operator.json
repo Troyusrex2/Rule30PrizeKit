@@ -1,0 +1,1126 @@
+{
+  "finite_only": true,
+  "full_problem_solved": false,
+  "controls": 10752,
+  "identity": "C_r=G_(r+1)+G_r; channel telescoping is an exact encoding, not independent control of the full parity.",
+  "tested_shortcut": "For seed-low rows G_r=1 whenever r>=2*width+2.",
+  "seedlow_rows": [
+    {
+      "row": 1,
+      "width": 1,
+      "linear_bound": 4,
+      "first_nonone_after_bound": null,
+      "finite_tail_period": 1,
+      "nonones_last256": 0
+    },
+    {
+      "row": 7,
+      "width": 3,
+      "linear_bound": 8,
+      "first_nonone_after_bound": null,
+      "finite_tail_period": 1,
+      "nonones_last256": 0
+    },
+    {
+      "row": 9,
+      "width": 4,
+      "linear_bound": 10,
+      "first_nonone_after_bound": 10,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 15,
+      "width": 4,
+      "linear_bound": 10,
+      "first_nonone_after_bound": 10,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 17,
+      "width": 5,
+      "linear_bound": 12,
+      "first_nonone_after_bound": 12,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 23,
+      "width": 5,
+      "linear_bound": 12,
+      "first_nonone_after_bound": 12,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 25,
+      "width": 5,
+      "linear_bound": 12,
+      "first_nonone_after_bound": 12,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 31,
+      "width": 5,
+      "linear_bound": 12,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 33,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 192
+    },
+    {
+      "row": 39,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 192
+    },
+    {
+      "row": 41,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 192
+    },
+    {
+      "row": 47,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 192
+    },
+    {
+      "row": 49,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 14,
+      "finite_tail_period": 4,
+      "nonones_last256": 192
+    },
+    {
+      "row": 55,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 15,
+      "finite_tail_period": 4,
+      "nonones_last256": 64
+    },
+    {
+      "row": 57,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 15,
+      "finite_tail_period": 4,
+      "nonones_last256": 64
+    },
+    {
+      "row": 63,
+      "width": 6,
+      "linear_bound": 14,
+      "first_nonone_after_bound": 15,
+      "finite_tail_period": 4,
+      "nonones_last256": 64
+    },
+    {
+      "row": 65,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 71,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 73,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 79,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 81,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 87,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 89,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 95,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 97,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 103,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 1,
+      "nonones_last256": 256
+    },
+    {
+      "row": 105,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 111,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 113,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 119,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 121,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 127,
+      "width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "finite_tail_period": 4,
+      "nonones_last256": 128
+    },
+    {
+      "row": 129,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 135,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 137,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 143,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 145,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 151,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 153,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 159,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 161,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 167,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 169,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 175,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 177,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 183,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 185,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 191,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 193,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 199,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 201,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 207,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 209,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 215,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 217,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 223,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 225,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 231,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 20,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 233,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 239,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 241,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 247,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 249,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    },
+    {
+      "row": 255,
+      "width": 8,
+      "linear_bound": 18,
+      "first_nonone_after_bound": 18,
+      "finite_tail_period": 8,
+      "nonones_last256": 128
+    }
+  ],
+  "canonical_rows": [
+    {
+      "seed_time": 0,
+      "row_width": 1,
+      "linear_bound": 4,
+      "first_nonone_after_bound": null,
+      "last_nonone_through2048": null,
+      "nonones": 0,
+      "tail256_nonones": 0
+    },
+    {
+      "seed_time": 1,
+      "row_width": 3,
+      "linear_bound": 8,
+      "first_nonone_after_bound": null,
+      "last_nonone_through2048": null,
+      "nonones": 0,
+      "tail256_nonones": 0
+    },
+    {
+      "seed_time": 2,
+      "row_width": 5,
+      "linear_bound": 12,
+      "first_nonone_after_bound": 12,
+      "last_nonone_through2048": 2048,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 3,
+      "row_width": 7,
+      "linear_bound": 16,
+      "first_nonone_after_bound": 16,
+      "last_nonone_through2048": 2048,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 4,
+      "row_width": 9,
+      "linear_bound": 20,
+      "first_nonone_after_bound": 20,
+      "last_nonone_through2048": 2046,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 5,
+      "row_width": 11,
+      "linear_bound": 24,
+      "first_nonone_after_bound": 24,
+      "last_nonone_through2048": 2048,
+      "nonones": 1022,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 6,
+      "row_width": 13,
+      "linear_bound": 28,
+      "first_nonone_after_bound": 29,
+      "last_nonone_through2048": 2047,
+      "nonones": 1022,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 7,
+      "row_width": 15,
+      "linear_bound": 32,
+      "first_nonone_after_bound": 34,
+      "last_nonone_through2048": 2047,
+      "nonones": 1022,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 8,
+      "row_width": 17,
+      "linear_bound": 36,
+      "first_nonone_after_bound": 37,
+      "last_nonone_through2048": 2048,
+      "nonones": 1023,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 9,
+      "row_width": 19,
+      "linear_bound": 40,
+      "first_nonone_after_bound": 41,
+      "last_nonone_through2048": 2048,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 10,
+      "row_width": 21,
+      "linear_bound": 44,
+      "first_nonone_after_bound": 44,
+      "last_nonone_through2048": 2047,
+      "nonones": 1277,
+      "tail256_nonones": 160
+    },
+    {
+      "seed_time": 11,
+      "row_width": 23,
+      "linear_bound": 48,
+      "first_nonone_after_bound": 48,
+      "last_nonone_through2048": 2048,
+      "nonones": 772,
+      "tail256_nonones": 96
+    },
+    {
+      "seed_time": 12,
+      "row_width": 25,
+      "linear_bound": 52,
+      "first_nonone_after_bound": 53,
+      "last_nonone_through2048": 2047,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 13,
+      "row_width": 27,
+      "linear_bound": 56,
+      "first_nonone_after_bound": 60,
+      "last_nonone_through2048": 2047,
+      "nonones": 518,
+      "tail256_nonones": 64
+    },
+    {
+      "seed_time": 14,
+      "row_width": 29,
+      "linear_bound": 60,
+      "first_nonone_after_bound": 60,
+      "last_nonone_through2048": 2047,
+      "nonones": 771,
+      "tail256_nonones": 96
+    },
+    {
+      "seed_time": 15,
+      "row_width": 31,
+      "linear_bound": 64,
+      "first_nonone_after_bound": 64,
+      "last_nonone_through2048": 2048,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 16,
+      "row_width": 33,
+      "linear_bound": 68,
+      "first_nonone_after_bound": 73,
+      "last_nonone_through2048": 2047,
+      "nonones": 1025,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 17,
+      "row_width": 35,
+      "linear_bound": 72,
+      "first_nonone_after_bound": 72,
+      "last_nonone_through2048": 2048,
+      "nonones": 1023,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 18,
+      "row_width": 37,
+      "linear_bound": 76,
+      "first_nonone_after_bound": 76,
+      "last_nonone_through2048": 2046,
+      "nonones": 1152,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 19,
+      "row_width": 39,
+      "linear_bound": 80,
+      "first_nonone_after_bound": 80,
+      "last_nonone_through2048": 2048,
+      "nonones": 1153,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 20,
+      "row_width": 41,
+      "linear_bound": 84,
+      "first_nonone_after_bound": 90,
+      "last_nonone_through2048": 2047,
+      "nonones": 776,
+      "tail256_nonones": 96
+    },
+    {
+      "seed_time": 21,
+      "row_width": 43,
+      "linear_bound": 88,
+      "first_nonone_after_bound": 91,
+      "last_nonone_through2048": 2048,
+      "nonones": 1021,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 22,
+      "row_width": 45,
+      "linear_bound": 92,
+      "first_nonone_after_bound": 92,
+      "last_nonone_through2048": 2048,
+      "nonones": 894,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 23,
+      "row_width": 47,
+      "linear_bound": 96,
+      "first_nonone_after_bound": 98,
+      "last_nonone_through2048": 2047,
+      "nonones": 1019,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 24,
+      "row_width": 49,
+      "linear_bound": 100,
+      "first_nonone_after_bound": 100,
+      "last_nonone_through2048": 2047,
+      "nonones": 1023,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 25,
+      "row_width": 51,
+      "linear_bound": 104,
+      "first_nonone_after_bound": 104,
+      "last_nonone_through2048": 2048,
+      "nonones": 898,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 26,
+      "row_width": 53,
+      "linear_bound": 108,
+      "first_nonone_after_bound": 108,
+      "last_nonone_through2048": 2048,
+      "nonones": 1409,
+      "tail256_nonones": 176
+    },
+    {
+      "seed_time": 27,
+      "row_width": 55,
+      "linear_bound": 112,
+      "first_nonone_after_bound": 113,
+      "last_nonone_through2048": 2047,
+      "nonones": 778,
+      "tail256_nonones": 96
+    },
+    {
+      "seed_time": 28,
+      "row_width": 57,
+      "linear_bound": 116,
+      "first_nonone_after_bound": 117,
+      "last_nonone_through2048": 2048,
+      "nonones": 897,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 29,
+      "row_width": 59,
+      "linear_bound": 120,
+      "first_nonone_after_bound": 120,
+      "last_nonone_through2048": 2046,
+      "nonones": 1029,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 30,
+      "row_width": 61,
+      "linear_bound": 124,
+      "first_nonone_after_bound": 126,
+      "last_nonone_through2048": 2048,
+      "nonones": 1026,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 31,
+      "row_width": 63,
+      "linear_bound": 128,
+      "first_nonone_after_bound": 132,
+      "last_nonone_through2048": 2046,
+      "nonones": 898,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 32,
+      "row_width": 65,
+      "linear_bound": 132,
+      "first_nonone_after_bound": 132,
+      "last_nonone_through2048": 2048,
+      "nonones": 1022,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 33,
+      "row_width": 67,
+      "linear_bound": 136,
+      "first_nonone_after_bound": 137,
+      "last_nonone_through2048": 2046,
+      "nonones": 1020,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 34,
+      "row_width": 69,
+      "linear_bound": 140,
+      "first_nonone_after_bound": 140,
+      "last_nonone_through2048": 2046,
+      "nonones": 1211,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 35,
+      "row_width": 71,
+      "linear_bound": 144,
+      "first_nonone_after_bound": 145,
+      "last_nonone_through2048": 2046,
+      "nonones": 1086,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 36,
+      "row_width": 73,
+      "linear_bound": 148,
+      "first_nonone_after_bound": 150,
+      "last_nonone_through2048": 2048,
+      "nonones": 1151,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 37,
+      "row_width": 75,
+      "linear_bound": 152,
+      "first_nonone_after_bound": 155,
+      "last_nonone_through2048": 2046,
+      "nonones": 895,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 38,
+      "row_width": 77,
+      "linear_bound": 156,
+      "first_nonone_after_bound": 157,
+      "last_nonone_through2048": 2048,
+      "nonones": 1206,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 39,
+      "row_width": 79,
+      "linear_bound": 160,
+      "first_nonone_after_bound": 160,
+      "last_nonone_through2048": 2047,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 40,
+      "row_width": 81,
+      "linear_bound": 164,
+      "first_nonone_after_bound": 164,
+      "last_nonone_through2048": 2047,
+      "nonones": 1155,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 41,
+      "row_width": 83,
+      "linear_bound": 168,
+      "first_nonone_after_bound": 169,
+      "last_nonone_through2048": 2047,
+      "nonones": 842,
+      "tail256_nonones": 104
+    },
+    {
+      "seed_time": 42,
+      "row_width": 85,
+      "linear_bound": 172,
+      "first_nonone_after_bound": 172,
+      "last_nonone_through2048": 2048,
+      "nonones": 1271,
+      "tail256_nonones": 160
+    },
+    {
+      "seed_time": 43,
+      "row_width": 87,
+      "linear_bound": 176,
+      "first_nonone_after_bound": 176,
+      "last_nonone_through2048": 2045,
+      "nonones": 1078,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 44,
+      "row_width": 89,
+      "linear_bound": 180,
+      "first_nonone_after_bound": 181,
+      "last_nonone_through2048": 2048,
+      "nonones": 968,
+      "tail256_nonones": 120
+    },
+    {
+      "seed_time": 45,
+      "row_width": 91,
+      "linear_bound": 184,
+      "first_nonone_after_bound": 187,
+      "last_nonone_through2048": 2048,
+      "nonones": 1032,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 46,
+      "row_width": 93,
+      "linear_bound": 188,
+      "first_nonone_after_bound": 188,
+      "last_nonone_through2048": 2046,
+      "nonones": 1081,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 47,
+      "row_width": 95,
+      "linear_bound": 192,
+      "first_nonone_after_bound": 192,
+      "last_nonone_through2048": 2048,
+      "nonones": 1207,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 48,
+      "row_width": 97,
+      "linear_bound": 196,
+      "first_nonone_after_bound": 196,
+      "last_nonone_through2048": 2047,
+      "nonones": 1208,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 49,
+      "row_width": 99,
+      "linear_bound": 200,
+      "first_nonone_after_bound": 200,
+      "last_nonone_through2048": 2047,
+      "nonones": 1074,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 50,
+      "row_width": 101,
+      "linear_bound": 204,
+      "first_nonone_after_bound": 207,
+      "last_nonone_through2048": 2048,
+      "nonones": 902,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 51,
+      "row_width": 103,
+      "linear_bound": 208,
+      "first_nonone_after_bound": 211,
+      "last_nonone_through2048": 2048,
+      "nonones": 1093,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 52,
+      "row_width": 105,
+      "linear_bound": 212,
+      "first_nonone_after_bound": 212,
+      "last_nonone_through2048": 2047,
+      "nonones": 1203,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 53,
+      "row_width": 107,
+      "linear_bound": 216,
+      "first_nonone_after_bound": 218,
+      "last_nonone_through2048": 2047,
+      "nonones": 1025,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 54,
+      "row_width": 109,
+      "linear_bound": 220,
+      "first_nonone_after_bound": 223,
+      "last_nonone_through2048": 2048,
+      "nonones": 900,
+      "tail256_nonones": 112
+    },
+    {
+      "seed_time": 55,
+      "row_width": 111,
+      "linear_bound": 224,
+      "first_nonone_after_bound": 225,
+      "last_nonone_through2048": 2048,
+      "nonones": 1146,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 56,
+      "row_width": 113,
+      "linear_bound": 228,
+      "first_nonone_after_bound": 233,
+      "last_nonone_through2048": 2048,
+      "nonones": 1143,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 57,
+      "row_width": 115,
+      "linear_bound": 232,
+      "first_nonone_after_bound": 232,
+      "last_nonone_through2048": 2047,
+      "nonones": 1024,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 58,
+      "row_width": 117,
+      "linear_bound": 236,
+      "first_nonone_after_bound": 239,
+      "last_nonone_through2048": 2048,
+      "nonones": 1145,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 59,
+      "row_width": 119,
+      "linear_bound": 240,
+      "first_nonone_after_bound": 241,
+      "last_nonone_through2048": 2045,
+      "nonones": 1211,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 60,
+      "row_width": 121,
+      "linear_bound": 244,
+      "first_nonone_after_bound": 245,
+      "last_nonone_through2048": 2046,
+      "nonones": 1155,
+      "tail256_nonones": 144
+    },
+    {
+      "seed_time": 61,
+      "row_width": 123,
+      "linear_bound": 248,
+      "first_nonone_after_bound": 248,
+      "last_nonone_through2048": 2048,
+      "nonones": 1027,
+      "tail256_nonones": 128
+    },
+    {
+      "seed_time": 62,
+      "row_width": 125,
+      "linear_bound": 252,
+      "first_nonone_after_bound": 253,
+      "last_nonone_through2048": 2047,
+      "nonones": 1085,
+      "tail256_nonones": 136
+    },
+    {
+      "seed_time": 63,
+      "row_width": 127,
+      "linear_bound": 256,
+      "first_nonone_after_bound": 256,
+      "last_nonone_through2048": 2048,
+      "nonones": 1206,
+      "tail256_nonones": 152
+    },
+    {
+      "seed_time": 64,
+      "row_width": 129,
+      "linear_bound": 260,
+      "first_nonone_after_bound": 260,
+      "last_nonone_through2048": 2047,
+      "nonones": 1025,
+      "tail256_nonones": 128
+    }
+  ],
+  "generic_shortcut_counterexample": {
+    "row": 9,
+    "width": 4,
+    "linear_bound": 10,
+    "first_nonone_after_bound": 10,
+    "finite_tail_period": 4,
+    "nonones_last256": 128
+  },
+  "canonical_shortcut_counterexample": {
+    "seed_time": 2,
+    "row_width": 5,
+    "linear_bound": 12,
+    "first_nonone_after_bound": 12,
+    "last_nonone_through2048": 2048,
+    "nonones": 1024,
+    "tail256_nonones": 128
+  },
+  "elapsed_seconds": 0.9219999999913853
+}

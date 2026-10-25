@@ -1,0 +1,116 @@
+{
+  "source_sha256": "23b1917cd170fb12f0b70a37d9016f57497a2d650e43cce1ba4b5916af97e77a",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\owned-build\\Rule30ReturnSumResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\Rule30ReturnSumResearch.lean"
+      ],
+      "seconds": 20.687000000005355,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-return-20261025T1635\\owned-verifier\\Check.lean",
+        "Rule30ReturnSumResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ReturnSumResearch.center_eq_one_add_after_return",
+        "--headline",
+        "Rule30ReturnSumResearch.returned_sum"
+      ],
+      "seconds": 20.578000000008615,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.center_eq_one_add_after_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReturnSumResearch.depth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.depth_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.depth_pos",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.returned_sum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.returned_term_eq",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.center_eq_one_add_after_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReturnSumResearch.returned_sum",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ReturnSumResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 13,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New actual-return result:** [first-return source cancellation and echo information loss](coordinator/20261025-return-depth/REPORT.md): 155 additional constants passed full replay. The first even return-depth channel cancels the outer source exactly; the complete higher remainder remains open. An autonomous reader of this echo profile is also refuted.
+
 **New upstream contribution:** [PR23](https://github.com/WolframInstitute/Rule30PrizeKit/pull/23) ports the uniform dyadic source theorem to the core catalog. [Exact source, build, full replay and GitHub readback](coordinator/20261025-source-catalog/REPORT.md). Open for review; the full prize remains unsolved.
 
 **New complete source bridge:** [the actual Rule90 source sum and deep remainder](coordinator/20261025-source-green/REPORT.md). All-time Duhamel/binomial proofs now connect the earlier mask theorem to the actual center; 59 additional constants passed full kernel replay. The unrestricted deep remainder and full prize remain open.

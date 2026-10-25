@@ -1,0 +1,108 @@
+{
+  "full_problem_solved": false,
+  "new_kernel_replayed_constants": 155,
+  "count_includes_generated_declarations": true,
+  "modules": {
+    "Rule30ReturnDepthResearch": {
+      "source_sha256": "fa443107b83f91797b4cf0c7f18e1942dc3cf282bba711b105cae7011997c338",
+      "replay": {
+        "constants": 46,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30ReturnDepthResearch.cut_bit_flip",
+        "Rule30ReturnDepthResearch.source_cut_window",
+        "Rule30ReturnDepthResearch.source_prefix_period"
+      ]
+    },
+    "Rule30ReturnSourcesResearch": {
+      "source_sha256": "9c2b7e3d8a33192d92325e8ba4a17de751607076fe65817fd6a9a334a0bb6f12",
+      "replay": {
+        "constants": 31,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30ReturnSourcesResearch.selected_event_iff_below_cut",
+        "Rule30ReturnSourcesResearch.cut_layer_source",
+        "Rule30ReturnSourcesResearch.cut_exceeds_exponent"
+      ]
+    },
+    "Rule30ReturnSumResearch": {
+      "source_sha256": "23b1917cd170fb12f0b70a37d9016f57497a2d650e43cce1ba4b5916af97e77a",
+      "replay": {
+        "constants": 13,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30ReturnSumResearch.center_eq_one_add_after_return",
+        "Rule30ReturnSumResearch.returned_sum"
+      ]
+    },
+    "Rule30FirstReturnParityResearch": {
+      "source_sha256": "30e17255292d8b0e040bffb2eb5f4081731e0bdc2a436f39fe246b548bf83085",
+      "replay": {
+        "constants": 29,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30FirstReturnParityResearch.center_after_even_return",
+        "Rule30FirstReturnParityResearch.first_even_channel_odd",
+        "Rule30FirstReturnParityResearch.all_ones_choose"
+      ]
+    },
+    "Rule30EchoProjectionResearch": {
+      "source_sha256": "20e9562c0ed487b3f540babc94de489585b5eb04e3902fd9040d0abd113db0b0",
+      "replay": {
+        "constants": 36,
+        "ok": true
+      },
+      "headlines": [
+        "Rule30EchoProjectionResearch.no_autonomous_profile",
+        "Rule30EchoProjectionResearch.initial_profiles_equal",
+        "Rule30EchoProjectionResearch.next_profiles_differ"
+      ]
+    }
+  },
+  "reused_dependencies": {
+    "Rule30DyadicSourceResearch": {
+      "source_sha256": "d7c0bf05aa6ba3b450be856f97c1f682514a41a051e2f47d00a69f38c34eb036",
+      "replay": {
+        "constants": 56,
+        "ok": true
+      }
+    },
+    "Rule30LucasMaskResearch": {
+      "source_sha256": "f773b0d2ef207811982f24d29cff55015df7a1b54554448b26b36418d8ecab0b",
+      "replay": {
+        "constants": 12,
+        "ok": true
+      }
+    },
+    "Rule30SourceSeriesResearch": {
+      "source_sha256": "9e3735803ecf1c3b12c71233fb77a77bf94b20cdc6322b8eb76127c40d443432",
+      "replay": {
+        "constants": 25,
+        "ok": true
+      }
+    },
+    "Rule30DyadicSourceSumResearch": {
+      "source_sha256": "a6124014fc8743703199ba7ed65246ec2db7b66451a83b2dd7090c7aea61a74e",
+      "replay": {
+        "constants": 22,
+        "ok": true
+      }
+    }
+  },
+  "jobs": [
+    "echo_operator",
+    "echo_anf",
+    "return_controls",
+    "replay-Rule30ReturnDepthResearch",
+    "replay-Rule30ReturnSourcesResearch",
+    "replay-Rule30ReturnSumResearch",
+    "replay-Rule30FirstReturnParityResearch",
+    "replay-Rule30EchoProjectionResearch"
+  ],
+  "remaining_problem": "No constraint on the complete higher-source parity that excludes eventual periodicity.",
+  "status": "Actual return-depth source localization and first-even-channel cancellation proved; autonomous echo projection refuted."
+}

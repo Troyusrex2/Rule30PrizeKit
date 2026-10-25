@@ -1,0 +1,141 @@
+{
+  "source_sha256": "a6124014fc8743703199ba7ed65246ec2db7b66451a83b2dd7090c7aea61a74e",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-green-20261025T1610\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-green-20261025T1610\\owned-verifier\\owned-build\\Rule30DyadicSourceSumResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-green-20261025T1610\\owned-verifier\\Rule30DyadicSourceSumResearch.lean"
+      ],
+      "seconds": 20.562000000005355,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\source-green-20261025T1610\\owned-verifier\\Check.lean",
+        "Rule30DyadicSourceSumResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30DyadicSourceSumResearch.center_eq_one_add_deep_sources",
+        "--headline",
+        "Rule30DyadicSourceSumResearch.shallow_sum",
+        "--headline",
+        "Rule30DyadicSourceSumResearch.shallow_term_eq"
+      ],
+      "seconds": 21.59399999998277,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.cast_ne_zero_mod_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.center_dyadic_total",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.center_eq_one_add_deep_sources",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.dyadic_linear_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.shallow_sum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.shallow_term_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30DyadicSourceSumResearch.term",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.term.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.center_eq_one_add_deep_sources",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.shallow_sum",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30DyadicSourceSumResearch.shallow_term_eq",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30DyadicSourceSumResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 22,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
