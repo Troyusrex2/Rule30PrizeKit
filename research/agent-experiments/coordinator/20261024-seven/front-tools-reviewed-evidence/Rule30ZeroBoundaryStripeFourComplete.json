@@ -1,0 +1,145 @@
+{
+  "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+  "source_sha256": "5a9b9d593961c3a8944221330b24d638eb1fb85d04d7e9a2644b9624ad2342d7",
+  "dependency_sources": {
+    "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e",
+    "Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion": "cc9fe7e31fb566bd74a856203e58aa0aeade7de1786e024ec24677073ca08877"
+  },
+  "kit_base": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build": {
+    "seconds": 6.031,
+    "peak_tree_rss_bytes": 663425024,
+    "minimum_free_bytes": 6483427328,
+    "sampling_seconds": 0.05,
+    "exit_code": 0,
+    "guard_stop_reason": null
+  },
+  "replay": {
+    "seconds": 9.953,
+    "peak_tree_rss_bytes": 1227591680,
+    "minimum_free_bytes": 5979406336,
+    "sampling_seconds": 0.05,
+    "exit_code": 0,
+    "guard_stop_reason": null
+  },
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_cycle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_row4_13",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.cycle13_complete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.full_jump",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.prefix_jump",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.row4_13_all_odd",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.stripe_four_tail_complete",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_cycle",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_row4_13",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.cycle13_complete",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.row4_13_all_odd",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.stripe_four_tail_complete",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 31,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

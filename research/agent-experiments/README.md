@@ -8,6 +8,12 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+The [reviewed catalog integration](coordinator/20261024-seven/REVIEWED-CATALOG.md)
+is now in [PR #16](https://github.com/WolframInstitute/Rule30PrizeKit/pull/16):
+the consolidated method and its tail-13 use pass all 326 declaration replays;
+the older PR #15 is superseded. The record includes the exact sources and
+same-machine build comparison. Upstream verification and merge are pending.
+
 The [coordinator report](coordinator/20261024-seven/REPORT.md) records attempts
 on all seven original responses. Later work includes the
 [checked parallel return-map method](coordinator/20261024-seven/COMPRESSED.md),

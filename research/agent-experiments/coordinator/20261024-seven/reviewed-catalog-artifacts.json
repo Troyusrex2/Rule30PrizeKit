@@ -1,0 +1,81 @@
+{
+  "catalog_commit": "ad62be4ddb5559e5f0a6d921963463c41f9d2e3f",
+  "base_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "files": {
+    "reviewed-catalog/Rule30ZeroBoundaryStripeFrontLift.lean": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e",
+    "reviewed-catalog/StripeTail13Completion.lean": "cc9fe7e31fb566bd74a856203e58aa0aeade7de1786e024ec24677073ca08877",
+    "reviewed-catalog/Rule30ZeroBoundaryStripeFourComplete.lean": "5a9b9d593961c3a8944221330b24d638eb1fb85d04d7e9a2644b9624ad2342d7",
+    "REVIEWED-CATALOG.md": "c7296ef0f01d74c09a8b34401b193a7f0925c42fd5c9bac981f9da3eaca76542",
+    "front-tools-reviewed-manifest.json": "385a21a4005a746bae32541648492109100e5334fadc9d263f6fbffc17f04f8e",
+    "verify_reviewed_front_catalog.py": "001a8718ae6c4d07af41bdf20f3e87c2f3ea96acb9f84029ebceade596fed090",
+    "front-tools-reviewed-evidence/report.json": "9b6ec5abee11eee33745809f7cc383c293f54ab5838d5041bd2870de19111615",
+    "front-tools-reviewed-evidence/umbrella-build.json": "d0574591c470c12251f41bbc5c995b68dd3010971e54bb929f9540bf63d5ed62",
+    "front-tools-reviewed-evidence/metadata-checks.json": "676a5142301b448a50c24250608aa4c88c548b57d0ea95df7082f50568d31f43",
+    "front-tools-reviewed-evidence/Ruliology.build.log": "f5c0f5d2116be98294416edcc0610518aaf2d89802e5eab2a2e534de044d7bcc",
+    "prepare_front_tools_review.py": "ce10834e88356a88215ae5040d2543166055e0286ed36abc99e73a8e6271e70a",
+    "prepare_front_sparse_orbit.py": "ad6a1f9dce209c6d1f46678c0465bbe9453d34aaf162ad5d89fbdc76940e67c1",
+    "finalize_reviewed_front_docs.py": "96d1cbc41344872c95e422e8fa6b9a716a82587b7d488cc9a40e0d5d630e0892",
+    "build_reviewed_front_umbrella.py": "399b221b2980dbc473b754b682325d1c30a626380185092c3b70be8e68ae29cb",
+    "prepare_tail13_baseline.py": "21f79ff43124ae0482841e6e7bed52d8db4b5d61c3d2a388229ab799edf1c413",
+    "benchmark_tail13_baseline.py": "642e47ad197b0317667309ba2e34f2ce204b51192ec45c7494db5d5835f512fb",
+    "Rule30Tail13MergedBaseline.lean": "815c4f1a8d72776f19da82f638c39f99ed5e44888bf9daf35d5107b2101bd39b",
+    "tail13-baseline-manifest.json": "23e4ed8f832617b4459bbc149fdb1a6140d521b05261f151f8337006147b860c",
+    "tail13-baseline-evidence/report.json": "fcc0f2584c2c7cab8664c5492e6471e456957956037b0a32c6a655ede44fe278",
+    "tail13-baseline-evidence/normal-compile.resources.json": "ecd68c7f19c86d46c92e64056163b8c7df05660107a8c172aba62950dd78b6de",
+    "PR16-REVIEWED-BODY.md": "2104d76a8b327a036b09a9a6c1347c7396d6ae7f0bf83a6a2113aaea8bd70007",
+    "front-tools-reviewed-evidence/Rule30ZeroBoundaryStripeFrontLift.json": "5d0984ffa3f50ee450aefeda928e315367bf5a8262d0adc757fb2b488be2f4b3",
+    "front-tools-reviewed-evidence/StripeTail13Completion.json": "75cf1c1394cb89eddfc7825176ae3d792c9aad97dee0d6e4558472486736138c",
+    "front-tools-reviewed-evidence/Rule30ZeroBoundaryStripeFourComplete.json": "efb0baeee26aa33c06ec738b31657e52c86c0ef6169574bd821c0cc3fbd622c5"
+  },
+  "modules": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift",
+      "namespace": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift",
+      "source": "lean/Ruliology/CellularAutomata/Rule30ZeroBoundaryStripeFrontLift.lean",
+      "source_sha256": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.punctured_cycle_lift",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.universal_front_period",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial_run_correct",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.return_map_cycle_lift"
+      ],
+      "snapshot": "reviewed-catalog/Rule30ZeroBoundaryStripeFrontLift.lean",
+      "constants": 225
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion",
+      "namespace": "Ruliology.CellularAutomata.Rule30Tail13Completion",
+      "source": "lean/Ruliology/CellularAutomata/Rule30Certificates/StripeTail13Completion.lean",
+      "source_sha256": "cc9fe7e31fb566bd74a856203e58aa0aeade7de1786e024ec24677073ca08877",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.run_prefix",
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.run_full",
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.return_cycle",
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.rare_table",
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_period",
+        "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_sig"
+      ],
+      "snapshot": "reviewed-catalog/StripeTail13Completion.lean",
+      "constants": 70
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+      "namespace": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+      "source": "lean/Ruliology/CellularAutomata/Rule30ZeroBoundaryStripeFourComplete.lean",
+      "source_sha256": "5a9b9d593961c3a8944221330b24d638eb1fb85d04d7e9a2644b9624ad2342d7",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_cycle",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_row4_13",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.cycle13_complete",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.row4_13_all_odd",
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.stripe_four_tail_complete"
+      ],
+      "snapshot": "reviewed-catalog/Rule30ZeroBoundaryStripeFourComplete.lean",
+      "constants": 31
+    }
+  ],
+  "replayed_declarations": 326,
+  "pr16_state": "OPEN",
+  "pr15_state": "CLOSED",
+  "full_problem_solved": false
+}

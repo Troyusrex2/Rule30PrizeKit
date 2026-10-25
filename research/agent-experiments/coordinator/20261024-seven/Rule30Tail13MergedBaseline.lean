@@ -1,0 +1,1036 @@
+module
+
+public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront
+
+/-! Monolithic baseline of the original 256 tail-13 certificate segments.
+For compiler comparison only; this is the already checked earlier proof. -/
+
+@[expose] public section
+
+set_option maxRecDepth 200000
+set_option maxHeartbeats 0
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_000 : seg 46 45 1 4098891972621 0 8192 0 13 0 = true := by
+  decide +kernel
+
+theorem seg_001 : seg 46 45 1 40046811938829 0 8192 8192 4098891972621 0 = true := by
+  decide +kernel
+
+theorem seg_002 : seg 46 45 1 34123397726221 0 8192 16384 40046811938829 0 = true := by
+  decide +kernel
+
+theorem seg_003 : seg 46 45 1 44094281744397 0 8192 24576 34123397726221 0 = true := by
+  decide +kernel
+
+theorem seg_004 : seg 46 45 1 62967861215245 0 8192 32768 44094281744397 0 = true := by
+  decide +kernel
+
+theorem seg_005 : seg 46 45 1 62825170993165 0 8192 40960 62967861215245 0 = true := by
+  decide +kernel
+
+theorem seg_006 : seg 46 45 1 35594424025101 0 8192 49152 62825170993165 0 = true := by
+  decide +kernel
+
+theorem seg_007 : seg 46 45 1 30288109371405 0 8192 57344 35594424025101 0 = true := by
+  decide +kernel
+
+theorem path_chunk_00 : PathOK 46 45 1 0 (13, 0) (30288109371405, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 4098891972621 0 8192 0 13 0 seg_000) (seg_sound 46 45 1 40046811938829 0 8192 8192 4098891972621 0 seg_001)) (path_append (seg_sound 46 45 1 34123397726221 0 8192 16384 40046811938829 0 seg_002) (seg_sound 46 45 1 44094281744397 0 8192 24576 34123397726221 0 seg_003))) (path_append (path_append (seg_sound 46 45 1 62967861215245 0 8192 32768 44094281744397 0 seg_004) (seg_sound 46 45 1 62825170993165 0 8192 40960 62967861215245 0 seg_005)) (path_append (seg_sound 46 45 1 35594424025101 0 8192 49152 62825170993165 0 seg_006) (seg_sound 46 45 1 30288109371405 0 8192 57344 35594424025101 0 seg_007))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_008 : seg 46 45 1 34627519512589 0 8192 65536 30288109371405 0 = true := by
+  decide +kernel
+
+theorem seg_009 : seg 46 45 1 6047850823693 0 8192 73728 34627519512589 0 = true := by
+  decide +kernel
+
+theorem seg_010 : seg 46 45 1 48296789803021 0 8192 81920 6047850823693 0 = true := by
+  decide +kernel
+
+theorem seg_011 : seg 46 45 1 1127428915213 0 8192 90112 48296789803021 0 = true := by
+  decide +kernel
+
+theorem seg_012 : seg 46 45 1 55047941521421 0 8192 98304 1127428915213 0 = true := by
+  decide +kernel
+
+theorem seg_013 : seg 46 45 1 33018097958925 0 8192 106496 55047941521421 0 = true := by
+  decide +kernel
+
+theorem seg_014 : seg 46 45 1 58254671478797 0 8192 114688 33018097958925 0 = true := by
+  decide +kernel
+
+theorem seg_015 : seg 46 45 1 34943853920269 0 8192 122880 58254671478797 0 = true := by
+  decide +kernel
+
+theorem path_chunk_01 : PathOK 46 45 1 65536 (30288109371405, 0) (34943853920269, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 34627519512589 0 8192 65536 30288109371405 0 seg_008) (seg_sound 46 45 1 6047850823693 0 8192 73728 34627519512589 0 seg_009)) (path_append (seg_sound 46 45 1 48296789803021 0 8192 81920 6047850823693 0 seg_010) (seg_sound 46 45 1 1127428915213 0 8192 90112 48296789803021 0 seg_011))) (path_append (path_append (seg_sound 46 45 1 55047941521421 0 8192 98304 1127428915213 0 seg_012) (seg_sound 46 45 1 33018097958925 0 8192 106496 55047941521421 0 seg_013)) (path_append (seg_sound 46 45 1 58254671478797 0 8192 114688 33018097958925 0 seg_014) (seg_sound 46 45 1 34943853920269 0 8192 122880 58254671478797 0 seg_015))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_016 : seg 46 45 1 3927093280781 0 8192 131072 34943853920269 0 = true := by
+  decide +kernel
+
+theorem seg_017 : seg 46 45 1 59803661500429 0 8192 139264 3927093280781 0 = true := by
+  decide +kernel
+
+theorem seg_018 : seg 46 45 1 31408978395149 0 8192 147456 59803661500429 0 = true := by
+  decide +kernel
+
+theorem seg_019 : seg 46 45 1 19046032474125 0 8192 155648 31408978395149 0 = true := by
+  decide +kernel
+
+theorem seg_020 : seg 46 45 1 36201625026573 0 8192 163840 19046032474125 0 = true := by
+  decide +kernel
+
+theorem seg_021 : seg 46 45 1 2111513296909 0 8192 172032 36201625026573 0 = true := by
+  decide +kernel
+
+theorem seg_022 : seg 46 45 1 67239743062029 0 8192 180224 2111513296909 0 = true := by
+  decide +kernel
+
+theorem seg_023 : seg 46 45 1 37125697306637 0 8192 188416 67239743062029 0 = true := by
+  decide +kernel
+
+theorem path_chunk_02 : PathOK 46 45 1 131072 (34943853920269, 0) (37125697306637, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 3927093280781 0 8192 131072 34943853920269 0 seg_016) (seg_sound 46 45 1 59803661500429 0 8192 139264 3927093280781 0 seg_017)) (path_append (seg_sound 46 45 1 31408978395149 0 8192 147456 59803661500429 0 seg_018) (seg_sound 46 45 1 19046032474125 0 8192 155648 31408978395149 0 seg_019))) (path_append (path_append (seg_sound 46 45 1 36201625026573 0 8192 163840 19046032474125 0 seg_020) (seg_sound 46 45 1 2111513296909 0 8192 172032 36201625026573 0 seg_021)) (path_append (seg_sound 46 45 1 67239743062029 0 8192 180224 2111513296909 0 seg_022) (seg_sound 46 45 1 37125697306637 0 8192 188416 67239743062029 0 seg_023))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_024 : seg 46 45 1 22361092915213 0 8192 196608 37125697306637 0 = true := by
+  decide +kernel
+
+theorem seg_025 : seg 46 45 1 31508416954381 0 8192 204800 22361092915213 0 = true := by
+  decide +kernel
+
+theorem seg_026 : seg 46 45 1 22630065242125 0 8192 212992 31508416954381 0 = true := by
+  decide +kernel
+
+theorem seg_027 : seg 46 45 1 7758858420237 0 8192 221184 22630065242125 0 = true := by
+  decide +kernel
+
+theorem seg_028 : seg 46 45 1 8490496032781 0 8192 229376 7758858420237 0 = true := by
+  decide +kernel
+
+theorem seg_029 : seg 46 45 1 42398306533389 0 8192 237568 8490496032781 0 = true := by
+  decide +kernel
+
+theorem seg_030 : seg 46 45 1 18706612617229 0 8192 245760 42398306533389 0 = true := by
+  decide +kernel
+
+theorem seg_031 : seg 46 45 1 29274497089549 0 8192 253952 18706612617229 0 = true := by
+  decide +kernel
+
+theorem path_chunk_03 : PathOK 46 45 1 196608 (37125697306637, 0) (29274497089549, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 22361092915213 0 8192 196608 37125697306637 0 seg_024) (seg_sound 46 45 1 31508416954381 0 8192 204800 22361092915213 0 seg_025)) (path_append (seg_sound 46 45 1 22630065242125 0 8192 212992 31508416954381 0 seg_026) (seg_sound 46 45 1 7758858420237 0 8192 221184 22630065242125 0 seg_027))) (path_append (path_append (seg_sound 46 45 1 8490496032781 0 8192 229376 7758858420237 0 seg_028) (seg_sound 46 45 1 42398306533389 0 8192 237568 8490496032781 0 seg_029)) (path_append (seg_sound 46 45 1 18706612617229 0 8192 245760 42398306533389 0 seg_030) (seg_sound 46 45 1 29274497089549 0 8192 253952 18706612617229 0 seg_031))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_032 : seg 46 45 1 30899487899661 0 8192 262144 29274497089549 0 = true := by
+  decide +kernel
+
+theorem seg_033 : seg 46 45 1 24791088103437 0 8192 270336 30899487899661 0 = true := by
+  decide +kernel
+
+theorem seg_034 : seg 46 45 1 62848139001869 0 8192 278528 24791088103437 0 = true := by
+  decide +kernel
+
+theorem seg_035 : seg 46 45 1 45880988139533 0 8192 286720 62848139001869 0 = true := by
+  decide +kernel
+
+theorem seg_036 : seg 46 45 1 22698247847949 0 8192 294912 45880988139533 0 = true := by
+  decide +kernel
+
+theorem seg_037 : seg 46 45 1 1389958791181 0 8192 303104 22698247847949 0 = true := by
+  decide +kernel
+
+theorem seg_038 : seg 46 45 1 6869682749453 0 8192 311296 1389958791181 0 = true := by
+  decide +kernel
+
+theorem seg_039 : seg 46 45 1 36472862277645 0 8192 319488 6869682749453 0 = true := by
+  decide +kernel
+
+theorem path_chunk_04 : PathOK 46 45 1 262144 (29274497089549, 0) (36472862277645, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 30899487899661 0 8192 262144 29274497089549 0 seg_032) (seg_sound 46 45 1 24791088103437 0 8192 270336 30899487899661 0 seg_033)) (path_append (seg_sound 46 45 1 62848139001869 0 8192 278528 24791088103437 0 seg_034) (seg_sound 46 45 1 45880988139533 0 8192 286720 62848139001869 0 seg_035))) (path_append (path_append (seg_sound 46 45 1 22698247847949 0 8192 294912 45880988139533 0 seg_036) (seg_sound 46 45 1 1389958791181 0 8192 303104 22698247847949 0 seg_037)) (path_append (seg_sound 46 45 1 6869682749453 0 8192 311296 1389958791181 0 seg_038) (seg_sound 46 45 1 36472862277645 0 8192 319488 6869682749453 0 seg_039))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_040 : seg 46 45 1 27618132885517 0 8192 327680 36472862277645 0 = true := by
+  decide +kernel
+
+theorem seg_041 : seg 46 45 1 55388435120141 0 8192 335872 27618132885517 0 = true := by
+  decide +kernel
+
+theorem seg_042 : seg 46 45 1 17373025271821 0 8192 344064 55388435120141 0 = true := by
+  decide +kernel
+
+theorem seg_043 : seg 46 45 1 55415815536653 0 8192 352256 17373025271821 0 = true := by
+  decide +kernel
+
+theorem seg_044 : seg 46 45 1 20825642106893 0 8192 360448 55415815536653 0 = true := by
+  decide +kernel
+
+theorem seg_045 : seg 46 45 1 41401874120717 0 8192 368640 20825642106893 0 = true := by
+  decide +kernel
+
+theorem seg_046 : seg 46 45 1 55093575548941 0 8192 376832 41401874120717 0 = true := by
+  decide +kernel
+
+theorem seg_047 : seg 46 45 1 33157147525133 0 8192 385024 55093575548941 0 = true := by
+  decide +kernel
+
+theorem path_chunk_05 : PathOK 46 45 1 327680 (36472862277645, 0) (33157147525133, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 27618132885517 0 8192 327680 36472862277645 0 seg_040) (seg_sound 46 45 1 55388435120141 0 8192 335872 27618132885517 0 seg_041)) (path_append (seg_sound 46 45 1 17373025271821 0 8192 344064 55388435120141 0 seg_042) (seg_sound 46 45 1 55415815536653 0 8192 352256 17373025271821 0 seg_043))) (path_append (path_append (seg_sound 46 45 1 20825642106893 0 8192 360448 55415815536653 0 seg_044) (seg_sound 46 45 1 41401874120717 0 8192 368640 20825642106893 0 seg_045)) (path_append (seg_sound 46 45 1 55093575548941 0 8192 376832 41401874120717 0 seg_046) (seg_sound 46 45 1 33157147525133 0 8192 385024 55093575548941 0 seg_047))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_048 : seg 46 45 1 13135503163405 0 8192 393216 33157147525133 0 = true := by
+  decide +kernel
+
+theorem seg_049 : seg 46 45 1 23107460923405 0 8192 401408 13135503163405 0 = true := by
+  decide +kernel
+
+theorem seg_050 : seg 46 45 1 50238115020813 0 8192 409600 23107460923405 0 = true := by
+  decide +kernel
+
+theorem seg_051 : seg 46 45 1 7088843522061 0 8192 417792 50238115020813 0 = true := by
+  decide +kernel
+
+theorem seg_052 : seg 46 45 1 67950023278605 0 8192 425984 7088843522061 0 = true := by
+  decide +kernel
+
+theorem seg_053 : seg 46 45 1 1149440622605 0 8192 434176 67950023278605 0 = true := by
+  decide +kernel
+
+theorem seg_054 : seg 46 45 1 21747449462797 0 8192 442368 1149440622605 0 = true := by
+  decide +kernel
+
+theorem seg_055 : seg 46 45 1 35064113004557 0 8192 450560 21747449462797 0 = true := by
+  decide +kernel
+
+theorem path_chunk_06 : PathOK 46 45 1 393216 (33157147525133, 0) (35064113004557, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 13135503163405 0 8192 393216 33157147525133 0 seg_048) (seg_sound 46 45 1 23107460923405 0 8192 401408 13135503163405 0 seg_049)) (path_append (seg_sound 46 45 1 50238115020813 0 8192 409600 23107460923405 0 seg_050) (seg_sound 46 45 1 7088843522061 0 8192 417792 50238115020813 0 seg_051))) (path_append (path_append (seg_sound 46 45 1 67950023278605 0 8192 425984 7088843522061 0 seg_052) (seg_sound 46 45 1 1149440622605 0 8192 434176 67950023278605 0 seg_053)) (path_append (seg_sound 46 45 1 21747449462797 0 8192 442368 1149440622605 0 seg_054) (seg_sound 46 45 1 35064113004557 0 8192 450560 21747449462797 0 seg_055))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_056 : seg 46 45 1 7380246986765 0 8192 458752 35064113004557 0 = true := by
+  decide +kernel
+
+theorem seg_057 : seg 46 45 1 57759257067533 0 8192 466944 7380246986765 0 = true := by
+  decide +kernel
+
+theorem seg_058 : seg 46 45 1 36236521635853 0 8192 475136 57759257067533 0 = true := by
+  decide +kernel
+
+theorem seg_059 : seg 46 45 1 64521146204173 0 8192 483328 36236521635853 0 = true := by
+  decide +kernel
+
+theorem seg_060 : seg 46 45 1 48760109400077 0 8192 491520 64521146204173 0 = true := by
+  decide +kernel
+
+theorem seg_061 : seg 46 45 1 68099390832653 0 8192 499712 48760109400077 0 = true := by
+  decide +kernel
+
+theorem seg_062 : seg 46 45 1 18294295756813 0 8192 507904 68099390832653 0 = true := by
+  decide +kernel
+
+theorem seg_063 : seg 46 45 1 46729244180493 0 8192 516096 18294295756813 0 = true := by
+  decide +kernel
+
+theorem path_chunk_07 : PathOK 46 45 1 458752 (35064113004557, 0) (46729244180493, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 7380246986765 0 8192 458752 35064113004557 0 seg_056) (seg_sound 46 45 1 57759257067533 0 8192 466944 7380246986765 0 seg_057)) (path_append (seg_sound 46 45 1 36236521635853 0 8192 475136 57759257067533 0 seg_058) (seg_sound 46 45 1 64521146204173 0 8192 483328 36236521635853 0 seg_059))) (path_append (path_append (seg_sound 46 45 1 48760109400077 0 8192 491520 64521146204173 0 seg_060) (seg_sound 46 45 1 68099390832653 0 8192 499712 48760109400077 0 seg_061)) (path_append (seg_sound 46 45 1 18294295756813 0 8192 507904 68099390832653 0 seg_062) (seg_sound 46 45 1 46729244180493 0 8192 516096 18294295756813 0 seg_063))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_064 : seg 46 45 1 59624229175309 0 8192 524288 46729244180493 0 = true := by
+  decide +kernel
+
+theorem seg_065 : seg 46 45 1 52691195658253 0 8192 532480 59624229175309 0 = true := by
+  decide +kernel
+
+theorem seg_066 : seg 46 45 1 57762897723405 0 8192 540672 52691195658253 0 = true := by
+  decide +kernel
+
+theorem seg_067 : seg 46 45 1 22653805002765 0 8192 548864 57762897723405 0 = true := by
+  decide +kernel
+
+theorem seg_068 : seg 46 45 1 70114686795789 0 8192 557056 22653805002765 0 = true := by
+  decide +kernel
+
+theorem seg_069 : seg 46 45 1 64474438434829 0 8192 565248 70114686795789 0 = true := by
+  decide +kernel
+
+theorem seg_070 : seg 46 45 1 25149063561229 0 8192 573440 64474438434829 0 = true := by
+  decide +kernel
+
+theorem seg_071 : seg 46 45 1 45131516346381 0 8192 581632 25149063561229 0 = true := by
+  decide +kernel
+
+theorem path_chunk_08 : PathOK 46 45 1 524288 (46729244180493, 0) (45131516346381, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 59624229175309 0 8192 524288 46729244180493 0 seg_064) (seg_sound 46 45 1 52691195658253 0 8192 532480 59624229175309 0 seg_065)) (path_append (seg_sound 46 45 1 57762897723405 0 8192 540672 52691195658253 0 seg_066) (seg_sound 46 45 1 22653805002765 0 8192 548864 57762897723405 0 seg_067))) (path_append (path_append (seg_sound 46 45 1 70114686795789 0 8192 557056 22653805002765 0 seg_068) (seg_sound 46 45 1 64474438434829 0 8192 565248 70114686795789 0 seg_069)) (path_append (seg_sound 46 45 1 25149063561229 0 8192 573440 64474438434829 0 seg_070) (seg_sound 46 45 1 45131516346381 0 8192 581632 25149063561229 0 seg_071))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_072 : seg 46 45 1 70361647415309 0 8192 589824 45131516346381 0 = true := by
+  decide +kernel
+
+theorem seg_073 : seg 46 45 1 19791746170893 0 8192 598016 70361647415309 0 = true := by
+  decide +kernel
+
+theorem seg_074 : seg 46 45 1 19159731666957 0 8192 606208 19791746170893 0 = true := by
+  decide +kernel
+
+theorem seg_075 : seg 46 45 1 20368882401293 0 8192 614400 19159731666957 0 = true := by
+  decide +kernel
+
+theorem seg_076 : seg 46 45 1 56697208963085 0 8192 622592 20368882401293 0 = true := by
+  decide +kernel
+
+theorem seg_077 : seg 46 45 1 52259551445005 0 8192 630784 56697208963085 0 = true := by
+  decide +kernel
+
+theorem seg_078 : seg 46 45 1 6027869159437 0 8192 638976 52259551445005 0 = true := by
+  decide +kernel
+
+theorem seg_079 : seg 46 45 1 54185307406349 0 8192 647168 6027869159437 0 = true := by
+  decide +kernel
+
+theorem path_chunk_09 : PathOK 46 45 1 589824 (45131516346381, 0) (54185307406349, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 70361647415309 0 8192 589824 45131516346381 0 seg_072) (seg_sound 46 45 1 19791746170893 0 8192 598016 70361647415309 0 seg_073)) (path_append (seg_sound 46 45 1 19159731666957 0 8192 606208 19791746170893 0 seg_074) (seg_sound 46 45 1 20368882401293 0 8192 614400 19159731666957 0 seg_075))) (path_append (path_append (seg_sound 46 45 1 56697208963085 0 8192 622592 20368882401293 0 seg_076) (seg_sound 46 45 1 52259551445005 0 8192 630784 56697208963085 0 seg_077)) (path_append (seg_sound 46 45 1 6027869159437 0 8192 638976 52259551445005 0 seg_078) (seg_sound 46 45 1 54185307406349 0 8192 647168 6027869159437 0 seg_079))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_080 : seg 46 45 1 5576360722445 0 8192 655360 54185307406349 0 = true := by
+  decide +kernel
+
+theorem seg_081 : seg 46 45 1 53756347547661 0 8192 663552 5576360722445 0 = true := by
+  decide +kernel
+
+theorem seg_082 : seg 46 45 1 58347013275661 0 8192 671744 53756347547661 0 = true := by
+  decide +kernel
+
+theorem seg_083 : seg 46 45 1 27292369682445 0 8192 679936 58347013275661 0 = true := by
+  decide +kernel
+
+theorem seg_084 : seg 46 45 1 33452845957133 0 8192 688128 27292369682445 0 = true := by
+  decide +kernel
+
+theorem seg_085 : seg 46 45 1 40044664455181 0 8192 696320 33452845957133 0 = true := by
+  decide +kernel
+
+theorem seg_086 : seg 46 45 1 68889010503693 0 8192 704512 40044664455181 0 = true := by
+  decide +kernel
+
+theorem seg_087 : seg 46 45 1 64063732187149 0 8192 712704 68889010503693 0 = true := by
+  decide +kernel
+
+theorem path_chunk_10 : PathOK 46 45 1 655360 (54185307406349, 0) (64063732187149, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 5576360722445 0 8192 655360 54185307406349 0 seg_080) (seg_sound 46 45 1 53756347547661 0 8192 663552 5576360722445 0 seg_081)) (path_append (seg_sound 46 45 1 58347013275661 0 8192 671744 53756347547661 0 seg_082) (seg_sound 46 45 1 27292369682445 0 8192 679936 58347013275661 0 seg_083))) (path_append (path_append (seg_sound 46 45 1 33452845957133 0 8192 688128 27292369682445 0 seg_084) (seg_sound 46 45 1 40044664455181 0 8192 696320 33452845957133 0 seg_085)) (path_append (seg_sound 46 45 1 68889010503693 0 8192 704512 40044664455181 0 seg_086) (seg_sound 46 45 1 64063732187149 0 8192 712704 68889010503693 0 seg_087))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_088 : seg 46 45 1 22910848729101 0 8192 720896 64063732187149 0 = true := by
+  decide +kernel
+
+theorem seg_089 : seg 46 45 1 2371358818317 0 8192 729088 22910848729101 0 = true := by
+  decide +kernel
+
+theorem seg_090 : seg 46 45 1 30876402450445 0 8192 737280 2371358818317 0 = true := by
+  decide +kernel
+
+theorem seg_091 : seg 46 45 1 29199335161869 0 8192 745472 30876402450445 0 = true := by
+  decide +kernel
+
+theorem seg_092 : seg 46 45 1 57418763468813 0 8192 753664 29199335161869 0 = true := by
+  decide +kernel
+
+theorem seg_093 : seg 46 45 1 17659294908429 0 8192 761856 57418763468813 0 = true := by
+  decide +kernel
+
+theorem seg_094 : seg 46 45 1 3863205642253 0 8192 770048 17659294908429 0 = true := by
+  decide +kernel
+
+theorem seg_095 : seg 46 45 1 36421322670093 0 8192 778240 3863205642253 0 = true := by
+  decide +kernel
+
+theorem path_chunk_11 : PathOK 46 45 1 720896 (64063732187149, 0) (36421322670093, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 22910848729101 0 8192 720896 64063732187149 0 seg_088) (seg_sound 46 45 1 2371358818317 0 8192 729088 22910848729101 0 seg_089)) (path_append (seg_sound 46 45 1 30876402450445 0 8192 737280 2371358818317 0 seg_090) (seg_sound 46 45 1 29199335161869 0 8192 745472 30876402450445 0 seg_091))) (path_append (path_append (seg_sound 46 45 1 57418763468813 0 8192 753664 29199335161869 0 seg_092) (seg_sound 46 45 1 17659294908429 0 8192 761856 57418763468813 0 seg_093)) (path_append (seg_sound 46 45 1 3863205642253 0 8192 770048 17659294908429 0 seg_094) (seg_sound 46 45 1 36421322670093 0 8192 778240 3863205642253 0 seg_095))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_096 : seg 46 45 1 35847290224653 0 8192 786432 36421322670093 0 = true := by
+  decide +kernel
+
+theorem seg_097 : seg 46 45 1 51729122983949 0 8192 794624 35847290224653 0 = true := by
+  decide +kernel
+
+theorem seg_098 : seg 46 45 1 17218406449165 0 8192 802816 51729122983949 0 = true := by
+  decide +kernel
+
+theorem seg_099 : seg 46 45 1 66221953253389 0 8192 811008 17218406449165 0 = true := by
+  decide +kernel
+
+theorem seg_100 : seg 46 45 1 4556305989645 0 8192 819200 66221953253389 0 = true := by
+  decide +kernel
+
+theorem seg_101 : seg 46 45 1 56915295993869 0 8192 827392 4556305989645 0 = true := by
+  decide +kernel
+
+theorem seg_102 : seg 46 45 1 16215531585549 0 8192 835584 56915295993869 0 = true := by
+  decide +kernel
+
+theorem seg_103 : seg 46 45 1 43619687858189 0 8192 843776 16215531585549 0 = true := by
+  decide +kernel
+
+theorem path_chunk_12 : PathOK 46 45 1 786432 (36421322670093, 0) (43619687858189, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 35847290224653 0 8192 786432 36421322670093 0 seg_096) (seg_sound 46 45 1 51729122983949 0 8192 794624 35847290224653 0 seg_097)) (path_append (seg_sound 46 45 1 17218406449165 0 8192 802816 51729122983949 0 seg_098) (seg_sound 46 45 1 66221953253389 0 8192 811008 17218406449165 0 seg_099))) (path_append (path_append (seg_sound 46 45 1 4556305989645 0 8192 819200 66221953253389 0 seg_100) (seg_sound 46 45 1 56915295993869 0 8192 827392 4556305989645 0 seg_101)) (path_append (seg_sound 46 45 1 16215531585549 0 8192 835584 56915295993869 0 seg_102) (seg_sound 46 45 1 43619687858189 0 8192 843776 16215531585549 0 seg_103))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_104 : seg 46 45 1 35864470093837 0 8192 851968 43619687858189 0 = true := by
+  decide +kernel
+
+theorem seg_105 : seg 46 45 1 37246493261837 0 8192 860160 35864470093837 0 = true := by
+  decide +kernel
+
+theorem seg_106 : seg 46 45 1 58604711313421 0 8192 868352 37246493261837 0 = true := by
+  decide +kernel
+
+theorem seg_107 : seg 46 45 1 24079734145037 0 8192 876544 58604711313421 0 = true := by
+  decide +kernel
+
+theorem seg_108 : seg 46 45 1 5982235131917 0 8192 884736 24079734145037 0 = true := by
+  decide +kernel
+
+theorem seg_109 : seg 46 45 1 3468722962445 0 8192 892928 5982235131917 0 = true := by
+  decide +kernel
+
+theorem seg_110 : seg 46 45 1 62240401129485 0 8192 901120 3468722962445 0 = true := by
+  decide +kernel
+
+theorem seg_111 : seg 46 45 1 57896159150093 0 8192 909312 62240401129485 0 = true := by
+  decide +kernel
+
+theorem path_chunk_13 : PathOK 46 45 1 851968 (43619687858189, 0) (57896159150093, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 35864470093837 0 8192 851968 43619687858189 0 seg_104) (seg_sound 46 45 1 37246493261837 0 8192 860160 35864470093837 0 seg_105)) (path_append (seg_sound 46 45 1 58604711313421 0 8192 868352 37246493261837 0 seg_106) (seg_sound 46 45 1 24079734145037 0 8192 876544 58604711313421 0 seg_107))) (path_append (path_append (seg_sound 46 45 1 5982235131917 0 8192 884736 24079734145037 0 seg_108) (seg_sound 46 45 1 3468722962445 0 8192 892928 5982235131917 0 seg_109)) (path_append (seg_sound 46 45 1 62240401129485 0 8192 901120 3468722962445 0 seg_110) (seg_sound 46 45 1 57896159150093 0 8192 909312 62240401129485 0 seg_111))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_112 : seg 46 45 1 37874514788365 0 8192 917504 57896159150093 0 = true := by
+  decide +kernel
+
+theorem seg_113 : seg 46 45 1 22557705109517 0 8192 925696 37874514788365 0 = true := by
+  decide +kernel
+
+theorem seg_114 : seg 46 45 1 63982010368013 0 8192 933888 22557705109517 0 = true := by
+  decide +kernel
+
+theorem seg_115 : seg 46 45 1 27429808635917 0 8192 942080 63982010368013 0 = true := by
+  decide +kernel
+
+theorem seg_116 : seg 46 45 1 45410034909197 0 8192 950272 27429808635917 0 = true := by
+  decide +kernel
+
+theorem seg_117 : seg 46 45 1 52276731314189 0 8192 958464 45410034909197 0 = true := by
+  decide +kernel
+
+theorem seg_118 : seg 46 45 1 23396716904461 0 8192 966656 52276731314189 0 = true := by
+  decide +kernel
+
+theorem seg_119 : seg 46 45 1 16922171146253 0 8192 974848 23396716904461 0 = true := by
+  decide +kernel
+
+theorem path_chunk_14 : PathOK 46 45 1 917504 (57896159150093, 0) (16922171146253, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 37874514788365 0 8192 917504 57896159150093 0 seg_112) (seg_sound 46 45 1 22557705109517 0 8192 925696 37874514788365 0 seg_113)) (path_append (seg_sound 46 45 1 63982010368013 0 8192 933888 22557705109517 0 seg_114) (seg_sound 46 45 1 27429808635917 0 8192 942080 63982010368013 0 seg_115))) (path_append (path_append (seg_sound 46 45 1 45410034909197 0 8192 950272 27429808635917 0 seg_116) (seg_sound 46 45 1 52276731314189 0 8192 958464 45410034909197 0 seg_117)) (path_append (seg_sound 46 45 1 23396716904461 0 8192 966656 52276731314189 0 seg_118) (seg_sound 46 45 1 16922171146253 0 8192 974848 23396716904461 0 seg_119))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_120 : seg 46 45 1 29920235356173 0 8192 983040 16922171146253 0 = true := by
+  decide +kernel
+
+theorem seg_121 : seg 46 45 1 69304129159181 0 8192 991232 29920235356173 0 = true := by
+  decide +kernel
+
+theorem seg_122 : seg 46 45 1 14796044894221 0 8192 999424 69304129159181 0 = true := by
+  decide +kernel
+
+theorem seg_123 : seg 46 45 1 56274808995853 0 8192 1007616 14796044894221 0 = true := by
+  decide +kernel
+
+theorem seg_124 : seg 46 45 1 39414260563981 0 8192 1015808 56274808995853 0 = true := by
+  decide +kernel
+
+theorem seg_125 : seg 46 45 1 53255983857677 0 8192 1024000 39414260563981 0 = true := by
+  decide +kernel
+
+theorem seg_126 : seg 46 45 1 15545516687373 0 8192 1032192 53255983857677 0 = true := by
+  decide +kernel
+
+theorem seg_127 : seg 46 45 1 13194139533325 0 8192 1040384 15545516687373 0 = true := by
+  decide +kernel
+
+theorem path_chunk_15 : PathOK 46 45 1 983040 (16922171146253, 0) (13194139533325, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 29920235356173 0 8192 983040 16922171146253 0 seg_120) (seg_sound 46 45 1 69304129159181 0 8192 991232 29920235356173 0 seg_121)) (path_append (seg_sound 46 45 1 14796044894221 0 8192 999424 69304129159181 0 seg_122) (seg_sound 46 45 1 56274808995853 0 8192 1007616 14796044894221 0 seg_123))) (path_append (path_append (seg_sound 46 45 1 39414260563981 0 8192 1015808 56274808995853 0 seg_124) (seg_sound 46 45 1 53255983857677 0 8192 1024000 39414260563981 0 seg_125)) (path_append (seg_sound 46 45 1 15545516687373 0 8192 1032192 53255983857677 0 seg_126) (seg_sound 46 45 1 13194139533325 0 8192 1040384 15545516687373 0 seg_127))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_128 : seg 46 45 1 43681310572557 0 8192 1048576 13194139533325 0 = true := by
+  decide +kernel
+
+theorem seg_129 : seg 46 45 1 53240951472141 0 8192 1056768 43681310572557 0 = true := by
+  decide +kernel
+
+theorem seg_130 : seg 46 45 1 38521444237325 0 8192 1064960 53240951472141 0 = true := by
+  decide +kernel
+
+theorem seg_131 : seg 46 45 1 48492328255501 0 8192 1073152 38521444237325 0 = true := by
+  decide +kernel
+
+theorem seg_132 : seg 46 45 1 5793256570893 0 8192 1081344 48492328255501 0 = true := by
+  decide +kernel
+
+theorem seg_133 : seg 46 45 1 49631031459853 0 8192 1089536 5793256570893 0 = true := by
+  decide +kernel
+
+theorem seg_134 : seg 46 45 1 13604191469581 0 8192 1097728 49631031459853 0 = true := by
+  decide +kernel
+
+theorem seg_135 : seg 46 45 1 69870527971341 0 8192 1105920 13604191469581 0 = true := by
+  decide +kernel
+
+theorem path_chunk_16 : PathOK 46 45 1 1048576 (13194139533325, 0) (69870527971341, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 43681310572557 0 8192 1048576 13194139533325 0 seg_128) (seg_sound 46 45 1 53240951472141 0 8192 1056768 43681310572557 0 seg_129)) (path_append (seg_sound 46 45 1 38521444237325 0 8192 1064960 53240951472141 0 seg_130) (seg_sound 46 45 1 48492328255501 0 8192 1073152 38521444237325 0 seg_131))) (path_append (path_append (seg_sound 46 45 1 5793256570893 0 8192 1081344 48492328255501 0 seg_132) (seg_sound 46 45 1 49631031459853 0 8192 1089536 5793256570893 0 seg_133)) (path_append (seg_sound 46 45 1 13604191469581 0 8192 1097728 49631031459853 0 seg_134) (seg_sound 46 45 1 69870527971341 0 8192 1105920 13604191469581 0 seg_135))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_136 : seg 46 45 1 21433379979277 0 8192 1114112 69870527971341 0 = true := by
+  decide +kernel
+
+theorem seg_137 : seg 46 45 1 19241990357005 0 8192 1122304 21433379979277 0 = true := by
+  decide +kernel
+
+theorem seg_138 : seg 46 45 1 17510464225293 0 8192 1130496 19241990357005 0 = true := by
+  decide +kernel
+
+theorem seg_139 : seg 46 45 1 31913754492941 0 8192 1138688 17510464225293 0 = true := by
+  decide +kernel
+
+theorem seg_140 : seg 46 45 1 50649895010317 0 8192 1146880 31913754492941 0 = true := by
+  decide +kernel
+
+theorem seg_141 : seg 46 45 1 63804423536653 0 8192 1155072 50649895010317 0 = true := by
+  decide +kernel
+
+theorem seg_142 : seg 46 45 1 53856624967693 0 8192 1163264 63804423536653 0 = true := by
+  decide +kernel
+
+theorem seg_143 : seg 46 45 1 39341900431373 0 8192 1171456 53856624967693 0 = true := by
+  decide +kernel
+
+theorem path_chunk_17 : PathOK 46 45 1 1114112 (69870527971341, 0) (39341900431373, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 21433379979277 0 8192 1114112 69870527971341 0 seg_136) (seg_sound 46 45 1 19241990357005 0 8192 1122304 21433379979277 0 seg_137)) (path_append (seg_sound 46 45 1 17510464225293 0 8192 1130496 19241990357005 0 seg_138) (seg_sound 46 45 1 31913754492941 0 8192 1138688 17510464225293 0 seg_139))) (path_append (path_append (seg_sound 46 45 1 50649895010317 0 8192 1146880 31913754492941 0 seg_140) (seg_sound 46 45 1 63804423536653 0 8192 1155072 50649895010317 0 seg_141)) (path_append (seg_sound 46 45 1 53856624967693 0 8192 1163264 63804423536653 0 seg_142) (seg_sound 46 45 1 39341900431373 0 8192 1171456 53856624967693 0 seg_143))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_144 : seg 46 45 1 43509511880717 0 8192 1179648 39341900431373 0 = true := by
+  decide +kernel
+
+theorem seg_145 : seg 46 45 1 55405614989325 0 8192 1187840 43509511880717 0 = true := by
+  decide +kernel
+
+theorem seg_146 : seg 46 45 1 35807024906253 0 8192 1196032 55405614989325 0 = true := by
+  decide +kernel
+
+theorem seg_147 : seg 46 45 1 23444078985229 0 8192 1204224 35807024906253 0 = true := by
+  decide +kernel
+
+theorem seg_148 : seg 46 45 1 31803578515469 0 8192 1212416 23444078985229 0 = true := by
+  decide +kernel
+
+theorem seg_149 : seg 46 45 1 15305652830221 0 8192 1220608 31803578515469 0 = true := by
+  decide +kernel
+
+theorem seg_150 : seg 46 45 1 1269045395469 0 8192 1228800 15305652830221 0 = true := by
+  decide +kernel
+
+theorem seg_151 : seg 46 45 1 59115929862157 0 8192 1236992 1269045395469 0 = true := by
+  decide +kernel
+
+theorem path_chunk_18 : PathOK 46 45 1 1179648 (39341900431373, 0) (59115929862157, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 43509511880717 0 8192 1179648 39341900431373 0 seg_144) (seg_sound 46 45 1 55405614989325 0 8192 1187840 43509511880717 0 seg_145)) (path_append (seg_sound 46 45 1 35807024906253 0 8192 1196032 55405614989325 0 seg_146) (seg_sound 46 45 1 23444078985229 0 8192 1204224 35807024906253 0 seg_147))) (path_append (path_append (seg_sound 46 45 1 31803578515469 0 8192 1212416 23444078985229 0 seg_148) (seg_sound 46 45 1 15305652830221 0 8192 1220608 31803578515469 0 seg_149)) (path_append (seg_sound 46 45 1 1269045395469 0 8192 1228800 15305652830221 0 seg_150) (seg_sound 46 45 1 59115929862157 0 8192 1236992 1269045395469 0 seg_151))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_152 : seg 46 45 1 61943511515149 0 8192 1245184 59115929862157 0 = true := by
+  decide +kernel
+
+theorem seg_153 : seg 46 45 1 18314277421069 0 8192 1253376 61943511515149 0 = true := by
+  decide +kernel
+
+theorem seg_154 : seg 46 45 1 18232018731021 0 8192 1261568 18314277421069 0 = true := by
+  decide +kernel
+
+theorem seg_155 : seg 46 45 1 3360811909133 0 8192 1269760 18232018731021 0 = true := by
+  decide +kernel
+
+theorem seg_156 : seg 46 45 1 30480728588301 0 8192 1277952 3360811909133 0 = true := by
+  decide +kernel
+
+theorem seg_157 : seg 46 45 1 38000260022285 0 8192 1286144 30480728588301 0 = true := by
+  decide +kernel
+
+theorem seg_158 : seg 46 45 1 40696845172749 0 8192 1294336 38000260022285 0 = true := by
+  decide +kernel
+
+theorem seg_159 : seg 46 45 1 24876450578445 0 8192 1302528 40696845172749 0 = true := by
+  decide +kernel
+
+theorem path_chunk_19 : PathOK 46 45 1 1245184 (59115929862157, 0) (24876450578445, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 61943511515149 0 8192 1245184 59115929862157 0 seg_152) (seg_sound 46 45 1 18314277421069 0 8192 1253376 61943511515149 0 seg_153)) (path_append (seg_sound 46 45 1 18232018731021 0 8192 1261568 18314277421069 0 seg_154) (seg_sound 46 45 1 3360811909133 0 8192 1269760 18232018731021 0 seg_155))) (path_append (path_append (seg_sound 46 45 1 30480728588301 0 8192 1277952 3360811909133 0 seg_156) (seg_sound 46 45 1 38000260022285 0 8192 1286144 30480728588301 0 seg_157)) (path_append (seg_sound 46 45 1 40696845172749 0 8192 1294336 38000260022285 0 seg_158) (seg_sound 46 45 1 24876450578445 0 8192 1302528 40696845172749 0 seg_159))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_160 : seg 46 45 1 113162321933 0 8192 1310720 24876450578445 0 = true := by
+  decide +kernel
+
+theorem seg_161 : seg 46 45 1 37985227636749 0 8192 1318912 113162321933 0 = true := by
+  decide +kernel
+
+theorem seg_162 : seg 46 45 1 23265720401933 0 8192 1327104 37985227636749 0 = true := by
+  decide +kernel
+
+theorem seg_163 : seg 46 45 1 41482941628429 0 8192 1335296 23265720401933 0 = true := by
+  decide +kernel
+
+theorem seg_164 : seg 46 45 1 27096294359053 0 8192 1343488 41482941628429 0 = true := by
+  decide +kernel
+
+theorem seg_165 : seg 46 45 1 5788005302285 0 8192 1351680 27096294359053 0 = true := by
+  decide +kernel
+
+theorem seg_166 : seg 46 45 1 11267729260557 0 8192 1359872 5788005302285 0 = true := by
+  decide +kernel
+
+theorem seg_167 : seg 46 45 1 5686536699917 0 8192 1368064 11267729260557 0 = true := by
+  decide +kernel
+
+theorem path_chunk_20 : PathOK 46 45 1 1310720 (24876450578445, 0) (5686536699917, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 113162321933 0 8192 1310720 24876450578445 0 seg_160) (seg_sound 46 45 1 37985227636749 0 8192 1318912 113162321933 0 seg_161)) (path_append (seg_sound 46 45 1 23265720401933 0 8192 1327104 37985227636749 0 seg_162) (seg_sound 46 45 1 41482941628429 0 8192 1335296 23265720401933 0 seg_163))) (path_append (path_append (seg_sound 46 45 1 27096294359053 0 8192 1343488 41482941628429 0 seg_164) (seg_sound 46 45 1 5788005302285 0 8192 1351680 27096294359053 0 seg_165)) (path_append (seg_sound 46 45 1 11267729260557 0 8192 1359872 5788005302285 0 seg_166) (seg_sound 46 45 1 5686536699917 0 8192 1368064 11267729260557 0 seg_167))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_168 : seg 46 45 1 67200551485453 0 8192 1376256 5686536699917 0 = true := by
+  decide +kernel
+
+theorem seg_169 : seg 46 45 1 15806016520205 0 8192 1384448 67200551485453 0 = true := by
+  decide +kernel
+
+theorem seg_170 : seg 46 45 1 65751536893965 0 8192 1392640 15806016520205 0 = true := by
+  decide +kernel
+
+theorem seg_171 : seg 46 45 1 33425582981133 0 8192 1400832 65751536893965 0 = true := by
+  decide +kernel
+
+theorem seg_172 : seg 46 45 1 69204153729037 0 8192 1409024 33425582981133 0 = true := by
+  decide +kernel
+
+theorem seg_173 : seg 46 45 1 54596013654029 0 8192 1417216 69204153729037 0 = true := by
+  decide +kernel
+
+theorem seg_174 : seg 46 45 1 68287715082253 0 8192 1425408 54596013654029 0 = true := by
+  decide +kernel
+
+theorem seg_175 : seg 46 45 1 46351287058445 0 8192 1433600 68287715082253 0 = true := by
+  decide +kernel
+
+theorem path_chunk_21 : PathOK 46 45 1 1376256 (5686536699917, 0) (46351287058445, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 67200551485453 0 8192 1376256 5686536699917 0 seg_168) (seg_sound 46 45 1 15806016520205 0 8192 1384448 67200551485453 0 seg_169)) (path_append (seg_sound 46 45 1 65751536893965 0 8192 1392640 15806016520205 0 seg_170) (seg_sound 46 45 1 33425582981133 0 8192 1400832 65751536893965 0 seg_171))) (path_append (path_append (seg_sound 46 45 1 69204153729037 0 8192 1409024 33425582981133 0 seg_172) (seg_sound 46 45 1 54596013654029 0 8192 1417216 69204153729037 0 seg_173)) (path_append (seg_sound 46 45 1 68287715082253 0 8192 1425408 54596013654029 0 seg_174) (seg_sound 46 45 1 46351287058445 0 8192 1433600 68287715082253 0 seg_175))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_176 : seg 46 45 1 52717921763341 0 8192 1441792 46351287058445 0 = true := by
+  decide +kernel
+
+theorem seg_177 : seg 46 45 1 62689879523341 0 8192 1449984 52717921763341 0 = true := by
+  decide +kernel
+
+theorem seg_178 : seg 46 45 1 54636161531917 0 8192 1458176 62689879523341 0 = true := by
+  decide +kernel
+
+theorem seg_179 : seg 46 45 1 55467355144205 0 8192 1466368 54636161531917 0 = true := by
+  decide +kernel
+
+theorem seg_180 : seg 46 45 1 54755883745293 0 8192 1474560 55467355144205 0 = true := by
+  decide +kernel
+
+theorem seg_181 : seg 46 45 1 5547487133709 0 8192 1482752 54755883745293 0 = true := by
+  decide +kernel
+
+theorem seg_182 : seg 46 45 1 26145495973901 0 8192 1490944 5547487133709 0 = true := by
+  decide +kernel
+
+theorem seg_183 : seg 46 45 1 4277787426829 0 8192 1499136 26145495973901 0 = true := by
+  decide +kernel
+
+theorem path_chunk_22 : PathOK 46 45 1 1441792 (46351287058445, 0) (4277787426829, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 52717921763341 0 8192 1441792 46351287058445 0 seg_176) (seg_sound 46 45 1 62689879523341 0 8192 1449984 52717921763341 0 seg_177)) (path_append (seg_sound 46 45 1 54636161531917 0 8192 1458176 62689879523341 0 seg_178) (seg_sound 46 45 1 55467355144205 0 8192 1466368 54636161531917 0 seg_179))) (path_append (path_append (seg_sound 46 45 1 54755883745293 0 8192 1474560 55467355144205 0 seg_180) (seg_sound 46 45 1 5547487133709 0 8192 1482752 54755883745293 0 seg_181)) (path_append (seg_sound 46 45 1 26145495973901 0 8192 1490944 5547487133709 0 seg_182) (seg_sound 46 45 1 4277787426829 0 8192 1499136 26145495973901 0 seg_183))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_184 : seg 46 45 1 64554851631117 0 8192 1507328 4277787426829 0 = true := by
+  decide +kernel
+
+theorem seg_185 : seg 46 45 1 584652423181 0 8192 1515520 64554851631117 0 = true := by
+  decide +kernel
+
+theorem seg_186 : seg 46 45 1 67022847213581 0 8192 1523712 584652423181 0 = true := by
+  decide +kernel
+
+theorem seg_187 : seg 46 45 1 42530913648653 0 8192 1531904 67022847213581 0 = true := by
+  decide +kernel
+
+theorem seg_188 : seg 46 45 1 44362062888973 0 8192 1540096 42530913648653 0 = true := by
+  decide +kernel
+
+theorem seg_189 : seg 46 45 1 37313065254925 0 8192 1548288 44362062888973 0 = true := by
+  decide +kernel
+
+theorem seg_190 : seg 46 45 1 13896249245709 0 8192 1556480 37313065254925 0 = true := by
+  decide +kernel
+
+theorem seg_191 : seg 46 45 1 51127290691597 0 8192 1564672 13896249245709 0 = true := by
+  decide +kernel
+
+theorem path_chunk_23 : PathOK 46 45 1 1507328 (4277787426829, 0) (51127290691597, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 64554851631117 0 8192 1507328 4277787426829 0 seg_184) (seg_sound 46 45 1 584652423181 0 8192 1515520 64554851631117 0 seg_185)) (path_append (seg_sound 46 45 1 67022847213581 0 8192 1523712 584652423181 0 seg_186) (seg_sound 46 45 1 42530913648653 0 8192 1531904 67022847213581 0 seg_187))) (path_append (path_append (seg_sound 46 45 1 44362062888973 0 8192 1540096 42530913648653 0 seg_188) (seg_sound 46 45 1 37313065254925 0 8192 1548288 44362062888973 0 seg_189)) (path_append (seg_sound 46 45 1 13896249245709 0 8192 1556480 37313065254925 0 seg_190) (seg_sound 46 45 1 51127290691597 0 8192 1564672 13896249245709 0 seg_191))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_192 : seg 46 45 1 2449624530957 0 8192 1572864 51127290691597 0 = true := by
+  decide +kernel
+
+theorem seg_193 : seg 46 45 1 48293149147149 0 8192 1581056 2449624530957 0 = true := by
+  decide +kernel
+
+theorem seg_194 : seg 46 45 1 588293079053 0 8192 1589248 48293149147149 0 = true := by
+  decide +kernel
+
+theorem seg_195 : seg 46 45 1 9459665469453 0 8192 1597440 588293079053 0 = true := by
+  decide +kernel
+
+theorem seg_196 : seg 46 45 1 12940082151437 0 8192 1605632 9459665469453 0 = true := by
+  decide +kernel
+
+theorem seg_197 : seg 46 45 1 68872484945933 0 8192 1613824 12940082151437 0 = true := by
+  decide +kernel
+
+theorem seg_198 : seg 46 45 1 47139296116749 0 8192 1622016 68872484945933 0 = true := by
+  decide +kernel
+
+theorem seg_199 : seg 46 45 1 58325655879693 0 8192 1630208 47139296116749 0 = true := by
+  decide +kernel
+
+theorem path_chunk_24 : PathOK 46 45 1 1572864 (51127290691597, 0) (58325655879693, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 2449624530957 0 8192 1572864 51127290691597 0 seg_192) (seg_sound 46 45 1 48293149147149 0 8192 1581056 2449624530957 0 seg_193)) (path_append (seg_sound 46 45 1 588293079053 0 8192 1589248 48293149147149 0 seg_194) (seg_sound 46 45 1 9459665469453 0 8192 1597440 588293079053 0 seg_195))) (path_append (path_append (seg_sound 46 45 1 12940082151437 0 8192 1605632 9459665469453 0 seg_196) (seg_sound 46 45 1 68872484945933 0 8192 1613824 12940082151437 0 seg_197)) (path_append (seg_sound 46 45 1 47139296116749 0 8192 1622016 68872484945933 0 seg_198) (seg_sound 46 45 1 58325655879693 0 8192 1630208 47139296116749 0 seg_199))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_200 : seg 46 45 1 48371414859789 0 8192 1638400 58325655879693 0 = true := by
+  decide +kernel
+
+theorem seg_201 : seg 46 45 1 24189792681997 0 8192 1646592 48371414859789 0 = true := by
+  decide +kernel
+
+theorem seg_202 : seg 46 45 1 58742150266893 0 8192 1654784 24189792681997 0 = true := by
+  decide +kernel
+
+theorem seg_203 : seg 46 45 1 24766928912397 0 8192 1662976 58742150266893 0 = true := by
+  decide +kernel
+
+theorem seg_204 : seg 46 45 1 61095255474189 0 8192 1671168 24766928912397 0 = true := by
+  decide +kernel
+
+theorem seg_205 : seg 46 45 1 47861504933901 0 8192 1679360 61095255474189 0 = true := by
+  decide +kernel
+
+theorem seg_206 : seg 46 45 1 36814194737165 0 8192 1687552 47861504933901 0 = true := by
+  decide +kernel
+
+theorem seg_207 : seg 46 45 1 49787260895245 0 8192 1695744 36814194737165 0 = true := by
+  decide +kernel
+
+theorem path_chunk_25 : PathOK 46 45 1 1638400 (58325655879693, 0) (49787260895245, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 48371414859789 0 8192 1638400 58325655879693 0 seg_200) (seg_sound 46 45 1 24189792681997 0 8192 1646592 48371414859789 0 seg_201)) (path_append (seg_sound 46 45 1 58742150266893 0 8192 1654784 24189792681997 0 seg_202) (seg_sound 46 45 1 24766928912397 0 8192 1662976 58742150266893 0 seg_203))) (path_append (path_append (seg_sound 46 45 1 61095255474189 0 8192 1671168 24766928912397 0 seg_204) (seg_sound 46 45 1 47861504933901 0 8192 1679360 61095255474189 0 seg_205)) (path_append (seg_sound 46 45 1 36814194737165 0 8192 1687552 47861504933901 0 seg_206) (seg_sound 46 45 1 49787260895245 0 8192 1695744 36814194737165 0 seg_207))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_208 : seg 46 45 1 27566593277965 0 8192 1703936 49787260895245 0 = true := by
+  decide +kernel
+
+theorem seg_209 : seg 46 45 1 14173928947725 0 8192 1712128 27566593277965 0 = true := by
+  decide +kernel
+
+theorem seg_210 : seg 46 45 1 27560687697933 0 8192 1720320 14173928947725 0 = true := by
+  decide +kernel
+
+theorem seg_211 : seg 46 45 1 14098230149133 0 8192 1728512 27560687697933 0 = true := by
+  decide +kernel
+
+theorem seg_212 : seg 46 45 1 2666520379405 0 8192 1736704 14098230149133 0 = true := by
+  decide +kernel
+
+theorem seg_213 : seg 46 45 1 44442710966285 0 8192 1744896 2666520379405 0 = true := by
+  decide +kernel
+
+theorem seg_214 : seg 46 45 1 29306591903757 0 8192 1753088 44442710966285 0 = true := by
+  decide +kernel
+
+theorem seg_215 : seg 46 45 1 15685220565005 0 8192 1761280 29306591903757 0 = true := by
+  decide +kernel
+
+theorem path_chunk_26 : PathOK 46 45 1 1703936 (49787260895245, 0) (15685220565005, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 27566593277965 0 8192 1703936 49787260895245 0 seg_208) (seg_sound 46 45 1 14173928947725 0 8192 1712128 27566593277965 0 seg_209)) (path_append (seg_sound 46 45 1 27560687697933 0 8192 1720320 14173928947725 0 seg_210) (seg_sound 46 45 1 14098230149133 0 8192 1728512 27560687697933 0 seg_211))) (path_append (path_append (seg_sound 46 45 1 2666520379405 0 8192 1736704 14098230149133 0 seg_212) (seg_sound 46 45 1 44442710966285 0 8192 1744896 2666520379405 0 seg_213)) (path_append (seg_sound 46 45 1 29306591903757 0 8192 1753088 44442710966285 0 seg_214) (seg_sound 46 45 1 15685220565005 0 8192 1761280 29306591903757 0 seg_215))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_216 : seg 46 45 1 62493267329037 0 8192 1769472 15685220565005 0 = true := by
+  decide +kernel
+
+theorem seg_217 : seg 46 45 1 24361591373837 0 8192 1777664 62493267329037 0 = true := by
+  decide +kernel
+
+theorem seg_218 : seg 46 45 1 26478355939341 0 8192 1785856 24361591373837 0 = true := by
+  decide +kernel
+
+theorem seg_219 : seg 46 45 1 42393474695181 0 8192 1794048 26478355939341 0 = true := by
+  decide +kernel
+
+theorem seg_220 : seg 46 45 1 61816809979917 0 8192 1802240 42393474695181 0 = true := by
+  decide +kernel
+
+theorem seg_221 : seg 46 45 1 13261248397325 0 8192 1810432 61816809979917 0 = true := by
+  decide +kernel
+
+theorem seg_222 : seg 46 45 1 17057345175565 0 8192 1818624 13261248397325 0 = true := by
+  decide +kernel
+
+theorem seg_223 : seg 46 45 1 67207648247821 0 8192 1826816 17057345175565 0 = true := by
+  decide +kernel
+
+theorem path_chunk_27 : PathOK 46 45 1 1769472 (15685220565005, 0) (67207648247821, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 62493267329037 0 8192 1769472 15685220565005 0 seg_216) (seg_sound 46 45 1 24361591373837 0 8192 1777664 62493267329037 0 seg_217)) (path_append (seg_sound 46 45 1 26478355939341 0 8192 1785856 24361591373837 0 seg_218) (seg_sound 46 45 1 42393474695181 0 8192 1794048 26478355939341 0 seg_219))) (path_append (path_append (seg_sound 46 45 1 61816809979917 0 8192 1802240 42393474695181 0 seg_220) (seg_sound 46 45 1 13261248397325 0 8192 1810432 61816809979917 0 seg_221)) (path_append (seg_sound 46 45 1 17057345175565 0 8192 1818624 13261248397325 0 seg_222) (seg_sound 46 45 1 67207648247821 0 8192 1826816 17057345175565 0 seg_223))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_224 : seg 46 45 1 66633615802381 0 8192 1835008 67207648247821 0 = true := by
+  decide +kernel
+
+theorem seg_225 : seg 46 45 1 3350611361805 0 8192 1843200 66633615802381 0 = true := by
+  decide +kernel
+
+theorem seg_226 : seg 46 45 1 30412545982477 0 8192 1851392 3350611361805 0 = true := by
+  decide +kernel
+
+theorem seg_227 : seg 46 45 1 35435627675661 0 8192 1859584 30412545982477 0 = true := by
+  decide +kernel
+
+theorem seg_228 : seg 46 45 1 61730910633997 0 8192 1867776 35435627675661 0 = true := by
+  decide +kernel
+
+theorem seg_229 : seg 46 45 1 8536784371725 0 8192 1875968 61730910633997 0 = true := by
+  decide +kernel
+
+theorem seg_230 : seg 46 45 1 11817485074445 0 8192 1884160 8536784371725 0 = true := by
+  decide +kernel
+
+theorem seg_231 : seg 46 45 1 56813827391501 0 8192 1892352 11817485074445 0 = true := by
+  decide +kernel
+
+theorem path_chunk_28 : PathOK 46 45 1 1835008 (67207648247821, 0) (56813827391501, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 66633615802381 0 8192 1835008 67207648247821 0 seg_224) (seg_sound 46 45 1 3350611361805 0 8192 1843200 66633615802381 0 seg_225)) (path_append (seg_sound 46 45 1 30412545982477 0 8192 1851392 3350611361805 0 seg_226) (seg_sound 46 45 1 35435627675661 0 8192 1859584 30412545982477 0 seg_227))) (path_append (path_append (seg_sound 46 45 1 61730910633997 0 8192 1867776 35435627675661 0 seg_228) (seg_sound 46 45 1 8536784371725 0 8192 1875968 61730910633997 0 seg_229)) (path_append (seg_sound 46 45 1 11817485074445 0 8192 1884160 8536784371725 0 seg_230) (seg_sound 46 45 1 56813827391501 0 8192 1892352 11817485074445 0 seg_231))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_232 : seg 46 45 1 13874237538317 0 8192 1900544 56813827391501 0 = true := by
+  decide +kernel
+
+theorem seg_233 : seg 46 45 1 50440632795149 0 8192 1908736 13874237538317 0 = true := by
+  decide +kernel
+
+theorem seg_234 : seg 46 45 1 1430106669069 0 8192 1916928 50440632795149 0 = true := by
+  decide +kernel
+
+theorem seg_235 : seg 46 45 1 37273873678349 0 8192 1925120 1430106669069 0 = true := by
+  decide +kernel
+
+theorem seg_236 : seg 46 45 1 36768560709645 0 8192 1933312 37273873678349 0 = true := by
+  decide +kernel
+
+theorem seg_237 : seg 46 45 1 60643327606797 0 8192 1941504 36768560709645 0 = true := by
+  decide +kernel
+
+theorem seg_238 : seg 46 45 1 31454075551757 0 8192 1949696 60643327606797 0 = true := by
+  decide +kernel
+
+theorem seg_239 : seg 46 45 1 53498112638989 0 8192 1957888 31454075551757 0 = true := by
+  decide +kernel
+
+theorem path_chunk_29 : PathOK 46 45 1 1900544 (56813827391501, 0) (53498112638989, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 13874237538317 0 8192 1900544 56813827391501 0 seg_232) (seg_sound 46 45 1 50440632795149 0 8192 1908736 13874237538317 0 seg_233)) (path_append (seg_sound 46 45 1 1430106669069 0 8192 1916928 50440632795149 0 seg_234) (seg_sound 46 45 1 37273873678349 0 8192 1925120 1430106669069 0 seg_235))) (path_append (path_append (seg_sound 46 45 1 36768560709645 0 8192 1933312 37273873678349 0 seg_236) (seg_sound 46 45 1 60643327606797 0 8192 1941504 36768560709645 0 seg_237)) (path_append (seg_sound 46 45 1 31454075551757 0 8192 1949696 60643327606797 0 seg_238) (seg_sound 46 45 1 53498112638989 0 8192 1957888 31454075551757 0 seg_239))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_240 : seg 46 45 1 59864747343885 0 8192 1966080 53498112638989 0 = true := by
+  decide +kernel
+
+theorem seg_241 : seg 46 45 1 9363565576205 0 8192 1974272 59864747343885 0 = true := by
+  decide +kernel
+
+theorem seg_242 : seg 46 45 1 68380056879117 0 8192 1982464 9363565576205 0 = true := by
+  decide +kernel
+
+theorem seg_243 : seg 46 45 1 31827855147021 0 8192 1990656 68380056879117 0 = true := by
+  decide +kernel
+
+theorem seg_244 : seg 46 45 1 49808081420301 0 8192 1998848 31827855147021 0 = true := by
+  decide +kernel
+
+theorem seg_245 : seg 46 45 1 65470870847501 0 8192 2007040 49808081420301 0 = true := by
+  decide +kernel
+
+theorem seg_246 : seg 46 45 1 62979135504397 0 8192 2015232 65470870847501 0 = true := by
+  decide +kernel
+
+theorem seg_247 : seg 46 45 1 12524124635149 0 8192 2023424 62979135504397 0 = true := by
+  decide +kernel
+
+theorem path_chunk_30 : PathOK 46 45 1 1966080 (53498112638989, 0) (12524124635149, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 59864747343885 0 8192 1966080 53498112638989 0 seg_240) (seg_sound 46 45 1 9363565576205 0 8192 1974272 59864747343885 0 seg_241)) (path_append (seg_sound 46 45 1 68380056879117 0 8192 1982464 9363565576205 0 seg_242) (seg_sound 46 45 1 31827855147021 0 8192 1990656 68380056879117 0 seg_243))) (path_append (path_append (seg_sound 46 45 1 49808081420301 0 8192 1998848 31827855147021 0 seg_244) (seg_sound 46 45 1 65470870847501 0 8192 2007040 49808081420301 0 seg_245)) (path_append (seg_sound 46 45 1 62979135504397 0 8192 2015232 65470870847501 0 seg_246) (seg_sound 46 45 1 12524124635149 0 8192 2023424 62979135504397 0 seg_247))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+
+namespace Ruliology.CellularAutomata.Rule30Tail13Completion
+open Rule30ZeroBoundaryStripeFront
+
+theorem seg_248 : seg 46 45 1 43114374889485 0 8192 2031616 12524124635149 0 = true := by
+  decide +kernel
+
+theorem seg_249 : seg 46 45 1 20925617537037 0 8192 2039808 43114374889485 0 = true := by
+  decide +kernel
+
+theorem seg_250 : seg 46 45 1 27990184427533 0 8192 2048000 20925617537037 0 = true := by
+  decide +kernel
+
+theorem seg_251 : seg 46 45 1 51876762484749 0 8192 2056192 27990184427533 0 = true := by
+  decide +kernel
+
+theorem seg_252 : seg 46 45 1 26220121030669 0 8192 2064384 51876762484749 0 = true := by
+  decide +kernel
+
+theorem seg_253 : seg 46 45 1 66450123390989 0 8192 2072576 26220121030669 0 = true := by
+  decide +kernel
+
+theorem seg_254 : seg 46 45 1 28739656220685 0 8192 2080768 66450123390989 0 = true := by
+  decide +kernel
+
+theorem seg_255 : seg 46 45 1 13 0 8192 2088960 28739656220685 0 = true := by
+  decide +kernel
+
+theorem path_chunk_31 : PathOK 46 45 1 2031616 (12524124635149, 0) (13, 0) 65536 :=
+  (path_append (path_append (path_append (seg_sound 46 45 1 43114374889485 0 8192 2031616 12524124635149 0 seg_248) (seg_sound 46 45 1 20925617537037 0 8192 2039808 43114374889485 0 seg_249)) (path_append (seg_sound 46 45 1 27990184427533 0 8192 2048000 20925617537037 0 seg_250) (seg_sound 46 45 1 51876762484749 0 8192 2056192 27990184427533 0 seg_251))) (path_append (path_append (seg_sound 46 45 1 26220121030669 0 8192 2064384 51876762484749 0 seg_252) (seg_sound 46 45 1 66450123390989 0 8192 2072576 26220121030669 0 seg_253)) (path_append (seg_sound 46 45 1 28739656220685 0 8192 2080768 66450123390989 0 seg_254) (seg_sound 46 45 1 13 0 8192 2088960 28739656220685 0 seg_255))))
+
+end Ruliology.CellularAutomata.Rule30Tail13Completion
+

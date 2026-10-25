@@ -1,0 +1,1185 @@
+{
+  "verdict": "pass",
+  "entries": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift",
+      "source_sha256": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e",
+      "dependency_sources": {},
+      "kit_base": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+      "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+      "build": {
+        "seconds": 7.203,
+        "peak_tree_rss_bytes": 725032960,
+        "minimum_free_bytes": 6466842624,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "replay": {
+        "seconds": 11.047,
+        "peak_tree_rss_bytes": 1226747904,
+        "minimum_free_bytes": 6125494272,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "inductive",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState",
+            "standardAxioms": true
+          },
+          {
+            "kind": "inductive",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LowEq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.Represents",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.allMask",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.allMask_bit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bitMask",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bitMask_bit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.block_orbit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bnext",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun_length",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun_lo_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun_represents",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan_getD",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan_length",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.config",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.double_period",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.exceptional_residues",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.fstep_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.fstep_low",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.fstep_top_flip",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial_run_correct",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial_word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqBoolState",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqLaneState",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.iter",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.iter_lt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.low_two_choices",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.map_bit_scan",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.next",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.orbit_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.orbit_low",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.orbit_phase_lt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.orbit_top_flip",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.parity_of_bit0",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.period_return",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.pk_pats",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.project",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.project_next",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.project_run",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.pstep_low",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.punctured_cycle_lift",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.represents_next",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.represents_unique",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.return_map_cycle_lift",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_add",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_chain",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_correct",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_represents",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_succ",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.run_zero",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan_length",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.sig_congr",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.sig_mono",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.universal_front_period",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.word_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.word_represents",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.fS.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.bits",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.casesOn",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.ctorIdx",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.lo",
+            "standardAxioms": true
+          },
+          {
+            "kind": "constructor",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.mk",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.noConfusion",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.noConfusionType",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.phase",
+            "standardAxioms": true
+          },
+          {
+            "kind": "recursor",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.rec",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.recOn",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.casesOn",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.ctorIdx",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.lo",
+            "standardAxioms": true
+          },
+          {
+            "kind": "constructor",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.mk",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.noConfusion",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.noConfusionType",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.phase",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.planes",
+            "standardAxioms": true
+          },
+          {
+            "kind": "recursor",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.rec",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.recOn",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.allMask.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bitMask.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bnext.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.brun.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.bscan.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.config.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqBoolState.decEq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqLaneState.decEq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.iter.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.next.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.project.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.scan.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.word.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.mk.inj",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.mk.injEq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.mk.noConfusion",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.BoolState.mk.sizeOf_spec",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.mk.inj",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.mk.injEq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.mk.noConfusion",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.LaneState.mk.sizeOf_spec",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqBoolState.decEq.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.instDecidableEqLaneState.decEq.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.punctured_cycle_lift",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.universal_front_period",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.initial_run_correct",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift.return_map_cycle_lift",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 225,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "full_problem_solved": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion",
+      "source_sha256": "cc9fe7e31fb566bd74a856203e58aa0aeade7de1786e024ec24677073ca08877",
+      "dependency_sources": {
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e"
+      },
+      "kit_base": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+      "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+      "build": {
+        "seconds": 68.938,
+        "peak_tree_rss_bytes": 1992269824,
+        "minimum_free_bytes": 5175365632,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "replay": {
+        "seconds": 71.562,
+        "peak_tree_rss_bytes": 2311106560,
+        "minimum_free_bytes": 4888797184,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_part1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_part2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_period",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_sig",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_step61005",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.embedding",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.endpoint_word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.endpoint_words",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.index_table",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.initial_word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.initial_words",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.iter_index",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.lanes",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.lanes_bit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.nextIndex",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.prefixWord",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.rare_table",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.rare_table_sound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.return_cycle",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_00",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_01",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_02",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_03",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_04",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_05",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_06",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_07",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_08",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_full",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seeds",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seg13_0",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seg13_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seg13_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seg13_3",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.seg13_4",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state000",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state001",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state002",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state003",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state004",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state005",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state006",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state007",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state008",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.state009",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_prefix",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.run_full",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.return_cycle",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.rare_table",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_period",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_sig",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 70,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "full_problem_solved": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+      "source_sha256": "5a9b9d593961c3a8944221330b24d638eb1fb85d04d7e9a2644b9624ad2342d7",
+      "dependency_sources": {
+        "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift": "dd759c49522f228945998508ed9753a917eb4b00d31bfdac4dacc068145b2d1e",
+        "Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion": "cc9fe7e31fb566bd74a856203e58aa0aeade7de1786e024ec24677073ca08877"
+      },
+      "kit_base": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+      "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+      "build": {
+        "seconds": 6.031,
+        "peak_tree_rss_bytes": 663425024,
+        "minimum_free_bytes": 6483427328,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "replay": {
+        "seconds": 9.953,
+        "peak_tree_rss_bytes": 1227591680,
+        "minimum_free_bytes": 5979406336,
+        "sampling_seconds": 0.05,
+        "exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "check": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_cycle",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_row4_13",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.cycle13_complete",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.full_jump",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.prefix_jump",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.row4_13_all_odd",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.stripe_four_tail_complete",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_cycle",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.compressed_row4_13",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.cycle13_complete",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.row4_13_all_odd",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete.stripe_four_tail_complete",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 31,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "full_problem_solved": false
+    }
+  ],
+  "full_problem_solved": false
+}
