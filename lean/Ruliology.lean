@@ -5,6 +5,7 @@ public import Ruliology.CellularAutomata.Rule30PredecessorCounts
 public import Ruliology.CellularAutomata.Rule30Blocks
 public import Ruliology.CellularAutomata.Rule30Jen
 public import Ruliology.CellularAutomata.Rule30Prize
+public import Ruliology.CellularAutomata.Rule30LocalConservation
 public import Ruliology.CellularAutomata.Rule30Window
 public import Ruliology.CellularAutomata.Rule30MaskedJen
 public import Ruliology.CellularAutomata.Rule30BlackRuns
