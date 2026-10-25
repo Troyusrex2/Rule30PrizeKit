@@ -40,7 +40,9 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30ZeroBoundaryWidth52 Rule30ZeroBoundaryStripeFront \
     Rule30Certificates.ZeroBoundaryStripeCycles0 Rule30Certificates.ZeroBoundaryStripeCycles1 \
     Rule30Certificates.ZeroBoundaryStripeCycles2 Rule30Certificates.ZeroBoundaryStripeCycles3 \
-    Rule30ZeroBoundaryStripeFamily Rule30ZeroBoundaryStripeFour Rule30EtherTrap \
+    Rule30ZeroBoundaryStripeFamily Rule30ZeroBoundaryStripeFour \
+    Rule30ZeroBoundaryStripeFrontLift Rule30Certificates.StripeTail13Completion \
+    Rule30ZeroBoundaryStripeFourComplete Rule30EtherTrap \
     Rule30Certificates.EtherTrap0 Rule30Certificates.EtherTrap1 Rule30Certificates.EtherTrap2 \
     Rule30Certificates.EtherTrap3 Rule30Certificates.EtherTrap4 Rule30Certificates.EtherTrap5 \
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \

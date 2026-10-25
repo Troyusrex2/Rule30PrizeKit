@@ -44,7 +44,9 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30PeriodTwoCoupled Rule30PeriodFourSkeleton Rule30ZeroBoundaryLanes \
     Rule30Certificates.ZeroBoundaryWidth52Chunks{0,1,2,3} Rule30ZeroBoundaryWidth52 \
     Rule30ZeroBoundaryStripeFront Rule30Certificates.ZeroBoundaryStripeCycles{0,1,2,3} \
-    Rule30ZeroBoundaryStripeFamily Rule30ZeroBoundaryStripeFour Rule30EtherTrap \
+    Rule30ZeroBoundaryStripeFamily Rule30ZeroBoundaryStripeFour \
+    Rule30ZeroBoundaryStripeFrontLift Rule30Certificates.StripeTail13Completion \
+    Rule30ZeroBoundaryStripeFourComplete Rule30EtherTrap \
     Rule30Certificates.EtherTrap{0,1,2,3,4,5} \
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \
     Rule30EtherThree Rule30EtherThreeNoWall Rule30EtherThreeTrap Rule30EtherThreeReach \
@@ -96,6 +98,21 @@ On 2026-10-15 this took 285 s in total on an Apple M3 Max with 48 GB; the four u
 | `Rule30Certificates/StripeMeeting` | 47 s | 5.5 GB |
 | `Rule30EtherThreeNoWall` | 9 s | 1.1 GB |
 | `Rule30BlackRuns` | 9 s | 2.2 GB |
+
+### Contributed stripe-front modules
+
+Measured on Windows x64 with Lean 4.35.0 on 2026-10-25. Each module was built
+alone with its imports already compiled. Peak memory is the sum of process
+RSS, sampled every 50 ms and rounded up below.
+
+| Module | Time | Peak memory |
+|---|---|---|
+| `Rule30ZeroBoundaryStripeFrontLift` | 7.2 s | 0.73 GB |
+| `Rule30Certificates/StripeTail13Completion` | 68.9 s | 2.00 GB |
+| `Rule30ZeroBoundaryStripeFourComplete` | 6.0 s | 0.67 GB |
+
+The original monolithic 256-segment tail-13 data compiled in 146.8 s and 0.99 GB on the same machine.
+The return-map certificate packs only its 32 visited upper states into parallel lanes.
 
 ### Contributed white-padding modules
 
@@ -162,6 +179,9 @@ These modules are not in the 2026-10-15 snapshot of the catalog, and `SHA256SUMS
 | `Rule30Coupled` | 2026-10-17 | Every period, as coupled questions. In any configuration the two halves evolve as the halves driven by the center column, and the center is updated from its two driven neighbours; conversely, two driven halves glued to a column satisfying that update give a configuration with that center. `CQ ω` (**open** for every nonconstant periodic `ω`): no finite left half and finite right half are coupled to `ω`; it holds iff no finite configuration has center column `ω`. FinConf for one column is exactly the family `CQ ω` over all periodic `ω` with a black cell, and the family implies Problem 1. For the alternating column, `CQ` is `CQ01`. | `left_eq_L`, `right_eq_drv`, `evol_glue`, `CQ_iff_no_finite_config`, `CQ_altCol_iff_CQ01`, `finConf_center_iff`, `problem1_of_CQ` |
 | `Rule30LightCone` | 2026-10-17 | The locality behind space-efficient evaluation. A cell at time `t` depends only on the initial cells within distance `t`. With space blocks and time steps of width `b`, each block is a fixed function of the three blocks around it one time step earlier, so the center cell at time `m b` is the root of a fan-in-3 tree of `b`-bit blocks with height `m`. This is the shape that Williams's square-root-space simulation passes to Cook–Mertz tree evaluation, about `√n · log n` bits for the center cell at time `n`; neither algorithm is formalized. | `evol_window`, `block_step`, `center_eq_root` |
 | `Rule30ZeroBoundaryStripeFour` | 2026-10-23 | Stripe prefixes with four tail cells. For every `m` and every tail `v` of four cells, the start `S[1..m] · v · 0^∞` first deviates from the stripe at some depth `d ≤ m + 6`, and depth `1` turns white at an even time `≤ d - 1 + 31`. Every class `(m mod 2, v)` is covered except `v = 13` with `m` odd. This carries `Rule30ZeroBoundaryStripeFamily` from tails of length at most 3 to length 4, by the same route: one kernel-checked periodic front-window orbit per class, from `Rule30Certificates/ZeroBoundaryStripeCycles0`–`3` (namespace `Rule30ZeroBoundaryStripeFront.StripeCycles3` for the new data module). Contributed by Ying Yin with Codex (GPT-6) as Rule 30 Prize submission `R30-20261020-81df0e`, and ported to core Lean. | `stripe_four_tail`, `family4_of_class` |
+| `Rule30ZeroBoundaryStripeFrontLift` | 2026-10-24 | Front-window projection, universal return periods, parallel simulation and sparse return-map soundness. Contributed by Troy Lowry with OpenAI Codex. | `universal_front_period`, `initial_run_correct`, `return_map_cycle_lift` |
+| `Rule30Certificates/StripeTail13Completion` | 2026-10-24 | The punctured width-34 cycle and 32-state parallel upper return certificate for tail 13. The lower cycle is by G.P.J.W. Quint and Gemini ([R30-20261024-f177ae](https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261024-f177ae)); the parallel completion is by Troy Lowry with OpenAI Codex. | `Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_period`, `Ruliology.CellularAutomata.Rule30Tail13Completion.cyc13_sig`, `Ruliology.CellularAutomata.Rule30Tail13Completion.run_full`, `Ruliology.CellularAutomata.Rule30Tail13Completion.return_cycle`, `Ruliology.CellularAutomata.Rule30Tail13Completion.rare_table` |
+| `Rule30ZeroBoundaryStripeFourComplete` | 2026-10-24 | Completes the four-bit stripe-tail family, including every odd prefix with tail 13, with a white witness by 45 steps after arrival. Contributed by Troy Lowry with OpenAI Codex, using Ying Yin and Codex's catalog stripe-front method and the Quint/Gemini lower cycle. | `row4_13_all_odd`, `stripe_four_tail_complete` |
 | `Rule30WhiteEnd` | 2026-10-23 | The white end. For every `q ≥ 10`, no column of rule 30 is eventually the repeating word `1 0^q`, whatever the transient: for the single seed, `EventuallyWord (true :: List.replicate q false)` is false, and the same holds for every column of every configuration with a leftmost black cell, every finite nonzero one included. `Rule30StripCertificateTable` excludes only `q = 10, 11, 12`. A one-sided strip relaxation (eight cells right of the column, an arbitrary cell beyond) determines column `c + 1` after three periods; kernel checks cover `q = 10 … 25`, and the relaxation's white step satisfies `W^26 = W^22` on the sets that occur, which covers every `q ≥ 26`. Two adjacent columns periodic for ever then contradict Jen's theorem with a clock. The checks are in `Rule30Certificates/WhiteEndChecks`, where `control_q9` shows that the check fails at `q = 9`. Contributed by Gareth Herbert with Claude and GPT as Rule 30 Prize submission `R30-20261022-c27323`, and ported to core Lean. | `not_eventuallyWord_white_end`, `white_end_seed`, `white_end`, `white_end_finite` |
 | `Rule30Problem3` | 2026-10-24 | Prize Problem 3 on a one-tape Turing machine that reads the binary digits of `n`: the prize's formal statement (no machine computes `c(n)` in time `O(n)`), the verbal one (none in time `o(n)`) and the version that does not depend on the model (none in time `n^o(1)`), each implying the next. | `Problem3`, `Problem3Verbal`, `Problem3Robust`, `problem3Verbal_of_problem3`, `problem3Robust_of_problem3Verbal` |
 | `Rule30WhitePad10111` | 2026-10-24 | No eventual repetition of `0^q 10111` for `q ≥ 9` in the single-seed center, using eight-cell reachable-set envelopes and masked Jen. Strengthens the tail-specific `q ≥ 62` bound in [Troy Lowry's pull request #1](https://github.com/WolframInstitute/Rule30PrizeKit/pull/1). Contributed by AIOvernight with OpenAI Codex as Rule 30 Prize submission `R30-20261023-7a9ed3`. | `not_eventually_zeros_10111` |
@@ -197,6 +217,7 @@ Some theorems rest on finite checks that the kernel evaluates with `decide`. The
 | `ZeroBoundaryWidth52Chunks0`–`3` | `Rule30ZeroBoundaryWidth52` | Q01 for every start of width at most 52 |
 | `EtherTrap0`–`5` | `Rule30EtherTrapWidth20` | that the pure ether lies in no trap of width at most 20 |
 | `ZeroBoundaryStripeCycles0`–`3` | `Rule30ZeroBoundaryStripeFamily`, `Rule30ZeroBoundaryStripeFour` | the periodic front-window orbits of the stripe prefixes |
+| `StripeTail13Completion` | `Rule30ZeroBoundaryStripeFourComplete` | a punctured lower cycle and parallel return map complete the omitted tail-13 family |
 | `WhiteEndChecks` | `Rule30WhiteEnd` | the strip relaxation of `1 0^q` for `q = 10 … 25` |
 | `WhitePaddingFamilies`, `FiveTailTube`, `SixTailBackward`, `SixTailEndpoints` | `Rule30ShortTail`, `Rule30FiveTail`, `Rule30SixTail`, `Rule30SixTailSharpened`, `Rule30SuffixFamilies` | the pumping, vacuum-avoidance and backward-tube certificates of the tails of at most six cells |
 | `StripeMeeting` | `Rule30StripeMeeting` | a transducer of 2321 states for stripe relations |
