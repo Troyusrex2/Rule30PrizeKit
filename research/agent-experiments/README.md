@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest experiments:** [global credit, source-aware gaps and renewal clocks](coordinator/20261025-global-credit-tests/REPORT.md). Fitted ranks fail exact held-out checks; solver timeouts and unresolved global classes are kept distinct. No new theorem or prize solution is claimed.
+
 **Upstream contribution:** [PR21](https://github.com/WolframInstitute/Rule30PrizeKit/pull/21) contains the uniform conservation proof as a core catalog module. [Build, full replay and scope](coordinator/20261025-conservation-catalog/REPORT.md). Open for review; absent from the current reference kit.
 
 **Latest checked experiment:** [a strict cycle rules out one causal block-rank template](coordinator/20261025-causal-block-cycle/REPORT.md), including ordinal-valued ranks. Larger contexts and cross-block credit remain open.

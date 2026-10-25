@@ -1,0 +1,47 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "distinct_onsets": 4096,
+  "lag": 16,
+  "phase_clock": 16,
+  "halo": 1,
+  "descriptor": "phase,left halo,unbounded run length,first pair,last pair,right halo; internal word forgotten",
+  "controls": {
+    "two_event_cycle": {
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "descriptor_types": 2,
+      "events": 2,
+      "nonzero_entries": 4,
+      "support": [
+        0,
+        1
+      ],
+      "integer_weights": [
+        1,
+        1
+      ],
+      "exact_integer_certificate": true,
+      "positive_coordinate_violations": 0,
+      "largest_positive_error": 0,
+      "strictly_negative_coordinates": 0
+    },
+    "single_deletion": {
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "descriptor_types": 1,
+      "events": 1,
+      "nonzero_entries": 1
+    }
+  },
+  "result": {
+    "status": 2,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+    "descriptor_types": 2815,
+    "events": 481,
+    "nonzero_entries": 85339
+  },
+  "seconds": 4.094000000011874,
+  "source_sha256": "1997c82b9b86c17c5f7caa6414f0841c238bb54ecc82e8f7a823559064d0e6e6",
+  "scope": "An exact integer certificate would obstruct global ordinal multiset descent for boundary/phase/length descriptors without causal credit rules or an affine restriction. Full-word and position/history-dependent ranks remain separate. Floating infeasibility, timeout, or unsuccessful rational reconstruction is not a theorem."
+}

@@ -1,0 +1,894 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "source_aware": true,
+  "rng_seed": 30302523,
+  "case_count": 112,
+  "guarded_distinct_root_transitions": 11087,
+  "duplicate_root_states_skipped": 496,
+  "deduplication": "effective onset n, lag P, and current root cut j; T+t alone does not identify a history-dependent root cut",
+  "full_mask_crosschecks": 10681,
+  "feature_names": [
+    "front_distance",
+    "root_population",
+    "root_blocks",
+    "total_gap",
+    "gap_square",
+    "gap_cube",
+    "maximum_gap",
+    "block_square",
+    "maximum_block",
+    "front_gap",
+    "second_gap",
+    "gap_count"
+  ],
+  "ordinal_candidates": {
+    "gap_then_distance": {
+      "failures": 5224,
+      "first": {
+        "T": 0,
+        "P": 4,
+        "elapsed": 0,
+        "effective_onset": 0,
+        "root_index": 8,
+        "next_root_index": 11,
+        "before": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "after": [
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "before_gaps": [],
+        "after_gaps": [],
+        "before_blocks": [
+          1
+        ],
+        "after_blocks": [
+          2
+        ]
+      }
+    },
+    "block_then_distance": {
+      "failures": 5616,
+      "first": {
+        "T": 0,
+        "P": 4,
+        "elapsed": 0,
+        "effective_onset": 0,
+        "root_index": 8,
+        "next_root_index": 11,
+        "before": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "after": [
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "before_gaps": [],
+        "after_gaps": [],
+        "before_blocks": [
+          1
+        ],
+        "after_blocks": [
+          2
+        ]
+      }
+    },
+    "distance_then_gap": {
+      "failures": 2165,
+      "first": {
+        "T": 0,
+        "P": 4,
+        "elapsed": 0,
+        "effective_onset": 0,
+        "root_index": 8,
+        "next_root_index": 11,
+        "before": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "after": [
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "before_gaps": [],
+        "after_gaps": [],
+        "before_blocks": [
+          1
+        ],
+        "after_blocks": [
+          2
+        ]
+      }
+    }
+  },
+  "coordinatewise_nonnegative_potential_counterexample": {
+    "T": 0,
+    "P": 4,
+    "elapsed": 0,
+    "effective_onset": 0,
+    "root_index": 8,
+    "next_root_index": 11,
+    "before": [
+      4,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "after": [
+      5,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      4,
+      2,
+      0,
+      0,
+      0
+    ],
+    "before_gaps": [],
+    "after_gaps": [],
+    "before_blocks": [
+      1
+    ],
+    "after_blocks": [
+      2
+    ]
+  },
+  "nonnegative_linear_potential_lp": {
+    "status": 2,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+    "weights": null
+  },
+  "first_hits_or_unknowns": [
+    {
+      "T": 0,
+      "P": 1,
+      "time": 1,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 2,
+      "time": 2,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 3,
+      "time": 6,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 4,
+      "time": 12,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 7,
+      "time": 12,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 8,
+      "time": 18,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 16,
+      "time": 29,
+      "front": 0
+    },
+    {
+      "T": 0,
+      "P": 32,
+      "time": 91,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 1,
+      "time": 4,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 2,
+      "time": 3,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 3,
+      "time": 5,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 4,
+      "time": 11,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 7,
+      "time": 23,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 8,
+      "time": 17,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 16,
+      "time": 28,
+      "front": 0
+    },
+    {
+      "T": 1,
+      "P": 32,
+      "time": 90,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 1,
+      "time": 3,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 2,
+      "time": 7,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 3,
+      "time": 8,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 4,
+      "time": 10,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 7,
+      "time": 22,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 8,
+      "time": 26,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 16,
+      "time": 27,
+      "front": 0
+    },
+    {
+      "T": 2,
+      "P": 32,
+      "time": 89,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 1,
+      "time": 6,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 2,
+      "time": 6,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 3,
+      "time": 7,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 4,
+      "time": 9,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 7,
+      "time": 21,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 8,
+      "time": 25,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 16,
+      "time": 26,
+      "front": 0
+    },
+    {
+      "T": 3,
+      "P": 32,
+      "time": 88,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 1,
+      "time": 17,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 2,
+      "time": 13,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 3,
+      "time": 13,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 4,
+      "time": 16,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 7,
+      "time": 26,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 8,
+      "time": 33,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 16,
+      "time": 39,
+      "front": 0
+    },
+    {
+      "T": 7,
+      "P": 32,
+      "time": 84,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 1,
+      "time": 31,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 2,
+      "time": 46,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 3,
+      "time": 21,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 4,
+      "time": 33,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 7,
+      "time": 42,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 8,
+      "time": 61,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 16,
+      "time": 51,
+      "front": 0
+    },
+    {
+      "T": 15,
+      "P": 32,
+      "time": 116,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 1,
+      "time": 59,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 2,
+      "time": 64,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 3,
+      "time": 62,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 4,
+      "time": 60,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 7,
+      "time": 66,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 8,
+      "time": 92,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 16,
+      "time": 87,
+      "front": 0
+    },
+    {
+      "T": 31,
+      "P": 32,
+      "time": 132,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 1,
+      "time": 113,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 2,
+      "time": 112,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 3,
+      "time": 109,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 4,
+      "time": 127,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 7,
+      "time": 137,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 8,
+      "time": 148,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 16,
+      "time": 156,
+      "front": 0
+    },
+    {
+      "T": 63,
+      "P": 32,
+      "time": 205,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 1,
+      "time": 199,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 2,
+      "time": 221,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 3,
+      "time": 225,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 4,
+      "time": 241,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 7,
+      "time": 279,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 8,
+      "time": 236,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 16,
+      "time": 268,
+      "front": 0
+    },
+    {
+      "T": 127,
+      "P": 32,
+      "time": 295,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 1,
+      "time": 440,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 2,
+      "time": 505,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 3,
+      "time": 491,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 4,
+      "time": 509,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 7,
+      "time": 504,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 8,
+      "time": 458,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 16,
+      "time": 532,
+      "front": 0
+    },
+    {
+      "T": 255,
+      "P": 32,
+      "time": 573,
+      "front": 0
+    },
+    {
+      "T": 574,
+      "P": 2,
+      "time": 1086,
+      "front": 0
+    },
+    {
+      "T": 737,
+      "P": 58,
+      "time": 1548,
+      "front": 0
+    },
+    {
+      "T": 2046,
+      "P": 122,
+      "time": 4318,
+      "front": 0
+    },
+    {
+      "T": 1248,
+      "P": 60,
+      "time": 2604,
+      "front": 0
+    },
+    {
+      "T": 1189,
+      "P": 11,
+      "time": 2494,
+      "front": 0
+    },
+    {
+      "T": 981,
+      "P": 111,
+      "time": 2257,
+      "front": 0
+    },
+    {
+      "T": 1432,
+      "P": 55,
+      "time": 3000,
+      "front": 0
+    },
+    {
+      "T": 304,
+      "P": 19,
+      "time": 600,
+      "front": 0
+    },
+    {
+      "T": 986,
+      "P": 61,
+      "time": 2015,
+      "front": 0
+    },
+    {
+      "T": 1349,
+      "P": 17,
+      "time": 2735,
+      "front": 0
+    },
+    {
+      "T": 1793,
+      "P": 37,
+      "time": 3646,
+      "front": 0
+    },
+    {
+      "T": 1938,
+      "P": 62,
+      "time": 4135,
+      "front": 0
+    },
+    {
+      "T": 1075,
+      "P": 107,
+      "time": 2430,
+      "front": 0
+    },
+    {
+      "T": 860,
+      "P": 54,
+      "time": 1790,
+      "front": 0
+    },
+    {
+      "T": 728,
+      "P": 62,
+      "time": 1589,
+      "front": 0
+    },
+    {
+      "T": 586,
+      "P": 7,
+      "time": 1159,
+      "front": 0
+    },
+    {
+      "T": 1402,
+      "P": 93,
+      "time": 3128,
+      "front": 0
+    },
+    {
+      "T": 1264,
+      "P": 125,
+      "time": 2838,
+      "front": 0
+    },
+    {
+      "T": 1312,
+      "P": 38,
+      "time": 2546,
+      "front": 0
+    },
+    {
+      "T": 1935,
+      "P": 107,
+      "time": 4058,
+      "front": 0
+    },
+    {
+      "T": 1960,
+      "P": 1,
+      "time": 3349,
+      "front": 0
+    },
+    {
+      "T": 1384,
+      "P": 9,
+      "time": 2937,
+      "front": 0
+    },
+    {
+      "T": 1475,
+      "P": 55,
+      "time": 3071,
+      "front": 0
+    },
+    {
+      "T": 736,
+      "P": 29,
+      "time": 1619,
+      "front": 0
+    },
+    {
+      "T": 1574,
+      "P": 108,
+      "time": 3400,
+      "front": 0
+    },
+    {
+      "T": 1180,
+      "P": 103,
+      "time": 2666,
+      "front": 0
+    },
+    {
+      "T": 1686,
+      "P": 6,
+      "time": 3426,
+      "front": 0
+    },
+    {
+      "T": 953,
+      "P": 92,
+      "time": 2162,
+      "front": 0
+    },
+    {
+      "T": 866,
+      "P": 128,
+      "time": 2175,
+      "front": 0
+    },
+    {
+      "T": 378,
+      "P": 127,
+      "time": 1002,
+      "front": 0
+    },
+    {
+      "T": 807,
+      "P": 123,
+      "time": 1895,
+      "front": 0
+    },
+    {
+      "T": 812,
+      "P": 54,
+      "time": 1703,
+      "front": 0
+    }
+  ],
+  "seconds": 17.905999999988126,
+  "source_sha256": "4bf9d0ac13960a6f2725252c01547053f632d0a19fe7d0df88b11e579732de88",
+  "scope": "Three explicit source-aware ordinal resources and a nonnegative linear combination of the listed natural features. A componentwise counterexample refutes all coordinatewise-monotone functions of these features, but not signed potentials with separate lower-bound proofs, history-dependent hydra ranks, or arbitrary source-aware invariants."
+}
