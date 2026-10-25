@@ -1,0 +1,308 @@
+{
+  "claim": "finite exact diagnostics; no proof of unbounded uncancelled sources",
+  "packing": "bit i at time t is physical position i-t",
+  "local_formula": "Phi(a)=L90(a) XOR S90(a), L90=(a<<2) XOR a, S90=(a<<1) AND NOT a",
+  "outer_source": "bit 2*s+1 at source time s, physical site s",
+  "outer_polynomial_identity": "Outer_n(x)=x*((1+x^2)^n+x^(2n)) over GF(2); geometric sum since (1+x^2)+x^2=1",
+  "closed_formula_candidate": "outer center parity is 1 exactly at positive times 2^k-1",
+  "closed_formula_explanation": "For n=2m+1 the boundary sum is sum(k=0..m) binom(m+k,k)=binom(2m+1,m) mod 2; Lucas gives m AND (m+1)=0. Even n give zero by parity. Elementary derivation, not Lean replayed.",
+  "controls": {
+    "truth_table_rows": 4096,
+    "physical_center_steps": 129,
+    "direct_polynomial_convolutions": 128
+  },
+  "counts": {
+    "full_polynomial_decompositions": 65536,
+    "outer_closed_formula": 65536,
+    "interior_cancels_odd_outer": 7,
+    "interior_survives_zero_outer": 32867
+  },
+  "dyadic": [
+    {
+      "time": 1,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 2,
+      "center": 0,
+      "outer": 0,
+      "interior": 0
+    },
+    {
+      "time": 3,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 4,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 7,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 8,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 15,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 16,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 31,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 32,
+      "center": 0,
+      "outer": 0,
+      "interior": 0
+    },
+    {
+      "time": 63,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 64,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 127,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 128,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 255,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 256,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 511,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 512,
+      "center": 0,
+      "outer": 0,
+      "interior": 0
+    },
+    {
+      "time": 1023,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 1024,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 2047,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 2048,
+      "center": 0,
+      "outer": 0,
+      "interior": 0
+    },
+    {
+      "time": 4095,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 4096,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 8191,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    },
+    {
+      "time": 8192,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 16383,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 16384,
+      "center": 0,
+      "outer": 0,
+      "interior": 0
+    },
+    {
+      "time": 32767,
+      "center": 0,
+      "outer": 1,
+      "interior": 1
+    },
+    {
+      "time": 32768,
+      "center": 1,
+      "outer": 0,
+      "interior": 1
+    },
+    {
+      "time": 65535,
+      "center": 1,
+      "outer": 1,
+      "interior": 0
+    }
+  ],
+  "small_source_events": {
+    "3": [
+      {
+        "time": 1,
+        "source_bit": 3,
+        "physical_position": 1,
+        "outer_wall": true
+      }
+    ],
+    "7": [
+      {
+        "time": 3,
+        "source_bit": 7,
+        "physical_position": 3,
+        "outer_wall": true
+      },
+      {
+        "time": 5,
+        "source_bit": 7,
+        "physical_position": 1,
+        "outer_wall": false
+      }
+    ],
+    "15": [
+      {
+        "time": 7,
+        "source_bit": 7,
+        "physical_position": -1,
+        "outer_wall": false
+      },
+      {
+        "time": 7,
+        "source_bit": 15,
+        "physical_position": 7,
+        "outer_wall": true
+      },
+      {
+        "time": 8,
+        "source_bit": 11,
+        "physical_position": 2,
+        "outer_wall": false
+      },
+      {
+        "time": 9,
+        "source_bit": 7,
+        "physical_position": -3,
+        "outer_wall": false
+      },
+      {
+        "time": 9,
+        "source_bit": 13,
+        "physical_position": 3,
+        "outer_wall": false
+      },
+      {
+        "time": 10,
+        "source_bit": 15,
+        "physical_position": 4,
+        "outer_wall": false
+      },
+      {
+        "time": 11,
+        "source_bit": 11,
+        "physical_position": -1,
+        "outer_wall": false
+      },
+      {
+        "time": 11,
+        "source_bit": 13,
+        "physical_position": 1,
+        "outer_wall": false
+      },
+      {
+        "time": 12,
+        "source_bit": 11,
+        "physical_position": -2,
+        "outer_wall": false
+      },
+      {
+        "time": 12,
+        "source_bit": 15,
+        "physical_position": 2,
+        "outer_wall": false
+      },
+      {
+        "time": 13,
+        "source_bit": 15,
+        "physical_position": 1,
+        "outer_wall": false
+      }
+    ]
+  },
+  "counterexample_to_odd_boundary_survival": {
+    "time": 7,
+    "center": 0,
+    "outer": 1,
+    "interior": 1
+  },
+  "elapsed_seconds": 2.5320000000065193,
+  "new_kernel_verified_declarations": 0
+}

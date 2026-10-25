@@ -1,0 +1,1706 @@
+{
+  "claim": "finite diagnostics only; no new proof",
+  "controls": {
+    "exhaustive_bm_determinants": 5120,
+    "leibniz": 4096,
+    "physical_steps": 512,
+    "direct_wall_determinants": 4288,
+    "jacobi_identities": 260096
+  },
+  "sequences": {
+    "rule30": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 28,
+          "longest_zero_run": 8
+        },
+        {
+          "through_n": 256,
+          "ones": 141,
+          "longest_zero_run": 8
+        },
+        {
+          "through_n": 1024,
+          "ones": 512,
+          "longest_zero_run": 8
+        },
+        {
+          "through_n": 4096,
+          "ones": 2066,
+          "longest_zero_run": 9
+        },
+        {
+          "through_n": 16384,
+          "ones": 8123,
+          "longest_zero_run": 12
+        },
+        {
+          "through_n": 32768,
+          "ones": 16339,
+          "longest_zero_run": 13
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 8,
+        "4": 16,
+        "5": 32,
+        "6": 64,
+        "7": 128,
+        "8": 256
+      },
+      "dyadic_leading": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 1,
+        "7": 1,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 1879,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2012,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                5
+              ],
+              "new": [
+                0,
+                2,
+                16
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                6
+              ],
+              "new": [
+                0,
+                2,
+                17
+              ]
+            }
+          ]
+        },
+        "0,1": {
+          "training_conflicts": 1871,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2085,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                7
+              ],
+              "new": [
+                0,
+                2,
+                12
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                6
+              ],
+              "new": [
+                0,
+                2,
+                17
+              ]
+            }
+          ]
+        },
+        "1,0": {
+          "training_conflicts": 1866,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2056,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                7
+              ],
+              "new": [
+                0,
+                2,
+                12
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                16
+              ]
+            }
+          ]
+        },
+        "1,1": {
+          "training_conflicts": 1908,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2021,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                7
+              ],
+              "new": [
+                0,
+                2,
+                12
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                5
+              ],
+              "new": [
+                0,
+                2,
+                16
+              ]
+            }
+          ]
+        }
+      },
+      "leading_sha256": "2c3a6066ecb76f34fde65ef536adb3c75121ffb56859823102b4c81755b07c44"
+    },
+    "rule90": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 1,
+          "longest_zero_run": 63
+        },
+        {
+          "through_n": 256,
+          "ones": 1,
+          "longest_zero_run": 255
+        },
+        {
+          "through_n": 1024,
+          "ones": 1,
+          "longest_zero_run": 1023
+        },
+        {
+          "through_n": 4096,
+          "ones": 1,
+          "longest_zero_run": 4095
+        },
+        {
+          "through_n": 16384,
+          "ones": 1,
+          "longest_zero_run": 16383
+        },
+        {
+          "through_n": 32768,
+          "ones": 1,
+          "longest_zero_run": 32767
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+      },
+      "dyadic_leading": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "0,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        }
+      },
+      "leading_sha256": "5fab6a69d71b6aa7e2f07b271c75bacdbc5ae66f7638a92b277aabff81d882a1"
+    },
+    "rule150": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 1,
+          "longest_zero_run": 63
+        },
+        {
+          "through_n": 256,
+          "ones": 1,
+          "longest_zero_run": 255
+        },
+        {
+          "through_n": 1024,
+          "ones": 1,
+          "longest_zero_run": 1023
+        },
+        {
+          "through_n": 4096,
+          "ones": 1,
+          "longest_zero_run": 4095
+        },
+        {
+          "through_n": 16384,
+          "ones": 1,
+          "longest_zero_run": 16383
+        },
+        {
+          "through_n": 32768,
+          "ones": 1,
+          "longest_zero_run": 32767
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+      },
+      "dyadic_leading": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 2,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "0,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 2,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 2,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 2,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        }
+      },
+      "leading_sha256": "5fab6a69d71b6aa7e2f07b271c75bacdbc5ae66f7638a92b277aabff81d882a1"
+    },
+    "rule210": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 1,
+          "longest_zero_run": 63
+        },
+        {
+          "through_n": 256,
+          "ones": 1,
+          "longest_zero_run": 255
+        },
+        {
+          "through_n": 1024,
+          "ones": 1,
+          "longest_zero_run": 1023
+        },
+        {
+          "through_n": 4096,
+          "ones": 1,
+          "longest_zero_run": 4095
+        },
+        {
+          "through_n": 16384,
+          "ones": 1,
+          "longest_zero_run": 16383
+        },
+        {
+          "through_n": 32768,
+          "ones": 1,
+          "longest_zero_run": 32767
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+      },
+      "dyadic_leading": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "0,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,0": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        },
+        "1,1": {
+          "training_conflicts": 0,
+          "distinct_coarse_patches": 1,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": []
+        }
+      },
+      "leading_sha256": "5fab6a69d71b6aa7e2f07b271c75bacdbc5ae66f7638a92b277aabff81d882a1"
+    },
+    "rule30_source": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 35,
+          "longest_zero_run": 6
+        },
+        {
+          "through_n": 256,
+          "ones": 127,
+          "longest_zero_run": 7
+        },
+        {
+          "through_n": 1024,
+          "ones": 502,
+          "longest_zero_run": 8
+        },
+        {
+          "through_n": 4096,
+          "ones": 2028,
+          "longest_zero_run": 11
+        },
+        {
+          "through_n": 16384,
+          "ones": 8094,
+          "longest_zero_run": 11
+        },
+        {
+          "through_n": 32768,
+          "ones": 16364,
+          "longest_zero_run": 15
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 8,
+        "4": 16,
+        "5": 32,
+        "6": 64,
+        "7": 128,
+        "8": 256
+      },
+      "dyadic_leading": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 0,
+        "12": 0,
+        "13": 1,
+        "14": 0,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 1848,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 1974,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "old": [
+                0,
+                2,
+                2
+              ],
+              "new": [
+                1,
+                2,
+                27
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                22
+              ],
+              "new": [
+                0,
+                2,
+                28
+              ]
+            }
+          ]
+        },
+        "0,1": {
+          "training_conflicts": 1905,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2052,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                20
+              ],
+              "new": [
+                0,
+                2,
+                31
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                28
+              ],
+              "new": [
+                1,
+                2,
+                33
+              ]
+            }
+          ]
+        },
+        "1,0": {
+          "training_conflicts": 1857,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2036,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                3
+              ],
+              "new": [
+                1,
+                2,
+                22
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "old": [
+                0,
+                2,
+                21
+              ],
+              "new": [
+                1,
+                2,
+                32
+              ]
+            }
+          ]
+        },
+        "1,1": {
+          "training_conflicts": 1821,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2071,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                3
+              ],
+              "new": [
+                1,
+                2,
+                22
+              ]
+            },
+            {
+              "coarse_patch": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                2
+              ],
+              "new": [
+                0,
+                2,
+                27
+              ]
+            }
+          ]
+        }
+      },
+      "leading_sha256": "5769480d741224365b29166c50e4a91b54f36942095d6d205b6450db4c10ccc1"
+    },
+    "thue_morse": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 32,
+          "longest_zero_run": 1
+        },
+        {
+          "through_n": 256,
+          "ones": 128,
+          "longest_zero_run": 1
+        },
+        {
+          "through_n": 1024,
+          "ones": 512,
+          "longest_zero_run": 1
+        },
+        {
+          "through_n": 4096,
+          "ones": 2048,
+          "longest_zero_run": 1
+        },
+        {
+          "through_n": 16384,
+          "ones": 8192,
+          "longest_zero_run": 1
+        },
+        {
+          "through_n": 32768,
+          "ones": 16384,
+          "longest_zero_run": 1
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+      },
+      "dyadic_leading": {
+        "0": 0,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 708,
+          "distinct_coarse_patches": 90,
+          "held_seen_errors": 363,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                9
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                17
+              ]
+            }
+          ]
+        },
+        "0,1": {
+          "training_conflicts": 711,
+          "distinct_coarse_patches": 90,
+          "held_seen_errors": 358,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                9
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                17
+              ]
+            }
+          ]
+        },
+        "1,0": {
+          "training_conflicts": 562,
+          "distinct_coarse_patches": 90,
+          "held_seen_errors": 279,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                127
+              ],
+              "new": [
+                0,
+                3,
+                18
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "old": [
+                0,
+                3,
+                20
+              ],
+              "new": [
+                1,
+                3,
+                25
+              ]
+            }
+          ]
+        },
+        "1,1": {
+          "training_conflicts": 670,
+          "distinct_coarse_patches": 90,
+          "held_seen_errors": 340,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                5
+              ],
+              "new": [
+                0,
+                2,
+                9
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                5
+              ],
+              "new": [
+                0,
+                2,
+                17
+              ]
+            }
+          ]
+        }
+      },
+      "leading_sha256": "af76ccc4b9da74056bb70da7bc714a003749c32b9a4ceb0208b4929c7495f11e"
+    },
+    "periodic_001011": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 4,
+          "longest_zero_run": 58
+        },
+        {
+          "through_n": 256,
+          "ones": 4,
+          "longest_zero_run": 250
+        },
+        {
+          "through_n": 1024,
+          "ones": 4,
+          "longest_zero_run": 1018
+        },
+        {
+          "through_n": 4096,
+          "ones": 4,
+          "longest_zero_run": 4090
+        },
+        {
+          "through_n": 16384,
+          "ones": 4,
+          "longest_zero_run": 16378
+        },
+        {
+          "through_n": 32768,
+          "ones": 4,
+          "longest_zero_run": 32762
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+      },
+      "dyadic_leading": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 84,
+          "distinct_coarse_patches": 26,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                3,
+                123
+              ],
+              "new": [
+                0,
+                4,
+                6
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                3,
+                123
+              ],
+              "new": [
+                0,
+                4,
+                12
+              ]
+            }
+          ]
+        },
+        "0,1": {
+          "training_conflicts": 84,
+          "distinct_coarse_patches": 26,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                3,
+                123
+              ],
+              "new": [
+                0,
+                4,
+                6
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "old": [
+                1,
+                3,
+                123
+              ],
+              "new": [
+                0,
+                4,
+                12
+              ]
+            }
+          ]
+        },
+        "1,0": {
+          "training_conflicts": 63,
+          "distinct_coarse_patches": 26,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                124
+              ],
+              "new": [
+                0,
+                3,
+                7
+              ]
+            },
+            {
+              "coarse_patch": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                124
+              ],
+              "new": [
+                0,
+                3,
+                13
+              ]
+            }
+          ]
+        },
+        "1,1": {
+          "training_conflicts": 21,
+          "distinct_coarse_patches": 26,
+          "held_seen_errors": 0,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                125
+              ],
+              "new": [
+                0,
+                5,
+                3
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                1,
+                2,
+                125
+              ],
+              "new": [
+                0,
+                5,
+                9
+              ]
+            }
+          ]
+        }
+      },
+      "leading_sha256": "a5cfe33bb43236438846d7caca3c4dab84ea336b8103d7873ecd68cd9c4ed2e8"
+    },
+    "random": {
+      "leading_profile": [
+        {
+          "through_n": 64,
+          "ones": 25,
+          "longest_zero_run": 6
+        },
+        {
+          "through_n": 256,
+          "ones": 121,
+          "longest_zero_run": 6
+        },
+        {
+          "through_n": 1024,
+          "ones": 513,
+          "longest_zero_run": 8
+        },
+        {
+          "through_n": 4096,
+          "ones": 2020,
+          "longest_zero_run": 13
+        },
+        {
+          "through_n": 16384,
+          "ones": 8288,
+          "longest_zero_run": 13
+        },
+        {
+          "through_n": 32768,
+          "ones": 16468,
+          "longest_zero_run": 15
+        }
+      ],
+      "finite_leading_kernel_prefix64": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 8,
+        "4": 16,
+        "5": 32,
+        "6": 64,
+        "7": 128,
+        "8": 256
+      },
+      "dyadic_leading": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 0,
+        "7": 1,
+        "8": 1,
+        "9": 0,
+        "10": 0,
+        "11": 1,
+        "12": 0,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "coarse_patch_prediction": {
+        "0,0": {
+          "training_conflicts": 1798,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2044,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                4
+              ],
+              "new": [
+                1,
+                2,
+                7
+              ]
+            },
+            {
+              "coarse_patch": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "old": [
+                1,
+                2,
+                12
+              ],
+              "new": [
+                0,
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        "0,1": {
+          "training_conflicts": 1807,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2014,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                29
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                6
+              ],
+              "new": [
+                1,
+                2,
+                30
+              ]
+            }
+          ]
+        },
+        "1,0": {
+          "training_conflicts": 1824,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2029,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                29
+              ]
+            },
+            {
+              "coarse_patch": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                6
+              ],
+              "new": [
+                1,
+                2,
+                30
+              ]
+            }
+          ]
+        },
+        "1,1": {
+          "training_conflicts": 1839,
+          "distinct_coarse_patches": 96,
+          "held_seen_errors": 2007,
+          "held_unseen": 0,
+          "witnesses": [
+            {
+              "coarse_patch": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                5
+              ],
+              "new": [
+                1,
+                2,
+                29
+              ]
+            },
+            {
+              "coarse_patch": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              "old": [
+                0,
+                2,
+                7
+              ],
+              "new": [
+                1,
+                2,
+                31
+              ]
+            }
+          ]
+        }
+      },
+      "leading_sha256": "cb5aced348941f4e0f9c755e3c59d5d9ce2d5c5954d037a668f2c6f9d17331a1"
+    }
+  },
+  "elapsed_seconds": 4.85999999998603,
+  "center_sha256": "3ec029b45f14786a515bd3d423cd1b7590a6a854fb2f817aac841459ca1e41bd"
+}

@@ -1,0 +1,215 @@
+{
+  "physical_steps": 160,
+  "exact_contradictions": [
+    {
+      "sequence": "rule30",
+      "fine_parity": "0,0",
+      "equal_patch": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "old": [
+        1,
+        2,
+        5
+      ],
+      "new": [
+        0,
+        2,
+        16
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30",
+      "fine_parity": "0,1",
+      "equal_patch": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "old": [
+        1,
+        2,
+        7
+      ],
+      "new": [
+        0,
+        2,
+        12
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30",
+      "fine_parity": "1,0",
+      "equal_patch": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "old": [
+        1,
+        2,
+        7
+      ],
+      "new": [
+        0,
+        2,
+        12
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30",
+      "fine_parity": "1,1",
+      "equal_patch": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "old": [
+        1,
+        2,
+        7
+      ],
+      "new": [
+        0,
+        2,
+        12
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30_source",
+      "fine_parity": "0,0",
+      "equal_patch": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "old": [
+        0,
+        2,
+        2
+      ],
+      "new": [
+        1,
+        2,
+        27
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30_source",
+      "fine_parity": "0,1",
+      "equal_patch": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "old": [
+        1,
+        2,
+        20
+      ],
+      "new": [
+        0,
+        2,
+        31
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30_source",
+      "fine_parity": "1,0",
+      "equal_patch": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "old": [
+        0,
+        2,
+        3
+      ],
+      "new": [
+        1,
+        2,
+        22
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    },
+    {
+      "sequence": "rule30_source",
+      "fine_parity": "1,1",
+      "equal_patch": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "old": [
+        0,
+        2,
+        3
+      ],
+      "new": [
+        1,
+        2,
+        22
+      ],
+      "independent_check": "physical Rule30 + Leibniz"
+    }
+  ],
+  "all_passed": true,
+  "scope": "Rules from only these nine coarse bits fail; larger alphabets, context, or other tilings are not refuted."
+}
