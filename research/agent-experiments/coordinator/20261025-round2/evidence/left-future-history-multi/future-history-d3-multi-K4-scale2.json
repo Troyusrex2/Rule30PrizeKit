@@ -1,0 +1,46 @@
+{
+  "source_sha256": "d4202ae3639c467cd75d7d3f07797fad387e859c5200c4818493ef2ea727cece",
+  "reader": {
+    "background_free_periods": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "temporal_phase_patterns": 14,
+    "binary_reader_states": 1110,
+    "initial_state_consumes_first_left_cell": true,
+    "independent_triangular_and_physical_field_bits": 7112,
+    "independent_entire_prefix_language_checks": 15400,
+    "actual_canonical_physical_reader_endpoint_traces": 14,
+    "all_passed": true,
+    "Lean_verified": false
+  },
+  "records": [
+    {
+      "finite_history_double_steps": 3,
+      "reader_states": 1110,
+      "geometric_scale": "2",
+      "direction": 1,
+      "explicit_finite_predecessor_witness": true,
+      "current_word_delay": 6,
+      "after_word_delay": 8,
+      "predecessor_input_flush": 16,
+      "current_scored_flush": 12,
+      "future_double_steps_checked": 13,
+      "uniform_additive_lower_bound_allowed": true,
+      "phase_contexts": 26,
+      "upcoming_free_bits_in_energy_phase": 4,
+      "variables": 137618,
+      "constraints": 316038,
+      "branch_nodes": 65386,
+      "branch_edges": 126905,
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 96.481
+    }
+  ],
+  "Lean_verified": false,
+  "CQ01_proved": false,
+  "full_problem_solved": false
+}

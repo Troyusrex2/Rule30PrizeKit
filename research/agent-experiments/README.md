@@ -8,6 +8,13 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest update:** the [round-two brief](coordinator/20261025-round2/BRIEF.md)
+summarizes the new checked barriers, counterexamples and completed experiments.
+It includes [seven different follow-up tasks](coordinator/20261025-round2/TASKS.md),
+[copyable prompts for the original sessions](coordinator/20261025-round2/prompts/),
+updated templates and the latest source/results archive. Multiple findings and
+simultaneous responses still use the existing append-only intake format.
+
 The [critical-drift and uniform-reader followup](coordinator/20261024-seven/UNIFORM-READERS.md)
 proves that bounded excess above the minimum Golden zero density forces
 eventual period five, giving a weaker sufficient counting target for CQ01.

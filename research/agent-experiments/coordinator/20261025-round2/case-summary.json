@@ -1,0 +1,97 @@
+{
+  "evidence_kind": "finite_computation",
+  "Lean_verified": false,
+  "positive_certificate_found": false,
+  "all_jobs_finished": true,
+  "records": [
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d2-multi-K2-scale1.json",
+      "finite_history_double_steps": 2,
+      "upcoming_free_bits_in_energy_phase": 2,
+      "geometric_scale": "1",
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 7.571,
+      "defect_rate": -0.0
+    },
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d2-multi-K2-scale2.json",
+      "finite_history_double_steps": 2,
+      "upcoming_free_bits_in_energy_phase": 2,
+      "geometric_scale": "2",
+      "solver_status": 4,
+      "solver_message": "(HiGHS Status 0: Not Set)",
+      "seconds": 47.919
+    },
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d3-multi-K4-scale1.json",
+      "finite_history_double_steps": 3,
+      "upcoming_free_bits_in_energy_phase": 4,
+      "geometric_scale": "1",
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 63.973,
+      "defect_rate": -0.0
+    },
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d3-multi-K4-scale2.json",
+      "finite_history_double_steps": 3,
+      "upcoming_free_bits_in_energy_phase": 4,
+      "geometric_scale": "2",
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 96.481
+    },
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d3-multi-K4-scale3-2.json",
+      "finite_history_double_steps": 3,
+      "upcoming_free_bits_in_energy_phase": 4,
+      "geometric_scale": "3/2",
+      "solver_status": 4,
+      "solver_message": "(HiGHS Status 4: Solve error)",
+      "seconds": 29.917
+    },
+    {
+      "artifact": "evidence/left-future-history-multi/future-history-d4-multi-K2-scale1.json",
+      "finite_history_double_steps": 4,
+      "upcoming_free_bits_in_energy_phase": 2,
+      "geometric_scale": "1",
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 101.977
+    },
+    {
+      "artifact": "evidence/left-future-history-strict/future-history-strict-d2-multi-K2-scale2.json",
+      "finite_history_double_steps": 2,
+      "upcoming_free_bits_in_energy_phase": 2,
+      "geometric_scale": "2",
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 601.23,
+      "native_optimum_found": false,
+      "incumbent_available": false
+    },
+    {
+      "artifact": "evidence/left-future-history-strict/future-history-strict-d3-multi-K4-scale2.json",
+      "finite_history_double_steps": 3,
+      "upcoming_free_bits_in_energy_phase": 4,
+      "geometric_scale": "2",
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 606.739,
+      "native_optimum_found": false,
+      "incumbent_available": false
+    },
+    {
+      "artifact": "evidence/left-future-history-strict/future-history-strict-d4-multi-K2-scale1.json",
+      "finite_history_double_steps": 4,
+      "upcoming_free_bits_in_energy_phase": 2,
+      "geometric_scale": "1",
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 183.097,
+      "native_optimum_found": false,
+      "incumbent_available": false
+    }
+  ]
+}
