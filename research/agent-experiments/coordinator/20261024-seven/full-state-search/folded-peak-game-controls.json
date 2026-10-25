@@ -1,0 +1,91 @@
+{
+  "toy_deletion_positive": {
+    "reader_states": 1,
+    "live_states": 3,
+    "edges": 2,
+    "assertions": 35,
+    "integer_weight_bound": 8,
+    "potential_bound": 256,
+    "smt_status": "sat",
+    "toy": "delete",
+    "z3_version": "5.3.1",
+    "seconds": 0.109,
+    "simulation_is_sufficient_not_complete": true,
+    "independent_check": {
+      "integer_costs_and_all_game_inequalities_checked": true,
+      "graph_edges_checked": 2,
+      "terminal_states_checked": 1
+    },
+    "certificate": {
+      "cost": [
+        [
+          0,
+          2,
+          0,
+          1
+        ]
+      ],
+      "future_bound": [
+        0
+      ],
+      "bounded_reader": [
+        false
+      ],
+      "active_potentials": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "stopped_potentials": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "weight_bound": 8,
+      "potential_bound": 256
+    },
+    "transition_table": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "exact_integer_game_certificate": true
+  },
+  "toy_identity_negative": {
+    "reader_states": 1,
+    "live_states": 3,
+    "edges": 2,
+    "assertions": 36,
+    "integer_weight_bound": 8,
+    "potential_bound": 256,
+    "smt_status": "unsat",
+    "toy": "identity",
+    "z3_version": "5.3.1",
+    "seconds": 0.0,
+    "simulation_is_sufficient_not_complete": true
+  },
+  "all_passed": true,
+  "Lean_verified": false,
+  "full_problem_solved": false
+}

@@ -1,0 +1,96 @@
+{
+  "toy_deletion_positive": {
+    "reader_states": 1,
+    "signed_prefix_peak_energy": true,
+    "nonnegative_by_prefix_maximum": true,
+    "simulation_is_sufficient_not_necessary": true,
+    "toy_prefix_deletion_not_Rule30": true,
+    "live_states": 3,
+    "variables": 6,
+    "constraints": 5,
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "reward_rate": 1.0,
+    "maximum_residual": 0.0,
+    "transition_table": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "exact_rational_graph_certificate": true,
+    "rational_reward_rate": "1",
+    "certificate": [
+      {
+        "label": [
+          "reward_rate"
+        ],
+        "value": "1"
+      },
+      {
+        "label": [
+          "cost",
+          0,
+          3
+        ],
+        "value": "1"
+      },
+      {
+        "label": [
+          "upper",
+          0
+        ],
+        "value": "0"
+      },
+      {
+        "label": [
+          "upper",
+          1
+        ],
+        "value": "-1"
+      },
+      {
+        "label": [
+          "cost",
+          0,
+          1
+        ],
+        "value": "1"
+      },
+      {
+        "label": [
+          "upper",
+          2
+        ],
+        "value": "-1"
+      }
+    ]
+  },
+  "actual_zero_energy_negative": {
+    "reader_states": 1,
+    "signed_prefix_peak_energy": true,
+    "nonnegative_by_prefix_maximum": true,
+    "simulation_is_sufficient_not_necessary": true,
+    "toy_prefix_deletion_not_Rule30": false,
+    "live_states": 260,
+    "variables": 265,
+    "constraints": 2060,
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "reward_rate": -0.0,
+    "maximum_residual": 0.0,
+    "transition_table": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "all_passed": true,
+  "Lean_verified": false,
+  "full_problem_solved": false
+}

@@ -1,5 +1,11 @@
 # Seven-response experiment record
 
+The [complete-state search follow-up](FULL-STATE-SEARCH.md) releases exact
+finite-row transducer controls, unsuccessful graph ranks and learned
+readers, actual-lifetime labels, and an independent replay of a stronger
+external conditional reduction. It preserves numerical unknowns and does
+not claim a universal rank or a prize solution.
+
 See [REPORT.md](REPORT.md) for the seven proposals, actual runs, exact reader
 counterexample, unchanged official kernel replay, source attribution, limits
 and reproduction commands. Problem 1 remains open.

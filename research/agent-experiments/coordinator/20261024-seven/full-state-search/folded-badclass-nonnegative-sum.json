@@ -1,0 +1,970 @@
+{
+  "source_sha256": "88c1d667bad15a52f9a9706ea2a49c7dbdf6e4ed8a5fb1c5b8d66812610b35ac",
+  "K6_source_sha256": "f8846e6499a179057dfdfe8efcb20c98db7a90a3869b338b4ac686be700f62b0",
+  "domain": "eventual K6 rank zero at black center phase; finite rows of arbitrary radius",
+  "external_reduction": "R30-20261025-d1bcba: Psi_enters_bad_of_finSupp",
+  "bad_phase1_strips": [
+    0,
+    3,
+    6,
+    7,
+    9,
+    11,
+    12,
+    14,
+    15,
+    17,
+    19,
+    21,
+    22,
+    24,
+    27,
+    28,
+    31,
+    32,
+    35,
+    37,
+    38,
+    39,
+    41,
+    43,
+    44,
+    46,
+    47,
+    48,
+    49,
+    51,
+    53,
+    54,
+    55,
+    56,
+    57,
+    59,
+    60,
+    62,
+    63
+  ],
+  "model": "nonnegative-sum",
+  "records": [
+    {
+      "reader_states": 1,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 602,
+      "live_states": 502,
+      "edges": 1893,
+      "accepting_states": 328,
+      "variables": 508,
+      "constraints": 2221,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "kind": "constant",
+      "seconds": 0.031
+    },
+    {
+      "reader_states": 2,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 602,
+      "live_states": 502,
+      "edges": 1893,
+      "accepting_states": 328,
+      "variables": 509,
+      "constraints": 2221,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "kind": "transient",
+      "seconds": 0.031
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 986,
+      "live_states": 886,
+      "edges": 3429,
+      "accepting_states": 616,
+      "variables": 906,
+      "constraints": 4045,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "kind": "last_pair",
+      "seconds": 0.156
+    },
+    {
+      "reader_states": 2,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 858,
+      "live_states": 758,
+      "edges": 2917,
+      "accepting_states": 520,
+      "variables": 769,
+      "constraints": 3437,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "kind": "radial_clock2",
+      "seconds": 0.047
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 1370,
+      "live_states": 1270,
+      "edges": 4965,
+      "accepting_states": 904,
+      "variables": 1291,
+      "constraints": 5869,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "kind": "radial_clock4",
+      "seconds": 0.266
+    },
+    {
+      "reader_states": 7,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 2138,
+      "live_states": 2038,
+      "edges": 8037,
+      "accepting_states": 1480,
+      "variables": 2074,
+      "constraints": 9517,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "kind": "radial_clock7",
+      "seconds": 0.515
+    },
+    {
+      "reader_states": 3,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 730,
+      "live_states": 630,
+      "edges": 2405,
+      "accepting_states": 440,
+      "variables": 646,
+      "constraints": 2845,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "kind": "black_prefix_plane1_1",
+      "seconds": 0.094
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 746,
+      "live_states": 646,
+      "edges": 2469,
+      "accepting_states": 456,
+      "variables": 667,
+      "constraints": 2925,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          3,
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          0,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "kind": "black_prefix_plane1_2",
+      "seconds": 0.094
+    },
+    {
+      "reader_states": 6,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 922,
+      "live_states": 822,
+      "edges": 3173,
+      "accepting_states": 608,
+      "variables": 853,
+      "constraints": 3781,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          5,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          2,
+          5,
+          2
+        ],
+        [
+          5,
+          3,
+          5,
+          3
+        ],
+        [
+          5,
+          4,
+          5,
+          4
+        ],
+        [
+          5,
+          0,
+          5,
+          0
+        ],
+        [
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "kind": "black_prefix_plane1_4",
+      "seconds": 0.125
+    },
+    {
+      "reader_states": 3,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 1146,
+      "live_states": 1046,
+      "edges": 4069,
+      "accepting_states": 744,
+      "variables": 1062,
+      "constraints": 4813,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "kind": "black_prefix_plane2_1",
+      "seconds": 0.047
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 922,
+      "live_states": 822,
+      "edges": 3173,
+      "accepting_states": 584,
+      "variables": 843,
+      "constraints": 3757,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "kind": "black_prefix_plane2_2",
+      "seconds": 0.14
+    },
+    {
+      "reader_states": 6,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 1962,
+      "live_states": 1862,
+      "edges": 7333,
+      "accepting_states": 1368,
+      "variables": 1893,
+      "constraints": 8701,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          5,
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          5,
+          2,
+          2
+        ],
+        [
+          5,
+          5,
+          3,
+          3
+        ],
+        [
+          5,
+          5,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "kind": "black_prefix_plane2_4",
+      "seconds": 0.36
+    },
+    {
+      "reader_states": 3,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 635,
+      "live_states": 535,
+      "edges": 2025,
+      "accepting_states": 357,
+      "variables": 549,
+      "constraints": 2382,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "kind": "black_prefix_plane3_1",
+      "seconds": 0.078
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 619,
+      "live_states": 519,
+      "edges": 1961,
+      "accepting_states": 343,
+      "variables": 537,
+      "constraints": 2304,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          3,
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "kind": "black_prefix_plane3_2",
+      "seconds": 0.062
+    },
+    {
+      "reader_states": 6,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 683,
+      "live_states": 583,
+      "edges": 2217,
+      "accepting_states": 399,
+      "variables": 609,
+      "constraints": 2616,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          5,
+          5,
+          5,
+          1
+        ],
+        [
+          5,
+          5,
+          5,
+          2
+        ],
+        [
+          5,
+          5,
+          5,
+          3
+        ],
+        [
+          5,
+          5,
+          5,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          0
+        ],
+        [
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "kind": "black_prefix_plane3_4",
+      "seconds": 0.079
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 794,
+      "live_states": 694,
+      "edges": 2661,
+      "accepting_states": 472,
+      "variables": 715,
+      "constraints": 3133,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "kind": "left_last_bits2",
+      "seconds": 0.093
+    },
+    {
+      "reader_states": 4,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 1370,
+      "live_states": 1270,
+      "edges": 4965,
+      "accepting_states": 904,
+      "variables": 1291,
+      "constraints": 5869,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          3
+        ]
+      ],
+      "kind": "right_last_bits2",
+      "seconds": 0.282
+    },
+    {
+      "reader_states": 8,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 1082,
+      "live_states": 982,
+      "edges": 3813,
+      "accepting_states": 688,
+      "variables": 1023,
+      "constraints": 4501,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          6,
+          7
+        ]
+      ],
+      "kind": "left_last_bits3",
+      "seconds": 0.171
+    },
+    {
+      "reader_states": 8,
+      "full_spatial_rows": true,
+      "center_out_folded_pairs": true,
+      "input_radius_unbounded": true,
+      "two_step_update": true,
+      "raw_states": 2394,
+      "live_states": 2294,
+      "edges": 9061,
+      "accepting_states": 1672,
+      "variables": 2335,
+      "constraints": 10733,
+      "direction": 1,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "transition_table": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          7,
+          7
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          5,
+          5
+        ],
+        [
+          6,
+          6,
+          7,
+          7
+        ]
+      ],
+      "kind": "right_last_bits3",
+      "seconds": 0.594
+    }
+  ],
+  "Lean_verified": false,
+  "CQ01_proved": false,
+  "full_problem_solved": false,
+  "seconds": 3.265
+}

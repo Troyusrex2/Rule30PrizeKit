@@ -1,0 +1,44 @@
+{
+  "source_sha256": "16de5889e3ba8edc4502346dd1bd184b13169bbf746a270eb681166cb8367f96",
+  "original_source_sha256": "de0ded2d253a112fcb6e4d83740807992f55f02060e2b948dab13ec51a104c7d",
+  "change": "solver highs-ipm to highs-ds only",
+  "records": [
+    {
+      "reader_states": 64,
+      "geometric_scale": "1",
+      "direction": 1,
+      "eventual_K6_badclass": true,
+      "signed_costs_and_end_values": true,
+      "global_nonnegativity_on_accepted_language": true,
+      "input_radius_unbounded": true,
+      "live_states": 6134,
+      "variables": 12573,
+      "constraints": 57948,
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "kind": "joint_last_pairs3",
+      "seconds": 61.047
+    },
+    {
+      "reader_states": 64,
+      "geometric_scale": "3",
+      "direction": 1,
+      "eventual_K6_badclass": true,
+      "signed_costs_and_end_values": true,
+      "global_nonnegativity_on_accepted_language": true,
+      "input_radius_unbounded": true,
+      "live_states": 6134,
+      "variables": 12573,
+      "constraints": 57948,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "reward_rate": -0.0,
+      "maximum_residual": 0.0,
+      "kind": "joint_last_pairs3",
+      "seconds": 46.813
+    }
+  ],
+  "Lean_verified": false,
+  "CQ01_proved": false,
+  "full_problem_solved": false
+}
