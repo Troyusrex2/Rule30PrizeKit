@@ -1,0 +1,14 @@
+"{\n\t\"pass\":true,\n\t\"stage\":\"build\",\n\t\"sourceIconized\":true,\n\t\"inputCells\":3,\n\t\"completeKernelReplayDeclarations\":1,\n\t\"separateFreshProcess\":false,\n\t\"sourceRoundTrip\":false,\n\t\"prizeNotebookValidated\":false,\n\t\"submitted\":false,\n\t\"notebookSHA256\":\"9708b85995942da7ad91ce667d3eee1d10f14d351aacbc37cde217163b37c90a\"\n}"
+
+
+LeanEnvironment::shdw: Symbol LeanEnvironment appears in multiple contexts {Wolfram`LeanLink`, Global`}; definitions in context Wolfram`LeanLink` may shadow or be shadowed by other definitions.
+
+LeanImportString::shdw: Symbol LeanImportString appears in multiple contexts {Wolfram`LeanLink`, Global`}; definitions in context Wolfram`LeanLink` may shadow or be shadowed by other definitions.
+"Canary fresh environment or replay failed"
+
+Traceback (most recent call last):
+  File "D:\MWB\Rule30\wolfram-local\agent-seven-20261024\canonical-trace-20261025T2220\workflow_canary.py", line 14, in <module>
+    r.check_returncode()
+  File "C:\Users\troyu\Miniconda3\Lib\subprocess.py", line 502, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '['C:\\Program Files\\Wolfram Research\\Wolfram Engine\\15.0\\wolfram.exe', '-noprompt', '-run', '$HistoryLength=0; stage="fresh"; PacletDirectoryLoad["D:/MWB/Rule30/leanlink-windows-repair/LeanLink"]; Get["D:/MWB/Rule30/wolfram-local/agent-seven-20261024/canonical-trace-20261025T2220/workflow_canary.wl",CharacterEncoding->"UTF-8"]; Quit[]']' returned non-zero exit status 4.

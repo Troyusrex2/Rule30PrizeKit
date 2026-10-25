@@ -1,0 +1,277 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[     10815,        268]
+NotebookOptionsPosition[      9418,        232]
+NotebookOutlinePosition[      9760,        247]
+CellTagsIndexPosition[      9717,        244]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["LeanLink conversion workflow canary", "Title",
+ CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
+
+Cell["\<\
+This checks notebook plumbing only and is not a prize submission.\
+\>", "Text",
+ CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
+
+Cell["Setup", "Section",
+ CellID->1699946459,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Wolfram`LeanLink`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$Rule30PrizeKit", "=", 
+   RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[1]:= ",
+ CellID->1535504786,ExpressionUUID->"75d93363-5da6-51a4-23e6-ab4d5453238e"],
+
+Cell["Embedded proof", "Section",
+ CellID->1208482393,ExpressionUUID->"25a568a6-87a2-527f-535a-810032572145"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"canaryEnvironment", "=", 
+   RowBox[{"LeanImportString", "[", 
+    RowBox[{
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"String", 
+         StyleBox[
+         "\"Lean source, 4 lines\"", "IconizedCustomName", StripOnInput -> 
+          False], 
+         GridBox[{{
+            StyleBox[
+            "\"import Ruliology.CellularAutomata.Rule30Prize\nnamespace \
+Rule30ConversionCanary\ntheorem reflexive (b : Bool) : b=b := rfl\nend \
+Rule30ConversionCanary\n\"", ShowStringCharacters -> False, FontFamily -> 
+             "Source Code Pro"]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      "import Ruliology.CellularAutomata.Rule30Prize\nnamespace \
+Rule30ConversionCanary\ntheorem reflexive (b : Bool) : b=b := rfl\nend \
+Rule30ConversionCanary\n",
+      SelectWithContents->True,
+      Selectable->False], ",", 
+     RowBox[{"\"\<ProjectDir\>\"", "->", "$Rule30PrizeKit"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{"Head", "[", "canaryEnvironment", "]"}]}], "Input",
+ CellLabel->"In[2]:= ",
+ CellID->88282004,ExpressionUUID->"00d7f70d-8d0e-ae34-30ec-ef5724b8f51e"],
+
+Cell[BoxData["LeanEnvironment"], "Output",
+ CellLabel->"Out[2]= ",
+ CellID->1129920403,ExpressionUUID->"2f3e8453-9762-68ea-56c5-1e1d22173a30"]
+}, Open  ]],
+
+Cell["Complete replay", "Section",
+ CellID->193832008,ExpressionUUID->"5902d484-617f-9570-0f31-cdee100bfc5a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"canaryTheorem", "=", 
+   RowBox[{
+   "canaryEnvironment", "[", "\"\<Rule30ConversionCanary.reflexive\>\"", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"canaryKernelCheck", "=", 
+   RowBox[{"canaryTheorem", "[", "\"\<KernelCheck\>\"", "]"}]}], 
+  ";"}], "\n", "canaryKernelCheck"}], "Input",
+ CellLabel->"In[3]:= ",
+ CellID->32294871,ExpressionUUID->"56e0e12c-de7d-6135-7e9f-f889db08301f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Success",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"The kernel accepts all 1 declarations of \
+LeanLinkTmp33397234364423054790x258157.\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"LeanLinkTmp33397234364423054790x258157\"", 
+                  "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"The kernel accepts all 1 declarations of \
+LeanLinkTmp33397234364423054790x258157.\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Module\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"LeanLinkTmp33397234364423054790x258157\"", 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Declarations\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["1", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["\"KernelChecked\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Success[
+  "KernelChecked", <|
+   "MessageTemplate" -> "The kernel accepts all `1` declarations of `2`.", 
+    "MessageParameters" -> {1, "LeanLinkTmp33397234364423054790x258157"}, 
+    "Module" -> "LeanLinkTmp33397234364423054790x258157", "Declarations" -> 
+    1|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellLabel->"Out[3]= ",
+ CellID->1475801064,ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8"]
+}, Open  ]]
+},
+LightDark->"Light",
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[560, 20, 128, 1, 70, "Title",ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf",
+ CellID->874461601],
+Cell[690, 23, 166, 3, 70, "Text",ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3",
+ CellID->36768919],
+Cell[856, 28, 101, 1, 70, "Section",ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc",
+ CellID->1699946459],
+Cell[959, 31, 339, 8, 70, "Input",ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1",
+ CellID->1535504786],
+Cell[1293, 41, 110, 1, 70, "Section",ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096",
+ CellID->1208482393],
+Cell[CellGroupData[{
+Cell[1427, 46, 1395, 32, 70, "Input",ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85",
+ CellID->88282004],
+Cell[2793, 80, 144, 2, 70, "Output",ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe",
+ CellID->1129920403]
+}, Open  ]],
+Cell[2950, 85, 110, 1, 70, "Section",ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa",
+ CellID->193832008],
+Cell[CellGroupData[{
+Cell[3084, 90, 439, 11, 70, "Input",ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4",
+ CellID->32294871],
+Cell[3515, 103, 6013, 126, 70, "Output",ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103",
+ CellID->1475801064]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

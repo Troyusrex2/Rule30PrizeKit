@@ -1,0 +1,134 @@
+{
+  "pass": true,
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "source_sha256": "458f22ffa401e81440f6c2e4d039f02523af19186cbd92a2879667f5fa7e3ded",
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "build",
+        "Ruliology.CellularAutomata.Rule30TraceEdge"
+      ],
+      "exit_code": 0,
+      "seconds": 9.687999999994645
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "Check.lean",
+        "Ruliology.CellularAutomata.Rule30TraceEdge",
+        "--claim",
+        "partial",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30TraceEdge.problem1_of_edgeObservable",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30TraceEdge.no_eventuallyPeriodic_of_edgeObservable",
+        "--headline",
+        "Ruliology.CellularAutomata.Rule30TraceEdge.edges_equal_of_nonnegative"
+      ],
+      "exit_code": 0,
+      "seconds": 11.719000000011874
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.EdgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.HasLeftEdge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.edges_equal_of_nonnegative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.hasLeftEdge_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.no_eventuallyPeriodic_of_edgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.problem1_of_edgeObservable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Realization.seed.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.problem1_of_edgeObservable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.no_eventuallyPeriodic_of_edgeObservable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TraceEdge.edges_equal_of_nonnegative",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30TraceEdge",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 14,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "existing_theorem_reaudited": true,
+  "EdgeObservable_proved": false,
+  "full_problem_solved": false
+}

@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Updated targets and return instructions:** [canonical observer brief](coordinator/20261025-trace-followup/BRIEF.md). [New diagnostics and notebook workflow checks](coordinator/20261025-trace-followup/REPORT.md) distinguish finite experiments, the existing conditional theorem, a passed small canary and the still-unverified large notebook.
+
 **New checked obstructions:** [position-dependent one-cell scores and finite physical XOR rectangles](coordinator/20261025-staggered-charges/REPORT.md). Full replay passes for both sources; finite clock searches and independent physical controls are separate. No full prize proof.
 
 **New uniform theorem:** [product parity classification and checked controls](coordinator/20261025-product-parity/REPORT.md), [PR27](https://github.com/WolframInstitute/Rule30PrizeKit/pull/27). All widths, mixed histories and no supplied-current hypothesis; 207 core declarations pass full replay. Includes the arbitrary-group research companion and precise failed inverse bounds. Problem1 remains open.

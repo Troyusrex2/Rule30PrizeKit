@@ -1,0 +1,49 @@
+{
+  "controls": [
+    {
+      "edge_depths": [
+        2,
+        1
+      ],
+      "observations": 8,
+      "right_cells_unconstrained_through": 8,
+      "verdict": "sat",
+      "solver": "5.3.1",
+      "seconds": 0.03200000000651926,
+      "Lean_verified": false,
+      "initial_rows_hex": [
+        "0x4e0",
+        "0x248"
+      ],
+      "center_index": 8,
+      "first_difference_with_zero_tail": 8
+    },
+    {
+      "edge_depths": [
+        2,
+        1
+      ],
+      "observations": 9,
+      "right_cells_unconstrained_through": 9,
+      "verdict": "unsat",
+      "solver": "5.3.1",
+      "seconds": 0.015000000013969839,
+      "Lean_verified": false
+    }
+  ],
+  "probe": {
+    "edge_depths": [
+      5,
+      4
+    ],
+    "observations": 32,
+    "right_cells_unconstrained_through": 32,
+    "verdict": "unsat",
+    "solver": "5.3.1",
+    "seconds": 3.890999999974156,
+    "Lean_verified": false
+  },
+  "finite_observation_only": true,
+  "unbounded_edge_observability_proved": false,
+  "full_problem_solved": false
+}

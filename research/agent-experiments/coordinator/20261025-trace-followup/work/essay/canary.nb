@@ -1,0 +1,109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      3262,        100]
+NotebookOptionsPosition[      2346,         73]
+NotebookOutlinePosition[      2668,         87]
+CellTagsIndexPosition[      2625,         84]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Iconized source conversion canary", "Title",
+ CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
+
+Cell["This is a tool test, not a prize essay or Lean verification.", "Text",
+ CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sourceMarker", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"String", 
+       StyleBox[
+       "\"Lean source, 1 line\"", "IconizedCustomName", StripOnInput -> 
+        False], 
+       GridBox[{{
+          StyleBox[
+          "\"canary source: forall n, n = n\"", ShowStringCharacters -> False,
+            FontFamily -> "Source Code Pro"]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    "canary source: forall n, n = n",
+    SelectWithContents->True,
+    Selectable->False]}], ";"}], "\n", 
+ RowBox[{"StringLength", "[", "sourceMarker", "]"}]}], "Input",
+ CellLabel->"In[1]:= ",
+ CellID->320991681,ExpressionUUID->"1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
+
+Cell[BoxData["30"], "Output",
+ CellLabel->"Out[1]= ",
+ CellID->1763737910,ExpressionUUID->"75d93363-5da6-51a4-23e6-ab4d5453238e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"canaryControl", "=", 
+   RowBox[{"2", "+", "2"}]}], ";"}], "\n", "canaryControl"}], "Input",
+ CellLabel->"In[2]:= ",
+ CellID->318508817,ExpressionUUID->"25a568a6-87a2-527f-535a-810032572145"],
+
+Cell[BoxData["4"], "Output",
+ CellLabel->"Out[2]= ",
+ CellID->754467827,ExpressionUUID->"00d7f70d-8d0e-ae34-30ec-ef5724b8f51e"]
+}, Open  ]]
+},
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2f3e8453-9762-68ea-56c5-1e1d22173a30"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[560, 20, 126, 1, 70, "Title",ExpressionUUID->"5902d484-617f-9570-0f31-cdee100bfc5a",
+ CellID->874461601],
+Cell[688, 23, 151, 1, 70, "Text",ExpressionUUID->"56e0e12c-de7d-6135-7e9f-f889db08301f",
+ CellID->36768919],
+Cell[CellGroupData[{
+Cell[863, 28, 965, 24, 70, "Input",ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8",
+ CellID->320991681],
+Cell[1807, 54, 131, 2, 70, "Output",ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0",
+ CellID->1763737910]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1973, 61, 232, 5, 70, "Input",ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf",
+ CellID->318508817],
+Cell[2203, 68, 129, 2, 70, "Output",ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3",
+ CellID->754467827]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

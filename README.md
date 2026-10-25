@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Canonical-trace followup and notebook packaging](research/agent-experiments/coordinator/20261025-trace-followup/REPORT.md), with an [updated agent brief](research/agent-experiments/coordinator/20261025-trace-followup/BRIEF.md): finite diagnostics, a rechecked existing conditional bridge, and a source-exact unevaluated notebook preview. The small workflow canary passes fresh replay; the full notebook replay remains pending. No new unbounded theorem is claimed.
+
 [Position-dependent scores and finite physical XOR rectangles](research/agent-experiments/coordinator/20261025-staggered-charges/REPORT.md): a uniform one-cell parity obstruction and an all-time counterexample to a four-history rigidity shortcut. Both sources pass full kernel replay. The canonical center problem remains open.
 
 [All-width product parity conservation](research/agent-experiments/coordinator/20261025-product-parity/REPORT.md), proposed in [PR27](https://github.com/WolframInstitute/Rule30PrizeKit/pull/27): every cyclic local parity charge for four Rule30 updates is a constant plus a spatial coboundary, at every window width and for any family of Boolean coordinates. Core-only full kernel replay passes. This rules out a conservation strategy, not the prize problem.
