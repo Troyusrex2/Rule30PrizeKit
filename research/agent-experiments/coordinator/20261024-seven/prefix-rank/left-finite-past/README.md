@@ -1,0 +1,1 @@
+Explicit finite predecessor witness P, current G(P), after G^2(P). Preserve both moving fronts. Conditional future-language filter. Independent literal-rule language and exact geometric controls run before cases. Numerical outcomes do not prove CQ01 or the prize. Two concurrent cases, each 300 seconds, 12 GiB RSS, 16 GiB minimum free. No machine configuration changes.

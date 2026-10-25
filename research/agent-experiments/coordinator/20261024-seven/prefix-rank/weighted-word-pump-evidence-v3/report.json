@@ -1,0 +1,200 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "33096d4dc08b57f8a7c912ba0e85b2b7a8ab0746cc0a3374c8f7c66af2e2be5e",
+  "build_seconds": 6.344,
+  "replay_seconds": 10.031,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.copies",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.no_absorbing_tail_decrease",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.no_bounded_strict_descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run_absorbing",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run_pumped",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.scale",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.scale_ge_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.score",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.score_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.copies.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.copies.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.copies.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.run.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.scale.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.scale.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.scale.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30WeightedWordPumpResearch.scale.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.score.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.score.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.score.eq_def",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.score_append",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.scale_ge_one",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.no_bounded_strict_descent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30WeightedWordPumpResearch.no_absorbing_tail_decrease",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30WeightedWordPumpResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 54,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

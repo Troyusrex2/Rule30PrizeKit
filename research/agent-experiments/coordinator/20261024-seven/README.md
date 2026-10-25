@@ -1,5 +1,10 @@
 # Seven-response experiment record
 
+A [checked prefix-rank obstruction and finite-past model](PREFIX-RANK-FINITE-PAST.md)
+adds 144 kernel-replayed declarations. It distinguishes a genuine obstruction
+on the forward-only search domain from rows with actual finite predecessors,
+and records six unsuccessful controlled searches on the refined domain.
+
 A [fully checked critical-charge obstruction](CRITICAL-CHARGE-ONE.md)
 rules out coefficient one even with arbitrary additive slack, using an
 explicit finite right seed and the official coupled reconstruction. The
