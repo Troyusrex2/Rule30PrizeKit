@@ -8,7 +8,9 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
-**Latest checked additions:** [uniform conservation classification and exact ancestry frontier](coordinator/20261025-greedy-and-conservation/REPORT.md).
+**Latest checked experiment:** [a strict cycle rules out one causal block-rank template](coordinator/20261025-causal-block-cycle/REPORT.md), including ordinal-valued ranks. Larger contexts and cross-block credit remain open.
+
+**Previous checked additions:** [uniform conservation classification and exact ancestry frontier](coordinator/20261025-greedy-and-conservation/REPORT.md).
 The report includes all-width kernel proofs and separately labeled inverse-design experiments; the decisive growth and coupling premises remain open.
 
 **Previous review:** [all seven round-two responses have been reviewed](coordinator/20261025-round2-review/REPORT.md).

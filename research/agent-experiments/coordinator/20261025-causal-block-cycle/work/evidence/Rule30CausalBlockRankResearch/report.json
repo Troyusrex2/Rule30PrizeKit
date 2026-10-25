@@ -1,0 +1,433 @@
+{
+  "source_sha256": "4caf80fe9517c28c47066ce0044aa719fea3d3f289d22f4e6b01e7aa70b9766c",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\owned-build\\Rule30CausalBlockRankResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\Rule30CausalBlockRankResearch.lean"
+      ],
+      "seconds": 9.562999999994645,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\Check.lean",
+        "Rule30CausalBlockRankResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30CausalBlockRankResearch.event3_sibling",
+        "--headline",
+        "Rule30CausalBlockRankResearch.no_causal_block_rank",
+        "--headline",
+        "Rule30CausalBlockRankResearch.no_causal_block_rank_type_one"
+      ],
+      "seconds": 12.905999999988126,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30CausalBlockRankResearch.Descriptor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Event",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Guard",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30CausalBlockRankResearch.Located",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.StrictSplit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.WeakCausal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.blockCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.contains",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.coverCheck",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.d7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.different",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event3_sibling",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqDescriptor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqLocated",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.no_causal_block_rank",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.no_causal_block_rank_type_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.no_causal_block_rank_univ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.pairAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Event.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Guard.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.desc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.lo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30CausalBlockRankResearch.Located.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30CausalBlockRankResearch.Located.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqDescriptor.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqLocated.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Descriptor.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Located.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Located.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.Located.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.Located.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqDescriptor.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CausalBlockRankResearch.instDecidableEqLocated.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.event3_sibling",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.no_causal_block_rank",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CausalBlockRankResearch.no_causal_block_rank_type_one",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CausalBlockRankResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 90,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

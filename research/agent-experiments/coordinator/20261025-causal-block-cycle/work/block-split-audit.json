@@ -1,0 +1,147 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "independent_physical_rows": 319,
+  "block_oracle_cases": 48,
+  "split_count": 87644,
+  "guarded_split_count": 9365,
+  "first_literal_child_copy": {
+    "T": 0,
+    "P": 16,
+    "time": 36,
+    "step": 2,
+    "frame": 52,
+    "parent": [
+      0,
+      0
+    ],
+    "children": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "initial_current_A_hex": "0x191cf1e842090bb2b910000",
+    "initial_current_B_hex": "0x191cf1e845cf1212b0caf7f9511",
+    "next_A_hex": "0x190b96a6e72c1cda2f090000",
+    "next_B_hex": "0x190b96a6e27968382bc8b3831489",
+    "center_guard": true
+  },
+  "strict_order_graphs": [
+    {
+      "halo": 0,
+      "nodes_with_children": 269,
+      "edges": 541,
+      "strict_cycle_found": false
+    },
+    {
+      "halo": 1,
+      "nodes_with_children": 293,
+      "edges": 634,
+      "strict_cycle_found": false
+    },
+    {
+      "halo": 2,
+      "nodes_with_children": 312,
+      "edges": 690,
+      "strict_cycle_found": false
+    },
+    {
+      "halo": 4,
+      "nodes_with_children": 327,
+      "edges": 726,
+      "strict_cycle_found": false
+    },
+    {
+      "halo": 8,
+      "nodes_with_children": 345,
+      "edges": 750,
+      "strict_cycle_found": false
+    }
+  ],
+  "merge_examples": [
+    {
+      "T": 0,
+      "P": 16,
+      "time": 35,
+      "parents": [
+        [
+          0,
+          3
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "child": [
+        4,
+        6
+      ]
+    },
+    {
+      "T": 0,
+      "P": 16,
+      "time": 36,
+      "parents": [
+        [
+          8,
+          8
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "child": [
+        10,
+        10
+      ]
+    },
+    {
+      "T": 0,
+      "P": 16,
+      "time": 37,
+      "parents": [
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "child": [
+        0,
+        5
+      ]
+    },
+    {
+      "T": 0,
+      "P": 16,
+      "time": 75,
+      "parents": [
+        [
+          0,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "child": [
+        4,
+        5
+      ]
+    }
+  ],
+  "seconds": 14.937999999994645,
+  "source_sha256": "854b264bc11ed9b3566bd6ff9aa68cfa595686fb39ab6f9a08176eb59f942047",
+  "scope": "Only maximal contiguous disagreement blocks, paired-cell word with fixed halo, translation-invariant ordinal indexed by phase mod16; every split child is required strictly smaller after a guarded two-step. A directed strict cycle excludes such an order but not position-dependent, history-dependent, differently segmented or more selective ranks."
+}

@@ -1,0 +1,507 @@
+{
+  "source_sha256": "0d5c01f1192a2c79d6b8b0f2f0eadfc371a75b72172365b62ceb4db6de8600c5",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\owned-build\\Rule30BlockRowsResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\Rule30BlockRowsResearch.lean"
+      ],
+      "seconds": 6.23399999999674,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\counter-compatibility-20261025T1430\\owned-verifier\\Check.lean",
+        "Rule30BlockRowsResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30BlockRowsResearch.a_add",
+        "--headline",
+        "Rule30BlockRowsResearch.row_1029"
+      ],
+      "seconds": 9.812999999994645,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.a_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockRowsResearch.advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_1024",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_128",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_160",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_192",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_224",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_256",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_288",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_32",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_320",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_352",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_384",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_416",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_448",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_480",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_512",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_544",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_576",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_608",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_64",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_640",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_672",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_704",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_736",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_768",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_800",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_832",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_864",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_896",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_928",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_96",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_960",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.checkpoint_992",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1011",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1012",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1013",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1027",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1028",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1029",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_105",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_106",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_107",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_301",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_302",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_303",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_317",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_318",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_319",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_37",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_38",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_39",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_507",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_508",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_509",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_523",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_524",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_525",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_53",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_54",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_55",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_737",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_738",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_739",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_753",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_754",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_755",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_887",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_888",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_889",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_89",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_90",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_903",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_904",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_905",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_91",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_911",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_912",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_913",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_927",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_928",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_929",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockRowsResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockRowsResearch.advance.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.a_add",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockRowsResearch.row_1029",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30BlockRowsResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 168,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
