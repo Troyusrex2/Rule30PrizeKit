@@ -1,0 +1,392 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "files": {
+    "Rule30GoldenDFAResearch.lean": "4722b2826e38e8f1caf338ca70895ec141d3686d02ba61b19f2c3ba7fe5dbc43",
+    "golden-dfa-evidence/report.json": "212d7fdc09c39c261394f9c13bf2cf591f63f636b8556c0ebecd7c4139b421af",
+    "Rule30GoldenEvenSupportResearch.lean": "a7224e3c8181022e9943c258af6731053d83c56619814857a2b7c2692ef880cb",
+    "golden-even-support-evidence/report.json": "58e8c8ccec3ef21c7e42f73046bbe775bd553b84d359fe332af8466cbd4ee955",
+    "Rule30GoldenEvenPilotResearch.lean": "73594acf0810c9edabe87443f44aca6cdd9b0a717afe6588691695c4532dae70",
+    "golden-even-pilot-evidence/report.json": "7d8cd835ffc83547af8fc7febb6a5980d2bbcff8b36e252da58d3dd144b15bbb",
+    "Rule30GoldenEvenWidth20Research.lean": "b500ba2420d0d5adf098dccc66e3134a496b53548749cef736253ee7aed5137f",
+    "golden-even-width20-evidence/report.json": "6a2cd81a12273a830287230de7c83414c0f31ba92ebac1491ea4a60af6c80efd",
+    "Rule30GoldenHistoryResearch.lean": "66cdb6810a65366b8c9637ca6078df69cd04b2198bc279b0aae6ed1767ca40f3",
+    "golden-history-evidence/report.json": "ae17b8036ec9157db293052efb393cffdac551fffa0e30fb7cab6ee43d5e6f8f",
+    "Rule30VerifiedCoupledGoldenExtract.lean": "fb04bd35dbe7eda540c89affed8c03adfabc3ee063da5ab8f0070b752fe2d8c1",
+    "external/9d92a2-golden-evidence/report.json": "b41c4c5bbbb9419bc96277d722f03ec1874fba7e8c0988da7b6900101d4803d6",
+    "Rule30GoldenCoupledResearch.lean": "9dc07e8866ece9b2eca6f720171697b1f4d84a2a835b40169f201ac200ba2657",
+    "golden-coupled-evidence/report.json": "b682981509a9759588f771bafd2defe7c096646d1fa02d8afa9b8f400d51bbc6",
+    "Rule30DecoderRankObstructionResearch.lean": "795416989d02f875421a25126cd09d62ef506997201d6b8e40a7c6c3af9dca6f",
+    "decoder-rank-obstruction-evidence/report.json": "07f4fd38ac2112ca07d21f199029f2f78456b92081dd012a127c883639d2af3f",
+    "Rule30GoldenEven26Chunk00Research.lean": "0c17f95a01ab04f7838f82213f79e0b7be0740d8f20476c4b81a99b404c73daa",
+    "golden-even26-evidence/Rule30GoldenEven26Chunk00Research/report.json": "28198f6a3918186f21ca622665c76a2d3e022b277da5fa59a5cdbb963e30a3a7",
+    "Rule30GoldenEven26Chunk01Research.lean": "a1f17def1969944da1dd44786ab034d7e9e81ecc007f77403d79c262069ffbdb",
+    "golden-even26-evidence/Rule30GoldenEven26Chunk01Research/report.json": "4741152a5a7a1885b0e9b0adfbf060386b0e1d5cab89947777626880cb213e2e",
+    "Rule30GoldenEven26Chunk02Research.lean": "f2b6585ba50b36eb63abc17093e91253d11aec46e2315b3b4178d622ec7e79fd",
+    "golden-even26-evidence/Rule30GoldenEven26Chunk02Research/report.json": "0a92f83457f312739a7395ef7283402a1a2d2f0addded844ad04fb972b3a9078",
+    "Rule30GoldenEven26Part06Research.lean": "31183b195791a2c8bc02fd5e60712fe7f73434a6f5152c1182baaadf4d8eb33f",
+    "golden-even26-evidence/Rule30GoldenEven26Part06Research/report.json": "ed32f4506266373a3e7d3a0983fb61d0f05aa825eb002468edd6c39de9403cce",
+    "Rule30GoldenEven26Part07Research.lean": "2b2453f79812ae843de63bf84b52c5d9057024011db3abe4c4f86ea03f290f9f",
+    "golden-even26-evidence/Rule30GoldenEven26Part07Research/report.json": "940fdbcf89fca611995e283434fcf61c2a2ca07dc1578979c76230780fa577cf",
+    "Rule30GoldenEven26Part08Research.lean": "0a9d7aa90dcfc36bf7c83eefd4897bc4ce35b1e9880512fbc576ca383f3a8331",
+    "golden-even26-evidence/Rule30GoldenEven26Part08Research/report.json": "ecd2f0a4bd8f150d1af41f6c4d00388859b8843148232e0c8314508e0a3dd8f0",
+    "Rule30GoldenEven26Part09Research.lean": "204952061885849d05f72494dd346b0d7ca4f53f89a7b220186877f1959ca2e6",
+    "golden-even26-evidence/Rule30GoldenEven26Part09Research/report.json": "2fda2316803b4db65a465ae0bec45d2153bb092dce5a884f178863f84e22b80c",
+    "Rule30GoldenEven26Part10Research.lean": "24b958b1cbb1e46f0c2f417cdcd52e59412541fffbbbe5c456d5cb7bdad25c7b",
+    "golden-even26-evidence/Rule30GoldenEven26Part10Research/report.json": "0da6c9dabfb637e8e30ca1912fa851664dd49fc0d1a22a44b766b47fd15148f3",
+    "Rule30GoldenEven26Part11Research.lean": "3441b154d6834fb7b0c9af65848847f817588bda85442f82016d0bdd304c4bb8",
+    "golden-even26-evidence/Rule30GoldenEven26Part11Research/report.json": "631e73ff203b86371a41fa8843ac688e691281e540b14370852c61011abb9817",
+    "Rule30GoldenEven26Part12Research.lean": "6432efbd01851e0b959c06ece5ed11efb85f2e664f00b638eec802e5e4a42b06",
+    "golden-even26-evidence/Rule30GoldenEven26Part12Research/report.json": "b48719ef6cec7ee996586ead09bd4e87d4e0595e9d3eb2fa77fa682f98b67170",
+    "Rule30GoldenEven26Part13Research.lean": "626a3cfcf4e49845ace6ce3d5bc5ffaf479e8c891981fcde16c6450efb2db44a",
+    "golden-even26-evidence/Rule30GoldenEven26Part13Research/report.json": "b592cb0886570b36a63a4b963269e7d7e961974cda67dc3d74f0fa892bb65090",
+    "Rule30GoldenEven26Part14Research.lean": "9a2615953337fa5f09a5e9ce98805301b09a3253fd1d803d3b689d088e667dd8",
+    "golden-even26-evidence/Rule30GoldenEven26Part14Research/report.json": "59dc80dcdf427f763b97612e71b4ecfbda9de02308a14203dc05761ccab8c498",
+    "Rule30GoldenEven26Part15Research.lean": "3263049d869b7aaa93ca192cb46b71f89180604d97ede64991f844edff700598",
+    "golden-even26-evidence/Rule30GoldenEven26Part15Research/report.json": "14a461e11194b44c11a43fbc4643310f59645c94592e51364baaa0c744d48953",
+    "Rule30GoldenEvenWidth26Research.lean": "c2b5c4f380175990947eec41d550ccb18f4bc965735c2da2aab6d9d709ce6a5b",
+    "golden-even26-aggregation-evidence/report.json": "d382d80a2eada957321e8cc8e3920941a5b59c8bc1864f6f0b61bf813642bf1c",
+    "EVEN-SUPPORT.md": "26d752088bb051d6b0f0214064ca3afbd13cc38ad2cdcefddde0c4672e531938",
+    "verify_research_module.py": "3d65c7f1861627a738359c8fd40bc6f2f1e5dd4cd53921f8d02c4e8aa20a555c",
+    "replay_even_support.py": "d290d5ce75a4309d5ab767325fd48aca0b0cbfeb4f9f6495594c748c36b49084",
+    "build_golden_even26.py": "896d8565e4af5eab8f918baf96386a7b6dc27aa6721c3e3325a59aa643b5c4a0",
+    "finish_golden_even26.py": "b5e05606120fb302117d486395027cf2b3e95efed86d9b3b685a4cc39afca61a",
+    "extract_verified_coupled_golden.py": "25556d239962b3d880d066a8b8177c18aa6ee48f3d9a8d4258128219ef6c624a",
+    "external/9d92a2-original-record.json": "78cfd6598e8f0f7c6d429512a12e7ac29f366c8584da031d70b9c203a430d7fc",
+    "external/9d92a2-extract-provenance.json": "31a39710ff45c36ab6163960e8a8bcc73ae3f46a122949f7274951e76ffd69ea",
+    "even-support-search-status.json": "bac47b379897bd0091b03f61518059bea7d7629c355da46312160698b4c70684",
+    "even_support_checker.py": "dd99a55e3953550d96f0280c9032fb97b4244378cf5aeba7a2f992481df9dfc1",
+    "even-support-checker-20.json": "27104010e221d941890087ed8b2322aa560f4591df5ee37976d12b1eb588e1fd",
+    "even-support-checker-26.json": "7054b29e4cb32940e4a271a4769f41e4fc8786a7888884ab414663ce805def03",
+    "zero_tail_rank.py": "a929098318deb8216f77dfb116103b4be0251bce85c5f94a118b943126ffe355",
+    "zero-tail-rank.json": "0419a040c868bfbe4f8c4e03a04671552be320acc211aea107eac40b4b56d82e",
+    "zero-tail-rank-refined.json": "290594fd2c0f4377fb2a7f5136fc84316a7c066f14fb6aa75e952874513bdff8",
+    "zero_tail_squares.py": "baf9a046974e8f26f25aeeb850011766b88d56899425c3274351ea77fa793056",
+    "zero-tail-squares-bound1.json": "ac38eef7243ba207ea83828891eb4b59f8fad786b111e53cedae836c45c0c93b",
+    "zero-tail-squares-bound1-scaled.json": "8e95c3f2a5d7b1873e04820b9884655db4e92577dd4c06fb834915e84e3f7c3e",
+    "zero_tail_position_rank.py": "ca55d74e84f565f32d3a286021c9a8782e11e4c24a376c75ad8daf8c593ed898",
+    "zero-tail-position-rank.json": "9382699351f661dae3eb1c21542f1ead4956e078262a080aad94b6cc15ffc515",
+    "finite_even_tail_profile.py": "97419b11b3155e94d1c050e8d826349548b7e3ef86fed65d934f2e87be1418bc",
+    "finite-even-tail-profile.json": "25163583e87bfa94e9de93455bdc450129d1bca6528bad41ec683ddb3b3170f2",
+    "charge_beam_packed.py": "a7c47c2a93a637d7f2a040582dc04797fca24f53f23832a1252647f7b5941d90",
+    "charge-packed-factor8.json": "c9aea6ff88b7e6b8eedb79d59b2b413136b9e66778a2e97e4972731aaa96c82a",
+    "charge-packed-factor5.json": "21d45ebbc0086424cf2c52428f2d109e6ef0b0e6baf4bd7e46a73e97c8847913",
+    "EvenSupportPhysicalControl.wl": "010389015230989fe1cd8ef2ac707ae47106997a4f45a84fa5cf420eb2b39ccc",
+    "run_even_support_wolfram.py": "3402271948183afd5f78b09deb18d841ec5629a19d553a315a5a3b616284a74c",
+    "even-support-wolfram-control.json": "b1fe158267a4b4b0a78675d42aa0b05b38a461d0fc924a9f2fb9b66bcc0ee111",
+    "even-support-wolfram-comparison.json": "7ad11a2a9b0a8c5a46aca32198b0e70d37ddf8c5bf5eb1e1e23a345c89138a65",
+    "even-support-wolfram-control.log": "6d45201d48ec60e6eb387a8d0966f9f8a6e5a768b1a10ce1b44efafe03187ade"
+  },
+  "modules": [
+    {
+      "module": "Rule30GoldenDFAResearch",
+      "source_sha256": "4722b2826e38e8f1caf338ca70895ec141d3686d02ba61b19f2c3ba7fe5dbc43",
+      "report": "golden-dfa-evidence/report.json",
+      "constants": 122,
+      "headlines": [
+        "Rule30GoldenDFAResearch.choice_lt",
+        "Rule30GoldenDFAResearch.choice_next",
+        "Rule30GoldenDFAResearch.run_eq_choice",
+        "Rule30GoldenDFAResearch.run_lt",
+        "Rule30GoldenDFAResearch.initial_contains",
+        "Rule30GoldenDFAResearch.advance_contains",
+        "Rule30GoldenDFAResearch.not_empty_of_contains"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEvenSupportResearch",
+      "source_sha256": "a7224e3c8181022e9943c258af6731053d83c56619814857a2b7c2692ef880cb",
+      "report": "golden-even-support-evidence/report.json",
+      "constants": 47,
+      "headlines": [
+        "Rule30GoldenEvenSupportResearch.alt_even",
+        "Rule30GoldenEvenSupportResearch.alt_odd",
+        "Rule30GoldenEvenSupportResearch.start_matches",
+        "Rule30GoldenEvenSupportResearch.step_matches",
+        "Rule30GoldenEvenSupportResearch.run_matches",
+        "Rule30GoldenEvenSupportResearch.run_not_empty",
+        "Rule30GoldenEvenSupportResearch.no_golden_even_width_of_checks"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEvenPilotResearch",
+      "source_sha256": "73594acf0810c9edabe87443f44aca6cdd9b0a717afe6588691695c4532dae70",
+      "report": "golden-even-pilot-evidence/report.json",
+      "constants": 4,
+      "headlines": [
+        "Rule30GoldenEvenPilotResearch.check12",
+        "Rule30GoldenEvenPilotResearch.noGoldenEvenWidth12"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEvenWidth20Research",
+      "source_sha256": "b500ba2420d0d5adf098dccc66e3134a496b53548749cef736253ee7aed5137f",
+      "report": "golden-even-width20-evidence/report.json",
+      "constants": 4,
+      "headlines": [
+        "Rule30GoldenEvenWidth20Research.check20",
+        "Rule30GoldenEvenWidth20Research.noGoldenEvenWidth20"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenHistoryResearch",
+      "source_sha256": "66cdb6810a65366b8c9637ca6078df69cd04b2198bc279b0aae6ed1767ca40f3",
+      "report": "golden-history-evidence/report.json",
+      "constants": 14,
+      "headlines": [
+        "Rule30GoldenHistoryResearch.history_code",
+        "Rule30GoldenHistoryResearch.not_golden_history",
+        "Rule30GoldenHistoryResearch.not_golden_history_even_width20",
+        "Rule30GoldenHistoryResearch.golden_free",
+        "Rule30GoldenHistoryResearch.history_eq_alt_free",
+        "Rule30GoldenHistoryResearch.not_alternating_of_even_width",
+        "Rule30GoldenHistoryResearch.not_alternating_of_even_width20"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30VerifiedCoupledGoldenExtract",
+      "source_sha256": "fb04bd35dbe7eda540c89affed8c03adfabc3ee063da5ab8f0070b752fe2d8c1",
+      "report": "external/9d92a2-golden-evidence/report.json",
+      "constants": 47,
+      "headlines": [
+        "Rule30Submission.u_golden",
+        "Rule30Submission.u_black_among_five",
+        "Rule30Submission.Psi_free_no00_no11111"
+      ],
+      "attributed_extract": true
+    },
+    {
+      "module": "Rule30GoldenCoupledResearch",
+      "source_sha256": "9dc07e8866ece9b2eca6f720171697b1f4d84a2a835b40169f201ac200ba2657",
+      "report": "golden-coupled-evidence/report.json",
+      "constants": 12,
+      "headlines": [
+        "Rule30GoldenCoupledResearch.golden_free",
+        "Rule30GoldenCoupledResearch.history_eq_alt",
+        "Rule30GoldenCoupledResearch.psi_even_escape",
+        "Rule30GoldenCoupledResearch.psi_even_escape20",
+        "Rule30GoldenCoupledResearch.not_finSupp_psi_of_uniform",
+        "Rule30GoldenCoupledResearch.CQ01_of_uniform"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30DecoderRankObstructionResearch",
+      "source_sha256": "795416989d02f875421a25126cd09d62ef506997201d6b8e40a7c6c3af9dca6f",
+      "report": "decoder-rank-obstruction-evidence/report.json",
+      "constants": 17,
+      "headlines": [
+        "Rule30DecoderRankObstructionResearch.golden_no00",
+        "Rule30DecoderRankObstructionResearch.golden_no11111",
+        "Rule30DecoderRankObstructionResearch.diagonal_words",
+        "Rule30DecoderRankObstructionResearch.initial_even_bits",
+        "Rule30DecoderRankObstructionResearch.no_letter_potential"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Chunk00Research",
+      "source_sha256": "0c17f95a01ab04f7838f82213f79e0b7be0740d8f20476c4b81a99b404c73daa",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Chunk00Research/report.json",
+      "constants": 16,
+      "headlines": [
+        "Rule30GoldenEven26Chunk00Research.check_0",
+        "Rule30GoldenEven26Chunk00Research.check_1",
+        "Rule30GoldenEven26Chunk00Research.check_2",
+        "Rule30GoldenEven26Chunk00Research.check_3",
+        "Rule30GoldenEven26Chunk00Research.check_4",
+        "Rule30GoldenEven26Chunk00Research.check_5",
+        "Rule30GoldenEven26Chunk00Research.check_6",
+        "Rule30GoldenEven26Chunk00Research.check_7"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Chunk01Research",
+      "source_sha256": "a1f17def1969944da1dd44786ab034d7e9e81ecc007f77403d79c262069ffbdb",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Chunk01Research/report.json",
+      "constants": 16,
+      "headlines": [
+        "Rule30GoldenEven26Chunk01Research.check_8",
+        "Rule30GoldenEven26Chunk01Research.check_9",
+        "Rule30GoldenEven26Chunk01Research.check_10",
+        "Rule30GoldenEven26Chunk01Research.check_11",
+        "Rule30GoldenEven26Chunk01Research.check_12",
+        "Rule30GoldenEven26Chunk01Research.check_13",
+        "Rule30GoldenEven26Chunk01Research.check_14",
+        "Rule30GoldenEven26Chunk01Research.check_15"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Chunk02Research",
+      "source_sha256": "f2b6585ba50b36eb63abc17093e91253d11aec46e2315b3b4178d622ec7e79fd",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Chunk02Research/report.json",
+      "constants": 16,
+      "headlines": [
+        "Rule30GoldenEven26Chunk02Research.check_16",
+        "Rule30GoldenEven26Chunk02Research.check_17",
+        "Rule30GoldenEven26Chunk02Research.check_18",
+        "Rule30GoldenEven26Chunk02Research.check_19",
+        "Rule30GoldenEven26Chunk02Research.check_20",
+        "Rule30GoldenEven26Chunk02Research.check_21",
+        "Rule30GoldenEven26Chunk02Research.check_22",
+        "Rule30GoldenEven26Chunk02Research.check_23"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part06Research",
+      "source_sha256": "31183b195791a2c8bc02fd5e60712fe7f73434a6f5152c1182baaadf4d8eb33f",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part06Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part06Research.check_24",
+        "Rule30GoldenEven26Part06Research.check_25",
+        "Rule30GoldenEven26Part06Research.check_26",
+        "Rule30GoldenEven26Part06Research.check_27"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part07Research",
+      "source_sha256": "2b2453f79812ae843de63bf84b52c5d9057024011db3abe4c4f86ea03f290f9f",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part07Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part07Research.check_28",
+        "Rule30GoldenEven26Part07Research.check_29",
+        "Rule30GoldenEven26Part07Research.check_30",
+        "Rule30GoldenEven26Part07Research.check_31"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part08Research",
+      "source_sha256": "0a9d7aa90dcfc36bf7c83eefd4897bc4ce35b1e9880512fbc576ca383f3a8331",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part08Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part08Research.check_32",
+        "Rule30GoldenEven26Part08Research.check_33",
+        "Rule30GoldenEven26Part08Research.check_34",
+        "Rule30GoldenEven26Part08Research.check_35"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part09Research",
+      "source_sha256": "204952061885849d05f72494dd346b0d7ca4f53f89a7b220186877f1959ca2e6",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part09Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part09Research.check_36",
+        "Rule30GoldenEven26Part09Research.check_37",
+        "Rule30GoldenEven26Part09Research.check_38",
+        "Rule30GoldenEven26Part09Research.check_39"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part10Research",
+      "source_sha256": "24b958b1cbb1e46f0c2f417cdcd52e59412541fffbbbe5c456d5cb7bdad25c7b",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part10Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part10Research.check_40",
+        "Rule30GoldenEven26Part10Research.check_41",
+        "Rule30GoldenEven26Part10Research.check_42",
+        "Rule30GoldenEven26Part10Research.check_43"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part11Research",
+      "source_sha256": "3441b154d6834fb7b0c9af65848847f817588bda85442f82016d0bdd304c4bb8",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part11Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part11Research.check_44",
+        "Rule30GoldenEven26Part11Research.check_45",
+        "Rule30GoldenEven26Part11Research.check_46",
+        "Rule30GoldenEven26Part11Research.check_47"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part12Research",
+      "source_sha256": "6432efbd01851e0b959c06ece5ed11efb85f2e664f00b638eec802e5e4a42b06",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part12Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part12Research.check_48",
+        "Rule30GoldenEven26Part12Research.check_49",
+        "Rule30GoldenEven26Part12Research.check_50",
+        "Rule30GoldenEven26Part12Research.check_51"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part13Research",
+      "source_sha256": "626a3cfcf4e49845ace6ce3d5bc5ffaf479e8c891981fcde16c6450efb2db44a",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part13Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part13Research.check_52",
+        "Rule30GoldenEven26Part13Research.check_53",
+        "Rule30GoldenEven26Part13Research.check_54",
+        "Rule30GoldenEven26Part13Research.check_55"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part14Research",
+      "source_sha256": "9a2615953337fa5f09a5e9ce98805301b09a3253fd1d803d3b689d088e667dd8",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part14Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part14Research.check_56",
+        "Rule30GoldenEven26Part14Research.check_57",
+        "Rule30GoldenEven26Part14Research.check_58",
+        "Rule30GoldenEven26Part14Research.check_59"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEven26Part15Research",
+      "source_sha256": "3263049d869b7aaa93ca192cb46b71f89180604d97ede64991f844edff700598",
+      "report": "golden-even26-evidence/Rule30GoldenEven26Part15Research/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEven26Part15Research.check_60",
+        "Rule30GoldenEven26Part15Research.check_61",
+        "Rule30GoldenEven26Part15Research.check_62",
+        "Rule30GoldenEven26Part15Research.check_63"
+      ],
+      "attributed_extract": false
+    },
+    {
+      "module": "Rule30GoldenEvenWidth26Research",
+      "source_sha256": "c2b5c4f380175990947eec41d550ccb18f4bc965735c2da2aab6d9d709ce6a5b",
+      "report": "golden-even26-aggregation-evidence/report.json",
+      "constants": 8,
+      "headlines": [
+        "Rule30GoldenEvenWidth26Research.checks",
+        "Rule30GoldenEvenWidth26Research.noGoldenEvenWidth26",
+        "Rule30GoldenEvenWidth26Research.noGoldenEvenWidth_le26",
+        "Rule30GoldenEvenWidth26Research.not_alternating_of_even_width26",
+        "Rule30GoldenEvenWidth26Research.psi_even_escape26"
+      ],
+      "attributed_extract": false
+    }
+  ],
+  "owned_replayed_constants": 356,
+  "attributed_replayed_constants": 47,
+  "full_problem_solved": false,
+  "uniform_even_support_claim_proved": false
+}

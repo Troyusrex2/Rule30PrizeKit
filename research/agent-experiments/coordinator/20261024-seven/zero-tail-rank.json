@@ -1,0 +1,99 @@
+{
+  "records": [
+    {
+      "pattern_length": 1,
+      "features": 20,
+      "constraints": 3635,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "seconds": 0.0
+    },
+    {
+      "pattern_length": 2,
+      "features": 76,
+      "constraints": 3635,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "seconds": 0.031
+    },
+    {
+      "pattern_length": 3,
+      "features": 193,
+      "constraints": 3635,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "seconds": 0.078
+    },
+    {
+      "pattern_length": 5,
+      "features": 974,
+      "constraints": 3635,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "seconds": 0.531
+    },
+    {
+      "pattern_length": 7,
+      "features": 3813,
+      "constraints": 3635,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 4.719,
+      "nonzero_weights": 578,
+      "training_max_residual": 1.8247625632739073e-12,
+      "heldout_violations": 1492,
+      "first_heldout_failures": [
+        {
+          "prefix_length": 64,
+          "residual": 0.14207055329955948,
+          "free_bit": 1
+        },
+        {
+          "prefix_length": 71,
+          "residual": 3.6897988138574718,
+          "free_bit": 0
+        },
+        {
+          "prefix_length": 83,
+          "residual": 0.44124193273976076,
+          "free_bit": 0
+        },
+        {
+          "prefix_length": 84,
+          "residual": 0.961044068377957,
+          "free_bit": 1
+        },
+        {
+          "prefix_length": 87,
+          "residual": 1.7629261728988936,
+          "free_bit": 0
+        },
+        {
+          "prefix_length": 88,
+          "residual": 1.4430041338586772,
+          "free_bit": 1
+        },
+        {
+          "prefix_length": 90,
+          "residual": 1.5836868337049326,
+          "free_bit": 1
+        },
+        {
+          "prefix_length": 108,
+          "residual": 2.101629160396778,
+          "free_bit": 0
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "antidiagonal_even_outputs_checked": 384,
+    "all_passed": true
+  },
+  "training_zero_even_edges": 3635,
+  "heldout_zero_even_edges": 6170,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 9.0
+}

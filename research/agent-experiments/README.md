@@ -13,6 +13,9 @@ on all seven original responses. Later work includes the
 [checked parallel return-map method](coordinator/20261024-seven/COMPRESSED.md),
 [general catalog tools and PR #16](coordinator/20261024-seven/FRONT-TOOLS.md),
 and [new contribution audits and further falsification experiments](coordinator/20261024-seven/SECOND-PHASE.md).
+The [prescribed-even-coordinate route](coordinator/20261024-seven/EVEN-SUPPORT.md)
+adds a checked decoder/language guard and a result allowing unrestricted odd
+spatial tails. Its uniform support-size premise remains open.
 Problem 1 and the general support questions remain open.
 
 Read this handoff, choose a sharply stated experiment, and try the quickest
