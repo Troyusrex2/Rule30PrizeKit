@@ -8,7 +8,10 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
-**Latest results:** [all seven round-two responses have been reviewed](coordinator/20261025-round2-review/REPORT.md).
+**Latest checked additions:** [uniform conservation classification and exact ancestry frontier](coordinator/20261025-greedy-and-conservation/REPORT.md).
+The report includes all-width kernel proofs and separately labeled inverse-design experiments; the decisive growth and coupling premises remain open.
+
+**Previous review:** [all seven round-two responses have been reviewed](coordinator/20261025-round2-review/REPORT.md).
 The review includes a new all-time, kernel-checked coefficient-two charge
 counterexample, checked ancestry and defect-transfer tools, independent
 reproductions and explicit failed density extrapolations. Problem 1 remains open.

@@ -1,0 +1,206 @@
+{
+  "source_sha256": "264df50d6e9c1ef5ae8691d5cde478f73f346306c1dd10d059891c79834c69d8",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\cedar-build\\Rule30ConservationWordResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Rule30ConservationWordResearch.lean"
+      ],
+      "seconds": 5.905999999988126,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Check.lean",
+        "Rule30ConservationWordResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ConservationWordResearch.image_eq_four",
+        "--headline",
+        "Rule30ConservationWordResearch.image_length",
+        "--headline",
+        "Rule30ConservationWordResearch.image_tail",
+        "--headline",
+        "Rule30ConservationWordResearch.image_dropLast",
+        "--headline",
+        "Rule30ConservationWordResearch.conserved_word",
+        "--headline",
+        "Rule30ConservationWordResearch.conserved_one_constant"
+      ],
+      "seconds": 9.687000000005355,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.conserved_one_constant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.conserved_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationWordResearch.crop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.crop_outer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.four_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.four_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_append_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_eq_four",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.shrink_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCornerResearch.four.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_eq_four",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_tail",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.image_dropLast",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.conserved_word",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.conserved_one_constant",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ConservationWordResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 25,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

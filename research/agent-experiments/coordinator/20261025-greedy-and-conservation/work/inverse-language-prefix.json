@@ -1,0 +1,31 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "z3_version": "5.3.2",
+  "target": {
+    "prefix_bits": "011010111101010111101011110101010101010101010101110101010101011110101010101011101011110101011110",
+    "alternating_tail_first_bit": 1,
+    "sample": 0,
+    "entry_depth": 1108,
+    "period": 28,
+    "black": 6,
+    "density": "3/14",
+    "cycle_bits": "0101000101000000000001000001",
+    "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+    "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60",
+    "states": 1135
+  },
+  "target_first128": "01101011110101011110101111010101010101010101010111010101010101111010101010101110101111010101111010101010101010101010101010101010",
+  "records": [
+    {
+      "requested_free_prefix": 8,
+      "maximum_initial_position": 256,
+      "result": "unknown",
+      "solve_seconds": 16.03100000001723,
+      "reason": "timeout"
+    }
+  ],
+  "seconds": 19.219000000011874,
+  "source_sha256": "211d0efe0ff6ffe56d13298009b371367c10369c8c25abee811cf02ede0290ec",
+  "scope": "Full causal cone includes every right-half influence on requested bits. A reported UNSAT is not kernel-checked. SAT is a finite-prefix witness only; no tail claim."
+}

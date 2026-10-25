@@ -1,0 +1,9 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\new-growth-20261025T1330\cedar-verifier\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30GreedyAncestryFrontResearch.Cut","standardAxioms":true},{"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.cut_successor","standardAxioms":true},{"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.greedy_frontier","standardAxioms":true},{"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.root_cut_of_rightmost","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.root_cut_of_rightmost","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.cut_successor","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30GreedyAncestryFrontResearch.greedy_frontier","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30GreedyAncestryFrontResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":9,"ok":true},"verdict":"pass","verifiedTargets":[]}

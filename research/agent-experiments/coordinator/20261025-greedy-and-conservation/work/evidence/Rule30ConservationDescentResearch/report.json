@@ -1,0 +1,201 @@
+{
+  "source_sha256": "0c832728d90e65cc760178aa1b50971be4ba57768595889c6f61127bdc2a5847",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\cedar-build\\Rule30ConservationDescentResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Rule30ConservationDescentResearch.lean"
+      ],
+      "seconds": 5.905999999988126,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Check.lean",
+        "Rule30ConservationDescentResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ConservationDescentResearch.shorten_word",
+        "--headline",
+        "Rule30ConservationDescentResearch.transport_identity",
+        "--headline",
+        "Rule30ConservationDescentResearch.transport_last_independent",
+        "--headline",
+        "Rule30ConservationDescentResearch.transport_reduced",
+        "--headline",
+        "Rule30ConservationDescentResearch.shorter_conserved"
+      ],
+      "seconds": 9.78200000000652,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.conserved_of_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.crop_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.crop_dropLast",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.crop_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.crop_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationDescentResearch.reducedPotential",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.shorten_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.shorter_conserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.tail_take_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationDescentResearch.transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_last_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_reduced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationWordResearch.crop.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.shorten_word",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_identity",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_last_independent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.transport_reduced",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationDescentResearch.shorter_conserved",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ConservationDescentResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 26,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

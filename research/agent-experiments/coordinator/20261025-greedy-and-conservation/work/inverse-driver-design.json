@@ -1,0 +1,133 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "z3_version": "5.3.2",
+  "solver_timeout_ms": 12000,
+  "target": {
+    "finite_state_certificate": true,
+    "Lean_verified": false,
+    "prefix_bits": "011010101111011110111011101010101010101010101111010101011011101011101101111011101010101111011110",
+    "tail_first_bit": 1,
+    "tail": "alternates forever by definition",
+    "temporal_preperiod": 192,
+    "temporal_period": 4,
+    "temporal_bits_stored_per_column": 196,
+    "first_periodic_spatial_depth": 1052,
+    "spatial_period": 28,
+    "black_per_spatial_period": 6,
+    "density_numerator": 6,
+    "density_denominator": 28,
+    "cycle_bits": "0101000101000000000001000001",
+    "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+    "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60",
+    "initial_current_hex": "0x77fdff7777f7fdf7f77f7ddddff7777777777f7f7fdff777d",
+    "independent_scalar_columns_checked": 32,
+    "state_count": 1079,
+    "C3_asymptotic_excess_numerator": 12,
+    "C3_asymptotic_excess_denominator": 56,
+    "scope": "Explicit Golden eventually alternating stream, not established as free R for any finite R. Exact finite recurrence plus periodic-time semantics on paper implies an all-depth Theta cycle.",
+    "seconds": 0.0
+  },
+  "target_free_first160": "0110101011110111101110111010101010101010101011110101010110111010111011011110111010101011110111101010101010101010101010101010101010101010101010101010101010101010",
+  "records": [
+    {
+      "label": "known-W1",
+      "maximum_initial_position": 12,
+      "requested_free_bits": 32,
+      "result": "sat",
+      "seconds": 0.29699999999138527,
+      "mathematical_initial_right_hex": "0x888",
+      "matched_prefix": 32,
+      "independent_physical_replay": true,
+      "first_target_mismatch_through160": 9,
+      "free_first256": "0110101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010"
+    },
+    {
+      "label": "forbidden-00",
+      "maximum_initial_position": 16,
+      "requested_free_bits": 2,
+      "result": "unsat",
+      "seconds": 0.0
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 16,
+      "requested_free_bits": 16,
+      "result": "unsat",
+      "seconds": 0.10999999998603016
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 32,
+      "requested_free_bits": 32,
+      "result": "unsat",
+      "seconds": 0.40599999998812564
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 64,
+      "requested_free_bits": 64,
+      "result": "unsat",
+      "seconds": 2.3910000000032596
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 128,
+      "requested_free_bits": 96,
+      "result": "unknown",
+      "seconds": 12.34399999998277,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 192,
+      "requested_free_bits": 96,
+      "result": "unknown",
+      "seconds": 13.39000000001397,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 64,
+      "requested_free_bits": 128,
+      "result": "unknown",
+      "seconds": 12.5,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 128,
+      "requested_free_bits": 128,
+      "result": "unknown",
+      "seconds": 13.546999999991385,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 256,
+      "requested_free_bits": 128,
+      "result": "unknown",
+      "seconds": 13.219000000011874,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 128,
+      "requested_free_bits": 160,
+      "result": "unknown",
+      "seconds": 13.562999999994645,
+      "reason": "timeout"
+    },
+    {
+      "label": "bad-Golden-prefix",
+      "maximum_initial_position": 320,
+      "requested_free_bits": 160,
+      "result": "unknown",
+      "seconds": 13.34299999999348,
+      "reason": "timeout"
+    }
+  ],
+  "seconds": 95.13999999998487,
+  "source_sha256": "84f62568a4582736426691f25ed8cff6b0bbf98442aa146814d5b6c261a0516f",
+  "scope": "Only finite requested prefixes and finite initial support bounds. UNSAT is a solver report, not a kernel-checked certificate. UNKNOWN proves nothing. SAT models are independently physically replayed."
+}

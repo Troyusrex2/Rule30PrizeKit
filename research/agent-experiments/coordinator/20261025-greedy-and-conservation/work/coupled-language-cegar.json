@@ -1,0 +1,495 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "rng_seed": 30302511,
+  "z3_version": "5.3.2",
+  "rounds": [
+    {
+      "iteration": 0,
+      "samples": 0,
+      "candidate": {
+        "prefix_bits": "011010111101010111101011110101010101010101010101110101010101011110101010101011101011110101011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1108,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "0110101111"
+    },
+    {
+      "iteration": 1,
+      "samples": 80,
+      "candidate": {
+        "prefix_bits": "010101111010111101101110101110110110110110110111101101110101010111101101101111010101111010101110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1080,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "010101111"
+    },
+    {
+      "iteration": 2,
+      "samples": 8,
+      "candidate": {
+        "prefix_bits": "010111010101010111011011011110101110101111010101110111101101101101101111011011101101110111011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1108,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 20,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "01011101010101011"
+    },
+    {
+      "iteration": 3,
+      "samples": 3,
+      "candidate": {
+        "prefix_bits": "011101010111010101010101011101110101011101110111011011011011101110110110111101101110111010101110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1080,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "1010111010"
+    },
+    {
+      "iteration": 4,
+      "samples": 50,
+      "candidate": {
+        "prefix_bits": "010101011101101110111101010101010111011011011011011011110101110111010101110111101101111011011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1136,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "0101110110"
+    },
+    {
+      "iteration": 5,
+      "samples": 44,
+      "candidate": {
+        "prefix_bits": "010101110111101101101111010111101111010111011110101110111101011101111011101101101101101111011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1052,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 20,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 24,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 28,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "101101111010"
+    },
+    {
+      "iteration": 6,
+      "samples": 57,
+      "candidate": {
+        "prefix_bits": "010111010111011101011101110101010111011110101110111010101110111010111101110111101111010111011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1108,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 20,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "101011101110"
+    },
+    {
+      "iteration": 7,
+      "samples": 6,
+      "candidate": {
+        "prefix_bits": "011101101110111101110101110111101010101011101111011011101011110110110111011011011110111101011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1024,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "101101110"
+    },
+    {
+      "iteration": 8,
+      "samples": 14,
+      "candidate": {
+        "prefix_bits": "010111101010101110111101110101110111101010101110111101111011101110101010101011101111010111011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1108,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 20,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 24,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 28,
+          "result": "unsat"
+        }
+      ],
+      "outcome": "solver-unverified new trace exclusion",
+      "word": "1110111101110"
+    },
+    {
+      "iteration": 9,
+      "samples": 29,
+      "candidate": {
+        "prefix_bits": "010111010111011110101010101110111101101111011011011110110110110110111101111010111101010111011110",
+        "tail_first": 1,
+        "cycle": {
+          "entry_depth": 1080,
+          "period": 28,
+          "black": 6,
+          "cycle_bits": "0101000101000000000001000001",
+          "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+          "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60"
+        }
+      },
+      "prefix_queries": [
+        {
+          "prefix_length": 8,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 12,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 16,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 20,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 24,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 28,
+          "result": "sat"
+        },
+        {
+          "prefix_length": 32,
+          "result": "sat"
+        }
+      ],
+      "outcome": "realizability unresolved; do not infer an actual finite-right counterexample"
+    }
+  ],
+  "heuristic_forbidden_words": [
+    "00",
+    "11111",
+    "010110",
+    "1011010",
+    "0110101111",
+    "010101111",
+    "01011101010101011",
+    "1010111010",
+    "0101110110",
+    "101101111010",
+    "101011101110",
+    "101101110",
+    "1110111101110"
+  ],
+  "solver_queries": {
+    "01101011": "sat",
+    "011010111101": "unsat",
+    "11010111101": "sat",
+    "01101011110": "unsat",
+    "0110101111": "unsat",
+    "011010111": "sat",
+    "01010111": "sat",
+    "010101111010": "unsat",
+    "10101111010": "sat",
+    "01010111101": "unsat",
+    "0101011110": "unsat",
+    "010101111": "unsat",
+    "01011101": "sat",
+    "010111010101": "sat",
+    "0101110101010101": "sat",
+    "01011101010101011101": "unsat",
+    "1011101010101011101": "sat",
+    "0101110101010101110": "unsat",
+    "010111010101010111": "unsat",
+    "01011101010101011": "unsat",
+    "01110101": "sat",
+    "011101010111": "sat",
+    "0111010101110101": "unsat",
+    "111010101110101": "unsat",
+    "11010101110101": "unsat",
+    "1010101110101": "unsat",
+    "010101110101": "unsat",
+    "10101110101": "unsat",
+    "0101110101": "sat",
+    "1010111010": "unsat",
+    "101011101": "sat",
+    "01010101": "sat",
+    "010101011101": "sat",
+    "0101010111011011": "unsat",
+    "101010111011011": "unsat",
+    "01010111011011": "unsat",
+    "1010111011011": "unsat",
+    "010111011011": "unsat",
+    "10111011011": "sat",
+    "01011101101": "unsat",
+    "0101110110": "unsat",
+    "010111011": "sat",
+    "010101110111": "sat",
+    "0101011101111011": "sat",
+    "01010111011110110110": "sat",
+    "010101110111101101101111": "sat",
+    "0101011101111011011011110101": "unsat",
+    "101011101111011011011110101": "unsat",
+    "01011101111011011011110101": "unsat",
+    "1011101111011011011110101": "unsat",
+    "011101111011011011110101": "unsat",
+    "11101111011011011110101": "unsat",
+    "1101111011011011110101": "unsat",
+    "101111011011011110101": "unsat",
+    "01111011011011110101": "unsat",
+    "1111011011011110101": "unsat",
+    "111011011011110101": "unsat",
+    "11011011011110101": "unsat",
+    "1011011011110101": "unsat",
+    "011011011110101": "unsat",
+    "11011011110101": "unsat",
+    "1011011110101": "unsat",
+    "011011110101": "sat",
+    "101101111010": "unsat",
+    "10110111101": "sat",
+    "010111010111": "sat",
+    "0101110101110111": "sat",
+    "01011101011101110101": "unsat",
+    "1011101011101110101": "unsat",
+    "011101011101110101": "unsat",
+    "11101011101110101": "unsat",
+    "1101011101110101": "unsat",
+    "101011101110101": "unsat",
+    "01011101110101": "sat",
+    "10101110111010": "unsat",
+    "1010111011101": "unsat",
+    "101011101110": "unsat",
+    "10101110111": "sat",
+    "01110110": "sat",
+    "011101101110": "unsat",
+    "11101101110": "unsat",
+    "1101101110": "unsat",
+    "101101110": "unsat",
+    "01101110": "sat",
+    "10110111": "sat",
+    "01011110": "sat",
+    "010111101010": "sat",
+    "0101111010101011": "sat",
+    "01011110101010111011": "sat",
+    "010111101010101110111101": "sat",
+    "0101111010101011101111011101": "unsat",
+    "101111010101011101111011101": "unsat",
+    "01111010101011101111011101": "unsat",
+    "1111010101011101111011101": "unsat",
+    "111010101011101111011101": "unsat",
+    "11010101011101111011101": "unsat",
+    "1010101011101111011101": "unsat",
+    "010101011101111011101": "unsat",
+    "10101011101111011101": "unsat",
+    "0101011101111011101": "unsat",
+    "101011101111011101": "unsat",
+    "01011101111011101": "unsat",
+    "1011101111011101": "unsat",
+    "011101111011101": "unsat",
+    "11101111011101": "unsat",
+    "1101111011101": "sat",
+    "1110111101110": "unsat",
+    "111011110111": "sat",
+    "01011101011101111010": "sat",
+    "010111010111011110101010": "sat",
+    "0101110101110111101010101011": "sat",
+    "01011101011101111010101010111011": "sat"
+  },
+  "seconds": 7.437000000005355,
+  "source_sha256": "f755740eed6cbf4d8d682dc927c0c3071048b8d9ad16f9e0a1e744d5208c7593",
+  "scope": "CEGAR tests whether nonphysical traces defeat the proposed density bound. No inferred word is kernel-checked; no actual infinite finite-R trace or unbounded positive result is established."
+}

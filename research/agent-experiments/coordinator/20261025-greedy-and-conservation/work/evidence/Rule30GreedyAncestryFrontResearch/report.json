@@ -1,0 +1,121 @@
+{
+  "source_sha256": "22242131d670b5207d250d8a916420805b92017bf88caf32523e2a14f3b3ed02",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\cedar-build\\Rule30GreedyAncestryFrontResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Rule30GreedyAncestryFrontResearch.lean"
+      ],
+      "seconds": 6.264999999984866,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Check.lean",
+        "Rule30GreedyAncestryFrontResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30GreedyAncestryFrontResearch.root_cut_of_rightmost",
+        "--headline",
+        "Rule30GreedyAncestryFrontResearch.cut_successor",
+        "--headline",
+        "Rule30GreedyAncestryFrontResearch.greedy_frontier"
+      ],
+      "seconds": 9.844000000011874,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30GreedyAncestryFrontResearch.Cut",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.cut_successor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.greedy_frontier",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.root_cut_of_rightmost",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.root_cut_of_rightmost",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.cut_successor",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GreedyAncestryFrontResearch.greedy_frontier",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GreedyAncestryFrontResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 9,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

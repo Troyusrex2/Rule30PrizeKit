@@ -1,0 +1,37 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "target": {
+    "prefix_bits": "011010111101010111101011110101010101010101010101110101010101011110101010101011101011110101011110",
+    "alternating_tail_first_bit": 1,
+    "sample": 0,
+    "entry_depth": 1108,
+    "period": 28,
+    "black": 6,
+    "density": "3/14",
+    "cycle_bits": "0101000101000000000001000001",
+    "entry_previous_hex": "0x7740cf1cf61da88bc9cc070f2a2419d60611e727bcc38f3bf",
+    "entry_current_hex": "0xccde889084d33cce1d19f468be35f534f51714a4609a38a60",
+    "states": 1135
+  },
+  "records": [
+    {
+      "requested_free_prefix": 8,
+      "maximum_initial_position": 16,
+      "result": "sat",
+      "seconds": 0.01600000000325963,
+      "mathematical_initial_right_hex": "0xc488",
+      "independent_physical_replay": true
+    },
+    {
+      "requested_free_prefix": 12,
+      "maximum_initial_position": 24,
+      "result": "unsat",
+      "seconds": 0.030999999988125637
+    }
+  ],
+  "z3_version": "5.3.2",
+  "source_sha256": "b9bc7a34f8b25a7bca5a38e942addf3d97c1012eec39d535b8c4da6f4ad3f584",
+  "seconds": 0.046999999991385266,
+  "scope": "All right-half influences included separately for each requested prefix. Solver UNSAT is unverified. Every SAT model checked independently. No infinite realization or finite-R asymptotic claim."
+}

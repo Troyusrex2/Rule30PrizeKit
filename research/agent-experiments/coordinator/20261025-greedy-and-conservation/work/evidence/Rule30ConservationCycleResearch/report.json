@@ -1,0 +1,210 @@
+{
+  "source_sha256": "32ca5f48fbad3aee44be171ddd5c2e2a3e56745fbf01d0dedfb3ea27198a3d67",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\cedar-build\\Rule30ConservationCycleResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Rule30ConservationCycleResearch.lean"
+      ],
+      "seconds": 5.859000000025844,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\new-growth-20261025T1330\\cedar-verifier\\Check.lean",
+        "Rule30ConservationCycleResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ConservationCycleResearch.balanced_gradient",
+        "--headline",
+        "Rule30ConservationCycleResearch.cyclic_conserved_local",
+        "--headline",
+        "Rule30ConservationCycleResearch.cyclic_conserved_trivial"
+      ],
+      "seconds": 9.59399999998277,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.Balanced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.CyclicConserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.balanced_gradient",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.cyclic_conserved_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.cyclic_conserved_trivial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run_formula",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run_reset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.shift_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.weight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.weight_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ConservationCycleResearch.run.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.shift.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.weight.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.weight.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.weight.eq_def",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.balanced_gradient",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.cyclic_conserved_local",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ConservationCycleResearch.cyclic_conserved_trivial",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ConservationCycleResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 36,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
