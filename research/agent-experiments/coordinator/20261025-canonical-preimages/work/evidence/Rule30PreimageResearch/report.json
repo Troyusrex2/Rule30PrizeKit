@@ -1,0 +1,172 @@
+{
+  "source_sha256": "8dba7ec1ec6c8f7706e6e950885fc26998f600ce205cc06e0e907fd0a9b0c4aa",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\owned-build\\Rule30PreimageResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\Rule30PreimageResearch.lean"
+      ],
+      "seconds": 6.01600000000326,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\Check.lean",
+        "Rule30PreimageResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30PreimageResearch.pulseTarget_no_leftFinite_preimage",
+        "--headline",
+        "Rule30PreimageResearch.recombination",
+        "--headline",
+        "Rule30PreimageResearch.no_restricted_lift"
+      ],
+      "seconds": 9.76500000001397,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.Common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.Subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.diffStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.first_seed_pulse",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.no_restricted_lift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.pulseTarget",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.pulseTarget_no_leftFinite_preimage",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.recombination",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.recombination_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PreimageResearch.unit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.white_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.pulseTarget.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.step.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.unit.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.pulseTarget_no_leftFinite_preimage",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.recombination",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PreimageResearch.no_restricted_lift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PreimageResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 49,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

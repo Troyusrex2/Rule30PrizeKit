@@ -1,0 +1,155 @@
+{
+  "source_sha256": "e98732da91a84a66c0053b2924a055e3f5b51e1a2ba2054e15af50dd7d109783",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\owned-build\\Rule30CanonicalPulseResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\Rule30CanonicalPulseResearch.lean"
+      ],
+      "seconds": 16.89000000001397,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\canonical-preimage-20261025T2303\\owned-verifier\\Check.lean",
+        "Rule30CanonicalPulseResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30CanonicalPulseResearch.canonical_gap",
+        "--headline",
+        "Rule30CanonicalPulseResearch.pulse_is_mode",
+        "--headline",
+        "Rule30CanonicalPulseResearch.arbitrarily_long_nonliftable_canonical_modes"
+      ],
+      "seconds": 25.10999999998603,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.arbitrarily_long_nonliftable_canonical_modes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.canonical_gap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.evol_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.evol_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.gap_agreement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.local_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.physical_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.pulse_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.pulse_is_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.pulse_support",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.restart",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.canonical_gap",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.pulse_is_mode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CanonicalPulseResearch.arbitrarily_long_nonliftable_canonical_modes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CanonicalPulseResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 45,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

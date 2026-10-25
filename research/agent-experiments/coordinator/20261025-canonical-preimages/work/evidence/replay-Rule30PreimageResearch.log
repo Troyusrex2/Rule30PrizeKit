@@ -1,0 +1,18 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\canonical-preimage-20261025T2303\owned-verifier\Rule30PreimageResearch.lean:30:32: warning: Variable name `al` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _al
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\canonical-preimage-20261025T2303\owned-verifier\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30PreimageResearch.Common","standardAxioms":true},{"kind":"def","name":"Rule30PreimageResearch.Subset","standardAxioms":true},{"kind":"def","name":"Rule30PreimageResearch.diffStep","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.first_seed_pulse","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.no_restricted_lift","standardAxioms":true},{"kind":"def","name":"Rule30PreimageResearch.pulseTarget","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.pulseTarget_no_leftFinite_preimage","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.recombination","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.recombination_local","standardAxioms":true},{"kind":"def","name":"Rule30PreimageResearch.step","standardAxioms":true},{"kind":"def","name":"Rule30PreimageResearch.unit","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.white_left","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.pulseTarget.eq_1","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.step.eq_1","standardAxioms":true},{"kind":"theorem","name":"Rule30PreimageResearch.unit.eq_1","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30PreimageResearch.pulseTarget_no_leftFinite_preimage","ok":true,"problems":[],"typeMatches":true},{"axioms":[],"found":true,"kind":"theorem","name":"Rule30PreimageResearch.recombination","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30PreimageResearch.no_restricted_lift","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30PreimageResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":49,"ok":true},"verdict":"pass","verifiedTargets":[]}
+
+{"verdict": "pass", "module": "Rule30PreimageResearch", "replay": {"constants": 49, "ok": true}, "headlines": ["pulseTarget_no_leftFinite_preimage", "recombination", "no_restricted_lift"]}
