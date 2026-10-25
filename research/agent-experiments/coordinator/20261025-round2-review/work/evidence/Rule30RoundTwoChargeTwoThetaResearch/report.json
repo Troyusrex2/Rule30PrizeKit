@@ -1,0 +1,254 @@
+{
+  "source_sha256": "c27754ca779cdec3c0f5263cd01b2b3754b98358e1a107fbf6ee9d69b2c3a0c4",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\cedar-build\\Rule30RoundTwoChargeTwoThetaResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\Rule30RoundTwoChargeTwoThetaResearch.lean"
+      ],
+      "seconds": 6.828000000008615,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\Check.lean",
+        "Rule30RoundTwoChargeTwoThetaResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30RoundTwoChargeTwoThetaResearch.table_rule",
+        "--headline",
+        "Rule30RoundTwoChargeTwoThetaResearch.model_rule",
+        "--headline",
+        "Rule30RoundTwoChargeTwoThetaResearch.recon_model_pair",
+        "--headline",
+        "Rule30RoundTwoChargeTwoThetaResearch.theta_left",
+        "--headline",
+        "Rule30RoundTwoChargeTwoThetaResearch.psi_left"
+      ],
+      "seconds": 10.515999999974156,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.columns",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model_rule",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.psi_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.raw",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.recon_model_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.spaceAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.spaceAt_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.spaceAt_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.spaceNext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.table_rule",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.theta_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.timeAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.timeAt_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.timeAt_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.timeNext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.columns.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.raw.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.spaceAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.timeAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundary.alt.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.table_rule",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.model_rule",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.recon_model_pair",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.theta_left",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoChargeTwoThetaResearch.psi_left",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30RoundTwoChargeTwoThetaResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 68,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

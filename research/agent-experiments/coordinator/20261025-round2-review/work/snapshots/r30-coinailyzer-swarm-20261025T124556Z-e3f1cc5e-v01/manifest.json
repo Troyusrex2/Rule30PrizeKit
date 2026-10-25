@@ -1,0 +1,239 @@
+{
+ "schema_version": 1,
+ "campaign_id": "rule30-20261024",
+ "response_id": "r30-coinailyzer-swarm-20261025T124556Z-e3f1cc5e-v01",
+ "agent": {
+  "name": "CoinAIlyzer Swarm",
+  "model": "claude-opus-5",
+  "framework": "Claude Code"
+ },
+ "created_utc": "2026-10-25T12:57:10Z",
+ "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+ "supersedes": [],
+ "artifacts": [
+  {
+   "artifact_id": "src_ca_core_py",
+   "path": "src/ca_core.py",
+   "bytes": 2321,
+   "sha256": "ca99873158b67f3d2a6102ed97d6e7661ce1688bf03318733b84aa6a2ea52425",
+   "description": "Shared single-seed CA core: bytearray evolution, rule table, left-permutivity test, eventual-period search."
+  },
+  {
+   "artifact_id": "src_defect_identities_py",
+   "path": "src/defect_identities.py",
+   "bytes": 5317,
+   "sha256": "1186d014538eb1f3327c7896f7dfaff0a38c4a8ef24b45a60439e218f75d055b",
+   "description": "Checks Lemmas 0-5, Prop 1, Prop 2 on the actual rule 30 orbit to t=1200, plus the unmasked rule 90 transfer."
+  },
+  {
+   "artifact_id": "src_permutive_barrier_scan_py",
+   "path": "src/permutive_barrier_scan.py",
+   "bytes": 3012,
+   "sha256": "f23af724a2cf1e494857a76afcc0bba4f80da825c67c34739d02f2d81ec54384",
+   "description": "Exhaustive scan of all 256 elementary rules for quiescence, black left edge and left-permutivity; centre-column periodicity of the family."
+  },
+  {
+   "artifact_id": "src_seed_sweep_py",
+   "path": "src/seed_sweep.py",
+   "bytes": 4455,
+   "sha256": "a712a7bfa07efcf42e9fe30bd7c8e200d70d7f5d7c10dc35d96513911e2c6eb7",
+   "description": "Bitwise evolver; 65,532 orbits of the family over seeds of width 1..14, testing 1,834,896 columns for eventual periodicity."
+  },
+  {
+   "artifact_id": "src_frame_retraction_py",
+   "path": "src/frame_retraction.py",
+   "bytes": 4105,
+   "sha256": "5ddf841588d03783aa5d91794c75c9aa27c5f9d4fdc0399581a142dbaf8109b6",
+   "description": "Moving-frame versus fixed-column periodicity for rule 30, and binary search for the regular-region boundary."
+  },
+  {
+   "artifact_id": "src_rate_calibration_py",
+   "path": "src/rate_calibration.py",
+   "bytes": 3604,
+   "sha256": "ea5a154c4a8d625783243072ead59a1724fe55bd1efc83f1841f6cd85b4cf911",
+   "description": "Measures the true period-1 defect count of column +1 for rules 90, 150, 210 against the log2 lower bound."
+  },
+  {
+   "artifact_id": "evidence_defect_identities_output_txt",
+   "path": "evidence/defect_identities_output.txt",
+   "bytes": 794,
+   "sha256": "da7d2782312647a3e7511ba075cb898fb4365c7676b351b76f52e17724e6acf7",
+   "description": "Verbatim PASS/FAIL output of defect_identities.py."
+  },
+  {
+   "artifact_id": "evidence_permutive_family_scan_output_txt",
+   "path": "evidence/permutive_family_scan_output.txt",
+   "bytes": 608,
+   "sha256": "0c63c3e803c529e8360300b2cc7d46a0690d939590afa35b67ab2ce88aebb7e5",
+   "description": "Verbatim output of permutive_barrier_scan.py."
+  },
+  {
+   "artifact_id": "evidence_permutive_family_scan_json",
+   "path": "evidence/permutive_family_scan.json",
+   "bytes": 1003,
+   "sha256": "6d95e92bf739637f4c52b89c3e2b06c7e6c33a7b7aeedb4082a7bc6ca5ce3d53",
+   "description": "Per-rule scan record for the four-rule family."
+  },
+  {
+   "artifact_id": "evidence_seed_sweep_output_txt",
+   "path": "evidence/seed_sweep_output.txt",
+   "bytes": 601,
+   "sha256": "21fadd231c3fc2beb1bf1c1f14c4f91387ea8859de8cc891965d14d17711a55d",
+   "description": "Verbatim output of seed_sweep.py."
+  },
+  {
+   "artifact_id": "evidence_seed_sweep_json",
+   "path": "evidence/seed_sweep.json",
+   "bytes": 16604,
+   "sha256": "1ccafb86ff26b7939dbe6d2aa1f7522d50d8f73c073c7a27fcfb8984c5b51f43",
+   "description": "Sweep parameters, counts and every periodic-column example found."
+  },
+  {
+   "artifact_id": "evidence_frame_retraction_output_txt",
+   "path": "evidence/frame_retraction_output.txt",
+   "bytes": 2116,
+   "sha256": "c59dec8ca03c9a2c2387b94b201fb450b64a9137a5b887a4f400f274580b0588",
+   "description": "Verbatim output of frame_retraction.py."
+  },
+  {
+   "artifact_id": "evidence_frame_retraction_json",
+   "path": "evidence/frame_retraction.json",
+   "bytes": 870,
+   "sha256": "a3378e121d51732062c16f65d0fe97d12001385bb9dcb3da587994e3956e777e",
+   "description": "Moving-frame table, fixed-column results and boundary depths."
+  },
+  {
+   "artifact_id": "evidence_rate_calibration_output_txt",
+   "path": "evidence/rate_calibration_output.txt",
+   "bytes": 2170,
+   "sha256": "021baefaba6892f7fbb4490d7723431cc2d84ea7456ac264d4df1c5ca809af70",
+   "description": "Verbatim output of rate_calibration.py."
+  },
+  {
+   "artifact_id": "evidence_rate_calibration_json",
+   "path": "evidence/rate_calibration.json",
+   "bytes": 1841,
+   "sha256": "df630cc5db047965a1c5a15684e6142cd469bfab2b76ce3bd8935a79efe5373f",
+   "description": "Defect counts and densities for rules 90, 150, 210."
+  },
+  {
+   "artifact_id": "REPORT_md",
+   "path": "REPORT.md",
+   "bytes": 19905,
+   "sha256": "0e6bcd8eb2c8ff277df680acd97065dd3d9b6cb006b70a59417c763fe9eaf047",
+   "description": "This response's report."
+  }
+ ],
+ "findings": [
+  {
+   "finding_id": "F001",
+   "track": "H",
+   "status": "EXPERIMENT",
+   "title": "R2-05: zero-gated defect transfer between columns -1 and +1, and the log-rate it yields",
+   "claim": "With D_x(t) = a(t+P,x) XOR a(t,x): (1) D_{x-1}(t) = D_x(t+1) XOR [(a(t+P,x) OR a(t+P,x+1)) XOR (a(t,x) OR a(t,x+1))] for all t,x; (2) if D_0(t)=D_0(t+1)=0 then D_{-1}(t) = (1 XOR a(t,0)) AND D_{+1}(t); (3) a depth-2 analogue; (4) if the centre column is P-periodic from T then for every m >= T+P some s in [m-P, 2m-P] has D_{+1}(s)=1 with a(s,0)=0, so column +1 has at least log2(t)-O(1) period-P defects up to time t.",
+   "scope": "Rule 30, single black cell at the origin, new = left XOR (centre OR right). (1) is unconditional. (2),(3),(4) assume the negation of Problem 1 for column 0 with explicit transient T and period P. All four are proved by hand in REPORT.md; the finite checks run to t=1200 over ten periods.",
+   "result": "Hand proofs given. Finite verification passes every check: reconstruction identity 2,876,400 instances; defect recursion 317,682; locality 157,784 live defects; Prop 1 at 2,998 coincidental-hypothesis pairs; Prop 2 at 5,935 and 1,500; light-cone defect 11,534. The mask (1 XOR a(t,0)) is absent for rules 90 and 150, whose transfer is the unmasked XOR, verified separately.",
+   "evidence_artifact_ids": [
+    "src_ca_core_py",
+    "src_defect_identities_py",
+    "evidence_defect_identities_output_txt"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "rule 30 single seed, t <= 1200, periods {1,2,3,5,7,11,14,29,64,97}, columns -41..40; rule 90 contrast t < 300, columns -30..30. Python 3 stdlib, no Lean."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Not formalized in Lean.",
+    "Theorem B bounds defects in column +1, not column 0; it is not by itself a step towards a contradiction.",
+    "Jen's theorem (already in the kit) gives infinitely many such defects without a rate; only the rate and the mask are new here.",
+    "log t is far below the positive density any charging route needs.",
+    "Prop 1, Prop 2 and Theorem B have hypotheses false for rule 30, so on the real orbit they are only checked where the hypothesis holds coincidentally."
+   ],
+   "next_action": "Prove a capacity lemma: one column +1 defect can terminate only O(1) of the light-cone sources (-m, m-P). That converts log t into positive density. Start by making the defect walk deterministic through the mask, which forces every column -1 site onto a zero of the centre."
+  },
+  {
+   "finding_id": "F002",
+   "track": "H",
+   "status": "EXPERIMENT",
+   "title": "R2-05: rules 90 and 210 cap any shared-structure defect rate at O(log t), and the cap dies once the centre is known non-constant",
+   "claim": "Exactly four elementary rules are quiescent, black-left-edged and left-permutive: 30, 90, 150, 210. For rules 90 and 210 from the single black cell the centre column is white for all t >= 1 and column +1 is black exactly at t = 2^k - 1, so its period-1 defect count is 2*floor(log2(t+1)) + O(1). Hence no defect-rate lower bound better than O(log t) is provable from those three shared facts alone. Both witnesses have a WHITE centre; the kit already excludes an eventually constant column for rule 30, and the only remaining sibling, rule 150, has a constant BLACK centre with defect density 2/3. So under the non-constant hypothesis the family caps nothing.",
+   "scope": "All 256 elementary rules for the structural test; single black cell and t < 16384 for the three sibling orbits; period P = 1, transient T = 1.",
+   "result": "Family = {30,90,150,210} (exhaustive). Rules 90 and 210: column +1 black exactly at 2^k - 1 up to t = 16384; N_1(t)/log2(t) measured 1.81, 1.81, 1.96, 1.93 at t = 100, 1000, 10000, 16382; defect density 0.0016. Rule 150: centre constant black, defect density 0.6667. Theorem B's conclusion verified to hold on all three orbits.",
+   "evidence_artifact_ids": [
+    "src_permutive_barrier_scan_py",
+    "src_rate_calibration_py",
+    "evidence_permutive_family_scan_output_txt",
+    "evidence_permutive_family_scan_json",
+    "evidence_rate_calibration_output_txt",
+    "evidence_rate_calibration_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "256-rule structural scan is exhaustive; orbit measurements are finite prefixes to t = 16384. The closed form t = 2^k - 1 is classical by Kummer's theorem but is not proved here."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The 2^k - 1 closed form is verified to t = 16384 and argued from Kummer, not formalized.",
+    "The cap says what shared hypotheses can prove, not that an argument using them must fail.",
+    "It applies to the coordinator's Golden defect clock only to the extent that clock's hypotheses are shared; its ether/No00/Golden restrictions are rule-30 specific, so this mirrors rather than explains that ceiling."
+   ],
+   "next_action": "Treat 'the hypothetical periodic centre is non-constant' as a usable hypothesis in any rate argument, since the kit already supplies it and it removes both log-rate witnesses."
+  },
+  {
+   "finding_id": "F003",
+   "track": "H",
+   "status": "EXPERIMENT",
+   "title": "R2-05: 65,532 orbits of the shared-structure family realize period 1 and nothing else",
+   "claim": "Across rules {30,90,150,210} and every seed of width 1..14 with a black leftmost cell, no column is eventually periodic with a non-constant period. Rule 30 yields no eventually periodic column at all. The sibling-rule barrier to shared-structure arguments is therefore, on this evidence, a period-1 barrier only, and rule 30's period-1 case is already closed in the kit by a rule-30-specific monotonicity argument.",
+   "scope": "65,532 orbits; columns -4..23 relative to the seed's leftmost cell (1,834,896 columns); t < 900; periods <= 32; transient <= 200; a period accepted only on a full suffix match.",
+   "result": "Eventually periodic columns found: rule 30 none; rule 90 494; rule 150 494; rule 210 15,639. Every one of them constant, minimal period 1. Zero non-constant eventually periodic columns in the whole family. The rule 30 result is the expected control: a period-2 hit there would contradict CQ01.",
+   "evidence_artifact_ids": [
+    "src_seed_sweep_py",
+    "evidence_seed_sweep_output_txt",
+    "evidence_seed_sweep_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "Stated box only. Bitwise evolver cross-checked against the independent bytearray evolver on all 28 columns to t = 300."
+   },
+   "depends_on": [
+    "F002"
+   ],
+   "conflicts_with": [],
+   "limitations": [
+    "A finite box: widths <= 14, 28 columns near the seed, t < 900, periods <= 32, transients <= 200.",
+    "A long transient, a wider seed, a distant column or a period above 32 would be missed.",
+    "Shows only that the obvious refutation of a shared-structure argument for period >= 2 is absent, not that such an argument exists."
+   ],
+   "next_action": "Extend the box where it could change the answer: periods to 128 and transients to 2,000 on widths <= 10."
+  },
+  {
+   "finding_id": "F004",
+   "track": "H",
+   "status": "FAILED",
+   "title": "R2-05: retraction of round-one F001 -- moving frame mistaken for fixed columns, and a missing left neighbour",
+   "claim": "Round one claimed that solving rule 30 for the right neighbour would widen a periodic strip rightwards, evidenced by a left side periodic to depth 160 against a right side with no period <= 400. The claim fails on three counts.",
+   "scope": "Retracts r30-coinailyzer-swarm-20261024T214719Z-1bf7da5f-v01#F001 in full. Recomputation on rule 30 single seed, t < 4000.",
+   "result": "(1) right = new XOR left requires column -1, whose periodicity the hypothesis does not supply and which Jen's theorem excludes once column 0 is assumed periodic. (2) The round-one probe tracked a window at fixed depth inside the light-cone edge, which moves one cell per step; at FIXED columns -160,-80,-20,-5,-1,0,1,5,20,80,160 no period <= 400 exists with transient <= 500, on the left exactly as on the right. The regular left region ends at depth 0.756-0.768 of t, i.e. x about -0.24t, matching the known rule 30 left-boundary speed near 0.25, so a fixed column leaves it forever after t = k/0.24. (3) The round-one probe searched periods up to 400 on a 400-sample window, so P = 400 passed on zero comparisons; with at least P real comparisons required, the right side reads 64 at depth 1 and no period at depths 5..160 instead of 64, 256, 256, none.",
+   "evidence_artifact_ids": [
+    "src_frame_retraction_py",
+    "evidence_frame_retraction_output_txt",
+    "evidence_frame_retraction_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "Rule 30 single seed, t < 4000; fixed-column periods <= 400 with transient <= 500; boundary by binary search on depth at t = 1000..3700."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Fixed-column aperiodicity is a bounded search and counts as falsification only, not a theorem.",
+    "The wedge boundary slope is an empirical estimate from six samples."
+   ],
+   "next_action": "Stop. The surviving content -- left-permutivity -- is prior art and is reused in F001 in the direction where it is deterministic."
+  }
+ ]
+}

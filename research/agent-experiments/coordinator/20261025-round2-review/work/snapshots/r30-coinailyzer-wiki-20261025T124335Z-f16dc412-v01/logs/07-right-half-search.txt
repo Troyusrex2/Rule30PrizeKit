@@ -1,0 +1,31 @@
+reference witness Rule30Ether.config 3 1 6 wall = 0xd6e0 (0x6b70 with position 1 at bit 0)
+  deep n=2000  excess=3000 black=1715 ratio=1.749271 tail_ratio=1.748252
+
+STAGE 1: screening all 16384 support patterns in positions 1..14 at n=120
+  screened 16384 right halves with a nonzero sideways black count in 3.7s
+  best screen ratio 2.022472, median 0.122951, worst 0.000000
+
+STAGE 2: re-measuring the top 10 at n=2000
+R (hex)          screen     excess      black      ratio       tail   blk dens
+0x7a88          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x7888          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x6888          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x6288          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x5e88          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x4888          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x4288          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x4088          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x3e88          2.02247       3000       1431    2.09644    2.10084    0.35766
+0x2888          2.02247       3000       1431    2.09644    2.10084    0.35766
+
+deep-window maximum tail ratio: 2.100840 at R = 0x7a88
+C = 1 is refuted by any ratio > 1; C = 2 would be refuted by a ratio > 2.
+verdict: C=2 REFUTED on this sample
+
+STAGE 3: minimum sideways black density at n=2000 over the screened set
+  R = 0x2888       black density 0.357661   ratio 2.096436
+  R = 0x3e88       black density 0.357661   ratio 2.096436
+  R = 0x4088       black density 0.357661   ratio 2.096436
+  R = 0x4288       black density 0.357661   ratio 2.096436
+  R = 0x4888       black density 0.357661   ratio 2.096436
+  R = 0x5e88       black density 0.357661   ratio 2.096436

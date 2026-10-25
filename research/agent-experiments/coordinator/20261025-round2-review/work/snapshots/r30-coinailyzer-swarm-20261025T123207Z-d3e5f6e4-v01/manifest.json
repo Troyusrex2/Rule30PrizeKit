@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-coinailyzer-swarm-20261025T123207Z-d3e5f6e4-v01",
+  "agent": {
+    "name": "CoinAIlyzer swarm (production analytics)",
+    "model": "claude-opus-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-25T12:32:07Z",
+  "research_base_commit": "e8b3475582739991911bc0444d2d1689d513a27b",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "SRC-DENSITY-TEST",
+      "path": "src/density_test.py",
+      "sha256": "360a392b289672f984fbcd8f781e55f52b4706feaf0f60e1d99764e7658ebe07"
+    },
+    {
+      "artifact_id": "SRC-ETHER-DEPTH",
+      "path": "src/ether_depth.py",
+      "sha256": "50ee57a91d6850cfc44cfb5b0b589324bc351be397ee6577a0e7d2ed9cc80bf4"
+    },
+    {
+      "artifact_id": "SRC-VALUATION-TEST",
+      "path": "src/valuation_test.py",
+      "sha256": "b06ffde2d0a79f9253a047ba2948250951e42eca501b4a957cc77f09fb75f4e6"
+    },
+    {
+      "artifact_id": "EV-DENSITY-T8000",
+      "path": "evidence/density_T8000.txt",
+      "sha256": "fc7159a3957c3f37cd38223d5d694e1ddcb234ba978af33e4b9fda74694fe3bd"
+    },
+    {
+      "artifact_id": "EV-ETHER-DEPTH-T6000",
+      "path": "evidence/ether_depth_T6000.txt",
+      "sha256": "865e02b4bb36ba317c18b792fd0637c63a55f9a4df0d3b7b5173bc2f12025a4d"
+    },
+    {
+      "artifact_id": "EV-VALUATION-T6000",
+      "path": "evidence/valuation_T6000.txt",
+      "sha256": "1b12406cb337187ad0a66413ce40d78ba0f26f70f11259479ba72186985df41e"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "R2-06",
+      "status": "EXPERIMENT",
+      "title": "Left-edge agreement depth depends only on v2(p) and is constant in t for v2(p)<=3: the constants are 8, 29, 400",
+      "claim": "In the moving integer frame from the single-cell seed, depth(t,p), the number of leading left-edge cells on which row t and row t-p agree, was identical for every tested p of the same 2-adic valuation and identical for every t in [3000,6000): 8 at v2=1, 29 at v2=2, 400 at v2=3. At v2(p)>=4 it is not constant in t. The 29-cell period-4 prefix independently corroborates the 26-cell common ether prefix assumed by the kernel-checked absorbing-prefix barrier, so that barrier hypothesis is generic on this orbit rather than a corner case.",
+      "scope": "Single black cell seed; Phi(a)=a XOR ((a<<1)|(a<<2)); rows high-bit aligned; T=6000; every t in [3000,6000); p in {2,6,10,14,4,12,20,28,36,44,8,24,40,56,72,16,48,80,32,96}. Pure enumeration.",
+      "result": "Ran. Constants reproduce exactly across all tested p within each valuation class and all t in range.",
+      "evidence_artifact_ids": [
+        "SRC-VALUATION-TEST",
+        "EV-VALUATION-T6000",
+        "SRC-ETHER-DEPTH",
+        "EV-ETHER-DEPTH-T6000"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "T=6000 rows; t restricted to [3000,6000); 20 periods; single seed; Python ints, no solver, no timeout reached; runtime under 5 minutes on one core."
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Finite horizon. Constant to t<6000 is not a theorem for all t; assuming otherwise is exactly the error my round-1 response made.",
+        "Single seed and a single observation alignment (left edge, high-bit aligned). Not tested for other offsets.",
+        "No proof that v2 is the controlling parameter; it is an exact fit on 20 periods, not a derivation."
+      ],
+      "next_action": "Extend T by an order of magnitude to see whether 8, 29 and 400 survive, then attempt the v2 dependence as a lemma about the left-edge tiling."
+    },
+    {
+      "finding_id": "F002",
+      "track": "R2-06",
+      "status": "EXPERIMENT",
+      "title": "Sharp transition at v2(p)=4: the regular region goes from a bounded strip to a constant fraction (about 0.375) of the light cone",
+      "claim": "For v2(p)<=3 the agreement depth is a constant and its share of the cone (2t+1) tends to zero. For v2(p)>=4 the depth grows linearly in t, holding a fraction near 0.375 across t=1000 to t=7999, an eightfold range. At p=16 the fraction read 0.385, 0.377, 0.381, 0.378, 0.376. Therefore roughly three eighths of every row lies in a period-16 regular region that begins beyond the 29-cell strip, entirely outside what a prefix reader absorbing on the ether prefix can observe.",
+      "scope": "Same frame and seed; T=8000; t in {1000,2000,4000,6000,7999}; p in {4,8,16,32,64,128}. frac = depth/(2t+1).",
+      "result": "Ran. Fraction stable near 0.375 for v2>=4; p=8 control pinned at exactly 400 at t=1000, 4000 and 7999.",
+      "evidence_artifact_ids": [
+        "SRC-DENSITY-TEST",
+        "EV-DENSITY-T8000"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "T=8000 rows; five t values; six periods; no solver; runtime under 5 minutes on one core."
+      },
+      "depends_on": [
+        "r30-coinailyzer-swarm-20261025T123207Z-d3e5f6e4-v01#F001"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "Checked that this is not a cone artifact only by noting the fraction stays near 0.377 rather than approaching 1, and that the p=8 control stays flat. That is evidence, not proof.",
+        "Five sampled t values per period, not every t.",
+        "The fraction drifts slightly downward with p (0.376 at p=16 to 0.371 at p=128); I do not know whether that is real or a horizon effect.",
+        "I searched for a renormalization law relating 8, 29 and 400 and FAILED to find one. Ratios 3.6 and 13.8 fit nothing clean. Reported rather than curve-fitted."
+      ],
+      "next_action": "Establish whether the 0.375 fraction has an exact closed form, and whether the period-16 regular region admits a tiling description that can be stated in Lean."
+    },
+    {
+      "finding_id": "F003",
+      "track": "R2-06",
+      "status": "EXPERIMENT",
+      "title": "Proposed well-founded resource: Dershowitz-Manna multiset over non-regular blocks, with the period-16 regular region as the identity element",
+      "claim": "Proposal, not run. Take the F002 period-16 regular region as the identity, decompose the complement into maximal non-regular blocks, and order the finite multiset of blocks by Dershowitz-Manna under a per-block ordinal. This is not of the barred form: a DM multiset order is not a signed integer prefix energy with geometric per-letter costs, and the regular region is an identity element rather than an absorbing reader state. Ether insertion and long vacuum segments are rank-invariant by construction, and block mergers are safe because DM permits removing an element. MISSING LEMMA, stated exactly: for every Rule 30 step in which one non-regular block splits into two or more, each child is strictly below the parent in the chosen per-block ordinal. Splits are the only direction DM does not give for free.",
+      "scope": "Mechanism shape only. No per-block ordinal is defined, so no proof obligation is discharged.",
+      "result": "Not run.",
+      "evidence_artifact_ids": [],
+      "verification": {
+        "kind": "not_run"
+      },
+      "depends_on": [
+        "r30-coinailyzer-swarm-20261025T123207Z-d3e5f6e4-v01#F002"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "No ordinal defined. Without one this is a shape, not a rank, and nothing is proved.",
+        "Rests on F002, which is a finite measurement.",
+        "The split lemma may simply be false; it has not been tested even empirically."
+      ],
+      "next_action": "Extract non-regular blocks against the period-16 tiling, log every split event, and test candidate ordinals for non-decrease on splits. If a child can equal or exceed its parent, F003 dies cheaply."
+    }
+  ]
+}

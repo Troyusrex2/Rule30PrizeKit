@@ -1,0 +1,12 @@
+[PASS] A1 left edge cell(t,-t)=1 for 0<=t<=1200
+[PASS] A2 cell(t,x)=0 for x < -t (light cone)
+[PASS] B  leftward reconstruction identity, all t<1200, all interior x  2876400 instances checked
+[PASS] C  unconditional defect recursion  317682 instances, 10 periods
+[PASS] D  defect locality step  157784 live defects of 317682 cells
+[PASS] E  masked depth-1 identity on center-agreement times  2998 qualifying (P,t), 1546 with a live column+1 defect
+[PASS] F1 depth-2 identity in terms of column -1  5935 qualifying (P,t)
+[PASS] F2 depth-2 identity in terms of column +1  1500 qualifying (P,t)
+[PASS] G  light-cone defect D_{-m}(m-P)=1  11534 instances
+[PASS] H  rule 90 defect transfer is unmasked XOR  D_{x-1}(t) = D_x(t+1) XOR D_{x+1}(t), 5 periods x 300 t x 61 x
+
+ALL CHECKS PASS

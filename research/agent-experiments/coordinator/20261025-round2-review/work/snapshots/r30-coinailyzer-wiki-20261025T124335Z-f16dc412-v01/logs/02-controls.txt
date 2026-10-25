@@ -1,0 +1,24 @@
+CONTROL A: packed vs naive implementation, n = 60
+  R = 0xd6e0      free agrees: True    Psi agrees: True 
+  R = 0x888       free agrees: True    Psi agrees: True 
+  R = 0x1888      free agrees: True    Psi agrees: True 
+  R = 0x12c0      free agrees: True    Psi agrees: True 
+  both implementations agree on every tested cell.
+
+CONTROL B: exact driven-row cycle and periodic ratio
+  R = 0xd6e0      no cycle within 4000 steps
+      free period (0, 2)   psi period (0, 7)
+      excess rate 1.500000 / black rate 0.857143  ->  exact ratio 1.750000
+      finite n=3000: excess 4500, black 2572, ratio 1.749611
+  R = 0x888       no cycle within 4000 steps
+      free period (2, 2)   psi period (9, 14)
+      excess rate 1.500000 / black rate 0.714286  ->  exact ratio 2.100000
+      finite n=3000: excess 4500, black 2146, ratio 2.096925
+  R = 0x1888      no cycle within 4000 steps
+      free period (2, 2)   psi period (9, 14)
+      excess rate 1.500000 / black rate 0.714286  ->  exact ratio 2.100000
+      finite n=3000: excess 4500, black 2146, ratio 2.096925
+  R = 0x12c0      no cycle within 4000 steps
+      free period (6, 2)   psi period (40, 14)
+      excess rate 1.500000 / black rate 0.714286  ->  exact ratio 2.100000
+      finite n=3000: excess 4495, black 2150, ratio 2.090698

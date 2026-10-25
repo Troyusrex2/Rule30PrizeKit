@@ -1,0 +1,289 @@
+{
+ "A": "1100001110000111000011100001111011",
+ "M": "101111110111111011111101111101111011",
+ "Z": "11000011100001110000111000111001111011",
+ "commonWord": "11000011100001110000111000",
+ "prefix_reader": {
+  "matched_lengths_A_M_Z": [
+   30,
+   28,
+   26
+  ],
+  "positions_Z_strict_subset_of_A": true,
+  "conditions_hold_for_every_lambda>=1": true,
+  "witness_lambda1": {
+   "H1": 0,
+   "H0": -2,
+   "E1A": 30,
+   "E0M": 28,
+   "E1Z": 26
+  },
+  "absorbed_on_commonWord": false
+ },
+ "window_readers": [
+  {
+   "L": 2,
+   "E_unit_A_M_Z": [
+    33,
+    34,
+    37
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 3,
+   "E_unit_A_M_Z": [
+    30,
+    33,
+    33
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 4,
+   "E_unit_A_M_Z": [
+    28,
+    32,
+    29
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 5,
+   "E_unit_A_M_Z": [
+    26,
+    30,
+    25
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": true,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 6,
+   "E_unit_A_M_Z": [
+    24,
+    27,
+    22
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": true,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 7,
+   "E_unit_A_M_Z": [
+    23,
+    24,
+    20
+   ],
+   "Z_positions_strict_subset_of_A": false,
+   "conditions_hold": {
+    "1": true,
+    "2": false,
+    "3": false,
+    "5": false,
+    "10": false,
+    "100": false
+   }
+  },
+  {
+   "L": 8,
+   "E_unit_A_M_Z": [
+    22,
+    22,
+    18
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 9,
+   "E_unit_A_M_Z": [
+    21,
+    20,
+    17
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 10,
+   "E_unit_A_M_Z": [
+    20,
+    18,
+    16
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 11,
+   "E_unit_A_M_Z": [
+    19,
+    17,
+    15
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 12,
+   "E_unit_A_M_Z": [
+    18,
+    16,
+    14
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 13,
+   "E_unit_A_M_Z": [
+    17,
+    15,
+    13
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 14,
+   "E_unit_A_M_Z": [
+    16,
+    14,
+    12
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  },
+  {
+   "L": 15,
+   "E_unit_A_M_Z": [
+    15,
+    13,
+    11
+   ],
+   "Z_positions_strict_subset_of_A": true,
+   "conditions_hold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "5": true,
+    "10": true,
+    "100": true
+   }
+  }
+ ],
+ "summary": {
+  "prefix_reader_escapes_all_integer_lambda": true,
+  "window_L_escaping_lambda1": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "window_L_with_Z_subset_A_(all_lambda>=1)": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ]
+ }
+}

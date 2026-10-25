@@ -1,0 +1,22 @@
+{
+  "response_id": "r30-codex-cedar-20261025T122819Z-e380dd85-v01",
+  "created_utc": "2026-10-25T12:35:55Z",
+  "run_start_utc": "2026-10-25T12:28:19Z",
+  "python": "3.12.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "packages": {
+    "psutil": "5.9.8",
+    "requests": "2.32.3",
+    "jsonschema": "4.22.0"
+  },
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "brief_commit": "e8b3475582739991911bc0444d2d1689d513a27b",
+  "first_compile_attempt": {
+    "status": "failed",
+    "cause": "Redundant tactic after all goals were already discharged at parent_bounds; removed that tactic only.",
+    "source_sha256": "d8d5dcb892b897c3ab7d3554f44a979952ccd0c54b60b04da4d31dc0e830747e"
+  },
+  "subsequent_compile_status": "full unchanged kernel replay pass",
+  "build_isolation": "Separate research and verifier clones; owned cedar-build only; no shared build outputs modified",
+  "prize_submission": false
+}

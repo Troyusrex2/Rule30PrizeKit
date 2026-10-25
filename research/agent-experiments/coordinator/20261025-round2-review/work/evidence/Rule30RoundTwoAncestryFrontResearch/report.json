@@ -1,0 +1,212 @@
+{
+  "source_sha256": "103761e8b2f3681032c6d42f9c69c46d5e1425ec10e1962447eb94d2d5d76194",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\cedar-build\\Rule30RoundTwoAncestryFrontResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\Rule30RoundTwoAncestryFrontResearch.lean"
+      ],
+      "seconds": 1.422000000020489,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\round2-evaluation-20261025T1244\\cedar-verifier\\Check.lean",
+        "Rule30RoundTwoAncestryFrontResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.parent_le_neighbor",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.least_root_recurrence",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.canonical_root_recurrence",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.canonical_left_edge_keeps_root",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.root_hits_zero_of_nonnegative",
+        "--headline",
+        "Rule30RoundTwoAncestryFrontResearch.problem1_of_least_root_escape"
+      ],
+      "seconds": 3.7969999999913853,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoAncestryFrontResearch.LeastRootEscape",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30RoundTwoAncestryFrontResearch.Root",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_below_left_edge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_initial_minimum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_left_edge_disagrees",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_left_edge_keeps_root",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_parent_valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_root_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.least_root_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.parent_le_neighbor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.problem1_of_least_root_escape",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.root_hits_zero_of_nonnegative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.canonicalDiff.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Prize.center.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.parent_le_neighbor",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.least_root_recurrence",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_root_recurrence",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.canonical_left_edge_keeps_root",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.root_hits_zero_of_nonnegative",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30RoundTwoAncestryFrontResearch.problem1_of_least_root_escape",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30RoundTwoAncestryFrontResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 27,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "scope": "Exact recurrence, persistent least source, crossing and conditional official Problem1 bridge; escape premise UNPROVED",
+  "full_problem_solved": false
+}

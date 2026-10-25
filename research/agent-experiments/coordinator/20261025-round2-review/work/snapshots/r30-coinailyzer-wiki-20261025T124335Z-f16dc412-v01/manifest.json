@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-coinailyzer-wiki-20261025T124335Z-f16dc412-v01",
+  "agent": {
+    "name": "CoinAIlyzer Wiki Maintainer",
+    "model": "claude-opus-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-25T12:43:35Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "src/coupled_core.py",
+      "sha256": "1a8b57d94fd6e129416b2e5a32abc09ee179986a07e2e11bf102387377afee54",
+      "description": "Exact reimplementation of the official rule/drv/altCol/u/free/alt/recon/lam/Theta/Psi/zeros/blackCount, plus a selftest that reproduces the published kernel-checked C=1 witness (free stream, sideways row, both counts, ratio 7/4, and the 0x6b70 packing)."
+    },
+    {
+      "artifact_id": "A002",
+      "path": "src/controls.py",
+      "sha256": "e5d50af087ed2c28827d55a1decad007cdb71eb89a5676b9d6e7a8d5af80495c",
+      "description": "Two controls: a separately written non-bit-packed implementation compared cell by cell, and an eventual-period analysis giving exact asymptotic ratios."
+    },
+    {
+      "artifact_id": "A003",
+      "path": "src/witnesses.py",
+      "sha256": "a217ea616a1ee5961d85b526a5e2aebcacfa9fb4df3cf0165c8f3c81941de28d",
+      "description": "F001 headline: the two finite right halves whose charge ratio exceeds 2, with 5*zeros-n-2*blackCount and -3*blackCount tabulated to n = 20000."
+    },
+    {
+      "artifact_id": "A004",
+      "path": "src/prefix_density.py",
+      "sha256": "838ce91494cb8876ffffb812d1b9c67dbbac49b6315ba71e59f2770ddeab1dd7",
+      "description": "Exhaustive scan of Golden streams of the form <prefix> + alternating tail, ranked by the deep-window density of Theta f."
+    },
+    {
+      "artifact_id": "A005",
+      "path": "src/slip_trend.py",
+      "sha256": "b4482b90f604b6aac29c0658620bc2f414cec4fedfb50a44ae1e979853be48bf",
+      "description": "Single phase slip pushed outwards, with exact eventual periods and densities of Theta f."
+    },
+    {
+      "artifact_id": "A006",
+      "path": "src/charge_ratio_search.py",
+      "sha256": "3fd7cd43fdcbfec03f3ca811ecb86a8d418aeb52e3eb04f72283250bf1ed6167",
+      "description": "Exhaustive screen of every right half supported in positions 1..L, with a deep re-measurement of the leaders."
+    },
+    {
+      "artifact_id": "A007",
+      "path": "src/phase_three_witness.py",
+      "sha256": "5c9e209587b1ce0286a072c17e3ae622cdc7be841a63232ee98b369bb67c6bdf",
+      "description": "F003: the phase-3 members of the proved ether-and-wall trap family, the prediction that failed."
+    },
+    {
+      "artifact_id": "A008",
+      "path": "src/wallstates.json",
+      "sha256": "734ba423b08b02c3ed254bc06679e9243ccb2f48dbf8b78e79772ac71c93d8cb",
+      "description": "The 109-entry Rule30Ether.wallStates table parsed from the kit source; self-checked by the presence of the published C=1 wall at phase 1."
+    },
+    {
+      "artifact_id": "A009",
+      "path": "src/periodic_scan.py",
+      "sha256": "3708c1eb6e40ee30e81aea626c622014aef0484a475cb2297b10fe2296b18c0a",
+      "description": "Every cyclically Golden word of length <= 12 as a purely periodic free stream; none exceeds ratio 7/4."
+    },
+    {
+      "artifact_id": "A010",
+      "path": "logs/01-selftest.txt",
+      "sha256": "1f42968a3655aedc0ec67597b6d30d48b7e4e7d79e05774f8d4ad6955f0e7925",
+      "description": "Output of A001: the published witness reproduced."
+    },
+    {
+      "artifact_id": "A011",
+      "path": "logs/02-controls.txt",
+      "sha256": "6d3b2b48423c04dafd2d2d6cdec25a63442bd7c28b024047b6b9190a704bae67",
+      "description": "Output of A002."
+    },
+    {
+      "artifact_id": "A012",
+      "path": "logs/03-witnesses.txt",
+      "sha256": "d54eb784e176a3628a86a81dd3a27de3614abb3cb8c17dc074cab31d749a59c7",
+      "description": "Output of A003 at n = 20000."
+    },
+    {
+      "artifact_id": "A013",
+      "path": "logs/05-prefix-density.txt",
+      "sha256": "16be1a30229b9a236638851252e9a5893e67cdb1a37a09d4f3e2528c314af3eb",
+      "description": "Output of A004."
+    },
+    {
+      "artifact_id": "A014",
+      "path": "logs/06-slip-trend.txt",
+      "sha256": "215e9f536e7b8529f10cda581c6021bace61c6af0d3015ae3544fad013b350f3",
+      "description": "Output of A005."
+    },
+    {
+      "artifact_id": "A015",
+      "path": "logs/07-right-half-search.txt",
+      "sha256": "27ac3aa64b5e70227b9bf69fc88af32e9c83265838b21aacaa89b748c35f8c6f",
+      "description": "Output of A006."
+    },
+    {
+      "artifact_id": "A016",
+      "path": "logs/08-purely-periodic.txt",
+      "sha256": "f733955546b4cc81b39a6f72038510419645020753c5821fea271aa62ea90d40",
+      "description": "Output of A009."
+    },
+    {
+      "artifact_id": "A017",
+      "path": "logs/04-phase-three-FAILED.txt",
+      "sha256": "1d89abd6db2250503dfab67d554f1aa162bf2fa2fd72f45cf3043ad07ae98489",
+      "description": "Output of A007: the failed prediction."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "H",
+      "status": "COUNTEREXAMPLE_CANDIDATE",
+      "title": "R2-07: two finite right halves refute the C=2 critical charge, for every additive allowance B",
+      "claim": "With the official definitions, CriticalCharge C B R := forall n, 5*zeros (free R) n <= n + B + C*blackCount (Psi R) (2*n+1), there are finite right halves whose ratio (5*zeros(free R,n) - n)/blackCount(Psi R,2*n+1) exceeds 2, so CriticalCharge 2 B R is false for every B. W1 has black cells exactly at positions 3, 7, 11 and ratio tending to 21/10; W2 has black cells exactly at positions 4, 5, 6, 9, 13, 16, 17, 18 and ratio about 2.3288. This extends the published C=1 refutation one coefficient further: the smallest natural coefficient not refuted by anything tested here is 3.",
+      "scope": "Official coordinates and definitions at research base 102d5b8e: rule a b c = xor a (b || c); altCol t = (t % 2 == 0); drv as in Rule30Ether; u R s = drv altCol R (2*s+1) 1; Psi R = Theta (fun s => !u R s); free R k = zrow (Psi R) (2*k+1) 1; zeros and blackCount as in Rule30CriticalChargeOneCoreResearch, so blackCount (Psi R) (2*n+1) counts depths 0..2*n. Finite computation to n = 20000, i.e. depths 0..40000, in exact integer arithmetic. Right halves are finite: white at every position beyond the listed support.",
+      "result": "Observed exactly. For W1 the free stream is the alternating stream with a single phase slip at index 2 at every one of 20000 steps, Psi W1 is exactly period 14 with 5 black per period from depth 100 to depth 40000, and 5*zeros-n-2*blackCount takes the values 28, 138, 350, 708, 1422 at n = 500, 2000, 5000, 10000, 20000, which is linear growth, so no additive B absorbs it. For W2 the same quantity takes 55, 375, 1019, 2091, 4233. On every witness 5*zeros-n-3*blackCount is negative and decreasing. Before any of this the same code reproduces the published kernel-checked C=1 witness exactly: free stream 0101..., sideways row 1100001 repeated, zeros = 7k and blackCount = 12k at n = 14k, ratio 7/4, and the packed word matches the brief's 0x6b70. A separately written non-bit-packed implementation agrees cell for cell. NOT proved: that the free streams continue past n = 20000.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A010",
+        "A011",
+        "A012"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "Exact integer arithmetic, no floating point, no solver, no Lean, standard library only. The simulated width always exceeds the true support, which spreads rightwards at speed one, so the truncation is exact rather than approximate. Horizon n = 20000 and depths 0..40000. This is NOT a kernel replay and no checker was run. A 20000-step agreement is not an infinite assertion."
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Not kernel-checked and not replayed; the status is COUNTEREXAMPLE_CANDIDATE and it must not be cited as a theorem.",
+        "The one unproved step is persistence of the free stream past the tested horizon. The exact obligation is stated as the missing lemma in next_action.",
+        "It refutes C = 2 only. It says nothing about variable coefficients, about ScaleCharges, or about No00SpatialCharge, and nothing about CQ01 or Problem 1.",
+        "It does not touch ScaleCharges: both witnesses have blackCount growing linearly in n, which dwarfs the floor(k/2) slack at n = cutoff(m,k).",
+        "Both witnesses have infinite sideways support, so both are consistent with CQ01, exactly as the published C=1 witness is.",
+        "C = 3 is merely not refuted by these witnesses; no sufficiency is claimed."
+      ],
+      "next_action": "Formalise the single missing lemma: for the finite right half W1 with black cells exactly at positions 3, 7 and 11, drv altCol W1 1 1 = false and, for every s >= 2, drv altCol W1 (2*s+1) 1 = decide (s % 2 = 1). Everything else follows by the same bridge arithmetic as the published C=1 module, since the free stream determines Psi through Theta and the period-14 row is a finite check plus induction. The published witness proves its analogue from Rule30Ether.trap_invariant; F003 shows that route is unavailable here, so a different invariant is needed - most plausibly one for a configuration that enters the ether after a bounded transient."
+    },
+    {
+      "finding_id": "F002",
+      "track": "H",
+      "status": "EXPERIMENT",
+      "title": "R2-07: both sides of the charge depend only on the free stream, and a transient rather than the periodic part buys the excess",
+      "claim": "Because Psi R = Theta (free R) and free R k = zrow (Psi R) (2*k+1) 1, both sides of the critical charge are functionals of the single stream f = free R; the right half enters only by deciding which streams are achievable. Since free R is always Golden, the excess 5*zeros(f,n)-n grows at a rate of at most 3/2, attained exactly on the eventually alternating streams, so the smallest uniform constant the charge could use is sup_f (3/2)/(2*density of Theta f) over those streams. Measured: purely periodic Golden streams never exceed ratio 7/4, every ratio above 2 comes from a transient, and the sparsest reconstructed row found has density 2/7, capping the ratio at 21/8 = 2.625. Conjecture: sup_R rho(free R) = 21/8, so C = 3 suffices and is optimal.",
+      "scope": "Golden means no 00 and no 11111, as in Rule30GoldenCoupledResearch.golden_free. Searches: all 262144 right halves supported in positions 1..18, screened at n = 120 and re-measured at n = 2000..4000; all Golden streams of the form prefix + alternating tail for prefix length up to 18 (13664 of them); one- and two-slip streams with slip positions up to 41; single slips pushed to index 79 at depth 6000; all cyclically Golden words of cycle length up to 12 as purely periodic streams. Densities are deep-window measurements on depths up to 6000; rational densities are exact per-period counts of a detected cycle.",
+      "result": "Observed. Theta of the two pure alternating streams has density 3/7 (ratio 7/4, the published witness) and 6/7 (ratio 7/8). One slip at index 2 gives 5/14 (ratio 21/10); at index 13 or 14, 9/28 (ratio 7/3); at index 26, 2/7 (ratio 21/8). Pushing single slips to index 79 and adding a second slip never went below 2/7. Among 474 purely periodic Golden streams with positive excess rate the maximum ratio is 1.748, attained by the cycle 01 itself; nothing purely periodic beats 7/4. The best ratio realised by an actual finite right half rather than a hand-built stream is about 2.3288 (W2 of F001); the gap to 21/8 is a gap in the search over R, not a proved bound. Unknown: whether the density of Theta f is bounded below at all.",
+      "evidence_artifact_ids": [
+        "A004",
+        "A005",
+        "A006",
+        "A009",
+        "A013",
+        "A014",
+        "A015",
+        "A016"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "Exhaustive only inside the stated ranges; everything else is a measurement. Deep-window densities to depth 6000, exact eventual periods only where a cycle of length at most 200 was detected. No solver, no Lean, no kernel replay."
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "2/7 is a measured floor, not a proved one. If it is not a floor then no uniform C exists and the pointwise route dies rather than moving to C = 3.",
+        "Streams of zero density strictly between 1/5 and 1/2 were searched only through the periodic scan, which is the clearest hole in the search.",
+        "The Hall reformulation below is an equivalence, not a new resource; it escapes no barrier by itself and none is claimed.",
+        "The C = 3 conjecture is a conjecture. Nothing here proves any sufficiency, CQ01, or Problem 1."
+      ],
+      "next_action": "Prove or refute the lemma: for every Golden f that is eventually alternating, Theta f is eventually periodic with period dividing 28 and at least 8 black cells per 28 depths. With the Golden cap on the zero density this gives the uniform critical charge at C = 3, which Rule30GoldenScaleChargeResearch then turns into ScaleCharges and CQ01. Separately, note the reformulation that answers R2-07's mechanism question: the constraints forall n: excess(n) <= B + C*blackCount(2*n+1) are nested in n and 2*n+1 is exactly the light cone of time n, so the family IS Hall's deficiency condition for a cone-respecting assignment of excess-zero tokens to sideways black cells with multiplicity at most C, modulo B. The missing object is therefore a constructible assignment read off the dynamics rather than a constant to be found by a solver, and an assignment is uniform in k for free."
+    },
+    {
+      "finding_id": "F003",
+      "track": "H",
+      "status": "FAILED",
+      "title": "R2-07: the phase-3 members of the proved ether-and-wall trap give the DENSEST sideways row, not the sparsest",
+      "claim": "Rule30CriticalChargeOneCoreResearch proves altCol t = ether 3 (t+1) and builds its witness as Rule30Ether.config 3 1 6 wall. Ether column 3 is [false,true,false,true], which has period two in the phase, so ether 3 (t+3) = altCol t as well: phase 3 is the same alternating driver and the published witness uses phase 1 only. The prediction was that the 27 phase-3 members of the same proved trap family would realise a sparser sideways row, which would have made F001 provable by copying an existing kernel-checked proof with different parameters.",
+      "scope": "config 3 3 k ws for k = 6, 13, 20, 27 with (3+k) % 7 = 2, over all 27 wall states ws with (3, ws) in Rule30Ether.wallStates. Finite computation at n = 2800.",
+      "result": "Refuted, reproducibly. Phase 3 realises the opposite extreme: free stream 1010... and sideways row 1011111 repeated, density 6/7, the densest in the family, ratio 7/8 rather than anything above 7/4. All 27 phase-3 wall states give the identical ratio 0.875, and so do all four values of k. The reason is the content of F002: inside the pure-ether trap, column 1 is forced to be ether column 4, so the free stream is forced to be exactly alternating, and an exactly alternating stream carries no transient.",
+      "evidence_artifact_ids": [
+        "A007",
+        "A017"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "n = 2800, exact integer arithmetic. No kernel replay."
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "It does not refute F001; the F001 witnesses rest on their own computation.",
+        "It rules out one proof route for F001, not the statement: the ether-and-wall trap cannot produce a free stream carrying a phase slip, because the alternating driver pins the ether column.",
+        "It says nothing about traps outside this family."
+      ],
+      "next_action": "Stop looking for the F001 witnesses inside the pure-ether trap family. Look instead for an invariant covering a configuration that enters the ether after a bounded transient, since a bounded transient is exactly what the phase slip is."
+    }
+  ]
+}

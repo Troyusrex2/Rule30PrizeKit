@@ -1,0 +1,44 @@
+A. round-1 moving-frame table, recomputed (t in [300,700), periods <= 200,
+   a period being accepted only on at least P real comparisons)
+   depth   left   right
+       1      4     64
+       5      4   None
+      10      4   None
+      20      8   None
+      40      8   None
+      80      8   None
+     160      8   None
+
+B. the same question for FIXED columns (t in [1000,4000), periods <= 400,
+   transient up to 500) -- the quantity Problem 1 is about
+   column  -160: no period <= 400
+   column   -80: no period <= 400
+   column   -20: no period <= 400
+   column    -5: no period <= 400
+   column    -1: no period <= 400
+   column     0: no period <= 400
+   column     1: no period <= 400
+   column     5: no period <= 400
+   column    20: no period <= 400
+   column    80: no period <= 400
+   column   160: no period <= 400
+
+C. where the regular left region ends. The moving-frame period is itself
+   depth dependent (4 near the edge, then 8, then 16), so the boundary is
+   the largest depth whose 12-cell window still has SOME period <= 64 over
+   200 steps; found by binary search on depth.
+   t= 1000  boundary depth   768  depth/t 0.768  at column x=  -232  window period 16
+   t= 1500  boundary depth  1145  depth/t 0.763  at column x=  -355  window period 16
+   t= 2000  boundary depth  1517  depth/t 0.758  at column x=  -483  window period 16
+   t= 2500  boundary depth  1891  depth/t 0.756  at column x=  -609  window period 16
+   t= 3000  boundary depth  2268  depth/t 0.756  at column x=  -732  window period 16
+   t= 3700  boundary depth  2817  depth/t 0.761  at column x=  -883  window period 16
+
+   The regular wedge is x <= -c*t with c = 0.239 (the Rule 30 left
+   boundary speed, about 0.25 in the literature). A FIXED column x=-k is
+   inside the wedge only while t <= k/0.239; after that it is in the
+   chaotic region forever. That is why B finds no fixed-column period while
+   A finds a moving-window period at every depth: the round-1 measurement
+   tracked a window that outruns every fixed column.
+
+wrote ../evidence/frame_retraction.json

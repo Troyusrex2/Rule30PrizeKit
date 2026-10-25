@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-photograde-20261025T122841Z-abce3ea0-v01",
+  "agent": {
+    "name": "photograde",
+    "model": "claude-opus-5-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-25T12:29:29Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "src/coupled_experiments.py",
+      "sha256": "a0573dfc7ac5cb40c317b342191b2dbd1b96a18f3ef24df9c6eefec2d63c8796",
+      "description": "Experiment source for F001-F003"
+    },
+    {
+      "artifact_id": "A002",
+      "path": "evidence/F001_seed_signature.json",
+      "sha256": "f25541a46991c24eb3d8d4914579e3fa75686118fcc29bf29153617d0d191249",
+      "description": "F001 held-out accuracies, rules 30/90/150"
+    },
+    {
+      "artifact_id": "A003",
+      "path": "evidence/F003_left_permutive_check.json",
+      "sha256": "7a5e3d7b85a7f738773c48f22049abff546afd6b0d4cdb695d4bde0fa6c60100",
+      "description": "Exact check of the left-permutive identity on the actual seed"
+    },
+    {
+      "artifact_id": "A004",
+      "path": "evidence/F002_driven_column.json",
+      "sha256": "1ad6097e043f0cada2bc8e6b8f184bce244ec05873a63982e46b4064c2036f05",
+      "description": "F002 held-out accuracies, matched sample sizes"
+    },
+    {
+      "artifact_id": "A005",
+      "path": "REPORT.md",
+      "sha256": "7f998dbf98f4196ff2c393d4e90f40cd7fe25bbe16c1491b09f0c74613e18f5a",
+      "description": "Full report"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "E",
+      "status": "FAILED",
+      "title": "R2-02: two-sided coupled windows show no seed-orbit signature in Rule 30",
+      "claim": "A classifier on 5-column x 8-step two-sided windows can distinguish the single-seed Rule 30 orbit from orbits of random finite rows at held-out times.",
+      "scope": "Physical frame, columns -2..2, t in [64,4088), 20+20 disjoint random 33-cell rows, logistic and boosted trees, shuffled-label control; rules 30, 90, 150.",
+      "result": "Rule 30 held-out accuracy 0.499/0.492 (chance). Rule 150 positive control 0.996/0.999. Rule 90 degenerate (near-white).",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -I src/coupled_experiments.py F001"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Finite windows and times, one window shape, two model families.",
+        "Negatives are generic random rows, not matched twins; absence of a statistical signature is not absence of an invariant."
+      ],
+      "next_action": "Stop local-window learning for Rule 30."
+    },
+    {
+      "finding_id": "F002",
+      "track": "D",
+      "status": "FAILED",
+      "title": "R2-02: the seed's column 1 is not more predictable from columns 0/1 than a generic orbit's",
+      "claim": "The seed's c1(t+1) is more predictable from c0[t-11..t+1], c1[t-11..t] than in generic orbits, indicating a seed-specific inheritance mechanism.",
+      "scope": "Target leakage excluded (c0(t+2) omitted). Train t in [76,2048), test [2048,4094); generic baseline from disjoint random orbits at matched training size 1972; rules 30, 90, 150.",
+      "result": "Rule 30 boosted accuracy 0.876 seed vs 0.895 generic: no seed-specific excess. Rule 150 seed 0.959 vs generic 0.514 (positive control). Rule 90 degenerate.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A004"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -I src/coupled_experiments.py F002"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Single RNG seed, no error bars.",
+        "Finite windows; does not rule out nonlocal or long-range inheritance."
+      ],
+      "next_action": "Stop; inheritance is not visible as local statistical coupling."
+    },
+    {
+      "finding_id": "F003",
+      "track": "D",
+      "status": "EXPERIMENT",
+      "title": "R2-02: columns 0 and 1 cannot be jointly eventually periodic; Problem 1 reduces to column-1 inheritance",
+      "claim": "For Rule 30 from the single seed there are no T>=0, P>0 with columns 0 and 1 both P-periodic from T. Hence Problem 1 follows from: column 0 eventually periodic implies column 1 eventually periodic.",
+      "scope": "Exact seed, physical frame. Paper proof via left-permutivity, the light cone and the always-black left edge. Not kernel checked; likely already known.",
+      "result": "Paper proof in REPORT.md. The left-permutive identity checked exactly on the seed for 126 columns x 600 steps: 0 mismatches.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A003",
+        "A005"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -I src/coupled_experiments.py F003"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Not formalized in Lean.",
+        "Reformulation-strength; the inheritance lemma may be as hard as Problem 1."
+      ],
+      "next_action": "Formalize the joint-periodicity lemma in Lean; then attack inheritance through the driven right half using the inverse-OR domain where c1(t)=0."
+    }
+  ]
+}

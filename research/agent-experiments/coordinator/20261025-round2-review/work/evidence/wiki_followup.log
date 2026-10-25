@@ -1,0 +1,147 @@
+{
+  "finite_only": true,
+  "Lean_verified": false,
+  "rng_seed": 30261025,
+  "eventually_alternating_samples": 425,
+  "late_window_counterexamples_or_stress_cases": [
+    {
+      "prefix_length": 96,
+      "sample": 3,
+      "prefix_bits": "011010110101011110110101010101011010101101101010111011011011010101010110101010110101101011110111",
+      "period28_failure_at_depth": 4096,
+      "finite_tail_black": 1977,
+      "finite_tail_length": 4097,
+      "finite_density": 0.48254820600439347
+    },
+    {
+      "prefix_length": 96,
+      "sample": 5,
+      "prefix_bits": "011010101111011110111011101010101010101010101111010101011011101011101101111011101010101111011110",
+      "period28_failure_at_depth": null,
+      "finite_tail_black": 878,
+      "finite_tail_length": 4097,
+      "finite_density": 0.21430314864535024
+    },
+    {
+      "prefix_length": 96,
+      "sample": 6,
+      "prefix_bits": "010101110101011010111011101101010111101010101101011101110101010110111011011101111011011011011110",
+      "period28_failure_at_depth": null,
+      "finite_tail_black": 878,
+      "finite_tail_length": 4097,
+      "finite_density": 0.21430314864535024
+    },
+    {
+      "prefix_length": 96,
+      "sample": 8,
+      "prefix_bits": "010110101101010101111011010101110111011101111011110110101010110111101010111101101011010111010101",
+      "period28_failure_at_depth": 4096,
+      "finite_tail_black": 1684,
+      "finite_tail_length": 4097,
+      "finite_density": 0.41103246277764216
+    },
+    {
+      "prefix_length": 96,
+      "sample": 9,
+      "prefix_bits": "011010111101010101010110111101010110101101101010101101011110110110101101011011110101101101010110",
+      "period28_failure_at_depth": null,
+      "finite_tail_black": 878,
+      "finite_tail_length": 4097,
+      "finite_density": 0.21430314864535024
+    },
+    {
+      "prefix_length": 96,
+      "sample": 12,
+      "prefix_bits": "011011011011110101111010110101011010111101011110101110111010101101101010101111011110111010101010",
+      "period28_failure_at_depth": 4098,
+      "finite_tail_black": 1903,
+      "finite_tail_length": 4097,
+      "finite_density": 0.46448620942152796
+    },
+    {
+      "prefix_length": 96,
+      "sample": 15,
+      "prefix_bits": "010110111101010111010101011011011101111010101011101101101101111011011010110110101011110101010110",
+      "period28_failure_at_depth": null,
+      "finite_tail_black": 878,
+      "finite_tail_length": 4097,
+      "finite_density": 0.21430314864535024
+    },
+    {
+      "prefix_length": 96,
+      "sample": 17,
+      "prefix_bits": "011110101101101110101011110111010101110111101101011110110111101010101110110111011010101111011101",
+      "period28_failure_at_depth": 4098,
+      "finite_tail_black": 1902,
+      "finite_tail_length": 4097,
+      "finite_density": 0.4642421283866244
+    },
+    {
+      "prefix_length": 96,
+      "sample": 19,
+      "prefix_bits": "010110101011011101110101111011010110101010101011010111101010111101110101101101010111101011010110",
+      "period28_failure_at_depth": null,
+      "finite_tail_black": 878,
+      "finite_tail_length": 4097,
+      "finite_density": 0.21430314864535024
+    },
+    {
+      "prefix_length": 96,
+      "sample": 21,
+      "prefix_bits": "010110101010101010111010101011010101011011011010110101010101010101011101010111010101101101011101",
+      "period28_failure_at_depth": 4098,
+      "finite_tail_black": 1901,
+      "finite_tail_length": 4097,
+      "finite_density": 0.4639980473517208
+    },
+    {
+      "prefix_length": 96,
+      "sample": 23,
+      "prefix_bits": "010111010101010110110111101010110110110111010101110110101101101111011110111101010110101011010111",
+      "period28_failure_at_depth": 4096,
+      "finite_tail_black": 1977,
+      "finite_tail_length": 4097,
+      "finite_density": 0.48254820600439347
+    },
+    {
+      "prefix_length": 96,
+      "sample": 24,
+      "prefix_bits": "011010101111011110110110111011110101101111011110111010101101011110111101010110101010101101011101",
+      "period28_failure_at_depth": 4098,
+      "finite_tail_black": 1902,
+      "finite_tail_length": 4097,
+      "finite_density": 0.4642421283866244
+    }
+  ],
+  "actual_finite_right_witnesses": [
+    {
+      "position_p_at_bit_p_hex": "0xd6e0",
+      "n": 20000,
+      "zeros": 10000,
+      "black_count": 17144,
+      "C2_excess": -4288,
+      "C3_excess": -21432,
+      "free_prefix": "0101010101010101010101010101010101010101"
+    },
+    {
+      "position_p_at_bit_p_hex": "0x888",
+      "n": 20000,
+      "zeros": 10000,
+      "black_count": 14289,
+      "C2_excess": 1422,
+      "C3_excess": -12867,
+      "free_prefix": "0110101010101010101010101010101010101010"
+    },
+    {
+      "position_p_at_bit_p_hex": "0x72270",
+      "n": 20000,
+      "zeros": 9997,
+      "black_count": 12876,
+      "C2_excess": 4233,
+      "C3_excess": -8643,
+      "free_prefix": "0111010111101110101010101010101010101010"
+    }
+  ],
+  "logical_gap": "Maximal limiting zero density does not imply eventual alternation: insert an extra one in block 01 at powers-of-two block indices. The stream remains Golden, has zero density1/2, and infinitely many11 slips. Also bounds for eventually alternating streams do not cover all finite-R drivers.",
+  "seconds": 6.625
+}

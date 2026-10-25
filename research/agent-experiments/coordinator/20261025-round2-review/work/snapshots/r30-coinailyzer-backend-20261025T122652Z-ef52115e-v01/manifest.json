@@ -1,0 +1,239 @@
+{
+ "schema_version": 1,
+ "campaign_id": "rule30-20261024",
+ "response_id": "r30-coinailyzer-backend-20261025T122652Z-ef52115e-v01",
+ "agent": {
+  "name": "CoinAIlyzer Backend Bot",
+  "model": "claude-opus-5-5",
+  "framework": "Claude Code"
+ },
+ "created_utc": "2026-10-25T12:26:52Z",
+ "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+ "supersedes": [],
+ "artifacts": [
+  {
+   "artifact_id": "A001",
+   "path": "REPORT.md",
+   "sha256": "0a70a1dd561e47f372e58e14691a71fd6b54508f18d9778847b2846182b72087",
+   "description": "Response report (R2-01): three independently classified findings."
+  },
+  {
+   "artifact_id": "A002",
+   "path": "src/zbl.py",
+   "sha256": "86a375f5bced3e3109cfa2914db430df1e13c5c0b41c166cfa44778a424ee8a1",
+   "description": "Exact ZBL Rule 30 primitives (kit convention: depth i+1, white wall, two-update next)."
+  },
+  {
+   "artifact_id": "A003",
+   "path": "src/f001_barrier_escape.py",
+   "sha256": "83de028c37e0721144e59cea63fbf4da02ec1adc47baa23f6fdeebbbd366dbb0",
+   "description": "F001: exact energies of A, M, Z for the prefix-match reader and sliding-window readers."
+  },
+  {
+   "artifact_id": "A004",
+   "path": "src/f002_conservation.py",
+   "sha256": "af14f35e8c71f303924898708ef2996a163d67c074994d0afec094747121b38e",
+   "description": "F002: exact GF(p) rank certificate that Rule 30^k has only trivial conserved densities of window m."
+  },
+  {
+   "artifact_id": "A005",
+   "path": "src/ether_lifetime.py",
+   "sha256": "73327c277c9b433522482ff1334b1b52dbe99d9970ab80c669bd7a0e1f5aa9bb",
+   "description": "F002 support: guard lifetime of the truncated period-seven row."
+  },
+  {
+   "artifact_id": "A006",
+   "path": "src/export_t1110.py",
+   "sha256": "04ef48b607466aa4d0fdf83e461a2a6af5b2b1cdb10229cc1383d5e1045819b7",
+   "description": "F003: rebuild the round-two 1,110-state union reader from the coordinator's unmodified source."
+  },
+  {
+   "artifact_id": "A007",
+   "path": "src/f003_background_reader.py",
+   "sha256": "7bd64effcf3bfcb045bdbb622771a279427b1cbae11c3d00bb77e629761eebc0",
+   "description": "F003: pump families, exact sink-cost certificate, Fibonacci Golden orbit and exhaustive factor check."
+  },
+  {
+   "artifact_id": "A008",
+   "path": "evidence/f001-barrier-escape.json",
+   "sha256": "9e4e08ae9aea4ccccd7c0b17397e3a195cb8eea8a6bb688a8d1c8561ca10b651",
+   "description": "F001 output."
+  },
+  {
+   "artifact_id": "A009",
+   "path": "evidence/f002-conservation-rule30.json",
+   "sha256": "427fc87d263cff857bb722c839084027299e79475bca622c1c9553c9b6f22ac1",
+   "description": "F002: Rule 30, k=1,2,4 steps, windows m=1..10, all certified trivial."
+  },
+  {
+   "artifact_id": "A010",
+   "path": "evidence/f002-conservation-rule30-k4-m11.json",
+   "sha256": "c1eb3e0cb0d11ac688fd36bed26f7361503cdcf0363a003de7d773d8e61665cb",
+   "description": "F002: Rule 30, k=4 steps, window m=11, certified trivial."
+  },
+  {
+   "artifact_id": "A011",
+   "path": "evidence/f002-conservation-rule184-control.json",
+   "sha256": "ce99fb8e01763edbac236e0bbd505f3c1427bbb6a2226232aa8136e19679b05e",
+   "description": "F002 positive control: Rule 184 (number-conserving) shows the expected extra law."
+  },
+  {
+   "artifact_id": "A012",
+   "path": "evidence/f002-ether-lifetime.json",
+   "sha256": "687395cd265e61dde08c2fd84c9cbfb62d6e3a612216483e18202cf90e68a8bf",
+   "description": "F002 support: truncated period-seven rows stay guarded for about (l-27)/2 double steps."
+  },
+  {
+   "artifact_id": "A013",
+   "path": "evidence/t1110/T1110.npy",
+   "sha256": "775f947ec6e6bef225a04f07b9305c20ddcc8dc129e93b0f61e6d34c8e641866",
+   "description": "F003 input: 1,110-state transition table exported by src/export_t1110.py."
+  },
+  {
+   "artifact_id": "A014",
+   "path": "evidence/t1110/pats.json",
+   "sha256": "2a6611e5687cbdd4f950f71a8c9b3ec8767ba248c975666177f9d5c353d71c7d",
+   "description": "F003 input: the 14 background patterns of that reader."
+  },
+  {
+   "artifact_id": "A015",
+   "path": "evidence/upstream-sources.json",
+   "sha256": "873d0e080020fca7613311c1b1f9219bb5492178697a2063cf3bbe7ef27b1173",
+   "description": "SHA-256 of the coordinator source files imported (unmodified) to rebuild the reader."
+  },
+  {
+   "artifact_id": "A016",
+   "path": "evidence/f003-background-reader.json",
+   "sha256": "b14910c2d7ec8dd439cee24ef81b02ec44f74f70f7626f4dee50daa21b27519e",
+   "description": "F003 output."
+  },
+  {
+   "artifact_id": "A017",
+   "path": "logs/f002-conservation-rule30.log",
+   "sha256": "cb52632824e687dce3887175a37fb6cbb5f4ccd40e0d1b2b8412aa7eae067d29",
+   "description": "Raw log, F002 m<=10 run (with wall time)."
+  },
+  {
+   "artifact_id": "A018",
+   "path": "logs/f002-conservation-rule30-k4-m11.log",
+   "sha256": "80548695f8304af61a291848a99d5ebe5f3733190a97d8887f2ff8263ea14dcd",
+   "description": "Raw log, F002 m=11 run (with wall time)."
+  },
+  {
+   "artifact_id": "A019",
+   "path": "logs/f002-conservation-rule184-control.log",
+   "sha256": "bfb27ee1f2dc94698defd6cd67278e23f0ec0855641ba63f9ed60adce547aac0",
+   "description": "Raw log, F002 control."
+  },
+  {
+   "artifact_id": "A020",
+   "path": "logs/export-t1110.log",
+   "sha256": "23e0b7d386c3f2af06d2567d2309d9e0b537ceb04a912d350cafed739456329c",
+   "description": "Reader rebuild log: the coordinator's own controls report all_passed."
+  },
+  {
+   "artifact_id": "A021",
+   "path": "logs/f003.stderr.log",
+   "sha256": "12595e17be9c974bb53e57fe07c78b2c9f27b4bd94a7feafedc4a3e052d15b8e",
+   "description": "F003 timing."
+  },
+  {
+   "artifact_id": "A022",
+   "path": "logs/run-exit-codes.log",
+   "sha256": "a58e3468c898aaf40de558470671a0d2634ef06eab66a17b505d31d55c91798a",
+   "description": "Exit codes of the final F001/F003 runs."
+  }
+ ],
+ "findings": [
+  {
+   "finding_id": "F001",
+   "track": "G",
+   "status": "EXPERIMENT",
+   "title": "R2-01: the generic barrier's two-step witnesses are satisfied by background-retaining and by resynchronizing readers",
+   "claim": "With A, M, Z the barrier's startWord/middleWord/endWord, an 8-state prefix-match reader (cost 1 per letter matching the phase background (1100001)^inf for A,Z and (1011111)^inf for M; reject sink otherwise) satisfies all three conditions of no_absorbing_prefix_geometric_rank for every integer lambda>=1 with nonnegative 0/1 costs (B = H1 on every word); sliding-window readers W_L (cost 1 when the last L+1 letters are a background factor) satisfy them at lambda=1 for L=5..15 and for every lambda>=1 for L=8..15.",
+   "scope": "Exactly the barrier's three conditions on its three explicit words; kit ZBL convention; prefix reader is not absorbed on commonWord, W_L never absorbs. Not the full rank requirement.",
+   "result": "Exact integer computation: prefix-match lengths A/M/Z = 30/28/26 with Z's matched positions a strict subset of A's; H1=0, H0=E1(Z)-E0(M) works. These energies are NOT ranks; they only show that the barrier's witness set cannot be reused against these classes.",
+   "evidence_artifact_ids": [
+    "A002",
+    "A003",
+    "A008",
+    "A022"
+   ],
+   "verification": {
+    "kind": "finite_computation"
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Finite statement about three words; no Lean decide check was run.",
+    "Does not exhibit a valid rank; F002/F003 show these classes fail the full requirement at unit scale."
+   ],
+   "next_action": "Any extension of the barrier to retaining/resynchronizing readers must use more steps of the dynamics (as F002/F003 do)."
+  },
+  {
+   "finding_id": "F002",
+   "track": "E",
+   "status": "EXPERIMENT",
+   "title": "R2-01: unit-scale definite (resynchronizing) readers reduce to Rule 30^4 conservation laws; none exist for window m<=11",
+   "claim": "Paper reduction: if a definite reader with delay L (energy H_r + sum phi_r(last L+1 letters), lambda=1, signed rational costs) satisfies drop-by-1 on free-zero steps and non-increase on free-one steps for every guarded row (ether-phase prefix + arbitrary tail, both phases) and E_1 is bounded below, then phi_1 is a conserved density of four Rule 30 steps; if that density is trivial, E_r = H_r + c|w| + O(1) with c>=0 and a long truncated ether orbit contradicts the required drops. Computation: Rule 30^k (k=1,2,4) has only trivial conserved densities of window m<=10, and Rule 30^4 for m=11.",
+   "scope": "Unit scale only; definite readers only; rows inside the barrier's Safe13 0101/1010 domains; the full rank requirement on those rows (stronger than the barrier's two steps).",
+   "result": "Exact: GF(2^31-1) rank of the conservation system reaches the trivial upper bound 2^(m-1) for all 31 Rule 30 cases (m<=10 for k=1,2,4; m=11 for k=4), which certifies over Q that only trivial laws exist; Rule 184 control shows the expected one-dimensional extra law. Hence, with the (unformalized) reduction, no unit-scale definite reader with L<=10 supplies the rank. Truncated ether rows stay guarded ~ (l-27)/2 double steps (109 at l=240).",
+   "evidence_artifact_ids": [
+    "A002",
+    "A004",
+    "A005",
+    "A009",
+    "A010",
+    "A011",
+    "A012",
+    "A017",
+    "A018",
+    "A019"
+   ],
+   "verification": {
+    "kind": "finite_computation"
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The reduction (realizability of periodic middles via periodic preimages, balance/uniform-circulation coboundary step, sandwich along the truncated ether) is a paper argument, not formalized.",
+    "Only windows m<=11 are certified; the all-m statement is the missing lemma.",
+    "lambda>1, non-definite synchronizing readers, right-coupled costs and other domains are not covered."
+   ],
+   "next_action": "Prove (or find in the literature) that Rule 30^4 has no nontrivial additive conservation law of any range; formalize the three-step reduction as a generic Lean theorem."
+  },
+  {
+   "finding_id": "F003",
+   "track": "H",
+   "status": "EXPERIMENT",
+   "title": "R2-01: readers that absorb only off finitely many backgrounds (incl. the round-two 1,110-state union reader) admit no unit-scale rank on the Golden-guarded domain",
+   "claim": "For any reader T with sink s that is absorbed on (P) pump rows next(Q ++ 0^30 ++ Y'^n ++ 1) and their successors (Q a 40-cell ether-phase prefix, Y in {0,1,10000000}) and (X) on Theta(g)[1..78] within p0 cells for every length-40 factor g of the Fibonacci Golden stream f (A->01, B->011): there is no unit-scale two-phase signed rank (drop on free zero, non-increase on free one, every Golden-13-guarded row with actual finite past; E_1 bounded below).",
+   "scope": "lambda=1; same T for both phases; previous-bit phases; step domain = Golden-guarded rows (wider than the barrier's 0101 lower-bound domain). The 1,110-state reader satisfies (P) for n<=40 and (X) exhaustively with p0=16.",
+   "result": "Exact checks: pump slopes give six inequalities; an exact Fraction certificate forces C1(s,0)=C1(s,1)=C0(s,0)=C0(s,1)=a, a>=0 by the white pump; along the Fibonacci orbit (W=801, 360 double steps, 151 free zeros, guard ok, prefix = Theta(shift^j f)) the reader sinks within 16 cells, so E = a*length + O(1) cannot fall by the unbounded number of zeros. Consistent with the archived unit-scale alpha=0 optima, which used richer models not covered here.",
+   "evidence_artifact_ids": [
+    "A002",
+    "A006",
+    "A007",
+    "A013",
+    "A014",
+    "A015",
+    "A016",
+    "A020",
+    "A021",
+    "A022"
+   ],
+   "verification": {
+    "kind": "finite_computation"
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Pump families checked for n<=40; the all-n step is locality (unformalized). The orbit-to-Theta identification uses the kit's two_step_shift and light-cone locality on paper.",
+    "lambda>1 not covered: geometric slopes do not give the linear sink inequalities as stated.",
+    "Two-phase model only; the round-two 5-context and upcoming-phase/history models are not covered as written.",
+    "Readers that resynchronize to a background after a mismatch, or use unbounded memory, are outside (definite ones are F002)."
+   ],
+   "next_action": "Formalize as a generic Lean theorem over T with hypotheses (P),(X) next to no_absorbing_prefix_geometric_rank; then extend step 1 to the strongly connected 5-context graph."
+  }
+ ]
+}

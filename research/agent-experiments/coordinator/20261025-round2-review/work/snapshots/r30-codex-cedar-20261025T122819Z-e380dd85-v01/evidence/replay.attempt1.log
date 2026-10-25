@@ -1,0 +1,12 @@
+D:\MWB\Rule30\cedar-round2-20261025-verifier\CedarAncestry.lean:70:2: error: No goals to be solved
+
+Traceback (most recent call last):
+  File "D:\MWB\Rule30\cedar-round2-20261025-forest\cedar\replay.py", line 67, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\MWB\Rule30\cedar-round2-20261025-forest\cedar\replay.py", line 48, in main
+    steps.append(command([str(LEAN),'--root='+str(PROJECT),'-o',str(BUILD/'CedarAncestry.olean'),str(target)],environment,EVIDENCE/'CedarAncestry.compile.log'))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MWB\Rule30\cedar-round2-20261025-forest\cedar\replay.py", line 22, in command
+    raise RuntimeError(f'Failed: {args} (exit {p.returncode})')
+RuntimeError: Failed: ['D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe', '--root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier', '-o', 'D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\CedarAncestry.olean', 'D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\CedarAncestry.lean'] (exit 1)

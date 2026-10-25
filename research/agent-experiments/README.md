@@ -8,7 +8,12 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
-**Latest update:** the [round-two brief](coordinator/20261025-round2/BRIEF.md)
+**Latest results:** [all seven round-two responses have been reviewed](coordinator/20261025-round2-review/REPORT.md).
+The review includes a new all-time, kernel-checked coefficient-two charge
+counterexample, checked ancestry and defect-transfer tools, independent
+reproductions and explicit failed density extrapolations. Problem 1 remains open.
+
+The [round-two brief](coordinator/20261025-round2/BRIEF.md)
 summarizes the new checked barriers, counterexamples and completed experiments.
 It includes [seven different follow-up tasks](coordinator/20261025-round2/TASKS.md),
 [copyable prompts for the original sessions](coordinator/20261025-round2/prompts/),

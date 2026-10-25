@@ -1,0 +1,315 @@
+{
+ "reader_states": 1110,
+ "sink": 1,
+ "max_white_run_in_backgrounds": 7,
+ "pump_families": [
+  {
+   "family": "zeros",
+   "Y": [
+    0
+   ],
+   "Y_preimage_period": [
+    0
+   ],
+   "next_Y_one_period": [
+    0
+   ],
+   "R_previous_free_bit": 1,
+   "R_next_free_bit": 0,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    39
+   ],
+   "sink_positions_S": [
+    37
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    1,
+    0
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    1,
+    0
+   ]
+  },
+  {
+   "family": "zeros",
+   "Y": [
+    0
+   ],
+   "Y_preimage_period": [
+    0
+   ],
+   "next_Y_one_period": [
+    0
+   ],
+   "R_previous_free_bit": 0,
+   "R_next_free_bit": 1,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    40
+   ],
+   "sink_positions_S": [
+    38
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    1,
+    0
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    1,
+    0
+   ]
+  },
+  {
+   "family": "ones",
+   "Y": [
+    1
+   ],
+   "Y_preimage_period": [
+    1,
+    1,
+    0
+   ],
+   "next_Y_one_period": [
+    0
+   ],
+   "R_previous_free_bit": 1,
+   "R_next_free_bit": 0,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    39
+   ],
+   "sink_positions_S": [
+    37
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    0,
+    3
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    3,
+    0
+   ]
+  },
+  {
+   "family": "ones",
+   "Y": [
+    1
+   ],
+   "Y_preimage_period": [
+    1,
+    1,
+    0
+   ],
+   "next_Y_one_period": [
+    0
+   ],
+   "R_previous_free_bit": 0,
+   "R_next_free_bit": 1,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    40
+   ],
+   "sink_positions_S": [
+    38
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    0,
+    3
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    3,
+    0
+   ]
+  },
+  {
+   "family": "single_one_period8",
+   "Y": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Y_preimage_period": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "next_Y_one_period": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "R_previous_free_bit": 1,
+   "R_next_free_bit": 0,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    39
+   ],
+   "sink_positions_S": [
+    37
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    7,
+    1
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    5,
+    3
+   ]
+  },
+  {
+   "family": "single_one_period8",
+   "Y": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Y_preimage_period": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "next_Y_one_period": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "R_previous_free_bit": 0,
+   "R_next_free_bit": 1,
+   "n_checked": [
+    1,
+    40
+   ],
+   "guard13_ok_R_and_S": true,
+   "sink_positions_R": [
+    40
+   ],
+   "sink_positions_S": [
+    38
+   ],
+   "sink_tally_increment_per_n_R(zeros,ones)": [
+    7,
+    1
+   ],
+   "sink_tally_increment_per_n_S(zeros,ones)": [
+    5,
+    3
+   ]
+  }
+ ],
+ "sink_cost_certificate": {
+  "inequalities_(c0,c1,d0,d1)": {
+   "zeros|prev1": [
+    -1,
+    0,
+    1,
+    0
+   ],
+   "zeros|prev0": [
+    1,
+    0,
+    -1,
+    0
+   ],
+   "ones|prev1": [
+    0,
+    -3,
+    3,
+    0
+   ],
+   "ones|prev0": [
+    3,
+    0,
+    0,
+    -3
+   ],
+   "single_one_period8|prev1": [
+    -7,
+    -1,
+    5,
+    3
+   ],
+   "single_one_period8|prev0": [
+    5,
+    3,
+    -7,
+    -1
+   ]
+  },
+  "all_equalities_certified": true,
+  "checks": {
+   "d0-c0<=0": true,
+   "c0-d0<=0": true,
+   "c0-d1<=0": true,
+   "d1-c0<=0": true,
+   "c0-c1<=0": true,
+   "c1-c0<=0": true
+  }
+ },
+ "golden_orbit": {
+  "f": "Fibonacci word over blocks A->01, B->011 (no 00, no 11111, aperiodic)",
+  "truncation_width": 801,
+  "double_steps_checked": 360,
+  "guard13_ok_and_prefix60_equals_Theta(shift^j f)": true,
+  "max_sink_position_on_orbit": 16,
+  "positive_defect_steps_(free_zeros)_in_range": 151
+ },
+ "factor_check": {
+  "bit_factor_length_q": 40,
+  "distinct_bit_factors_seen": 41,
+  "fibonacci_block_factors_len30": 31,
+  "Theta_prefix_length": 78,
+  "max_sink_position_over_all_factors": 16
+ }
+}

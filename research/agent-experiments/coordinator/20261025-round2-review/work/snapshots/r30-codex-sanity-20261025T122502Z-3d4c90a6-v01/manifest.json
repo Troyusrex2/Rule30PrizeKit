@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-codex-sanity-20261025T122502Z-3d4c90a6-v01",
+  "agent": {
+    "name": "codex-sanity",
+    "model": null,
+    "framework": "Codex"
+  },
+  "created_utc": "2026-10-25T12:25:02Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "REPORT.md",
+      "sha256": "1d219dc8b161251da8ee33125c7d3b7d3ae15e3f55c5a209a589b15520e0fd34",
+      "description": "R2-03 report: three separately classified findings and limitations."
+    },
+    {
+      "artifact_id": "A002",
+      "path": "DERIVATIONS.md",
+      "sha256": "ec187b48e10f7e2845b3d9a0f045a18634725b75a9668f94e9157ab938750c25",
+      "description": "Explicit unformalized proofs, source identity and open growth lemma."
+    },
+    {
+      "artifact_id": "A003",
+      "path": "src/experiment.py",
+      "sha256": "c724bd6672151d5b0634777b86ae7353582db334ac700c7ef10e883ac9dfa4c8",
+      "description": "Exact finite experiments and controls; standard-library Python."
+    },
+    {
+      "artifact_id": "A004",
+      "path": "src/run_guarded.py",
+      "sha256": "7778f728ede91a71a9c757a5367cace45c42232d61205c52c50145af180a8643",
+      "description": "Reproduction guard with time and memory bounds."
+    },
+    {
+      "artifact_id": "A005",
+      "path": "evidence/results.json",
+      "sha256": "d9a14c85fc09b105371265b7003731e8b5633a402a2341353b0690d0f582f037",
+      "description": "Actual final finite results, counterexamples and matrix minors."
+    },
+    {
+      "artifact_id": "A006",
+      "path": "evidence/center.bits",
+      "sha256": "8fc773be02b1398ce5382dcb21b9e5bdb6f1e240936e992e6b8ad34e1cff422c",
+      "description": "32,780 exact center bits, times zero through 32,779."
+    },
+    {
+      "artifact_id": "A007",
+      "path": "logs/experiment.run.log",
+      "sha256": "d9a14c85fc09b105371265b7003731e8b5633a402a2341353b0690d0f582f037",
+      "description": "Raw stdout/stderr from the final guarded experiment."
+    },
+    {
+      "artifact_id": "A008",
+      "path": "evidence/run-metadata.json",
+      "sha256": "20e74f1375282aeaf0e347ccb8734ef33e9dc52eea5317f193dc13626c6d717f",
+      "description": "Actual final run status, source hash, versions and sampled resources."
+    },
+    {
+      "artifact_id": "A009",
+      "path": "evidence/catalog-check.json",
+      "sha256": "2f4500754813659866151916c6a398213eb6c39550888d79c0a08616f163dbd9",
+      "description": "Public title census and inspected cut-rank source provenance."
+    },
+    {
+      "artifact_id": "A010",
+      "path": "evidence/source-context.json",
+      "sha256": "a3d9325919a34dae1210e6df12ddbf40926b87cd40a01c25073d7659b48d2af7",
+      "description": "Pinned task, catalog and source references; read-versus-replay scope."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "H",
+      "status": "FAILED",
+      "title": "R2-03: bounded rank cannot satisfy the original three-observation descent guard",
+      "claim": "The proposed replacement score R(T,P) in 0..B, strictly decreasing under two steps whenever three canonical center observations agree, cannot exist universally.",
+      "scope": "Every uniformly bounded natural score on canonical pairs, including ranks of all fixed-dimensional matrices over any field. Not the unbounded integer off-diagonal score from round one.",
+      "result": "A written pigeonhole proof forces B+1 strict drops; exact single-seed witnesses cover B=1,2,3. At B=2, T=1,P=25 gives the repeated block 1011100.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A005",
+        "A006",
+        "A007",
+        "A008"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python src/run_guarded.py --output <a-new-output-directory>"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "The general proof has not been formalized or kernel-replayed.",
+        "Does not exclude unbounded scores, growing dimensions, or descent guarded by infinite agreement."
+      ],
+      "next_action": "Stop fitting bounded rank to this guard; formalize the short obstruction if useful."
+    },
+    {
+      "finding_id": "F002",
+      "track": "E",
+      "status": "EXPERIMENT",
+      "title": "R2-03: nonlinear source parities at separated binary scales",
+      "claim": "The dyadic difference matrix M(T,n,K)[i,j]=c(T+i+2^(K+j))+c(T+i), with 2^K>T+n-1 over GF(2), has an exact nonlinear source representation. Unbounded rank for T=0 would imply official Problem 1.",
+      "scope": "Actual Rule 30 single-seed center, with explicit finite-support and binary-kernel conditions. Proposed sufficient growth lemma U is open.",
+      "result": "Known Duhamel decomposition specialized to separated binary scales; 760 exact block checks and 32,780 crosschecked bits. Tested square-family ranks through size 12 are 0,1,1,3,5,6,6,7,8,10,10,11. Eventual period P after T0 bounds every such rank by T0+P.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python src/run_guarded.py --output <a-new-output-directory>"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "No unbounded rank growth or all-r odd-minor construction is proved.",
+        "Duhamel and rank reformulations are prior work, not claimed new.",
+        "No Lean replay, Wolfram approval, full solution or proximity estimate.",
+        "Ether and driven finite-half controls do not inherit the finite single-seed support identity."
+      ],
+      "next_action": "Try an ancestry-based pairing of source/kernel determinant terms with an odd residual for arbitrarily large minors; allow cancellation and delayed rank gains."
+    },
+    {
+      "finding_id": "F003",
+      "track": "E",
+      "status": "FAILED",
+      "title": "R2-03: time-monotone rank and a near-full-rank shortcut fail",
+      "claim": "Two proposed strengthenings fail: nondecreasing rank as T advances, and rank M(0,n,ceil(log2 n)) >= n-1 for every n>=2.",
+      "scope": "Actual single-seed center with the admissible separation condition. These failures concern only the two strengthenings, not the open growth lemma.",
+      "result": "At n=2,K=8, T=0 to T=1 drops rank 1 to 0. At n=3,K=2, rows 000,001,000 have rank 1, below n-1=2.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A005",
+        "A006",
+        "A007",
+        "A008"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python src/run_guarded.py --output <a-new-output-directory>"
+        ]
+      },
+      "depends_on": [
+        "r30-codex-sanity-20261025T122502Z-3d4c90a6-v01#F002"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "Dependency on F002 is its matrix definition only, not its unproved growth claim.",
+        "No bound on eventual rank follows. Matrices at changing K are not nested."
+      ],
+      "next_action": "Use these counterexamples as mandatory controls for any proposed minor-growth proof."
+    }
+  ]
+}

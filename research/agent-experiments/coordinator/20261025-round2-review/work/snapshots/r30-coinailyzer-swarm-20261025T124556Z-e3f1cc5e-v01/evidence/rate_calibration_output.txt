@@ -1,0 +1,49 @@
+single black cell, t < 16384, period P=1
+
+rule 90: centre column constant 0 from t=1
+  D_(-1) = D_(+1) for every t >= 1: True (no OR mask outside rule 30)
+  Theorem B conclusion holds on this orbit: True
+  column +1 black exactly at t = 2^k - 1: True
+  defect density of column +1: 0.0016
+     t      N_1(t)   N_1/log2 t
+      100        12       1.81
+     1000        18       1.81
+    10000        26       1.96
+    16382        27       1.93
+
+rule 150: centre column constant 1 from t=1
+  D_(-1) = D_(+1) for every t >= 1: True (no OR mask outside rule 30)
+  Theorem B conclusion holds on this orbit: True
+  column +1 black exactly at t = 2^k - 1: False
+  defect density of column +1: 0.6667
+     t      N_1(t)   N_1/log2 t
+      100        67      10.08
+     1000       669      67.13
+    10000      6667     501.74
+    16382     10922     780.15
+
+rule 210: centre column constant 0 from t=1
+  D_(-1) = D_(+1) for every t >= 1: True (no OR mask outside rule 30)
+  Theorem B conclusion holds on this orbit: True
+  column +1 black exactly at t = 2^k - 1: True
+  defect density of column +1: 0.0016
+     t      N_1(t)   N_1/log2 t
+      100        12       1.81
+     1000        18       1.81
+    10000        26       1.96
+    16382        27       1.93
+
+Reading:
+  * rules 90 and 210 realize a periodic centre whose column +1 carries only
+    ~2*log2(t) defects, so NO rate better than O(log t) is provable from the
+    shared facts alone. The logarithm the defect-path argument stops at is a
+    real ceiling for that class of argument, not a slack step.
+  * both of those witnesses have an eventually WHITE centre. Rule 30 is
+    entitled to exclude that case (the kit proves no column is eventually
+    constant), and the only remaining witness, rule 150, has a constant BLACK
+    centre and a defect density of order 1. So once the hypothetical centre is
+    known to be non-constant, the family caps nothing: a positive-density
+    defect rate is not excluded by any sibling rule. A rate argument has to
+    consume both the zeros and the ones of the hypothetical centre.
+
+wrote ../evidence/rate_calibration.json

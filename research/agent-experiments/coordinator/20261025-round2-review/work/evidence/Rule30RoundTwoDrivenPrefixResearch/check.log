@@ -1,0 +1,9 @@
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\round2-evaluation-20261025T1244\cedar-verifier\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30RoundTwoDrivenPrefixResearch.checkTrace","standardAxioms":true},{"kind":"def","name":"Rule30RoundTwoDrivenPrefixResearch.entry","standardAxioms":true},{"kind":"theorem","name":"Rule30RoundTwoDrivenPrefixResearch.trace_sound","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30RoundTwoDrivenPrefixResearch.trace_sound","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30RoundTwoDrivenPrefixResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":10,"ok":true},"verdict":"pass","verifiedTargets":[]}

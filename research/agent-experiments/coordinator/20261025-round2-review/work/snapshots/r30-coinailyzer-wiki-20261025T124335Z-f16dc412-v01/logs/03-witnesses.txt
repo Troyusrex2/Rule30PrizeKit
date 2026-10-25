@@ -1,0 +1,54 @@
+CriticalCharge C B R :  5*zeros(free R,n) <= n + B + C*blackCount(Psi R,2n+1)
+exact integer arithmetic, horizon n = 20000, depths 0..40000
+------------------------------------------------------------------------------
+Rule30Ether.config 3 1 6 wall  (published, kernel-checked, C=1 refuted)
+  R as a bit vector     : 0xd6e0   support [5, 6, 7, 9, 10, 12, 14, 15]
+  free R, first 20      : 01010101010101010101
+  zero density of free R: 10000 / 20000 = 0.500000
+  phase slips in free R : []
+  Psi R, depths 200.. : eventual period 7 with 3 black per period
+  n = 20000: zeros 10000, blackCount(2n+1) 17144, excess 5z-n = 30000
+  ratio (5z-n)/blackCount = 1.749883
+  n          5z-n-2*black   5z-n-3*black  
+  500        -106           -534          
+  2000       -430           -2145         
+  5000       -1072          -5358         
+  10000      -2144          -10716        
+  20000      -4288          -21432        
+------------------------------------------------------------------------------
+W1: black at positions 3, 7, 11
+  R as a bit vector     : 0x888   support [3, 7, 11]
+  free R, first 20      : 01101010101010101010
+  zero density of free R: 10000 / 20000 = 0.500000
+  phase slips in free R : [2]
+  Psi R, depths 200.. : eventual period 14 with 5 black per period
+  n = 20000: zeros 10000, blackCount(2n+1) 14289, excess 5z-n = 30000
+  ratio (5z-n)/blackCount = 2.099517
+  n          5z-n-2*black   5z-n-3*black  
+  500        28             -333          
+  2000       138            -1293         
+  5000       350            -3225         
+  10000      708            -6438         
+  20000      1422           -12867        
+------------------------------------------------------------------------------
+W2: black at positions 4, 5, 6, 9, 13, 16, 17, 18
+  R as a bit vector     : 0x72270   support [4, 5, 6, 9, 13, 16, 17, 18]
+  free R, first 20      : 01110101111011101010
+  zero density of free R: 9997 / 20000 = 0.499850
+  phase slips in free R : [2, 3, 8, 9, 10, 13, 14]
+  Psi R, depths 200.. : eventual period 28 with 9 black per period
+  n = 20000: zeros 9997, blackCount(2n+1) 12876, excess 5z-n = 29985
+  ratio (5z-n)/blackCount = 2.328751
+  n          5z-n-2*black   5z-n-3*black  
+  500        55             -285          
+  2000       375            -930          
+  5000       1019           -2214         
+  10000      2091           -4356         
+  20000      4233           -8643         
+------------------------------------------------------------------------------
+published witness ratio 1.749883  -> C >= 2 (as published)
+0x888      ratio 2.099517  -> C >= 3; C = 2 FAILS for every B
+0x72270    ratio 2.328751  -> C >= 3; C = 2 FAILS for every B
+
+On every witness tested, 5*zeros - n - 3*blackCount stays negative and
+decreasing, so C = 3 is not refuted by any of them.

@@ -1,0 +1,52 @@
+{
+ "search": {
+  "T": 3000,
+  "max_period": 128,
+  "max_transient": 600
+ },
+ "family": [
+  30,
+  90,
+  150,
+  210
+ ],
+ "rows": [
+  {
+   "rule": 30,
+   "centre_eventual_period": null,
+   "centre_constant_after_200": false,
+   "col1_eventual_period": null,
+   "centre_prefix": "1101110011000101100100111010111001110101"
+  },
+  {
+   "rule": 90,
+   "centre_eventual_period": [
+    1,
+    1
+   ],
+   "centre_constant_after_200": true,
+   "col1_eventual_period": null,
+   "centre_prefix": "1000000000000000000000000000000000000000"
+  },
+  {
+   "rule": 150,
+   "centre_eventual_period": [
+    0,
+    1
+   ],
+   "centre_constant_after_200": true,
+   "col1_eventual_period": null,
+   "centre_prefix": "1111111111111111111111111111111111111111"
+  },
+  {
+   "rule": 210,
+   "centre_eventual_period": [
+    1,
+    1
+   ],
+   "centre_constant_after_200": true,
+   "col1_eventual_period": null,
+   "centre_prefix": "1000000000000000000000000000000000000000"
+  }
+ ]
+}

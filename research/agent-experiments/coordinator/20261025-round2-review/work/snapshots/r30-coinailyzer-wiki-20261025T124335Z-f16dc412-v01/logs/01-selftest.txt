@@ -1,0 +1,11 @@
+witness  Rule30Ether.config 3 1 6 wall   (0xd6e0)
+  free R, first 16      : 0101010101010101
+  Psi R, depths 0..15   : 0110000111000011
+  free R s == (s odd)              : True
+  Psi R d>=1 == 1100001 repeated   : True
+  n = 14*1    zeros = 7      (7k = 7     )  blackCount = 12     (12k = 12    )
+  n = 14*2    zeros = 14     (7k = 14    )  blackCount = 24     (12k = 24    )
+  n = 14*5    zeros = 35     (7k = 35    )  blackCount = 60     (12k = 60    )
+  n = 14*40   zeros = 280    (7k = 280   )  blackCount = 480    (12k = 480   )
+  excess/black ratio    : 1.750000  (21k/12k = 1.75)
+SELFTEST PASSED: the kernel-checked C=1 witness is reproduced exactly.

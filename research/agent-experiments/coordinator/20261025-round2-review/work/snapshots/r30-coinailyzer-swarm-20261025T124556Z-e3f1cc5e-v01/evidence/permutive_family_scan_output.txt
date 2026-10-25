@@ -1,0 +1,16 @@
+left-permutive, quiescent, black-left-edge family: 4 rules
+  [30, 90, 150, 210]
+
+centre column eventually periodic within t<3000, P<=128, transient<=600:
+  rule  90: transient    1, period   1  [CONSTANT]
+  rule 150: transient    0, period   1  [CONSTANT]
+  rule 210: transient    1, period   1  [CONSTANT]
+
+non-constant periodic-centre witnesses: 0
+
+column +1 eventual period in the same window (expected None where the centre is periodic -- the two-column theorem):
+  rule  90: col+1 -> None
+  rule 150: col+1 -> None
+  rule 210: col+1 -> None
+
+wrote ../evidence/permutive_family_scan.json

@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-codex-cedar-20261025T122819Z-e380dd85-v01",
+  "agent": {
+    "name": "codex-cedar",
+    "model": null,
+    "framework": "OpenAI Codex"
+  },
+  "created_utc": "2026-10-25T12:35:55Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "CedarAncestry.lean",
+      "sha256": "e01a6db41683859c0c86e06295363b4433f355a7376032166442aa10c11a4cc9",
+      "description": "All custom Lean definitions and proofs; exact source for full replay."
+    },
+    {
+      "artifact_id": "A002",
+      "path": "evidence/CedarAncestry.attempt1.compile.log",
+      "sha256": "56dfed22cfb83bd1f37724d574e0e4c720e6c29f8769909d42ad6da0fd8de680",
+      "description": "Preserved rejected first compilation outcome: CedarAncestry.attempt1.compile.log"
+    },
+    {
+      "artifact_id": "A003",
+      "path": "evidence/CedarAncestry.check.log",
+      "sha256": "1831682849e9059ff96d6a8636ab068c07c203b66e3931db5a28fb43be57e65c",
+      "description": "Raw compiler, checker or experiment output: CedarAncestry.check.log"
+    },
+    {
+      "artifact_id": "A004",
+      "path": "evidence/CedarAncestry.compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "description": "Raw compiler, checker or experiment output: CedarAncestry.compile.log"
+    },
+    {
+      "artifact_id": "A005",
+      "path": "evidence/experiment.guard.json",
+      "sha256": "dd338c5343ac206087125077c272ec70fad97732197ed282225bb1b2facb9f7e",
+      "description": "Raw resource guard record: experiment.guard.json"
+    },
+    {
+      "artifact_id": "A006",
+      "path": "evidence/experiment.json",
+      "sha256": "cfdcc61b5f4c1a3e7f036b238e288ba5333c4838841160b6d42cfa56c3faec0f",
+      "description": "Exhaustive local cases, independent coordinate controls, pilot and fixed-gauge cancellation."
+    },
+    {
+      "artifact_id": "A007",
+      "path": "evidence/experiment.log",
+      "sha256": "a768dde66cb835141f44a041c0aa4c52595f3d3b1ced07851db73fe44586e5ae",
+      "description": "Raw compiler, checker or experiment output: experiment.log"
+    },
+    {
+      "artifact_id": "A008",
+      "path": "evidence/fronts.guard.json",
+      "sha256": "e2d1d7bc3a721315694968ba81efdb849489a77cec7d12e8cc7d1c4fc78b6a1c",
+      "description": "Raw resource guard record: fronts.guard.json"
+    },
+    {
+      "artifact_id": "A009",
+      "path": "evidence/fronts.json",
+      "sha256": "c4da0e40fcd5362345d31caa213e56731d59d89161ac0c1898fc5c43549f4972",
+      "description": "Exact finite frontier observations and retreat witness; no unbounded escape proof."
+    },
+    {
+      "artifact_id": "A010",
+      "path": "evidence/fronts.log",
+      "sha256": "4bba04d93fd317440eea47e2ac607916eae18c2e8e3da7860b6512a536275547",
+      "description": "Raw compiler, checker or experiment output: fronts.log"
+    },
+    {
+      "artifact_id": "A011",
+      "path": "evidence/kernel_report.json",
+      "sha256": "587c52b16aaba9ccf22bb9f83cea0bbccaf671a244e3cdff2bef54fe15fc5818",
+      "description": "Full successful official checker report, pinned source hashes, commands and headline types."
+    },
+    {
+      "artifact_id": "A012",
+      "path": "evidence/paths.guard.json",
+      "sha256": "1f5a262178ee354fa31cdb9e377dce52669efbf8725f1a78b66d37d00889c2c3",
+      "description": "Raw resource guard record: paths.guard.json"
+    },
+    {
+      "artifact_id": "A013",
+      "path": "evidence/paths.json",
+      "sha256": "61d9ed732c387a8c3d31d6190a0ae265bf84212e4e0f2a4dc8ff9b93a1a9ac51",
+      "description": "Exact explicit-involution outcomes and residual ancestor labels."
+    },
+    {
+      "artifact_id": "A014",
+      "path": "evidence/paths.log",
+      "sha256": "e5cc7152b60866f43d8036f42cee00f778833dec93f7835376fa6dd8dae00399",
+      "description": "Raw compiler, checker or experiment output: paths.log"
+    },
+    {
+      "artifact_id": "A015",
+      "path": "evidence/public_environment.json",
+      "sha256": "9c4ec5cf25b296dbadf923fb981e98ecd8740e4b499cf0e73ddafab698d6f5f0",
+      "description": "Public verifier environment snapshot; discovery/context only."
+    },
+    {
+      "artifact_id": "A016",
+      "path": "evidence/public_review.json",
+      "sha256": "7824b323a6ab6aa89886fec8fa6c31f2296a909b3d9c4aa94463b7b7c295f439",
+      "description": "Public snapshot retrieval times/hashes and related title/abstract screen."
+    },
+    {
+      "artifact_id": "A017",
+      "path": "evidence/public_submissions.json",
+      "sha256": "ab006aa3235f24fc2a4cd2f7d4ea8cb9b139a0cd9577f7da87f109cc24b09b2c",
+      "description": "Public submissions snapshot; tags/abstracts are not proof dependencies."
+    },
+    {
+      "artifact_id": "A018",
+      "path": "evidence/replay.attempt1.guard.json",
+      "sha256": "c96e33d5f1431ff1c5b3b6a02fc06617fa7a754b916fc456bc2a23599ee4c607",
+      "description": "Preserved rejected first compilation outcome: replay.attempt1.guard.json"
+    },
+    {
+      "artifact_id": "A019",
+      "path": "evidence/replay.attempt1.log",
+      "sha256": "abe292926c1f3177e933bf87c4071dca867cf6a0b1916ab21d150824d3b294f1",
+      "description": "Preserved rejected first compilation outcome: replay.attempt1.log"
+    },
+    {
+      "artifact_id": "A020",
+      "path": "evidence/replay.guard.json",
+      "sha256": "1f12b7a01cb293f5212758c3124fb2ebf0473b3a29832a62a7a097a08753d73b",
+      "description": "Raw resource guard record: replay.guard.json"
+    },
+    {
+      "artifact_id": "A021",
+      "path": "evidence/replay.log",
+      "sha256": "3709f29b907942a94bddcfa0f5527c5ae2bf80ee3bd3b67ee6b117713a7cfaa6",
+      "description": "Raw compiler, checker or experiment output: replay.log"
+    },
+    {
+      "artifact_id": "A022",
+      "path": "evidence/Rule30Jen.compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "description": "Raw compiler, checker or experiment output: Rule30Jen.compile.log"
+    },
+    {
+      "artifact_id": "A023",
+      "path": "evidence/Rule30Prize.compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "description": "Raw compiler, checker or experiment output: Rule30Prize.compile.log"
+    },
+    {
+      "artifact_id": "A024",
+      "path": "evidence/Rule30Realization.compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "description": "Raw compiler, checker or experiment output: Rule30Realization.compile.log"
+    },
+    {
+      "artifact_id": "A025",
+      "path": "evidence/run_metadata.json",
+      "sha256": "bf5e31aaf9d7bdc416cb4090c34a33765b86393e549500b8d4f44db54ad95d8d",
+      "description": "Environment versions, pins and rejected first-compilation history."
+    },
+    {
+      "artifact_id": "A026",
+      "path": "experiment.py",
+      "sha256": "f38d3e0ea7ae8a2ddfbb9b76ac696b42851e609722aa716f48f903d4ae2df6c3",
+      "description": "64 local cases, physical/packed controls, original cancellation benchmark and pilot."
+    },
+    {
+      "artifact_id": "A027",
+      "path": "fronts.py",
+      "sha256": "6e90094240a1bf9e037d6dff47cd44fbcf81adc2c327e91c333101f798c4d0f9",
+      "description": "Four-rule controls, tiny retreat witness, canonical frontier rectangle and holdouts."
+    },
+    {
+      "artifact_id": "A028",
+      "path": "guard.py",
+      "sha256": "959df9bf66b2bf2418ea6170d36aa53620317cc6120340d8ce2a998dbc23032d",
+      "description": "Owned-process resource guard with 300s/8GiB/2GiB limits."
+    },
+    {
+      "artifact_id": "A029",
+      "path": "paths.py",
+      "sha256": "fbec9e539929219b6123d4304d66fae4e4e6a5ddd8deef9a6e5fd433edf9302d",
+      "description": "Explicit finite path-pairing involutions, retaining even path families."
+    },
+    {
+      "artifact_id": "A030",
+      "path": "replay.py",
+      "sha256": "4963209c4e01733d6449d07359246196bf628401c526d2b7fe1e0994c04cd517",
+      "description": "Pinned-source rebuild and unchanged official full-declaration replay runner."
+    },
+    {
+      "artifact_id": "A031",
+      "path": "REPORT.md",
+      "sha256": "085de6dbc0706f7e471e78449cd4631866b488903a4bb6f62e0469690d9de234",
+      "description": "Independently scoped findings, exact missing lemma, barrier checks, derivations and reproduction."
+    },
+    {
+      "artifact_id": "A032",
+      "path": "response_schema.json",
+      "sha256": "101568b521e32bd759038ebcb1a3916ac84832b916d891199bda9b4aa26dbcce",
+      "description": "Exact response schema copied from the coordinator checkout."
+    },
+    {
+      "artifact_id": "A033",
+      "path": "validate_response.py",
+      "sha256": "ae03f7b7a62f015b7c33c0e698c427b5c0aa487a5e02ecc41b461b8499facdeb",
+      "description": "Read-only schema, artifact hash and proof-report consistency validator."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "H",
+      "status": "PARTIAL_KERNEL_CHECKED",
+      "title": "R2-04: Local cancellation normal form and noncrossing ancestry for Rule 30",
+      "claim": "Every output disagreement admits a factorization preserving its leftmost differing parent with even remaining contributions. For any two Rule 30 histories, every surviving disagreement has an initial disagreement ancestor and root labels are spatially nondecreasing at every finite time; this is specialized to the official single-seed histories.",
+      "scope": "All six Boolean local inputs; arbitrary Rule 30 histories on the integer line, all natural times. The official seed specialization allows all T,P,t. Literal path involutions are finite-tested only: T=0..3, P=1..4, through time 10.",
+      "result": "Unchanged official checker passed all 44 custom declarations and 12 headlines. Exact finite involutions preserved zero/one residuals, including even path families through zero-disagreement vertices. No center survivor is asserted.",
+      "evidence_artifact_ids": [
+        "A031",
+        "A001",
+        "A030",
+        "A011",
+        "A003",
+        "A026",
+        "A006",
+        "A029",
+        "A013",
+        "A020"
+      ],
+      "verification": {
+        "kind": "full_kernel_replay",
+        "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+        "lean_version": "4.35.0",
+        "module": "CedarAncestry",
+        "headlines": [
+          "CedarAncestry.rule30_normalizes",
+          "CedarAncestry.parent_monotone",
+          "CedarAncestry.ancestor_monotone",
+          "CedarAncestry.ancestor_valid",
+          "CedarAncestry.parent_valid30",
+          "CedarAncestry.rule30_ancestry",
+          "CedarAncestry.seed_shift_evolves",
+          "CedarAncestry.canonical_ancestry"
+        ],
+        "commands": [
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Jen.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Jen.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Prize.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Prize.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Realization.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Realization.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\CedarAncestry.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\CedarAncestry.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --run D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\Check.lean CedarAncestry --claim partial --headline CedarAncestry.rule30_normalizes --headline CedarAncestry.rule210_normalizes --headline CedarAncestry.parent_monotone --headline CedarAncestry.ancestor_monotone --headline CedarAncestry.ancestor_valid --headline CedarAncestry.parent_valid30 --headline CedarAncestry.parent_valid210 --headline CedarAncestry.rule30_ancestry --headline CedarAncestry.seed_shift_evolves --headline CedarAncestry.canonical_ancestry --headline CedarAncestry.rule210_ancestry --headline CedarAncestry.rule210_coupled_center_agrees"
+        ],
+        "checker_unchanged": true,
+        "full_replay": true,
+        "checker_report_artifact_id": "A011"
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Conditional ancestry does not establish a disagreement at the center.",
+        "The local factorization may change with the actual rows; this is not the original fixed-factorization path DAG.",
+        "The literal path-involution data structure and frontier recurrence are not formalized in Lean.",
+        "F002 shows the structural package also holds for a nonlinear rule with a periodic center."
+      ],
+      "next_action": "Prove or refute the exact Rule-30-specific least-source frontier escape lemma in REPORT.md, allowing the retreats in F003."
+    },
+    {
+      "finding_id": "F002",
+      "track": "H",
+      "status": "PARTIAL_KERNEL_CHECKED",
+      "title": "R2-04: Nonlinear Rule 210 passes the new ancestry lemmas but its seed center agrees forever",
+      "claim": "Rule 210 admits the same leftmost-parent cancellation normalization and conditional ancestry. Its actual single-seed comparison T=P=1 agrees at the center for every future time.",
+      "scope": "All local inputs and histories for the ancestry lemma; all natural t for run210(t+1,0)=run210(t+2,0). Existing pinned Rule30Realization.center210 is credited as the center theorem dependency.",
+      "result": "Full unchanged kernel replay passed the dedicated Rule210 normalization, ancestry and coupled-center headlines. Four-rule finite local controls and 257 Rule210 seed/coupled rows independently reproduce the relevant behavior.",
+      "evidence_artifact_ids": [
+        "A031",
+        "A001",
+        "A030",
+        "A011",
+        "A003",
+        "A027",
+        "A009"
+      ],
+      "verification": {
+        "kind": "full_kernel_replay",
+        "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+        "lean_version": "4.35.0",
+        "module": "CedarAncestry",
+        "headlines": [
+          "CedarAncestry.rule210_normalizes",
+          "CedarAncestry.parent_monotone",
+          "CedarAncestry.ancestor_monotone",
+          "CedarAncestry.parent_valid210",
+          "CedarAncestry.rule210_ancestry",
+          "CedarAncestry.rule210_coupled_center_agrees"
+        ],
+        "commands": [
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Jen.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Jen.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Prize.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Prize.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Realization.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Realization.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier -o D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\CedarAncestry.olean D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\CedarAncestry.lean",
+          "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe --run D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\Check.lean CedarAncestry --claim partial --headline CedarAncestry.rule30_normalizes --headline CedarAncestry.rule210_normalizes --headline CedarAncestry.parent_monotone --headline CedarAncestry.ancestor_monotone --headline CedarAncestry.ancestor_valid --headline CedarAncestry.parent_valid30 --headline CedarAncestry.parent_valid210 --headline CedarAncestry.rule30_ancestry --headline CedarAncestry.seed_shift_evolves --headline CedarAncestry.canonical_ancestry --headline CedarAncestry.rule210_ancestry --headline CedarAncestry.rule210_coupled_center_agrees"
+        ],
+        "checker_unchanged": true,
+        "full_replay": true,
+        "checker_report_artifact_id": "A011"
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "This is not a counterexample to Rule30 or to its proposed frontier escape lemma.",
+        "The periodic-center result is an existing official catalog result; the new point is that the proposed normalization also holds for it.",
+        "Public submission status labels were not adopted as proof premises."
+      ],
+      "next_action": "Require a genuinely OR-specific blocking or cancellation-debt argument; reject progress arguments that transfer unchanged to Rule210 T=P=1."
+    },
+    {
+      "finding_id": "F003",
+      "track": "H",
+      "status": "FAILED",
+      "title": "R2-04: The least-source frontier retreats; monotone progress is false",
+      "claim": "The candidate strengthening R_(t+1)>=R_t for the rightmost descendant of the least initial disagreement is false, already for canonical Rule30 T=P=1 at t=1 to t=2.",
+      "scope": "Finite physical/packed witness: root descendants {-3,-1} at t=1 become {-4,-2} at t=2. A separate open sufficient conjecture asks for some center reach for every T>=0,P>=1.",
+      "result": "The witness agrees under physical truth-table evolution, selected-parent propagation, and packed masks. The weaker center-reach conjecture survived 4096 rectangular plus 32 held-out comparisons through 4*(T+P)+128, but has no unbounded proof.",
+      "evidence_artifact_ids": [
+        "A031",
+        "A027",
+        "A009",
+        "A026",
+        "A006",
+        "A029",
+        "A013",
+        "A008"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -B guard.py experiment.py",
+          "python -B guard.py paths.py",
+          "python -B guard.py fronts.py"
+        ]
+      },
+      "depends_on": [
+        "r30-codex-cedar-20261025T122819Z-e380dd85-v01#F001"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "FAILED refers only to monotone-front progress, not to the still-open escape conjecture.",
+        "Finite center hits do not prove an all-onset/all-period result or a uniform time bound.",
+        "The frontier recurrence and its sufficient implication to Problem1 are explained on paper, not kernel-replayed here.",
+        "This is a tiny reproducible counterexample, not a claim of globally minimal onset or time."
+      ],
+      "next_action": "Analyze the full source frontier with retreats and cancellation debt. The decisive remaining statement is: for every T>=0 and P>=1, there exists t with this frontier nonnegative."
+    }
+  ]
+}

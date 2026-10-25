@@ -1,0 +1,794 @@
+{
+  "controls": {
+    "truth_table_all_10_bit_rows": 1024,
+    "independent_physical_center_steps_per_rule": 193,
+    "rules": [
+      30,
+      90,
+      150,
+      210
+    ],
+    "fast_linear_power_checks": 128
+  },
+  "full_trace_truth_table_crosscheck": 32780,
+  "center_bits": 32780,
+  "center_sha256": "8fc773be02b1398ce5382dcb21b9e5bdb6f1e240936e992e6b8ad34e1cff422c",
+  "bounded_rank_witnesses": [
+    {
+      "score_bound": 1,
+      "T": 7,
+      "P": 7,
+      "matched_length": 5,
+      "word": "01100",
+      "required_strict_drops": 2,
+      "states": [
+        {
+          "time": 7,
+          "a": "3645312",
+          "b": "420186569",
+          "center": 14,
+          "paired_observations": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "time": 9,
+          "a": "58401664",
+          "b": "6741246849",
+          "center": 16,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "score_bound": 2,
+      "T": 1,
+      "P": 25,
+      "matched_length": 7,
+      "word": "1011100",
+      "required_strict_drops": 3,
+      "states": [
+        {
+          "time": 1,
+          "a": "234881024",
+          "b": "7049616458717273",
+          "center": 26,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "time": 3,
+          "a": "3724541952",
+          "b": "113099197070351953",
+          "center": 28,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "time": 5,
+          "a": "59827552256",
+          "b": "1804701723251584073",
+          "center": 30,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "score_bound": 3,
+      "T": 1,
+      "P": 25,
+      "matched_length": 9,
+      "word": "101110011",
+      "required_strict_drops": 4,
+      "states": [
+        {
+          "time": 1,
+          "a": "234881024",
+          "b": "7049616458717273",
+          "center": 26,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "time": 3,
+          "a": "3724541952",
+          "b": "113099197070351953",
+          "center": 28,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "time": 5,
+          "a": "59827552256",
+          "b": "1804701723251584073",
+          "center": 30,
+          "paired_observations": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "time": 7,
+          "a": "955596668928",
+          "b": "28953394102147295745",
+          "center": 32,
+          "paired_observations": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "block_identity": {
+    "cases": 760,
+    "first_cancelled_nonempty_sum": {
+      "t": 0,
+      "k": 0,
+      "P": 4,
+      "q": 4,
+      "coefficient_index": 4,
+      "nonzero_time_contributions": [
+        1,
+        3
+      ],
+      "contribution_count": 2,
+      "parity": 0
+    }
+  },
+  "ether": {
+    "ether_rule_table_checks": 28,
+    "ether_28_step_source_total": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ether_nonzero_time_terms_by_column": [
+      14,
+      10,
+      10,
+      10,
+      14,
+      6,
+      10
+    ],
+    "finite_right_hex": "0x6b70",
+    "driven_steps": 1024,
+    "independent_scalar_right_rows": 128,
+    "free_bits_checked": 512,
+    "free_prefix": "01010101010101010101010101010101",
+    "free_difference_matrix": {
+      "rank": 0,
+      "pivot_rows": [],
+      "pivot_columns": [],
+      "minor_rows_lsb_first": []
+    },
+    "scope": "Driven/Psi free-stream control only, not a single-seed full-row identity. No unbounded kernel replay."
+  },
+  "square_family": [
+    {
+      "n": 1,
+      "K": 0,
+      "start": 0,
+      "rows_lsb_first": [
+        "0"
+      ],
+      "rank": 0,
+      "pivot_rows": [],
+      "pivot_columns": [],
+      "minor_rows_lsb_first": []
+    },
+    {
+      "n": 2,
+      "K": 1,
+      "start": 0,
+      "rows_lsb_first": [
+        "10",
+        "00"
+      ],
+      "rank": 1,
+      "pivot_rows": [
+        0
+      ],
+      "pivot_columns": [
+        0
+      ],
+      "minor_rows_lsb_first": [
+        "1"
+      ]
+    },
+    {
+      "n": 3,
+      "K": 2,
+      "start": 0,
+      "rows_lsb_first": [
+        "000",
+        "001",
+        "000"
+      ],
+      "rank": 1,
+      "pivot_rows": [
+        1
+      ],
+      "pivot_columns": [
+        2
+      ],
+      "minor_rows_lsb_first": [
+        "1"
+      ]
+    },
+    {
+      "n": 4,
+      "K": 2,
+      "start": 0,
+      "rows_lsb_first": [
+        "0001",
+        "0010",
+        "0001",
+        "1100"
+      ],
+      "rank": 3,
+      "pivot_rows": [
+        3,
+        1,
+        2
+      ],
+      "pivot_columns": [
+        0,
+        2,
+        3
+      ],
+      "minor_rows_lsb_first": [
+        "100",
+        "010",
+        "001"
+      ]
+    },
+    {
+      "n": 5,
+      "K": 3,
+      "start": 0,
+      "rows_lsb_first": [
+        "00100",
+        "01000",
+        "00111",
+        "10000",
+        "11110"
+      ],
+      "rank": 5,
+      "pivot_rows": [
+        3,
+        1,
+        2,
+        0,
+        4
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minor_rows_lsb_first": [
+        "10000",
+        "01000",
+        "00111",
+        "00100",
+        "11110"
+      ]
+    },
+    {
+      "n": 6,
+      "K": 3,
+      "start": 0,
+      "rows_lsb_first": [
+        "001000",
+        "010000",
+        "001110",
+        "100000",
+        "111100",
+        "010111"
+      ],
+      "rank": 6,
+      "pivot_rows": [
+        3,
+        1,
+        2,
+        0,
+        4,
+        5
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minor_rows_lsb_first": [
+        "100000",
+        "010000",
+        "001110",
+        "001000",
+        "111100",
+        "010111"
+      ]
+    },
+    {
+      "n": 7,
+      "K": 3,
+      "start": 0,
+      "rows_lsb_first": [
+        "0010001",
+        "0100000",
+        "0011100",
+        "1000001",
+        "1111000",
+        "0101111",
+        "0100111"
+      ],
+      "rank": 6,
+      "pivot_rows": [
+        3,
+        1,
+        2,
+        0,
+        4,
+        5
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minor_rows_lsb_first": [
+        "100000",
+        "010000",
+        "001110",
+        "001000",
+        "111100",
+        "010111"
+      ]
+    },
+    {
+      "n": 8,
+      "K": 3,
+      "start": 0,
+      "rows_lsb_first": [
+        "00100010",
+        "01000001",
+        "00111000",
+        "10000011",
+        "11110001",
+        "01011111",
+        "01001110",
+        "11101000"
+      ],
+      "rank": 7,
+      "pivot_rows": [
+        3,
+        1,
+        2,
+        0,
+        4,
+        5,
+        7
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "minor_rows_lsb_first": [
+        "1000001",
+        "0100000",
+        "0011100",
+        "0010001",
+        "1111000",
+        "0101111",
+        "1110100"
+      ]
+    },
+    {
+      "n": 9,
+      "K": 4,
+      "start": 0,
+      "rows_lsb_first": [
+        "010001010",
+        "100000101",
+        "011100000",
+        "000001111",
+        "111000111",
+        "101111110",
+        "100111010",
+        "110100010",
+        "010001101"
+      ],
+      "rank": 8,
+      "pivot_rows": [
+        1,
+        0,
+        2,
+        4,
+        5,
+        3,
+        8,
+        6
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minor_rows_lsb_first": [
+        "10000010",
+        "01000101",
+        "01110000",
+        "11100011",
+        "10111111",
+        "00000111",
+        "01000110",
+        "10011101"
+      ]
+    },
+    {
+      "n": 10,
+      "K": 4,
+      "start": 0,
+      "rows_lsb_first": [
+        "0100010100",
+        "1000001011",
+        "0111000001",
+        "0000011111",
+        "1110001110",
+        "1011111101",
+        "1001110101",
+        "1101000101",
+        "0100011011",
+        "1001011100"
+      ],
+      "rank": 10,
+      "pivot_rows": [
+        1,
+        0,
+        2,
+        4,
+        5,
+        3,
+        8,
+        6,
+        9,
+        7
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minor_rows_lsb_first": [
+        "1000001011",
+        "0100010100",
+        "0111000001",
+        "1110001110",
+        "1011111101",
+        "0000011111",
+        "0100011011",
+        "1001110101",
+        "1001011100",
+        "1101000101"
+      ]
+    },
+    {
+      "n": 11,
+      "K": 4,
+      "start": 0,
+      "rows_lsb_first": [
+        "01000101001",
+        "10000010111",
+        "01110000011",
+        "00000111110",
+        "11100011101",
+        "10111111011",
+        "10011101011",
+        "11010001011",
+        "01000110111",
+        "10010111000",
+        "11110110000"
+      ],
+      "rank": 10,
+      "pivot_rows": [
+        1,
+        0,
+        2,
+        4,
+        5,
+        3,
+        8,
+        6,
+        9,
+        7
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minor_rows_lsb_first": [
+        "1000001011",
+        "0100010100",
+        "0111000001",
+        "1110001110",
+        "1011111101",
+        "0000011111",
+        "0100011011",
+        "1001110101",
+        "1001011100",
+        "1101000101"
+      ]
+    },
+    {
+      "n": 12,
+      "K": 4,
+      "start": 0,
+      "rows_lsb_first": [
+        "010001010010",
+        "100000101111",
+        "011100000111",
+        "000001111100",
+        "111000111011",
+        "101111110111",
+        "100111010110",
+        "110100010111",
+        "010001101110",
+        "100101110000",
+        "111101100001",
+        "001010100001"
+      ],
+      "rank": 11,
+      "pivot_rows": [
+        1,
+        0,
+        2,
+        4,
+        5,
+        3,
+        8,
+        6,
+        9,
+        7,
+        11
+      ],
+      "pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "minor_rows_lsb_first": [
+        "10000010111",
+        "01000101000",
+        "01110000011",
+        "11100011101",
+        "10111111011",
+        "00000111110",
+        "01000110110",
+        "10011101010",
+        "10010111000",
+        "11010001011",
+        "00101010001"
+      ]
+    }
+  ],
+  "time_monotonicity_failure": {
+    "n": 2,
+    "K": 8,
+    "before_T": 0,
+    "before_rank": 1,
+    "after_T": 1,
+    "after_rank": 0,
+    "before_rows": [
+      2,
+      0
+    ],
+    "after_rows": [
+      0,
+      0
+    ]
+  },
+  "rule_controls": [
+    {
+      "rule": 90,
+      "prefix": "100000000000000000000000",
+      "rank": 1,
+      "pivot_rows": [
+        0
+      ],
+      "pivot_columns": [
+        0
+      ],
+      "minor_rows_lsb_first": [
+        "1"
+      ]
+    },
+    {
+      "rule": 150,
+      "prefix": "111111111111111111111111",
+      "rank": 0,
+      "pivot_rows": [],
+      "pivot_columns": [],
+      "minor_rows_lsb_first": []
+    },
+    {
+      "rule": 210,
+      "prefix": "100000000000000000000000",
+      "rank": 1,
+      "pivot_rows": [
+        0
+      ],
+      "pivot_columns": [
+        0
+      ],
+      "minor_rows_lsb_first": [
+        "1"
+      ]
+    }
+  ],
+  "thue_morse_control": {
+    "rank": 1,
+    "pivot_rows": [
+      0
+    ],
+    "pivot_columns": [
+      0
+    ],
+    "minor_rows_lsb_first": [
+      "1"
+    ]
+  },
+  "status": "completed_exact_finite_computation",
+  "seconds": 1.3440000000118744
+}

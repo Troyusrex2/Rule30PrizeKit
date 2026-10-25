@@ -1,0 +1,434 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "lean_version": "4.35.0",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "module": "CedarAncestry",
+  "source_sha256": "e01a6db41683859c0c86e06295363b4433f355a7376032166442aa10c11a4cc9",
+  "catalog_sources": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "pinned_source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "pinned_source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Realization",
+      "pinned_source_sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Jen.olean",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Jen.lean"
+      ],
+      "seconds": 1.8439999999827705,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Prize.olean",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Prize.lean"
+      ],
+      "seconds": 1.3590000000258442,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\Ruliology\\CellularAutomata\\Rule30Realization.olean",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\lean\\Ruliology\\CellularAutomata\\Rule30Realization.lean"
+      ],
+      "seconds": 1.9839999999967404,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--root=D:\\MWB\\Rule30\\cedar-round2-20261025-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\cedar-build\\CedarAncestry.olean",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\CedarAncestry.lean"
+      ],
+      "seconds": 1.7969999999913853,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "D:\\MWB\\Rule30\\cedar-round2-20261025-verifier\\Check.lean",
+        "CedarAncestry",
+        "--claim",
+        "partial",
+        "--headline",
+        "CedarAncestry.rule30_normalizes",
+        "--headline",
+        "CedarAncestry.rule210_normalizes",
+        "--headline",
+        "CedarAncestry.parent_monotone",
+        "--headline",
+        "CedarAncestry.ancestor_monotone",
+        "--headline",
+        "CedarAncestry.ancestor_valid",
+        "--headline",
+        "CedarAncestry.parent_valid30",
+        "--headline",
+        "CedarAncestry.parent_valid210",
+        "--headline",
+        "CedarAncestry.rule30_ancestry",
+        "--headline",
+        "CedarAncestry.seed_shift_evolves",
+        "--headline",
+        "CedarAncestry.canonical_ancestry",
+        "--headline",
+        "CedarAncestry.rule210_ancestry",
+        "--headline",
+        "CedarAncestry.rule210_coupled_center_agrees"
+      ],
+      "seconds": 3.7190000000118744,
+      "exit_code": 0
+    }
+  ],
+  "headlines": [
+    "CedarAncestry.rule30_normalizes",
+    "CedarAncestry.rule210_normalizes",
+    "CedarAncestry.parent_monotone",
+    "CedarAncestry.ancestor_monotone",
+    "CedarAncestry.ancestor_valid",
+    "CedarAncestry.parent_valid30",
+    "CedarAncestry.parent_valid210",
+    "CedarAncestry.rule30_ancestry",
+    "CedarAncestry.seed_shift_evolves",
+    "CedarAncestry.canonical_ancestry",
+    "CedarAncestry.rule210_ancestry",
+    "CedarAncestry.rule210_coupled_center_agrees"
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "CedarAncestry.Evolves",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.Normalizes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.ancestor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.ancestor_monotone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.ancestor_valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.canonicalDiff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.canonical_ancestry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.derivativeC",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.derivativeR",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.diff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.idx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.out",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.parent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_bounds",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_monotone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_neighbor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_valid210",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_valid30",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.parity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.remainder",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_ancestry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_coupled_center_agrees",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_normalizes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.rule30_ancestry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.rule30_normalizes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.seed_shift_evolves",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.selected",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.switch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.weights",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarAncestry.ancestor.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.diff.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.out.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarAncestry.parent.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.rule30_normalizes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_normalizes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_monotone",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.ancestor_monotone",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.ancestor_valid",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_valid30",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.parent_valid210",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.rule30_ancestry",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.seed_shift_evolves",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.canonical_ancestry",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_ancestry",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarAncestry.rule210_coupled_center_agrees",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarAncestry",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 44,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false,
+  "center_reach_lemma_proved": false,
+  "path_pairing_involution_formalized": false,
+  "formal_scope": "Local cancellation certificates; all-time conditional ancestry and monotone root order; Rule210 center countercontrol."
+}

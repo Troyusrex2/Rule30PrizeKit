@@ -1,0 +1,24 @@
+=== the two phases of the alternating driver ===
+altCol t == ether 3 (t+1) : True
+altCol t == ether 3 (t+3) : True
+so phases 1 and 3 of column 3 are the SAME alternating driver.
+column 1 is then ether column 4 = [0, 0, 1, 1], read at phase t+1 or t+3.
+
+=== phase 1: the published kernel-checked C=1 witness ===
+config 3 1 6 wall (0xd6e0)         zeros 1400   black 2400   excess 4200   ratio 1.750000
+      free 010101010101... period (0, 2) | Psi(d>=1) 11000011100001... period (0, 7)
+
+=== phase 3: same trap family, same k, the 27 phase-3 wall states ===
+  27 phase-3 wall states tested at n=2800; distinct ratios: [0.875]
+config 3 3 6 ws[82] (0x5f5e)       zeros 1400   black 4800   excess 4200   ratio 0.875000
+      free 101010101010... period (0, 2) | Psi(d>=1) 10111111011111... period (0, 7)
+
+=== verdict ===
+phase 1 ratio 1.750000  ->  C must be at least 2
+phase 3 ratio 0.875000  ->  C must be at least 1
+
+=== scaling the same construction: larger k with (3+k) %% 7 == 2 ===
+  k=6   support<=19   zeros 1400   black 4800   excess 4200   ratio 0.875000
+  k=13  support<=26   zeros 1400   black 4800   excess 4200   ratio 0.875000
+  k=20  support<=33   zeros 1400   black 4800   excess 4200   ratio 0.875000
+  k=27  support<=40   zeros 1400   black 4800   excess 4200   ratio 0.875000
