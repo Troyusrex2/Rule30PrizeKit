@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30PrefixMonotoneOrderObstructionResearch.no_prefix_monotone_order_rank","standardAxioms":true}],"headlines":[{"axioms":[],"found":true,"kind":"theorem","name":"Rule30PrefixMonotoneOrderObstructionResearch.no_prefix_monotone_order_rank","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30PrefixMonotoneOrderObstructionResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":1,"ok":true},"verdict":"pass","verifiedTargets":[]}

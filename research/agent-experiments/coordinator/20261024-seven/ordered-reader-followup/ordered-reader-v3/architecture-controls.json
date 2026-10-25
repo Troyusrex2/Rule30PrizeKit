@@ -1,0 +1,30 @@
+{
+  "reader_source_sha256": "9272296be2c188cd0dae12c808be99eb5127f99a819bd244fb1d5bc67fd1ed4a",
+  "padding_and_nonnegativity_controls": [
+    {
+      "architecture": "relu",
+      "nonnegative": true,
+      "empty_supported": true,
+      "padding_max_error": 0.0
+    },
+    {
+      "architecture": "gru",
+      "nonnegative": true,
+      "empty_supported": true,
+      "padding_max_error": 0.0
+    }
+  ],
+  "explicit_nonmonotone_extension": {
+    "short": [
+      1
+    ],
+    "long": [
+      1,
+      0
+    ],
+    "short_energy": 1.0,
+    "long_energy": 0.0
+  },
+  "uniform_rank_proved": false,
+  "full_problem_solved": false
+}

@@ -1,0 +1,37 @@
+{
+  "target": "zero-run starts in arbitrary free prefix <= spatial black count",
+  "beam_width": 4096,
+  "requested_length": 4096,
+  "completed_length": 28,
+  "stop_reason": "counterexample",
+  "records": [
+    {
+      "length": 28,
+      "zero_runs": 12,
+      "spatial_black_count": 11,
+      "deficit": -1,
+      "seconds": 0.359
+    }
+  ],
+  "final_deficit": -1,
+  "counterexample": {
+    "length": 28,
+    "free_prefix_hex": "0x55a9496",
+    "spatial_prefix_hex": "0x4022400005e3",
+    "zero_runs": 12,
+    "spatial_black_count": 11,
+    "physical_evolution_passed": true
+  },
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "physical_re_evolution_steps": 56,
+  "source_sha256": "91a8922c215662ca6569e4d3d1b2a008ea5dd20840aa7a6e2fa9d400c7ddc462",
+  "heuristic_only": true,
+  "uniform_bound_proved": false,
+  "Lean_verified": false,
+  "full_problem_solved": false,
+  "seconds": 0.359
+}

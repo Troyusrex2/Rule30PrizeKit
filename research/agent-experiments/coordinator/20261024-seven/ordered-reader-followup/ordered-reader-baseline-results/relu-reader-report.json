@@ -1,0 +1,3082 @@
+{
+  "architecture": "relu",
+  "energy": "nonnegative phase constant squared plus sum of squared ordered prefix readouts",
+  "width_normalization": false,
+  "data_sha256": "d733f8123fc37372b193dfa9c751f95c4a706b9b66ba40b907173488e6ad4906",
+  "data_manifest": {
+    "phases": [
+      21,
+      23,
+      27,
+      29,
+      30,
+      42,
+      43,
+      45,
+      46,
+      47,
+      53,
+      54,
+      55,
+      58,
+      59,
+      61
+    ],
+    "train_examples": 2030,
+    "held_examples": 693,
+    "training_depths": [
+      6,
+      127
+    ],
+    "heldout_depths": [
+      256,
+      511
+    ],
+    "data_sha256": "d733f8123fc37372b193dfa9c751f95c4a706b9b66ba40b907173488e6ad4906",
+    "producer_sources": {
+      "regular_prefix_bothzero_rank_terminal.py": "7a4aad4927051ea138d2b2f26f5331b2b5b3ae7c189fa7a6e67701f70e3c693a",
+      "charge_beam_packed.py": "a7c47c2a93a637d7f2a040582dc04797fca24f53f23832a1252647f7b5941d90",
+      "empty_right_absorption.py": "55e82be7b10272392750c50d4887dfbd9cf2ed6cf431157466ffcb33b0b8ee34",
+      "coupled_even_code_probe.py": "5bab19dede6214ceae3f732f031b204a7286c07e30664dace0808b341ddc67fd"
+    },
+    "raw_order_preserved": true,
+    "both_spatial_zero_edges": true,
+    "actual_right_dynamics": true,
+    "Lean_verified": false,
+    "uniform_rank_proved": false,
+    "full_problem_solved": false
+  },
+  "source_sha256": "fd31a8b7f0e0a9c9a9e1fa8d61fd9cb52827d9f5ffa7b50d10678813b319128f",
+  "torch_version": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 5080",
+  "training_records": [
+    {
+      "epoch": 0,
+      "loss": 0.984966283198446,
+      "train": {
+        "violations_1e4": 1682,
+        "maximum_residual": 1.5286602973937988,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 428,
+        "maximum_residual": 5.658791542053223,
+        "nonfinite": 0
+      },
+      "seconds": 0.521
+    },
+    {
+      "epoch": 5,
+      "loss": 0.10187694104388356,
+      "train": {
+        "violations_1e4": 1854,
+        "maximum_residual": 0.9550271034240723,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 380,
+        "maximum_residual": 3.7246804237365723,
+        "nonfinite": 0
+      },
+      "seconds": 0.737
+    },
+    {
+      "epoch": 10,
+      "loss": 0.0913851261138916,
+      "train": {
+        "violations_1e4": 1832,
+        "maximum_residual": 1.0144367218017578,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 469,
+        "maximum_residual": 2.5476927757263184,
+        "nonfinite": 0
+      },
+      "seconds": 0.959
+    },
+    {
+      "epoch": 15,
+      "loss": 0.08677196782082319,
+      "train": {
+        "violations_1e4": 2005,
+        "maximum_residual": 0.913508951663971,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 414,
+        "maximum_residual": 1.4544954299926758,
+        "nonfinite": 0
+      },
+      "seconds": 1.169
+    },
+    {
+      "epoch": 20,
+      "loss": 0.07673080125823617,
+      "train": {
+        "violations_1e4": 2018,
+        "maximum_residual": 0.8809728622436523,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 499,
+        "maximum_residual": 1.1250181198120117,
+        "nonfinite": 0
+      },
+      "seconds": 1.38
+    },
+    {
+      "epoch": 25,
+      "loss": 0.0737790260463953,
+      "train": {
+        "violations_1e4": 1990,
+        "maximum_residual": 0.8565192818641663,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 551,
+        "maximum_residual": 1.0220062732696533,
+        "nonfinite": 0
+      },
+      "seconds": 1.591
+    },
+    {
+      "epoch": 30,
+      "loss": 0.06863174471072853,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.8497466444969177,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 548,
+        "maximum_residual": 0.964387059211731,
+        "nonfinite": 0
+      },
+      "seconds": 1.803
+    },
+    {
+      "epoch": 35,
+      "loss": 0.06597237451933324,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.8362962603569031,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 551,
+        "maximum_residual": 1.010318398475647,
+        "nonfinite": 0
+      },
+      "seconds": 2.016
+    },
+    {
+      "epoch": 40,
+      "loss": 0.06506171077489853,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.8466356992721558,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 564,
+        "maximum_residual": 1.0079200267791748,
+        "nonfinite": 0
+      },
+      "seconds": 2.226
+    },
+    {
+      "epoch": 45,
+      "loss": 0.06377782905474305,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.8360639214515686,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 548,
+        "maximum_residual": 0.7347630858421326,
+        "nonfinite": 0
+      },
+      "seconds": 2.438
+    },
+    {
+      "epoch": 50,
+      "loss": 0.06605892814695835,
+      "train": {
+        "violations_1e4": 2014,
+        "maximum_residual": 0.8454301953315735,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 564,
+        "maximum_residual": 0.8523917198181152,
+        "nonfinite": 0
+      },
+      "seconds": 2.648
+    },
+    {
+      "epoch": 55,
+      "loss": 0.06279352959245443,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.8182052373886108,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 652,
+        "maximum_residual": 0.8900647163391113,
+        "nonfinite": 0
+      },
+      "seconds": 2.862
+    },
+    {
+      "epoch": 60,
+      "loss": 0.06318840896710753,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.8102166652679443,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 569,
+        "maximum_residual": 0.8006865978240967,
+        "nonfinite": 0
+      },
+      "seconds": 3.071
+    },
+    {
+      "epoch": 65,
+      "loss": 0.06164053501561284,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7877904176712036,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 579,
+        "maximum_residual": 0.6859965324401855,
+        "nonfinite": 0
+      },
+      "seconds": 3.284
+    },
+    {
+      "epoch": 70,
+      "loss": 0.061983800027519464,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7943614721298218,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 605,
+        "maximum_residual": 0.6076372265815735,
+        "nonfinite": 0
+      },
+      "seconds": 3.495
+    },
+    {
+      "epoch": 75,
+      "loss": 0.062127842335030437,
+      "train": {
+        "violations_1e4": 2025,
+        "maximum_residual": 0.7917492389678955,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 560,
+        "maximum_residual": 0.6585332155227661,
+        "nonfinite": 0
+      },
+      "seconds": 3.708
+    },
+    {
+      "epoch": 80,
+      "loss": 0.06167276273481548,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7879393100738525,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 560,
+        "maximum_residual": 0.6321626305580139,
+        "nonfinite": 0
+      },
+      "seconds": 3.917
+    },
+    {
+      "epoch": 85,
+      "loss": 0.06140995677560568,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7764708995819092,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 574,
+        "maximum_residual": 0.7881081104278564,
+        "nonfinite": 0
+      },
+      "seconds": 4.128
+    },
+    {
+      "epoch": 90,
+      "loss": 0.06184273888356984,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7818748950958252,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 583,
+        "maximum_residual": 0.6470403671264648,
+        "nonfinite": 0
+      },
+      "seconds": 4.34
+    },
+    {
+      "epoch": 95,
+      "loss": 0.061777708819136024,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7391116619110107,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 652,
+        "maximum_residual": 0.6637178659439087,
+        "nonfinite": 0
+      },
+      "seconds": 4.551
+    },
+    {
+      "epoch": 100,
+      "loss": 0.0620508489664644,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7598226070404053,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 563,
+        "maximum_residual": 0.7249977588653564,
+        "nonfinite": 0
+      },
+      "seconds": 4.763
+    },
+    {
+      "epoch": 105,
+      "loss": 0.061561927665024996,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7575035691261292,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 624,
+        "maximum_residual": 0.7713181972503662,
+        "nonfinite": 0
+      },
+      "seconds": 4.973
+    },
+    {
+      "epoch": 110,
+      "loss": 0.06103137927129865,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7595299482345581,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 607,
+        "maximum_residual": 0.6015720367431641,
+        "nonfinite": 0
+      },
+      "seconds": 5.183
+    },
+    {
+      "epoch": 115,
+      "loss": 0.060649370308965445,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7500154376029968,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 629,
+        "maximum_residual": 0.5678861141204834,
+        "nonfinite": 0
+      },
+      "seconds": 5.395
+    },
+    {
+      "epoch": 120,
+      "loss": 0.0615123484749347,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7577270269393921,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 678,
+        "maximum_residual": 0.9202132821083069,
+        "nonfinite": 0
+      },
+      "seconds": 5.605
+    },
+    {
+      "epoch": 125,
+      "loss": 0.06021296209655702,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7535340189933777,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 679,
+        "maximum_residual": 0.6785147190093994,
+        "nonfinite": 0
+      },
+      "seconds": 5.817
+    },
+    {
+      "epoch": 130,
+      "loss": 0.06023872457444668,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7506855130195618,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 658,
+        "maximum_residual": 0.5958971977233887,
+        "nonfinite": 0
+      },
+      "seconds": 6.026
+    },
+    {
+      "epoch": 135,
+      "loss": 0.06027276604436338,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7507296204566956,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 678,
+        "maximum_residual": 0.5066173076629639,
+        "nonfinite": 0
+      },
+      "seconds": 6.238
+    },
+    {
+      "epoch": 140,
+      "loss": 0.06009526317939162,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.743221640586853,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 689,
+        "maximum_residual": 0.5177013278007507,
+        "nonfinite": 0
+      },
+      "seconds": 6.448
+    },
+    {
+      "epoch": 145,
+      "loss": 0.05950011732056737,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7311289310455322,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 691,
+        "maximum_residual": 0.4704263210296631,
+        "nonfinite": 0
+      },
+      "seconds": 6.658
+    },
+    {
+      "epoch": 150,
+      "loss": 0.05974147864617407,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7469181418418884,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.46991944313049316,
+        "nonfinite": 0
+      },
+      "seconds": 6.868
+    },
+    {
+      "epoch": 155,
+      "loss": 0.05958271212875843,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.725520133972168,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 681,
+        "maximum_residual": 0.43184736371040344,
+        "nonfinite": 0
+      },
+      "seconds": 7.077
+    },
+    {
+      "epoch": 160,
+      "loss": 0.05960951908491552,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7277332544326782,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 675,
+        "maximum_residual": 1.0756566524505615,
+        "nonfinite": 0
+      },
+      "seconds": 7.286
+    },
+    {
+      "epoch": 165,
+      "loss": 0.05933889467269182,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7425445318222046,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 685,
+        "maximum_residual": 0.4667268991470337,
+        "nonfinite": 0
+      },
+      "seconds": 7.498
+    },
+    {
+      "epoch": 170,
+      "loss": 0.059171213302761316,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7292690277099609,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.419059693813324,
+        "nonfinite": 0
+      },
+      "seconds": 7.709
+    },
+    {
+      "epoch": 175,
+      "loss": 0.05943502997979522,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7208677530288696,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.3851162791252136,
+        "nonfinite": 0
+      },
+      "seconds": 7.923
+    },
+    {
+      "epoch": 180,
+      "loss": 0.05919463140890002,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.729058027267456,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.44606536626815796,
+        "nonfinite": 0
+      },
+      "seconds": 8.132
+    },
+    {
+      "epoch": 185,
+      "loss": 0.05915292981080711,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7257703542709351,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 689,
+        "maximum_residual": 0.42409631609916687,
+        "nonfinite": 0
+      },
+      "seconds": 8.341
+    },
+    {
+      "epoch": 190,
+      "loss": 0.05907678999938071,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7304494380950928,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.4077725410461426,
+        "nonfinite": 0
+      },
+      "seconds": 8.551
+    },
+    {
+      "epoch": 195,
+      "loss": 0.05941630993038416,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7360377311706543,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.4564402103424072,
+        "nonfinite": 0
+      },
+      "seconds": 8.762
+    },
+    {
+      "epoch": 200,
+      "loss": 0.05986400623805821,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.722809374332428,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 660,
+        "maximum_residual": 0.491890549659729,
+        "nonfinite": 0
+      },
+      "seconds": 8.973
+    },
+    {
+      "epoch": 205,
+      "loss": 0.05912721320055425,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7253844141960144,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 582,
+        "maximum_residual": 0.571502685546875,
+        "nonfinite": 0
+      },
+      "seconds": 9.183
+    },
+    {
+      "epoch": 210,
+      "loss": 0.05888052540831268,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7282294034957886,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.4614024758338928,
+        "nonfinite": 0
+      },
+      "seconds": 9.395
+    },
+    {
+      "epoch": 215,
+      "loss": 0.05905174440704286,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7254139184951782,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.41472625732421875,
+        "nonfinite": 0
+      },
+      "seconds": 9.606
+    },
+    {
+      "epoch": 220,
+      "loss": 0.059417708311229944,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7325183153152466,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.4635535478591919,
+        "nonfinite": 0
+      },
+      "seconds": 9.818
+    },
+    {
+      "epoch": 225,
+      "loss": 0.05950568593107164,
+      "train": {
+        "violations_1e4": 2030,
+        "maximum_residual": 0.7200127840042114,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 639,
+        "maximum_residual": 0.7753532528877258,
+        "nonfinite": 0
+      },
+      "seconds": 10.029
+    },
+    {
+      "epoch": 230,
+      "loss": 0.05917489458806813,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7200262546539307,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.5368674993515015,
+        "nonfinite": 0
+      },
+      "seconds": 10.24
+    },
+    {
+      "epoch": 235,
+      "loss": 0.05898570688441396,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7096084356307983,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 678,
+        "maximum_residual": 0.5827353000640869,
+        "nonfinite": 0
+      },
+      "seconds": 10.451
+    },
+    {
+      "epoch": 240,
+      "loss": 0.059010913129895926,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7163292169570923,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.5353901386260986,
+        "nonfinite": 0
+      },
+      "seconds": 10.662
+    },
+    {
+      "epoch": 245,
+      "loss": 0.059188474202528596,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7286940217018127,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.47523462772369385,
+        "nonfinite": 0
+      },
+      "seconds": 10.876
+    },
+    {
+      "epoch": 250,
+      "loss": 0.0591526438947767,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7226244211196899,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 685,
+        "maximum_residual": 0.6735225915908813,
+        "nonfinite": 0
+      },
+      "seconds": 11.086
+    },
+    {
+      "epoch": 255,
+      "loss": 0.059240342350676656,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7711915969848633,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 664,
+        "maximum_residual": 0.6500526666641235,
+        "nonfinite": 0
+      },
+      "seconds": 11.3
+    },
+    {
+      "epoch": 260,
+      "loss": 0.058754607336595654,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7164667844772339,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 628,
+        "maximum_residual": 0.5205963850021362,
+        "nonfinite": 0
+      },
+      "seconds": 11.513
+    },
+    {
+      "epoch": 265,
+      "loss": 0.05893133254721761,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7229273319244385,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.4264920949935913,
+        "nonfinite": 0
+      },
+      "seconds": 11.727
+    },
+    {
+      "epoch": 270,
+      "loss": 0.059332571690902114,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.776757538318634,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.5567179918289185,
+        "nonfinite": 0
+      },
+      "seconds": 11.939
+    },
+    {
+      "epoch": 275,
+      "loss": 0.05842343927361071,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.7252060174942017,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.6557263135910034,
+        "nonfinite": 0
+      },
+      "seconds": 12.15
+    },
+    {
+      "epoch": 280,
+      "loss": 0.058714321348816156,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7290960550308228,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 644,
+        "maximum_residual": 0.5018723011016846,
+        "nonfinite": 0
+      },
+      "seconds": 12.36
+    },
+    {
+      "epoch": 285,
+      "loss": 0.05825566966086626,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7309233546257019,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 671,
+        "maximum_residual": 0.531324565410614,
+        "nonfinite": 0
+      },
+      "seconds": 12.572
+    },
+    {
+      "epoch": 290,
+      "loss": 0.05857795779593289,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7181140184402466,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.7020226120948792,
+        "nonfinite": 0
+      },
+      "seconds": 12.785
+    },
+    {
+      "epoch": 295,
+      "loss": 0.058602193370461464,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7193264961242676,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 546,
+        "maximum_residual": 0.8381122350692749,
+        "nonfinite": 0
+      },
+      "seconds": 12.995
+    },
+    {
+      "epoch": 300,
+      "loss": 0.05832130555063486,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.712204098701477,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 672,
+        "maximum_residual": 0.514471173286438,
+        "nonfinite": 0
+      },
+      "seconds": 13.206
+    },
+    {
+      "epoch": 305,
+      "loss": 0.05865106941200793,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7172558307647705,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 687,
+        "maximum_residual": 0.5487204194068909,
+        "nonfinite": 0
+      },
+      "seconds": 13.418
+    },
+    {
+      "epoch": 310,
+      "loss": 0.05847214185632765,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.711347758769989,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 651,
+        "maximum_residual": 0.7183710336685181,
+        "nonfinite": 0
+      },
+      "seconds": 13.629
+    },
+    {
+      "epoch": 315,
+      "loss": 0.058202282059937716,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7085702419281006,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 682,
+        "maximum_residual": 0.5053563714027405,
+        "nonfinite": 0
+      },
+      "seconds": 13.84
+    },
+    {
+      "epoch": 320,
+      "loss": 0.058194572338834405,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7245479226112366,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.5501547455787659,
+        "nonfinite": 0
+      },
+      "seconds": 14.052
+    },
+    {
+      "epoch": 325,
+      "loss": 0.058383725583553314,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7038928270339966,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.7844088673591614,
+        "nonfinite": 0
+      },
+      "seconds": 14.264
+    },
+    {
+      "epoch": 330,
+      "loss": 0.05828277627006173,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6977338790893555,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 586,
+        "maximum_residual": 0.7787619829177856,
+        "nonfinite": 0
+      },
+      "seconds": 14.476
+    },
+    {
+      "epoch": 335,
+      "loss": 0.058216193690896034,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7234644889831543,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.5834494829177856,
+        "nonfinite": 0
+      },
+      "seconds": 14.686
+    },
+    {
+      "epoch": 340,
+      "loss": 0.05835462571121752,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.6997036933898926,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 676,
+        "maximum_residual": 0.6548517942428589,
+        "nonfinite": 0
+      },
+      "seconds": 14.897
+    },
+    {
+      "epoch": 345,
+      "loss": 0.05831151292659342,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7014412879943848,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 693,
+        "maximum_residual": 0.6746953129768372,
+        "nonfinite": 0
+      },
+      "seconds": 15.109
+    },
+    {
+      "epoch": 350,
+      "loss": 0.05944216693751514,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.7146878242492676,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 667,
+        "maximum_residual": 0.5295171141624451,
+        "nonfinite": 0
+      },
+      "seconds": 15.319
+    },
+    {
+      "epoch": 355,
+      "loss": 0.058491027215495706,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7133840322494507,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.6044293642044067,
+        "nonfinite": 0
+      },
+      "seconds": 15.53
+    },
+    {
+      "epoch": 360,
+      "loss": 0.05815647472627461,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7008035778999329,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.6948688626289368,
+        "nonfinite": 0
+      },
+      "seconds": 15.741
+    },
+    {
+      "epoch": 365,
+      "loss": 0.058198475977405906,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.736074686050415,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 678,
+        "maximum_residual": 0.588659405708313,
+        "nonfinite": 0
+      },
+      "seconds": 15.951
+    },
+    {
+      "epoch": 370,
+      "loss": 0.058339099399745464,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6912867426872253,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 656,
+        "maximum_residual": 0.6143401861190796,
+        "nonfinite": 0
+      },
+      "seconds": 16.161
+    },
+    {
+      "epoch": 375,
+      "loss": 0.05778169259428978,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7244324684143066,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 640,
+        "maximum_residual": 0.5634891986846924,
+        "nonfinite": 0
+      },
+      "seconds": 16.372
+    },
+    {
+      "epoch": 380,
+      "loss": 0.05760240973904729,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6787526607513428,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 689,
+        "maximum_residual": 0.7027673721313477,
+        "nonfinite": 0
+      },
+      "seconds": 16.58
+    },
+    {
+      "epoch": 385,
+      "loss": 0.05841762013733387,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7293235063552856,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 601,
+        "maximum_residual": 0.7163886427879333,
+        "nonfinite": 0
+      },
+      "seconds": 16.791
+    },
+    {
+      "epoch": 390,
+      "loss": 0.058130647987127304,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.692766547203064,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 640,
+        "maximum_residual": 0.7481539249420166,
+        "nonfinite": 0
+      },
+      "seconds": 17.004
+    },
+    {
+      "epoch": 395,
+      "loss": 0.05770906154066324,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7238666415214539,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 600,
+        "maximum_residual": 0.8791321516036987,
+        "nonfinite": 0
+      },
+      "seconds": 17.214
+    },
+    {
+      "epoch": 400,
+      "loss": 0.05828149733133614,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7469193339347839,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 636,
+        "maximum_residual": 0.6203323602676392,
+        "nonfinite": 0
+      },
+      "seconds": 17.425
+    },
+    {
+      "epoch": 405,
+      "loss": 0.057805746560916305,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7265353202819824,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 666,
+        "maximum_residual": 0.861838698387146,
+        "nonfinite": 0
+      },
+      "seconds": 17.64
+    },
+    {
+      "epoch": 410,
+      "loss": 0.05790527584031224,
+      "train": {
+        "violations_1e4": 2016,
+        "maximum_residual": 0.680493950843811,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 589,
+        "maximum_residual": 0.581960916519165,
+        "nonfinite": 0
+      },
+      "seconds": 17.852
+    },
+    {
+      "epoch": 415,
+      "loss": 0.05790134286507964,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6718449592590332,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 655,
+        "maximum_residual": 0.702928900718689,
+        "nonfinite": 0
+      },
+      "seconds": 18.068
+    },
+    {
+      "epoch": 420,
+      "loss": 0.057813212275505066,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6662988662719727,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 680,
+        "maximum_residual": 0.5249649882316589,
+        "nonfinite": 0
+      },
+      "seconds": 18.283
+    },
+    {
+      "epoch": 425,
+      "loss": 0.05758990813046694,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7406999468803406,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 648,
+        "maximum_residual": 0.6644226908683777,
+        "nonfinite": 0
+      },
+      "seconds": 18.499
+    },
+    {
+      "epoch": 430,
+      "loss": 0.057511747581884265,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7262042164802551,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 621,
+        "maximum_residual": 0.5890512466430664,
+        "nonfinite": 0
+      },
+      "seconds": 18.711
+    },
+    {
+      "epoch": 435,
+      "loss": 0.05731731583364308,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6862627863883972,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 661,
+        "maximum_residual": 0.8116767406463623,
+        "nonfinite": 0
+      },
+      "seconds": 18.926
+    },
+    {
+      "epoch": 440,
+      "loss": 0.05744674219749868,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7000600695610046,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 676,
+        "maximum_residual": 0.6796376705169678,
+        "nonfinite": 0
+      },
+      "seconds": 19.138
+    },
+    {
+      "epoch": 445,
+      "loss": 0.057833568658679724,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7397054433822632,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 652,
+        "maximum_residual": 0.6352356672286987,
+        "nonfinite": 0
+      },
+      "seconds": 19.351
+    },
+    {
+      "epoch": 450,
+      "loss": 0.05791816930286586,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6647777557373047,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 661,
+        "maximum_residual": 0.635518491268158,
+        "nonfinite": 0
+      },
+      "seconds": 19.564
+    },
+    {
+      "epoch": 455,
+      "loss": 0.05770260142162442,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6794141530990601,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 656,
+        "maximum_residual": 0.576846718788147,
+        "nonfinite": 0
+      },
+      "seconds": 19.778
+    },
+    {
+      "epoch": 460,
+      "loss": 0.05750262318179011,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7067837715148926,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 657,
+        "maximum_residual": 0.6246873736381531,
+        "nonfinite": 0
+      },
+      "seconds": 19.995
+    },
+    {
+      "epoch": 465,
+      "loss": 0.05764799821190536,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.7271867394447327,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 558,
+        "maximum_residual": 0.6707866191864014,
+        "nonfinite": 0
+      },
+      "seconds": 20.207
+    },
+    {
+      "epoch": 470,
+      "loss": 0.05775324301794171,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7227591872215271,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 675,
+        "maximum_residual": 0.6268335580825806,
+        "nonfinite": 0
+      },
+      "seconds": 20.419
+    },
+    {
+      "epoch": 475,
+      "loss": 0.05699132545851171,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.7659633755683899,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 668,
+        "maximum_residual": 0.678146243095398,
+        "nonfinite": 0
+      },
+      "seconds": 20.634
+    },
+    {
+      "epoch": 480,
+      "loss": 0.057578032836318016,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7121891975402832,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 668,
+        "maximum_residual": 0.7056350111961365,
+        "nonfinite": 0
+      },
+      "seconds": 20.846
+    },
+    {
+      "epoch": 485,
+      "loss": 0.05744750378653407,
+      "train": {
+        "violations_1e4": 2019,
+        "maximum_residual": 0.6680664420127869,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 661,
+        "maximum_residual": 0.6570925116539001,
+        "nonfinite": 0
+      },
+      "seconds": 21.061
+    },
+    {
+      "epoch": 490,
+      "loss": 0.05751387891359627,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7195031642913818,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 621,
+        "maximum_residual": 0.673025369644165,
+        "nonfinite": 0
+      },
+      "seconds": 21.274
+    },
+    {
+      "epoch": 495,
+      "loss": 0.05755301262252033,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.7587752938270569,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 661,
+        "maximum_residual": 0.6740484237670898,
+        "nonfinite": 0
+      },
+      "seconds": 21.489
+    },
+    {
+      "epoch": 500,
+      "loss": 0.0588406533934176,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.7132275104522705,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 669,
+        "maximum_residual": 0.5074752569198608,
+        "nonfinite": 0
+      },
+      "seconds": 21.704
+    },
+    {
+      "epoch": 505,
+      "loss": 0.057168085826560855,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6983150243759155,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 639,
+        "maximum_residual": 0.6115425825119019,
+        "nonfinite": 0
+      },
+      "seconds": 21.916
+    },
+    {
+      "epoch": 510,
+      "loss": 0.057493770495057106,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6343542337417603,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 647,
+        "maximum_residual": 0.6290435791015625,
+        "nonfinite": 0
+      },
+      "seconds": 22.128
+    },
+    {
+      "epoch": 515,
+      "loss": 0.05735557363368571,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.673600971698761,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 680,
+        "maximum_residual": 0.5924174785614014,
+        "nonfinite": 0
+      },
+      "seconds": 22.339
+    },
+    {
+      "epoch": 520,
+      "loss": 0.05704880924895406,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7047385573387146,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 653,
+        "maximum_residual": 0.791357159614563,
+        "nonfinite": 0
+      },
+      "seconds": 22.55
+    },
+    {
+      "epoch": 525,
+      "loss": 0.05702695227228105,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6925868391990662,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 645,
+        "maximum_residual": 0.5494883060455322,
+        "nonfinite": 0
+      },
+      "seconds": 22.761
+    },
+    {
+      "epoch": 530,
+      "loss": 0.05721458559855819,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6396116018295288,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 683,
+        "maximum_residual": 0.5296484231948853,
+        "nonfinite": 0
+      },
+      "seconds": 22.972
+    },
+    {
+      "epoch": 535,
+      "loss": 0.05731228552758694,
+      "train": {
+        "violations_1e4": 2016,
+        "maximum_residual": 0.7386107444763184,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 637,
+        "maximum_residual": 0.5867210030555725,
+        "nonfinite": 0
+      },
+      "seconds": 23.185
+    },
+    {
+      "epoch": 540,
+      "loss": 0.05693226447328925,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7090380787849426,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 672,
+        "maximum_residual": 0.5349289178848267,
+        "nonfinite": 0
+      },
+      "seconds": 23.398
+    },
+    {
+      "epoch": 545,
+      "loss": 0.05740785924717784,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7086358666419983,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 641,
+        "maximum_residual": 0.7568793296813965,
+        "nonfinite": 0
+      },
+      "seconds": 23.61
+    },
+    {
+      "epoch": 550,
+      "loss": 0.05809691268950701,
+      "train": {
+        "violations_1e4": 2025,
+        "maximum_residual": 0.7063714265823364,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 658,
+        "maximum_residual": 0.6053000688552856,
+        "nonfinite": 0
+      },
+      "seconds": 23.822
+    },
+    {
+      "epoch": 555,
+      "loss": 0.05690456391312182,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6650592088699341,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 657,
+        "maximum_residual": 0.5410213470458984,
+        "nonfinite": 0
+      },
+      "seconds": 24.035
+    },
+    {
+      "epoch": 560,
+      "loss": 0.05741384928114712,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6506876945495605,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 671,
+        "maximum_residual": 0.6913028955459595,
+        "nonfinite": 0
+      },
+      "seconds": 24.247
+    },
+    {
+      "epoch": 565,
+      "loss": 0.05705162207596004,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6338898539543152,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.586844265460968,
+        "nonfinite": 0
+      },
+      "seconds": 24.459
+    },
+    {
+      "epoch": 570,
+      "loss": 0.057771574007347226,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6708234548568726,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 636,
+        "maximum_residual": 0.8511502742767334,
+        "nonfinite": 0
+      },
+      "seconds": 24.674
+    },
+    {
+      "epoch": 575,
+      "loss": 0.05738974874839187,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6504184603691101,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 684,
+        "maximum_residual": 0.6516425013542175,
+        "nonfinite": 0
+      },
+      "seconds": 24.887
+    },
+    {
+      "epoch": 580,
+      "loss": 0.057650156784802675,
+      "train": {
+        "violations_1e4": 2022,
+        "maximum_residual": 0.8285353183746338,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 689,
+        "maximum_residual": 0.5327566862106323,
+        "nonfinite": 0
+      },
+      "seconds": 25.1
+    },
+    {
+      "epoch": 585,
+      "loss": 0.05760596669279039,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6752718687057495,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.4481194019317627,
+        "nonfinite": 0
+      },
+      "seconds": 25.312
+    },
+    {
+      "epoch": 590,
+      "loss": 0.05730761121958494,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6540311574935913,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.5826998353004456,
+        "nonfinite": 0
+      },
+      "seconds": 25.525
+    },
+    {
+      "epoch": 595,
+      "loss": 0.05748870619572699,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6675435304641724,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 685,
+        "maximum_residual": 0.5003759860992432,
+        "nonfinite": 0
+      },
+      "seconds": 25.737
+    },
+    {
+      "epoch": 600,
+      "loss": 0.056919815484434366,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6743813157081604,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 677,
+        "maximum_residual": 0.584613025188446,
+        "nonfinite": 0
+      },
+      "seconds": 25.949
+    },
+    {
+      "epoch": 605,
+      "loss": 0.056982168927788734,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.759548008441925,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 660,
+        "maximum_residual": 0.6713626384735107,
+        "nonfinite": 0
+      },
+      "seconds": 26.161
+    },
+    {
+      "epoch": 610,
+      "loss": 0.057612434728071094,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6545794010162354,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.5414175987243652,
+        "nonfinite": 0
+      },
+      "seconds": 26.373
+    },
+    {
+      "epoch": 615,
+      "loss": 0.05686786607839167,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7090475559234619,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 667,
+        "maximum_residual": 0.6051532626152039,
+        "nonfinite": 0
+      },
+      "seconds": 26.586
+    },
+    {
+      "epoch": 620,
+      "loss": 0.05822445056401193,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.6403510570526123,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 692,
+        "maximum_residual": 0.5941832661628723,
+        "nonfinite": 0
+      },
+      "seconds": 26.799
+    },
+    {
+      "epoch": 625,
+      "loss": 0.05718287918716669,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6353679895401001,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 664,
+        "maximum_residual": 0.6943228244781494,
+        "nonfinite": 0
+      },
+      "seconds": 27.012
+    },
+    {
+      "epoch": 630,
+      "loss": 0.05810084426775575,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.6795058846473694,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 578,
+        "maximum_residual": 1.1080318689346313,
+        "nonfinite": 0
+      },
+      "seconds": 27.225
+    },
+    {
+      "epoch": 635,
+      "loss": 0.05745625332929194,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6410567760467529,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 597,
+        "maximum_residual": 0.6493325233459473,
+        "nonfinite": 0
+      },
+      "seconds": 27.438
+    },
+    {
+      "epoch": 640,
+      "loss": 0.057031386997550726,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.6907995939254761,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 688,
+        "maximum_residual": 0.5408555269241333,
+        "nonfinite": 0
+      },
+      "seconds": 27.652
+    },
+    {
+      "epoch": 645,
+      "loss": 0.056704575195908546,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.7640701532363892,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 680,
+        "maximum_residual": 0.5543136596679688,
+        "nonfinite": 0
+      },
+      "seconds": 27.864
+    },
+    {
+      "epoch": 650,
+      "loss": 0.05730976792983711,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.6314828395843506,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 663,
+        "maximum_residual": 0.5638675689697266,
+        "nonfinite": 0
+      },
+      "seconds": 28.077
+    },
+    {
+      "epoch": 655,
+      "loss": 0.05707640806213021,
+      "train": {
+        "violations_1e4": 2025,
+        "maximum_residual": 0.6606318950653076,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 669,
+        "maximum_residual": 0.5586421489715576,
+        "nonfinite": 0
+      },
+      "seconds": 28.289
+    },
+    {
+      "epoch": 660,
+      "loss": 0.056564714293926954,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6738696098327637,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 582,
+        "maximum_residual": 0.9334626197814941,
+        "nonfinite": 0
+      },
+      "seconds": 28.5
+    },
+    {
+      "epoch": 665,
+      "loss": 0.056983057875186205,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.6565303802490234,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 683,
+        "maximum_residual": 0.5250874757766724,
+        "nonfinite": 0
+      },
+      "seconds": 28.713
+    },
+    {
+      "epoch": 670,
+      "loss": 0.05682876147329807,
+      "train": {
+        "violations_1e4": 2013,
+        "maximum_residual": 0.7257713675498962,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 655,
+        "maximum_residual": 0.715947151184082,
+        "nonfinite": 0
+      },
+      "seconds": 28.93
+    },
+    {
+      "epoch": 675,
+      "loss": 0.05779547058045864,
+      "train": {
+        "violations_1e4": 2029,
+        "maximum_residual": 0.7339629530906677,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 677,
+        "maximum_residual": 0.6414608955383301,
+        "nonfinite": 0
+      },
+      "seconds": 29.142
+    },
+    {
+      "epoch": 680,
+      "loss": 0.05687603447586298,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.7237609028816223,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 632,
+        "maximum_residual": 0.8620190620422363,
+        "nonfinite": 0
+      },
+      "seconds": 29.357
+    },
+    {
+      "epoch": 685,
+      "loss": 0.05705769476480782,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6162768602371216,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 683,
+        "maximum_residual": 0.44914066791534424,
+        "nonfinite": 0
+      },
+      "seconds": 29.569
+    },
+    {
+      "epoch": 690,
+      "loss": 0.05730250501073897,
+      "train": {
+        "violations_1e4": 2022,
+        "maximum_residual": 0.6910001635551453,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 655,
+        "maximum_residual": 0.810244083404541,
+        "nonfinite": 0
+      },
+      "seconds": 29.782
+    },
+    {
+      "epoch": 695,
+      "loss": 0.05695645580999553,
+      "train": {
+        "violations_1e4": 2019,
+        "maximum_residual": 0.6382677555084229,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 668,
+        "maximum_residual": 0.5832017660140991,
+        "nonfinite": 0
+      },
+      "seconds": 29.996
+    },
+    {
+      "epoch": 700,
+      "loss": 0.056427983334288,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7533878087997437,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 627,
+        "maximum_residual": 0.8139512538909912,
+        "nonfinite": 0
+      },
+      "seconds": 30.21
+    },
+    {
+      "epoch": 705,
+      "loss": 0.056677724700421095,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.6713131666183472,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 675,
+        "maximum_residual": 0.6437047719955444,
+        "nonfinite": 0
+      },
+      "seconds": 30.423
+    },
+    {
+      "epoch": 710,
+      "loss": 0.05689327558502555,
+      "train": {
+        "violations_1e4": 2015,
+        "maximum_residual": 0.760173499584198,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 664,
+        "maximum_residual": 0.7368748784065247,
+        "nonfinite": 0
+      },
+      "seconds": 30.634
+    },
+    {
+      "epoch": 715,
+      "loss": 0.05779809597879648,
+      "train": {
+        "violations_1e4": 2016,
+        "maximum_residual": 0.6675533652305603,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 627,
+        "maximum_residual": 0.6369002461433411,
+        "nonfinite": 0
+      },
+      "seconds": 30.847
+    },
+    {
+      "epoch": 720,
+      "loss": 0.05718123633414507,
+      "train": {
+        "violations_1e4": 2025,
+        "maximum_residual": 0.8040757179260254,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 681,
+        "maximum_residual": 0.5852149128913879,
+        "nonfinite": 0
+      },
+      "seconds": 31.062
+    },
+    {
+      "epoch": 725,
+      "loss": 0.056437287013977766,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.805374264717102,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 683,
+        "maximum_residual": 0.5947241187095642,
+        "nonfinite": 0
+      },
+      "seconds": 31.275
+    },
+    {
+      "epoch": 730,
+      "loss": 0.057105056243017316,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.785727858543396,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 671,
+        "maximum_residual": 0.6705402135848999,
+        "nonfinite": 0
+      },
+      "seconds": 31.487
+    },
+    {
+      "epoch": 735,
+      "loss": 0.05696975742466748,
+      "train": {
+        "violations_1e4": 2005,
+        "maximum_residual": 0.6447991728782654,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.6172823905944824,
+        "nonfinite": 0
+      },
+      "seconds": 31.7
+    },
+    {
+      "epoch": 740,
+      "loss": 0.05677003669552505,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.7082734107971191,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 656,
+        "maximum_residual": 0.6237205266952515,
+        "nonfinite": 0
+      },
+      "seconds": 31.913
+    },
+    {
+      "epoch": 745,
+      "loss": 0.05631978390738368,
+      "train": {
+        "violations_1e4": 2017,
+        "maximum_residual": 0.6779608130455017,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 686,
+        "maximum_residual": 0.6112315654754639,
+        "nonfinite": 0
+      },
+      "seconds": 32.125
+    },
+    {
+      "epoch": 750,
+      "loss": 0.05687118205241859,
+      "train": {
+        "violations_1e4": 2002,
+        "maximum_residual": 0.8817058801651001,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 637,
+        "maximum_residual": 1.2461503744125366,
+        "nonfinite": 0
+      },
+      "seconds": 32.341
+    },
+    {
+      "epoch": 755,
+      "loss": 0.057130326051265,
+      "train": {
+        "violations_1e4": 2017,
+        "maximum_residual": 0.7943005561828613,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 629,
+        "maximum_residual": 0.5837874412536621,
+        "nonfinite": 0
+      },
+      "seconds": 32.553
+    },
+    {
+      "epoch": 760,
+      "loss": 0.05669226893223822,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.6852703094482422,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 618,
+        "maximum_residual": 0.7101918458938599,
+        "nonfinite": 0
+      },
+      "seconds": 32.766
+    },
+    {
+      "epoch": 765,
+      "loss": 0.056831986643373966,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7008365392684937,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 663,
+        "maximum_residual": 0.7255845069885254,
+        "nonfinite": 0
+      },
+      "seconds": 32.978
+    },
+    {
+      "epoch": 770,
+      "loss": 0.05624005547724664,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7173975110054016,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 618,
+        "maximum_residual": 0.6744158864021301,
+        "nonfinite": 0
+      },
+      "seconds": 33.192
+    },
+    {
+      "epoch": 775,
+      "loss": 0.05723465047776699,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.6786141395568848,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 691,
+        "maximum_residual": 0.5516812801361084,
+        "nonfinite": 0
+      },
+      "seconds": 33.406
+    },
+    {
+      "epoch": 780,
+      "loss": 0.05640341364778578,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6561790704727173,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 678,
+        "maximum_residual": 0.5756993293762207,
+        "nonfinite": 0
+      },
+      "seconds": 33.625
+    },
+    {
+      "epoch": 785,
+      "loss": 0.05705993389710784,
+      "train": {
+        "violations_1e4": 2017,
+        "maximum_residual": 0.7456663250923157,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 630,
+        "maximum_residual": 1.1799774169921875,
+        "nonfinite": 0
+      },
+      "seconds": 33.845
+    },
+    {
+      "epoch": 790,
+      "loss": 0.05669461889192462,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.7632489800453186,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 688,
+        "maximum_residual": 0.6428086161613464,
+        "nonfinite": 0
+      },
+      "seconds": 34.068
+    },
+    {
+      "epoch": 795,
+      "loss": 0.05669586290605366,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6291998624801636,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 664,
+        "maximum_residual": 0.8033163547515869,
+        "nonfinite": 0
+      },
+      "seconds": 34.287
+    },
+    {
+      "epoch": 800,
+      "loss": 0.05606367439031601,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7413715720176697,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 670,
+        "maximum_residual": 0.680039644241333,
+        "nonfinite": 0
+      },
+      "seconds": 34.511
+    },
+    {
+      "epoch": 805,
+      "loss": 0.05678384331986308,
+      "train": {
+        "violations_1e4": 2018,
+        "maximum_residual": 0.7132203578948975,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 636,
+        "maximum_residual": 0.5716124176979065,
+        "nonfinite": 0
+      },
+      "seconds": 34.73
+    },
+    {
+      "epoch": 810,
+      "loss": 0.057007828494533896,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6428447365760803,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 556,
+        "maximum_residual": 0.8368244171142578,
+        "nonfinite": 0
+      },
+      "seconds": 34.95
+    },
+    {
+      "epoch": 815,
+      "loss": 0.05623732274398208,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7188316583633423,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 654,
+        "maximum_residual": 0.7248727083206177,
+        "nonfinite": 0
+      },
+      "seconds": 35.171
+    },
+    {
+      "epoch": 820,
+      "loss": 0.05667675146833062,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.7498469352722168,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 660,
+        "maximum_residual": 0.5149438381195068,
+        "nonfinite": 0
+      },
+      "seconds": 35.392
+    },
+    {
+      "epoch": 825,
+      "loss": 0.057228362653404474,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6730934381484985,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.5134478807449341,
+        "nonfinite": 0
+      },
+      "seconds": 35.612
+    },
+    {
+      "epoch": 830,
+      "loss": 0.05613252241164446,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7063109278678894,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 563,
+        "maximum_residual": 0.8000429272651672,
+        "nonfinite": 0
+      },
+      "seconds": 35.829
+    },
+    {
+      "epoch": 835,
+      "loss": 0.05635117809288204,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7276060581207275,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 629,
+        "maximum_residual": 0.5705313682556152,
+        "nonfinite": 0
+      },
+      "seconds": 36.049
+    },
+    {
+      "epoch": 840,
+      "loss": 0.05732871755026281,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.6384599208831787,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 688,
+        "maximum_residual": 0.6796103715896606,
+        "nonfinite": 0
+      },
+      "seconds": 36.273
+    },
+    {
+      "epoch": 845,
+      "loss": 0.05616967682726681,
+      "train": {
+        "violations_1e4": 2014,
+        "maximum_residual": 0.7825870513916016,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 688,
+        "maximum_residual": 0.6984075307846069,
+        "nonfinite": 0
+      },
+      "seconds": 36.495
+    },
+    {
+      "epoch": 850,
+      "loss": 0.05611173249781132,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6580592393875122,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 666,
+        "maximum_residual": 0.6775417327880859,
+        "nonfinite": 0
+      },
+      "seconds": 36.714
+    },
+    {
+      "epoch": 855,
+      "loss": 0.056640749564394355,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6554793119430542,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 667,
+        "maximum_residual": 0.6981011629104614,
+        "nonfinite": 0
+      },
+      "seconds": 36.937
+    },
+    {
+      "epoch": 860,
+      "loss": 0.05641396786086261,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.67160564661026,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 642,
+        "maximum_residual": 0.8079221248626709,
+        "nonfinite": 0
+      },
+      "seconds": 37.158
+    },
+    {
+      "epoch": 865,
+      "loss": 0.05640709400177002,
+      "train": {
+        "violations_1e4": 2017,
+        "maximum_residual": 0.7257382869720459,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 652,
+        "maximum_residual": 0.6280133724212646,
+        "nonfinite": 0
+      },
+      "seconds": 37.378
+    },
+    {
+      "epoch": 870,
+      "loss": 0.056801967322826385,
+      "train": {
+        "violations_1e4": 2019,
+        "maximum_residual": 0.6448041200637817,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 630,
+        "maximum_residual": 1.043513298034668,
+        "nonfinite": 0
+      },
+      "seconds": 37.598
+    },
+    {
+      "epoch": 875,
+      "loss": 0.05784338875673711,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.7414364814758301,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 688,
+        "maximum_residual": 0.5306768417358398,
+        "nonfinite": 0
+      },
+      "seconds": 37.817
+    },
+    {
+      "epoch": 880,
+      "loss": 0.05660801404155791,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7304165363311768,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.553202211856842,
+        "nonfinite": 0
+      },
+      "seconds": 38.038
+    },
+    {
+      "epoch": 885,
+      "loss": 0.056102382484823465,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.6660834550857544,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 628,
+        "maximum_residual": 0.6542603969573975,
+        "nonfinite": 0
+      },
+      "seconds": 38.26
+    },
+    {
+      "epoch": 890,
+      "loss": 0.05685673141852021,
+      "train": {
+        "violations_1e4": 2016,
+        "maximum_residual": 0.6371088027954102,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 597,
+        "maximum_residual": 0.7125425338745117,
+        "nonfinite": 0
+      },
+      "seconds": 38.48
+    },
+    {
+      "epoch": 895,
+      "loss": 0.056206198409199715,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.764459490776062,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 630,
+        "maximum_residual": 0.8756392002105713,
+        "nonfinite": 0
+      },
+      "seconds": 38.699
+    },
+    {
+      "epoch": 900,
+      "loss": 0.05665566539391875,
+      "train": {
+        "violations_1e4": 2016,
+        "maximum_residual": 0.6766934990882874,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 665,
+        "maximum_residual": 0.697748601436615,
+        "nonfinite": 0
+      },
+      "seconds": 38.922
+    },
+    {
+      "epoch": 905,
+      "loss": 0.05721300654113293,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.6439661383628845,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 577,
+        "maximum_residual": 0.8199927806854248,
+        "nonfinite": 0
+      },
+      "seconds": 39.142
+    },
+    {
+      "epoch": 910,
+      "loss": 0.05686226370744407,
+      "train": {
+        "violations_1e4": 2008,
+        "maximum_residual": 0.8145020008087158,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 661,
+        "maximum_residual": 0.6799654960632324,
+        "nonfinite": 0
+      },
+      "seconds": 39.363
+    },
+    {
+      "epoch": 915,
+      "loss": 0.05674725980497897,
+      "train": {
+        "violations_1e4": 2012,
+        "maximum_residual": 0.8136218786239624,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 626,
+        "maximum_residual": 0.8103792667388916,
+        "nonfinite": 0
+      },
+      "seconds": 39.584
+    },
+    {
+      "epoch": 920,
+      "loss": 0.056214156560599804,
+      "train": {
+        "violations_1e4": 2006,
+        "maximum_residual": 0.855436384677887,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 564,
+        "maximum_residual": 0.8971248865127563,
+        "nonfinite": 0
+      },
+      "seconds": 39.804
+    },
+    {
+      "epoch": 925,
+      "loss": 0.056461527943611145,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6501548290252686,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 633,
+        "maximum_residual": 0.7220633029937744,
+        "nonfinite": 0
+      },
+      "seconds": 40.025
+    },
+    {
+      "epoch": 930,
+      "loss": 0.05600277869962156,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.6608115434646606,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 648,
+        "maximum_residual": 0.7499943971633911,
+        "nonfinite": 0
+      },
+      "seconds": 40.248
+    },
+    {
+      "epoch": 935,
+      "loss": 0.05574868316762149,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7239974141120911,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 609,
+        "maximum_residual": 0.7595127820968628,
+        "nonfinite": 0
+      },
+      "seconds": 40.469
+    },
+    {
+      "epoch": 940,
+      "loss": 0.05614271969534457,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.6709471940994263,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 664,
+        "maximum_residual": 0.6567192077636719,
+        "nonfinite": 0
+      },
+      "seconds": 40.695
+    },
+    {
+      "epoch": 945,
+      "loss": 0.05663069896399975,
+      "train": {
+        "violations_1e4": 2024,
+        "maximum_residual": 0.6468659043312073,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 672,
+        "maximum_residual": 0.6752667427062988,
+        "nonfinite": 0
+      },
+      "seconds": 40.914
+    },
+    {
+      "epoch": 950,
+      "loss": 0.056379236513748765,
+      "train": {
+        "violations_1e4": 2015,
+        "maximum_residual": 0.7577008605003357,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 685,
+        "maximum_residual": 0.7043204307556152,
+        "nonfinite": 0
+      },
+      "seconds": 41.132
+    },
+    {
+      "epoch": 955,
+      "loss": 0.05628429399803281,
+      "train": {
+        "violations_1e4": 2026,
+        "maximum_residual": 0.6373721361160278,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 582,
+        "maximum_residual": 0.7014114856719971,
+        "nonfinite": 0
+      },
+      "seconds": 41.354
+    },
+    {
+      "epoch": 960,
+      "loss": 0.05602934514172375,
+      "train": {
+        "violations_1e4": 2011,
+        "maximum_residual": 0.8416234254837036,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 670,
+        "maximum_residual": 0.7092971801757812,
+        "nonfinite": 0
+      },
+      "seconds": 41.577
+    },
+    {
+      "epoch": 965,
+      "loss": 0.05600355635397136,
+      "train": {
+        "violations_1e4": 2021,
+        "maximum_residual": 0.74839186668396,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 647,
+        "maximum_residual": 0.8037432432174683,
+        "nonfinite": 0
+      },
+      "seconds": 41.794
+    },
+    {
+      "epoch": 970,
+      "loss": 0.05607881350442767,
+      "train": {
+        "violations_1e4": 2023,
+        "maximum_residual": 0.6503616571426392,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 631,
+        "maximum_residual": 1.1967800855636597,
+        "nonfinite": 0
+      },
+      "seconds": 42.014
+    },
+    {
+      "epoch": 975,
+      "loss": 0.05598885822109878,
+      "train": {
+        "violations_1e4": 2027,
+        "maximum_residual": 0.7478159666061401,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 617,
+        "maximum_residual": 0.8154213428497314,
+        "nonfinite": 0
+      },
+      "seconds": 42.234
+    },
+    {
+      "epoch": 980,
+      "loss": 0.05611442471854389,
+      "train": {
+        "violations_1e4": 2017,
+        "maximum_residual": 0.6416359543800354,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 625,
+        "maximum_residual": 0.7374680042266846,
+        "nonfinite": 0
+      },
+      "seconds": 42.454
+    },
+    {
+      "epoch": 985,
+      "loss": 0.05626111105084419,
+      "train": {
+        "violations_1e4": 2020,
+        "maximum_residual": 0.6364935636520386,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 677,
+        "maximum_residual": 0.5590478777885437,
+        "nonfinite": 0
+      },
+      "seconds": 42.675
+    },
+    {
+      "epoch": 990,
+      "loss": 0.05651803221553564,
+      "train": {
+        "violations_1e4": 2028,
+        "maximum_residual": 0.6474701166152954,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 690,
+        "maximum_residual": 0.5861596465110779,
+        "nonfinite": 0
+      },
+      "seconds": 42.891
+    },
+    {
+      "epoch": 995,
+      "loss": 0.05684276157990098,
+      "train": {
+        "violations_1e4": 2009,
+        "maximum_residual": 0.8488207459449768,
+        "nonfinite": 0
+      },
+      "held": {
+        "violations_1e4": 604,
+        "maximum_residual": 0.6654567718505859,
+        "nonfinite": 0
+      },
+      "seconds": 43.111
+    }
+  ],
+  "best_selection_key": [
+    0,
+    2110,
+    5.658791542053223
+  ],
+  "float64_training": {
+    "violations_1e6": 1681,
+    "maximum_residual": 1.5282321213292236,
+    "nonfinite": 0
+  },
+  "float64_heldout": {
+    "violations_1e6": 428,
+    "maximum_residual": 5.656844200375035,
+    "nonfinite": 0
+  },
+  "reversed_token_ablation": {
+    "violations_1e6": 412,
+    "maximum_residual": 5.609143225507839,
+    "nonfinite": 0
+  },
+  "padding_invariance_max_error": 0.0,
+  "weight_sha256": "7a4528efdd4b7bb7c79ecc8d43ebeb6dc657d09830c376e29e8b5c08b3a80d5f",
+  "gpu_peak_allocated_gib": 0.1696,
+  "seconds": 43.9,
+  "finite_fit_only": true,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false
+}
