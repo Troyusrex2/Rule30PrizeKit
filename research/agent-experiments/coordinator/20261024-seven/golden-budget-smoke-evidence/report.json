@@ -1,0 +1,91 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "f78caa3a25d5ea08d500f90359e30e7c325090b6c5443b396859df74c9822293",
+  "build_seconds": 6.812,
+  "replay_seconds": 10.735,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.initial_run_boundary",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.one_black_boundary",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.small_frontier_dfs_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.two_black_boundary",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.initial_run_boundary",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.one_black_boundary",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.two_black_boundary",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetSmokeResearch.small_frontier_dfs_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenBudgetSmokeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

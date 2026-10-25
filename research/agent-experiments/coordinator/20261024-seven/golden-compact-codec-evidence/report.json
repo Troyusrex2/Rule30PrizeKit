@@ -1,0 +1,181 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "3b985925ca4f37d0604687014f5b65ee01f97ae2ec84cef2b68e9c8f625e12bb",
+  "build_seconds": 6.297,
+  "replay_seconds": 9.968,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.bits_congr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.getFlags",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getFlags_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.getR",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getR_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.getRm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getRm_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.getUsed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getUsed_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getUsed_encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenCompactCodecResearch.mask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.encode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getFlags.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getR.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getRm.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getUsed.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.mask.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getR_bit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getRm_bit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getFlags_bit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.getUsed_encode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenCompactCodecResearch.bits_congr",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenCompactCodecResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 39,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

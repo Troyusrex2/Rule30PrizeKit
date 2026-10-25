@@ -1,0 +1,112 @@
+{
+  "factor": 2,
+  "beam": 2048,
+  "length": 11,
+  "six_word_constraint_kernel_verified": true,
+  "additional_image_constraints_numerical_only": 14,
+  "counterexample_found": true,
+  "forbidden_patterns": [
+    {
+      "length": 6,
+      "lsb_time_first": "010110"
+    },
+    {
+      "length": 7,
+      "lsb_time_first": "1011010"
+    },
+    {
+      "length": 9,
+      "lsb_time_first": "101101110"
+    },
+    {
+      "length": 9,
+      "lsb_time_first": "010101111"
+    },
+    {
+      "length": 10,
+      "lsb_time_first": "1010111010"
+    },
+    {
+      "length": 10,
+      "lsb_time_first": "0101110110"
+    },
+    {
+      "length": 10,
+      "lsb_time_first": "0110101111"
+    },
+    {
+      "length": 11,
+      "lsb_time_first": "01101110110"
+    },
+    {
+      "length": 12,
+      "lsb_time_first": "101101111010"
+    },
+    {
+      "length": 12,
+      "lsb_time_first": "101011101110"
+    },
+    {
+      "length": 12,
+      "lsb_time_first": "011011101111"
+    },
+    {
+      "length": 13,
+      "lsb_time_first": "0111101110110"
+    },
+    {
+      "length": 13,
+      "lsb_time_first": "0110111101110"
+    },
+    {
+      "length": 13,
+      "lsb_time_first": "1110111101110"
+    },
+    {
+      "length": 14,
+      "lsb_time_first": "11011101111010"
+    },
+    {
+      "length": 14,
+      "lsb_time_first": "01111011101111"
+    }
+  ],
+  "final_deficit": -1,
+  "even_black_count": 1,
+  "free_zeros": 3,
+  "free_prefix": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+  ],
+  "even_input_hex": "0x10",
+  "free_prefix_hex": "0x36f",
+  "independent_scalar_and_physical_reencoding_passed": true,
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "records": [
+    {
+      "length": 11,
+      "deficit": -1,
+      "even_black_count": 1,
+      "free_zeros": 3,
+      "seconds": 0.032
+    }
+  ],
+  "stop_reason": "counterexample_found",
+  "Lean_verified": false,
+  "unbounded_charge_proved": false,
+  "full_problem_solved": false,
+  "seconds": 0.032
+}

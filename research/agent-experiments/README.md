@@ -8,6 +8,12 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+The latest [coupled-language and counting report](coordinator/20261024-seven/COUPLED-LANGUAGE.md)
+adds two kernel-checked forbidden words, a checked population certificate,
+and a proved reduction of CQ01 to an explicitly open counting inequality.
+It also preserves the finite language censuses, failed ranking searches and
+inconclusive longer solver queries. It is not a prize solution.
+
 The [reviewed catalog integration](coordinator/20261024-seven/REVIEWED-CATALOG.md)
 is now in [PR #16](https://github.com/WolframInstitute/Rule30PrizeKit/pull/16):
 the consolidated method and its tail-13 use pass all 326 declaration replays;

@@ -1,0 +1,180 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "0ec9fbddf064ca19cceab4b8110ce1b0460a36961b867cab1c50a74a14f2be92",
+  "build_seconds": 6.312,
+  "replay_seconds": 9.985,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.count_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_of_children",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_of_prune",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.no_golden_of_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.path",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.prune",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.prune_false",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetDFSResearch.path.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.prune.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_of_prune",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_of_children",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.count_mono",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.prune_false",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.dfs_sound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetDFSResearch.no_golden_of_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenBudgetDFSResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 30,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

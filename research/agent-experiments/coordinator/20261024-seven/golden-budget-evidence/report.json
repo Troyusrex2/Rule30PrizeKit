@@ -1,0 +1,286 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "04b049eedb6e772971dff3b42b13a44907240dae9919c34c3ab821a6eecca35f",
+  "build_seconds": 5.797,
+  "replay_seconds": 9.969,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30GoldenBudgetResearch.Node",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.child",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.child_matches",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count_le_index",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count_le_support",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.frontier",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.frontier_contains",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.mem_next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.no_golden_of_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.uniform_width_of_all_budget_checks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30GoldenBudgetResearch.Node.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30GoldenBudgetResearch.Node.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.st",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.used",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.child.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.frontier.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.frontier.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.frontier.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.frontier.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.Node.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.Node.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30GoldenBudgetResearch.Node.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.Node.mk.sizeOf_spec",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count_le_index",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.child_matches",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.mem_next",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.frontier_contains",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.no_golden_of_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.count_le_support",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GoldenBudgetResearch.uniform_width_of_all_budget_checks",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GoldenBudgetResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 51,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

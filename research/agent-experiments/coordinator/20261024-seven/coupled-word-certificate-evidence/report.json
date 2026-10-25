@@ -1,0 +1,95 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "334c83b53c75bb02e2911e22814a3bf99576fc1f7dbfb00e708bf4dae4d76da1",
+  "build_seconds": 6.328,
+  "replay_seconds": 9.485,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30CoupledWordCertificateResearch.check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.col1_drvRow_exact",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.forbidden_of_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CoupledWordCertificateResearch.sample",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.sample_col1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CoupledWordCertificateResearch.col1_drvRow_exact.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.col1_drvRow_exact",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.sample_col1",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledWordCertificateResearch.forbidden_of_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CoupledWordCertificateResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 13,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

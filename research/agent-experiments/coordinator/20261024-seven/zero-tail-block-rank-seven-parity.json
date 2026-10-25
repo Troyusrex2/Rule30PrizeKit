@@ -1,0 +1,250 @@
+{
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "records": [
+    {
+      "block": 1,
+      "window": 1,
+      "constraints": 6277,
+      "features": 1168,
+      "heldout_edges": 3108,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 1,
+      "window": 2,
+      "constraints": 6277,
+      "features": 3232,
+      "heldout_edges": 3108,
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 1,
+      "window": 3,
+      "constraints": 6277,
+      "features": 7344,
+      "heldout_edges": 3108,
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 4,
+      "window": 1,
+      "constraints": 2227,
+      "features": 1168,
+      "heldout_edges": 1117,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 4,
+      "window": 2,
+      "constraints": 2227,
+      "features": 3232,
+      "heldout_edges": 1117,
+      "solver_status": 2,
+      "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 4,
+      "window": 3,
+      "constraints": 2227,
+      "features": 7341,
+      "heldout_edges": 1117,
+      "solver_status": 1,
+      "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)"
+    },
+    {
+      "block": 6,
+      "window": 1,
+      "constraints": 1138,
+      "features": 1168,
+      "heldout_edges": 575,
+      "solver_status": 4,
+      "solver_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Basic)"
+    },
+    {
+      "block": 6,
+      "window": 2,
+      "constraints": 1138,
+      "features": 3232,
+      "heldout_edges": 575,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "nonzero_weights": 697,
+      "training_max_residual": 8.474554391568745e-12,
+      "heldout_violations": 309,
+      "first_failures": [
+        {
+          "input_length": 229,
+          "residual": 28.467232174916624
+        },
+        {
+          "input_length": 230,
+          "residual": 6.225114065209771
+        },
+        {
+          "input_length": 214,
+          "residual": 18.320248399230344
+        },
+        {
+          "input_length": 244,
+          "residual": 16.790453642111785
+        },
+        {
+          "input_length": 245,
+          "residual": 64.01836150635086
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "window": 3,
+      "constraints": 1138,
+      "features": 7315,
+      "heldout_edges": 575,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "nonzero_weights": 770,
+      "training_max_residual": 6.1803895334833214e-12,
+      "heldout_violations": 334,
+      "first_failures": [
+        {
+          "input_length": 228,
+          "residual": 4.4270904061379275
+        },
+        {
+          "input_length": 229,
+          "residual": 14.480812294016987
+        },
+        {
+          "input_length": 230,
+          "residual": 4.730427039273373
+        },
+        {
+          "input_length": 239,
+          "residual": 11.339368394444563
+        },
+        {
+          "input_length": 242,
+          "residual": 18.15037791625575
+        }
+      ]
+    },
+    {
+      "block": 8,
+      "window": 1,
+      "constraints": 559,
+      "features": 1168,
+      "heldout_edges": 299,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "nonzero_weights": 338,
+      "training_max_residual": 1.4587442365154857e-11,
+      "heldout_violations": 157,
+      "first_failures": [
+        {
+          "input_length": 229,
+          "residual": 71.53061228660329
+        },
+        {
+          "input_length": 239,
+          "residual": 56.355988419077896
+        },
+        {
+          "input_length": 244,
+          "residual": 36.50043090348491
+        },
+        {
+          "input_length": 195,
+          "residual": 56.98886884308401
+        },
+        {
+          "input_length": 142,
+          "residual": 23.27784290730068
+        }
+      ]
+    },
+    {
+      "block": 8,
+      "window": 2,
+      "constraints": 559,
+      "features": 3232,
+      "heldout_edges": 299,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "nonzero_weights": 407,
+      "training_max_residual": 3.3293368062459194e-12,
+      "heldout_violations": 175,
+      "first_failures": [
+        {
+          "input_length": 228,
+          "residual": 1.633755511590047
+        },
+        {
+          "input_length": 229,
+          "residual": 21.52676349931479
+        },
+        {
+          "input_length": 244,
+          "residual": 47.78049525827766
+        },
+        {
+          "input_length": 245,
+          "residual": 11.128975701465011
+        },
+        {
+          "input_length": 198,
+          "residual": 3.6880621314784543
+        }
+      ]
+    },
+    {
+      "block": 8,
+      "window": 3,
+      "constraints": 559,
+      "features": 7201,
+      "heldout_edges": 299,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "nonzero_weights": 413,
+      "training_max_residual": 4.263256414560601e-12,
+      "heldout_violations": 170,
+      "first_failures": [
+        {
+          "input_length": 228,
+          "residual": 6.383132683242343
+        },
+        {
+          "input_length": 229,
+          "residual": 11.081865174590328
+        },
+        {
+          "input_length": 239,
+          "residual": 6.644861644149584
+        },
+        {
+          "input_length": 240,
+          "residual": 6.402414516275762
+        },
+        {
+          "input_length": 244,
+          "residual": 31.300085435131738
+        }
+      ]
+    }
+  ],
+  "parity_features": true,
+  "coupled_six_word_excluded": true,
+  "coupled_seven_word_excluded": true,
+  "context_bits": 6,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 91.5
+}

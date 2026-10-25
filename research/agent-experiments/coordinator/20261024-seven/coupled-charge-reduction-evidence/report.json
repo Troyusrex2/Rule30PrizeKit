@@ -1,0 +1,126 @@
+{
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "383f29a7297cd21b3b13ee8a242fe5d24131b56ff06bcbd5ba299bd1060d19dd",
+  "build_seconds": 6.313,
+  "replay_seconds": 9.984,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.CQ01_of_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CoupledChargeReductionResearch.Charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.false_among_five",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.not_finSupp_psi_of_charge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CoupledChargeReductionResearch.zeros",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros_five",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros_lower_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CoupledChargeReductionResearch.zeros.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.zeros_lower_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.not_finSupp_psi_of_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CoupledChargeReductionResearch.CQ01_of_charge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CoupledChargeReductionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 33,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
