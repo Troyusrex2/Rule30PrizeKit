@@ -13,6 +13,9 @@ adds two kernel-checked forbidden words, a checked population certificate,
 and a proved reduction of CQ01 to an explicitly open counting inequality.
 It also preserves the finite language censuses, failed ranking searches and
 inconclusive longer solver queries. It is not a prize solution.
+The [further tests](coordinator/20261024-seven/FURTHER-TESTS.md) add a complete
+sparse budget-14 census, stronger bounded SAT checks, extremal examples and
+failed neural/quadratic ranks. The unbounded counting inequality remains open.
 
 The [reviewed catalog integration](coordinator/20261024-seven/REVIEWED-CATALOG.md)
 is now in [PR #16](https://github.com/WolframInstitute/Rule30PrizeKit/pull/16):

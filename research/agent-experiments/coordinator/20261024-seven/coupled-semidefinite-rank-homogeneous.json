@@ -1,0 +1,86 @@
+{
+  "checked_word_guards": [
+    "00",
+    "11111",
+    "010110",
+    "1011010"
+  ],
+  "contexts": [
+    21,
+    23,
+    27,
+    29,
+    30,
+    42,
+    43,
+    45,
+    46,
+    47,
+    53,
+    54,
+    55,
+    58,
+    59,
+    61
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "training_widths": [
+    16,
+    256
+  ],
+  "heldout_widths": [
+    512,
+    1024
+  ],
+  "records": [
+    {
+      "block": 1,
+      "position_parity_counts": false,
+      "matrix_dimension": 4,
+      "contexts": 16,
+      "constraints": 1688,
+      "heldout_edges": 577,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.078
+    },
+    {
+      "block": 1,
+      "position_parity_counts": true,
+      "matrix_dimension": 8,
+      "contexts": 16,
+      "constraints": 1688,
+      "heldout_edges": 577,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.203
+    },
+    {
+      "block": 4,
+      "position_parity_counts": false,
+      "matrix_dimension": 4,
+      "contexts": 16,
+      "constraints": 570,
+      "heldout_edges": 201,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.046
+    },
+    {
+      "block": 4,
+      "position_parity_counts": true,
+      "matrix_dimension": 8,
+      "contexts": 16,
+      "constraints": 570,
+      "heldout_edges": 201,
+      "solver_status": "infeasible",
+      "solver_seconds": 0.328
+    }
+  ],
+  "homogeneous_no_constant_feature": true,
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 5.094
+}

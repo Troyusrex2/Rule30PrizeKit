@@ -1,0 +1,213 @@
+{
+  "max_period": 14,
+  "horizon": 2048,
+  "primitive_phases_checked": 457,
+  "guard_words": [
+    "00",
+    "11111",
+    "010110",
+    "1011010"
+  ],
+  "records": [
+    {
+      "period": 1,
+      "primitive_phases_checked": 0,
+      "best_final": null,
+      "period_census_complete": true
+    },
+    {
+      "period": 2,
+      "primitive_phases_checked": 2,
+      "best_final": {
+        "period": 2,
+        "word_time_first": "01",
+        "horizon": 2048,
+        "final_deficit": 1610,
+        "even_black_count": 878,
+        "free_zeros": 1024,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 3,
+      "primitive_phases_checked": 3,
+      "best_final": {
+        "period": 3,
+        "word_time_first": "101",
+        "horizon": 2048,
+        "final_deficit": 2092,
+        "even_black_count": 925,
+        "free_zeros": 683,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 4,
+      "primitive_phases_checked": 4,
+      "best_final": {
+        "period": 4,
+        "word_time_first": "0111",
+        "horizon": 2048,
+        "final_deficit": 2122,
+        "even_black_count": 878,
+        "free_zeros": 512,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 5,
+      "primitive_phases_checked": 5,
+      "best_final": {
+        "period": 5,
+        "word_time_first": "10111",
+        "horizon": 2048,
+        "final_deficit": 3070,
+        "even_black_count": 1160,
+        "free_zeros": 410,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 6,
+      "primitive_phases_checked": 6,
+      "best_final": {
+        "period": 6,
+        "word_time_first": "011101",
+        "horizon": 2048,
+        "final_deficit": 2164,
+        "even_black_count": 949,
+        "free_zeros": 683,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 7,
+      "primitive_phases_checked": 14,
+      "best_final": {
+        "period": 7,
+        "word_time_first": "1110101",
+        "horizon": 2048,
+        "final_deficit": 2628,
+        "even_black_count": 1071,
+        "free_zeros": 585,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 8,
+      "primitive_phases_checked": 16,
+      "best_final": {
+        "period": 8,
+        "word_time_first": "01010111",
+        "horizon": 2048,
+        "final_deficit": 2259,
+        "even_black_count": 1009,
+        "free_zeros": 768,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 9,
+      "primitive_phases_checked": 18,
+      "best_final": {
+        "period": 9,
+        "word_time_first": "010101111",
+        "horizon": 2048,
+        "final_deficit": 2427,
+        "even_black_count": 1037,
+        "free_zeros": 684,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 10,
+      "primitive_phases_checked": 30,
+      "best_final": {
+        "period": 10,
+        "word_time_first": "0111011011",
+        "horizon": 2048,
+        "final_deficit": 2118,
+        "even_black_count": 911,
+        "free_zeros": 615,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 11,
+      "primitive_phases_checked": 55,
+      "best_final": {
+        "period": 11,
+        "word_time_first": "11010101011",
+        "horizon": 2048,
+        "final_deficit": 2229,
+        "even_black_count": 991,
+        "free_zeros": 744,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 12,
+      "primitive_phases_checked": 60,
+      "best_final": {
+        "period": 12,
+        "word_time_first": "110101010101",
+        "horizon": 2048,
+        "final_deficit": 2120,
+        "even_black_count": 991,
+        "free_zeros": 853,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 13,
+      "primitive_phases_checked": 104,
+      "best_final": {
+        "period": 13,
+        "word_time_first": "0111101010101",
+        "horizon": 2048,
+        "final_deficit": 2261,
+        "even_black_count": 1016,
+        "free_zeros": 787,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    },
+    {
+      "period": 14,
+      "primitive_phases_checked": 140,
+      "best_final": {
+        "period": 14,
+        "word_time_first": "01010101010111",
+        "horizon": 2048,
+        "final_deficit": 2005,
+        "even_black_count": 961,
+        "free_zeros": 878,
+        "minimum_deficit": 0
+      },
+      "period_census_complete": true
+    }
+  ],
+  "counterexamples": [],
+  "search_complete_to_requested_period": true,
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "each_word_first64_physical_decode_checked": true,
+  "Lean_verified": false,
+  "unbounded_charge_proved": false,
+  "full_problem_solved": false,
+  "seconds": 7.672
+}

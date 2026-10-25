@@ -1,0 +1,185 @@
+{
+  "checked_word_guards": [
+    "00",
+    "11111",
+    "010110",
+    "1011010"
+  ],
+  "contexts": [
+    21,
+    23,
+    27,
+    29,
+    30,
+    42,
+    43,
+    45,
+    46,
+    47,
+    53,
+    54,
+    55,
+    58,
+    59,
+    61
+  ],
+  "controls": {
+    "scalar_list_cells": 33792,
+    "physical_decoder_cases": 32,
+    "all_passed": true
+  },
+  "training_widths": [
+    16,
+    256
+  ],
+  "heldout_widths": [
+    512,
+    1024
+  ],
+  "records": [
+    {
+      "block": 1,
+      "position_parity_counts": false,
+      "matrix_dimension": 5,
+      "contexts": 16,
+      "constraints": 1688,
+      "heldout_edges": 577,
+      "solver_status": "optimal",
+      "solver_seconds": 0.204,
+      "training_max_residual": 1.4176265494825202e-07,
+      "minimum_eigenvalue": -8.405685057787709e-08,
+      "heldout_violations": 462,
+      "first_failures": [
+        {
+          "width": 777,
+          "residual": 0.1641613640035473
+        },
+        {
+          "width": 778,
+          "residual": 2.0026323257346803
+        },
+        {
+          "width": 779,
+          "residual": 0.13034585493065265
+        },
+        {
+          "width": 780,
+          "residual": 0.3209140499352259
+        },
+        {
+          "width": 781,
+          "residual": 1.930665445140562
+        }
+      ]
+    },
+    {
+      "block": 1,
+      "position_parity_counts": true,
+      "matrix_dimension": 9,
+      "contexts": 16,
+      "constraints": 1688,
+      "heldout_edges": 577,
+      "solver_status": "optimal",
+      "solver_seconds": 2.797,
+      "training_max_residual": 4.628134320228128e-08,
+      "minimum_eigenvalue": -3.240292920932897e-08,
+      "heldout_violations": 445,
+      "first_failures": [
+        {
+          "width": 777,
+          "residual": 0.03807325121397298
+        },
+        {
+          "width": 778,
+          "residual": 2.332700263814786
+        },
+        {
+          "width": 779,
+          "residual": 0.21404551276091865
+        },
+        {
+          "width": 780,
+          "residual": 0.2716897231500184
+        },
+        {
+          "width": 781,
+          "residual": 2.173325550829361
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "position_parity_counts": false,
+      "matrix_dimension": 5,
+      "contexts": 16,
+      "constraints": 570,
+      "heldout_edges": 201,
+      "solver_status": "optimal",
+      "solver_seconds": 0.094,
+      "training_max_residual": 3.453985755186295e-07,
+      "minimum_eigenvalue": -2.2170226627508638e-07,
+      "heldout_violations": 152,
+      "first_failures": [
+        {
+          "width": 777,
+          "residual": 5.534341454092782
+        },
+        {
+          "width": 778,
+          "residual": 8.711643105540276
+        },
+        {
+          "width": 812,
+          "residual": 19.57104707778953
+        },
+        {
+          "width": 813,
+          "residual": 25.48764541912061
+        },
+        {
+          "width": 757,
+          "residual": 7.8089096246309
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "position_parity_counts": true,
+      "matrix_dimension": 9,
+      "contexts": 16,
+      "constraints": 570,
+      "heldout_edges": 201,
+      "solver_status": "optimal",
+      "solver_seconds": 0.641,
+      "training_max_residual": 8.00767736564012e-08,
+      "minimum_eigenvalue": -6.344757248996384e-08,
+      "heldout_violations": 148,
+      "first_failures": [
+        {
+          "width": 777,
+          "residual": 1.3618924898578655
+        },
+        {
+          "width": 778,
+          "residual": 10.505934573048194
+        },
+        {
+          "width": 812,
+          "residual": 27.602001322053155
+        },
+        {
+          "width": 813,
+          "residual": 33.91045720297171
+        },
+        {
+          "width": 757,
+          "residual": 6.888897161385245
+        }
+      ]
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_rank_proved": false,
+  "full_problem_solved": false,
+  "seconds": 9.297
+}
