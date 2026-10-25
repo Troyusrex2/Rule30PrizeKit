@@ -1,0 +1,28 @@
+{
+  "body": "A fixed catalogue of spatial cycles cannot cover even a single delayed temporal defect in sideways reconstruction. This adds an explicit infinite family: start with the period-four column `pure t = decide (t % 4 != 1)` and change only time `8*j+5` from white to black. For the corresponding official `Theta (free j)`, every eventual spatial period `P > 0` satisfies `j < 2^P`, regardless of the spatial transient. Choosing `j = 2^M` forces every eventual period above `M`.\n\nEvery member is eventually periodic in space; the periods across the family are unbounded. Its free input is alternating except for the black bit at index `4*j+2`, and is proved to avoid `00`, `11111`, `010110`, and `1011010`. These are synthetic temporal inputs: actual finite-right realizability, density estimates, and a prize solution are not claimed.\n\nThe proof uses a 312-cell kernel-checked reconstruction table to separate the base defect's tail from the pure background. Official outer locality and temporal shift equivariance make different delays distinct modulo finite spatial prefixes. A fixed period `P` has at most `2^P` residue words, and periods propagate to earlier delays, giving the quantitative bound. A separate finite-profile argument proves that every eventually periodic temporal input has an eventually spatially periodic reconstruction.\n\nValidation: cold core-only `lake build Ruliology.CellularAutomata.Rule30DelayedDefectPeriods` passed, followed by full replay with the unchanged official `Check.lean`. All 173 declarations, including generated declarations, replayed with no new axioms; the five selected headlines passed. Initial build plus replay took 44.6 seconds, including dependencies, with peak owned process-tree RSS 1.74 GiB at kit `3eca23c0a9fa6b153313655e6d51835406c2d06e`. When the verifier moved to `0090056412733accaa27643d3cbbf982104f2251`, that main commit was merged into this branch and the identical proof source passed incremental core build plus another full replay (11.2 seconds, 0.80 GiB). The checker and this proof's imported sources are unchanged between pins. Lean 4.35.0; the checker's existing replay-deprecation warning is unchanged. `git diff --check` passes.\n\nThe contribution is one 573-line core module, its public import, and its catalog row. It is independent of PR24. Contributed by Troy Lowry with OpenAI Codex.\n",
+  "files": [
+    {
+      "path": "lean/README.md",
+      "additions": 1,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "lean/Ruliology.lean",
+      "additions": 1,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "lean/Ruliology/CellularAutomata/Rule30DelayedDefectPeriods.lean",
+      "additions": 573,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "16528d6d9e0a09c54edeea5e73044beb9e63e495",
+  "reviewDecision": "",
+  "state": "OPEN",
+  "statusCheckRollup": [],
+  "url": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/25"
+}

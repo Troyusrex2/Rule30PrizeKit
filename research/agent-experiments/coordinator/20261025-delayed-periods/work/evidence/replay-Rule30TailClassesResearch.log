@@ -1,0 +1,12 @@
+
+D:\MWB\Rule30\wolfram-local\agent-seven-20261024\spatial-density-20261025T1735\owned-verifier\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30TailClassesResearch.SpatialPeriod","standardAxioms":true},{"kind":"def","name":"Rule30TailClassesResearch.TailEq","standardAxioms":true},{"kind":"theorem","name":"Rule30TailClassesResearch.agree_from_window","standardAxioms":true},{"kind":"theorem","name":"Rule30TailClassesResearch.finite_bound","standardAxioms":true},{"kind":"theorem","name":"Rule30TailClassesResearch.no_common_period_of_distinct","standardAxioms":true},{"kind":"theorem","name":"Rule30TailClassesResearch.seg_eq","standardAxioms":true},{"kind":"theorem","name":"Rule30TailClassesResearch.tail_recon_time","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30TailClassesResearch.no_common_period_of_distinct","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30TailClassesResearch.tail_recon_time","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30TailClassesResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":22,"ok":true},"verdict":"pass","verifiedTargets":[]}
+
+{"verdict": "pass", "module": "Rule30TailClassesResearch", "replay": {"constants": 22, "ok": true}, "headlines": ["Rule30TailClassesResearch.no_common_period_of_distinct", "Rule30TailClassesResearch.tail_recon_time"]}

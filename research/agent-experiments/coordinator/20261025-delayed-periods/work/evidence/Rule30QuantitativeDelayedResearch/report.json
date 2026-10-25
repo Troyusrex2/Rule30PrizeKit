@@ -1,0 +1,185 @@
+{
+  "source_sha256": "549a5ff0c8c4234173fe4ddd33e468c2f6309ca6566bc9079081fb780b712fa8",
+  "kit_commit": "3eca23c0a9fa6b153313655e6d51835406c2d06e",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\spatial-density-20261025T1735\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\spatial-density-20261025T1735\\owned-verifier\\owned-build\\Rule30QuantitativeDelayedResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\spatial-density-20261025T1735\\owned-verifier\\Rule30QuantitativeDelayedResearch.lean"
+      ],
+      "seconds": 7.51500000001397,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\spatial-density-20261025T1735\\owned-verifier\\Check.lean",
+        "Rule30QuantitativeDelayedResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30QuantitativeDelayedResearch.theta_delay_lt_pow_period",
+        "--headline",
+        "Rule30QuantitativeDelayedResearch.theta_explicit_large_periods",
+        "--headline",
+        "Rule30QuantitativeDelayedResearch.theta_inX",
+        "--headline",
+        "Rule30QuantitativeDelayedResearch.theta_spatial_periodic"
+      ],
+      "seconds": 12.187999999994645,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.collision_of_periodic_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.delay_lt_pow_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.explicit_large_periods",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.input_eq_alt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.input_shift_index",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.period_inherited",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.pow_two_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.spatial_period_time",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_delay_lt_pow_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_eq_recon",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_explicit_large_periods",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_inX",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_spatial_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ZeroBoundary.alt.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_delay_lt_pow_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_explicit_large_periods",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_inX",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30QuantitativeDelayedResearch.theta_spatial_periodic",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30QuantitativeDelayedResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 28,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
