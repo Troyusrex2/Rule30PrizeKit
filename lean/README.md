@@ -125,6 +125,7 @@ These modules are not in the 2026-10-15 snapshot of the catalog, and `SHA256SUMS
 
 | Module | Added | What it proves | Headline theorems |
 |---|---|---|---|
+| `Rule30SpatialPeriodLifting` | 2026-10-25 | Uniform sideways period lifting: if reconstructed row t+1 has spatial period p after D+1 and a white cell in that period, row t has period 2p after D+3p. A 37-transformation kernel check proves the arbitrary-block identity F^5=F^3; no density or prize solution is claimed. Contributed by Troy Lowry with OpenAI Codex. | `word_power`, `stateAt_period`, `recon_period_lift` |
 | `Rule30BackwardTube` | 2026-10-24 | Endpoint-conditioned backward strip certificates combine a finite predecessor chain with a stable zero-driven reachable set to exclude every sufficiently long white-padding word. Contributed by Troy Lowry with OpenAI Codex. | `preCheck_sound`, `tail_tube_forces`, `no_padding_of_endpoint_tube` |
 | `Rule30FiniteStrips` | 2026-10-24 | Strip certificate soundness for every column of every configuration with a leftmost black cell, using the uniform masked Jen theorem; no initial strip-state assumption. Contributed by Troy Lowry with OpenAI Codex. | `not_eventually_word_strip`, `not_eventually_word_strip_finite` |
 | `Rule30FiveTailReduction` | 2026-10-24 | Trimming white ends and rotating periods reduces every tail of at most five bits to the shorter family or eight new black-ended cores. Contributed by Troy Lowry with OpenAI Codex. | `decomposition`, `no_five_tail_of_cores` |

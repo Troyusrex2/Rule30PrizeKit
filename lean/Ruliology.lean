@@ -18,6 +18,7 @@ public import Ruliology.CellularAutomata.Rule30Realization
 public import Ruliology.CellularAutomata.Rule30FactorWindow
 public import Ruliology.CellularAutomata.Rule30PeriodTwo
 public import Ruliology.CellularAutomata.Rule30ZeroBoundary
+public import Ruliology.CellularAutomata.Rule30SpatialPeriodLifting
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripe
 public import Ruliology.CellularAutomata.Rule30ZeroBoundarySmall
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers
