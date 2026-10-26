@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Current experiment:** [complete the sound temporal-column reader](coordinator/20261026-column-reader/BRIEF.md). [Proof, exact controls and failed ranking templates](coordinator/20261026-column-reader/REPORT.md). Acceptance is proved sound; rejection remains unclassified by the theorem.
+
 **Sharper proof target:** [first-source stability and the open collision clock](coordinator/20261026-front-clock-reduction/BRIEF.md). [Checked reduction, explicit clock theorem and exact finite-prefix tests](coordinator/20261026-front-clock-reduction/REPORT.md). The conditional theorem is not unconditional subset preservation.
 
 **Positive ancestry update:** [all-future common constraints lift uniquely into the past](coordinator/20261026-common-past/BRIEF.md). [Exact strengthened theorem, support warning, finite tests and full replay](coordinator/20261026-common-past/REPORT.md). The missing targets are initial-subset preservation and the fixed-center past observation.

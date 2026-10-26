@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Sound temporal-column reader](research/agent-experiments/coordinator/20261026-column-reader/REPORT.md): a learned 17-state reader now has a full kernel proof that acceptance guarantees equal columns at every future time and arbitrary depth. Completeness of its rejection predictions remains open.
+
 [Subset preservation reduces to first-source stability](research/agent-experiments/coordinator/20261026-front-clock-reduction/REPORT.md): the equivalence and a uniform period-two clock obstruction are fully kernel checked. A precise background collision-clock conjecture remains open, along with the fixed-center past condition.
 
 [Positive all-future common-field past lift](research/agent-experiments/coordinator/20261026-common-past/REPORT.md): exact diagonal periodicity gives a unique right-bounded past, and all-time subset yields a finite past over finite backgrounds. Fully kernel checked. Initial-only subset and the fixed-center extension remain unresolved.
