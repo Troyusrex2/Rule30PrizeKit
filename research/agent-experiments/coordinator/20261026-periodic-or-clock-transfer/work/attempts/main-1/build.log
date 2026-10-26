@@ -1,0 +1,30 @@
+C:\Users\troyu\Rule30-offload\research\clock-transfer-20261026T1627\Rule30TwoPlateauClockResearch.lean:172:17: error: unexpected token ':'; expected ':=' or '|'
+C:\Users\troyu\Rule30-offload\research\clock-transfer-20261026T1627\Rule30TwoPlateauClockResearch.lean:172:7: error: Missing cases:
+C:\Users\troyu\Rule30-offload\research\clock-transfer-20261026T1627\Rule30TwoPlateauClockResearch.lean:168:81: error: unsolved goals
+a : Nat → Nat → Bool
+j R : Nat
+hk : ∀ (t : Nat), a (t + R) (j + 3) = (a t (j + 3) ^^ true)
+hl : ∀ (t : Nat), a (t + R) (j + 2) = a t (j + 2)
+ho : ∀ (t : Nat), (a t (j + 5) || a t (j + 4)) = true
+t : Nat
+same : ?b
+⊢ (!(true ^^ (a (t + R) (j + 5) || a (t + R) (j + 4))) && (a t (j + 3) ^^ (a t (j + 3) ^^ true)) &&
+      !(a t (j + 2) ^^ a t (j + 2))) =
+    true
+
+case b
+a : Nat → Nat → Bool
+j R : Nat
+hk : ∀ (t : Nat), a (t + R) (j + 3) = (a t (j + 3) ^^ true)
+hl : ∀ (t : Nat), a (t + R) (j + 2) = a t (j + 2)
+ho : ∀ (t : Nat), (a t (j + 5) || a t (j + 4)) = true
+t : Nat
+⊢ Sort ?u.60
+C:\Users\troyu\Rule30-offload\research\clock-transfer-20261026T1627\Rule30TwoPlateauClockResearch.lean:200:68: error: Application type mismatch: The argument
+  ho
+has type
+  ∀ (t : Nat), (a t (j + 5) || a t (j + 4)) = true
+but is expected to have type
+  ∀ (t : Nat), (a (t + 2 * n) (j + 5) || a (t + 2 * n) (j + 4)) = (a t (j + 5) || a t (j + 4))
+in the application
+  actual_periodic_or_double_period a ha j (2 * n) hk hl ho

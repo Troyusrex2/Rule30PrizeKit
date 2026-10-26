@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "reports": [
+    {
+      "width": 7,
+      "all_words": 128,
+      "complete_orbits": 26,
+      "premise_instances_checked": 2,
+      "source_half_clocks": {
+        "2": 2
+      }
+    },
+    {
+      "width": 8,
+      "all_words": 256,
+      "complete_orbits": 36,
+      "premise_instances_checked": 8,
+      "source_half_clocks": {
+        "2": 6,
+        "4": 2
+      }
+    },
+    {
+      "width": 9,
+      "all_words": 512,
+      "complete_orbits": 50,
+      "premise_instances_checked": 22,
+      "source_half_clocks": {
+        "2": 14,
+        "4": 8
+      }
+    },
+    {
+      "width": 10,
+      "all_words": 1024,
+      "complete_orbits": 70,
+      "premise_instances_checked": 54,
+      "source_half_clocks": {
+        "2": 28,
+        "4": 20,
+        "8": 6
+      }
+    },
+    {
+      "width": 11,
+      "all_words": 2048,
+      "complete_orbits": 102,
+      "premise_instances_checked": 134,
+      "source_half_clocks": {
+        "2": 54,
+        "4": 44,
+        "8": 24,
+        "16": 12
+      }
+    },
+    {
+      "width": 12,
+      "all_words": 4096,
+      "complete_orbits": 154,
+      "premise_instances_checked": 294,
+      "source_half_clocks": {
+        "2": 100,
+        "4": 88,
+        "8": 62,
+        "16": 44
+      }
+    }
+  ],
+  "odd_half_clock_counterexample": {
+    "width": 7,
+    "seed": 20,
+    "j": 0,
+    "R": 1,
+    "orbit": [
+      20,
+      108
+    ],
+    "older_periodic": true,
+    "OR_periodic": true
+  },
+  "dropping_older_period_control": null,
+  "source_update": "literal rule table with two white older boundary cells",
+  "scope": "finite independent controls, not used as proof premises"
+}

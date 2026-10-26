@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Stronger checked clock theorem:** [periodic OR clock transfer](coordinator/20261026-periodic-or-clock-transfer/REPORT.md). Every even source half-clock is retained by the OR two cells later; the next column cannot acquire that period after any finite transient. No center-column implication is assumed.
+
 **New checked results:** [second plateau exclusion and exact safety-language bridge](coordinator/20261026-two-plateau-and-safety-bridge/REPORT.md). [Current proof targets and scope](coordinator/20261026-two-plateau-and-safety-bridge/BRIEF.md). The clock theorem covers every even source clock; Cedar proves the conditional safety/return/DFA equivalence. Completeness and the physical-center bridge remain open.
 
 **Ancestry correction and new experiment:** [finite-word safety target](coordinator/20261026-ancestry-audit-and-safe-traces/BRIEF.md). [The old strip witnesses fail one older extension; larger-clock tests, failed cubic decoding, complete width32 safety audit, and fresh full replay of external PR31](coordinator/20261026-ancestry-audit-and-safe-traces/REPORT.md). The safety classification is a conjecture, and no physical-center implication is assumed.
