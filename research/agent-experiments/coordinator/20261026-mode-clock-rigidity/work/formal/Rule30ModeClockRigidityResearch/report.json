@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "f4f31ad9d570647566cf5036ce7ab34db7197e873a99706cdb4734da4df2cc65",
+  "kit_commit": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 0.423,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 1.067,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.actual_lower_readout_no_half_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.mode_mask_gate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.mode_mask_gate_free",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.mode_readout_no_half_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.shifted_mode_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.two_gate_down",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.two_gate_flat",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.mode_readout_no_half_clock",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ModeClockRigidityResearch.actual_lower_readout_no_half_clock",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ModeClockRigidityResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 10,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

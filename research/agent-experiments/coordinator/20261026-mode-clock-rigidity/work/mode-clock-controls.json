@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "free_mask_gate_satisfying_rows": 4,
+  "two_gate_down_satisfying_rows": 5,
+  "finite_local_rows_without_mask_period": 196,
+  "negative_controls": [
+    {
+      "name": "missing_antiperiod",
+      "properties": {
+        "q_step": true,
+        "k_step": true,
+        "l_step": true,
+        "k_anti": false,
+        "S_repeats": true
+      }
+    },
+    {
+      "name": "missing_k_recurrence",
+      "properties": {
+        "q_step": true,
+        "k_step": false,
+        "l_step": true,
+        "k_anti": true,
+        "S_repeats": true
+      }
+    },
+    {
+      "name": "missing_l_recurrence",
+      "properties": {
+        "q_step": true,
+        "k_step": true,
+        "l_step": false,
+        "k_anti": true,
+        "S_repeats": true
+      }
+    }
+  ],
+  "uniform_result_from_Lean_not_finite_enumeration": true,
+  "full_problem_solved": false
+}
