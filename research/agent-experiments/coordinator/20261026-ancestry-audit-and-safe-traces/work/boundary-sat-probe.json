@@ -1,0 +1,58 @@
+{
+  "z3_version": "5.3.1",
+  "reports": [
+    {
+      "kind": "mode",
+      "P": 32,
+      "cyclic_clock": 64,
+      "width": 16,
+      "white_boundary": true,
+      "canonical_plus_white_head": true,
+      "solver_timeout_ms": 8000,
+      "status": "unknown",
+      "seconds": 8.009,
+      "reason_unknown": "timeout"
+    },
+    {
+      "kind": "mode",
+      "P": 64,
+      "cyclic_clock": 128,
+      "width": 24,
+      "white_boundary": true,
+      "canonical_plus_white_head": true,
+      "solver_timeout_ms": 8000,
+      "status": "unknown",
+      "seconds": 8.012,
+      "reason_unknown": "timeout"
+    },
+    {
+      "kind": "drop",
+      "P": 64,
+      "cyclic_clock": 128,
+      "width": 20,
+      "white_boundary": true,
+      "canonical_plus_white_head": false,
+      "solver_timeout_ms": 8000,
+      "status": "unknown",
+      "seconds": 8.008,
+      "reason_unknown": "timeout"
+    },
+    {
+      "kind": "drop",
+      "P": 128,
+      "cyclic_clock": 256,
+      "width": 24,
+      "white_boundary": true,
+      "canonical_plus_white_head": false,
+      "solver_timeout_ms": 8000,
+      "status": "unknown",
+      "seconds": 8.011,
+      "reason_unknown": "timeout"
+    }
+  ],
+  "Lean_verified": false,
+  "uniform_no_drop_proved": false,
+  "uniform_mode_inverse_proved": false,
+  "full_problem_solved": false,
+  "seconds": 32.115
+}

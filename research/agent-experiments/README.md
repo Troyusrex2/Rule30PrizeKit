@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Ancestry correction and new experiment:** [finite-word safety target](coordinator/20261026-ancestry-audit-and-safe-traces/BRIEF.md). [The old strip witnesses fail one older extension; larger-clock tests, failed cubic decoding, complete width32 safety audit, and fresh full replay of external PR31](coordinator/20261026-ancestry-audit-and-safe-traces/REPORT.md). The safety classification is a conjecture, and no physical-center implication is assumed.
+
 **Further uniform clock theorem:** [lower readout with an antiperiodic driver](coordinator/20261026-mode-clock-rigidity/BRIEF.md). [Full replay, removal of the older-mask period premise, and a literal finite-strip inverse obstruction](coordinator/20261026-mode-clock-rigidity/REPORT.md). Clock preservation is proved; an inverse still needs the actual boundary and ancestry conditions.
 
 **New uniform theorem:** [even-clock plateau rigidity](coordinator/20261026-even-clock-rigidity/BRIEF.md). [Full kernel replay, proof, odd-clock controls and audited external contribution](coordinator/20261026-even-clock-rigidity/REPORT.md). The OR observation cannot lose the half-clock distinction under the stated assumptions; the mode inverse, longer plateau chains and center bridge remain open.

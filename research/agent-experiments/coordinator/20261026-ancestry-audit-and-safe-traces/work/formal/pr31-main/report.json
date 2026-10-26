@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "external_author": "AIOvernight; Claude (Anthropic), with independent Codex review",
+  "head_commit": "16250824c5e80964495ca5ba6bb82fa69394a35a",
+  "module": "Ruliology.CellularAutomata.Rule30WhiteEndNine",
+  "source_sha256": "aed59af4940f9b97812dd4f7dbd649f82f3e971954a3a072bfc28fe4b98b0b77",
+  "kit_commit": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "build_stages": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.WhiteEndChecks",
+      "exit_code": 0,
+      "seconds": 31.102
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30WhiteEnd",
+      "exit_code": 0,
+      "seconds": 0.882
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30WhiteEndNine",
+      "exit_code": 0,
+      "seconds": 0.617
+    }
+  ],
+  "check_seconds": 1.381,
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.colConst_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.enc_unique",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.modeCert",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.modeCert_1e9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_one_zero_nine",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_white_end_ge9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_word_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.subsetB_spec",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_word_mode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.modeCert_1e9",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_one_zero_nine",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30WhiteEndNine.not_eventually_white_end_ge9",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30WhiteEndNine",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 29,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "compiled_module_sha256": "b685415a7743e2479419f6c6a190449e2d5e58f339b9d1f23b149206523ce66a",
+  "external_work_claimed_as_ours": false,
+  "full_problem_solved": false
+}

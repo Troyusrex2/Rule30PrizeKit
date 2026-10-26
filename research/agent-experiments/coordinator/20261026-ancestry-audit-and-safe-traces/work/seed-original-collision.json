@@ -1,0 +1,57 @@
+{
+  "reports": [
+    {
+      "R": 2,
+      "clock": 4,
+      "admissible_local_rows": 8,
+      "observations": 4,
+      "collision": null
+    },
+    {
+      "R": 4,
+      "clock": 8,
+      "admissible_local_rows": 32,
+      "observations": 16,
+      "collision": null
+    },
+    {
+      "R": 8,
+      "clock": 16,
+      "admissible_local_rows": 1152,
+      "observations": 416,
+      "collision": [
+        {
+          "R": 8,
+          "clock": 16,
+          "q": 52377,
+          "k": 54570,
+          "l": 15163,
+          "m": 33924,
+          "n": 8738,
+          "S": 52445,
+          "h": 2855097810,
+          "g": 2855626412
+        },
+        {
+          "R": 8,
+          "clock": 16,
+          "q": 51357,
+          "k": 54060,
+          "l": 47802,
+          "m": 0,
+          "n": 59367,
+          "S": 52445,
+          "h": 2905297620,
+          "g": 2855625384
+        }
+      ]
+    }
+  ],
+  "all_cyclic_local_k_l_rows_at_listed_clocks": true,
+  "genuine_plateau_q_from_h_g": true,
+  "finite_white_ancestry_not_established": true,
+  "Lean_verified": false,
+  "uniform_mode_observer_proved": false,
+  "full_problem_solved": false,
+  "seconds": 0.031
+}
