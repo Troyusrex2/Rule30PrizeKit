@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "bb98722222ef8576c7c76994f7713da45bf5dfe99623fe6d294aa55ad090eff9",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 1.021,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 1.2,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.delayed_family_not_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.isolated_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.no_actual_isolated_flip",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.no_free_1010111010",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.no_profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30IsolatedDefectResearch.singleFlip",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30IsolatedDefectResearch.word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.word.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.no_free_1010111010",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.no_actual_isolated_flip",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30IsolatedDefectResearch.delayed_family_not_actual",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30IsolatedDefectResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 52,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

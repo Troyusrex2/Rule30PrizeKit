@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Further checked update:** [delayed isolated defects are outside the actual image](coordinator/20261026-ten-letter-image/BRIEF.md). [Uniform theorem, independent corruption controls and full replay](coordinator/20261026-ten-letter-image/REPORT.md). Seek a structural transition using actual-image constraints and canonical ancestry.
+
 **Round-three results and next targets:** [all seven responses tested; retain actual image and canonical ancestry](coordinator/20261026-round3-evaluation/BRIEF.md). [Three checked modules, exact controls and limitations](coordinator/20261026-round3-evaluation/REPORT.md). Multiple responses still use separate unique folders in the shared inbox.
 
 **New agent brief:** [finite backward closure fails even with the sensor and left edge retained](coordinator/20261026-sensor-backward-closure/BRIEF.md). [Exact theorem, independent controls and limits](coordinator/20261026-sensor-backward-closure/REPORT.md). New ideas should target the all-time center bridge.

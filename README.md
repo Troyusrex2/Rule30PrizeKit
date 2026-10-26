@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Uniform ten-letter actual-image exclusion](research/agent-experiments/coordinator/20261026-ten-letter-image/REPORT.md): a nine-node local proof rules out 1010111010 at every onset and excludes all positive-delay members of the earlier synthetic defect family from actual coupled responses. Full kernel replay passes; the prize problem remains open.
+
 [Seven new agent ideas tested](research/agent-experiments/coordinator/20261026-round3-evaluation/REPORT.md): a fully checked Golden-only charging counterexample is excluded from the actual Rule30 image, periodic-center gates are formalized, and all seven responses receive controlled follow-ups. P1 and the canonical center bridge remain open.
 
 [Sensor-compatible backward-closure obstruction](research/agent-experiments/coordinator/20261026-sensor-backward-closure/REPORT.md): exact canonical backgrounds, finite initial support, the full left edge, all-time D, and zero sensor plus W through six steps still do not permit a previous subset lift. Fully kernel checked; the example is not all-time invisible or common. P1 remains open.
