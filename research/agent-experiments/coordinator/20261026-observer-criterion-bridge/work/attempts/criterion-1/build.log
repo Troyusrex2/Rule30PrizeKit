@@ -1,0 +1,66 @@
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:389:30: error: ambiguous identifier `FinConfig`, possible interpretations: [Rule30PeriodTwoSideways.FinConfig,
+ Rule30PeriodTwoSideways.FinConfig]
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:390:22: error: ambiguous identifier `HasLeftEdge`, possible interpretations: [Rule30TraceEdge.HasLeftEdge, Rule30TraceEdge.HasLeftEdge]
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:409:26: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:409:40: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:409:54: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:410:10: error(lean.unknownIdentifier): Unknown identifier `HasLeftEdge`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:424:6: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:424:20: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:424:34: error(lean.unknownIdentifier): Unknown identifier `HasLeftEdge`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:424:52: error(lean.unknownIdentifier): Unknown identifier `HasLeftEdge`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:428:15: error(lean.unknownIdentifier): Unknown identifier `FinConfig`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:434:17: error(lean.unknownIdentifier): Unknown identifier `HasLeftEdge`
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:435:6: error: Tactic `constructor` failed: target is not an inductive datatype
+
+EdgeObservable : Sort u_1
+hc : ObserverCriterion
+a b : Int → Bool
+u v : Int
+hfa : sorry
+hfb : sorry
+ha : sorry
+hb : sorry
+huv : u < v
+heq : ∀ (t : Nat), evol a t 0 = evol b t 0
+x : Int → Bool := fun p => a p ^^ b p
+hfx : sorry
+⊢ sorry
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:446:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+EdgeObservable : Sort u_1
+hc : ObserverCriterion
+no_lt :
+  ∀ (a b : Int → Bool) (u v : Int),
+    sorry → sorry → ∀ (a_3 : sorry) (a_4 : sorry), u < v → (∀ (t : Nat), evol a t 0 = evol b t 0) → False
+⊢ EdgeObservable
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:421:0: error: type of theorem `Ruliology.CellularAutomata.Rule30DividedDifference.edgeObservable_of_observerCriterion` is not a proposition
+  {EdgeObservable : Sort u_1} → ObserverCriterion → EdgeObservable
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:453:8: error: (kernel) unknown constant 'Ruliology.CellularAutomata.Rule30DividedDifference.edgeObservable_of_observerCriterion'
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:468:63: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  gaugeEvol ?g (h0 ?k) ?t
+in the target expression
+  ((evol A t (p + 1) ^^ evol B t (p + 1)) && H k t p ^^ (evol A t p ^^ evol B t p) && H k t (p + 1)) = false
+
+k : Int
+t : Nat
+p : Int
+⊢ ((evol A t (p + 1) ^^ evol B t (p + 1)) && H k t p ^^ (evol A t p ^^ evol B t p) && H k t (p + 1)) = false
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:474:4: error: Function expected at
+  FinConfig
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (h0 k)
+
+Hint: The identifier `FinConfig` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30DividedDifference.lean:474:23: error: Function expected at
+  HasLeftEdge
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  (h0 k)
+
+Hint: The identifier `HasLeftEdge` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

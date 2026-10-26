@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Current explicit proof target:** [the auxiliary observer criterion and its checked bridge to Problem 1](coordinator/20261026-observer-criterion-bridge/REPORT.md). PR26/28 now state and connect the route requested by the maintainer; the observer criterion itself remains open.
+
 **New boundary-corrected control:** [finite Common windows do not preserve subset](coordinator/20261026-finite-common-window/REPORT.md). Lean proves a genuine finite-white witness with Common for three rows, subset lost after one update, and an explicit later Common failure. The all-time target stays open.
 
 **Independent review and boundary diagnostic:** [Cedar proof replay, clock-theorem review, and an all-time cyclic common-mode counterexample](coordinator/20261026-common-mode-boundary-and-cedar-audit/REPORT.md). The cyclic example explicitly fails the white boundary; the actual global preservation and center claims remain open.

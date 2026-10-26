@@ -1,0 +1,12 @@
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30CommonGauge.lean:564:13: error: unsolved goals
+U t : Nat
+p : Int
+⊢ rule (cell (U + t) (p - 1)) (cell (U + t) p) (cell (U + t) (p + 1)) =
+    rule (cell (U.add t) (p - 1)) (cell (U.add t) p) (cell (U.add t) (p + 1))
+C:\Users\troyu\Rule30-offload\research\observer-criterion-20261026T1750\Rule30CommonGauge.lean:566:8: warning: This simp argument is unused:
+  show U + (t + 1) = (U + t) + 1 by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [evol, canonical_evol U t, cell]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

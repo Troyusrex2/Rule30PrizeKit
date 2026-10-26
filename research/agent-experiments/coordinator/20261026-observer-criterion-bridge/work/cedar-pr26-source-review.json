@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-26T17:57:13.581057+00:00",
+  "status": "PASS_source_scope_only",
+  "source": "D:\\MWB\\Rule30\\observer-barrier-catalog-20261025\\lean\\Ruliology\\CellularAutomata\\Rule30DividedDifference.lean",
+  "sha256": "06cdb64e385feff5166bdfe9423354a25d9cd388dec4a7139c672f634a4892e8",
+  "root_reported_commit": "5c6c9bc690b87b1995d856d4c71b8a261867a5cc",
+  "root_reported_kernel_replay": "198 constants at pin5473; not independently rerun",
+  "read_sections": [
+    "new ObserverCriterion section 389-484",
+    "Front step/mode/actual_difference",
+    "finite support/left edge and EdgeObservable definitions",
+    "periodic barrier support and no-left-bound statements"
+  ],
+  "findings": [],
+  "reasoning": [
+    "Criterion quantifies finite A/B/x, nonzero HasLeftEdge x lo, both backgrounds zero below lo, initial subset and all-time CommonField for actual recurrence. Observation is every fixed physical column, not a moving frontier.",
+    "Actual pair difference is finite and, for unequal left edges, has the smaller edge and both background lower bounds. Initial subset is tautological. Front.actual_difference makes the all-time CommonField wedge vanish.",
+    "Applying criterion at physical column 0 contradicts equal observed traces. Swapping backgrounds covers reverse inequality. Therefore EdgeObservable implication has the intended domain, and the existing exact P1 bridge remains conditional.",
+    "Periodic barrier satisfies mode/subset/common/nonobservability but has no background left bound, so it does not falsify the finite-background criterion."
+  ],
+  "limitations": "No compilation, replay, search or new research batch. ObserverCriterion remains open; this is not a proof of Rule30 Prize Problem1."
+}
