@@ -1,6 +1,6 @@
 module
 
-public import Ruliology.CellularAutomata.Rule30FiniteConfigs
+public import Ruliology.CellularAutomata.Rule30TraceEdge
 
 /-!
 # Divided-difference observers: gauges, a frontier, and a physicality barrier
@@ -22,10 +22,18 @@ After two steps this is an additive Rule150 reflection mode. Actual nonlinear
 recombination disagrees: the k=1 recombined center is black at time7 while
 the linear mode stays white (`actual_center_diverges`).
 
-These backgrounds have NO left bound (`backgrounds_no_left_bound`). This is
-not a counterexample for finite or left-bounded initial backgrounds, to the
-open EdgeObservable conjecture, or to the Rule30 prize problem. Eventual
-vacuum and gauge identities alone cannot establish the observer criterion.
+`ObserverCriterion` states the open auxiliary-field route precisely: for
+finite backgrounds, a finite initially supported common mode with its left
+edge at the common lower bound must be seen at every observation column.
+`edgeObservable_of_observerCriterion` proves that this criterion implies
+the kit's `Rule30TraceEdge.EdgeObservable`; the actual pair difference is
+an admissible common mode whenever the two finite backgrounds have unequal
+left edges. `problem1_of_observerCriterion` supplies the prize implication.
+
+The barrier backgrounds have NO left bound (`backgrounds_no_left_bound`).
+Their finite initial modes satisfy the subset and common-field conditions
+but fail `ModeObservable` (`barrier_mode_not_observable`). Thus removing the
+background restrictions admits the existing all-gauge barrier.
 `Front.mode_left_edge` retains a hypothesis the counterexample lacks: if
 both actual backgrounds vanish below lo and the initial mode has left edge
 lo, that mode keeps its left edge lo-t for every time and every local gauge.
@@ -33,7 +41,6 @@ It does not assert that this edge must affect the observation column.
 
 All proofs are core Lean; no Mathlib or finite-horizon premise. The Boolean
 identities and two concrete divergence controls use `decide +kernel`.
-Proof and formalization: Troy Lowry with OpenAI Codex.
 -/
 
 @[expose] public section
@@ -306,8 +313,7 @@ theorem backgrounds_no_left_bound (lo : Int) :
     simp [B,hm]
 
 /-- Uniform in the source separation, all times and every local gauge.
-The backgrounds are infinite initially. This does not refute the proposed
-observer condition for canonical finite starts or prove a prize result. -/
+The backgrounds are infinite initially. -/
 theorem unobservable (g : Nat → Int → Bool) (k : Int) (hk : 1≤k) :
     Rule30PeriodTwoSideways.FinConfig (h0 k) ∧ h0 k (-3*k-2)=true ∧
       ∀ t, gaugeEvol g (h0 k) t 1=false := by
@@ -379,5 +385,102 @@ theorem mode_left_edge (a b x : Int → Bool) (g : Nat → Int → Bool) (lo : I
         simp [step,mix,hleft,hcenter,hright]
 
 end Front
+
+open Ruliology.CellularAutomata.Rule30PeriodTwoSideways (FinConfig)
+open Ruliology.CellularAutomata.Rule30TraceEdge (HasLeftEdge EdgeObservable)
+set_option autoImplicit false
+
+/-- The fixed zero gauge; a common field is independent of the gauge choice. -/
+def zeroGauge (_ : Nat) (_ : Int) : Bool := false
+
+/-- Vanishing gauge curvature along the complete auxiliary history. -/
+def CommonField (a b : Int → Bool) (h : Nat → Int → Bool) : Prop :=
+  ∀ t p, xor
+    (xor (evol a t (p+1)) (evol b t (p+1)) && h t p)
+    (xor (evol a t p) (evol b t p) && h t (p+1))=false
+
+/-- Observation at every fixed physical column, not at a moving edge. -/
+def ModeObservable (a b x : Int → Bool) : Prop :=
+  ∀ p, ∃ t, Front.mode a b zeroGauge x t p=true
+
+/-- Open sufficient criterion. The auxiliary mode is not assumed physical.
+Only initial subset is required; CommonField is required for all time.
+Both backgrounds vanish below the initial mode's left edge. -/
+def ObserverCriterion : Prop :=
+  ∀ (a b x : Int → Bool), FinConfig a → FinConfig b → FinConfig x →
+    ∀ lo, HasLeftEdge x lo →
+      (∀ p, p<lo → a p=false) → (∀ p, p<lo → b p=false) →
+      (∀ p, x p=true → xor (a p) (b p)=true) →
+      CommonField a b (Front.mode a b zeroGauge x) → ModeObservable a b x
+
+theorem actual_difference_common (a b : Int → Bool) :
+    CommonField a b (Front.mode a b zeroGauge (fun p => xor (a p) (b p))) := by
+  intro t p
+  rw [Front.actual_difference,Front.actual_difference]
+  simp only [Bool.and_comm,Bool.xor_self]
+
+/-- The criterion gives the precise existing global observer target. -/
+theorem edgeObservable_of_observerCriterion (hc : ObserverCriterion) : EdgeObservable := by
+  have no_lt : ∀ (a b : Int → Bool) (u v : Int),
+      FinConfig a → FinConfig b → HasLeftEdge a u → HasLeftEdge b v → u<v →
+      (∀ t, evol a t 0=evol b t 0) → False := by
+    intro a b u v hfa hfb ha hb huv heq
+    let x : Int → Bool := fun p => xor (a p) (b p)
+    have hfx : FinConfig x := by
+      obtain ⟨M,hM⟩ := hfa
+      obtain ⟨N,hN⟩ := hfb
+      refine ⟨M+N,?_⟩
+      intro p hp
+      simp only [x,hM p (by omega),hN p (by omega),Bool.xor_self]
+    have hleft : HasLeftEdge x u := by
+      constructor
+      · simp only [x,ha.1,hb.2 u huv,Bool.true_xor,Bool.not_false]
+      · intro p hp
+        simp only [x,ha.2 p hp,hb.2 p (by omega),Bool.xor_self]
+    have hobs := hc a b x hfa hfb hfx u hleft ha.2
+      (fun p hp => hb.2 p (by omega)) (fun _ hp => hp)
+      (actual_difference_common a b) 0
+    obtain ⟨t,ht⟩ := hobs
+    change Front.mode a b zeroGauge (fun p => xor (a p) (b p)) t 0=true at ht
+    rw [Front.actual_difference,heq t,Bool.xor_self] at ht
+    cases ht
+  intro a b hfa hfb u v ha hb heq
+  rcases Int.lt_trichotomy u v with huv|huv|huv
+  · exact False.elim (no_lt a b u v hfa hfb ha hb huv heq)
+  · exact huv
+  · exact False.elim (no_lt b a v u hfb hfa hb ha huv (fun t => (heq t).symm))
+
+/-- Conditional implication to the exact official Problem 1. -/
+theorem problem1_of_observerCriterion (hc : ObserverCriterion) : Rule30Prize.Problem1 :=
+  Rule30TraceEdge.problem1_of_edgeObservable (edgeObservable_of_observerCriterion hc)
+
+theorem barrier_front_mode_eq (g : Nat → Int → Bool) (k : Int) :
+    ∀ t p, Front.mode A B g (h0 k) t p=gaugeEvol g (h0 k) t p := by
+  intro t
+  induction t with
+  | zero => intro p;rfl
+  | succ t ih =>
+    intro p
+    simp only [Front.mode,Front.step,gaugeEvol,gauged,delta,ih]
+
+theorem barrier_common_field (k : Int) :
+    CommonField A B (Front.mode A B zeroGauge (h0 k)) := by
+  intro t p
+  simp only [barrier_front_mode_eq,gaugeEvol_eq]
+  exact H_wedge k t p
+
+/-- The finite mode meets the initial subset and all-time common-field
+conditions, but the unbounded backgrounds prevent using ObserverCriterion. -/
+theorem barrier_mode_not_observable (k : Int) (hk : 1≤k) :
+    FinConfig (h0 k) ∧ HasLeftEdge (h0 k) (-3*k-2) ∧
+    (∀ p, h0 k p=true → xor (A p) (B p)=true) ∧
+    CommonField A B (Front.mode A B zeroGauge (h0 k)) ∧
+    ¬ModeObservable A B (h0 k) := by
+  refine ⟨finite_mode k hk,⟨(source_bit k hk).1,source_left k hk⟩,
+    (fun p hp => initial_subset k p hp),barrier_common_field k,?_⟩
+  intro hobs
+  obtain ⟨t,ht⟩ := hobs 1
+  rw [barrier_front_mode_eq,gaugeEvol_eq,H_center k hk] at ht
+  cases ht
 
 end Ruliology.CellularAutomata.Rule30DividedDifference
