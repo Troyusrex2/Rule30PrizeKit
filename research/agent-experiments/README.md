@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Rank-search follow-up:** [three exact finite-system certificates](coordinator/20261026-rank-certificates/REPORT.md) sharpen the template failures. They are Python checked, not Lean verified; the invariant-sink target remains open.
+
 **Current proof target:** [separation inside the invariant reader sink](coordinator/20261026-reader-separation/BRIEF.md). [Nonsink completeness, delayed example and honest solver limits](coordinator/20261026-reader-separation/REPORT.md). The complete reader and the fixed-center bridge remain open.
 
 **Current experiment:** [complete the sound temporal-column reader](coordinator/20261026-column-reader/BRIEF.md). [Proof, exact controls and failed ranking templates](coordinator/20261026-column-reader/REPORT.md). Acceptance is proved sound; rejection remains unclassified by the theorem.
