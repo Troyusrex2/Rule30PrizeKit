@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest agent target:** [uniform penultimate-bit decoder](coordinator/20261026-observer-clock-reduction/BRIEF.md). [Checked equivalence, clock inverse, failed plateau extension and cubic filters](coordinator/20261026-observer-clock-reduction/REPORT.md). The cubic evidence is finite; no full separation or prize proof is asserted.
+
 **Latest target:** [canonical observer after the checked normal-form reduction](coordinator/20261026-canonical-reader/BRIEF.md). [Full-kernel proofs, exact census and failed canonical ranks](coordinator/20261026-canonical-reader/REPORT.md). Normalization is solved; unbounded trace injectivity and the fixed-center bridge remain open.
 
 **New proof tool:** [block-affine returns and the all-width clock](coordinator/20261026-block-affine-clocks/BRIEF.md). [Full replay, scope, clock-64 inverse structure and further failed searches](coordinator/20261026-block-affine-clocks/REPORT.md). The numerical bound is known; sink separation and the center bridge remain open.

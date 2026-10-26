@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Checked one-bit observer reduction and clock inverse](research/agent-experiments/coordinator/20261026-observer-clock-reduction/REPORT.md): a uniform penultimate-bit decoder would suffice for reader completeness. Includes a proved local barrier and explicit finite cubic filters; the decoder and prize problem remain open.
+
 [Checked all-width canonical reader forms](research/agent-experiments/coordinator/20261026-canonical-reader/REPORT.md): unique normal forms commute with Rule 30; completeness is reduced to an open canonical observer. Exact finite census through width 30, no prize solution.
 
 [Checked block-affine clocks and further separation experiments](research/agent-experiments/coordinator/20261026-block-affine-clocks/REPORT.md): an independent Lean proof of the known sharper clock and a generic three-cell return lemma; no full separation or prize result. Includes complete clock-64 diagnostics and failed NFA/rank searches.

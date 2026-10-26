@@ -1,0 +1,480 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "ad1d09b6d460b1849017fcf7c99151ad0304ceee8dfc80e78f43bfc1a917da3b",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 0.872,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 1.508,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30ColumnReaderResearch.Coupled",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Invariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Symbol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.acceptance_invariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.accepted_last_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.allowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.change_take",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.closed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.closed_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.initial_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.instDecidableEqCoupled",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.instDecidableInvariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.invariant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.invariant_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.lastPair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.last_take",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.prefix_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.previous_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.raw_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.reader_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.rowStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.rowStep_march",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.row_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.runCoupled",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.run_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.stepWord",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.takeRow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.transformed_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.update",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30ColumnReaderResearch.Coupled.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.older",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.previous",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.raw",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30ColumnReaderResearch.Coupled.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.transformed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.advance.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.change.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.change.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.change.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.initial.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.instDecidableEqCoupled.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.lastPair.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.lastPair.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.lastPair.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.rowStep.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.rowStep.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.rowStep.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.rowStep.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.run.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.runCoupled.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.runCoupled.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.runCoupled.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.stepWord.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.takeRow.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.takeRow.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.takeRow.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.takeRow.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.update.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.zero.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.Coupled.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.Coupled.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.Coupled.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.Coupled.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ColumnReaderResearch.instDecidableEqCoupled.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.acceptance_invariant",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.prefix_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ColumnReaderResearch.reader_sound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ColumnReaderResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 119,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
