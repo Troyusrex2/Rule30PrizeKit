@@ -1,0 +1,64 @@
+{"task": "ml-control", "source_sha256": "4ae1cacef81be7c10077246f254c875a47ec06d243b3ce129add649ed326882a", "exit_code": 0, "seconds": 1.102, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+survivor counts: col0 = a fixed P-periodic word, col1 free over N bits
+(0 would mean that period is impossible from time 0 at that width)
+
+--- period 1
+  col0=0    N=4..4: [0]   DEAD at N=4
+  col0=1    N=4..4: [0]   DEAD at N=4
+
+--- period 2
+  col0=00   N=4..4: [0]   DEAD at N=4
+  col0=10   N=4..4: [0]   DEAD at N=4
+  col0=01   N=4..4: [0]   DEAD at N=4
+  col0=11   N=4..4: [0]   DEAD at N=4
+
+--- period 3
+  col0=000  N=4..4: [0]   DEAD at N=4
+  col0=100  N=4..4: [0]   DEAD at N=4
+  col0=010  N=4..4: [0]   DEAD at N=4
+  col0=110  N=4..6: [8, 16, 0]   DEAD at N=6
+  col0=001  N=4..4: [0]   DEAD at N=4
+  col0=101  N=4..4: [0]   DEAD at N=4
+  col0=011  N=4..4: [0]   DEAD at N=4
+  col0=111  N=4..4: [0]   DEAD at N=4
+
+--- period 4
+  col0=0000 N=4..4: [0]   DEAD at N=4
+  col0=1000 N=4..4: [0]   DEAD at N=4
+  col0=0100 N=4..4: [0]   DEAD at N=4
+  col0=1100 N=4..6: [8, 8, 0]   DEAD at N=6
+  col0=0010 N=4..4: [0]   DEAD at N=4
+  col0=1010 N=4..4: [0]   DEAD at N=4
+  col0=0110 N=4..4: [0]   DEAD at N=4
+  col0=1110 N=4..4: [0]   DEAD at N=4
+  col0=0001 N=4..4: [0]   DEAD at N=4
+  col0=1001 N=4..4: [0]   DEAD at N=4
+  col0=0101 N=4..4: [0]   DEAD at N=4
+  col0=1101 N=4..9: [8, 16, 32, 64, 64, 0]   DEAD at N=9
+  col0=0011 N=4..4: [0]   DEAD at N=4
+  col0=1011 N=4..4: [0]   DEAD at N=4
+  col0=0111 N=4..4: [0]   DEAD at N=4
+  col0=1111 N=4..4: [0]   DEAD at N=4
+
+wrote ../evidence/sideways_sat_count.json
+CONTROL: the true rule 30 orbit against the same constraints
+  survives every N in 4..199: True 
+  (if this said False the checker would be wrong and everything below void)
+
+  true centre prefix : 1101110011000101
+  true column+1 prefix: 0101010010111100
+
+SWEEP: widest N at which SOME period-P centre word still has a solution
+  P= 1: widest surviving N =  0  (word None)
+  P= 2: widest surviving N =  0  (word None)
+  P= 3: widest surviving N =  5  (word 110)
+  P= 4: widest surviving N =  8  (word 1101)
+  P= 5: widest surviving N =  6  (word 11000)
+  P= 6: widest surviving N =  7  (word 110000)
+  P= 7: widest surviving N = 15  (word 1100000)
+  P= 8: widest surviving N = 12  (word 11011100)
+  P= 9: widest surviving N = 19  (word 110000001)
+  P=10: widest surviving N = 21  (word 1100000110)
+
+wrote ../evidence/control_and_sweep.json
+

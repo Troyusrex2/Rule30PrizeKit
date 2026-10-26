@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-codex-sanity-20261026T005702Z-9cfc0376-v01",
+  "agent": {
+    "name": "codex-sanity",
+    "model": null,
+    "framework": "Codex"
+  },
+  "created_utc": "2026-10-26T00:57:02Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "REPORT.md",
+      "sha256": "aa75a38661e09c0d9857180fb8eadb35cbb777daddcc758dc8b0a270f3a2521f",
+      "description": "Proposal, exact scope, prior work, failures and reproduction instructions."
+    },
+    {
+      "artifact_id": "A002",
+      "path": "src/experiment.py",
+      "sha256": "31da2d63686d001df8a152e2a4616d0ef38a3c51d51077f2e5909219740f9fd0",
+      "description": "Exact finite inverse-trace experiment and physical truth-table controls."
+    },
+    {
+      "artifact_id": "A003",
+      "path": "src/run_guarded.py",
+      "sha256": "a037fb3f5deeb276c8a02c577a31e61cdb006c488b22511cf4b0c1dbcbead838",
+      "description": "Resource-limited reproducer; requires psutil and a fresh output directory."
+    },
+    {
+      "artifact_id": "A004",
+      "path": "evidence/results.json",
+      "sha256": "d6bd0d69e7f9bb8ea5736e20b6e3a49794f3b0c8feace2599009ec70d6092d25",
+      "description": "All 272 reconstructed seed prefixes, annulus counts and finite controls."
+    },
+    {
+      "artifact_id": "A005",
+      "path": "evidence/center.bits",
+      "sha256": "d863d321d90fab1e9bdd571b319595fd34c16e4f9644ae6692fe36c9c60c7399",
+      "description": "Actual seed center at times 0 through 2047, chronological ASCII bits plus newline."
+    },
+    {
+      "artifact_id": "A006",
+      "path": "evidence/run-metadata.json",
+      "sha256": "b8348146b360a0cd7d787d8655cf182cb9f1c7a73dbe836cc7effe53e9d61b68",
+      "description": "Final run limits, environment, exact source hash, timing and sampled child RSS."
+    },
+    {
+      "artifact_id": "A007",
+      "path": "logs/experiment.run.log",
+      "sha256": "0ba9b66e65d7ad8e78a92f00e353d0bf5fdec515dab8584fab4a3bd8ef6adc0b",
+      "description": "Unedited stdout and stderr from the final guarded experiment."
+    },
+    {
+      "artifact_id": "A008",
+      "path": "evidence/referenced-sources.json",
+      "sha256": "5b780a997a944b47d99913afc861794fc241e387c5fd9b088164b2f075a42a09",
+      "description": "Pinned prior-work blob hashes and a minimal public-index overlap citation."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "E",
+      "status": "EXPERIMENT",
+      "title": "Periodic-tail surgery and an open seed-repair regeneration lemma",
+      "claim": "Proposed, unproved: for every actual-prefix periodic-tail surgery (T,P), its white-right-half inverse seed has a black cell in every sufficiently aligned dyadic annulus. Finite experiment tests M=2*(T+P+1).",
+      "scope": "Rule 30 from the single seed; initial right half white; u(t)=c(t) for t<T and c(T+((t-T) mod P)) thereafter. Finite grid T=0..16, P=1..16, trace and inverse-prefix lengths 2048. Infinite conjecture quantifies every T>=0,P>=1 and some M>=1, then all k>=0.",
+      "result": "All 1514 complete tested annuli in 272 cases contained an extra black seed cell. All finite controls passed. The stronger period-sized-window bound failed at T=0,P=1,m=1. No unbounded argument or new period exclusion was obtained.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005",
+        "A006",
+        "A007",
+        "A008"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "kit_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+        "commands": [
+          "python src/run_guarded.py --output reproduce-output"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Inverse realization and triangular sensitivity are existing kit results, not new findings; no Lean replay was performed here.",
+        "Finite observations do not imply infinite support, a density bound, the proposed regeneration lemma, or official Problem 1.",
+        "No proved boundary-state transition or OR/cancellation certificate is supplied; the conjecture may be false.",
+        "Periodic forcing cannot be assumed to stabilize or bound the driven right half.",
+        "The 272 pairs can prescribe duplicate traces and are not independent statistical evidence.",
+        "Rules 90, 150 and 210 controls require no extra seed edits, so generic left-permutivity is insufficient."
+      ],
+      "next_action": "Falsify the fixed-M rule on held-out onsets and periods, then seek a symbolic scale transition that retains the actual driven-right-column state and survives XOR cancellation; prove that transition before drawing an unbounded conclusion."
+    }
+  ]
+}

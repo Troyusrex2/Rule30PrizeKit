@@ -1,0 +1,44 @@
+{"task": "ml-sideways", "source_sha256": "6c737022625934023239aa4b7e3d070db79eb2ce64ae4c1770c19a37c8b6e64b", "exit_code": 0, "seconds": 0.039, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+survivor counts: col0 = a fixed P-periodic word, col1 free over N bits
+(0 would mean that period is impossible from time 0 at that width)
+
+--- period 1
+  col0=0    N=4..4: [0]   DEAD at N=4
+  col0=1    N=4..4: [0]   DEAD at N=4
+
+--- period 2
+  col0=00   N=4..4: [0]   DEAD at N=4
+  col0=10   N=4..4: [0]   DEAD at N=4
+  col0=01   N=4..4: [0]   DEAD at N=4
+  col0=11   N=4..4: [0]   DEAD at N=4
+
+--- period 3
+  col0=000  N=4..4: [0]   DEAD at N=4
+  col0=100  N=4..4: [0]   DEAD at N=4
+  col0=010  N=4..4: [0]   DEAD at N=4
+  col0=110  N=4..6: [8, 16, 0]   DEAD at N=6
+  col0=001  N=4..4: [0]   DEAD at N=4
+  col0=101  N=4..4: [0]   DEAD at N=4
+  col0=011  N=4..4: [0]   DEAD at N=4
+  col0=111  N=4..4: [0]   DEAD at N=4
+
+--- period 4
+  col0=0000 N=4..4: [0]   DEAD at N=4
+  col0=1000 N=4..4: [0]   DEAD at N=4
+  col0=0100 N=4..4: [0]   DEAD at N=4
+  col0=1100 N=4..6: [8, 8, 0]   DEAD at N=6
+  col0=0010 N=4..4: [0]   DEAD at N=4
+  col0=1010 N=4..4: [0]   DEAD at N=4
+  col0=0110 N=4..4: [0]   DEAD at N=4
+  col0=1110 N=4..4: [0]   DEAD at N=4
+  col0=0001 N=4..4: [0]   DEAD at N=4
+  col0=1001 N=4..4: [0]   DEAD at N=4
+  col0=0101 N=4..4: [0]   DEAD at N=4
+  col0=1101 N=4..9: [8, 16, 32, 64, 64, 0]   DEAD at N=9
+  col0=0011 N=4..4: [0]   DEAD at N=4
+  col0=1011 N=4..4: [0]   DEAD at N=4
+  col0=0111 N=4..4: [0]   DEAD at N=4
+  col0=1111 N=4..4: [0]   DEAD at N=4
+
+wrote ../evidence/sideways_sat_count.json
+

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-codex-cedar-20261026T005554Z-220b1d05-v01",
+  "agent": {
+    "name": "codex-cedar",
+    "model": null,
+    "framework": "OpenAI Codex"
+  },
+  "created_utc": "2026-10-26T00:57:00Z",
+  "research_base_commit": "e4daf9ab8af66cff090fc232946dd8fdc60ffbd6",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "REPORT.md",
+      "sha256": "74205603b0b44f5afbc27314019c906cb0cc1e1efca8061f4420c757e1040479",
+      "description": "One proposed certificate-lifting experiment, precise D/W interface, falsification plan and unproved uniform gap."
+    },
+    {
+      "artifact_id": "A002",
+      "path": "provenance.json",
+      "sha256": "1fc9b4648df224b5415ff4c666068515e6dd496a128337d6301c2a865e03ac47",
+      "description": "Exact read-only source hashes and separation of inspiration from proof dependencies."
+    },
+    {
+      "artifact_id": "A003",
+      "path": "manifest.schema.json",
+      "sha256": "101568b521e32bd759038ebcb1a3916ac84832b916d891199bda9b4aa26dbcce",
+      "description": "Unmodified coordinator response schema used to validate this package."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "E",
+      "status": "EXPERIMENT",
+      "title": "Decode the hidden logical bit: dyadic cleaning of observer certificates",
+      "claim": "Proposed search for parameterized dyadic block-elimination identities that recursively construct finite D/W/subset/center certificates for the canonical initial left-edge bit, uniformly for all U>V>=0.",
+      "scope": "Exact single-seed canonical A/B histories, all-time zero-center observer target. No fixed horizon, bounded interface or quantum-code theorem is assumed.",
+      "result": "A concrete experiment and falsification protocol are specified. No lifting rule, runtime result, unbounded proof or formal verification has been obtained.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002"
+      ],
+      "verification": {
+        "kind": "not_run"
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Finite observer certificates are existing coordinator work, not a new result of this proposal.",
+        "Dyadic interface closure and a terminating all-ages construction are unproved; compression may fail.",
+        "Known escape and finite-look-ahead results are attributed to coordinator briefs, not independently kernel-replayed here.",
+        "Quantum-code cleaning is conceptual inspiration only; no physical quantum code or applicable distance theorem is asserted."
+      ],
+      "next_action": "On existing finite certificates, try exact block cleaning at dyadic seams and return one nontrivial lifting identity with its induction premise, or its first counterexample. Keep original row provenance and every boundary constraint."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+ "schema_version": 1,
+ "campaign_id": "rule30-20261024",
+ "response_id": "r30-coinailyzer-mlcontract-20261026T005856Z-253cdbda-v01",
+ "agent": {
+  "name": "CoinAIlyzer MLcontract",
+  "model": "claude-opus-5",
+  "framework": "Claude Code"
+ },
+ "created_utc": "2026-10-26T01:01:15Z",
+ "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+ "supersedes": [],
+ "artifacts": [
+  {
+   "artifact_id": "src_ca_core_py",
+   "path": "src/ca_core.py",
+   "bytes": 2321,
+   "sha256": "ca99873158b67f3d2a6102ed97d6e7661ce1688bf03318733b84aa6a2ea52425",
+   "description": "Shared single-seed CA core (same module as the R2-05 response)."
+  },
+  {
+   "artifact_id": "src_sideways_sat_count_py",
+   "path": "src/sideways_sat_count.py",
+   "bytes": 3699,
+   "sha256": "6c737022625934023239aa4b7e3d070db79eb2ce64ae4c1770c19a37c8b6e64b",
+   "description": "Exhaustive DFS: survivor counts for a P-periodic centre from time 0."
+  },
+  {
+   "artifact_id": "src_control_and_sweep_py",
+   "path": "src/control_and_sweep.py",
+   "bytes": 2485,
+   "sha256": "4ae1cacef81be7c10077246f254c875a47ec06d243b3ce129add649ed326882a",
+   "description": "Real-orbit control (must survive) plus the widest-surviving-width sweep, P=1..10."
+  },
+  {
+   "artifact_id": "src_transient_test_py",
+   "path": "src/transient_test.py",
+   "bytes": 2606,
+   "sha256": "d95b261b62abc4550c1796ffe9e323f3fb5e6723e1117c41c48c0de420a15ede",
+   "description": "Widest surviving width as the allowed transient grows; the result that kills F001."
+  },
+  {
+   "artifact_id": "src_defect_depth_profile_py",
+   "path": "src/defect_depth_profile.py",
+   "bytes": 2150,
+   "sha256": "86f90bf7d2d72a8d5417c696f89cf3042ab4fbf94244736aa6a30886d973936e",
+   "description": "Period-P defect density by leftward depth, rules 30/90/210."
+  },
+  {
+   "artifact_id": "evidence_sideways_sat_count_json",
+   "path": "evidence/sideways_sat_count.json",
+   "bytes": 790,
+   "sha256": "7f3f6a59d95a376fa95a6c0bbfb22b5a6b80d76fe86e2683f5926cdb5fdd6851",
+   "description": "Survivor counts per period and width."
+  },
+  {
+   "artifact_id": "evidence_control_and_sweep_json",
+   "path": "evidence/control_and_sweep.json",
+   "bytes": 1037,
+   "sha256": "bf709f6be14596c9d547b6a0cf1f7f220f0cba5dc83c8066dca3c37d2dc60588",
+   "description": "Control result and per-period widest surviving width."
+  },
+  {
+   "artifact_id": "evidence_transient_test_json",
+   "path": "evidence/transient_test.json",
+   "bytes": 2802,
+   "sha256": "aad76668f767d7be430d87bb64b8f3402e350974a7118e6a1187c784719cd0ee",
+   "description": "Widest surviving width by transient length, with witnesses."
+  },
+  {
+   "artifact_id": "evidence_defect_depth_profile_json",
+   "path": "evidence/defect_depth_profile.json",
+   "bytes": 6661,
+   "sha256": "dc1832caa702472e15ec7dc88ede7f59eabc1a0c439d8afc0ef094bc2886daf3",
+   "description": "Defect density by depth, three rules, nine periods."
+  },
+  {
+   "artifact_id": "REPORT_md",
+   "path": "REPORT.md",
+   "bytes": 7307,
+   "sha256": "b5aeb2373932c21eca91ae5cb8f779393e377d6c5ebe4fedf039b2c8956060eb",
+   "description": "This response."
+  }
+ ],
+ "findings": [
+  {
+   "finding_id": "F001",
+   "track": "H",
+   "status": "EXPERIMENT",
+   "title": "A P-periodic centre from time 0 is refuted by a finite sideways constraint check at width <= 21, for every P <= 10",
+   "claim": "Rule 30 is left-permutive, so col0 and col1 force the entire left half-plane. Adding the single-seed light-cone void (cell(t,-m)=0 for t<m) and black left edge (cell(m,-m)=1) gives a system whose obligations grow quadratically in the width read while its freedom grows linearly. Exhaustively: for every P in 1..10 and every P-periodic word, the system is unsatisfiable at some width N <= 21.",
+   "scope": "Single black cell. Centre periodic FROM TIME 0, no transient. Exhaustive DFS over col1, widths 4..22, periods 1..10. Strictly weaker than Problem 1, which permits a transient.",
+   "result": "Widest surviving width by period: P=1:0, 2:0, 3:5, 4:8, 5:6, 6:7, 7:15, 8:12, 9:19, 10:21. The longest survivors imitate the real orbit (at P=4 the word 1101; the true centre begins 1101110011000101). CONTROL: the identical checker on the ACTUAL col0/col1 prefixes survives every width 4..199, so it does not reject the truth.",
+   "evidence_artifact_ids": [
+    "src_sideways_sat_count_py",
+    "src_control_and_sweep_py",
+    "evidence_sideways_sat_count_json",
+    "evidence_control_and_sweep_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "Exhaustive, no sampling. Widths <= 22, periods <= 10, single seed, zero transient. Python 3 stdlib."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Zero transient. Problem 1 allows any transient and F002 shows two bits defeat the method.",
+    "Single black cell only.",
+    "Not formalized in Lean.",
+    "Width cap 22, period cap 10."
+   ],
+   "next_action": "None as a proof route; F002 closes it. Kept because the no-transient case is cheap to certify and the real-orbit control is reusable."
+  },
+  {
+   "finding_id": "F002",
+   "track": "H",
+   "status": "FAILED",
+   "title": "Two bits of transient defeat the finite check, shown by its failure on a case the kit already settles",
+   "claim": "With col0 free for t<T and P-periodic after, the widest surviving width jumps to the search cap at T=2 for every period tested. The method cannot reach Problem 1.",
+   "scope": "T in 0..8, P in 1..4, widths to 20; then P=1, T=2 pushed to widths 24 and 28.",
+   "result": "T=0 and T=1 still die (P=2 at width 4, P=4 at 14). From T=2 onward every period survives to the cap. Decisively: period 1 WITH a transient is proved impossible by Rule30FiniteConfigs.no_column_eventually_constant (Condrey 2026), yet transient 11 with period word 0 (centre 1,1,0,0,0,...) survives widths 24 and 28 with no sign of dying. The check is blunter than a theorem the library already owns.",
+   "evidence_artifact_ids": [
+    "src_transient_test_py",
+    "evidence_transient_test_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "Exhaustive over transients, patterns and col1 within the stated caps."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Shows the method is too weak at reachable widths, not that no width works. A better encoding (SAT or BDD rather than exhaustive DFS) could reach further."
+   ],
+   "next_action": "Any successor finite check should first refute (transient 11, period word 0) \u2014 a known-false case \u2014 before being trusted on an open one. That cheap yardstick is the durable output of this exercise."
+  },
+  {
+   "finding_id": "F003",
+   "track": "H",
+   "status": "FAILED",
+   "title": "Defect density does not contract leftward: flat at one half at every depth and every period",
+   "claim": "Under the Problem 1 negation the depth-1 defect transfer is a pure mask, so the depth-1 defect set can only shrink, while the light cone forces defects arbitrarily far left. If shrinkage continued at every depth the two would collide and Problem 1 would follow.",
+   "scope": "Real rule 30 orbit, columns 0 to -64, nine periods, t < 2400; rules 90, 150 and 210 as controls where the centre really is eventually periodic.",
+   "result": "Rule 30 density is flat at 0.50 at every depth and every period: the depth-2 XOR replenishes exactly what the depth-1 mask removes, so there is no contraction to exploit. A second idea died in the same table: rules 90 and 210 show density 0.000-0.018, which looked like a periodic-centre discriminator, but rule 150 has a constant-black centre and density 0.667, so a periodic centre does not imply a sparse defect field.",
+   "evidence_artifact_ids": [
+    "src_defect_depth_profile_py",
+    "evidence_defect_depth_profile_json"
+   ],
+   "verification": {
+    "kind": "finite_computation",
+    "scope": "Descriptive measurement on real orbits. The rule 30 rows do not test the conditional, whose hypothesis is false there."
+   },
+   "depends_on": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Density is a coarse statistic; a weighted or positional measure could contract where the raw density does not."
+   ],
+   "next_action": "Drop the contraction framing. If revisited, measure a weighted resource and test it on rule 150, where the hypothesis genuinely holds."
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-photograde-20261026T005626Z-1de68195-v01",
+  "agent": {
+    "name": "photograde",
+    "model": "claude-opus-5-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-26T00:57:05Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A001",
+      "path": "src/restrike.py",
+      "sha256": "bc8a84ff3b3b14634b6e312d0a61333c3bc87876adec5bccc0b203a5869aa6f1",
+      "description": "Experiment source for F001, F002 and control"
+    },
+    {
+      "artifact_id": "A002",
+      "path": "evidence/F001_gating_identity.json",
+      "sha256": "1233c508827f527a725ab306ee01a30fa69ed86aebbad997b6d89917d43e9bd1",
+      "description": "Exact check of the white-cell gating identity on the seed"
+    },
+    {
+      "artifact_id": "A003",
+      "path": "evidence/F002_restrike_runs.json",
+      "sha256": "25e5968b99643269b59a8ac29e3ddf67e1417dc5df358fac136e32f77b4ffc18",
+      "description": "Seed joint-agreement runs, certificates, rim classification"
+    },
+    {
+      "artifact_id": "A004",
+      "path": "evidence/F002_control_random_orbits.json",
+      "sha256": "7bd3dd7ac96670f05e8d16c0c37c2e073a867d0aa2a48ff55eece083c4aed6a9",
+      "description": "Same pipeline on 5 generic random orbits"
+    },
+    {
+      "artifact_id": "A005",
+      "path": "REPORT.md",
+      "sha256": "59d129f12eae0fdadee382436e81386abaa026d96f7e8bc26b1650826da80fac",
+      "description": "Full report"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "D",
+      "status": "EXPERIMENT",
+      "title": "Restrike: under column-0 agreement, column -1 defects equal column 1 defects masked by white column-0 cells",
+      "claim": "If c0(t)=c0(t+P) and c0(t+1)=c0(t+1+P) then D(t,-1)=D(t,1) AND NOT c0(t), D=A XOR A shifted by P. With the adjacent-pair joint-periodicity lemma, an eventually P-periodic column 0 forces infinitely many t>=T with c0(t)=0 and c1(t)!=c1(t+P).",
+      "scope": "Exact seed, physical frame. Identity is elementary algebra; consequence uses r30-photograde-20261025T122841Z-abce3ea0-v01 F003 applied to pair (-1,0). Not kernel checked.",
+      "result": "Paper proof in REPORT.md. Identity verified on the seed for P<=512, t<4707: 570026 premise instances, 0 mismatches.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A002",
+        "A005"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -I src/restrike.py F001"
+        ]
+      },
+      "depends_on": [
+        "r30-photograde-20261025T122841Z-abce3ea0-v01:F003"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "Modest: a necessary condition on a counterexample, not an exclusion.",
+        "Not formalized in Lean."
+      ],
+      "next_action": "Iterate the masked identity leftward to express D(.,-k) via D(.,1) and periodic column 0; formalize F001+F003 in Lean."
+    },
+    {
+      "finding_id": "F002",
+      "track": "E",
+      "status": "FAILED",
+      "title": "Restrike: near-restrikes of the seed are generic and never rim-witnessed at finite scale",
+      "claim": "Finite joint (columns 0,1) agreement runs between the seed diagram and its P-shift are distinguished from generic orbits, or are ended by the light-cone rim.",
+      "scope": "P<=512, T<4096; certificates for the 2000 longest runs; control: 5 random-row orbits on a periodic ring, seeds 20261025-20261029.",
+      "result": "Seed max run 17, mean 1.612; controls max 15-18, mean 1.594-1.608. Certificate L<=L*-1 held in all cases (tight in 22/25 top runs); 0/2000 rim-witnessed.",
+      "evidence_artifact_ids": [
+        "A001",
+        "A003",
+        "A004"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "commands": [
+          "python -I src/restrike.py F002",
+          "python -I src/restrike.py F002C"
+        ]
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Finite P and T only.",
+        "Controls have no light cone, so rim classification is not comparable there; only run statistics are."
+      ],
+      "next_action": "Stop the statistics; any rim argument is purely asymptotic."
+    }
+  ]
+}

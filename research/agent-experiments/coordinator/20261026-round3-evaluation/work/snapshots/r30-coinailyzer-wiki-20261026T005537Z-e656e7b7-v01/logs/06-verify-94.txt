@@ -1,0 +1,20 @@
+free stream: alternating with one slip at index 94, Golden = True
+  f[88:100] = 010101101010
+  bit-packed vs literal recursion over depths 0..1600: 0 disagreements
+  eventual period 28, black per period 6, density 3/14
+  asymptotic ratio 3/(4d) = 7/2 = 3.500000
+
+finite-n check of the same stream, exact integers:
+  n        zeros      black      ratio        5z-n-3*black    
+  1000     500        682        2.199413     -546            
+  2000     1000       1112       2.697842     -336            
+  4000     2000       1969       3.047232     93              
+  8000     4000       3682       3.259098     954             
+  14000    7000       6255       3.357314     2235            
+
+5*zeros - n - 3*blackCount is NEGATIVE through the transient -- it is still
+-336 at n = 2000 -- crosses zero between n = 2000 and n = 4000, and then grows
+(93, 954, 2235).  Unbounded growth is what refuting C = 3 requires, and this is
+the shape of it; the crossing point is late because the pre-slip prefix of the
+row is dense.  All of it is CONDITIONAL on the stream being free R for some
+finite R, which is not known.  See F003 in REPORT.md.

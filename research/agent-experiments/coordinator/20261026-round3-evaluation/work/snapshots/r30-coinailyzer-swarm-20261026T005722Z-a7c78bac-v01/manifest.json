@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-coinailyzer-swarm-20261026T005722Z-a7c78bac-v01",
+  "agent": {
+    "name": "CoinAIlyzer swarm (production analytics)",
+    "model": "claude-opus-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-26T00:57:22Z",
+  "research_base_commit": "e8b3475582739991911bc0444d2d1689d513a27b",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "SRC-DYADIC-CENTERCOL",
+      "path": "src/dyadic_centercol.py",
+      "sha256": "78f6dcae181dd1bdcdd055be7528e5463b07c8589ee75266d939ffffed027b3c"
+    },
+    {
+      "artifact_id": "SRC-EXACT-SLOPE",
+      "path": "src/exact_slope.py",
+      "sha256": "3a6c67d217c64f187a49854d2a2ae005c56ca0841b02bd992707e42dcdb19a6e"
+    },
+    {
+      "artifact_id": "EV-DYADIC-CENTERCOL-T60000",
+      "path": "evidence/dyadic_centercol_T60000.txt",
+      "sha256": "79f382fcb324653a7ae69a1cdb6689a4bedd2a7b086f00a934d77598ec5fda1b"
+    },
+    {
+      "artifact_id": "EV-EXACT-SLOPE-T12000",
+      "path": "evidence/exact_slope_T12000.txt",
+      "sha256": "427710b3c67ed7e27b8702b66897a5c8308a00927f91cebaa2ab5e855488112a"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "R2-06",
+      "status": "NEGATIVE",
+      "title": "The center column carries no 2-adic structure: agreement density is 0.500 in every v2 bucket",
+      "claim": "My own wild hypothesis, tested and REFUTED. Round two established that left-edge agreement depth is a function of v2(p) alone (8, 29, 400 at v2=1,2,3), i.e. 2-adically close rows agree deeply. The extrapolation was that the center column inherits this rigidity, pinning any period P to a valuation class. It does not. A(k), the fraction of t with c(t)==c(t+k), bucketed by v2(k) over T=60000 and all k<=512, is 0.500 to three decimals in every bucket from v2=0 to v2=7. The same orbit is dyadically rigid at the left edge and dyadically structureless at the center, so boundary regularity does not transport inward.",
+      "scope": "Phi(a)=a XOR ((a<<1)|(a<<2)), seed 1; center cell of row t at bit t (verified against the hand picture at t=0 and t=1); T=60000; k=1..512; single seed. Pure enumeration.",
+      "result": "Ran. Hypothesis refuted on its own pre-stated kill test.",
+      "evidence_artifact_ids": [
+        "SRC-DYADIC-CENTERCOL",
+        "EV-DYADIC-CENTERCOL-T60000"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "T=60000; k<=512; one seed; no solver; under 5 minutes on one core."
+      },
+      "depends_on": [
+        "r30-coinailyzer-swarm-20261025T123207Z-d3e5f6e4-v01#F001"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "Finite horizon and k<=512. Absence of a dyadic effect here is not proof of absence.",
+        "Single seed, single observation alignment.",
+        "Tests the center column in the coordinate t only; F003 argues that is the wrong coordinate, so this does not refute interface-indexed variants."
+      ],
+      "next_action": "Treat as a standing filter: any proposal carrying a boundary invariant inward must explain why it evades this."
+    },
+    {
+      "finding_id": "F002",
+      "track": "R2-06",
+      "status": "EXPERIMENT",
+      "title": "The v2>=4 growth law is exactly 3/4 of t, placing the regular/chaotic interface at velocity -1/4",
+      "claim": "CORRECTS my round-two response, which reported the regular region as about 0.375 of the cone and stated that I had searched for a clean law and failed. Fitting through the origin gives depth(t,16) = 0.749994 * t over t in [100,12000), i.e. exactly (3/4)t, which is 3/8 of the cone width 2t+1. With the left edge at -t and the regular region reaching (3/4)t inward, the interface sits at -t/4: velocity exactly -1/4 in cone units, one cell per four steps, matching the period-4 ether whose depth I measured at 29.",
+      "scope": "Same frame and seed; T=12000; t in [100,12000); p in {16,32,64}; least squares through the origin.",
+      "result": "Ran. slope 0.749994 at p=16 (resid sd 23.98), 0.748500 at p=32, 0.745512 at p=64.",
+      "evidence_artifact_ids": [
+        "SRC-EXACT-SLOPE",
+        "EV-EXACT-SLOPE-T12000"
+      ],
+      "verification": {
+        "kind": "finite_computation",
+        "limits": "T=12000; three periods; no solver; under 5 minutes on one core."
+      },
+      "depends_on": [
+        "r30-coinailyzer-swarm-20261025T123207Z-d3e5f6e4-v01#F002"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "A six-digit fit at p=16, not a derivation. I have no argument for why the constant is 3/4.",
+        "The droop at p=32 and p=64 (0.7485, 0.7455) is unexplained; finite-horizon warm-up is not separated from a real p dependence.",
+        "The velocity -1/4 reading assumes the left edge sits at -t in cone units, which is the frame convention, not a measured fact."
+      ],
+      "next_action": "Derive 3/4 from the ether tiling, or refute it at larger T; then check whether the interface is literally a period-4 particle."
+    },
+    {
+      "finding_id": "F003",
+      "track": "R2-06",
+      "status": "EXPERIMENT",
+      "title": "Wild swing: re-index the center column by distance to the interface rather than by t",
+      "claim": "Proposal, not run. F002 puts the interface at the rational velocity -1/4, which says it is a period-4 traveling particle rather than a statistical edge. Proposal: stop indexing the center column by t and index it by distance to that interface, m(t) = (5/4)t, or by the period-4 particle phase at the center position. Rationale: F001 tested the center column in t, and t is the coordinate we impose because it is how we run the machine; the dynamics has its own clock. An observable periodic against an internal clock looks like a fair coin against t, which is exactly the shape F001 returned. Pre-stated KILL TEST: compute A_phase(k), center-column agreement bucketed by period-4 interface phase at each endpoint instead of by v2(k). If the buckets sit at 0.500 as in F001, this dies immediately.",
+      "scope": "Mechanism shape with a pre-stated kill test. Nothing computed.",
+      "result": "Not run.",
+      "evidence_artifact_ids": [],
+      "verification": {
+        "kind": "not_run"
+      },
+      "depends_on": [
+        "r30-coinailyzer-swarm-20261026T005722Z-a7c78bac-v01#F001",
+        "r30-coinailyzer-swarm-20261026T005722Z-a7c78bac-v01#F002"
+      ],
+      "conflicts_with": [],
+      "limitations": [
+        "F001 is direct evidence that the center column resists this whole family of ideas; this is a bet that the coordinate was wrong, not that F001 was.",
+        "Rests on F002, whose 3/4 is a fit rather than a derivation.",
+        "No ordinal, no proof obligation discharged, and no claim that structure in the interface coordinate would settle Problem 1 even if found.",
+        "May be a rename of existing defect or particle analyses. If the period-4 interface particle is already catalogued, this adds nothing."
+      ],
+      "next_action": "Run the stated kill test before any further investment."
+    }
+  ]
+}

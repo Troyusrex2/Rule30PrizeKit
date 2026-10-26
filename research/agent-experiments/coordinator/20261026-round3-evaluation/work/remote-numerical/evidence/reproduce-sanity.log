@@ -1,0 +1,43 @@
+{"task": "sanity", "source_sha256": "31da2d63686d001df8a152e2a4616d0ef38a3c51d51077f2e5909219740f9fd0", "exit_code": 0, "seconds": 0.881, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+{
+  "status": "completed_exact_finite_computation",
+  "center_bits": 2048,
+  "center_sha256": "d863d321d90fab1e9bdd571b319595fd34c16e4f9644ae6692fe36c9c60c7399",
+  "physical_inverse_truth_table_cases": 512,
+  "surgery_cases": 272,
+  "annuli_checked": 1514,
+  "fixed_M_rule": "M=2*(T+P+1); annuli [M*2^k,M*2^(k+1))",
+  "fixed_M_failures": [],
+  "one_edit_per_period_window_counterexample": {
+    "T": 0,
+    "P": 1,
+    "start": 1,
+    "length": 1
+  },
+  "linear_or_barrier_controls": [
+    {
+      "rule": 90,
+      "T": 1,
+      "P": 1,
+      "inverse_seed": 1,
+      "additional_edits": 0
+    },
+    {
+      "rule": 150,
+      "T": 1,
+      "P": 1,
+      "inverse_seed": 1,
+      "additional_edits": 0
+    },
+    {
+      "rule": 210,
+      "T": 1,
+      "P": 1,
+      "inverse_seed": 1,
+      "additional_edits": 0
+    }
+  ],
+  "seconds": 0.8291459000029135
+}
+First 12 surgery summaries: [{"T": 0, "P": 1, "forced_period_word": "1", "first_extra_seed_cell_depth": 2, "edits_excluding_origin": 1023}, {"T": 0, "P": 2, "forced_period_word": "11", "first_extra_seed_cell_depth": 2, "edits_excluding_origin": 1023}, {"T": 0, "P": 3, "forced_period_word": "110", "first_extra_seed_cell_depth": 5, "edits_excluding_origin": 991}, {"T": 0, "P": 4, "forced_period_word": "1101", "first_extra_seed_cell_depth": 7, "edits_excluding_origin": 292}, {"T": 0, "P": 5, "forced_period_word": "11011", "first_extra_seed_cell_depth": 6, "edits_excluding_origin": 1162}, {"T": 0, "P": 6, "forced_period_word": "110111", "first_extra_seed_cell_depth": 6, "edits_excluding_origin": 1022}, {"T": 0, "P": 7, "forced_period_word": "1101110", "first_extra_seed_cell_depth": 7, "edits_excluding_origin": 1032}, {"T": 0, "P": 8, "forced_period_word": "11011100", "first_extra_seed_cell_depth": 11, "edits_excluding_origin": 1022}, {"T": 0, "P": 9, "forced_period_word": "110111001", "first_extra_seed_cell_depth": 10, "edits_excluding_origin": 1007}, {"T": 0, "P": 10, "forced_period_word": "1101110011", "first_extra_seed_cell_depth": 10, "edits_excluding_origin": 1006}, {"T": 0, "P": 11, "forced_period_word": "11011100110", "first_extra_seed_cell_depth": 11, "edits_excluding_origin": 1011}, {"T": 0, "P": 12, "forced_period_word": "110111001100", "first_extra_seed_cell_depth": 12, "edits_excluding_origin": 1042}]
+

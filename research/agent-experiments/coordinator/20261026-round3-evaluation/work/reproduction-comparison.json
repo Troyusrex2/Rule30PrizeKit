@@ -1,0 +1,140 @@
+{
+  "all_equal_after_runtime_normalization": true,
+  "checks": [
+    {
+      "task": "sanity",
+      "old": "evidence/results.json",
+      "new": "reproduced-output/results.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "sanity",
+      "old": "evidence/center.bits",
+      "new": "reproduced-output/center.bits",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "backend-runs",
+      "old": "evidence/runs.json",
+      "new": "runs.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "backend-probe",
+      "old": "evidence/periodic-census-L14.json",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "photo-gate",
+      "old": "evidence/F001_gating_identity.json",
+      "new": "evidence/F001_gating_identity.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "photo-runs",
+      "old": "evidence/F002_restrike_runs.json",
+      "new": "evidence/F002_restrike_runs.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "photo-control",
+      "old": "evidence/F002_control_random_orbits.json",
+      "new": "evidence/F002_control_random_orbits.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "ml-sideways",
+      "old": "evidence/sideways_sat_count.json",
+      "new": "evidence/sideways_sat_count.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "ml-control",
+      "old": "evidence/control_and_sweep.json",
+      "new": "evidence/control_and_sweep.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "ml-transient",
+      "old": "evidence/transient_test.json",
+      "new": "evidence/transient_test.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "ml-density",
+      "old": "evidence/defect_depth_profile.json",
+      "new": "evidence/defect_depth_profile.json",
+      "equal": true,
+      "kind": "json"
+    },
+    {
+      "task": "swarm-agreement",
+      "old": "evidence/dyadic_centercol_T60000.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "swarm-slope",
+      "old": "evidence/exact_slope_T12000.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-gas",
+      "old": "logs/01-slip-gas.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-density",
+      "old": "logs/02-density-floor.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-sweep",
+      "old": "logs/03-single-slip-sweep.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-clock",
+      "old": "logs/04-geometric-clock.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-achievable",
+      "old": "logs/05-achievable-slips.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    },
+    {
+      "task": "wiki-94",
+      "old": "logs/06-verify-94.txt",
+      "new": "reproduction.log",
+      "equal": true,
+      "kind": "text"
+    }
+  ],
+  "finite_only": true,
+  "Lean_verified": false
+}

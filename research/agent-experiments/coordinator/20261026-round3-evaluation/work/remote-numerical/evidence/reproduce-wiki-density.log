@@ -1,0 +1,22 @@
+{"task": "wiki-density", "source_sha256": "41efeacb4b84e6a257e18e0233d689135bb45abdfc55042be9694734adfc31d6", "exit_code": 0, "seconds": 2.057, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+(1) every legal SINGLE slip, exact eventual density of Theta f
+    ratio_inf = 3/(4d).  Published C=1 witness sits at 7/4, i.e. d = 3/7.
+
+  L      density    period/black           ratio_inf   
+  0      6/7        7 / 6                  7/8            <-- new floor
+  2      5/14       14 / 5                 21/10          <-- new floor
+  14     9/28       28 / 9                 7/3            <-- new floor
+  26     2/7        28 / 8                 21/8           <-- new floor
+  94     3/14       28 / 6                 7/2            <-- new floor
+
+  lowest density over 60 legal single slips, L <= 120: 3/14 at L = 94
+  implied asymptotic ratio: 7/2 = 3.500000
+
+  the density takes only 14 distinct values in this range: 3/14, 2/7, 9/28, 5/14, 11/28, 3/7, 13/28, 1/2, 15/28, 4/7, 17/28, 9/14
+
+(2) legal TWO- and THREE-slip sets (odd gaps), positions <= 60
+  best two-slip: density 9/28 at [0, 13] (period 28, 9 black)
+  best three-slip: density 2/7 at [0, 1, 26] (period 28, 8 black)
+
+  single-slip floor 3/14 ; two-slip 9/28 ; three-slip 2/7
+

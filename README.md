@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Seven new agent ideas tested](research/agent-experiments/coordinator/20261026-round3-evaluation/REPORT.md): a fully checked Golden-only charging counterexample is excluded from the actual Rule30 image, periodic-center gates are formalized, and all seven responses receive controlled follow-ups. P1 and the canonical center bridge remain open.
+
 [Sensor-compatible backward-closure obstruction](research/agent-experiments/coordinator/20261026-sensor-backward-closure/REPORT.md): exact canonical backgrounds, finite initial support, the full left edge, all-time D, and zero sensor plus W through six steps still do not permit a previous subset lift. Fully kernel checked; the example is not all-time invisible or common. P1 remains open.
 
 [Uniform canonical band escape](research/agent-experiments/coordinator/20261026-band-escape/REPORT.md), added to [PR28](https://github.com/WolframInstitute/Rule30PrizeKit/pull/28): every nonzero auxiliary D field over a canonical older background reaches arbitrary right-edge depths after every time, at ALL widths, without W or second-background evolution. Complete core and standalone kernel replay pass. The moving-center bridge is still open; the current notebook is an unevaluated preview.

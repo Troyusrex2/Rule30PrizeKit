@@ -1,0 +1,37 @@
+{"task": "wiki-gas", "source_sha256": "c098ed1d0e02c0992cfb02c1ac6345ad666f51db0eacca774750fae732dbdae7", "exit_code": 0, "seconds": 1.398, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+ ratio 1.286738    period 28, 17 black -> 17/28
+  d=5  k=4  [26, 31, 36, 41]         zeros 598     black 1202    ratio 1.489185    period 28, 14 black -> 1/2
+  d=5  k=6  [26, 31, 36, 41, 46, 51] zeros 597     black 1476    ratio 1.209350    period 28, 18 black -> 9/14
+  d=5  k=8  [26, 31, 36, 41, 46, 51, 56, 61] zeros 596     black 1307    ratio 1.361897    period 28, 16 black -> 4/7
+  d=7  k=2  [26, 33]                 zeros 599     black 1260    ratio 1.424603    period 28, 15 black -> 15/28
+  d=7  k=3  [26, 33, 40]             zeros 599     black 985     ratio 1.822335    period 28, 11 black -> 11/28
+  d=7  k=4  [26, 33, 40, 47]         zeros 598     black 1176    ratio 1.522109    period 28, 14 black -> 1/2
+  d=7  k=6  [26, 33, 40, 47, 54, 61] zeros 597     black 1307    ratio 1.365723    period 28, 16 black -> 4/7
+  d=7  k=8  [26, 33, 40, 47, 54, 61, 68, 75] zeros 596     black 1389    ratio 1.281497    period 28, 18 black -> 9/14
+  d=11 k=2  [26, 37]                 zeros 599     black 1284    ratio 1.397975    period 28, 15 black -> 15/28
+  d=11 k=3  [26, 37, 48]             zeros 599     black 1217    ratio 1.474938    period 28, 14 black -> 1/2
+  d=11 k=4  [26, 37, 48, 59]         zeros 598     black 1096    ratio 1.633212    period 28, 12 black -> 3/7
+  d=11 k=6  [26, 37, 48, 59, 70, 81] zeros 597     black 1015    ratio 1.758621    period 28, 11 black -> 11/28
+  d=11 k=8  [26, 37, 48, 59, 70, 81, 92, 103] zeros 596     black 1302    ratio 1.367127    period 28, 16 black -> 4/7
+  d=21 k=2  [26, 47]                 zeros 599     black 1193    ratio 1.504610    period 28, 14 black -> 1/2
+  d=21 k=3  [26, 47, 68]             zeros 599     black 995     ratio 1.804020    period 28, 11 black -> 11/28
+  d=21 k=4  [26, 47, 68, 89]         zeros 598     black 996     ratio 1.797189    period 28, 10 black -> 5/14
+  d=21 k=6  [26, 47, 68, 89, 110, 131] zeros 597     black 1077    ratio 1.657382    period 28, 11 black -> 11/28
+  d=21 k=8  [26, 47, 68, 89, 110, 131, 152, 173] zeros 596     black 1241    ratio 1.434327    period 28, 15 black -> 15/28
+
+(E) exhaustive: every Golden slip set inside positions 0..13
+  559 Golden slip sets in the window; top 10 re-measured at n = 1200
+  [6, 7, 8, 13]                      zeros 598     black 786     ratio 2.277354    period 28, 9 black -> 9/28
+  [2, 5, 6, 7, 12, 13]               zeros 597     black 784     ratio 2.276786    period 28, 9 black -> 9/28
+  [12, 13]                           zeros 599     black 789     ratio 2.275032    period 28, 9 black -> 9/28
+  [6, 7, 12, 13]                     zeros 598     black 787     ratio 2.274460    period 28, 9 black -> 9/28
+  [2, 3, 8, 9, 12, 13]               zeros 597     black 786     ratio 2.270992    period 28, 9 black -> 9/28
+  [2, 3, 6, 7, 12, 13]               zeros 597     black 786     ratio 2.270992    period 28, 9 black -> 9/28
+  [0, 1, 2, 5, 6, 7, 12, 13]         zeros 596     black 784     ratio 2.270408    period 28, 9 black -> 9/28
+  [0, 1, 6, 7, 8, 13]                zeros 597     black 787     ratio 2.268107    period 28, 9 black -> 9/28
+  [8, 9, 12, 13]                     zeros 598     black 790     ratio 2.265823    period 28, 9 black -> 9/28
+  [2, 5, 12, 13]                     zeros 598     black 790     ratio 2.265823    period 28, 9 black -> 9/28
+
+Interpretation is in REPORT.md.  Nothing here is a theorem: every line is a
+finite measurement of a stream whose achievability is decided elsewhere.
+

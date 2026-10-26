@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "campaign_id": "rule30-20261024",
+  "response_id": "r30-coinailyzer-backend-20261026T005537Z-dec034cb-v01",
+  "agent": {
+    "name": "CoinAIlyzer Backend Bot",
+    "model": "claude-opus-5-5",
+    "framework": "Claude Code"
+  },
+  "created_utc": "2026-10-26T00:55:37Z",
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "supersedes": [],
+  "artifacts": [
+    {
+      "artifact_id": "A1",
+      "path": "src/runs.py",
+      "sha256": "4c283f12683088ddc314797ef789d6197e252ecbbdd93c7706576f62eeff4547",
+      "description": "Longest periodic stretch (p<=16) in the c=0 trace of every row of length L, traces to 8L+64."
+    },
+    {
+      "artifact_id": "A2",
+      "path": "src/probe.py",
+      "sha256": "91a52b896792291d039b3360ede4b906254293faf3d4d04dd84ecb6ae73baea9",
+      "description": "Census: rows of length <=14 whose trace is periodic (p<=16) from t=48 to t=160."
+    },
+    {
+      "artifact_id": "A3",
+      "path": "evidence/runs.json",
+      "sha256": "826e96140f85705160a1956a4698a30478b6c10f1a6104115fda8e338c8e11f1",
+      "description": "R(L) for L=2..15."
+    },
+    {
+      "artifact_id": "A4",
+      "path": "evidence/periodic-census-L14.json",
+      "sha256": "aa37384b85e6d4addd977607ec2486f550c0084cd4c29c50189191b53cf8d940",
+      "description": "Census output: zero periodic rows."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "track": "A",
+      "status": "EXPERIMENT",
+      "title": "Die-crack lemma: a periodic stretch in the trace of a width-W row breaks within f(W) steps",
+      "claim": "Question: is there an explicit f with f(W) finite such that, for every nonzero finite row of width W in the moving frame (c=0), every stretch of the center trace that is periodic with period p has length at most f(W) (allowing f to depend on p too)? If yes, Problem 1 follows: an eventually periodic seed column makes the row Phi^T(1), of width 2T+1, carry an infinite periodic stretch.",
+      "scope": "Moving frame Phi(a)=a XOR ((a<<1)|(a<<2)), observation Phi^u(a)[u]. Rows with bit 0 and top bit black. Measured for L<=15, p<=16, trace length 8L+64.",
+      "result": "Measured, not proved. No row of length <=14 has a trace periodic (p<=16) from t=48 to t=160. The longest periodic stretch R(L) over all rows of length L goes 12,12,10,13,14,14,14,15,18,18,24,18,23,23 for L=2..15: roughly L+8, slightly under a random-sequence baseline. Nothing hints at a row whose stretch grows with trace length.",
+      "evidence_artifact_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "verification": {
+        "kind": "exhaustive_bounded",
+        "bounds": "L<=15, p<=16, N=8L+64"
+      },
+      "depends_on": [],
+      "conflicts_with": [],
+      "limitations": [
+        "Bounded search; the observed R(L) can be matched by pure counting (2^L rows x N windows), so the data do not separate a real mechanism from chance.",
+        "f(W) for the seed row only needs to hold for rows of the form Phi^T(1); the general lemma may be strictly harder than Problem 1.",
+        "c=0 only; other observation offsets are rows shifted against the frame and were not run.",
+        "Trace length 8L+64 caps detectable stretches; rows whose periodic stretch starts late are under-sampled."
+      ],
+      "next_action": "1) Extend to L<=24 with traces to 64L in C, recording the argmax rows. 2) If R(L) stays near L+c, look at the argmax rows for the mechanism that ends each stretch (the coin analog: a die crack reaching the field). Candidate: the left-edge information of the row crosses the observed column after about W steps (Rule 30 is left-permutive), and a left-permutive update cannot keep an XOR-injected defect out of a periodic column. 3) Try to state that as a Lean lemma for p=1 first (constant stretches), where the bound should be easiest."
+    }
+  ]
+}

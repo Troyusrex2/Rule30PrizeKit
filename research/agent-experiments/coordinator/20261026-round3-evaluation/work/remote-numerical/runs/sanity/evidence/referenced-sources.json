@@ -1,0 +1,64 @@
+{
+  "research_base_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "kernel_replay_performed_here": false,
+  "pinned_sources": [
+    {
+      "path": "lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "git_blob_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/lean/Ruliology/CellularAutomata/Rule30Prize.lean"
+    },
+    {
+      "path": "lean/Ruliology/CellularAutomata/Rule30Realization.lean",
+      "git_blob_sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/lean/Ruliology/CellularAutomata/Rule30Realization.lean"
+    },
+    {
+      "path": "equivalents/CATALOG.md",
+      "git_blob_sha256": "39cc60b78537a56d74d1a68805b55b8d002ba330e86b712da653409f1e325dd1",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/equivalents/CATALOG.md"
+    },
+    {
+      "path": "research/agent-experiments/README.md",
+      "git_blob_sha256": "ba0135f00a782f2369c50d6eb6ba2e4c9583572f46ac170e13c125c0f3875ef5",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/research/agent-experiments/README.md"
+    },
+    {
+      "path": "research/response-growth/README.md",
+      "git_blob_sha256": "47aa7d4ceb51102fc3b6dcf4b860ee55e84390975ff53c5fa41eabbc549a7e09",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/research/response-growth/README.md"
+    },
+    {
+      "path": "research/catalog-review/README.md",
+      "git_blob_sha256": "5b639903e602a48b1b51ae411ba0187d8cba548ae674d8c9288eded28a299e81",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/research/catalog-review/README.md"
+    },
+    {
+      "path": "research/agent-experiments/RESPONSE_FORMAT.md",
+      "git_blob_sha256": "264c31dfd28fde33ab349bf0670455572dd81d61bb1f93e7bf1fb0f4bdc5b94d",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/research/agent-experiments/RESPONSE_FORMAT.md"
+    },
+    {
+      "path": "research/agent-experiments/manifest.schema.json",
+      "git_blob_sha256": "101568b521e32bd759038ebcb1a3916ac84832b916d891199bda9b4aa26dbcce",
+      "url": "https://github.com/Troyusrex2/Rule30PrizeKit/blob/102d5b8e938b031a6d4df53541d9da2c50ffb859/research/agent-experiments/manifest.schema.json"
+    }
+  ],
+  "public_index": {
+    "url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/submissions.json",
+    "updated": "2026-10-26T00:57:03Z",
+    "entry_count": 40,
+    "retrieved_bytes_sha256": "404509e6ebd38da53c79931a81e0302df6d7083de3fa41717e285207c7ef4d9b",
+    "purpose": "Overlap check only; public status is not adopted as proof evidence.",
+    "related_entry": {
+      "id": "R30-20261023-7e9e6e",
+      "title": "Left-Cone Reconstruction Lemmas and Complete Classification of Jen's Left-Permutive Class in Rule30Realization",
+      "authors": "G.P.J.W. Quint; Gemini (Google)",
+      "abstract": "For the general left-permutive cellular automaton family `run (g : Bool -> Bool -> Bool)` in `Ruliology.CellularAutomata.Rule30Realization`, Jen's adjacent-column theorem `run_not_adjacent` assumes `g false false = false` and `g false true = true`. We prove that a Boolean function `g` satisfies these two hypotheses if and only if `g = g90 \\lor g = g150 \\lor g = g210 \\lor g = g30` (`Rule30Submission.jen_class_iff_four_rules`). Within this four-element class, we prove three exact equivalences for the single-seed evolution `run g`: (1) `\\forall t\\,p,\\, run g t p = run g90 t p` holds if and only if `g = g90 \\lor g = g210` (`Rule30Submission.run_eq_run90_iff_g90_or_g210`); (2) the single-seed pattern is mirror-symmetric (`\\forall t\\,p,\\, run g t (-p) = run g t p`) if and only if `g = g90 \\lor g = g150 \\lor g = g210` (`Rule30Submission.run_symm_iff_not_g30`); and (3) the center column `fun t => run g t 0` is not eventually constant (`\\lnot \\exists T\\,b,\\, \\forall t \\ge T,\\, run g t 0 = b`) if and only if `g = g30` (`Rule30Submission.g30_unique_nonconstant_in_jen_class`).\n\nIn addition, we prove explicit multi-step left-cone reconstruction lemmas extending `Rule30Jen.cell_left` and `Rule30Realization.lc`: a closed-form two-step formula for `cell t (p - 2)` (`Rule30Submission.tlf_cell_two_step_left_retrodiction`), all-depth left-cone uniqueness by strong induction on `k : \\mathbb{N}` for any two trajectories obeying `rule` that agree on two adjacent columns (`Rule30Submission.tlf_left_cone_unique_all_depths`), and exact agreement of the recursive left-reconstruction operator `lc seed center m t` with `cell t (-m)` (`Rule30Submission.lc_seed_eq_cell`, `Rule30Submission.lc_seed_triangle_and_diag`).\n\nNothing is claimed for eventual periods $P \\ge 2$ of `Rule30Prize.center`.",
+      "page": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/status/R30-20261023-7e9e6e"
+    }
+  },
+  "earlier_responses_context_only": [
+    "r30-codex-sanity-20261024T214837Z-5d3c83fc-v01",
+    "r30-codex-sanity-20261025T122502Z-3d4c90a6-v01"
+  ]
+}

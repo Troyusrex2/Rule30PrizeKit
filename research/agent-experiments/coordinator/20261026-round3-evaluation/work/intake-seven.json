@@ -1,0 +1,206 @@
+{
+  "utc": "2026-10-26T01:03:22.693770+00:00",
+  "responses": [
+    {
+      "response": "r30-codex-cedar-20261026T005554Z-220b1d05-v01",
+      "files": {
+        "REPORT.md": "74205603b0b44f5afbc27314019c906cb0cc1e1efca8061f4420c757e1040479",
+        "provenance.json": "1fc9b4648df224b5415ff4c666068515e6dd496a128337d6301c2a865e03ac47",
+        "manifest.schema.json": "101568b521e32bd759038ebcb1a3916ac84832b916d891199bda9b4aa26dbcce",
+        "manifest.json": "51c5887b0ad22ea6bfceec024e3fd2efa1a1e769d2f88a79ded1dbcad0571378",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "Decode the hidden logical bit: dyadic cleaning of observer certificates",
+          "status": "EXPERIMENT",
+          "next_action": "On existing finite certificates, try exact block cleaning at dyadic seams and return one nontrivial lifting identity with its induction premise, or its first counterexample. Keep original row provenance and every boundary constraint."
+        }
+      ]
+    },
+    {
+      "response": "r30-codex-sanity-20261026T005702Z-9cfc0376-v01",
+      "files": {
+        "REPORT.md": "aa75a38661e09c0d9857180fb8eadb35cbb777daddcc758dc8b0a270f3a2521f",
+        "src/experiment.py": "31da2d63686d001df8a152e2a4616d0ef38a3c51d51077f2e5909219740f9fd0",
+        "src/run_guarded.py": "a037fb3f5deeb276c8a02c577a31e61cdb006c488b22511cf4b0c1dbcbead838",
+        "evidence/results.json": "d6bd0d69e7f9bb8ea5736e20b6e3a49794f3b0c8feace2599009ec70d6092d25",
+        "evidence/center.bits": "d863d321d90fab1e9bdd571b319595fd34c16e4f9644ae6692fe36c9c60c7399",
+        "evidence/run-metadata.json": "b8348146b360a0cd7d787d8655cf182cb9f1c7a73dbe836cc7effe53e9d61b68",
+        "logs/experiment.run.log": "0ba9b66e65d7ad8e78a92f00e353d0bf5fdec515dab8584fab4a3bd8ef6adc0b",
+        "evidence/referenced-sources.json": "5b780a997a944b47d99913afc861794fc241e387c5fd9b088164b2f075a42a09",
+        "manifest.json": "255b70aa62a5b0558e04552e7c19822193ca1b02e695ec0855d4c93037865cb1",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "Periodic-tail surgery and an open seed-repair regeneration lemma",
+          "status": "EXPERIMENT",
+          "next_action": "Falsify the fixed-M rule on held-out onsets and periods, then seek a symbolic scale transition that retains the actual driven-right-column state and survives XOR cancellation; prove that transition before drawing an unbounded conclusion."
+        }
+      ]
+    },
+    {
+      "response": "r30-coinailyzer-backend-20261026T005537Z-dec034cb-v01",
+      "files": {
+        "src/runs.py": "4c283f12683088ddc314797ef789d6197e252ecbbdd93c7706576f62eeff4547",
+        "src/probe.py": "91a52b896792291d039b3360ede4b906254293faf3d4d04dd84ecb6ae73baea9",
+        "evidence/runs.json": "826e96140f85705160a1956a4698a30478b6c10f1a6104115fda8e338c8e11f1",
+        "evidence/periodic-census-L14.json": "aa37384b85e6d4addd977607ec2486f550c0084cd4c29c50189191b53cf8d940",
+        "manifest.json": "985b9ab93453c57a8101f90e85316207265084f711b0ab8a2eee2e8e1110b3b1",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "4e05f4227bf37b54078d060d5fbf2e320f943cf89800d59eaa89388e4d138696"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "Die-crack lemma: a periodic stretch in the trace of a width-W row breaks within f(W) steps",
+          "status": "EXPERIMENT",
+          "next_action": "1) Extend to L<=24 with traces to 64L in C, recording the argmax rows. 2) If R(L) stays near L+c, look at the argmax rows for the mechanism that ends each stretch (the coin analog: a die crack reaching the field). Candidate: the left-edge information of the row crosses the observed column after about W steps (Rule 30 is left-permutive), and a left-permutive update cannot keep an XOR-injected defect out of a periodic column. 3) Try to state that as a Lean lemma for p=1 first (constant stretches), where the bound should be easiest."
+        }
+      ]
+    },
+    {
+      "response": "r30-coinailyzer-mlcontract-20261026T005856Z-253cdbda-v01",
+      "files": {
+        "src/ca_core.py": "ca99873158b67f3d2a6102ed97d6e7661ce1688bf03318733b84aa6a2ea52425",
+        "src/sideways_sat_count.py": "6c737022625934023239aa4b7e3d070db79eb2ce64ae4c1770c19a37c8b6e64b",
+        "src/control_and_sweep.py": "4ae1cacef81be7c10077246f254c875a47ec06d243b3ce129add649ed326882a",
+        "src/transient_test.py": "d95b261b62abc4550c1796ffe9e323f3fb5e6723e1117c41c48c0de420a15ede",
+        "src/defect_depth_profile.py": "86f90bf7d2d72a8d5417c696f89cf3042ab4fbf94244736aa6a30886d973936e",
+        "evidence/sideways_sat_count.json": "7f3f6a59d95a376fa95a6c0bbfb22b5a6b80d76fe86e2683f5926cdb5fdd6851",
+        "evidence/control_and_sweep.json": "bf709f6be14596c9d547b6a0cf1f7f220f0cba5dc83c8066dca3c37d2dc60588",
+        "evidence/transient_test.json": "aad76668f767d7be430d87bb64b8f3402e350974a7118e6a1187c784719cd0ee",
+        "evidence/defect_depth_profile.json": "dc1832caa702472e15ec7dc88ede7f59eabc1a0c439d8afc0ef094bc2886daf3",
+        "REPORT.md": "b5aeb2373932c21eca91ae5cb8f779393e377d6c5ebe4fedf039b2c8956060eb",
+        "manifest.json": "3858285dc8e22cc7c7af7bd71bc4ba5de70b016eb2be5886c4fc03879daa0833",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "A P-periodic centre from time 0 is refuted by a finite sideways constraint check at width <= 21, for every P <= 10",
+          "status": "EXPERIMENT",
+          "next_action": "None as a proof route; F002 closes it. Kept because the no-transient case is cheap to certify and the real-orbit control is reusable."
+        },
+        {
+          "id": "F002",
+          "title": "Two bits of transient defeat the finite check, shown by its failure on a case the kit already settles",
+          "status": "FAILED",
+          "next_action": "Any successor finite check should first refute (transient 11, period word 0) \u2014 a known-false case \u2014 before being trusted on an open one. That cheap yardstick is the durable output of this exercise."
+        },
+        {
+          "id": "F003",
+          "title": "Defect density does not contract leftward: flat at one half at every depth and every period",
+          "status": "FAILED",
+          "next_action": "Drop the contraction framing. If revisited, measure a weighted resource and test it on rule 150, where the hypothesis genuinely holds."
+        }
+      ]
+    },
+    {
+      "response": "r30-coinailyzer-swarm-20261026T005722Z-a7c78bac-v01",
+      "files": {
+        "src/dyadic_centercol.py": "78f6dcae181dd1bdcdd055be7528e5463b07c8589ee75266d939ffffed027b3c",
+        "src/exact_slope.py": "3a6c67d217c64f187a49854d2a2ae005c56ca0841b02bd992707e42dcdb19a6e",
+        "evidence/dyadic_centercol_T60000.txt": "79f382fcb324653a7ae69a1cdb6689a4bedd2a7b086f00a934d77598ec5fda1b",
+        "evidence/exact_slope_T12000.txt": "427710b3c67ed7e27b8702b66897a5c8308a00927f91cebaa2ab5e855488112a",
+        "manifest.json": "f3848e0de3c70a0f8e789fdb6ef0157f610a2f4a4a29fe4b9302b1c51bc33637",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "REPORT.md": "147af8102a5097eaa61ba8a8e971c1843ccf9fabe55ce637e42f39ae06d23297"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "The center column carries no 2-adic structure: agreement density is 0.500 in every v2 bucket",
+          "status": "NEGATIVE",
+          "next_action": "Treat as a standing filter: any proposal carrying a boundary invariant inward must explain why it evades this."
+        },
+        {
+          "id": "F002",
+          "title": "The v2>=4 growth law is exactly 3/4 of t, placing the regular/chaotic interface at velocity -1/4",
+          "status": "EXPERIMENT",
+          "next_action": "Derive 3/4 from the ether tiling, or refute it at larger T; then check whether the interface is literally a period-4 particle."
+        },
+        {
+          "id": "F003",
+          "title": "Wild swing: re-index the center column by distance to the interface rather than by t",
+          "status": "EXPERIMENT",
+          "next_action": "Run the stated kill test before any further investment."
+        }
+      ]
+    },
+    {
+      "response": "r30-photograde-20261026T005626Z-1de68195-v01",
+      "files": {
+        "src/restrike.py": "bc8a84ff3b3b14634b6e312d0a61333c3bc87876adec5bccc0b203a5869aa6f1",
+        "evidence/F001_gating_identity.json": "1233c508827f527a725ab306ee01a30fa69ed86aebbad997b6d89917d43e9bd1",
+        "evidence/F002_restrike_runs.json": "25e5968b99643269b59a8ac29e3ddf67e1417dc5df358fac136e32f77b4ffc18",
+        "evidence/F002_control_random_orbits.json": "7bd3dd7ac96670f05e8d16c0c37c2e073a867d0aa2a48ff55eece083c4aed6a9",
+        "REPORT.md": "59d129f12eae0fdadee382436e81386abaa026d96f7e8bc26b1650826da80fac",
+        "manifest.json": "2fb684581d317254fa2d2963c14f5aa047a0b48172f9b6ffb728b9d79acbaf59",
+        "READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "Restrike: under column-0 agreement, column -1 defects equal column 1 defects masked by white column-0 cells",
+          "status": "EXPERIMENT",
+          "next_action": "Iterate the masked identity leftward to express D(.,-k) via D(.,1) and periodic column 0; formalize F001+F003 in Lean."
+        },
+        {
+          "id": "F002",
+          "title": "Restrike: near-restrikes of the seed are generic and never rim-witnessed at finite scale",
+          "status": "FAILED",
+          "next_action": "Stop the statistics; any rim argument is purely asymptotic."
+        }
+      ]
+    },
+    {
+      "response": "r30-coinailyzer-wiki-20261026T005537Z-e656e7b7-v01",
+      "files": {
+        "src/coupled_core.py": "1a8b57d94fd6e129416b2e5a32abc09ee179986a07e2e11bf102387377afee54",
+        "src/controls.py": "e5d50af087ed2c28827d55a1decad007cdb71eb89a5676b9d6e7a8d5af80495c",
+        "src/slip_gas.py": "c098ed1d0e02c0992cfb02c1ac6345ad666f51db0eacca774750fae732dbdae7",
+        "src/geometric_clock.py": "0e367f8878d3267b5bd48ed05d334081b48d371ce28c606f24f2b9686544f48c",
+        "src/density_floor.py": "41efeacb4b84e6a257e18e0233d689135bb45abdfc55042be9694734adfc31d6",
+        "src/sweep.py": "b3d84a6b6770f140d09e980aafa4436a31648ab8439c66cf1f707f02b4b5bf77",
+        "src/achievable_slips.py": "07f2b8495816ad6f8e90bb29b53a7f82f625ed1488014497ff355231d5eb4cd6",
+        "src/verify_94.py": "9ad81a69e0a36a8f7f26bd76a3a0383d72b66f5aaa4692e3d7aba69b67cdb843",
+        "logs/01-slip-gas.txt": "fedebd1c502b27147d21f45478dc7edeeb19370030ed86e58dc9a8974519a05e",
+        "logs/02-density-floor.txt": "0464b25f45c7f1f3bef424c91fb9d004516f7d8d5f1db56bac59f36cee19cd21",
+        "logs/03-single-slip-sweep.txt": "cbad10350639be2401bb7a05f8189770f6c78fcd7b0685afb32e36a5e9870e01",
+        "logs/04-geometric-clock.txt": "873bcdaa90e13957f91c6552385d133cd6121689e689b939ec3550a9fdc11029",
+        "logs/05-achievable-slips.txt": "3cd74c6af299a7f5a7cb65bd9cada764aedc984dd6016a0c0a45dc5674a87a14",
+        "logs/06-verify-94.txt": "f5f95d9c69ddd242ba5159063424023715cee1c817bcaa446eaaff4217dc65af",
+        "REPORT.md": "387bbab04df08f8470eb5694625f326999df83ae1197dcd2cbdacb0c85347542",
+        "manifest.json": "4e28f27db8e82df671dbda353644e18e7258cc23bdf228e3c33b882b0c827817",
+        "READY": "3dfa3fb239f56c778a1e9b33eb31328349edd155a95806dac4378904e88527e5"
+      },
+      "findings": [
+        {
+          "id": "F001",
+          "title": "A doubling slip schedule is forbidden by Golden, not merely unachieved",
+          "status": "FAILED"
+        },
+        {
+          "id": "F002",
+          "title": "Phase slips do not cooperate: a gas of defects is worse than one well-placed defect",
+          "status": "EXPERIMENT"
+        },
+        {
+          "id": "F003",
+          "title": "One slip at index 94 gives ratio 7/2, which would refute C = 3 for every B",
+          "status": "COUNTEREXAMPLE_CANDIDATE"
+        },
+        {
+          "id": "F004",
+          "title": "The sparsity ladder is quantised: ratio_inf = 42/k, with k >= 12 observed",
+          "status": "EXPERIMENT"
+        }
+      ]
+    }
+  ],
+  "updated_utc": "2026-10-26T01:11:10.873531+00:00"
+}

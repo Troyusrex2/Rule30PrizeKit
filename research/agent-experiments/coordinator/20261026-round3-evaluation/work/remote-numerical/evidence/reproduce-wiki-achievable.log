@@ -1,0 +1,22 @@
+{"task": "wiki-achievable", "source_sha256": "07f2b8495816ad6f8e90bb29b53a7f82f625ed1488014497ff355231d5eb4cd6", "exit_code": 0, "seconds": 2.305, "finite_only": true, "Lean_verified": false, "full_problem_solved": false}
+right halves searched: 2^16 - 1 = 65535, free stream read to 70 terms
+distinct slip schedules realised: 10988
+schedules with exactly ONE slip, by index: [1, 2]
+highest single-slip index realised: 2
+
+exact ratio at n = 70 for each realised single-slip stream:
+  slip at 1     R = 0x72c         ratio 1.639344
+  slip at 2     R = 0x888         ratio 1.981132
+  best realised: ratio 1.981132 at slip index 2, R = 0x888
+
+the low-density single-slip schedules, and whether this search reached them:
+  slip at 94   density 3/14   ratio_inf 7/2     NOT realised in this search
+  slip at 190  density 1/4    ratio_inf 3       NOT realised in this search
+  slip at 26   density 2/7    ratio_inf 21/8    NOT realised in this search
+  slip at 14   density 9/28   ratio_inf 7/3     NOT realised in this search
+  slip at 2    density 5/14   ratio_inf 21/10   REALISED
+
+A schedule marked NOT realised is not thereby unachievable: this search covers
+only right halves supported in positions 1..16.  The missing lemma is stated in
+REPORT.md and it is the whole of the gap between 7/2 and what is exhibited here.
+

@@ -1,0 +1,130 @@
+exact integer arithmetic, horizon n = 1200, depths 0..2400
+ratio(n) = (5*zeros(f,n) - n) / blackCount(Theta f, 2n+1)
+
+(A) ONE slip at index L -- the round-two baseline, recomputed exactly
+  slip at 0                          zeros 600     black 2057    ratio 0.875061    period 7, 6 black -> 6/7
+  slip at 1                          NOT GOLDEN
+  slip at 2                          zeros 600     black 861     ratio 2.090592    period 14, 5 black -> 5/14
+  slip at 3                          NOT GOLDEN
+  slip at 4                          zeros 600     black 1031    ratio 1.745878    period 14, 6 black -> 3/7
+  slip at 5                          NOT GOLDEN
+  slip at 6                          zeros 600     black 857     ratio 2.100350    period 14, 5 black -> 5/14
+  slip at 7                          NOT GOLDEN
+  slip at 8                          zeros 600     black 1363    ratio 1.320616    period 28, 16 black -> 4/7
+  slip at 9                          NOT GOLDEN
+  slip at 10                         zeros 600     black 1440    ratio 1.250000    period 28, 17 black -> 17/28
+  slip at 11                         NOT GOLDEN
+  slip at 12                         zeros 600     black 961     ratio 1.873049    period 28, 11 black -> 11/28
+  slip at 13                         NOT GOLDEN
+  slip at 14                         zeros 600     black 800     ratio 2.250000    period 28, 9 black -> 9/28
+  slip at 15                         NOT GOLDEN
+  slip at 16                         zeros 600     black 1195    ratio 1.506276    period 28, 14 black -> 1/2
+  slip at 17                         NOT GOLDEN
+  slip at 18                         zeros 600     black 1207    ratio 1.491301    period 28, 14 black -> 1/2
+  slip at 19                         NOT GOLDEN
+  slip at 20                         zeros 600     black 1189    ratio 1.513877    period 28, 14 black -> 1/2
+  slip at 21                         NOT GOLDEN
+  slip at 22                         zeros 600     black 891     ratio 2.020202    period 28, 10 black -> 5/14
+  slip at 23                         NOT GOLDEN
+  slip at 24                         zeros 600     black 962     ratio 1.871102    period 28, 11 black -> 11/28
+  slip at 25                         NOT GOLDEN
+  slip at 26                         zeros 600     black 723     ratio 2.489627    period 28, 8 black -> 2/7
+  slip at 27                         NOT GOLDEN
+  slip at 28                         zeros 600     black 891     ratio 2.020202    period 28, 10 black -> 5/14
+  slip at 29                         NOT GOLDEN
+  slip at 30                         zeros 600     black 1360    ratio 1.323529    period 28, 16 black -> 4/7
+  slip at 31                         NOT GOLDEN
+  slip at 32                         zeros 600     black 1355    ratio 1.328413    period 28, 16 black -> 4/7
+  best single slip: 600/241 at L = 26
+
+(B) TWO slips, first at the single-slip optimum, second a gap g later
+  slips at 26, 27 (gap 1)            zeros 599     black 894     ratio 2.007830    period 28, 10 black -> 5/14
+  slips at 26, 28 (gap 2)            NOT GOLDEN
+  slips at 26, 29 (gap 3)            zeros 599     black 1117    ratio 1.606983    period 28, 13 black -> 13/28
+  slips at 26, 30 (gap 4)            NOT GOLDEN
+  slips at 26, 31 (gap 5)            zeros 599     black 948     ratio 1.893460    period 28, 11 black -> 11/28
+  slips at 26, 32 (gap 6)            NOT GOLDEN
+  slips at 26, 33 (gap 7)            zeros 599     black 1260    ratio 1.424603    period 28, 15 black -> 15/28
+  slips at 26, 34 (gap 8)            NOT GOLDEN
+  slips at 26, 35 (gap 9)            zeros 599     black 1120    ratio 1.602679    period 28, 13 black -> 13/28
+  slips at 26, 36 (gap 10)           NOT GOLDEN
+  slips at 26, 37 (gap 11)           zeros 599     black 1284    ratio 1.397975    period 28, 15 black -> 15/28
+  slips at 26, 38 (gap 12)           NOT GOLDEN
+  slips at 26, 39 (gap 13)           zeros 599     black 1193    ratio 1.504610    period 28, 14 black -> 1/2
+  slips at 26, 40 (gap 14)           NOT GOLDEN
+  slips at 26, 41 (gap 15)           zeros 599     black 1204    ratio 1.490864    period 28, 14 black -> 1/2
+  slips at 26, 42 (gap 16)           NOT GOLDEN
+  slips at 26, 43 (gap 17)           zeros 599     black 1194    ratio 1.503350    period 28, 14 black -> 1/2
+  slips at 26, 44 (gap 18)           NOT GOLDEN
+  slips at 26, 45 (gap 19)           zeros 599     black 1114    ratio 1.611311    period 28, 13 black -> 13/28
+  slips at 26, 46 (gap 20)           NOT GOLDEN
+  slips at 26, 47 (gap 21)           zeros 599     black 1193    ratio 1.504610    period 28, 14 black -> 1/2
+  slips at 26, 48 (gap 22)           NOT GOLDEN
+  slips at 26, 49 (gap 23)           zeros 599     black 1066    ratio 1.683865    period 28, 12 black -> 3/7
+  slips at 26, 50 (gap 24)           NOT GOLDEN
+  best gap: 1795/894 at g = 1   (single-slip was 600/241)
+
+(C) k slips on a GEOMETRIC clock: positions m*2^j, j = 0..k-1
+  m=3  k=2  [3, 6]                   NOT GOLDEN
+  m=3  k=3  [3, 6, 12]               NOT GOLDEN
+  m=3  k=4  [3, 6, 12, 24]           NOT GOLDEN
+  m=3  k=5  [3, 6, 12, 24, 48]       NOT GOLDEN
+  m=3  k=6  [3, 6, 12, 24, 48, 96]   NOT GOLDEN
+  m=5  k=2  [5, 10]                  NOT GOLDEN
+  m=5  k=3  [5, 10, 20]              NOT GOLDEN
+  m=5  k=4  [5, 10, 20, 40]          NOT GOLDEN
+  m=5  k=5  [5, 10, 20, 40, 80]      NOT GOLDEN
+  m=5  k=6  [5, 10, 20, 40, 80, 160] NOT GOLDEN
+  m=7  k=2  [7, 14]                  NOT GOLDEN
+  m=7  k=3  [7, 14, 28]              NOT GOLDEN
+  m=7  k=4  [7, 14, 28, 56]          NOT GOLDEN
+  m=7  k=5  [7, 14, 28, 56, 112]     NOT GOLDEN
+  m=7  k=6  [7, 14, 28, 56, 112, 224] NOT GOLDEN
+  m=13 k=2  [13, 26]                 NOT GOLDEN
+  m=13 k=3  [13, 26, 52]             NOT GOLDEN
+  m=13 k=4  [13, 26, 52, 104]        NOT GOLDEN
+  m=13 k=5  [13, 26, 52, 104, 208]   NOT GOLDEN
+  m=13 k=6  [13, 26, 52, 104, 208, 416] NOT GOLDEN
+
+(D) k slips at UNIFORM spacing d -- the control for (C)
+  d=3  k=2  [26, 29]                 zeros 599     black 1117    ratio 1.606983    period 28, 13 black -> 13/28
+  d=3  k=3  [26, 29, 32]             zeros 599     black 1337    ratio 1.342558    period 28, 16 black -> 4/7
+  d=3  k=4  [26, 29, 32, 35]         zeros 598     black 1128    ratio 1.586879    period 28, 13 black -> 13/28
+  d=3  k=6  [26, 29, 32, 35, 38, 41] zeros 597     black 1196    ratio 1.492475    period 28, 14 black -> 1/2
+  d=3  k=8  [26, 29, 32, 35, 38, 41, 44, 47] zeros 596     black 1201    ratio 1.482098    period 28, 14 black -> 1/2
+  d=5  k=2  [26, 31]                 zeros 599     black 948     ratio 1.893460    period 28, 11 black -> 11/28
+  d=5  k=3  [26, 31, 36]             zeros 599     black 1395    ratio 1.286738    period 28, 17 black -> 17/28
+  d=5  k=4  [26, 31, 36, 41]         zeros 598     black 1202    ratio 1.489185    period 28, 14 black -> 1/2
+  d=5  k=6  [26, 31, 36, 41, 46, 51] zeros 597     black 1476    ratio 1.209350    period 28, 18 black -> 9/14
+  d=5  k=8  [26, 31, 36, 41, 46, 51, 56, 61] zeros 596     black 1307    ratio 1.361897    period 28, 16 black -> 4/7
+  d=7  k=2  [26, 33]                 zeros 599     black 1260    ratio 1.424603    period 28, 15 black -> 15/28
+  d=7  k=3  [26, 33, 40]             zeros 599     black 985     ratio 1.822335    period 28, 11 black -> 11/28
+  d=7  k=4  [26, 33, 40, 47]         zeros 598     black 1176    ratio 1.522109    period 28, 14 black -> 1/2
+  d=7  k=6  [26, 33, 40, 47, 54, 61] zeros 597     black 1307    ratio 1.365723    period 28, 16 black -> 4/7
+  d=7  k=8  [26, 33, 40, 47, 54, 61, 68, 75] zeros 596     black 1389    ratio 1.281497    period 28, 18 black -> 9/14
+  d=11 k=2  [26, 37]                 zeros 599     black 1284    ratio 1.397975    period 28, 15 black -> 15/28
+  d=11 k=3  [26, 37, 48]             zeros 599     black 1217    ratio 1.474938    period 28, 14 black -> 1/2
+  d=11 k=4  [26, 37, 48, 59]         zeros 598     black 1096    ratio 1.633212    period 28, 12 black -> 3/7
+  d=11 k=6  [26, 37, 48, 59, 70, 81] zeros 597     black 1015    ratio 1.758621    period 28, 11 black -> 11/28
+  d=11 k=8  [26, 37, 48, 59, 70, 81, 92, 103] zeros 596     black 1302    ratio 1.367127    period 28, 16 black -> 4/7
+  d=21 k=2  [26, 47]                 zeros 599     black 1193    ratio 1.504610    period 28, 14 black -> 1/2
+  d=21 k=3  [26, 47, 68]             zeros 599     black 995     ratio 1.804020    period 28, 11 black -> 11/28
+  d=21 k=4  [26, 47, 68, 89]         zeros 598     black 996     ratio 1.797189    period 28, 10 black -> 5/14
+  d=21 k=6  [26, 47, 68, 89, 110, 131] zeros 597     black 1077    ratio 1.657382    period 28, 11 black -> 11/28
+  d=21 k=8  [26, 47, 68, 89, 110, 131, 152, 173] zeros 596     black 1241    ratio 1.434327    period 28, 15 black -> 15/28
+
+(E) exhaustive: every Golden slip set inside positions 0..13
+  559 Golden slip sets in the window; top 10 re-measured at n = 1200
+  [6, 7, 8, 13]                      zeros 598     black 786     ratio 2.277354    period 28, 9 black -> 9/28
+  [2, 5, 6, 7, 12, 13]               zeros 597     black 784     ratio 2.276786    period 28, 9 black -> 9/28
+  [12, 13]                           zeros 599     black 789     ratio 2.275032    period 28, 9 black -> 9/28
+  [6, 7, 12, 13]                     zeros 598     black 787     ratio 2.274460    period 28, 9 black -> 9/28
+  [2, 3, 8, 9, 12, 13]               zeros 597     black 786     ratio 2.270992    period 28, 9 black -> 9/28
+  [2, 3, 6, 7, 12, 13]               zeros 597     black 786     ratio 2.270992    period 28, 9 black -> 9/28
+  [0, 1, 2, 5, 6, 7, 12, 13]         zeros 596     black 784     ratio 2.270408    period 28, 9 black -> 9/28
+  [0, 1, 6, 7, 8, 13]                zeros 597     black 787     ratio 2.268107    period 28, 9 black -> 9/28
+  [8, 9, 12, 13]                     zeros 598     black 790     ratio 2.265823    period 28, 9 black -> 9/28
+  [2, 5, 12, 13]                     zeros 598     black 790     ratio 2.265823    period 28, 9 black -> 9/28
+
+Interpretation is in REPORT.md.  Nothing here is a theorem: every line is a
+finite measurement of a stream whose achievability is decided elsewhere.

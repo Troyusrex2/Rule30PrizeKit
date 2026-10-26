@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "finite_pilot": true,
+  "Lean_verified": false,
+  "complete_interface_cases": [
+    {
+      "U": 1,
+      "V": 0,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 5,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 2,
+      "V": 1,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 5,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 5,
+      "V": 3,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 4,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 9,
+      "V": 7,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 5,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 17,
+      "V": 15,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 5,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 33,
+      "V": 31,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 5,
+      "all_unwanted_coordinates_canceled": true
+    },
+    {
+      "U": 65,
+      "V": 63,
+      "full_boundary_projection": true,
+      "block_gluing_exact": true,
+      "boundary_relations": 1,
+      "all_unwanted_coordinates_canceled": true
+    }
+  ],
+  "boundary_assignments_checked": 448,
+  "prior_certificates_replayed": [
+    {
+      "U": 4,
+      "V": 3,
+      "blocks": 3,
+      "readout_terms": 2,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    },
+    {
+      "U": 8,
+      "V": 7,
+      "blocks": 5,
+      "readout_terms": 2,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    },
+    {
+      "U": 16,
+      "V": 15,
+      "blocks": 9,
+      "readout_terms": 3,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    },
+    {
+      "U": 32,
+      "V": 31,
+      "blocks": 17,
+      "readout_terms": 2,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    },
+    {
+      "U": 33,
+      "V": 31,
+      "blocks": 17,
+      "readout_terms": 2,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    },
+    {
+      "U": 40,
+      "V": 1,
+      "blocks": 21,
+      "readout_terms": 1,
+      "exact_source_plus_readout": true,
+      "all_seam_coordinates_retained": true
+    }
+  ],
+  "prior_certificate_file_sha256": "f6ad7720d59a32862c16d22a5b34d2ee046af0dc3cd3dcb4f93edd79207efb98",
+  "naive_coordinate_doubling_refuted": {
+    "coarse_ages": [
+      1,
+      0
+    ],
+    "fine_ages": [
+      2,
+      0
+    ],
+    "lifted_row_coordinates": [
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "actual_fine_difference_values": [
+      {
+        "t": 0,
+        "p": -2,
+        "h": 1
+      },
+      {
+        "t": 0,
+        "p": -1,
+        "h": 1
+      },
+      {
+        "t": 0,
+        "p": 0,
+        "h": 1
+      },
+      {
+        "t": 0,
+        "p": 1,
+        "h": 0
+      },
+      {
+        "t": 0,
+        "p": 2,
+        "h": 1
+      },
+      {
+        "t": 1,
+        "p": -1,
+        "h": 1
+      },
+      {
+        "t": 1,
+        "p": 0,
+        "h": 0
+      },
+      {
+        "t": 1,
+        "p": 1,
+        "h": 0
+      },
+      {
+        "t": 2,
+        "p": 0,
+        "h": 1
+      }
+    ],
+    "every_fine_D_and_W_zero": true,
+    "lifted_coarse_row_value": 1,
+    "canonical_counter_to_naive_row_lift": true
+  },
+  "nontrivial_Rule30_specific_induction_lift_found": false,
+  "missing_premise": "A scale identity that changes center reach while retaining complete boundary relations and canonical background data.",
+  "seconds": 0.041,
+  "peak_rss_bytes": 23412736,
+  "limits": {
+    "seconds": 60,
+    "rss_bytes": 268435456
+  },
+  "full_problem_solved": false
+}

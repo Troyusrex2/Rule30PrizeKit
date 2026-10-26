@@ -1,0 +1,167 @@
+{
+  "response_id": "r30-coinailyzer-wiki-20261026T005537Z-e656e7b7-v01",
+  "prompt_id": "R2-07-aside",
+  "prompt": "Unprompted aside to R2-07 (seed-specific information / scale-charge estimate), filed at the user's request for a further off-the-wall angle.",
+  "agent": "coinailyzer-wiki",
+  "created_utc": "2026-10-26T00:55:37Z",
+  "kit_commit": "102d5b8e938b031a6d4df53541d9da2c50ffb859",
+  "builds_on": "r30-coinailyzer-wiki-20261025T124335Z-f16dc412-v01",
+  "overall_status": "COUNTEREXAMPLE_CANDIDATE",
+  "summary": "Treats phase slips in the free stream as particles and asks whether a gas of them on the ScaleCharges doubling clock defeats every constant C. The clock is forbidden outright by Golden's no-00 clause (F001, FAILED), and slips do not cooperate (F002). What the chase produced instead: a single slip at index 94 reconstructs to a row of density 3/14, giving charge ratio 7/2 and refuting C = 3 if the stream is achievable (F003), and the whole family's ratio is quantised as 42/k with k >= 12 observed (F004). Exact integer arithmetic; the L = 94 result is verified on two independent implementations.",
+  "arithmetic": "exact integers and fractions.Fraction; no floating-point quantity is relied on",
+  "python": "3.11.5",
+  "findings": [
+    {
+      "id": "F001",
+      "status": "FAILED",
+      "title": "A doubling slip schedule is forbidden by Golden, not merely unachieved",
+      "claim": "Golden's no-00 clause holds for a slip set iff the first slip is at an even index (phase 0) and every consecutive gap is odd (0 mismatches over all 65,535 slip sets in positions 0..15). A doubling schedule m*2^j has an even gap at every step after the first, so no doubling schedule of three or more slips is Golden, for any m (enumerated m = 1..40, k = 2..5). Since free R is always Golden, the off-the-wall idea of slipping once per doubling is unavailable. The 11111 clause is a separate restriction and is not a run-length law on the slip set; three candidate thresholds were tested and all three fail.",
+      "artifacts": [
+        "A004",
+        "A012"
+      ]
+    },
+    {
+      "id": "F002",
+      "status": "EXPERIMENT",
+      "title": "Phase slips do not cooperate: a gas of defects is worse than one well-placed defect",
+      "claim": "Best exact eventual density of Theta f: 3/14 for one slip (L = 94), 9/28 for two slips ([0, 13]) and 2/7 for three ([0, 1, 26]) over legal sets with positions <= 60. At the single-slip optimum L = 26 every legal second slip lowered the finite-n ratio, 2.4896 -> 2.0078 at best. This is a measurement over tested configurations, not a proved anti-cooperation law.",
+      "artifacts": [
+        "A003",
+        "A005",
+        "A009",
+        "A010"
+      ]
+    },
+    {
+      "id": "F003",
+      "status": "COUNTEREXAMPLE_CANDIDATE",
+      "title": "One slip at index 94 gives ratio 7/2, which would refute C = 3 for every B",
+      "claim": "The alternating Golden stream with a single slip at index 94 reconstructs to a row of exact period 28 with 6 black cells, density 3/14, so the charge ratio tends to 3/(4*3/14) = 7/2. 5*zeros - n - 3*blackCount is negative through the transient (-546 at n = 1000, -336 at n = 2000), crosses zero between n = 2000 and n = 4000, then grows: +93, +954, +2235 at n = 4000, 8000, 14000. Recomputed on a second independent implementation with 0 disagreements over depths 0..1600. CONDITIONAL: no finite right half realising this stream is exhibited. Over all 65,535 right halves supported in positions 1..16 only slip indices 1 and 2 arise as single-slip streams, so the distance from round two's achieved 2.3288 to 7/2 is entirely achievability.",
+      "artifacts": [
+        "A008",
+        "A014",
+        "A007",
+        "A013"
+      ],
+      "missing_lemma": "For even L >= 3, decide whether the Golden stream f_L(s) = (s + [s >= L]) mod 2 lies in the image of R |-> free R over finite right halves R. Equivalently: exhibit a finite R with free R = f_94, or prove the image contains no single-slip stream with L >= 3 (which would cap the achievable single-slip ratio at 21/10)."
+    },
+    {
+      "id": "F004",
+      "status": "EXPERIMENT",
+      "title": "The sparsity ladder is quantised: ratio_inf = 42/k, with k >= 12 observed",
+      "claim": "Over all 230 legal single slips with L <= 1200 every eventual density of Theta f has denominator dividing 56 (observed periods 7, 14, 28, 56), so ratio_inf = 42/k where k is the black count per 56 depths. Observed k runs 12..39 plus 48; the minimum k = 12 is attained exactly once, at L = 94. A proof of k >= 12 would make 7/2 the exact supremum of the single-slip family. Nothing here bounds k below.",
+      "artifacts": [
+        "A006",
+        "A011"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "A001",
+      "path": "src/coupled_core.py",
+      "bytes": 5935,
+      "sha256": "1a8b57d94fd6e129416b2e5a32abc09ee179986a07e2e11bf102387377afee54",
+      "description": "Exact reimplementation of the official rule/drv/altCol/u/free/alt/recon/lam/Theta/Psi/zeros/blackCount, with a selftest reproducing the published kernel-checked C=1 witness. Carried over unchanged from the round-two response."
+    },
+    {
+      "id": "A002",
+      "path": "src/controls.py",
+      "bytes": 6704,
+      "sha256": "e5d50af087ed2c28827d55a1decad007cdb71eb89a5676b9d6e7a8d5af80495c",
+      "description": "Independently written non-bit-packed implementation (dicts, literal Lean recursions) used as the second code path for F003. Carried over unchanged from the round-two response."
+    },
+    {
+      "id": "A003",
+      "path": "src/slip_gas.py",
+      "bytes": 6193,
+      "sha256": "c098ed1d0e02c0992cfb02c1ac6345ad666f51db0eacca774750fae732dbdae7",
+      "description": "First pass on the slip-gas idea: single slips, two-slip interaction by gap, the geometric clock (which fails), uniform spacing, and an exhaustive slip-set search in a window."
+    },
+    {
+      "id": "A004",
+      "path": "src/geometric_clock.py",
+      "bytes": 4639,
+      "sha256": "0e367f8878d3267b5bd48ed05d334081b48d371ce28c606f24f2b9686544f48c",
+      "description": "F001: the parity law for Golden slip sets, verified over all 65,535 slip sets in positions 0..15, the refutation of three run-length readings of the 11111 clause, and the enumeration showing no doubling schedule of three or more slips is Golden for m = 1..40."
+    },
+    {
+      "id": "A005",
+      "path": "src/density_floor.py",
+      "bytes": 4819,
+      "sha256": "41efeacb4b84e6a257e18e0233d689135bb45abdfc55042be9694734adfc31d6",
+      "description": "F002: exact eventual densities of Theta f by period detection, over legal single, two- and three-slip sets."
+    },
+    {
+      "id": "A006",
+      "path": "src/sweep.py",
+      "bytes": 832,
+      "sha256": "b3d84a6b6770f140d09e980aafa4436a31648ab8439c66cf1f707f02b4b5bf77",
+      "description": "F004: the single-slip density sweep to L = 1200, with the full density ladder."
+    },
+    {
+      "id": "A007",
+      "path": "src/achievable_slips.py",
+      "bytes": 3472,
+      "sha256": "07f2b8495816ad6f8e90bb29b53a7f82f625ed1488014497ff355231d5eb4cd6",
+      "description": "The achievability gap: every right half supported in positions 1..16, the slip schedules its free stream realises, and which low-density schedules are not reached."
+    },
+    {
+      "id": "A008",
+      "path": "src/verify_94.py",
+      "bytes": 2903,
+      "sha256": "9ad81a69e0a36a8f7f26bd76a3a0383d72b66f5aaa4692e3d7aba69b67cdb843",
+      "description": "F003: the L = 94 headline recomputed on both implementations and tabulated to n = 14000."
+    },
+    {
+      "id": "A009",
+      "path": "logs/01-slip-gas.txt",
+      "bytes": 10323,
+      "sha256": "fedebd1c502b27147d21f45478dc7edeeb19370030ed86e58dc9a8974519a05e",
+      "description": "Output of A003 at n = 1200."
+    },
+    {
+      "id": "A010",
+      "path": "logs/02-density-floor.txt",
+      "bytes": 1070,
+      "sha256": "0464b25f45c7f1f3bef424c91fb9d004516f7d8d5f1db56bac59f36cee19cd21",
+      "description": "Output of A005 at max_L = 120."
+    },
+    {
+      "id": "A011",
+      "path": "logs/03-single-slip-sweep.txt",
+      "bytes": 1581,
+      "sha256": "cbad10350639be2401bb7a05f8189770f6c78fcd7b0685afb32e36a5e9870e01",
+      "description": "Output of A006 at max_L = 1200."
+    },
+    {
+      "id": "A012",
+      "path": "logs/04-geometric-clock.txt",
+      "bytes": 5669,
+      "sha256": "873bcdaa90e13957f91c6552385d133cd6121689e689b939ec3550a9fdc11029",
+      "description": "Output of A004."
+    },
+    {
+      "id": "A013",
+      "path": "logs/05-achievable-slips.txt",
+      "bytes": 1116,
+      "sha256": "3cd74c6af299a7f5a7cb65bd9cada764aedc984dd6016a0c0a45dc5674a87a14",
+      "description": "Output of A007 at W = 16, n = 70."
+    },
+    {
+      "id": "A014",
+      "path": "logs/06-verify-94.txt",
+      "bytes": 1157,
+      "sha256": "f5f95d9c69ddd242ba5159063424023715cee1c817bcaa446eaaff4217dc65af",
+      "description": "Output of A008."
+    },
+    {
+      "id": "A015",
+      "path": "REPORT.md",
+      "bytes": 9586,
+      "sha256": "387bbab04df08f8470eb5694625f326999df83ae1197dcd2cbdacb0c85347542",
+      "description": "The report: four classified findings and the missing lemma."
+    }
+  ]
+}
