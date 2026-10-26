@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "module": "RootAntiPeriodHeight",
+  "source_sha256": "513de31a591d3fa7afbeb69e4ac8a3967718a1ba8ced6df39a4ba2039083ed57",
+  "compiled_sha256": "745e714a6054c7f9b2703eaf295a205480224cb14a526514ab28b2997b746321",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.6328816000022925,
+  "total_seconds": 6.093743200006429,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.anti_period_safe_necessary",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.height_period_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.height_three_periods",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.not_safe_of_height_obstruction",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.pair_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.paired_height_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.paired_zero_identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.safe_complement_height_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.safe_complement_zero_drift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.safe_zero_height_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.sign_shift_even",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootEventHeight.zeroPair.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.paired_height_identity",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.safe_complement_height_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.height_three_periods",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.safe_complement_zero_drift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.anti_period_safe_necessary",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootAntiPeriodHeight.not_safe_of_height_obstruction",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootAntiPeriodHeight",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 26,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

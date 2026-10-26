@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "module": "CedarD3Converse",
+  "source_sha256": "1db70283df1d9b352e3f4d956fdc9f5079bbf89c7e4138a05521ac6772ebe57e",
+  "compiled_sha256": "e67afc6b4076e50ecfaae1befecc39710e9560c6f08ddfd5d28fe1b487e029d1",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.3812523999949917,
+  "total_seconds": 5.311059600033332,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.accepted_near_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.accepted_normalized_safe_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.accepted_three_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.d3_iff_return_complete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.d3_of_return_complete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarD3Converse.positive_state_step",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarD3Converse.accepted_near_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarD3Converse.accepted_normalized_safe_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarD3Converse.d3_of_return_complete",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarD3Converse.d3_iff_return_complete",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarD3Converse",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

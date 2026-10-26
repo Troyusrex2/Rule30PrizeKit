@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "module": "CedarTCObstruction",
+  "source_sha256": "2137d6db0e2890e59d49f2bf75dc9c32c62271bef354c35e2dbf7f8d91dd83ca",
+  "compiled_sha256": "4278ee92a8af1cfacf3c62ed47f3c3d791b053d5f2b0d7ea15590a9cf8a9d643",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.4397103000083007,
+  "total_seconds": 1.5764834000146948,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.Periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.Profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.TC",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.derivative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative_pair_tc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative_power_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative_zero_constant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.exists_last_nonzero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.iter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.iter_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.iter_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.nonzero_derivative_zero_is_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.normalized_tc_chain",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.periodic_annihilation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.white_pair_tc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.white_to_black_tc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.xor_cancel_middle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.xor_false_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.iter.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.iter.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.iter.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarTCObstruction.iter.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.one.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarTCObstruction.zero.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarTCObstruction.derivative_power_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarTCObstruction.periodic_annihilation",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarTCObstruction.normalized_tc_chain",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarTCObstruction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 37,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

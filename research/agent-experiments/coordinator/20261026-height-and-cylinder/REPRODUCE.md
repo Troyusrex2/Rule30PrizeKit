@@ -1,0 +1,11 @@
+# Reproduction
+
+Use the unchanged official kit at commit 5473ffd075f63c9d626e63b8455805d4831b39ca and its Lean 4.35.0 dependencies. `Check.lean` must hash to b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905. Claims are partial; retain full kernel replay and the recorded headlines.
+
+1. Rebuild and replay the nine source modules in the preceding `20261026-short-extension-proof` archive, following its reproduction instructions. This supplies the exact recorded dependency sources. Do not use binaries received from another agent.
+2. Copy the new sources from `work/root-height` and `work/root-cylinder` into fresh private project directories. Build RootEventHeight before RootAntiPeriodHeight. CedarD3Converse imports the earlier RootD3Reduction; the two new Cedar modules use the earlier safety modules. All source and dependency hashes are recorded in each `sources.json`.
+3. Use the recorded `replay.py` and `guard.py` runners, adapting only the local project, dependency and executable paths. Their original G913 paths are preserved as provenance. The reference project is read-only. Each new module is compiled from source, then passed to the unchanged checker with `--claim partial` and its recorded headlines.
+4. Compare source hashes, replay counts, selected headlines, verdict, absence of new axioms and guard status to the retained reports. The expected new declaration counts are 43,26,8,37,31 respectively. Recompilation on another supported platform need not produce identical compiled hashes; within a run, use and verify the freshly built dependency hashes.
+5. Run `python -B verify_artifacts.py` to audit this archive's bytes and recorded evidence. This check does not replace fresh kernel replay. `--staged` audits staged bytes for publication.
+
+The tiny saved-strip control can be rerun with `python -B audit_cycles.py` inside `work/diagnostics`; it reads the adjacent JSON and performs literal updates, all wrap and safety checks, least-period checks, and explicit white-boundary-failure checks. It does not reconstruct or certify an SCC graph. SAT scripts and their saved result/core audit are under `target-query`; their original task paths and installed Z3 path are retained. The local cone enumeration in `local-cluster-controls.json` is finite diagnostic evidence only.

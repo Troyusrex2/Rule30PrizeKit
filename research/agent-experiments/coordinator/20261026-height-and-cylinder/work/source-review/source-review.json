@@ -1,0 +1,41 @@
+{
+  "status": "PASS_source_scope_only",
+  "reviewer": "/root/short_extension_proof",
+  "independent_build_or_checker_replay": false,
+  "findings": [],
+  "sources": {
+    "CedarTCObstruction.lean": {
+      "sha256": "2137d6db0e2890e59d49f2bf75dc9c32c62271bef354c35e2dbf7f8d91dd83ca",
+      "domain": "Boolean profiles on Nat",
+      "hypotheses": "Exact return period 2^k and nonzero terminal profile",
+      "conclusion": "Finite normalized derivative/transition-cover chain from constant one; all profiles return at 2^k",
+      "shared_two_predecessor_OR_recurrence_asserted": false,
+      "finite_white_Rule30_ancestry_asserted": false,
+      "k_zero_and_m_zero_cases_checked": true,
+      "integer_time_extension_formalized": false,
+      "arbitrary_leading_white_padding_formalized_in_main_chain": false
+    },
+    "CedarNo11011.lean": {
+      "sha256": "951a3da95ec9e2b11a58ea3aa677e405e4666277acaf8fda5dd52fd27a059d9e",
+      "local_hypotheses": "Four shared OR recurrence equations at times 0,1,2,3, for six arbitrary traces",
+      "local_conclusion": "Newest trace cannot equal 11011 at times 0 through 4",
+      "arbitrary_boundary_profile_four_column_bridge_checked": true,
+      "spatial_induction_preserves_shared_predecessor_profiles": true,
+      "lengths_zero_through_three_handled_separately": true,
+      "empty_newest_default_is_false": true,
+      "profileTrace_transport_only_used_within_its_proved_time_bound": true,
+      "arbitrary_time_shift_uses_literal_evolution_composition": true,
+      "all_finite_words_all_nonnegative_start_times": true,
+      "safety_period_return_or_normalization_premise": false,
+      "fixed_physical_center_conclusion": false
+    }
+  },
+  "reviewed_dependency_hashes": {
+    "CedarSafetySoundness.lean": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a",
+    "CedarSafetySemantics.lean": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b"
+  },
+  "dependency_hashes_match_previous_immutable_F003_delivery": true,
+  "paper_followup_not_kernel_verified": "For any nonconstant periodic Safe trace avoiding 11011, with period P, Z zeros per period, and maximal cyclic one-run R, 2P <= (R+3)Z. The two existing 17/32 strip profiles satisfy this bound. No return8 or ancestry implication follows.",
+  "new_search_or_graph_expansion": false,
+  "prior_bundles_or_Cedar_sources_modified": false
+}

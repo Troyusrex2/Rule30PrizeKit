@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New verified tools and exact limitations:** [signed heights, D3 equivalence, transition-cover obstruction and the forbidden temporal pattern 11011](coordinator/20261026-height-and-cylinder/REPORT.md). Five modules independently replayed; actual ancestry and the fixed-center bridge remain open. [Earlier proved short-extension theorem](coordinator/20261026-short-extension-proof/REPORT.md).
+
 **Current explicit proof target:** [the auxiliary observer criterion and its checked bridge to Problem 1](coordinator/20261026-observer-criterion-bridge/REPORT.md). PR26/28 now state and connect the route requested by the maintainer; the observer criterion itself remains open.
 
 **New boundary-corrected control:** [finite Common windows do not preserve subset](coordinator/20261026-finite-common-window/REPORT.md). Lean proves a genuine finite-white witness with Common for three rows, subset lost after one update, and an explicit later Common failure. The all-time target stays open.

@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"CedarD3Converse.accepted_near_prefix","standardAxioms":true},{"kind":"theorem","name":"CedarD3Converse.accepted_normalized_safe_prefix","standardAxioms":true},{"kind":"theorem","name":"CedarD3Converse.accepted_three_certificate","standardAxioms":true},{"kind":"theorem","name":"CedarD3Converse.d3_iff_return_complete","standardAxioms":true},{"kind":"theorem","name":"CedarD3Converse.d3_of_return_complete","standardAxioms":true},{"kind":"theorem","name":"CedarD3Converse.positive_state_step","standardAxioms":true}],"headlines":[{"axioms":["propext"],"found":true,"kind":"theorem","name":"CedarD3Converse.accepted_near_prefix","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"CedarD3Converse.accepted_normalized_safe_prefix","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"CedarD3Converse.d3_of_return_complete","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"CedarD3Converse.d3_iff_return_complete","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"CedarD3Converse","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":8,"ok":true},"verdict":"pass","verifiedTargets":[]}

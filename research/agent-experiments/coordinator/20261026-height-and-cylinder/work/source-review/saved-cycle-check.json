@@ -1,0 +1,37 @@
+{
+  "source_path": "D:\\MWB\\Rule30\\cedar-d3-batch-20261026T183637Z\\integration\\free_strip_safety.json",
+  "source_sha256": "3bcc3f601b9652f41cc4918c9a758af3f543ac889ce957b73dd690eb18d3f0c4",
+  "new_search": false,
+  "results": [
+    {
+      "name": "bad_cycle",
+      "period": 17,
+      "zero_count": 8,
+      "maximum_one_run": 2,
+      "cyclic_zero_cluster_sizes": [
+        8
+      ],
+      "safe": true,
+      "no11011": true,
+      "density_tradeoff_left": 34,
+      "density_tradeoff_right": 40,
+      "inequality_holds": true
+    },
+    {
+      "name": "power_two_bad_cycle",
+      "period": 32,
+      "zero_count": 9,
+      "maximum_one_run": 13,
+      "cyclic_zero_cluster_sizes": [
+        3,
+        2,
+        4
+      ],
+      "safe": true,
+      "no11011": true,
+      "density_tradeoff_left": 64,
+      "density_tradeoff_right": 144,
+      "inequality_holds": true
+    }
+  ]
+}

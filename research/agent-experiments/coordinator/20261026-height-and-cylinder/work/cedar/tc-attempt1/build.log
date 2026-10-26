@@ -1,0 +1,21 @@
+C:\Users\troyu\Rule30-offload\research\cedar-d3-converse-20261026T1845\CedarTCObstruction.lean:33:12: error: Tactic `rfl` failed: The left-hand side
+  iter (0 + m) b
+is not definitionally equal to the right-hand side
+  iter 0 (iter m b)
+
+case zero
+m : Nat
+b : Profile
+⊢ iter (0 + m) b = iter 0 (iter m b)
+C:\Users\troyu\Rule30-offload\research\cedar-d3-converse-20261026T1845\CedarTCObstruction.lean:84:4: error: Type mismatch: After simplification, term
+  hc
+ has type
+  @Eq Profile b fun x => false
+but is expected to have type
+  @Eq Profile b zero
+C:\Users\troyu\Rule30-offload\research\cedar-d3-converse-20261026T1845\CedarTCObstruction.lean:85:12: error: Type mismatch: After simplification, term
+  hc
+ has type
+  @Eq Profile b fun x => true
+but is expected to have type
+  @Eq Profile b one

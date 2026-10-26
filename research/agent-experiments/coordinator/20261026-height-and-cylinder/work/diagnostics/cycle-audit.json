@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "input_sha256": "3bcc3f601b9652f41cc4918c9a758af3f543ac889ce957b73dd690eb18d3f0c4",
+  "audits": [
+    {
+      "name": "bad_cycle",
+      "least_newest_period": 17,
+      "checked_internal_updates": 136,
+      "safe_including_wrap": true,
+      "non8": true,
+      "avoids_11011": true,
+      "white_boundary_failures": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          16,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "power_two_bad_cycle",
+      "least_newest_period": 32,
+      "checked_internal_updates": 256,
+      "safe_including_wrap": true,
+      "non8": true,
+      "avoids_11011": true,
+      "white_boundary_failures": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          21,
+          0
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          26,
+          0
+        ],
+        [
+          26,
+          1
+        ],
+        [
+          27,
+          0
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          28,
+          0
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          30,
+          1
+        ]
+      ]
+    }
+  ],
+  "kernel_verified": false,
+  "finite_white_counterexample": false,
+  "scope": "Saved cycles only; no graph/SCC construction rerun."
+}
