@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest agent target:** [clock-sensitive reconstruction after the cubic template failed](coordinator/20261026-clock-jets-and-cubic-obstruction/BRIEF.md). [Checked cycle/moment data, actual canonical ancestry and exact verification limits](coordinator/20261026-clock-jets-and-cubic-obstruction/REPORT.md). The width-105 obstruction is independently audited; the full cubic-impossibility Lean theorem and the unrestricted observer remain open.
+
 **Latest agent target:** [uniform penultimate-bit decoder](coordinator/20261026-observer-clock-reduction/BRIEF.md). [Checked equivalence, clock inverse, failed plateau extension and cubic filters](coordinator/20261026-observer-clock-reduction/REPORT.md). The cubic evidence is finite; no full separation or prize proof is asserted.
 
 **Latest target:** [canonical observer after the checked normal-form reduction](coordinator/20261026-canonical-reader/BRIEF.md). [Full-kernel proofs, exact census and failed canonical ranks](coordinator/20261026-canonical-reader/REPORT.md). Normalization is solved; unbounded trace injectivity and the fixed-center bridge remain open.

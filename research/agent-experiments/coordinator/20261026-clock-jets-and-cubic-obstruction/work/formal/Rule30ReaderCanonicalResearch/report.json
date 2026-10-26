@@ -1,0 +1,866 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "832fd7632331f8ad6101bc4725a7b954e81e692843017c7df529a52a3901641a",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 2.287,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 3.056,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.Canonical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.CanonicalObserver",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.Pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.ReaderComplete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.Same",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30ReaderCanonicalResearch.TimeState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TraceEqual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.baseCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.caccept",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_completeness_reduction",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_exists",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_unique",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.change_zip",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.cnext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count_facts",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count_facts_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count_vector",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.cover",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.coverEdges",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.coverTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.cover_accept",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.cover_accept_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.cover_lift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.cover_lift_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.crun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.ctable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.dclosed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.dclosed_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.dnext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.drun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.drun_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqTimeState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqUniqueState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableUniqueInv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.iter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.lastBit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.last_projection",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.normal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.normal_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.normal_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.normal_unique",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.pnext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.prun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.prun_first",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.prun_second",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.representative_exists",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_canonical_unique",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_iff_normal_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_iter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_refl",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_trace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_trans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.singleChange",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.singleChange_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.singleStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.singleStep_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.tclosed_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.timeAllowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.tinitial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.tinv_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.tnext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.trun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.trun_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.trun_raw",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.trun_transformed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.uclosed_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.uinitial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.uinv_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.unext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.uniqueAllowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.uniqueInv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.urun",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.urun_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.urun_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.urun_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.urun_reader",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.urun_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.word_count",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.word_lift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.words",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_diagonal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_projections",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_swap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.zip_triple",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.older",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.previous",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.raw",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.transformed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.diff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.reader",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.baseCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.count.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.cover.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.coverTable.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.crun.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.crun.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.crun.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.crun.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqTimeState.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqUniqueState.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.iter.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.prun.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.prun.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.prun.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.prun.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.singleChange.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.singleChange.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.singleChange.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.unext.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.words.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.words.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.words.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.TimeState.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.UniqueState.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqTimeState.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ReaderCanonicalResearch.instDecidableEqUniqueState.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_exists",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_unique",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.same_iff_normal_eq",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.normal_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_completeness_reduction",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ReaderCanonicalResearch.canonical_count",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ReaderCanonicalResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 215,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

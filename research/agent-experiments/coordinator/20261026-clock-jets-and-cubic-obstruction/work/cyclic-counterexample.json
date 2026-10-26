@@ -1,0 +1,84 @@
+{
+  "controls": [
+    {
+      "case": "raw_core_alias_with_inactive_padding",
+      "canonical": false,
+      "status": "sat"
+    },
+    {
+      "case": "raw_core_alias_with_inactive_padding",
+      "canonical": true,
+      "status": "unsat"
+    },
+    {
+      "case": "known_canonical_four_cycle_has_no_half_period_head",
+      "status": "unsat"
+    }
+  ],
+  "reports": [
+    {
+      "kind": "phase",
+      "maximum_width": 48,
+      "minimum_width": 4,
+      "cycle_clock": 128,
+      "status": "unknown",
+      "build_seconds": 1.281,
+      "solve_seconds": 8.032,
+      "reason": "timeout"
+    },
+    {
+      "kind": "pair",
+      "maximum_width": 48,
+      "minimum_width": 4,
+      "cycle_clock": 128,
+      "status": "unknown",
+      "build_seconds": 2.218,
+      "solve_seconds": 8.047,
+      "reason": "timeout"
+    },
+    {
+      "kind": "phase",
+      "maximum_width": 80,
+      "minimum_width": 4,
+      "cycle_clock": 128,
+      "status": "unknown",
+      "build_seconds": 2.188,
+      "solve_seconds": 8.031,
+      "reason": "timeout"
+    },
+    {
+      "kind": "pair",
+      "maximum_width": 80,
+      "minimum_width": 4,
+      "cycle_clock": 128,
+      "status": "unknown",
+      "build_seconds": 3.797,
+      "solve_seconds": 8.047,
+      "reason": "timeout"
+    },
+    {
+      "kind": "phase",
+      "maximum_width": 48,
+      "minimum_width": 4,
+      "cycle_clock": 256,
+      "status": "unknown",
+      "build_seconds": 2.516,
+      "solve_seconds": 8.031,
+      "reason": "timeout"
+    },
+    {
+      "kind": "pair",
+      "maximum_width": 48,
+      "minimum_width": 4,
+      "cycle_clock": 256,
+      "status": "unknown",
+      "build_seconds": 4.297,
+      "solve_seconds": 8.047,
+      "reason": "timeout"
+    }
+  ],
+  "counterexample": null,
+  "Lean_verified": false,
+  "bounded_queries_only": true,
+  "full_problem_solved": false
+}

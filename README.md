@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Clock-shift identities and a cubic-decoder obstruction](research/agent-experiments/coordinator/20261026-clock-jets-and-cubic-obstruction/REPORT.md): an exact width-105 counterexample defeats the cubic template. All packed cycle/moment facts and actual canonical-phase semantics pass full kernel replay; the final general cubic-impossibility inference is not yet formalized. The unrestricted observer and prize problem remain open.
+
 [Checked one-bit observer reduction and clock inverse](research/agent-experiments/coordinator/20261026-observer-clock-reduction/REPORT.md): a uniform penultimate-bit decoder would suffice for reader completeness. Includes a proved local barrier and explicit finite cubic filters; the decoder and prize problem remain open.
 
 [Checked all-width canonical reader forms](research/agent-experiments/coordinator/20261026-canonical-reader/REPORT.md): unique normal forms commute with Rule 30; completeness is reduced to an open canonical observer. Exact finite census through width 30, no prize solution.

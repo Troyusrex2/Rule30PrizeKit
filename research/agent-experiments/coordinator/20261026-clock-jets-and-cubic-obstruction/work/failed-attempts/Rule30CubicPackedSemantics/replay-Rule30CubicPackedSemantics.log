@@ -1,0 +1,15 @@
+Rule30CubicPackedSemantics.lean:17:2: error: Tactic `simp` failed with a nested error:
+(deterministic) timeout at `«Lean.Meta.acLt»`, maximum number of heartbeats (10000000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Traceback (most recent call last):
+  File "C:\Users\troyu\Rule30-offload\research\jet-mask-20261026\replay.py", line 77, in <module>
+    if r.returncode:print((out/(stage+'.log')).read_text(encoding='utf-8',errors='replace')[-9000:],flush=True)
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\troyu\Miniconda3\Lib\subprocess.py", line 508, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+                             self.stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe', '-o', 'C:\\Users\\troyu\\Rule30-offload\\research\\notebook-offload-20261026\\notebook\\project\\.lake\\build\\lib\\lean\\Rule30CubicPackedSemantics.olean', 'Rule30CubicPackedSemantics.lean']' returned non-zero exit status 1.
