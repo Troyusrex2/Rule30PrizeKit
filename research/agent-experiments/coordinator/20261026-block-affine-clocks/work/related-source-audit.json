@@ -1,0 +1,122 @@
+[
+  {
+    "file": "RootedReturn.lean",
+    "url": "https://raw.githubusercontent.com/ghywel/placego/207ebff1abeb05b812aac41c1cd425ab652394bc/tests/probes/lean/RootedReturn.lean",
+    "sha256": "47c2e7206ca93565f2abf87d517817d16c3a4a344a1946512f052f1e7a7ae8f2",
+    "bytes": 8235,
+    "imports": [
+      "import Mathlib"
+    ],
+    "headline_lines": [
+      "def orbit {S : Type*} (f : S \u2192 Option S) (s0 : S) : \u2115 \u2192 Option S",
+      "theorem terminates {S : Type*} [Finite S] (f : S \u2192 Option S)",
+      "theorem step_injective {q : \u2115} [NeZero q] (x x' y c : ZMod q \u2192 Bool)",
+      "theorem child_unique {q : \u2115} [NeZero q] (x y c c' : ZMod q \u2192 Bool) (t0 : ZMod q) (hy : y t0 = true)",
+      "theorem child_exists {q : \u2115} [NeZero q] (x y : ZMod q \u2192 Bool) (t0 : ZMod q) (hy : y t0 = true) :",
+      "lemma walkStep_spec {q : \u2115} [NeZero q] (p p' : St q) (h : walkStep p = some p') :",
+      "theorem rooted_walk_returns {q : \u2115} [NeZero q] (c : ZMod q \u2192 Bool) (hc : \u2203 t, c t = true) :"
+    ],
+    "source_red_flags": false,
+    "adopted": false,
+    "full_kernel_replayed_here": false
+  },
+  {
+    "file": "ParityMask.lean",
+    "url": "https://raw.githubusercontent.com/ghywel/placego/207ebff1abeb05b812aac41c1cd425ab652394bc/tests/probes/lean/ParityMask.lean",
+    "sha256": "5bef9cd1abb3df9831ae631cc4d49eb3dd9f11a586c16c18c3c0ad6d70b384ec",
+    "bytes": 6289,
+    "imports": [
+      "import Mathlib"
+    ],
+    "headline_lines": [
+      "theorem live_has_pred {S : Type*} [Finite S] (L : Set S) (R : S \u2192 S \u2192 Prop)",
+      "def diff {q : \u2115} (A : ZMod q \u2192 Bool) : ZMod q \u2192 Bool := fun t => xor (A t) (A (t + 1))",
+      "theorem diff_eq_cases {q : \u2115} [NeZero q] (A A' : ZMod q \u2192 Bool) (h : diff A = diff A') :",
+      "def parity {q : \u2115} [NeZero q] (A : ZMod q \u2192 Bool) : Bool :=",
+      "theorem parity_compl {q : \u2115} [NeZero q] (hq : q % 2 = 1) (A : ZMod q \u2192 Bool) :",
+      "theorem at_most_one_pred {q : \u2115} [NeZero q] (hq : q % 2 = 1) (A A' : ZMod q \u2192 Bool)",
+      "theorem diff_even {q : \u2115} [NeZero q] (A : ZMod q \u2192 Bool) :",
+      "theorem odd_driver_no_pred {q : \u2115} [NeZero q] (B : ZMod q \u2192 Bool)"
+    ],
+    "source_red_flags": false,
+    "adopted": false,
+    "full_kernel_replayed_here": false
+  },
+  {
+    "file": "JenPow2.lean",
+    "url": "https://raw.githubusercontent.com/ghywel/placego/207ebff1abeb05b812aac41c1cd425ab652394bc/tests/probes/lean/JenPow2.lean",
+    "sha256": "2ae7989726ff69ffb7e9c1d4cb91864990e8e00629fd3576f443e2432669ce46",
+    "bytes": 28694,
+    "imports": [
+      "import Mathlib"
+    ],
+    "headline_lines": [
+      "def step (x : \u2124 \u2192 Bool) : \u2124 \u2192 Bool := fun i => xor (x (i - 1)) (x i || x (i + 1))",
+      "def ev (x0 : \u2124 \u2192 Bool) : \u2115 \u2192 \u2124 \u2192 Bool",
+      "lemma ev_succ (x0 : \u2124 \u2192 Bool) (t : \u2115) (i : \u2124) :",
+      "lemma edge (x0 : \u2124 \u2192 Bool) (e : \u2124) (he : x0 e = true) (hl : \u2200 j < e, x0 j = false) (t : \u2115) :",
+      "def D (x0 : \u2124 \u2192 Bool) (e : \u2124) (k : \u2124) (t : \u2115) : Bool := ev x0 t (e - t + k)",
+      "lemma D_succ (x0 : \u2124 \u2192 Bool) (e j : \u2124) (t : \u2115) :",
+      "lemma per_iter : \u2200 m t, T \u2264 t \u2192 a (t + m * p) = a t := by",
+      "lemma det (m : \u2115) (s : \u2115) (hs : T \u2264 s) (h0 : x s = x (s + m * p)) : \u2200 k, x (s + k) = x (s + m * p + k) := by",
+      "lemma pigeon (u v w : Bool) : u = v \u2228 u = w \u2228 v = w := by",
+      "lemma forced_periodic : \u2200 t, T + p \u2264 t \u2192 x (t + 2 * p) = x t := by",
+      "lemma D0 (t : \u2115) : D x0 e 0 t = true := by",
+      "lemma Dneg (k : \u2124) (hk : k < 0) (t : \u2115) : D x0 e k t = false := by",
+      "lemma D1 (t : \u2115) (ht : 1 \u2264 t) : D x0 e 1 t = true := by",
+      "lemma D2 (t : \u2115) (ht : 2 \u2264 t) : D x0 e 2 t = false := by",
+      "theorem jen_pow2 : \u2200 j : \u2115, \u2203 T : \u2115, \u2200 k : \u2124, k \u2264 j + 2 \u2192 \u2200 t, T \u2264 t \u2192 D x0 e k (t + 2 ^ j) = D x0 e k t := by",
+      "lemma constraint (x0 : \u2124 \u2192 Bool) (e k : \u2124) (\u03c4 : \u2115) (h : D x0 e k (\u03c4 + 1) = false) :",
+      "lemma back (x0 : \u2124 \u2192 Bool) (e g M' : \u2124) (\u03c4 : \u2115) (hgM : g + 1 \u2264 M') (hg : D x0 e g (\u03c4 + 1) = true)",
+      "lemma fwd (x0 : \u2124 \u2192 Bool) (e g M' : \u2124) (\u03c40 : \u2115) (hw : \u2200 k, g + 1 \u2264 k \u2192 k \u2264 M' \u2192 D x0 e k \u03c40 = false) :",
+      "theorem lemma_B3_sharp (x0 : \u2124 \u2192 Bool) (e : \u2124) (t P : \u2115) (g M' M : \u2124) (hP : 1 \u2264 P) (htP : P \u2264 t)",
+      "theorem run_bound (x0 : \u2124 \u2192 Bool) (e : \u2124) (he : x0 e = true) (hl : \u2200 j < e, x0 j = false) (j : \u2115) :",
+      "lemma per_mul (p : \u2115) (hp : \u2200 t, T \u2264 t \u2192 x (t + p) = x t) : \u2200 m t, T \u2264 t \u2192 x (t + m * p) = x t := by",
+      "lemma per_sub (p q : \u2115) (hp : \u2200 t, T \u2264 t \u2192 x (t + p) = x t) (hq : \u2200 t, T \u2264 t \u2192 x (t + q) = x t) (hqp : q \u2264 p) :",
+      "lemma per_gcd : \u2200 m n : \u2115, (\u2200 t, T \u2264 t \u2192 x (t + m) = x t) \u2192 (\u2200 t, T \u2264 t \u2192 x (t + n) = x t) \u2192",
+      "theorem run_bound_gcd (x0 : \u2124 \u2192 Bool) (e : \u2124) (he : x0 e = true) (hl : \u2200 j < e, x0 j = false) (j P T0 : \u2115)",
+      "lemma D_back (x0 : \u2124 \u2192 Bool) (e m : \u2124) (t : \u2115) :",
+      "lemma ext_window (u v : \u2115 \u2192 Bool) (T P : \u2115) (hP : 1 \u2264 P) (hu : \u2200 t, T \u2264 t \u2192 u (t + P) = u t)",
+      "lemma reset (a b x : \u2115 \u2192 Bool) (T p : \u2115) (ha : \u2200 t, T \u2264 t \u2192 a (t + p) = a t) (hb : \u2200 t, T \u2264 t \u2192 b (t + p) = b t)",
+      "def EvW (x0 : \u2124 \u2192 Bool) (e j : \u2124) : Prop := \u2203 T : \u2115, \u2200 t, T \u2264 t \u2192 D x0 e j t = false",
+      "def EvB (x0 : \u2124 \u2192 Bool) (e j : \u2124) : Prop := \u2203 T : \u2115, \u2200 t, T \u2264 t \u2192 D x0 e j t = true",
+      "theorem lemma_B2_quant (P : \u2115) (hP : 1 \u2264 P) :",
+      "theorem lemma_B2 (P : \u2115) (hP : 1 \u2264 P) :",
+      "theorem infinitely_many_white (N : \u2115) : \u2203 k : \u2115, N \u2264 k \u2227 EvW x0 e k := by",
+      "lemma down (j : \u2124) (h0 : EvW x0 e j) (h1 : EvW x0 e (j + 1)) : EvW x0 e (j - 1) := by",
+      "theorem no_adjacent_white (j : \u2124) (hj : 0 \u2264 j) (h0 : EvW x0 e j) (h1 : EvW x0 e (j + 1)) : False := by",
+      "lemma mono_eventually (j : \u2124) (T : \u2115) (hm : \u2200 t, T \u2264 t \u2192 D x0 e j t = true \u2192 D x0 e j (t + 1) = true) :",
+      "theorem white_then_black (j : \u2124) (hj : 0 \u2264 j) (h0 : EvW x0 e j) : EvB x0 e (j + 2) := by",
+      "theorem infinitely_many_black (N : \u2115) : \u2203 k : \u2115, N \u2264 k \u2227 EvB x0 e k := by"
+    ],
+    "source_red_flags": false,
+    "adopted": false,
+    "full_kernel_replayed_here": false
+  },
+  {
+    "file": "LemmaB2.lean",
+    "url": "https://raw.githubusercontent.com/ghywel/placego/207ebff1abeb05b812aac41c1cd425ab652394bc/tests/probes/lean/LemmaB2.lean",
+    "sha256": "fff8abccfe3096a2744a80955d6115d8915cead0204bb5a6a3b5bfcfe5ecbd9c",
+    "bytes": 8832,
+    "imports": [
+      "import Mathlib"
+    ],
+    "headline_lines": [
+      "def step (x : \u2124 \u2192 Bool) : \u2124 \u2192 Bool := fun i => xor (x (i - 1)) (x i || x (i + 1))",
+      "def ev (x0 : \u2124 \u2192 Bool) : \u2115 \u2192 \u2124 \u2192 Bool",
+      "lemma ev_succ (x0 : \u2124 \u2192 Bool) (t : \u2115) (i : \u2124) :",
+      "lemma edge (x0 : \u2124 \u2192 Bool) (e : \u2124) (he : x0 e = true) (hl : \u2200 j < e, x0 j = false) (t : \u2115) :",
+      "def D (x0 : \u2124 \u2192 Bool) (e : \u2124) (k : \u2124) (t : \u2115) : Bool := ev x0 t (e - t + k)",
+      "lemma D_succ (x0 : \u2124 \u2192 Bool) (e j : \u2124) (t : \u2115) :",
+      "lemma D_back (x0 : \u2124 \u2192 Bool) (e m : \u2124) (t : \u2115) :",
+      "lemma ext_window (u v : \u2115 \u2192 Bool) (T P : \u2115) (hP : 1 \u2264 P) (hu : \u2200 t, T \u2264 t \u2192 u (t + P) = u t)",
+      "lemma D0 (t : \u2115) : D x0 e 0 t = true := by",
+      "lemma Dneg (k : \u2124) (hk : k < 0) (t : \u2115) : D x0 e k t = false := by",
+      "theorem lemma_B2_quant (P : \u2115) (hP : 1 \u2264 P) :",
+      "theorem lemma_B2 (P : \u2115) (hP : 1 \u2264 P) :"
+    ],
+    "source_red_flags": false,
+    "adopted": false,
+    "full_kernel_replayed_here": false
+  }
+]

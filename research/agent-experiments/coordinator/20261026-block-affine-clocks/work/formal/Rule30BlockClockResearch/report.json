@@ -1,0 +1,439 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "180b34d077c5bf36296cddc8d0666e340f9ef1514ca803fa10dbd4305596c9d3",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 14.646,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 15.31,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Rule30BlockClockResearch.Affine",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Input",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.PrefixPeriod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Triple",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.actual_block",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.actual_periodic_tighter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.actual_two_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.base_involution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.compose",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.compose_act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.compose_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.even_block_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.fit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.gate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.identity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.identity_act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.pairAffine",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.pair_act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.pair_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.periodic_mult",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_clock_families",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_exponent_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_four_base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_three_base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_three_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_two_base",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.quartic_act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.quartic_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.returnAffine",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.return_act",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.run_trajectory",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.supported_common_mode_periodic_tighter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.two_step_local_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.xor_left_cancel_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.a",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.b",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.c",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.d",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.e",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.f",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Rule30BlockClockResearch.Affine.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Rule30BlockClockResearch.Affine.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.gate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.returnAffine.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.returnAffine.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.returnAffine.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.returnAffine.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.run.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.run.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.run.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.run.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.Affine.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.Affine.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BlockClockResearch.Affine.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.Affine.mk.sizeOf_spec",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.pair_act",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.quartic_act",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.even_block_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.actual_two_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_three_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.prefix_clock_families",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.actual_periodic_tighter",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BlockClockResearch.supported_common_mode_periodic_tighter",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30BlockClockResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 112,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
