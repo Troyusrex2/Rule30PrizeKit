@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "module": "RootD3Reduction",
+  "source_sha256": "013b6889de1e3aa1207b2c306a80e911d23db55f90af1a1928dabc8cc4230d66",
+  "compiled_sha256": "258d2abc8a9c4bbb4be5cf8de7251d9364c299397812d4c1b03d33d657401438",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.3362421999918297,
+  "total_seconds": 5.322162900003605,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "RootD3Reduction.D3Star",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootD3Reduction.ReturnComplete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootD3Reduction.language_complete_of_d3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootD3Reduction.not_d3_of_not_return_complete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootD3Reduction.return_complete_of_d3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootD3Reduction.small_return",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootD3Reduction.return_complete_of_d3",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootD3Reduction.language_complete_of_d3",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootD3Reduction.not_d3_of_not_return_complete",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootD3Reduction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 10,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

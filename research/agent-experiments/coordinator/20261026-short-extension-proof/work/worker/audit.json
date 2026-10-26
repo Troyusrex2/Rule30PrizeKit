@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "new_modules": [
+    {
+      "module": "RootShortExtensionCore",
+      "source_sha256": "42ff71d255a0cd27be3938f223c7e21b4aa008b833522368b4d2acbf417f5a22",
+      "constants": 36,
+      "guarded_seconds": 1.6399678000016138,
+      "peak_owned_rss_bytes": 775790592
+    },
+    {
+      "module": "RootShortExtensionCases",
+      "source_sha256": "35b2f6eac5c0c136301a335def2e6cfaf4f4735fd2210b5be1ed4a6332c62d24",
+      "constants": 232,
+      "guarded_seconds": 15.422217099985573,
+      "peak_owned_rss_bytes": 1306894336
+    },
+    {
+      "module": "RootShortExtensionCertificate",
+      "source_sha256": "1d18b461eb4e4f2e4e4502abf67d5975eedc6ce9a33292954a5982985ccc37b4",
+      "constants": 1,
+      "guarded_seconds": 8.463982399960514,
+      "peak_owned_rss_bytes": 1373892608
+    },
+    {
+      "module": "RootShortExtension",
+      "source_sha256": "b65389e61aa9c96b24d62ca44fea8a16cccb4f6b32af217765f51a077967a86e",
+      "constants": 4,
+      "guarded_seconds": 5.319542300014291,
+      "peak_owned_rss_bytes": 1372598272
+    }
+  ],
+  "dependency_modules": [
+    {
+      "module": "CedarSafetySoundness",
+      "source_sha256": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a",
+      "constants": 137,
+      "guarded_seconds": 1.957022999995388,
+      "peak_owned_rss_bytes": 787775488
+    },
+    {
+      "module": "CedarSafetySemantics",
+      "source_sha256": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b",
+      "constants": 75,
+      "guarded_seconds": 1.7397784000495449,
+      "peak_owned_rss_bytes": 778768384
+    },
+    {
+      "module": "CedarSafetyBridge",
+      "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8",
+      "constants": 8,
+      "guarded_seconds": 2.066855699988082,
+      "peak_owned_rss_bytes": 795435008
+    }
+  ],
+  "new_declarations_including_generated": 273,
+  "dependency_declarations_replayed": 220,
+  "all_210_nonempty_cases_match_previous_independent_certificate": true,
+  "cases_including_empty": 225,
+  "maximum_concrete_time_needed": 21,
+  "full_problem_solved": false,
+  "D3_star_proved": false,
+  "all_time_safety_premise_retained": true,
+  "literal_finite_white_semantics": true,
+  "prefix_return8_premise_retained": true,
+  "extension_length_bound": 3,
+  "child_clock_premise": false,
+  "no_published_changes": true
+}

@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"RootD3Reduction.D3Star","standardAxioms":true},{"kind":"def","name":"RootD3Reduction.ReturnComplete","standardAxioms":true},{"kind":"theorem","name":"RootD3Reduction.language_complete_of_d3","standardAxioms":true},{"kind":"theorem","name":"RootD3Reduction.not_d3_of_not_return_complete","standardAxioms":true},{"kind":"theorem","name":"RootD3Reduction.return_complete_of_d3","standardAxioms":true},{"kind":"theorem","name":"RootD3Reduction.small_return","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootD3Reduction.return_complete_of_d3","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootD3Reduction.language_complete_of_d3","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootD3Reduction.not_d3_of_not_return_complete","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"RootD3Reduction","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":10,"ok":true},"verdict":"pass","verifiedTargets":[]}

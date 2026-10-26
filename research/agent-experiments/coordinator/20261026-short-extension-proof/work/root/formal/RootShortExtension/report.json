@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "module": "RootShortExtension",
+  "source_sha256": "b65389e61aa9c96b24d62ca44fea8a16cccb4f6b32af217765f51a077967a86e",
+  "compiled_sha256": "b9cf7df2fcca670c52c006916552c91150e6e4f16538a1e63ea930367d115fb3",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.3122509000240825,
+  "total_seconds": 5.228942700021435,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "RootShortExtension.accepted_short_extension",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtension.accepted_short_extension_language",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtension.extension_aux",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtension.safe_short_extension",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootShortExtension.safe_short_extension",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootShortExtension.accepted_short_extension_language",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootShortExtension",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 4,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

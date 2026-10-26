@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "module": "RootShortExtensionCertificate",
+  "source_sha256": "1d18b461eb4e4f2e4e4502abf67d5975eedc6ce9a33292954a5982985ccc37b4",
+  "compiled_sha256": "dab97ae70013c73679721a203f0d1054f4bd0bb689b073276c715e1f557246ad",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 6.475685000012163,
+  "total_seconds": 8.307721599994693,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCertificate.extension_certificate",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootShortExtensionCertificate.extension_certificate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootShortExtensionCertificate",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 1,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
