@@ -1,0 +1,326 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "c6e009b69c20c73aa4eff738be4e7fc04a5ffe280793e9af0af2a8877a304a3f",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 0.518,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 1.343,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.CollisionClock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.FrontStable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.InitSub",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.Preserves",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.before_source",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.clock_no_flips",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.combine_linear",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.common_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.cut",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.cut_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.delta_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.divided_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.first_source",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.flip_gate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.front_of_collision_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.front_of_preservation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.good_add_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.mode_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.period_two_front_obstruction",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.period_two_source_stable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.prefix_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.preservation_iff_front",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.preservation_of_collision_clock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.preservation_of_front",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.same_of_xor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.shuffle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.step_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.step_cut",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.step_front",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.step_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.sub_add_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FrontReductionResearch.suffix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.suffix_common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.suffix_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.suffix_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.xor_slope",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.zero_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CommonPastResearch.GoodAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CommonPastResearch.SubAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.cut.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.delta.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.suffix.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.first_source",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.suffix_mode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.preservation_iff_front",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.clock_no_flips",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.period_two_source_stable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FrontReductionResearch.preservation_of_collision_clock",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FrontReductionResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 81,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
