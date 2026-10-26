@@ -1,0 +1,9 @@
+import Rule30CanonicalLanguageResearch
+#check @Rule30CanonicalLanguageResearch.canonical_iff
+#check @Rule30CanonicalLanguageResearch.zpad_true_injective
+#check @Rule30CanonicalLanguageResearch.phase_injective
+#check @Rule30CanonicalLanguageResearch.phase_ne
+#check @Rule30CanonicalLanguageResearch.canonical_phase_iff
+#check @Rule30CanonicalLanguageResearch.not_core_phase
+#check @Rule30CanonicalLanguageResearch.core_step_two
+#check @Rule30CanonicalLanguageResearch.core_observe_injective

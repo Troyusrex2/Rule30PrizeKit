@@ -1,0 +1,3 @@
+Rule30ReaderEquivalenceResearch.shared_representative : ∀ (x y r : Nat → Bool) (n : Nat),
+  Rule30ReaderEquivalenceResearch.Related x r n →
+    Rule30ReaderEquivalenceResearch.Related y r n → Rule30ReaderEquivalenceResearch.Related x y n

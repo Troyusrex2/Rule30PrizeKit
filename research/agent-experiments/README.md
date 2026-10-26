@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New reader reduction:** [an exact two-output CA observer criterion](coordinator/20261026-ca-observer/REPORT.md), including all tail widths and both phases. The portable six-module replay passed. Both observation properties and P1 remain open.
+
 **New reproducible controls:** [clock lifting, genuine plateau/onset obstructions, stripe entry conditions, and finite padded mixtures](coordinator/20261026-clock-controls-and-mixtures/REPORT.md). The portable 30-module source replay passed; the six leaves contain 169 module constants. These are partial results and counterexamples to particular shortcuts, not a solution of P1.
 
 **New arbitrary-block theorem:** [every black-containing finite block is excluded with sufficiently long white padding](coordinator/20261026-arbitrary-white-padding/REPORT.md). Six independently replayed modules also prove stripe maintenance with only `19N+10` white cells after entry. Initial entry still has a very large bound; arbitrary periods and the prize remain open.

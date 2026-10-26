@@ -1,0 +1,106 @@
+{
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_order": [
+    "Rule30CommonPastResearch",
+    "Rule30ColumnReaderResearch",
+    "Rule30ReaderEquivalenceResearch",
+    "Rule30ReaderCanonicalResearch",
+    "Rule30CanonicalLanguageResearch",
+    "Rule30CAObserverResearch"
+  ],
+  "modules": [
+    {
+      "module": "Rule30CommonPastResearch",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "constants": 100,
+      "headlines": [
+        "Rule30CommonPastResearch.actual_periodic"
+      ],
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Ruliology.CellularAutomata.Rule30Diagonals"
+      ]
+    },
+    {
+      "module": "Rule30ColumnReaderResearch",
+      "source_sha256": "ad1d09b6d460b1849017fcf7c99151ad0304ceee8dfc80e78f43bfc1a917da3b",
+      "constants": 119,
+      "headlines": [
+        "Rule30ColumnReaderResearch.initial_mem"
+      ],
+      "private_imports": [
+        "Rule30CommonPastResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderEquivalenceResearch",
+      "source_sha256": "574920fd28265f590b6f030784bb22979770f0fb1da023f328825bc3cade6dd7",
+      "constants": 83,
+      "headlines": [
+        "Rule30ReaderEquivalenceResearch.shared_representative"
+      ],
+      "private_imports": [
+        "Rule30ColumnReaderResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderCanonicalResearch",
+      "source_sha256": "832fd7632331f8ad6101bc4725a7b954e81e692843017c7df529a52a3901641a",
+      "constants": 215,
+      "headlines": [
+        "Rule30ReaderCanonicalResearch.canonical_completeness_reduction"
+      ],
+      "private_imports": [
+        "Rule30ReaderEquivalenceResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CanonicalLanguageResearch",
+      "source_sha256": "2c0aacfc6b48f74b7e289487f83d9b6c0ad1d551ab3e8a3122f584de5c1a6033",
+      "constants": 53,
+      "headlines": [
+        "Rule30CanonicalLanguageResearch.canonical_iff",
+        "Rule30CanonicalLanguageResearch.zpad_true_injective",
+        "Rule30CanonicalLanguageResearch.phase_injective",
+        "Rule30CanonicalLanguageResearch.phase_ne",
+        "Rule30CanonicalLanguageResearch.canonical_phase_iff",
+        "Rule30CanonicalLanguageResearch.not_core_phase",
+        "Rule30CanonicalLanguageResearch.core_step_two",
+        "Rule30CanonicalLanguageResearch.core_observe_injective"
+      ],
+      "private_imports": [
+        "Rule30ReaderCanonicalResearch"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CAObserverResearch",
+      "source_sha256": "476236dd07f0252604a2f24e751ac41f94bd08a937497d0cae434498743838fc",
+      "constants": 134,
+      "headlines": [
+        "Rule30CAObserverResearch.trace_aligned_iff",
+        "Rule30CAObserverResearch.trace_phase_iff",
+        "Rule30CAObserverResearch.iter_period",
+        "Rule30CAObserverResearch.trace_shift_cancel",
+        "Rule30CAObserverResearch.canonical_observer_iff",
+        "Rule30CAObserverResearch.reader_complete_iff"
+      ],
+      "private_imports": [
+        "Rule30CanonicalLanguageResearch"
+      ],
+      "official_imports": []
+    }
+  ],
+  "module_count": 6,
+  "constants": 704,
+  "new_leaf_constants": 187,
+  "reused_dependency_constants": 517,
+  "prize_solved": false
+}

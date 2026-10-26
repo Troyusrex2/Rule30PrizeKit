@@ -1,0 +1,2 @@
+import Rule30ReaderCanonicalResearch
+#check @Rule30ReaderCanonicalResearch.canonical_completeness_reduction
