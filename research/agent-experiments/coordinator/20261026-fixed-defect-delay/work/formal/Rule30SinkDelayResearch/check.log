@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\notebook-offload-20261026\notebook\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30SinkDelayResearch.arbitrary_sink_delay","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.common_check","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.common_suffix","standardAxioms":true},{"kind":"def","name":"Rule30SinkDelayResearch.initialWord","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.original_word_sink","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.run_append","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.run_common","standardAxioms":true},{"kind":"def","name":"Rule30SinkDelayResearch.suffix","standardAxioms":true},{"kind":"theorem","name":"Rule30SinkDelayResearch.suffix_check","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30SinkDelayResearch.original_word_sink","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30SinkDelayResearch.arbitrary_sink_delay","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30SinkDelayResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":15,"ok":true},"verdict":"pass","verifiedTargets":[]}

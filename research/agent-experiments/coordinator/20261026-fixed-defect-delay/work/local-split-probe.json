@@ -1,0 +1,55 @@
+{
+  "reports": [
+    {
+      "temporal_clock": 2,
+      "seed_states": 2,
+      "states": 2,
+      "processed": 2,
+      "edges": 0,
+      "closed": true,
+      "stop_reason": null,
+      "example": null,
+      "seconds": 0.0
+    },
+    {
+      "temporal_clock": 4,
+      "seed_states": 16,
+      "states": 56,
+      "processed": 40,
+      "edges": 40,
+      "closed": false,
+      "stop_reason": "resynchronized",
+      "example": {
+        "seed_common": [
+          0,
+          3
+        ],
+        "source_initial": [
+          0,
+          1
+        ],
+        "extension_initials": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "synchronized_pair_state": [
+          13,
+          10,
+          10,
+          10
+        ],
+        "seed_right_bounded_verified": false
+      },
+      "seconds": 0.0
+    }
+  ],
+  "Lean_verified": false,
+  "reader_completeness_proved": false,
+  "full_problem_solved": false
+}

@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[A fixed defect can hide for arbitrary time](research/agent-experiments/coordinator/20261026-fixed-defect-delay/REPORT.md): new full kernel proofs place arbitrarily delayed finite examples inside reader state 15, with the same nearby defect and a permanent source. Detection must account for the shared background. Eventual separation and the prize remain open.
+
 [Rank follow-up](research/agent-experiments/coordinator/20261026-rank-certificates/REPORT.md): three previously timed-out sufficient rank systems now have independently checked exact Farkas certificates. These are Python arithmetic audits, not new Lean results; four-symbol context remains unknown.
 
 [Reader complete outside its invariant sink](research/agent-experiments/coordinator/20261026-reader-separation/REPORT.md): an unbounded theorem narrows the remaining separation problem to one state. A separately kernel-checked width-22 example disproves a three-times-width observation bound. The sink and the prize remain open.
