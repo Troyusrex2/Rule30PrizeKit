@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "source_sha256": "96d7575d1db70090da3aa05d5cd187dafcb72648772964a11aadeb95de7b069c",
+  "compiled_sha256": "214e36882512b59b28ff99778a21e6c1f84c3f1cbe7b743884c81edbb52b2efa",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.651791400043294,
+  "total_seconds": 5.91060090000974,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.LeastColumnPeriod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.alltime_height_one_shorter_counterexample",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.closed_of_alltime_span",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.exists_even_column_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.full",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.full_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.least_column_above_four_transfer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.prefix_full",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.rowStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.row_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.row_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.takeBits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.take_change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.take_initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.take_last",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.take_newest",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.take_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.trace_full",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.rowStep.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.rowStep.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.rowStep.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.rowStep.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.takeBits.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.takeBits.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.takeBits.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOnePeriodicity.takeBits.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.exists_even_column_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.alltime_height_one_shorter_counterexample",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOnePeriodicity.least_column_above_four_transfer",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightOnePeriodicity",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 46,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

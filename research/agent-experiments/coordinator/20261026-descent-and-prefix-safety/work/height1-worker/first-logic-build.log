@@ -1,0 +1,72 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:57:47: error: unsolved goals
+b : ℕ → Bool
+t : ℕ
+h0 : b t = false
+h1 : b (t + 1) = true
+h2 : b (t + 2) = false
+lo : ℤ
+hl : ∀ (t : ℕ), lo ≤ WH b t ∧ WH b t ≤ lo + 1
+a : lo ≤ WH b t ∧ WH b t ≤ lo + 1
+c : lo ≤ WH b (t + 3) ∧ WH b (t + 3) ≤ lo + 1
+⊢ (WH b t + sign t * 2 - sign t * if false = true then 1 else 0) = WH b t + sign t * 2
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:61:66: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h0, h1, h2, Bool.not_false, Bool.not_true, bit, ite_true, mul_one, mul_zero, add_zero, sign_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:62:14: warning: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h0, h1, h2, Bool.not_false, Bool.not_true, bit, ite_true, ite_false, mul_one, add_zero, sign_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:62:23: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h0, h1, h2, Bool.not_false, Bool.not_true, bit, ite_true, ite_false, mul_one, mul_zero, sign_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:91:39: error: unsolved goals
+case false.true.false
+b : ℕ → Bool
+hs : SpanOne b
+hn : No11011 b
+P : ℕ
+hP : 0 < P
+hp : Periodic b P
+t : ℕ
+h0 : b t = false → b (t + 1) = true → b (t + 2) = true
+h1 : b t = true → b (t + 1) = false → b (t + 2) = false
+⊢ False
+
+case true.false.true
+b : ℕ → Bool
+hs : SpanOne b
+hn : No11011 b
+P : ℕ
+hP : 0 < P
+hp : Periodic b P
+t : ℕ
+h0 : b t = false → b (t + 1) = true → b (t + 2) = true
+h1 : b t = true → b (t + 1) = false → b (t + 2) = false
+⊢ False
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:113:46: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+C:\Users\troyu\Rule30-offload\research\height1-transfer-20261026T2007\HeightOneLogic.lean:122:8: error: Type mismatch
+  h
+has type
+  a t = D b t ∧ u t = D b t
+but is expected to have type
+  a t = true ∧ u t = true

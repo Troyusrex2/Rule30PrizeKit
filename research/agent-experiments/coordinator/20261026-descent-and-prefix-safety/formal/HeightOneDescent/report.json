@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "source_sha256": "a885271f7a288bfac35b06a07d9f8ec6e73de3e809dfd36cfed33b93523b2c40",
+  "compiled_sha256": "e41ae94d17265638f8ca21d0b2db9fab0d18b16edca21d9b0fb0b395daaf7b64",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.6520092000137083,
+  "total_seconds": 5.9525678000063635,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.height_one_nonreturn_shorter",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.height_one_parent_safe_twins",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.height_one_return_of_shorter_completeness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.minimal_safe_counterexample_not_height_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.return8_of_flipped_parent_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneDescent.small_return8",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneDescent.height_one_nonreturn_shorter",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneDescent.height_one_return_of_shorter_completeness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneDescent.minimal_safe_counterexample_not_height_one",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightOneDescent",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 13,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

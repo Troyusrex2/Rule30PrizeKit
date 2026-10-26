@@ -1,0 +1,31 @@
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoNearReturn.lean:216:71: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [RootEventHeight.white, RootEventHeight.bit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoNearReturn.lean:251:22: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoNearReturn.lean:269:4: error: Type mismatch: After simplification, term
+  hh
+ has type
+  SpanTwo fun t => (evolution t (u ++ v)).getLastD false
+but is expected to have type
+  SpanTwo (trace (lift8 zero) (lift8 zero) (u ++ v))
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoNearReturn.lean:271:47: error: Application type mismatch: The argument
+  hu'
+has type
+  run8 zero zero u = u
+but is expected to have type
+  run8 (CedarSafetyBridge.state ⟨0, ?m.49⟩).previous (CedarSafetyBridge.state ⟨0, ?m.49⟩).older u = u
+in the application
+  extension_aux u ⟨0, ?m.49⟩ v hv hu'
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoNearReturn.lean:272:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq (List Bool) (driven (lift8 (ofNat 0)) (lift8 (ofNat 0)) 8 (u ++ v)) (u ++ v)
+but is expected to have type
+  @Eq (List Bool) (evolution 8 (u ++ v)) (u ++ v)

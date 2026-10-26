@@ -1,0 +1,37 @@
+{
+  "verdict": "SOURCE_SCOPE_PASS",
+  "builds_run": false,
+  "archive": "D:\\MWB\\Rule30\\overnight-20261024\\research\\agent-experiments\\coordinator\\20261026-descent-and-prefix-safety",
+  "report_sha256": "86ada2e0d9da41955a383ab89868cb49a7399ddf372bb97b7056621bb8069c2a",
+  "summary_sha256": "b64b4c0126ac76dc0c575d6ca32d5a56e3347e13eda3812190bc6f794f1fbcea",
+  "sources": {
+    "HeightOneLogic.lean": "a8421f7776feb9c2c65e474006a3e5c9d8b06f3509703f6333a02a96c8cb8908",
+    "HeightOneSemantics.lean": "a80a984938dd74b76e09776dfa976fdb14fbc58635405bfe4a83446cb42d2c6a",
+    "HeightOneTransfer.lean": "ce1ab3a7e2d406f7f6ad814326c38fa2032db756e9db6d44535f3cb9619d712d",
+    "HeightOnePeriodicity.lean": "96d7575d1db70090da3aa05d5cd187dafcb72648772964a11aadeb95de7b069c",
+    "HeightOneDescent.lean": "a885271f7a288bfac35b06a07d9f8ec6e73de3e809dfd36cfed33b93523b2c40",
+    "RootReturningPrefixSafety.lean": "c26040099924f86f5a2ace97dfb32de411df352c50d11d0b7f5af5e2cf74f47b",
+    "RootMinimalCounterexample.lean": "31f59fac79b3c21a958a044a02f1bb96df069fbe9e56eefa54f1f8ba478c9a87",
+    "HeightTwoNearReturn.lean": "3375fba87435aec88b8bfa62a0dad4f7380317757b770fc511bf203d265a7677",
+    "HeightTwoDescent.lean": "2986e94319763ae4597bcc37dcc65cf00cfc724e462933d9568260aa3ae50af4"
+  },
+  "declared_new_count": 398,
+  "checks": [
+    "Exact whole-word/non-column-clock Height1 descent and small-width cases",
+    "No supplied clock in final Height1 descent; actual finite-white period bridge",
+    "F8-only returning prefix; Safe belongs to full extension of at most3",
+    "Minimum-width Safe argument quantifies all shorter words, including leaf-flipped witnesses",
+    "00 and11 temporal occurrences are separate existential events",
+    "Height2 near-return has all-time band, arbitrary prefix width, suffix length at most2",
+    "Height2 coSafe means no11; flipped ancestor is all-time Safe and genuinely shorter",
+    "Height2 minimality explicitly concerns shorter Safe words, not minimum-height2 words",
+    "Open Safe-to-height2 and physical-center/reader bridges remain explicit",
+    "Pure-mode25 excluded from current398 and kept in separate later checkpoint"
+  ],
+  "limitations": [
+    "Source and scope review only; no duplicate compile/kernel replay",
+    "Catalog PR33 external publication/evaluation status not rechecked here; catalog evidence remains separate",
+    "Historical archive inventory claim not independently repeated in this review"
+  ],
+  "semantic_defects": []
+}

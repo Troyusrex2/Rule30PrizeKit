@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "source_sha256": "31f59fac79b3c21a958a044a02f1bb96df069fbe9e56eefa54f1f8ba478c9a87",
+  "compiled_sha256": "4fd060409758a6320aa14d332167b7f9f52054edfba1e234da92a2744060357f",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.6123130999621935,
+  "total_seconds": 5.614041799970437,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "RootMinimalCounterexample.CoSafe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.coSafe_returns_of_shorter_completeness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.flipped_safe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.near_prefix_both_events",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.near_prefix_nonreturn",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.near_prefix_both_events",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootMinimalCounterexample.coSafe_returns_of_shorter_completeness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootMinimalCounterexample",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

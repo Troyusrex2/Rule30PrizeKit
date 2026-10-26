@@ -1,0 +1,419 @@
+C:\Users\troyu\Rule30-offload\research\returning-prefix-safety-20261026T2029\RootReturningPrefixSafety.lean:253:37: error: Invalid `←` modifier: `zero` is a declaration name to be unfolded
+
+Hint: The simplifier cannot "refold" definitions by name. Use `rw` for this instead,
+                      or use the `←` simp modifier with an equational lemma for `zero`.
+C:\Users\troyu\Rule30-offload\research\returning-prefix-safety-20261026T2029\RootReturningPrefixSafety.lean:255:7: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  driven (lift8 zero) (lift8 zero) ?t ?xs
+in the target expression
+  driven
+      (lift8
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).previous)
+      (lift8
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).older)
+      8 (u ++ v) =
+    u ++ v
+
+u v : List Bool
+hu : evolution 8 u = u
+hv : v.length ≤ 3
+hs : Safe (u ++ v)
+hu' : run8 zero zero u = u
+hs' : DrivenSafe (lift8 zero) (lift8 zero) (u ++ v)
+h :
+  run8
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).previous
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).older
+        u =
+      u →
+    DrivenSafe
+        (lift8
+          (match ↑0 with
+            | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+            | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+            | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+            | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+            | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+            | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+            | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+            | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+            | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+            | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+            | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+            | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+            | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+            | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+            | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+            | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+            | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+            | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+            | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+            | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+            | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+            | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+            | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+            | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+            | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+            | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+            | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+            | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+            | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+            | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+            | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+            | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+            | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+            | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+            | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+            | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+            | x => { q := 0, previous := zero, older := zero }).previous)
+        (lift8
+          (match ↑0 with
+            | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+            | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+            | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+            | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+            | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+            | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+            | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+            | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+            | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+            | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+            | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+            | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+            | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+            | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+            | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+            | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+            | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+            | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+            | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+            | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+            | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+            | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+            | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+            | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+            | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+            | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+            | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+            | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+            | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+            | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+            | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+            | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+            | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+            | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+            | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+            | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+            | x => { q := 0, previous := zero, older := zero }).older)
+        (u ++ v) →
+      driven
+          (lift8
+            (match ↑0 with
+              | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+              | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+              | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+              | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+              | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+              | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+              | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+              | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+              | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+              | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+              | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+              | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+              | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+              | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+              | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+              | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+              | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+              | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+              | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+              | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+              | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+              | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+              | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+              | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+              | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+              | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+              | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+              | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+              | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+              | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+              | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+              | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+              | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+              | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+              | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+              | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+              | x => { q := 0, previous := zero, older := zero }).previous)
+          (lift8
+            (match ↑0 with
+              | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+              | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+              | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+              | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+              | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+              | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+              | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+              | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+              | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+              | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+              | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+              | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+              | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+              | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+              | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+              | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+              | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+              | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+              | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+              | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+              | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+              | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+              | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+              | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+              | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+              | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+              | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+              | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+              | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+              | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+              | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+              | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+              | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+              | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+              | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+              | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+              | x => { q := 0, previous := zero, older := zero }).older)
+          8 (u ++ v) =
+        u ++ v
+hr :
+  driven
+      (lift8
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).previous)
+      (lift8
+        (match ↑0 with
+          | 0 => { q := 0, previous := ofNat 0, older := ofNat 0 }
+          | 1 => { q := 1, previous := ofNat 511, older := ofNat 0 }
+          | 2 => { q := 2, previous := ofNat 170, older := ofNat 511 }
+          | 3 => { q := 3, previous := ofNat 341, older := ofNat 511 }
+          | 4 => { q := 4, previous := ofNat 170, older := ofNat 170 }
+          | 5 => { q := 3, previous := ofNat 341, older := ofNat 170 }
+          | 6 => { q := 2, previous := ofNat 170, older := ofNat 341 }
+          | 7 => { q := 5, previous := ofNat 341, older := ofNat 341 }
+          | 8 => { q := 6, previous := ofNat 204, older := ofNat 170 }
+          | 9 => { q := 6, previous := ofNat 307, older := ofNat 170 }
+          | 10 => { q := 7, previous := ofNat 102, older := ofNat 341 }
+          | 11 => { q := 8, previous := ofNat 409, older := ofNat 341 }
+          | 12 => { q := 9, previous := ofNat 180, older := ofNat 204 }
+          | 13 => { q := 9, previous := ofNat 331, older := ofNat 204 }
+          | 14 => { q := 9, previous := ofNat 210, older := ofNat 307 }
+          | 15 => { q := 9, previous := ofNat 301, older := ofNat 307 }
+          | 16 => { q := 9, previous := ofNat 90, older := ofNat 102 }
+          | 17 => { q := 10, previous := ofNat 421, older := ofNat 102 }
+          | 18 => { q := 10, previous := ofNat 150, older := ofNat 409 }
+          | 19 => { q := 10, previous := ofNat 361, older := ofNat 409 }
+          | 20 => { q := 11, previous := ofNat 168, older := ofNat 180 }
+          | 21 => { q := 12, previous := ofNat 343, older := ofNat 180 }
+          | 22 => { q := 11, previous := ofNat 138, older := ofNat 331 }
+          | 23 => { q := 12, previous := ofNat 373, older := ofNat 331 }
+          | 24 => { q := 11, previous := ofNat 162, older := ofNat 210 }
+          | 25 => { q := 12, previous := ofNat 349, older := ofNat 210 }
+          | 26 => { q := 11, previous := ofNat 42, older := ofNat 301 }
+          | 27 => { q := 12, previous := ofNat 469, older := ofNat 301 }
+          | 28 => { q := 11, previous := ofNat 84, older := ofNat 90 }
+          | 29 => { q := 12, previous := ofNat 427, older := ofNat 90 }
+          | 30 => { q := 12, previous := ofNat 186, older := ofNat 421 }
+          | 31 => { q := 11, previous := ofNat 325, older := ofNat 421 }
+          | 32 => { q := 12, previous := ofNat 234, older := ofNat 150 }
+          | 33 => { q := 11, previous := ofNat 277, older := ofNat 150 }
+          | 34 => { q := 12, previous := ofNat 174, older := ofNat 361 }
+          | 35 => { q := 11, previous := ofNat 337, older := ofNat 361 }
+          | x => { q := 0, previous := zero, older := zero }).older)
+      8 (u ++ v) =
+    u ++ v
+⊢ evolution 8 (u ++ v) = u ++ v

@@ -1,0 +1,55 @@
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:55:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  !tr (?xs ++ [?v]) ?t
+in the target expression
+  (!decide (tr (xs ++ [a]) t = false)) = true
+
+xs : List Bool
+a : Bool
+hc : CoSafe (xs ++ [a])
+t : ℕ
+ht : newest (evolution t (xs ++ [!a])) = false ∧ newest (evolution (t + 1) (xs ++ [!a])) = false
+⊢ (!decide (tr (xs ++ [a]) t = false)) = true
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:58:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  !tr (?xs ++ [?v]) ?t
+in the target expression
+  (!decide (tr (xs ++ [a]) (t + 1) = false)) = true
+
+xs : List Bool
+a : Bool
+hc : CoSafe (xs ++ [a])
+t : ℕ
+ht : newest (evolution t (xs ++ [!a])) = false ∧ newest (evolution (t + 1) (xs ++ [!a])) = false
+h0 : (!decide (tr (xs ++ [a]) t = false)) = true
+⊢ (!decide (tr (xs ++ [a]) (t + 1) = false)) = true
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:114:64: error: Expected type must not contain free variables
+  0 < [c].length
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:114:76: error: Expected type must not contain free variables
+  [c].length ≤ 2
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:115:76: error: Application type mismatch: The argument
+  hh
+has type
+  SpanTwo (tr (xs ++ [a, b, c]))
+but is expected to have type
+  SpanTwo (tr (xs ++ [a] ++ [b] ++ [c]))
+in the application
+  h hh
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:116:59: error: Expected type must not contain free variables
+  0 < [b, c].length
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:116:71: error: Expected type must not contain free variables
+  [b, c].length ≤ 2
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+C:\Users\troyu\Rule30-offload\research\height2-descent-20261026T2016\HeightTwoDescent.lean:117:76: error: Application type mismatch: The argument
+  hh
+has type
+  SpanTwo (tr (xs ++ [a, b, c]))
+but is expected to have type
+  SpanTwo (tr (xs ++ [a] ++ [b, c]))
+in the application
+  h hh
