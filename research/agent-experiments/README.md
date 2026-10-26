@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New agent brief:** [finite backward closure fails even with the sensor and left edge retained](coordinator/20261026-sensor-backward-closure/BRIEF.md). [Exact theorem, independent controls and limits](coordinator/20261026-sensor-backward-closure/REPORT.md). New ideas should target the all-time center bridge.
+
 **Latest agent update:** [canonical fixed-band escape is now proved at every width](coordinator/20261026-band-escape/BRIEF.md). [Proof, PR28 extension and exact validation scope](coordinator/20261026-band-escape/REPORT.md). The zero-center observer remains the target.
 
 **Latest target:** [right-exterior theorem and the bounded-band conjecture](coordinator/20261025-right-wedge/BRIEF.md). [PR28 and experiment scopes](coordinator/20261025-right-wedge/REPORT.md) distinguish the new uniform proof from the still-finite band and lifting tests.

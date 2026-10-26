@@ -1,0 +1,347 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "8e26936951616c0d40246fcc397a91eddddc2dc98928b10d9820d7a4e90bc0b8",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 3.74,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 2.28,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.Common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.Subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.a_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.actual_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.actual_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.center_agreement_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_128",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_160",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_192",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_224",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_256",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_32",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_64",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.checkpoint_96",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.common_flip_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.diffStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.diff_xor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.diff_xor_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.evol_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.evol_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.evolved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.evolved_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.field",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_nonlift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_right_black",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_right_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_white_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_white_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.finite_sensor_nonlift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.gap_256",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.local_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.physical_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.prefix_agreement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.preimage_right_edge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.prior_255_at_236",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.pulseTarget",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.pulse_evol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.pulse_mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.pulse_support",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.restart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.rowStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.unit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.advance.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.diffStep.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SensorClosureResearch.evolved.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.unit.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.preimage_right_edge",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.field_nonlift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SensorClosureResearch.finite_sensor_nonlift",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30SensorClosureResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 134,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false,
+  "all_time_observer_counterexample": false
+}
