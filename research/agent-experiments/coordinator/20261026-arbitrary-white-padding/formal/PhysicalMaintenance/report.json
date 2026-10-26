@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "source_sha256": "5cb038cf1779464cb84132bf5aa1fe1b8fee4783d08f12fc6d40db7ac6380402",
+  "compiled_sha256": "2f8bcc9d075c0994aed07ede2724f2f537a2933eb48a8469fb0df2bdc6831b37",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.6364646999863908,
+  "total_seconds": 2.01667769998312,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.Drives",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.StripeAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.exists_last",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.finite_cone_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.horizon",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.maintain",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.padding",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.padding_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.response_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.short_white_witness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.exists_last.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMaintenance.finite_cone_agree.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.padding_eq",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.short_white_witness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.maintain",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.finite_cone_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.response_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PhysicalMaintenance",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 54,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

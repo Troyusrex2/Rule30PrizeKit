@@ -1,0 +1,911 @@
+{
+  "passed": true,
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "results": [
+    {
+      "module": "FrontBlackInterval",
+      "source_sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "FrontBlackInterval.PeriodFrom",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "FrontBlackInterval.Recurrence",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.aged_white_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.black_erodes",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.black_interval_period",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.no_aged_black_interval",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.period_double",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.period_mono",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.period_mul",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.rec_at",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.reset_inherits",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.uniform_period",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "FrontBlackInterval.PeriodFrom.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "FrontBlackInterval.uniform_period",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "FrontBlackInterval.reset_inherits",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "FrontBlackInterval.no_aged_black_interval",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "FrontBlackInterval.aged_white_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "FrontBlackInterval",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 57,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.0264099000487477
+    },
+    {
+      "module": "PhysicalEarlyCases",
+      "source_sha256": "ea6daa684582f401e777aacfeccaf75984f2c4b0f12b822d08b1bb3919503c89",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.distant_white_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.distant_white_witness_at",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.early_white_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.early_white_witness_at",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.stationary_cone",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalEarlyCases.stripe",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.stripe_stationary",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.white_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.stripe.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.stationary_cone",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.stripe_stationary",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.early_white_witness_at",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.early_white_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.distant_white_witness_at",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalEarlyCases.distant_white_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "PhysicalEarlyCases",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 54,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.0146908999886364
+    },
+    {
+      "module": "CedarPhysicalAgeBridge",
+      "source_sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.BlockBound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.after_cone",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.age",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.before_arrival",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.block_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.freeEvol",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.freeRow",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.free_initial_agrees",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.free_succ",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.free_support",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.front",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.front_recurrence",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.late_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.lower",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.original_white_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.physical_white_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.upper",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.warmup",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.white_back_pair",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.white_back_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.white_backwards",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.freeEvol.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.freeRow.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPhysicalAgeBridge.free_support.match_1_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.front.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.upper.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.free_support",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.front_recurrence",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.before_arrival",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.after_cone",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.late_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.white_backwards",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.physical_white_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPhysicalAgeBridge.block_bound",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "CedarPhysicalAgeBridge",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 91,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.2146016000187956
+    },
+    {
+      "module": "PhysicalCapture",
+      "source_sha256": "2a6bc724ccd06669d7c6a19604c71002b03f5d84b4e8c855293096d24f62d1cb",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "PhysicalCapture.Near",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.black_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.capture_after_black",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.cell_succ",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.near_min",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.near_white_run",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.near_white_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.stripe_after_black_run",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.tail_and_stripe",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.white_min",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.white_step_far",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalCapture.white_step_near",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalCapture.black_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalCapture.near_white_run",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalCapture.capture_after_black",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalCapture.stripe_after_black_run",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalCapture.tail_and_stripe",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "PhysicalCapture",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 64,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.1536634000367485
+    },
+    {
+      "module": "CedarPaddingExclusion",
+      "source_sha256": "223d11f428e174264b5979347caae13ad006aeecb7f69b6467622a88ea6bd42a",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "CedarPaddingExclusion.exists_last",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPaddingExclusion.not_eventually_padded_word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPaddingExclusion.paddingThreshold",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarPaddingExclusion.phase_periodic",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPaddingExclusion.stripeWidth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarPaddingExclusion.exists_last.match_1_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPaddingExclusion.phase_periodic",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarPaddingExclusion.not_eventually_padded_word",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "CedarPaddingExclusion",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 52,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.252587000024505
+    },
+    {
+      "module": "PhysicalMaintenance",
+      "source_sha256": "5cb038cf1779464cb84132bf5aa1fe1b8fee4783d08f12fc6d40db7ac6380402",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.Drives",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.StripeAt",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.exists_last",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.finite_cone_agree",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.horizon",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.maintain",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.padding",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.padding_eq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.response_agree",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.short_white_witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.exists_last.match_1_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PhysicalMaintenance.finite_cone_agree.match_1_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.padding_eq",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.short_white_witness",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.maintain",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.finite_cone_agree",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PhysicalMaintenance.response_agree",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "PhysicalMaintenance",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 54,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 1.9877881999709643
+    }
+  ]
+}

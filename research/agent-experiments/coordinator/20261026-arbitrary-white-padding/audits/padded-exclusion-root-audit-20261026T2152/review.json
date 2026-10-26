@@ -1,0 +1,70 @@
+{
+  "verdict": "source_scope_pass",
+  "sources": [
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\exclusion\\FrontBlackInterval.lean",
+      "sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+      "bytes": 7725,
+      "matches_sealed_v03": true
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\exclusion\\PhysicalEarlyCases.lean",
+      "sha256": "ea6daa684582f401e777aacfeccaf75984f2c4b0f12b822d08b1bb3919503c89",
+      "bytes": 5866,
+      "matches_sealed_v03": true
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\exclusion\\CedarPhysicalAgeBridge.lean",
+      "sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+      "bytes": 9706,
+      "matches_sealed_v03": true
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\exclusion\\PhysicalCapture.lean",
+      "sha256": "2a6bc724ccd06669d7c6a19604c71002b03f5d84b4e8c855293096d24f62d1cb",
+      "bytes": 8204,
+      "matches_sealed_v03": true
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\exclusion\\CedarPaddingExclusion.lean",
+      "sha256": "223d11f428e174264b5979347caae13ad006aeecb7f69b6467622a88ea6bd42a",
+      "bytes": 7498,
+      "matches_sealed_v03": true
+    }
+  ],
+  "pinned_comparisons": [
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30StripCertificates.lean",
+      "sha256": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94"
+    },
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    }
+  ],
+  "review_sha256": "c8057dd6e4a710bc33c869e8e386f7b52a3ff99609b6a0c3f11164587460b8cb",
+  "sealed_v03": "D:\\MWB\\Rule30\\agent-inbox\\r30-codex-cedar-padding-20261026-223d11f4-v03",
+  "sealed_manifest_sha256": "278bed0887dbfd22480a4fb0661225ea3525a4ebab774e312c0eff65b0aca190",
+  "sealed_manifest_entries_verified": 73,
+  "semantic_blockers": [],
+  "new_build_or_experiments": false,
+  "source_edits": false,
+  "exact_target": "Rule30StripCertificates.EventuallyWord (u ++ List.replicate q false)",
+  "headline_premises": [
+    "u has a true entry at an index below its length",
+    "q>=paddingThreshold(u.length)"
+  ],
+  "threshold": "max(W(n), B(n)+9*(n+B(n)))",
+  "column1_period": "P=n+q for every t>=T+2*P",
+  "jen_target": "Rule30Jen.not_adjacent 0 with actual cell center and column1",
+  "residual_capture_or_mask_or_width_premise": false,
+  "all_periods_or_prize_claim": false,
+  "remaining_scope": "Candidate periods lacking a sufficiently long white gap relative to the remaining block are not excluded."
+}

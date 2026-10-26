@@ -1,0 +1,55 @@
+{
+  "verdict": "source_scope_pass",
+  "sources": [
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\composition\\CedarPhysicalAgeBridge.lean",
+      "sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+      "bytes": 9706
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\composition\\PhysicalEarlyCases.lean",
+      "sha256": "ea6daa684582f401e777aacfeccaf75984f2c4b0f12b822d08b1bb3919503c89",
+      "bytes": 5866
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\cedar-height2-20261026T211456Z\\physical\\composition\\FrontBlackInterval.lean",
+      "sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+      "bytes": 7725
+    }
+  ],
+  "pinned_comparisons": [
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30Realization.lean",
+      "sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5"
+    },
+    {
+      "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+      "path": "lean/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    }
+  ],
+  "review_sha256": "c3d5c740f6172fe63ed46eb809fcb2ef864168eb424007d7c935a0ec73717b58",
+  "status_note_sha256": "29804725eb94968b5044b1dae31b74682804448eb93e957d34ab55581fef80cc",
+  "semantic_blockers": [],
+  "new_build_or_experiments": false,
+  "source_edits": false,
+  "global_reference_initialized_at_original_t": true,
+  "reference_age_at_observation": "N+9*n+j",
+  "artificial_anchor": "N+2, not required black",
+  "causal_transfer_condition": "p>s, s=9*n+j",
+  "public_main_premises": [
+    "n>=1",
+    "j<n",
+    "center is white for W(n) ticks starting at t"
+  ],
+  "following_center_assumptions": false,
+  "periodicity_or_return_assumptions": false,
+  "physical_scope": "Pinned Rule30Jen.cell single-black-seed evolution; bounded positive-coordinate white witness at each of n following ticks.",
+  "padded_word_exclusion_adopted": false
+}

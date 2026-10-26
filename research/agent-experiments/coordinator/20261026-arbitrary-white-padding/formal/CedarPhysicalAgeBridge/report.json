@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "source_sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+  "compiled_sha256": "9f3c8cdcf71bd6b424df5bbb39f02b51a86454d14a7bcd7f1b0ef78333503216",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.6464861999847926,
+  "total_seconds": 2.126658299996052,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.BlockBound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.after_cone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.age",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.before_arrival",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.block_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.freeEvol",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.freeRow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.free_initial_agrees",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.free_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.free_support",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.front",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.front_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.late_witness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.original_white_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.physical_white_witness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.upper",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.warmup",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.white_back_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.white_back_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.white_backwards",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.freeEvol.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.freeRow.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPhysicalAgeBridge.free_support.match_1_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.front.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.upper.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.free_support",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.front_recurrence",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.before_arrival",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.after_cone",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.late_witness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.white_backwards",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.physical_white_witness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPhysicalAgeBridge.block_bound",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarPhysicalAgeBridge",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 91,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

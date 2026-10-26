@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New arbitrary-block theorem:** [every black-containing finite block is excluded with sufficiently long white padding](coordinator/20261026-arbitrary-white-padding/REPORT.md). Six independently replayed modules also prove stripe maintenance with only `19N+10` white cells after entry. Initial entry still has a very large bound; arbitrary periods and the prize remain open.
+
 **New exact marker-phase results:** [all-width reconstruction, alternating hidden suffixes, a false projected safe cycle, and a saturated anchored-defect abstraction](coordinator/20261026-marker-phases-and-abstraction/REPORT.md). Five modules independently replayed. Hidden phase coherence and genuine white ancestry remain essential; no actual Safe/nonreturn counterexample or prize solution is claimed.
 
 **New intrinsic reduction and checked obstructions:** [Safe clock-jump entry versus an exact whole-clock plateau, pure tiling descent, and free-boundary controls](coordinator/20261026-clock-entry-and-pure-tiling/REPORT.md). Five modules independently replayed. The plateau and mixed-mode cases remain open with the white boundary explicit.

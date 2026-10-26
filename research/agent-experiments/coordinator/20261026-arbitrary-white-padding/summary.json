@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_order": [
+    "FrontBlackInterval",
+    "PhysicalEarlyCases",
+    "CedarPhysicalAgeBridge",
+    "PhysicalCapture",
+    "CedarPaddingExclusion",
+    "PhysicalMaintenance"
+  ],
+  "root_fresh_replays": [
+    {
+      "module": "FrontBlackInterval",
+      "source_sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+      "module_constants_including_internal": 57,
+      "seconds": 2.0619469999801368,
+      "peak_owned_rss_bytes": 780996608
+    },
+    {
+      "module": "PhysicalEarlyCases",
+      "source_sha256": "ea6daa684582f401e777aacfeccaf75984f2c4b0f12b822d08b1bb3919503c89",
+      "module_constants_including_internal": 54,
+      "seconds": 2.1763247000053525,
+      "peak_owned_rss_bytes": 781467648
+    },
+    {
+      "module": "CedarPhysicalAgeBridge",
+      "source_sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+      "module_constants_including_internal": 91,
+      "seconds": 2.276552899973467,
+      "peak_owned_rss_bytes": 783671296
+    },
+    {
+      "module": "PhysicalCapture",
+      "source_sha256": "2a6bc724ccd06669d7c6a19604c71002b03f5d84b4e8c855293096d24f62d1cb",
+      "module_constants_including_internal": 64,
+      "seconds": 2.279446000000462,
+      "peak_owned_rss_bytes": 781770752
+    },
+    {
+      "module": "CedarPaddingExclusion",
+      "source_sha256": "223d11f428e174264b5979347caae13ad006aeecb7f69b6467622a88ea6bd42a",
+      "module_constants_including_internal": 52,
+      "seconds": 2.39501769997878,
+      "peak_owned_rss_bytes": 787259392
+    },
+    {
+      "module": "PhysicalMaintenance",
+      "source_sha256": "5cb038cf1779464cb84132bf5aa1fe1b8fee4783d08f12fc6d40db7ac6380402",
+      "module_constants_including_internal": 54,
+      "seconds": 2.1739134000381455,
+      "peak_owned_rss_bytes": 782323712
+    }
+  ],
+  "fresh_module_constants_including_internal": 372,
+  "worker_binaries_used": false,
+  "all_private_source_dependencies_included": true,
+  "sealed_worker_manifest_sha256": "278bed0887dbfd22480a4fb0661225ea3525a4ebab774e312c0eff65b0aca190",
+  "sealed_worker_hashes_verified": 73,
+  "old_archive_hashes_verified": 4799,
+  "old_archives_verified": 50,
+  "P1_proved": false,
+  "arbitrary_padded_word_exclusion_proved": true,
+  "linear_padding_maintenance_proved": true,
+  "automatic_linear_padding_entry_proved": false,
+  "finite_mixture_exclusion_claimed_in_this_archive": false
+}

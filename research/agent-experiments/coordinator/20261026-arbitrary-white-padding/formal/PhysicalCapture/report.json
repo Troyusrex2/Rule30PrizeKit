@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "source_sha256": "2a6bc724ccd06669d7c6a19604c71002b03f5d84b4e8c855293096d24f62d1cb",
+  "compiled_sha256": "a8b9810d69decdf544bace937a1ac8e9ccf08abb5dd8f4c3ad5655ab13333a78",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.699219300004188,
+  "total_seconds": 2.1361602999968454,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "PhysicalCapture.Near",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.black_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.capture_after_black",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.cell_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.near_min",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.near_white_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.near_white_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.stripe_after_black_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.tail_and_stripe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.white_min",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.white_step_far",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalCapture.white_step_near",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalCapture.black_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalCapture.near_white_run",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalCapture.capture_after_black",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalCapture.stripe_after_black_run",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalCapture.tail_and_stripe",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PhysicalCapture",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 64,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "source_sha256": "223d11f428e174264b5979347caae13ad006aeecb7f69b6467622a88ea6bd42a",
+  "compiled_sha256": "941d08b1cc1cac68878b2029091c3814c38540f8197765801bf8517db6e959c2",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.8330846999888308,
+  "total_seconds": 2.325508199981414,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarPaddingExclusion.exists_last",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPaddingExclusion.not_eventually_padded_word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPaddingExclusion.paddingThreshold",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarPaddingExclusion.phase_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPaddingExclusion.stripeWidth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarPaddingExclusion.exists_last.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPaddingExclusion.phase_periodic",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarPaddingExclusion.not_eventually_padded_word",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarPaddingExclusion",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 52,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
