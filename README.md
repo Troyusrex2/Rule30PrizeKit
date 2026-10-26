@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Positive all-future common-field past lift](research/agent-experiments/coordinator/20261026-common-past/REPORT.md): exact diagonal periodicity gives a unique right-bounded past, and all-time subset yields a finite past over finite backgrounds. Fully kernel checked. Initial-only subset and the fixed-center extension remain unresolved.
+
 [Uniform ten-letter actual-image exclusion](research/agent-experiments/coordinator/20261026-ten-letter-image/REPORT.md): a nine-node local proof rules out 1010111010 at every onset and excludes all positive-delay members of the earlier synthetic defect family from actual coupled responses. Full kernel replay passes; the prize problem remains open.
 
 [Seven new agent ideas tested](research/agent-experiments/coordinator/20261026-round3-evaluation/REPORT.md): a fully checked Golden-only charging counterexample is excluded from the actual Rule30 image, periodic-center gates are formalized, and all seven responses receive controlled follow-ups. P1 and the canonical center bridge remain open.

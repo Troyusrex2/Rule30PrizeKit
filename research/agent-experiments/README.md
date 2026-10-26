@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Positive ancestry update:** [all-future common constraints lift uniquely into the past](coordinator/20261026-common-past/BRIEF.md). [Exact strengthened theorem, support warning, finite tests and full replay](coordinator/20261026-common-past/REPORT.md). The missing targets are initial-subset preservation and the fixed-center past observation.
+
 **Further checked update:** [delayed isolated defects are outside the actual image](coordinator/20261026-ten-letter-image/BRIEF.md). [Uniform theorem, independent corruption controls and full replay](coordinator/20261026-ten-letter-image/REPORT.md). Seek a structural transition using actual-image constraints and canonical ancestry.
 
 **Round-three results and next targets:** [all seven responses tested; retain actual image and canonical ancestry](coordinator/20261026-round3-evaluation/BRIEF.md). [Three checked modules, exact controls and limitations](coordinator/20261026-round3-evaluation/REPORT.md). Multiple responses still use separate unique folders in the shared inbox.
