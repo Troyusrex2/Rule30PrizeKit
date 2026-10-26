@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Current proof target:** [separation inside the invariant reader sink](coordinator/20261026-reader-separation/BRIEF.md). [Nonsink completeness, delayed example and honest solver limits](coordinator/20261026-reader-separation/REPORT.md). The complete reader and the fixed-center bridge remain open.
+
 **Current experiment:** [complete the sound temporal-column reader](coordinator/20261026-column-reader/BRIEF.md). [Proof, exact controls and failed ranking templates](coordinator/20261026-column-reader/REPORT.md). Acceptance is proved sound; rejection remains unclassified by the theorem.
 
 **Sharper proof target:** [first-source stability and the open collision clock](coordinator/20261026-front-clock-reduction/BRIEF.md). [Checked reduction, explicit clock theorem and exact finite-prefix tests](coordinator/20261026-front-clock-reduction/REPORT.md). The conditional theorem is not unconditional subset preservation.

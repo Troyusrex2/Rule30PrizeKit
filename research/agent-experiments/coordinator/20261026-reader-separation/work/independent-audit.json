@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "factor_controls": 5461,
+  "sink_words_equal_for_first_two_times": 1252,
+  "wrong_phase_rejected": true,
+  "literal_degree_counterexamples": [
+    {
+      "initial": 545,
+      "width": 12,
+      "depths": [
+        9,
+        10,
+        11
+      ],
+      "degrees": [
+        29,
+        31,
+        31
+      ],
+      "literal_period_verified": true
+    },
+    {
+      "initial": 3361,
+      "width": 14,
+      "depths": [
+        11,
+        12,
+        13
+      ],
+      "degrees": [
+        31,
+        30,
+        28
+      ],
+      "literal_period_verified": true
+    }
+  ],
+  "sink_delay_control": {
+    "width": 16,
+    "first_difference_time": 44
+  },
+  "three_width_bound_falsified": {
+    "width": 22,
+    "first_difference_time": 72,
+    "literal_all_73_steps_checked": true
+  },
+  "Lean_verified": false,
+  "sink_separation_proved": false,
+  "full_problem_solved": false
+}

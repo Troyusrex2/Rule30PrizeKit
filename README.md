@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Reader complete outside its invariant sink](research/agent-experiments/coordinator/20261026-reader-separation/REPORT.md): an unbounded theorem narrows the remaining separation problem to one state. A separately kernel-checked width-22 example disproves a three-times-width observation bound. The sink and the prize remain open.
+
 [Sound temporal-column reader](research/agent-experiments/coordinator/20261026-column-reader/REPORT.md): a learned 17-state reader now has a full kernel proof that acceptance guarantees equal columns at every future time and arbitrary depth. Completeness of its rejection predictions remains open.
 
 [Subset preservation reduces to first-source stability](research/agent-experiments/coordinator/20261026-front-clock-reduction/REPORT.md): the equivalence and a uniform period-two clock obstruction are fully kernel checked. A precise background collision-clock conjecture remains open, along with the fixed-center past condition.
