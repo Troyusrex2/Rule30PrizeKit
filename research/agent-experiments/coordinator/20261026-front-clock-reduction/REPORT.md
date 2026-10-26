@@ -68,7 +68,7 @@ Even proving it would leave the fixed-center past condition unresolved.
 A finite prefix is autonomous in these coordinates. The earlier proved period
 bound `2^j` lets us calculate its complete temporal columns, rather than accept
 a long finite survival as permanence. For every pair of initial prefixes
-through depth 14 with a possible initially supported source, the test enumerates
+of lengths 3 through 14 (candidate source depths 2 through 13), the test enumerates
 shared adjacent columns and changing source deltas.
 
 Across these tested depths it found 2,288 changing-front candidates. Every

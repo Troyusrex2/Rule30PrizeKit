@@ -17,7 +17,7 @@ delta(t,n+1)=0 for all t and delta(0,n+2)=1. Prove either:
 - delta(t,n+2)=1 for all t; or
 - a(t+1,n+1)=NOT a(t,n+1) for all t, and delta(t+2,n)=delta(t,n) for all t.
 
-An exhaustive exact-temporal-prefix test through depth 14 found 2,288 varying
+An exhaustive exact-temporal-prefix test at lengths 3 through 14 found 2,288 varying
 source candidates. Every one satisfies the second clock case, which the new
 mode theorem excludes. This finite result does not prove CollisionClock at
 arbitrary depth. A counterexample outside these cases would be equally useful.
