@@ -23,6 +23,8 @@ public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripe
 public import Ruliology.CellularAutomata.Rule30ZeroBoundarySmall
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers
 public import Ruliology.CellularAutomata.Rule30Ether
+public import Ruliology.CellularAutomata.Rule30EtherSingleCell
+public import Ruliology.CellularAutomata.Rule30EtherSingleCellAux
 public import Ruliology.CellularAutomata.Rule30PeriodTwoCoupled
 public import Ruliology.CellularAutomata.Rule30PeriodFourSkeleton
 public import Ruliology.CellularAutomata.Rule30Diagonals
@@ -45,6 +47,7 @@ public import Ruliology.CellularAutomata.Rule30WhiteRunEight
 public import Ruliology.CellularAutomata.Rule30PeriodTwoSideways
 public import Ruliology.CellularAutomata.Rule30LightCone
 public import Ruliology.CellularAutomata.Rule30FiniteConfigs
+public import Ruliology.CellularAutomata.Rule30DividedDifference
 public import Ruliology.CellularAutomata.Rule30FiniteMaskedJen
 public import Ruliology.CellularAutomata.Rule30Coupled
 public import Ruliology.CellularAutomata.Rule30FiniteBlackRuns

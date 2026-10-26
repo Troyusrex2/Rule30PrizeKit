@@ -2,8 +2,11 @@ module
 
 public import Ruliology.CellularAutomata.Rule30Prize
 public import Ruliology.CellularAutomata.Rule30Diagonals
+public import Ruliology.CellularAutomata.Rule30DividedDifference
 
 /-!
+# Common-field exterior rigidity and unbounded depth escape
+
 All-time common-gauge rigidity with a zero background. The auxiliary field
 is not assumed to be a physical Rule30 history. This adapts the catalog's
 XOR-rigidity gap argument, keeping an asymmetric black right endpoint.
@@ -17,7 +20,11 @@ older background visits arbitrarily large right-edge depths after every
 time. It uses dyadic returns and a backward peeling argument, without W
 or an evolution hypothesis for the second coefficient background. This
 does not force a visit to the moving center depth.
-Proof and formalization: Troy Lowry with OpenAI Codex.
+`ObserverConnection` identifies the canonical instances of the exact mode
+and CommonField used by `Rule30DividedDifference.ObserverCriterion`, whose
+implication to `Rule30TraceEdge.EdgeObservable` is proved in that module.
+Thus the exterior and escape results apply to that auxiliary observer route.
+The remaining observation statement concerns a fixed physical column.
 -/
 
 @[expose] public section
@@ -544,4 +551,65 @@ theorem arbitrarily_far_behind_front (U V : Nat) (hUV : V ≤ U)
 end Ordinary
 
 end BandEscape
+
+namespace ObserverConnection
+open _root_.Ruliology.CellularAutomata.Rule30Jen (cell)
+open _root_.Ruliology.CellularAutomata.Rule30Realization (evol)
+open _root_.Ruliology.CellularAutomata.Rule30DividedDifference
+set_option autoImplicit false
+
+theorem canonical_evol (U : Nat) : ∀ (t : Nat) (p : Int),
+    evol (cell U) t p=cell (U+t) p
+  | 0,p => rfl
+  | t+1,p => by
+      change rule (evol (cell U) t (p-1)) (evol (cell U) t p)
+        (evol (cell U) t (p+1)) =
+        rule (cell (U+t) (p-1)) (cell (U+t) p) (cell (U+t) (p+1))
+      rw [canonical_evol,canonical_evol,canonical_evol]
+
+def canonicalMode (U V : Nat) (x : Int → Bool) : Nat → Int → Bool :=
+  Front.mode (cell U) (cell V) zeroGauge x
+
+/-- The observer criterion's exact zero-gauge field obeys the D equation
+used by the exterior and band-escape theorems. -/
+theorem canonical_mode_equation (U V : Nat) (x : Int → Bool) :
+    RightWedge.Mode U V (canonicalMode U V x) := by
+  intro t p
+  change Front.step (cell U) (cell V) zeroGauge t (canonicalMode U V x t) p =
+    RightWedge.dStep U V (canonicalMode U V x) t p
+  simp only [Front.step,zeroGauge,Bool.false_and,Bool.xor_false,mix,
+    canonical_evol,RightWedge.dStep]
+
+theorem wedge_eq_iff : ∀ a b c d : Bool,
+    xor (c && b) (a && d)=false ↔ Good a b c d := by
+  unfold Good
+  decide +kernel
+
+/-- Literal equality of the two common-field predicates in canonical coordinates. -/
+theorem canonical_common_iff (U V : Nat) (h : Nat → Int → Bool) :
+    CommonField (cell U) (cell V) h ↔ RightWedge.Common U V h := by
+  constructor
+  · intro hw t p
+    apply (wedge_eq_iff _ _ _ _).mp
+    simpa only [canonical_evol,RightWedge.delta] using hw t p
+  · intro hw t p
+    have hh := (wedge_eq_iff _ _ _ _).mpr (hw t p)
+    simpa only [canonical_evol,RightWedge.delta] using hh
+
+/-- Exterior coherence applied directly to a mode of ObserverCriterion. -/
+theorem observer_mode_right_wedge (U V : Nat) (hUV : V<U) (x : Int → Bool)
+    (hw : CommonField (cell U) (cell V) (canonicalMode U V x))
+    (hs : ∀ p, x p=true → xor (cell U p) (cell V p)=true) :
+    ∀ (t : Nat) (p : Int), (V : Int)+t<p →
+      canonicalMode U V x t p=(x U && cell (U+t) p) := by
+  apply RightWedge.right_wedge_phase_subset U V hUV (canonicalMode U V x)
+    (canonical_mode_equation U V x) ((canonical_common_iff U V _).mp hw)
+  intro p
+  change (x p && RightWedge.delta U V 0 p)=x p
+  simp only [RightWedge.delta,Nat.add_zero]
+  cases hx : x p with
+  | false => simp only [Bool.false_and]
+  | true => rw [hs p hx];rfl
+
+end ObserverConnection
 end Ruliology.CellularAutomata.Rule30CommonGauge

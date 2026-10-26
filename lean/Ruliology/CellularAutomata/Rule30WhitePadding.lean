@@ -30,7 +30,7 @@ theorem zeros_add (K a b S : Nat) : zeros K (a + b) S = zeros K b (zeros K a S) 
   have hrep : List.replicate (a + b) false = List.replicate a false ++ List.replicate b false := by
     induction a with
     | zero => simp
-    | succ a ih => simpa [Nat.succ_add, List.replicate_succ] using congrArg (false :: ·) ih
+    | succ a => simp [Nat.succ_add, List.replicate_succ]
   unfold zeros
   rw [hrep, applyWord_append]
 

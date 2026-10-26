@@ -97,6 +97,11 @@ Regenerate with `python3 equivalents/scripts/gen_check_axioms.py`. -/
 #print axioms Rule30Equivalents.OmegaRegular.problem1_iff_not_omega_regular
 #print axioms Rule30Equivalents.OneTapeGap.problem1_iff_no_fast_one_tape_decider
 #print axioms Rule30Equivalents.OneTapeRegular.problem1_iff_no_fast_digit_deciders
+#print axioms Rule30Equivalents.P2Scales.problem2_iff_densityOf
+#print axioms Rule30Equivalents.P2Scales.problem2_iff_singleSequence
+#print axioms Rule30Equivalents.P2Scales.problem2_iff_firstPassage
+#print axioms Rule30Equivalents.P2Scales.problem2_of_epsGaps
+#print axioms Rule30Equivalents.P2Scales.problem2_of_exactReturns
 #print axioms Rule30Equivalents.PisotBase.problem1_iff_not_mem_Q_sqrt_two
 #print axioms Rule30Equivalents.PisotNumbers.problem1_iff_not_mem_adjoin
 #print axioms Rule30Equivalents.PisotNumbers.problem1_of_not_mem_adjoin
