@@ -1,0 +1,25 @@
+C:\Users\troyu\Rule30-offload\research\height2-pure-mode-20261026T2040\HeightTwoPureMode.lean:84:91: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  -1 ≤ e ≤ 0
+  d ≤ -2
+  0 ≤ c ≤ 7
+  a ≥ 0
+  a - c ≥ 1
+where
+ a := ↑(len n)
+ c := ↑i
+ d := whiteHeight pattern i
+ e := whiteHeight pattern ↑⟨i, hi8⟩
+C:\Users\troyu\Rule30-offload\research\height2-pure-mode-20261026T2040\HeightTwoPureMode.lean:84:91: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  -1 ≤ e ≤ 0
+  d ≥ 2
+  0 ≤ c ≤ 7
+  a ≥ 0
+  a - c ≥ 1
+where
+ a := ↑(len n)
+ c := ↑i
+ d := whiteHeight pattern i
+ e := whiteHeight pattern ↑⟨i, hi8⟩
+

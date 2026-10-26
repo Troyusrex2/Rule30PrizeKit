@@ -1,0 +1,265 @@
+{
+  "passed": true,
+  "module": "HeightOneSemantics",
+  "attempt": "dependencies",
+  "source_sha256": "a80a984938dd74b76e09776dfa976fdb14fbc58635405bfe4a83446cb42d2c6a",
+  "compiled_sha256": "f3d4d6eab6eca7a6633cf337ddf0f6162b2a613139c066afed9c8636b7c1c83c",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "compile_seconds": 3.629080199985765,
+  "total_seconds": 5.44768290000502,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.Trace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.driven_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.driven_singleton",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.evolution_snoc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.histories",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.histories_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.history_not",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.leaf_flip_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.leaf_flip_trace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.old",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.old_snoc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.profilePair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.profile_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.profile_ext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.profile_fst",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.profile_snoc_older",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.return8_coverage",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.return8_twins_at_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.return8_twins_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.snoc_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.tr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.tr_snoc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.trace_driven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.trace_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.trace_restart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.trace_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.twin_return_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.xor_not",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.z",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_10",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.histories.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.histories.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneSemantics.histories.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneSemantics.histories.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneSemantics.leaf_flip_trace",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneSemantics.leaf_flip_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightOneSemantics",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 67,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

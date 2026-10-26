@@ -1,0 +1,126 @@
+{
+  "scope": "One exact fixed cyclic control, no new solver call",
+  "rows": [
+    {
+      "start": 3,
+      "active_length": 3,
+      "gap": 1,
+      "mode": "3a",
+      "child_segment": "1010",
+      "A_segment": "0110",
+      "u_segment": "1010",
+      "signed_increment": {
+        "b": 2,
+        "A": 0,
+        "u": 2
+      },
+      "A_active_has11": true,
+      "u_active_has11": false
+    },
+    {
+      "start": 7,
+      "active_length": 3,
+      "gap": 1,
+      "mode": "3b",
+      "child_segment": "0101",
+      "A_segment": "1010",
+      "u_segment": "1110",
+      "signed_increment": {
+        "b": -2,
+        "A": 2,
+        "u": 1
+      },
+      "A_active_has11": false,
+      "u_active_has11": true
+    },
+    {
+      "start": 11,
+      "active_length": 1,
+      "gap": 7,
+      "mode": "1",
+      "child_segment": "10000000",
+      "A_segment": "10000000",
+      "u_segment": "10000000",
+      "signed_increment": {
+        "b": 1,
+        "A": 1,
+        "u": 1
+      },
+      "A_active_has11": false,
+      "u_active_has11": false
+    },
+    {
+      "start": 19,
+      "active_length": 1,
+      "gap": 1,
+      "mode": "1",
+      "child_segment": "01",
+      "A_segment": "10",
+      "u_segment": "10",
+      "signed_increment": {
+        "b": -1,
+        "A": 1,
+        "u": 1
+      },
+      "A_active_has11": false,
+      "u_active_has11": false
+    },
+    {
+      "start": 21,
+      "active_length": 1,
+      "gap": 2,
+      "mode": "1",
+      "child_segment": "100",
+      "A_segment": "100",
+      "u_segment": "100",
+      "signed_increment": {
+        "b": 0,
+        "A": 0,
+        "u": 0
+      },
+      "A_active_has11": false,
+      "u_active_has11": false
+    },
+    {
+      "start": 24,
+      "active_length": 3,
+      "gap": 1,
+      "mode": "3a",
+      "child_segment": "0101",
+      "A_segment": "0110",
+      "u_segment": "1010",
+      "signed_increment": {
+        "b": 2,
+        "A": 0,
+        "u": -2
+      },
+      "A_active_has11": true,
+      "u_active_has11": false
+    },
+    {
+      "start": 28,
+      "active_length": 4,
+      "gap": 3,
+      "mode": "4a",
+      "child_segment": "1010111",
+      "A_segment": "0101000",
+      "u_segment": "1011000",
+      "signed_increment": {
+        "b": -2,
+        "A": 3,
+        "u": 0
+      },
+      "A_active_has11": false,
+      "u_active_has11": true
+    }
+  ],
+  "mode_cycle": [
+    "3a",
+    "3b",
+    "1",
+    "1",
+    "1",
+    "3a",
+    "4a"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "verdict": "SOURCE_SCOPE_PASS",
+  "builds_run": false,
+  "archive": "D:\\MWB\\Rule30\\overnight-20261024\\research\\agent-experiments\\coordinator\\20261026-clock-entry-and-pure-tiling",
+  "report_sha256": "a1a3acd23e00049a9e54e844e5f7acec85467e051e87895ef60240ecea9b7d2d",
+  "summary_sha256": "cba37096aabbdd6a7b9a6f8572bdadac5a6e3694422360ea32c3186e21495883",
+  "sources": {
+    "HeightTwoPureMode.lean": "1b31d5b44996335f23c6efcefb6104cba22a4900239ecc54d76332c98d566da5",
+    "SafeClockEntry.lean": "102fdfe2c55b8bafad83405af0c0baf3026917b401dbff8449eb6d695fa3086d",
+    "SafeEntryLocalControl.lean": "94f02bc4336e60d851c1dda12097a51b49060ac37f31db51c328896bff2946af",
+    "SafeClockDichotomy.lean": "6c4260ae599c7cf74df7715d8c358f6caee50d5cccd7c697f66e2642958a2d5f",
+    "HeightTwoMixedControl.lean": "975f1d613efc0e5763dfbcdda326b22ba0fe0626ab0497b3fb1edc08f53689a8"
+  },
+  "new_declarations": 124,
+  "semantic_defects": [],
+  "verified_scope": [
+    "evenClock is least positive EVEN WHOLE return; no newest-column period substitution",
+    "Safe one-cell return preservation and two-cell height entry retain actual older prefix",
+    "The clock plateau remains an explicit nonexclusive disjunct",
+    "Tiled begins a block at time0; no classification or phase-alignment theorem asserted",
+    "Pure tiling proof covers arbitrary infinite choices and all natural times",
+    "Pure minimality ranges over all height2/nonreturn words and does not assert grammar closure or Safe minimality",
+    "Both controls have exactly TWO oldest free profiles",
+    "Safe control has four all-time recurrences and all-time Safe; forbidden cylinders stated as finite periodic checks",
+    "Mixed control has five all-time recurrences, six covers, four all-time cylinder exclusions in all7 profiles",
+    "Mixed child all-time height2 adapter is exact; parent failure uses H(0)=0 and H(32)=7/3",
+    "No least32 theorem or finite-white witness claimed",
+    "Mode-switching grammar description is diagnostic, separate from kernel headlines"
+  ],
+  "limitations": [
+    "No duplicate compilation or checker replay; root results are inspected evidence",
+    "Prior-archive hash audit and live PR/Wolfram status not independently repeated"
+  ]
+}

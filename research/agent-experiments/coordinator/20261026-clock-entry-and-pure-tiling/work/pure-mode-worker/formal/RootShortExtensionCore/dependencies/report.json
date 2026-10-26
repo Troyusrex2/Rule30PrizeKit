@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "module": "RootShortExtensionCore",
+  "attempt": "dependencies",
+  "source_sha256": "42ff71d255a0cd27be3938f223c7e21b4aa008b833522368b4d2acbf417f5a22",
+  "compiled_sha256": "0ccc409d12db9e1d1e4275dec45759c1cf3a1f37978693e9ea79c14d2ba3401a",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "compile_seconds": 0.4142056999844499,
+  "total_seconds": 1.4937609999906272,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.DrivenSafe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.driven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.history",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.history_lift8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.lift8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.lift8_next_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.lift8_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.profile_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.safe_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.white_safe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.newest.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.driven.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.history.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.history.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.history.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "RootShortExtensionCore.history.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.lift8.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootShortExtensionCore.driven_white",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootShortExtensionCore",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 36,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

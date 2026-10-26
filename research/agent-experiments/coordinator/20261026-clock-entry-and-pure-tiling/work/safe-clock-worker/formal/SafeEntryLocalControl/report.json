@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "source_sha256": "94f02bc4336e60d851c1dda12097a51b49060ac37f31db51c328896bff2946af",
+  "compiled_sha256": "977e483fc78544767f7898ca4f0371940dc24d656ad26f6d2b2ca481bacf1c75",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.672686400008388,
+  "total_seconds": 5.807239199988544,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.alltime_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.alltime_safe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "SafeEntryLocalControl.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.forbidden_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.free_boundary_control",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.neither_parent_height_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.no_half_clock_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.older_events_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.parent_height_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.recurrence_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "SafeEntryLocalControl.row",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.safety_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "SafeEntryLocalControl.code.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.row.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SafeEntryLocalControl.free_boundary_control",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "SafeEntryLocalControl",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 22,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

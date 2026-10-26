@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New intrinsic reduction and checked obstructions:** [Safe clock-jump entry versus an exact whole-clock plateau, pure tiling descent, and free-boundary controls](coordinator/20261026-clock-entry-and-pure-tiling/REPORT.md). Five modules independently replayed. The plateau and mixed-mode cases remain open with the white boundary explicit.
+
 **New verified descent tools:** [height-one whole-word descent, a stronger returning-prefix theorem, and height-two descent under an explicit parent condition](coordinator/20261026-descent-and-prefix-safety/REPORT.md). Nine modules independently replayed; the Safe-to-height-two entry and mixed-parent case remain open. The exact finite-state return criterion is now [catalog PR33](https://github.com/WolframInstitute/Rule30PrizeKit/pull/33).
 
 **New all-width theorem:** [eight-step return is exactly two-step return of the prefix three cells earlier](coordinator/20261026-return-eight-and-reader-bridge/REPORT.md). The same checkpoint gives the conditional safe-output reader bridge, exact oriented-height safety criterion, a verified reset-decoder obstruction, and independent replay of the revised external PR31. Safety completeness and the physical-center problem remain open.

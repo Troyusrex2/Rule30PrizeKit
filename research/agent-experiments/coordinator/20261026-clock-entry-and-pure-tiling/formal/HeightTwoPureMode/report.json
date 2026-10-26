@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "source_sha256": "1b31d5b44996335f23c6efcefb6104cba22a4900239ecc54d76332c98d566da5",
+  "compiled_sha256": "454a9820eb8a2f2dffb261b6d53e18f835ece28b0a0ce3abcf5c094839246aab",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.862342600012198,
+  "total_seconds": 6.018977100029588,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightTwoPureMode.Tiled",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.actual_parent_descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.block_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.boundary_height",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.covering",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.height_congr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.height_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.minimal_height_two_not_tiled",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoPureMode.pattern",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.tiled_span_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoPureMode.pattern.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.tiled_span_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.actual_parent_descent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoPureMode.minimal_height_two_not_tiled",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightTwoPureMode",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 25,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

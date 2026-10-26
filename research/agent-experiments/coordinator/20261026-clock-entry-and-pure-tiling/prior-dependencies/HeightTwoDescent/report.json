@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "source_sha256": "2986e94319763ae4597bcc37dcc65cf00cfc724e462933d9568260aa3ae50af4",
+  "compiled_sha256": "72a284bb05009cac185584674c61dff817983d3e0513a2e8e7aa507dcb0b0881",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.6458719999645837,
+  "total_seconds": 5.908313899999484,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightTwoDescent.CoSafe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoDescent.NoShorterSafeFailure",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoDescent.NonEight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.closed_period_coSafe_descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.coSafe_nonreturn_descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.coSafe_parent_descent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.flip_safe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.height_eq_WH",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.height_two_nonreturn_nearby_ancestors",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.minimal_counterexample_parent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.minimal_counterexample_parents",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.nonEight_nonreturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.nonreturn_parent_not_coSafe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.not_coSafe_iff_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.span_two_of_closed_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.trace_function",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoDescent.CoSafe.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoDescent.span_two_of_closed_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoDescent.coSafe_nonreturn_descent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoDescent.height_two_nonreturn_nearby_ancestors",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightTwoDescent",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 23,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

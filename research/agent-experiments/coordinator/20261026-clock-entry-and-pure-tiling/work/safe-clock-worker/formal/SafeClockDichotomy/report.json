@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "source_sha256": "6c4260ae599c7cf74df7715d8c358f6caee50d5cccd7c697f66e2642958a2d5f",
+  "compiled_sha256": "218da6529cae187de55d5e0d1e9e6492c0bd284931fc29daa24b878f1f68b66d",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 3.752780500042718,
+  "total_seconds": 6.2313248999998905,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.clock_jump_intrinsic_entry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.double_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "SafeClockDichotomy.evenClock",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.evenClock_le",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.evenClock_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.exists_even_whole_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.extension_double_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.prefix_clock_le",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.prefix_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.safe_height_two_or_clock_plateau",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.safe_last_clock_equal",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.exists_even_whole_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.safe_last_clock_equal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SafeClockDichotomy.safe_height_two_or_clock_plateau",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "SafeClockDichotomy",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 17,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

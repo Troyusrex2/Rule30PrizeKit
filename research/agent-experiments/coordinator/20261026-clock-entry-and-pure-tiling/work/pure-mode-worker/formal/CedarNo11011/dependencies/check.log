@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"CedarNo11011.Pattern","standardAxioms":true},{"kind":"def","name":"CedarNo11011.Step4","standardAxioms":true},{"kind":"def","name":"CedarNo11011.Trace","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.absorb_true","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.finite_white_no11011","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.finite_white_no11011_at_zero","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.four_profile_no11011","standardAxioms":true},{"kind":"def","name":"CedarNo11011.instDecidablePattern","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.local_no11011","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.long_profile_no11011","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.next_profile_step4","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.or_false_parts","standardAxioms":true},{"kind":"theorem","name":"CedarNo11011.white_profile_no11011","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"CedarNo11011.finite_white_no11011","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"CedarNo11011","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":31,"ok":true},"verdict":"pass","verifiedTargets":[]}

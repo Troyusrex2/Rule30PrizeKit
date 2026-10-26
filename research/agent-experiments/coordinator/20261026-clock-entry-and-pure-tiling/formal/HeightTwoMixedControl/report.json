@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "source_sha256": "975f1d613efc0e5763dfbcdda326b22ba0fe0626ab0497b3fb1edc08f53689a8",
+  "compiled_sha256": "a478ca843e61a9d7e7b786f859ca94b06c05238ce7e4f213caac7fd9d20670d6",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 4.15552289999323,
+  "total_seconds": 6.608864700014237,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.No00",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.No11",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.all_time_local_constraints",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.col",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.covers",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.cylinders",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.equations",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.height_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.local_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.mask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.neither_parent_height_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.neither_parent_safe_or_coSafe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.newest_not_eight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.newest_span_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.parent_events",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.col.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.covers.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.cylinders.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.equations.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightTwoMixedControl.mask.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.all_time_local_constraints",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.newest_span_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.newest_not_eight",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.neither_parent_safe_or_coSafe",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightTwoMixedControl.neither_parent_height_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightTwoMixedControl",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 39,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
