@@ -52,7 +52,7 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \
     Rule30EtherThree Rule30EtherThreeNoWall Rule30EtherThreeTrap Rule30EtherThreeReach \
     Rule30EtherThreeLeft Rule30EtherThreeSkeleton Rule30WhiteRunEight Rule30PeriodTwoSideways \
-    Rule30LightCone Rule30FiniteConfigs Rule30FiniteMaskedJen Rule30Coupled Rule30FiniteBlackRuns Rule30FiniteBlackRunBlocks Rule30FiniteDiagonals Rule30FiniteWhiteRuns \
+    Rule30LightCone Rule30FiniteConfigs Rule30FiniteMaskedJen Rule30Coupled Rule30FiniteBlackRuns Rule30FiniteBlackRunBlocks Rule30FiniteDiagonals Rule30AgedLeftDiagonals Rule30FiniteWhiteRuns \
     Rule30Certificates.WhiteEndChecks Rule30WhiteEnd \
     Rule30WhitePadding \
     Rule30FiniteStrips \
@@ -145,6 +145,7 @@ These modules are not in the 2026-10-15 snapshot of the catalog, and `SHA256SUMS
 | Module | Added | What it proves | Headline theorems |
 |---|---|---|---|
 | `Rule30BackwardTube` | 2026-10-24 | Endpoint-conditioned backward strip certificates combine a finite predecessor chain with a stable zero-driven reachable set to exclude every sufficiently long white-padding word. Contributed by Troy Lowry with OpenAI Codex. | `preCheck_sound`, `tail_tube_forces`, `no_padding_of_endpoint_tube` |
+| `Rule30AgedLeftDiagonals` | 2026-10-26 | For every initial configuration white left of an anchor and every `lo >= 1`, let `B = lo + 2^(lo+1)`. At every age `A >= 2^B - 1`, some left diagonal with index in `[lo,B]` is white. Each diagonal `i` has period `2^i` from time `2^i-1`. Black phases transmit a shorter clock across a hypothetical black interval, contradicting its white causal interior. Right-hand initial data is arbitrary; the physical witness moves with the diagonal frame. Contributed by Troy Lowry with OpenAI Codex. | `Ld_uniform_period`, `Ld_aged_white_witness`, `evol_aged_white_witness` |
 | `Rule30FiniteStrips` | 2026-10-24 | Strip certificate soundness for every column of every configuration with a leftmost black cell, using the uniform masked Jen theorem; no initial strip-state assumption. Contributed by Troy Lowry with OpenAI Codex. | `not_eventually_word_strip`, `not_eventually_word_strip_finite` |
 | `Rule30FiveTailReduction` | 2026-10-24 | Trimming white ends and rotating periods reduces every tail of at most five bits to the shorter family or eight new black-ended cores. Contributed by Troy Lowry with OpenAI Codex. | `decomposition`, `no_five_tail_of_cores` |
 | `Rule30ForbiddenSuffix` | 2026-10-24 | A vacuum-free full-set image of a fixed suffix excludes white-padding families with arbitrary preceding tail words. Width and suffix are parameters. Contributed by Troy Lowry with OpenAI Codex. | `no_padding_of_forbidden_suffix`, `no_padding_of_forbidden_suffix_finite` |
