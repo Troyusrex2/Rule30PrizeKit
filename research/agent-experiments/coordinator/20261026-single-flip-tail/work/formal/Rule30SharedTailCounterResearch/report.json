@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "machine": "G913",
+  "source_sha256": "0f90ba4301fc73a982815afab6ea8d3b5442511e722465eac71b921d4cce3e9f",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "stages": [
+    {
+      "stage": "build",
+      "seconds": 0.53,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "seconds": 3.323,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.Finite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.State",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.common_neighbor_nonconstant",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.frame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.frame_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.full_period_eight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.heads_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.initial_difference_finite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.initial_infinite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.key",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.key_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.key_succ",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.nextKey",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.orbit_frame",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.shared_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.shared_tail_resynchronization",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.source_opposite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.step_table",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.frame.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.key.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.orbit.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.orbit.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.orbit.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30SharedTailCounterResearch.orbit.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.step.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.frame_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.full_period_eight",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.shared_tail",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.heads_equal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.source_opposite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.common_neighbor_nonconstant",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.initial_difference_finite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.initial_infinite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SharedTailCounterResearch.shared_tail_resynchronization",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30SharedTailCounterResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 58,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

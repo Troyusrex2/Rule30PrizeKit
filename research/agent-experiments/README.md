@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Boundary assumptions sharpened:** [single-flip nonalternating invisibility with a shared infinite tail](coordinator/20261026-single-flip-tail/BRIEF.md). [Full replay, arbitrary finite delays and local Wolfram controls](coordinator/20261026-single-flip-tail/REPORT.md). Do not replace individual finite backgrounds by finite initial difference.
+
 **New unbounded barrier:** [fixed nearby defects can be invisible arbitrarily long in state 15](coordinator/20261026-fixed-defect-delay/BRIEF.md). [Exact finite-delay theorem, shared-tail counterexample and full replay](coordinator/20261026-fixed-defect-delay/REPORT.md). Bounds depending on total width and global boundary arguments remain possible.
 
 **Rank-search follow-up:** [three exact finite-system certificates](coordinator/20261026-rank-certificates/REPORT.md) sharpen the template failures. They are Python checked, not Lean verified; the invariant-sink target remains open.
