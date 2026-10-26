@@ -1,0 +1,149 @@
+{
+  "module": "CedarWhiteTransport",
+  "source_sha256": "cbacbf023edfb7bc68b11c4a84ef2e0dbac63a03133917339513ffae2422c021",
+  "seconds": 1.5161000999505632,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.F_drop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.change_drop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.change_drop_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.common_suffix_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.evolution_drop_cone",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.evolution_false_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.prefix_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.return8_false_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.return8_white_padding",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.safe_false_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.safe_white_padding",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.take_F",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.take_change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.take_evolution",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.take_evolution",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.safe_white_padding",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.return8_white_padding",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.evolution_drop_cone",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarWhiteTransport.common_suffix_transport",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarWhiteTransport",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 18,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "passed": true,
+  "module": "Rule30PlateauPairCertificate",
+  "source_sha256": "2d12e6c1111511ede77716948d2b093f4674124b3e0d6e6ddebf5fe4143df844",
+  "compiled_module_sha256": "8a8dd61507af6682c1153a47ec34e9b0a025a32c3b530da7588b8f90abe3a4f6",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 2.438199899974279,
+  "total_seconds": 5.352370999986306,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.ClosedAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.ExcludesAt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.Inv",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.base_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.bits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.bits_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_100",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_104",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_108",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_117",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_134",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_138",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_164",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_168",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_172",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_181",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_198",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_202",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_70",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_74",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_87",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_91",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_100",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_104",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_108",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_117",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_134",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_138",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_164",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_168",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_172",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_181",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_198",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_202",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_70",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_74",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_87",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_91",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.initial_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.level0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.level1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.level2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.level3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.mask0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.mask0_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.mask1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.mask1_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.mask2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.mask2_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.mask3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.mask3_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.projection",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.projection_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.projections",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.prune0_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.prune1_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.prune2_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.reachMask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.rowStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.successors",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.successors_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.swap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.bits.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.bits.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.bits.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.bits.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.projections.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.reachMask.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PlateauPairCertificate.successors.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.base_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.successors_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.closed_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.excludes_check",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PlateauPairCertificate",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 122,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

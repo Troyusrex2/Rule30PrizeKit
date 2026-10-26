@@ -1,0 +1,206 @@
+{
+  "passed": true,
+  "module": "Rule30TwoPlateauRigidityResearch",
+  "source_sha256": "021e1b5f4542abaed95911397f430b363919eaa9db8efc654d881141fac83edc",
+  "compiled_module_sha256": "0f04a080e490ba3edb4582193035be6cb0e84c859adbe9920d45eec675e53cfc",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.9820030999835581,
+  "total_seconds": 2.7765864999964833,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.actual_even_two_plateau_or_impossible",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.advance_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.base_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.even_path_no_swap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.good_pair_code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TwoPlateauRigidityResearch.input",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.input_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.inv_excludes_swap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.inv_initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.inv_two_steps",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TwoPlateauRigidityResearch.pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.pair_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.pair_endpoint_swap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.pair_good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.pair_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.pair_parts",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.path_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.projection_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.projection_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.prune_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TwoPlateauRigidityResearch.row",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TwoPlateauRigidityResearch.rowCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.rowCode_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.rowCode_projection",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.rowStep_code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.row_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.row_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.successor_mem",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.swap_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30TwoPlateauRigidityResearch.twoCode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.twoCode_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.advance.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PlateauPairCertificate.projection.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30TwoPlateauRigidityResearch.actual_even_two_plateau_or_impossible",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30TwoPlateauRigidityResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 48,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "module": "CedarSafetyBridge",
+  "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8",
+  "seconds": 1.969703099981416,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.accepted_iff_return_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.bridge_aux",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.endpoint_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.return_completeness_iff_language_completeness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.safe_return_iff_accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetyBridge.state",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.transition_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetyBridge.state.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.safe_return_iff_accepted",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.return_completeness_iff_language_completeness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.accepted_iff_return_window",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarSafetyBridge",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "module": "Rule30SaturatedOrPeriodResearch",
+  "source_sha256": "8cdc3aff12601822a24ecc288df02378bca026d4b9e0b5407cdf5192939505f8",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "seconds": 1.5377708000014536,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30SaturatedOrPeriodResearch.actual_saturated_or_double_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SaturatedOrPeriodResearch.anti_double",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30SaturatedOrPeriodResearch.anti_has_black",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30SaturatedOrPeriodResearch.actual_saturated_or_double_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30SaturatedOrPeriodResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "scope": "period bound only; plateau exclusion not yet proved"
+}

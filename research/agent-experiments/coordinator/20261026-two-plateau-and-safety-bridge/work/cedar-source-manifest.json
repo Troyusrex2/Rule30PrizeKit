@@ -1,0 +1,35 @@
+{
+  "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "modules": [
+    {
+      "module": "CedarSafetySemantics",
+      "source_sha256": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b",
+      "headlines": [
+        "CedarSafety.trace_white",
+        "CedarSafety.safe_iff_window_of_return8",
+        "CedarSafety.not_safe_nil"
+      ]
+    },
+    {
+      "module": "CedarSafetyBridge",
+      "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8",
+      "headlines": [
+        "CedarSafetyBridge.safe_return_iff_accepted",
+        "CedarSafetyBridge.return_completeness_iff_language_completeness",
+        "CedarSafetyBridge.accepted_iff_return_window"
+      ]
+    },
+    {
+      "module": "CedarWhiteTransport",
+      "source_sha256": "cbacbf023edfb7bc68b11c4a84ef2e0dbac63a03133917339513ffae2422c021",
+      "headlines": [
+        "CedarWhiteTransport.take_evolution",
+        "CedarWhiteTransport.safe_white_padding",
+        "CedarWhiteTransport.return8_white_padding",
+        "CedarWhiteTransport.evolution_drop_cone",
+        "CedarWhiteTransport.common_suffix_transport"
+      ]
+    }
+  ],
+  "scope": "conditional exact safety/return language equivalence only"
+}

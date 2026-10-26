@@ -1,0 +1,36 @@
+C:\Users\troyu\Rule30-offload\research\physical-center-20261026T1512\Rule30SaturatedOrPeriodResearch.lean:47:36: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a (t + R + R) (j + 2)
+in the target expression
+  l (t + R + R) = l t
+
+a : Nat → Nat → Bool
+ha : Actual a
+j R : Nat
+hk : ∀ (t : Nat), a (t + R) (j + 3) = (a t (j + 3) ^^ true)
+hl : ∀ (t : Nat), a (t + R) (j + 2) = a t (j + 2)
+ho : ∀ (t : Nat), (a t (j + 5) || a t (j + 4)) = true
+g : Nat → Bool := fun t => a t (j + 5)
+h : Nat → Bool := fun t => a t (j + 4)
+k : Nat → Bool := fun t => a t (j + 3)
+l : Nat → Bool := fun t => a t (j + 2)
+gs : ∀ (t : Nat), g (t + 1) = (g t ^^ (h t || k t))
+hs : ∀ (t : Nat), h (t + 1) = (h t ^^ (k t || l t))
+kp : ∀ (t : Nat), k (t + 2 * R) = k t
+t : Nat
+⊢ l (t + R + R) = l t
+C:\Users\troyu\Rule30-offload\research\physical-center-20261026T1512\Rule30SaturatedOrPeriodResearch.lean:78:27: error: Type mismatch: After simplification, term
+  ho s
+ has type
+  (a s (j + 5) || a s (j + 4)) = true
+but is expected to have type
+  g s = true
+C:\Users\troyu\Rule30-offload\research\physical-center-20261026T1512\Rule30SaturatedOrPeriodResearch.lean:80:33: error: Type mismatch: After simplification, term
+  ho (s + 2 * R)
+ has type
+  (a (s + 2 * R) (j + 5) || a (s + 2 * R) (j + 4)) = true
+but is expected to have type
+  g (s + 2 * R) = true
+C:\Users\troyu\Rule30-offload\research\physical-center-20261026T1512\Rule30SaturatedOrPeriodResearch.lean:84:39: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
