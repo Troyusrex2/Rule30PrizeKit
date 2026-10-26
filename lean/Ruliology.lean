@@ -22,6 +22,8 @@ public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripe
 public import Ruliology.CellularAutomata.Rule30ZeroBoundarySmall
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers
 public import Ruliology.CellularAutomata.Rule30Ether
+public import Ruliology.CellularAutomata.Rule30EtherSingleCell
+public import Ruliology.CellularAutomata.Rule30EtherSingleCellAux
 public import Ruliology.CellularAutomata.Rule30PeriodTwoCoupled
 public import Ruliology.CellularAutomata.Rule30PeriodFourSkeleton
 public import Ruliology.CellularAutomata.Rule30Diagonals

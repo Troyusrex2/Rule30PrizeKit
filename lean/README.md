@@ -19,7 +19,7 @@ This Lake project (package `rule30prize`, library `Ruliology`) holds the officia
 | Any period | **Proved:** T + P ≥ 16359 | `Rule30FactorWindow` |
 | Period 2 | Reduced to Q01, a statement about the zero-boundary left half. Q01 is **open** in general. It is proved in Lean for every start of width ≤ 52. | `Rule30PeriodTwo`, `Rule30PeriodTwoCoupled`, `Rule30PeriodTwoSideways`, `Rule30ZeroBoundary*`, `Rule30ZeroBoundaryWidth52`, `Rule30PeriodTwoWidth5/6` |
 | Least period 3 | Reduced. 001 needs one of AbsorptionT t001, Q001 or C3s001. 011 needs C3w(011). All four are **open**. The ether-and-wall route is closed: the 12 × 3 ether has no wall of any width. | `Rule30EtherThree*` |
-| Least period 4 | Reduced to Absorption, the ether-and-wall trap, which is **open**. The pure ether lies in no trap of width ≤ 20. | `Rule30Ether`, `Rule30PeriodFourSkeleton`, `Rule30EtherTrapWidth20` |
+| Least period 4 | Reduced to Absorption, the ether-and-wall trap, which is **open**. The pure ether lies in no trap of width ≤ 20. Partial: single-cell and high-support absorption are proved (`Rule30EtherSingleCell`). | `Rule30Ether`, `Rule30PeriodFourSkeleton`, `Rule30EtherTrapWidth20`, `Rule30EtherSingleCell` |
 | Longer periods | **Open.** Some words are excluded, for example by long black runs, 30 certified words and every `1 0^q` with `q ≥ 10`. | `Rule30BlackRuns`, `Rule30BlackRunBlocks`, `Rule30StripCertificateTable`, `Rule30WhiteRunEight`, `Rule30WhiteEnd` |
 
 Barriers are also proved:
@@ -48,6 +48,7 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30ZeroBoundaryStripeFrontLift Rule30Certificates.StripeTail13Completion \
     Rule30ZeroBoundaryStripeFourComplete Rule30EtherTrap \
     Rule30Certificates.EtherTrap{0,1,2,3,4,5} \
+    Rule30EtherSingleCellAux Rule30EtherSingleCellCases Rule30EtherSingleCell \
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \
     Rule30EtherThree Rule30EtherThreeNoWall Rule30EtherThreeTrap Rule30EtherThreeReach \
     Rule30EtherThreeLeft Rule30EtherThreeSkeleton Rule30WhiteRunEight Rule30PeriodTwoSideways \
@@ -96,6 +97,7 @@ On 2026-10-15 this took 285 s in total on an Apple M3 Max with 48 GB; the four u
 | `Rule30ZeroBoundaryStripe` | 18 s | 1.8 GB |
 | `Rule30Certificates/WhiteEndChecks` | 34 s | 0.8 GB |
 | `Rule30Certificates/StripeMeeting` | 47 s | 5.5 GB |
+| `Rule30EtherSingleCellCases` | 76 s | 2.2 GB |
 | `Rule30EtherThreeNoWall` | 9 s | 1.1 GB |
 | `Rule30BlackRuns` | 9 s | 2.2 GB |
 
@@ -155,6 +157,7 @@ These modules are not in the 2026-10-15 snapshot of the catalog, and `SHA256SUMS
 | `Rule30UniformWhitePadding` | 2026-10-24 | The five pumping certificate families hold for every column of every leftmost-black start, using the generic finite-strip soundness theorem. Contributed by Troy Lowry with OpenAI Codex. | `no_paddingA_leftFinite`, `no_paddingE_leftFinite` |
 | `Rule30VacuumExample` | 2026-10-24 | Two five-bit tail applications of the generic vacuum-avoidance criterion use width-five strips; the analytic white-pulse bound handles arbitrary padding. Contributed by Troy Lowry with OpenAI Codex. | `no_paddingA`, `no_paddingB` |
 | `Rule30WhitePadding` | 2026-10-24 | A stable zero-driven reachable set and finite tail checks give a strip certificate for every sufficiently long white prefix, by pumping rather than enumerating padding lengths. Contributed by Troy Lowry with OpenAI Codex. | `zeros_stable`, `padding_strip`, `no_padding_word` |
+| `Rule30EtherSingleCell` | 2026-10-25 | Single-cell and high-support period-4 absorption for `0001`: one black cell at every position/phase enters the ether-and-wall family (`singleCell_absorption`), and every finitely supported right half white on positions 1..30, of arbitrary support size, enters at time 14−φ (`absorption_high`). Case data is the single module `Rule30EtherSingleCellCases`. Not full absorption. Contributed by Eric Elbaz (Tensorbend.ai). | `singleCell_absorption`, `absorption_high` |
 | `Rule30WhitePadding10101` | 2026-10-24 | The endpoint-conditioned backward tube excludes the five-bit tail 10101 after sufficiently many white phases, uniformly over all leftmost-black starts. Contributed by Troy Lowry with OpenAI Codex. | `no_padding_10101_leftFinite`, `no_padding_10101_finite` |
 | `Rule30WhitePaddingVacuumCriterion` | 2026-10-24 | A stable zero-driven reachable set and a finite vacuum-free pulse image exclude arbitrary-tail white-padding families. The pulse and its length are unrestricted parameters. Contributed by Troy Lowry with OpenAI Codex. | `no_padding_of_vacuum_avoidance`, `no_padding_seed_of_vacuum_avoidance` |
 | `Rule30WhitePulse` | 2026-10-24 | A striped block created by a long black run survives an arbitrary short boundary pulse by locality; the resulting analytic estimate supplies the padding thresholds. Contributed by Troy Lowry with OpenAI Codex. | `white_pulse_return`, `white_padding_forces_early_white` |

@@ -45,6 +45,7 @@ for m in Rule30Predecessors Rule30PredecessorCounts BusyBeaverLifetimes Rule30Bl
     Rule30ZeroBoundaryStripeFourComplete Rule30EtherTrap \
     Rule30Certificates.EtherTrap0 Rule30Certificates.EtherTrap1 Rule30Certificates.EtherTrap2 \
     Rule30Certificates.EtherTrap3 Rule30Certificates.EtherTrap4 Rule30Certificates.EtherTrap5 \
+    Rule30EtherSingleCellAux Rule30EtherSingleCellCases Rule30EtherSingleCell \
     Rule30EtherTrapWidth20 Rule30PeriodTwoLanguage Rule30PeriodTwoWidth5 Rule30PeriodTwoWidth6 \
     Rule30EtherThree Rule30EtherThreeNoWall Rule30EtherThreeTrap Rule30EtherThreeReach \
     Rule30EtherThreeLeft Rule30EtherThreeSkeleton Rule30Certificates.WhiteEndChecks Rule30WhiteEnd \
