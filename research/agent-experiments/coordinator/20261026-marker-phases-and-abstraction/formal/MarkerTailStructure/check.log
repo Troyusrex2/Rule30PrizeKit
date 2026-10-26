@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"MarkerTailStructure.complementary_or_alternates","standardAxioms":true},{"kind":"theorem","name":"MarkerTailStructure.disagree_complement","standardAxioms":true},{"kind":"theorem","name":"MarkerTailStructure.disagreement_next","standardAxioms":true},{"kind":"theorem","name":"MarkerTailStructure.disagreement_suffix","standardAxioms":true},{"kind":"theorem","name":"MarkerTailStructure.disagreement_tail_alternates","standardAxioms":true},{"kind":"theorem","name":"MarkerTailStructure.hidden_suffix_structure","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"MarkerTailStructure.disagreement_suffix","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"MarkerTailStructure.hidden_suffix_structure","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"MarkerTailStructure","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":14,"ok":true},"verdict":"pass","verifiedTargets":[]}

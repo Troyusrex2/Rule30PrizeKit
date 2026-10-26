@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "source_sha256": "b174ee12e8bb641dfecf2c64e34334a33339857a6b4a15d03649893bf0c6f5df",
+  "compiled_sha256": "0076fc29f51bad30d9cc0f32cbc4c48a364d6499fa48a5d33d01f8c7d9e354ef",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.47749899997143075,
+  "total_seconds": 1.65678239997942,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.change_at",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.change_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.list_ext_getD",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.local_no_recoalescence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.marks_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryReconstruction.orRow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.or_at_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.or_covers",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.or_from_carry_marker",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.previous_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.view_and_last_two_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.view_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.view_or_rows",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marked.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.orRow.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.orRow.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.orRow.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryReconstruction.orRow.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.view_and_last_two_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryReconstruction.previous_eq",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MarkerCarryReconstruction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 37,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

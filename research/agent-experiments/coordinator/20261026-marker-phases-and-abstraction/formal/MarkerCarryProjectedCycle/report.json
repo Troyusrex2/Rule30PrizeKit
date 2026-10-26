@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "source_sha256": "042605504f45fac9987bdb6d795f7b7ac4582f3200d746bbd87972f40972c78f",
+  "compiled_sha256": "011aab1db66cefc3a8a7f08f8b4db3f392df6c33d69f201eae568a90adde0743",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.5237481000367552,
+  "total_seconds": 1.7260239000315778,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.actual_zero_events",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.all_nonreturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryProjectedCycle.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryProjectedCycle.next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryProjectedCycle.node",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.observed_safe_edges",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.one_lap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.projected_edges",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.spurious_safe_projected_cycle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.unique_phase_switch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryProjectedCycle.code.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.spurious_safe_projected_cycle",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.unique_phase_switch",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryProjectedCycle.one_lap",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MarkerCarryProjectedCycle",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 18,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

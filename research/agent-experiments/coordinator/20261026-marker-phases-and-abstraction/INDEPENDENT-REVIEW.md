@@ -1,0 +1,7 @@
+# Independent scope review
+
+The marker worker independently reviewed the root-authored `MarkerTailStructure.lean`, exact SHA256 `85f94a262d2d96ef78c6948bfbf4bd51009be55af230aa532c253492ed947760`. Its coordinate bounds are correct: disagreement propagation stops at the penultimate bit; alternating pairs also end no later than the penultimate; the newest bit remains unclassified. The starting coordinate need not be the first disagreement. Choosing the first one gives the stated hidden-suffix description. No duplicate Lean build was run for this source review.
+
+The same reviewer checked the public report's marker, reconstruction and projected-cycle claims. One correction was requested and applied before publication: phase exposure in the alternating family requires a nonempty suffix, while equal views hold also for the empty suffix. The at-most-four fiber bound is explicitly a consequence of the injectivity theorem, not a separate formal cardinality theorem. The projected path is explicitly existential, with one hidden-phase switch, and every represented word has a verified actual unsafe witness.
+
+Root independently read and replayed the worker sources, including the anchored-abstraction source, with the unchanged official checker. The pointwise saturation theorem is scoped to its specified overapproximate transition. It does not imply actual mixed-strip reachability or impossibility of more expressive invariants. All final source bytes match the receipts in this archive.

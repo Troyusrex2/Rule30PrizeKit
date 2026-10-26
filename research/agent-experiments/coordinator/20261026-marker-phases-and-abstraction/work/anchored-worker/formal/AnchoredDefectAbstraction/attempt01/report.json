@@ -1,0 +1,274 @@
+{
+  "passed": true,
+  "module": "AnchoredDefectAbstraction",
+  "attempt": "attempt01",
+  "source_sha256": "b3668ec09138e22bb3f0139ecc711833750c19882ea51bbfbdb6bdd7edc08bdf",
+  "compiled_sha256": "2ab0c442e038bca2338543e1f20a9a7fffde8ab7940abe550b85b94a509f4273",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "compile_seconds": 7.336564500001259,
+  "total_seconds": 12.92060810001567,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.aBit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.actualA",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.actualU",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.actual_extension_observed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.birth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.choiceOf",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.choiceTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.code4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.cover_preserved",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.descent_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.encode_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_birth_antiperiodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_birth_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_birth_nonreturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_invariant_saturation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_older_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.invariant_saturation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.mixed_control_not_separated",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.mixed_observations_valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.observe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.older",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.pack",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.predTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.previous",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.rank",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.rankTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.rank_bound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.seed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.seedTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.seed_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.stepChoice",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.uBit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.witnessTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "AnchoredDefectAbstraction.witnessTime",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.actualA.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.birth.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_birth_certificate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_birth_antiperiodic",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.actual_extension_observed",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.genuine_invariant_saturation",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "AnchoredDefectAbstraction.mixed_control_not_separated",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "AnchoredDefectAbstraction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 59,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

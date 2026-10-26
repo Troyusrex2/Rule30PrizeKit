@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "module": "CedarMarkerReturnTwo",
+  "source_sha256": "d5fc10ec218316a9c4bccf5ccd51057ff70dbedd992f7e2e78a1519397653dad",
+  "compiled_sha256": "b3e14f4b0f0a5f8d1e76f89962f681c1f334e98610f906999215dac08e036b56",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.43783829995663837,
+  "total_seconds": 1.5759365999838337,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.AllZero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.Disjoint",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.carry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.disjoint_equal_iff_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.disjoint_head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.head_equivalence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.marked",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marked_disjoint",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.marker",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marker_streams_disjoint",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.marks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.next_carry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.return_iff_marker_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.return_two_iff_markers_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.AllZero.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.AllZero.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.AllZero.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.Disjoint.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marks.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marks.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marks.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarMarkerReturnTwo.marks.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.change.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.change.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.change.eq_def",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.marked_disjoint",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarMarkerReturnTwo.return_two_iff_markers_zero",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarMarkerReturnTwo",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 45,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

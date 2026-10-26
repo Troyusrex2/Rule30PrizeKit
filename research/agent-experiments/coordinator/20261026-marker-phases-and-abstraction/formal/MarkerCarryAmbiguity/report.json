@@ -1,0 +1,442 @@
+{
+  "passed": true,
+  "source_sha256": "1d3948b75a39bf64b3618fb562f7f994746acd309b50bc895a5559862631cada",
+  "compiled_sha256": "eaa0caafb3ea9678c278425012509bc31489a13d818c699bd4ccb39573f88b26",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.48780070000793785,
+  "total_seconds": 1.6214177000219934,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "MarkerCarryAmbiguity.ShortView",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "MarkerCarryAmbiguity.View",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.alternating",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.anchored_nonreturn_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.carries",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.change_alternating",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.family",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_carries",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_markers",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_next_carries",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_next_markers",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.family_step_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.fullCarry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.full_view_family_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.future_carry_exposes_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.future_full_view_differs",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.future_marker_differs",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqShortView",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqView",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.no_full_view_update_on_nonreturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.no_short_view_marker_update",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.safeX",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.safeY",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.safe_same_orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.scan_alternating",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.shortView",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.short_view_equal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.topCarry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.view",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.carries0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.markers0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.markers1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "MarkerCarryAmbiguity.ShortView.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "MarkerCarryAmbiguity.ShortView.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.top0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.top1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.carries0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.carries1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.markers0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.markers1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "MarkerCarryAmbiguity.View.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "MarkerCarryAmbiguity.View.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.alternating.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.alternating.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.alternating.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.alternating.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.carries.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.carries.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.carries.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.carries.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqShortView.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqView.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.view.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.ShortView.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.ShortView.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.ShortView.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.ShortView.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.View.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.View.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.View.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.View.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqShortView.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MarkerCarryAmbiguity.instDecidableEqView.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.no_short_view_marker_update",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.full_view_family_equal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.future_carry_exposes_phase",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerCarryAmbiguity.no_full_view_update_on_nonreturn",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MarkerCarryAmbiguity",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 110,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

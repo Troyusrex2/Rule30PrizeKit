@@ -1,0 +1,485 @@
+{
+  "passed": true,
+  "module": "CedarSafetySoundness",
+  "attempt": "dependencies",
+  "source_sha256": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a",
+  "compiled_sha256": "6d8a53593ca2fec273be5112b92861b6a40f56348e34d7c0e0e982e63deac701",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "compile_seconds": 0.7203851999947801,
+  "total_seconds": 1.8518139999941923,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "CedarSafetySoundness.CertificateState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.F",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "CedarSafetySoundness.Profile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.accepted_return_eight",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.change",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.evolution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.good_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.good_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqCertificateState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqProfile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableGood",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instReprCertificateState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instReprProfile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.local_rule_bridge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.nextProfile",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.ofNat",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.read",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.run8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.run8_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.run8_nil",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.run8_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.sink_read",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.state",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.transition",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "CedarSafetySoundness.CertificateState.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.older",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.previous",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.q",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "CedarSafetySoundness.CertificateState.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "CedarSafetySoundness.Profile.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "CedarSafetySoundness.Profile.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.t8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.change.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.evolution.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqCertificateState.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqProfile.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instReprCertificateState.repr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instReprProfile.repr",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.read.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.read.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.read.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.state.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_10",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_11",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_12",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_13",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_14",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.transition.eq_9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.transition.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.CertificateState.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.CertificateState.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.CertificateState.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.CertificateState.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.Profile.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.Profile.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.Profile.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.Profile.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqCertificateState.decEq.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetySoundness.instDecidableEqProfile.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarSafetySoundness.accepted_return_eight",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarSafetySoundness",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 137,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

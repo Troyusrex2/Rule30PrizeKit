@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "source_sha256": "85f94a262d2d96ef78c6948bfbf4bd51009be55af230aa532c253492ed947760",
+  "compiled_sha256": "0f24ea2a93b38cc1e7ffe8ee1d13e856dc1f8f71519b7c2f40abef9e87bca817",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.4380681000184268,
+  "total_seconds": 1.614458399999421,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.complementary_or_alternates",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.disagree_complement",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.disagreement_next",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.disagreement_suffix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.disagreement_tail_alternates",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MarkerTailStructure.hidden_suffix_structure",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerTailStructure.disagreement_suffix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MarkerTailStructure.hidden_suffix_structure",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MarkerTailStructure",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 14,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
