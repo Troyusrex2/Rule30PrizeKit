@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "cyclic_extension_edges_checked": 7184,
+  "noncyclic_carries_rejected": 17328,
+  "sample_audits": [
+    {
+      "file": "ice-samples.json",
+      "positive": 337,
+      "negative": 45,
+      "implications": 756,
+      "all_semantic_checks_passed": true
+    },
+    {
+      "file": "ice-safe-samples.json",
+      "positive": 337,
+      "negative": 106,
+      "implications": 985,
+      "all_semantic_checks_passed": true
+    },
+    {
+      "file": "ice-tree-samples.json",
+      "positive": 337,
+      "negative": 116,
+      "implications": 2431,
+      "all_semantic_checks_passed": true,
+      "maximum_sample_leaf_count": 8
+    },
+    {
+      "file": "ice-dyadic-samples.json",
+      "positive": 337,
+      "negative": 154,
+      "implications": 878,
+      "all_semantic_checks_passed": true,
+      "maximum_sample_leaf_count": 8
+    },
+    {
+      "file": "ice-sym-dyadic-samples.json",
+      "positive": 337,
+      "negative": 224,
+      "implications": 1361,
+      "all_semantic_checks_passed": true,
+      "maximum_sample_leaf_count": 8
+    },
+    {
+      "file": "ice-typed-samples.json",
+      "positive": 337,
+      "negative": 349,
+      "implications": 2391,
+      "all_semantic_checks_passed": true,
+      "maximum_sample_leaf_count": 8
+    }
+  ],
+  "Lean_verified": false,
+  "invariant_found": false,
+  "full_problem_solved": false
+}

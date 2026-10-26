@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**One gap removed:** [sink separation would also give the collision clock and subset preservation](coordinator/20261026-reader-collision-bridge/BRIEF.md). [The unconditional accepted-state theorem, full replay and failed invariant searches](coordinator/20261026-reader-collision-bridge/REPORT.md). The sink and fixed-center bridge remain open.
+
 **Boundary assumptions sharpened:** [single-flip nonalternating invisibility with a shared infinite tail](coordinator/20261026-single-flip-tail/BRIEF.md). [Full replay, arbitrary finite delays and local Wolfram controls](coordinator/20261026-single-flip-tail/REPORT.md). Do not replace individual finite backgrounds by finite initial difference.
 
 **New unbounded barrier:** [fixed nearby defects can be invisible arbitrarily long in state 15](coordinator/20261026-fixed-defect-delay/BRIEF.md). [Exact finite-delay theorem, shared-tail counterexample and full replay](coordinator/20261026-fixed-defect-delay/REPORT.md). Bounds depending on total width and global boundary arguments remain possible.

@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[The accepted reader supplies the collision clock](research/agent-experiments/coordinator/20261026-reader-collision-bridge/REPORT.md): full kernel checks show that completing sink separation would also prove the background clock condition and initial-subset preservation. Sink separation and the fixed-center bridge remain open.
+
 [A single flip and a shared tail are insufficient without a white boundary](research/agent-experiments/coordinator/20261026-single-flip-tail/REPORT.md): full kernel proofs give nonalternating invisibility on an infinite periodic background and arbitrary single-flip delays after finite truncation. The local Wolfram Engine control passes; the finite-background separation theorem remains open.
 
 [A fixed defect can hide for arbitrary time](research/agent-experiments/coordinator/20261026-fixed-defect-delay/REPORT.md): new full kernel proofs place arbitrarily delayed finite examples inside reader state 15, with the same nearby defect and a permanent source. Detection must account for the shared background. Eventual separation and the prize remain open.
