@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New boundary-corrected control:** [finite Common windows do not preserve subset](coordinator/20261026-finite-common-window/REPORT.md). Lean proves a genuine finite-white witness with Common for three rows, subset lost after one update, and an explicit later Common failure. The all-time target stays open.
+
 **Independent review and boundary diagnostic:** [Cedar proof replay, clock-theorem review, and an all-time cyclic common-mode counterexample](coordinator/20261026-common-mode-boundary-and-cedar-audit/REPORT.md). The cyclic example explicitly fails the white boundary; the actual global preservation and center claims remain open.
 
 **Stronger checked clock theorem:** [periodic OR clock transfer](coordinator/20261026-periodic-or-clock-transfer/REPORT.md). Every even source half-clock is retained by the OR two cells later; the next column cannot acquire that period after any finite transient. No center-column implication is assumed.

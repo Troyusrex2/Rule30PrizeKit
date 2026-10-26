@@ -1,0 +1,89 @@
+{
+  "temporal_depth": 2,
+  "memory_symbols": 5,
+  "initial_alphabet": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6
+  ],
+  "states_discovered": 2308,
+  "edges_examined": 4176,
+  "seconds": 0.030999999959021807,
+  "whole_halfline_Common_assumed_only_at": [
+    0,
+    1,
+    2
+  ],
+  "all_time_Common_counterexample": false,
+  "full_problem_solved": false,
+  "status": "counterexample",
+  "input_symbols": [
+    1,
+    2,
+    0,
+    5,
+    5
+  ],
+  "rows": [
+    {
+      "time": 0,
+      "a": 25,
+      "b": 2,
+      "h": 24,
+      "common_failures": [],
+      "subset_failures": []
+    },
+    {
+      "time": 1,
+      "a": 111,
+      "b": 14,
+      "h": 104,
+      "common_failures": [],
+      "subset_failures": [
+        3
+      ]
+    },
+    {
+      "time": 2,
+      "a": 401,
+      "b": 50,
+      "h": 392,
+      "common_failures": [],
+      "subset_failures": [
+        3
+      ]
+    },
+    {
+      "time": 3,
+      "a": 1783,
+      "b": 222,
+      "h": 1688,
+      "common_failures": [
+        3,
+        4
+      ],
+      "subset_failures": [
+        4,
+        7
+      ]
+    },
+    {
+      "time": 4,
+      "a": 6409,
+      "b": 802,
+      "h": 6296,
+      "common_failures": [
+        3,
+        4
+      ],
+      "subset_failures": [
+        4,
+        7
+      ]
+    }
+  ],
+  "literal_audit": true
+}

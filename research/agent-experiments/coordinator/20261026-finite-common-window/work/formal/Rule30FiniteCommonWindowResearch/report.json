@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "module": "Rule30FiniteCommonWindowResearch",
+  "source_sha256": "44675f096013203c325c1adc8602935c370cdcf8c7b2918fc15181815946e4ec",
+  "compiled_module_sha256": "31ceb8a494f23525e469ee70c0356cef534ade66511add9b6301437eb3e3a5fb",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.46666380000533536,
+  "total_seconds": 1.6743945999769494,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.A",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.B",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.H",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.actual_a",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.actual_b",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.common_fails_at_three",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.common_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.finite_common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.finite_common_window_does_not_preserve_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.finite_initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.finite_steps",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.initially_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.march_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.mode_h",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.mode_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.row",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.row_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.rows_match",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.subset_fails_at_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.wa",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.wb",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.wh",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.whole_steps",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.actual.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.row.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30FiniteCommonWindowResearch.wa.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.finite_common_window_does_not_preserve_subset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30FiniteCommonWindowResearch.common_fails_at_three",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30FiniteCommonWindowResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 56,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

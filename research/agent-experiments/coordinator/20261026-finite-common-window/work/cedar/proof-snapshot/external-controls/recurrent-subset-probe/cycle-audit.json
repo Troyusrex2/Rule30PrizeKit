@@ -1,0 +1,199 @@
+{
+  "status": "Specified fixed-width4 all-time Common cycle audited; prefix-only Subset preservation refuted",
+  "width": 4,
+  "least_joint_period": 4,
+  "integer_convention": "least significant bit is oldest",
+  "boundary": "missing older A,B,H white; only three internal adjacent pairs; no right-edge wrap",
+  "cycle": [
+    {
+      "A": 1,
+      "B": 2,
+      "H": 8,
+      "D": 3,
+      "A_older_first": "1000",
+      "B_older_first": "0100",
+      "H_older_first": "0001",
+      "D_older_first": "1100",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true
+      ],
+      "common": true,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "subset": false,
+      "phase": 0
+    },
+    {
+      "A": 7,
+      "B": 14,
+      "H": 8,
+      "D": 9,
+      "A_older_first": "1110",
+      "B_older_first": "0111",
+      "H_older_first": "0001",
+      "D_older_first": "1001",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true
+      ],
+      "common": true,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "subset": true,
+      "phase": 1
+    },
+    {
+      "A": 9,
+      "B": 2,
+      "H": 8,
+      "D": 11,
+      "A_older_first": "1001",
+      "B_older_first": "0100",
+      "H_older_first": "0001",
+      "D_older_first": "1101",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true
+      ],
+      "common": true,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "subset": true,
+      "phase": 2
+    },
+    {
+      "A": 15,
+      "B": 14,
+      "H": 8,
+      "D": 1,
+      "A_older_first": "1111",
+      "B_older_first": "0111",
+      "H_older_first": "0001",
+      "D_older_first": "1000",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true
+      ],
+      "common": true,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "subset": false,
+      "phase": 3
+    }
+  ],
+  "literal_wrap_verified": true,
+  "all_time_Common_on_internal_pairs": true,
+  "phase1_shift": {
+    "initial": {
+      "A": 7,
+      "B": 14,
+      "H": 8
+    },
+    "initial_Subset": true,
+    "Subset_after1": true,
+    "Subset_after2": false,
+    "failure_coordinate": 3
+  },
+  "zero_padded_half_line_original_phase": {
+    "before": {
+      "A": 1,
+      "B": 2,
+      "H": 8,
+      "D": 3,
+      "A_older_first": "1000000",
+      "B_older_first": "0100000",
+      "H_older_first": "0001000",
+      "D_older_first": "1100000",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "common": true,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "subset": false
+    },
+    "after": {
+      "A": 7,
+      "B": 14,
+      "H": 56,
+      "D": 9,
+      "A_older_first": "1110000",
+      "B_older_first": "0111000",
+      "H_older_first": "0001110",
+      "D_older_first": "1001000",
+      "common_adjacent_checks": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "common": false,
+      "subset_coordinate_checks": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "subset": false
+    },
+    "output_support_bound": 5,
+    "Subset_failure_coordinates": [
+      4,
+      5
+    ],
+    "Common_failure_adjacent_pair": [
+      3,
+      4
+    ]
+  },
+  "exact_scope": "Refutes Subset preservation for fixed finite prefixes with all-time Common only on internal pairs, even with genuine older white boundary and actual finite-prefix recurrence.",
+  "not_claimed": [
+    "all-time Common for all natural spatial indices",
+    "a whole-half-line initial-Subset counterexample",
+    "a safety-completeness or prize counterexample"
+  ],
+  "no_search": true,
+  "no_BFS": true,
+  "no_extra_horizon": true,
+  "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+  "candidate_source_sha256": "5b42a0d1e35d7c6e8f1c43bb02cf4895bcf2b7e5377e09d0ef3ecc1ce139fce6",
+  "script_sha256": "1ba10159e363d79302d9e3fcacaaa25cc77405feaf25429742a281ff7c43339d"
+}

@@ -1,0 +1,86 @@
+{
+  "status": "Complete finite-state closure; certificate needs independent audit",
+  "reachable_states": 364,
+  "edges_checked": 2912,
+  "completed_Subset_pairs": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "witnesses": {
+    "11": {
+      "input_symbols": [],
+      "length": 0,
+      "end_state": 0,
+      "flush": {
+        "valid": true,
+        "outputs": [
+          0,
+          0
+        ],
+        "input_Subset": true,
+        "output_Subset": true
+      }
+    },
+    "00": {
+      "input_symbols": [
+        4
+      ],
+      "length": 1,
+      "end_state": 4,
+      "flush": {
+        "valid": true,
+        "outputs": [
+          4,
+          4
+        ],
+        "input_Subset": false,
+        "output_Subset": false
+      }
+    },
+    "10": {
+      "input_symbols": [
+        1,
+        2,
+        0,
+        5,
+        5
+      ],
+      "length": 5,
+      "end_state": 144,
+      "flush": {
+        "valid": true,
+        "outputs": [
+          5,
+          5
+        ],
+        "input_Subset": true,
+        "output_Subset": false
+      }
+    },
+    "01": {
+      "input_symbols": [
+        1,
+        2,
+        0,
+        4,
+        4,
+        3
+      ],
+      "length": 6,
+      "end_state": 191,
+      "flush": {
+        "valid": true,
+        "outputs": [
+          3,
+          3
+        ],
+        "input_Subset": false,
+        "output_Subset": true
+      }
+    }
+  },
+  "backward_implication_holds": false,
+  "forward_implication_holds": false
+}

@@ -1,0 +1,245 @@
+{
+  "status": "Independent literal audit PASS; forward and backward globally finite-support one-step implications are both false",
+  "certificate_sha256": "14c37330ac6122d7b71d278a49cb06a15402e3a92b774b377c498579657e5cac",
+  "reachable_states": 364,
+  "all_transitions_checked": 2912,
+  "closed_graph_verified": true,
+  "all_nodes_reachable_verified": true,
+  "white_tail_completed_pairs": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "shared_tail_completed_pairs": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "shared_tail_flush_choices_per_state": 4,
+  "shared_tail_completions_checked": 1456,
+  "shared_tail_valid_completions": 1264,
+  "literal_full_support_controls": {
+    "11": {
+      "input": {
+        "A": 0,
+        "B": 0,
+        "H": 0,
+        "D": 0,
+        "subset": true,
+        "Subset_failure_positions": [],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": -1
+      },
+      "output": {
+        "A": 0,
+        "B": 0,
+        "H": 0,
+        "D": 0,
+        "subset": true,
+        "Subset_failure_positions": [],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 1
+      },
+      "input_symbols": [],
+      "output_symbols": [
+        0,
+        0
+      ]
+    },
+    "00": {
+      "input": {
+        "A": 0,
+        "B": 0,
+        "H": 1,
+        "D": 0,
+        "subset": false,
+        "Subset_failure_positions": [
+          0
+        ],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 0
+      },
+      "output": {
+        "A": 0,
+        "B": 0,
+        "H": 7,
+        "D": 0,
+        "subset": false,
+        "Subset_failure_positions": [
+          0,
+          1,
+          2
+        ],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 2
+      },
+      "input_symbols": [
+        4
+      ],
+      "output_symbols": [
+        4,
+        4,
+        4
+      ]
+    },
+    "10": {
+      "input": {
+        "A": 25,
+        "B": 2,
+        "H": 24,
+        "D": 27,
+        "subset": true,
+        "Subset_failure_positions": [],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 4
+      },
+      "output": {
+        "A": 111,
+        "B": 14,
+        "H": 104,
+        "D": 97,
+        "subset": false,
+        "Subset_failure_positions": [
+          3
+        ],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 6
+      },
+      "input_symbols": [
+        1,
+        2,
+        0,
+        5,
+        5
+      ],
+      "output_symbols": [
+        1,
+        3,
+        3,
+        7,
+        0,
+        5,
+        5
+      ]
+    },
+    "01": {
+      "input": {
+        "A": 33,
+        "B": 34,
+        "H": 24,
+        "D": 3,
+        "subset": false,
+        "Subset_failure_positions": [
+          3,
+          4
+        ],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 5
+      },
+      "output": {
+        "A": 231,
+        "B": 238,
+        "H": 8,
+        "D": 9,
+        "subset": true,
+        "Subset_failure_positions": [],
+        "common": true,
+        "Common_failure_pair_starts": [],
+        "support_checked_through": 7
+      },
+      "input_symbols": [
+        1,
+        2,
+        0,
+        4,
+        4,
+        3
+      ],
+      "output_symbols": [
+        1,
+        3,
+        3,
+        6,
+        0,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "forward_witness_followup": [
+    {
+      "time": 0,
+      "A": 25,
+      "B": 2,
+      "H": 24,
+      "D": 27,
+      "subset": true,
+      "Subset_failure_positions": [],
+      "common": true,
+      "Common_failure_pair_starts": [],
+      "support_checked_through": 4
+    },
+    {
+      "time": 1,
+      "A": 111,
+      "B": 14,
+      "H": 104,
+      "D": 97,
+      "subset": false,
+      "Subset_failure_positions": [
+        3
+      ],
+      "common": true,
+      "Common_failure_pair_starts": [],
+      "support_checked_through": 6
+    },
+    {
+      "time": 2,
+      "A": 401,
+      "B": 50,
+      "H": 392,
+      "D": 419,
+      "subset": false,
+      "Subset_failure_positions": [
+        3
+      ],
+      "common": true,
+      "Common_failure_pair_starts": [],
+      "support_checked_through": 8
+    },
+    {
+      "time": 3,
+      "A": 1783,
+      "B": 222,
+      "H": 1688,
+      "D": 1577,
+      "subset": false,
+      "Subset_failure_positions": [
+        4,
+        7
+      ],
+      "common": false,
+      "Common_failure_pair_starts": [
+        3,
+        4
+      ],
+      "support_checked_through": 10
+    }
+  ],
+  "forward_first_Common_failure_time": 3,
+  "followup_scope": "Only the specified forward witness; stop at first Common failure, with hard cap8 if none. No search or extra candidate horizons.",
+  "global_tail_bridge": "After two equal-background symbols with H=0, D=H=0 in every subsequent output for any shared background tail; Common with the final flushed output is automatic.",
+  "all_time_Common_claimed": false,
+  "kernel_checked": false,
+  "script_sha256": "2d393551ece821c746cc7609518fa23629ba1977e2703b0485d348c9dcbc4d89"
+}

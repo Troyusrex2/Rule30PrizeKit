@@ -1,0 +1,69 @@
+{
+  "status": "Exact proposed finite-word backward-one-step Subset implication refuted",
+  "width": 4,
+  "integer_convention": "bit j is cell j; least significant bit is oldest",
+  "boundary": "genuine missing older white A=B=H=0; no right-edge wrap",
+  "source": "D:\\MWB\\Rule30\\agent-inbox\\r30-codex-cedar-followup-20261026T154236Z-b768c9a6-v02\\clock-review\\published\\work\\dependencies\\Rule30CommonPastResearch.lean",
+  "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+  "formula": "H'_j=H_j xor((not B_(j-2)) and H_(j-1)) xor((not A_(j-1)) and H_(j-2)); white padding gives H'_0=H_0 and H'_1=H_1 xor H_0",
+  "input": {
+    "A": 1,
+    "B": 2,
+    "H": 8,
+    "D": 3,
+    "A_older_first": "1000",
+    "B_older_first": "0100",
+    "H_older_first": "0001",
+    "D_older_first": "1100",
+    "common_adjacent_checks": [
+      true,
+      true,
+      true
+    ],
+    "common": true,
+    "subset_coordinate_checks": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "subset": false
+  },
+  "output": {
+    "A": 7,
+    "B": 14,
+    "H": 8,
+    "D": 9,
+    "A_older_first": "1110",
+    "B_older_first": "0111",
+    "H_older_first": "0001",
+    "D_older_first": "1001",
+    "common_adjacent_checks": [
+      true,
+      true,
+      true
+    ],
+    "common": true,
+    "subset_coordinate_checks": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "subset": true
+  },
+  "refuted_statement": "For every finite white-ended triple row, Common(input) and Common(output) and Subset(output) imply Subset(input).",
+  "controls": [
+    "literal Rule30 truth table equals triangular XOR/OR for A and B",
+    "piecewise frozen Mode definition equals independent Boolean white-padding implementation",
+    "all three actual adjacent pairs satisfy Common in both rows",
+    "all four output positions satisfy Subset; input fails exactly at j3"
+  ],
+  "search_performed": false,
+  "BFS_performed": false,
+  "temporal_steps_checked": 1,
+  "all_time_Common_asserted": false,
+  "scope_limit": "This is a finite-prefix two-row counterexample only. No all-time Common history or infinite-half-line completion is supplied; no implication about full Common/Mode initial-Subset preservation or safety completeness follows.",
+  "next_action": "Stop this candidate route; no extra horizons, BFS, or SAT.",
+  "script_sha256": "5b42a0d1e35d7c6e8f1c43bb02cf4895bcf2b7e5377e09d0ef3ecc1ce139fce6"
+}
