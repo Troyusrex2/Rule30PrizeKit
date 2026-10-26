@@ -1,0 +1,1113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[     68517,       1104]
+NotebookOptionsPosition[     65238,       1038]
+NotebookOutlinePosition[     65580,       1053]
+CellTagsIndexPosition[     65537,       1050]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Auxiliary Rule 30 fields have exterior rigidity and unbounded depth\
+\>", "Title",
+ CellID->874461601,ExpressionUUID->"22a1a762-10e3-861e-525e-3f4ca097ed64"],
+
+Cell["Troy Lowry, with OpenAI Codex", "Text",
+ CellID->36768919,ExpressionUUID->"4da796ef-9f57-a4bf-7b5c-0fc91ae30e85"],
+
+Cell[TextData[{
+ StyleBox["Draft for human review. Partial result, not a prize solution.",
+  FontWeight->"Bold"],
+ " For every actual single-seed age pair U>V, an initially subset auxiliary \
+field satisfying the divided-difference update and both-gauge compatibility \
+for all time equals one fixed Boolean phase times the older row at every \
+position beyond the younger right front. The headline is ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"Rule30Submission", ".", "RightWedge", ".", "right_wedge"}], 
+   "_phase", "_subset"}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "1b39f900-6440-cee7-4ac6-f16a0dfa94cd"],
+ ". Its finite-horizon version has a distance-dependent bound; no fixed width \
+or age cutoff is a premise."
+}], "Text",
+ CellID->1699946459,ExpressionUUID->"75d93363-5da6-51a4-23e6-ab4d5453238e"],
+
+Cell[TextData[{
+ "A second uniform theorem now rules out confinement to ANY fixed finite \
+right-edge band, even eventually. Every nonzero auxiliary field over an older \
+canonical background reaches arbitrarily large depths after every time, \
+without W or second-background evolution. Its finite form forces an escape \
+within ceil(L/2) updates after a suitable dyadic return. The ordinary \
+headline is ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+   "Rule30Submission", ".", "BandEscape", ".", "Ordinary", ".", 
+    "arbitrarily_far"}], "_behind", "_front"}]], "InlineFormula",
+  FontSize->0.9 Inherited,ExpressionUUID->
+  "25a568a6-87a2-527f-535a-810032572145"],
+ ". This does not force a black value at the moving center depth."
+}], "Text",
+ CellID->1535504786,ExpressionUUID->"00d7f70d-8d0e-ae34-30ec-ef5724b8f51e"],
+
+Cell["The question", "Section",
+ CellID->1208482393,ExpressionUUID->"2f3e8453-9762-68ea-56c5-1e1d22173a30"],
+
+Cell["\<\
+Problem 1 asks whether the center column of the single-seed Rule 30 pattern \
+is never eventually periodic. A common auxiliary field is a linear comparison \
+tool; it need not itself follow the nonlinear physical rule.\
+\>", "Text",
+ CellID->28909615,ExpressionUUID->"5902d484-617f-9570-0f31-cdee100bfc5a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pattern", " ", "=", " ", 
+   RowBox[{"CellularAutomaton", "[", 
+    RowBox[{"30", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "1", "}"}], ",", " ", "0"}], "}"}], ",", " ", "32"}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{"ImageResize", "[", 
+  RowBox[{
+   RowBox[{"Image", "[", 
+    RowBox[{
+     RowBox[{"1", "-", "pattern"}], ",", " ", "\"\<Bit\>\""}], "]"}], ",", 
+   " ", "500", ",", " ", 
+   RowBox[{"Resampling", " ", "->", " ", "\"\<Nearest\>\""}]}], 
+  "]"}]}], "Input",
+ CellLabel->"In[1]:= ",
+ CellID->193832008,ExpressionUUID->"56e0e12c-de7d-6135-7e9f-f889db08301f"],
+
+Cell["The center prefix controls the initial condition:", "CodeText",
+ CellID->684317082,ExpressionUUID->"5708d032-2150-04f2-7d37-ca7c50e56ed8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"centerPrefix", "=", 
+   RowBox[{"pattern", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"Ceiling", "[", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"First", "[", "pattern", "]"}], "]"}], "/", "2"}], "]"}]}], 
+     "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"ToString", "/@", "centerPrefix"}], "]"}]}], "Input",
+ CellLabel->"In[2]:= ",
+ CellID->528485616,ExpressionUUID->"3b7807e8-9504-b25a-6907-9eb21cb600a0"],
+
+Cell["Exploration", "Section",
+ CellID->1392207227,ExpressionUUID->"166f8969-5e31-e8e5-3e14-21335bc5bacf"],
+
+Cell["\<\
+The gap argument needs more than one compatibility layer. In a sheared \
+half-line, bit i reads input cells i,i+1,i+2. The initial pair a=5,h=1 is \
+locally compatible, but its next layer fails compatibility. These finite \
+calculations illustrate the time requirement; they are not proof premises.\
+\>", "Text",
+ CellID->705466992,ExpressionUUID->"234f1fb7-07c6-bba9-5174-96f1b27009f3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"halfStep", "[", "a_Integer", "]"}], ":=", 
+   RowBox[{"BitXor", "[", 
+    RowBox[{"a", ",", 
+     RowBox[{"BitOr", "[", 
+      RowBox[{
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"a", ",", "1"}], "]"}], ",", 
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"a", ",", "2"}], "]"}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"gaugeStep", "[", 
+    RowBox[{"a_Integer", ",", "h_Integer"}], "]"}], ":=", 
+   RowBox[{"BitXor", "[", 
+    RowBox[{"h", ",", 
+     RowBox[{"BitShiftRight", "[", 
+      RowBox[{"h", ",", "1"}], "]"}], ",", "\n", " ", 
+     RowBox[{"BitAnd", "[", 
+      RowBox[{
+       RowBox[{"BitNot", "[", 
+        RowBox[{"BitShiftRight", "[", 
+         RowBox[{"a", ",", "1"}], "]"}], "]"}], ",", 
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"h", ",", "2"}], "]"}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"wedgeMask", "[", 
+    RowBox[{"a_Integer", ",", "h_Integer"}], "]"}], ":=", 
+   RowBox[{"BitXor", "[", 
+    RowBox[{
+     RowBox[{"BitAnd", "[", 
+      RowBox[{
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"a", ",", "1"}], "]"}], ",", "h"}], "]"}], ",", "\n", " ", 
+     RowBox[{"BitAnd", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"h", ",", "1"}], "]"}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"a0", "=", "5"}], ";", 
+  RowBox[{"h0", "=", "1"}], ";", 
+  RowBox[{"a1", "=", 
+   RowBox[{"halfStep", "[", "a0", "]"}]}], ";", 
+  RowBox[{"h1", "=", 
+   RowBox[{"gaugeStep", "[", 
+    RowBox[{"a0", ",", "h0"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"finiteGapControl", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"wedgeMask", "[", 
+      RowBox[{"a0", ",", "h0"}], "]"}], ",", 
+     RowBox[{"wedgeMask", "[", 
+      RowBox[{"a1", ",", "h1"}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"resetPrefix", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"pattern", "[", 
+      RowBox[{"[", 
+       RowBox[{"17", ",", 
+        RowBox[{
+         RowBox[{"Ceiling", "[", 
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"First", "[", "pattern", "]"}], "]"}], "/", "2"}], "]"}], 
+         "+", "16", "-", "j"}]}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "0", ",", "4"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"{", 
+  RowBox[{"finiteGapControl", ",", "resetPrefix"}], "}"}]}], "Input",
+ CellLabel->"In[3]:= ",
+ CellID->1350516518,ExpressionUUID->"6ee45b93-a0df-d1f6-169c-52dcd16ba3dc"],
+
+Cell["The proof idea", "Section",
+ CellID->907546795,ExpressionUUID->"0a3edd72-e0d3-62fb-3bc5-d53f916630c1"],
+
+Cell["\<\
+Over a zero background, a strong induction on the distance between two sites \
+forces their projective agreement when the right endpoint is black in the \
+actual background. Incompatible endpoint colors would force an empty gap; one \
+update shortens that gap. The asymmetric black endpoint handles the two-cell \
+case without pretending that the auxiliary field is physical. The argument \
+adapts the catalog's XOR-rigidity gap method.\
+\>", "Text",
+ CellID->814772321,ExpressionUUID->"6ec9a758-58be-624c-16f6-3f02594b3096"],
+
+Cell["\<\
+In the moving region beyond the younger right front, the younger canonical \
+row is exactly white. The half-line lemma therefore applies to the actual \
+older background. Its rightmost cell is black, and the auxiliary field's \
+right-edge value is preserved. This gives the single exterior phase. The \
+overlap containing the center and left edge remains unresolved.\
+\>", "Text",
+ CellID->1054628905,ExpressionUUID->"23253b8d-1c99-a6bf-52da-b2d7952d0c85"],
+
+Cell["\<\
+The unbounded-depth argument uses the known dyadic returns of the right \
+diagonals. After such a return the relevant prefix evolves like the single \
+seed. Peeling a proposed finite band backward through that white region \
+forces it empty, and triangular injectivity forces the initial field empty. \
+The finite computations above are controls, not premises of that argument.\
+\>", "Text",
+ CellID->2043779557,ExpressionUUID->"6e84829b-9667-6594-16bb-1bc523124ffe"],
+
+Cell["Formal proof", "Section",
+ CellID->17830494,ExpressionUUID->"569e173f-6b36-b240-7ea5-8f790ec000aa"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Wolfram`LeanLink`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$Rule30PrizeKit", " ", "=", " ", 
+   RowBox[{"Environment", "[", "\"\<RULE30PRIZE_KIT\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[4]:= ",
+ CellID->1589986527,ExpressionUUID->"15a3e88e-0b57-fa6e-4350-01e8aee3c8b4"],
+
+Cell[BoxData[
+ RowBox[{"rule30Submission", " ", "=", " ", 
+  RowBox[{"LeanImportString", "[", 
+   RowBox[{
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"String", 
+        StyleBox[
+        "\"Lean source, 546 lines\"", "IconizedCustomName", StripOnInput -> 
+         False], 
+        GridBox[{{
+           StyleBox[
+           "\"import Rule30PrizeKit\nimport \
+Ruliology.CellularAutomata.Rule30Prize\nimport \
+Ruliology.CellularAutomata.Rule30Diagonals\n\n/-!\nAll-time common-gauge \
+rigidity with a zero background. The auxiliary field\nis not assumed to be a \
+physical Rule30 history. This adapts the catalog's\nXOR-rigidity gap \
+argument, keeping an asymmetric black right endpoint.\nThe right-wedge \
+section applies it uniformly to every actual canonical age\npair U>V. Beyond \
+the younger row's right front, any supported common field\nequals its initial \
+older-right-edge bit times the older canonical row.\nThe finite-horizon \
+version has a distance-dependent bound. The overlap\ncontaining the center \
+and the left edge remains unresolved.\nThe BandEscape section proves that \
+every nonzero field over a canonical\nolder background visits arbitrarily \
+large right-edge depths after every\ntime. It uses dyadic returns and a \
+backward peeling argument, without W\nor an evolution hypothesis for the \
+second coefficient background. This\ndoes not force a visit to the moving \
+center depth.\nProof and formalization: Troy Lowry with OpenAI Codex.\n-/\n\n\
+namespace Rule30Submission\nopen Ruliology.CellularAutomata\nopen \
+Ruliology.CellularAutomata.Rule30Jen (rule)\n\ndef lin (a l c r : Bool) : \
+Bool := xor (xor l c) ((!a) && r)\n\ndef Good (a b c d : Bool) : Prop := (a \
+&& d)=(c && b)\n\ntheorem good_self (a b : Bool) : Good a b a b := rfl\n\
+theorem good_symm : \[ForAll] a b c d : Bool, Good a b c d \[RightArrow] Good \
+c d a b := by\n  unfold Good; decide +kernel\ntheorem middle_zero : \[ForAll] \
+a b c d e f : Bool,\n    \[Not] Good a b e f \[RightArrow] Good a b c d \
+\[RightArrow] Good c d e f \[RightArrow] c=false \[And] d=false := by\n  \
+unfold Good; decide +kernel\n\ntheorem gap_two : \[ForAll] a b d e f : Bool,\n\
+    Good (rule a false true) (lin false b false d)\n      (rule false true e) \
+(lin true false d f) \[RightArrow] Good a b true d := by\n  unfold Good; \
+decide +kernel\n\nnamespace HalfLine\ndef Actual (A : Nat \[RightArrow] Nat \
+\[RightArrow] Bool) : Prop :=\n  \[ForAll] t i, A (t+1) i=rule (A t i) (A t \
+(i+1)) (A t (i+2))\ndef Driven (A h : Nat \[RightArrow] Nat \[RightArrow] \
+Bool) : Prop :=\n  \[ForAll] t i, h (t+1) i=lin (A t (i+1)) (h t i) (h t \
+(i+1)) (h t (i+2))\ndef Common (A h : Nat \[RightArrow] Nat \[RightArrow] \
+Bool) : Prop :=\n  \[ForAll] t i, Good (A t i) (h t i) (A t (i+1)) (h t \
+(i+1))\ndef CommonThrough (A h : Nat \[RightArrow] Nat \[RightArrow] Bool) (N \
+: Nat) : Prop :=\n  \[ForAll] t, t \[LessEqual] N \[RightArrow] \[ForAll] i, \
+Good (A t i) (h t i) (A t (i+1)) (h t (i+1))\n\n/-- No physical-history \
+premise on h. The right endpoint must be black in A. -/\ntheorem \
+distant_good_right_black_through (A h : Nat \[RightArrow] Nat \[RightArrow] \
+Bool)\n    (ha : Actual A) (hh : Driven A h) (N : Nat) (hw : CommonThrough A \
+h N) (d : Nat) :\n    \[ForAll] t p, t+d/2 \[LessEqual] N \[RightArrow] A t \
+(p+d)=true \[RightArrow]\n      Good (A t p) (h t p) (A t (p+d)) (h t (p+d)) \
+:= by\n  induction d using Nat.strongRecOn with\n  | ind d ih =>\n    intro t \
+p ht hblack\n    by_cases hd0 : d=0\n    \[CenterDot] subst d; exact \
+good_self _ _\n    by_cases hd1 : d=1\n    \[CenterDot] subst d; exact hw t \
+(by omega) p\n    apply Classical.byContradiction\n    intro bad\n    have \
+mid : \[ForAll] k, p<k \[RightArrow] k<p+d \[RightArrow] A t k=false \[And] h \
+t k=false := by\n      intro k hpk hkq\n      have hr := ih (p+d-k) (by \
+omega) t k (by omega)\n        (by simpa [show k+(p+d-k)=p+d by omega] using \
+hblack)\n      rw [show k+(p+d-k)=p+d by omega] at hr\n      by_cases hak : A \
+t k=true\n      \[CenterDot] have hl := ih (k-p) (by omega) t p (by omega)\n  \
+        (by simpa [show p+(k-p)=k by omega] using hak)\n        rw [show \
+p+(k-p)=k by omega] at hl\n        have hz := middle_zero _ _ _ _ _ _ bad hl \
+hr\n        rw [hak] at hz\n        cases hz.1\n      \[CenterDot] have hak0 \
+: A t k=false := by cases he : A t k <;> simp_all\n        refine \:27e8hak0, \
+?_\:27e9\n        simpa [Good, hak0, hblack] using hr.symm\n    by_cases hd2 \
+: d=2\n    \[CenterDot] subst d\n      obtain \:27e8az,hz\:27e9 := mid (p+1) \
+(by omega) (by omega)\n      have hn := hw (t+1) (by omega) p\n      rw [ha t \
+p, hh t p, ha t (p+1), hh t (p+1), az,hz,\n        show p+1+1=p+2 by omega, \
+show p+1+2=p+3 by omega, hblack] at hn\n      apply bad\n      rw [hblack]\n  \
+    exact gap_two (A t p) (h t p) (h t (p+2)) (A t (p+3)) (h t (p+3)) hn\n    \
+\[CenterDot] obtain \:27e8a1,h1\:27e9 := mid (p+1) (by omega) (by omega)\n    \
+  obtain \:27e8a2,h2\:27e9 := mid (p+2) (by omega) (by omega)\n      obtain \
+\:27e8az,hz\:27e9 := mid (p+d-2) (by omega) (by omega)\n      obtain \
+\:27e8az1,hz1\:27e9 := mid (p+d-1) (by omega) (by omega)\n      have \
+hnextblack : A (t+1) (p+(d-2))=true := by\n        rw [show p+(d-2)=p+d-2 by \
+omega, ha, az,\n          show p+d-2+1=p+d-1 by omega, show p+d-2+2=p+d by \
+omega, az1,hblack]\n        rfl\n      have hn := ih (d-2) (by omega) (t+1) p \
+(by omega) hnextblack\n      rw [show p+(d-2)=p+d-2 by omega, ha t p,hh t p,\n\
+        ha t (p+d-2),hh t (p+d-2), a1,h1,a2,h2,az,hz,\n        show \
+p+d-2+1=p+d-1 by omega, show p+d-2+2=p+d by omega,\n        az1,hz1,hblack] \
+at hn\n      exact bad (by simpa [rule,lin,hblack] using hn)\n\ntheorem \
+distant_good_right_black (A h : Nat \[RightArrow] Nat \[RightArrow] Bool)\n   \
+ (ha : Actual A) (hh : Driven A h) (hw : Common A h) (d t p : Nat)\n    \
+(hblack : A t (p+d)=true) :\n    Good (A t p) (h t p) (A t (p+d)) (h t (p+d)) \
+:=\n  distant_good_right_black_through A h ha hh (t+d/2) (fun s _ i => hw s \
+i)\n    d t p (by omega) hblack\n\ntheorem initial_phase (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool)\n    (ha : Actual A) (hh : Driven A h) \
+(hw : Common A h)\n    (hs : \[ForAll] i, (h 0 i && A 0 i)=h 0 i) :\n    \
+\[Exists] b : Bool, \[ForAll] i, h 0 i=(b && A 0 i) := by\n  by_cases hex : \
+\[Exists] q, A 0 q=true\n  \[CenterDot] obtain \:27e8q,hq\:27e9 := hex\n    \
+refine \:27e8h 0 q, ?_\:27e9\n    intro p\n    cases hp : A 0 p with\n    | \
+false => simpa [hp] using (hs p).symm\n    | true =>\n      have hg : Good (A \
+0 p) (h 0 p) (A 0 q) (h 0 q) := by\n        by_cases hle : p \[LessEqual] q\n \
+       \[CenterDot] have hg := distant_good_right_black A h ha hh hw (q-p) 0 \
+p\n            (by simpa [Nat.add_sub_of_le hle] using hq)\n          simpa \
+[Nat.add_sub_of_le hle] using hg\n        \[CenterDot] have hg := \
+distant_good_right_black A h ha hh hw (p-q) 0 q\n            (by simpa \
+[Nat.add_sub_of_le (by omega : q \[LessEqual] p)] using hp)\n          apply \
+good_symm\n          simpa [Nat.add_sub_of_le (by omega : q \[LessEqual] p)] \
+using hg\n      simpa [Good,hp,hq] using hg.symm\n  \[CenterDot] refine \
+\:27e8false, ?_\:27e9\n    intro p\n    have hp : A 0 p=false := by\n      \
+cases he : A 0 p with\n      | false => rfl\n      | true => exact False.elim \
+(hex \:27e8p,he\:27e9)\n    simpa [hp] using (hs p).symm\n\ntheorem lin_self \
+: \[ForAll] a b c : Bool, lin b a b c=rule a b c := by decide +kernel\n\n\
+theorem common_mode_classification (A h : Nat \[RightArrow] Nat \[RightArrow] \
+Bool)\n    (ha : Actual A) (hh : Driven A h) (hw : Common A h)\n    (hs : \
+\[ForAll] i, (h 0 i && A 0 i)=h 0 i) :\n    \[Exists] b : Bool, \[ForAll] t \
+i, h t i=(b && A t i) := by\n  obtain \:27e8b,hb\:27e9 := initial_phase A h \
+ha hh hw hs\n  refine \:27e8b, ?_\:27e9\n  intro t\n  induction t with\n  | \
+zero => exact hb\n  | succ t ih =>\n    intro i\n    rw [hh t i, ih i,ih \
+(i+1),ih (i+2),ha t i]\n    cases b\n    \[CenterDot] simp [lin]\n    \
+\[CenterDot] simpa using lin_self (A t i) (A t (i+1)) (A t (i+2))\n\nend \
+HalfLine\n\nnamespace RightWedge\nopen \
+_root_.Ruliology.CellularAutomata.Rule30Jen (cell)\n\ndef delta (U V t : Nat) \
+(p : Int) := xor (cell (U+t) p) (cell (V+t) p)\ndef dStep (U V : Nat) (h : \
+Nat \[RightArrow] Int \[RightArrow] Bool) (t : Nat) (p : Int) :=\n  xor (xor \
+(h t (p-1)) ((!cell (V+t) (p+1)) && h t p))\n    ((!cell (U+t) p) && h t \
+(p+1))\ndef Mode (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) : \
+Prop :=\n  \[ForAll] t p, h (t+1) p=dStep U V h t p\ndef Common (U V : Nat) \
+(h : Nat \[RightArrow] Int \[RightArrow] Bool) : Prop :=\n  \[ForAll] t p, \
+Good (delta U V t p) (h t p) (delta U V t (p+1)) (h t (p+1))\ndef \
+CommonThrough (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (N : \
+Nat) : Prop :=\n  \[ForAll] t, t \[LessEqual] N \[RightArrow] \[ForAll] p, \
+Good (delta U V t p) (h t p) (delta U V t (p+1)) (h t (p+1))\n\ndef site (V t \
+i : Nat) : Int := (V : Int)+1+t+i\ndef rightA (U V : Nat) (t i : Nat) := cell \
+(U+t) (site V t i)\ndef rightH (V : Nat) (h : Nat \[RightArrow] Int \
+\[RightArrow] Bool) (t i : Nat) := h t (site V t i)\n\ntheorem site_left (V t \
+i : Nat) : site V (t+1) i-1=site V t i := by\n  simp only [site]; omega\n\
+theorem site_center (V t i : Nat) : site V (t+1) i=site V t (i+1) := by\n  \
+simp only [site]; omega\ntheorem site_right (V t i : Nat) : site V (t+1) \
+i+1=site V t (i+2) := by\n  simp only [site]; omega\ntheorem site_neighbor (V \
+t i : Nat) : site V t i+1=site V t (i+1) := by\n  simp only [site]; omega\n\
+theorem younger_white (V t i : Nat) : cell (V+t) (site V t i)=false := by\n  \
+apply Rule30Diagonals.cell_eq_false_of_gt\n  simp only [site]; omega\n\n\
+theorem right_cut_actual (U V : Nat) : HalfLine.Actual (rightA U V) := by\n  \
+intro t i\n  change cell (U+(t+1)) (site V (t+1) i)=_\n  rw [show \
+U+(t+1)=(U+t)+1 by omega]\n  change rule (cell (U+t) (site V (t+1) i-1)) \
+(cell (U+t) (site V (t+1) i))\n    (cell (U+t) (site V (t+1) i+1)) = _\n  rw \
+[site_left, site_right, site_center]\n  rfl\n\ntheorem right_cut_driven (U V \
+: Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (hh : Mode U V h) :\n   \
+ HalfLine.Driven (rightA U V) (rightH V h) := by\n  intro t i\n  have hm := \
+hh t (site V (t+1) i)\n  unfold dStep at hm\n  rw \
+[site_left,site_right,site_center,younger_white] at hm\n  simpa only \
+[rightA,rightH,lin,site_center,Bool.not_false,Bool.true_and] using hm\n\n\
+theorem right_cut_common (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] \
+Bool) (hw : Common U V h) :\n    HalfLine.Common (rightA U V) (rightH V h) := \
+by\n  intro t i\n  have hm := hw t (site V t i)\n  unfold delta at hm\n  rw \
+[site_neighbor,younger_white,younger_white] at hm\n  simpa only \
+[rightA,rightH,Bool.xor_false] using hm\n\ntheorem right_cut_common_through \
+(U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (N : Nat)\n    (hw \
+: CommonThrough U V h N) :\n    HalfLine.CommonThrough (rightA U V) (rightH V \
+h) N := by\n  intro t ht i\n  have hm := hw t ht (site V t i)\n  unfold delta \
+at hm\n  rw [site_neighbor,younger_white,younger_white] at hm\n  simpa only \
+[rightA,rightH,Bool.xor_false] using hm\n\ntheorem mode_right_white (U V : \
+Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (hh : Mode U V h)\n    \
+(hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) :\n    \[ForAll] \
+(t : Nat) (p : Int), (U : Int)+t < p \[RightArrow] h t p=false := by\n  intro \
+t\n  induction t with\n  | zero => intro p hp; exact hi p (by omega)\n  | \
+succ t ih =>\n    intro p hp\n    rw [hh t p]\n    simp only [dStep,ih (p-1) \
+(by omega),ih p (by omega),ih (p+1) (by omega)]\n    simp\n\ntheorem \
+mode_right_edge (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) \
+(hh : Mode U V h)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 \
+p=false) :\n    \[ForAll] t, h t ((U : Int)+t)=h 0 U := by\n  intro t\n  \
+induction t with\n  | zero => simp\n  | succ t ih =>\n    rw [hh]\n    have e \
+: (U : Int)+(t+1 : Nat)-1=(U : Int)+t := by omega\n    have hw0 := \
+mode_right_white U V h hh hi t ((U : Int)+(t+1 : Nat)) (by omega)\n    have \
+hw1 := mode_right_white U V h hh hi t ((U : Int)+(t+1 : Nat)+1) (by omega)\n  \
+  rw [dStep,e,hw0,hw1]\n    simpa using ih\n\n/-- A finite, \
+distance-dependent common-gauge horizon suffices in the right\nexterior. It \
+does not give a fixed horizon independent of the ages. -/\ntheorem \
+right_wedge_phase_through (U V : Nat) (hUV : V<U) (h : Nat \[RightArrow] Int \
+\[RightArrow] Bool)\n    (hh : Mode U V h) (N : Nat) (hw : CommonThrough U V \
+h N)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false)\n    (t \
+: Nat) (p : Int) (hp : (V : Int)+t < p)\n    (ht : t+((U : Int)+t-p).toNat/2 \
+\[LessEqual] N) :\n    h t p=(h 0 U && cell (U+t) p) := by\n  by_cases hout : \
+(U : Int)+t < p\n  \[CenterDot] rw [mode_right_white U V h hh hi t p hout,\n  \
+    Rule30Diagonals.cell_eq_false_of_gt (U+t) p (by omega)]\n    simp\n  \
+\[CenterDot] let i := (p-((V : Int)+1+t)).toNat\n    let q := U-V-1\n    have \
+hiq : i \[LessEqual] q := by dsimp [i,q]; omega\n    have hsi : site V t i=p \
+:= by dsimp [site,i]; omega\n    have hsq : site V t q=(U : Int)+t := by \
+dsimp [site,q]; omega\n    have heq : i+(q-i)=q := Nat.add_sub_of_le hiq\n    \
+have hd : q-i=((U : Int)+t-p).toNat := by dsimp [q,i]; omega\n    have hblack \
+: rightA U V t (i+(q-i))=true := by\n      rw [heq]\n      change cell (U+t) \
+(site V t q)=true\n      rw [hsq]\n      simpa only \
+[Rule30Diagonals.R,Int.natCast_zero,Int.sub_zero,Int.natCast_add] using\n     \
+   Rule30Diagonals.R_zero (U+t)\n    have hg := \
+HalfLine.distant_good_right_black_through (rightA U V) (rightH V h)\n      \
+(right_cut_actual U V) (right_cut_driven U V h hh) N\n      \
+(right_cut_common_through U V h N hw) (q-i) t i (by omega) hblack\n    rw \
+[heq] at hg\n    have haedge : cell (U+t) ((U : Int)+t)=true := by\n      \
+simpa only [Rule30Diagonals.R,Int.natCast_zero,Int.sub_zero,Int.natCast_add] \
+using\n        Rule30Diagonals.R_zero (U+t)\n    simpa \
+[rightA,rightH,hsi,hsq,Good,haedge,mode_right_edge U V h hh hi t,\n      \
+Bool.and_comm] using hg.symm\n\n/-- All-time consequence for every actual \
+canonical age pair U>V. -/\ntheorem right_wedge_phase (U V : Nat) (hUV : V<U) \
+(h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hh : Mode U V h) (hw : \
+Common U V h)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 \
+p=false) :\n    \[ForAll] (t : Nat) (p : Int), (V : Int)+t < p \[RightArrow] \
+h t p=(h 0 U && cell (U+t) p) := by\n  intro t p hp\n  exact \
+right_wedge_phase_through U V hUV h hh (t+((U : Int)+t-p).toNat/2)\n    (fun \
+s _ x => hw s x) hi t p hp (by omega)\n\ntheorem subset_right_white (U V : \
+Nat) (hUV : V<U) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hs : \
+\[ForAll] p, (h 0 p && delta U V 0 p)=h 0 p) :\n    \[ForAll] p, (U : Int) < \
+p \[RightArrow] h 0 p=false := by\n  intro p hp\n  have ha := \
+Rule30Diagonals.cell_eq_false_of_gt U p hp\n  have hb := \
+Rule30Diagonals.cell_eq_false_of_gt V p (by omega)\n  have h := hs p\n  simpa \
+[delta,ha,hb] using h.symm\n\ntheorem right_wedge_phase_subset (U V : Nat) \
+(hUV : V<U) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hh : Mode U \
+V h) (hw : Common U V h)\n    (hs : \[ForAll] p, (h 0 p && delta U V 0 p)=h 0 \
+p) :\n    \[ForAll] (t : Nat) (p : Int), (V : Int)+t < p \[RightArrow] h t \
+p=(h 0 U && cell (U+t) p) :=\n  right_wedge_phase U V hUV h hh hw \
+(subset_right_white U V hUV h hs)\n\nend RightWedge\n\nnamespace BandEscape\n\
+open _root_.Ruliology.CellularAutomata.Rule30Diagonals (R R_periodic)\n\ndef \
+step (a b h : Nat \[RightArrow] Bool) : Nat \[RightArrow] Bool\n  | 0 => h 0\n\
+  | 1 => xor (h 1) (h 0)\n  | j+2 => xor (xor (h (j+2)) ((!b j) && h (j+1))) \
+((!a (j+1)) && h j)\n\ndef Evolution (a b h : Nat \[RightArrow] Nat \
+\[RightArrow] Bool) : Prop :=\n  \[ForAll] t j, h (t+1) j=step (a t) (b t) (h \
+t) j\n\ndef canonical (U t j : Nat) : Bool := R j (U+t)\n\ntheorem \
+R_periodic_mul (j q t : Nat) : R j (t+q*2^j)=R j t := by\n  induction q with\n\
+  | zero => simp\n  | succ q ih =>\n    rw [Nat.succ_mul,show \
+t+(q*2^j+2^j)=(t+q*2^j)+2^j by omega,R_periodic,ih]\n\ntheorem \
+R_dyadic_return (E j k : Nat) (hj : j \[LessEqual] E) : R j (2^E+k)=R j k := \
+by\n  have hp : 2^E=2^(E-j)*2^j := by\n    rw [\[LeftArrow] \
+Nat.pow_add,Nat.sub_add_cancel hj]\n  rw [show 2^E+k=k+2^(E-j)*2^j by \
+omega,R_periodic_mul]\n\ntheorem R_white (k j : Nat) (hj : 2*k < j) : R j \
+k=false := by\n  apply Rule30Jen.cell_eq_false_of_lt\n  omega\n\ntheorem \
+step_zero (a b h : Nat \[RightArrow] Bool) (hz : \[ForAll] j, step a b h \
+j=false) :\n    \[ForAll] j, h j=false := by\n  intro j\n  induction j using \
+Nat.strongRecOn with\n  | ind j ih =>\n    cases j with\n    | zero => exact \
+hz 0\n    | succ j =>\n      cases j with\n      | zero => simpa [step,ih 0 \
+(by omega)] using hz 1\n      | succ j => simpa [step,ih j (by omega),ih \
+(j+1) (by omega)] using hz (j+2)\n\ntheorem zero_of_later_zero (a b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution a b h) (t : Nat) :\n    \
+(\[ForAll] j, h t j=false) \[RightArrow] \[ForAll] j, h 0 j=false := by\n  \
+induction t with\n  | zero => exact fun hz => hz\n  | succ t ih =>\n    intro \
+hz\n    apply ih\n    apply step_zero (a t) (b t) (h t)\n    intro j\n    rw \
+[\[LeftArrow] hh t j]\n    exact hz j\n\n/-- Peel two cells backward through \
+a white part of the older background. -/\ntheorem peel (a b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution a b h) (k L : Nat)\n    \
+(ha : \[ForAll] j, 2*k < j \[RightArrow] j \[LessEqual] L \[RightArrow] a k \
+j=false)\n    (hb : \[ForAll] j, L \[LessEqual] j \[RightArrow] h k j=false)\n\
+    (hn : \[ForAll] j, 2*(k+1) \[LessEqual] j \[RightArrow] h (k+1) j=false) \
+:\n    \[ForAll] j, 2*k \[LessEqual] j \[RightArrow] h k j=false := by\n  \
+have key : \[ForAll] n : Nat, \[ForAll] j, L-j=n \[RightArrow] 2*k \
+\[LessEqual] j \[RightArrow] h k j=false := by\n    intro n\n    induction n \
+using Nat.strongRecOn with\n    | ind n ih =>\n      intro j hj hk\n      \
+by_cases hlarge : L \[LessEqual] j\n      \[CenterDot] exact hb j hlarge\n    \
+  \[CenterDot] have h1 := ih (L-(j+1)) (by omega) (j+1) rfl (by omega)\n      \
+  have h2 := ih (L-(j+2)) (by omega) (j+2) rfl (by omega)\n        have hm := \
+hh k (j+2)\n        rw [hn (j+2) (by omega)] at hm\n        simpa \
+[step,h1,h2,ha (j+1) (by omega) (by omega)] using hm.symm\n  intro j hj\n  \
+exact key (L-j) j rfl hj\n\n/-- At a dyadic return, a finite window of band \
+confinement forces h=0. -/\ntheorem window_forces_zero (U E L K tau : Nat) \
+(he : L \[LessEqual] E) (ht : U+tau=2^E)\n    (hk : L \[LessEqual] 2*K)\n    \
+(b h : Nat \[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution (canonical \
+U) b h)\n    (hb : \[ForAll] k, k \[LessEqual] K \[RightArrow] \[ForAll] j, L \
+\[LessEqual] j \[RightArrow] h (tau+k) j=false) :\n    \[ForAll] j, h 0 \
+j=false := by\n  let A : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> R j (2^E+k)\n  let B : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> b (tau+k) j\n  let H : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> h (tau+k) j\n  have hH : Evolution A B H := by\n    intro k j\n    have hm \
+:= hh (tau+k) j\n    have ht' : U+(tau+k)=2^E+k := by omega\n    change h \
+((tau+k)+1) j=step (fun j => R j (U+(tau+k))) (b (tau+k)) (h (tau+k)) j at hm\
+\n    rw [ht'] at hm\n    simpa only [H,A,B,Nat.add_assoc] using hm\n  have \
+white : \[ForAll] k j, 2*k < j \[RightArrow] j \[LessEqual] L \[RightArrow] A \
+k j=false := by\n    intro k j hj hjL\n    change R j (2^E+k)=false\n    rw \
+[R_dyadic_return E j k (by omega)]\n    exact R_white k j hj\n  have back : \
+\[ForAll] n : Nat, n \[LessEqual] K \[RightArrow] \[ForAll] j, 2*(K-n) \
+\[LessEqual] j \[RightArrow] H (K-n) j=false := by\n    intro n\n    \
+induction n with\n    | zero =>\n      intro _ j hj\n      exact hb K (by \
+omega) j (by omega)\n    | succ n ih =>\n      intro hn\n      apply peel A B \
+H hH (K-(n+1)) L\n      \[CenterDot] exact white (K-(n+1))\n      \
+\[CenterDot] intro j hj\n        exact hb (K-(n+1)) (by omega) j hj\n      \
+\[CenterDot] intro j hj\n        have heq : K-n=(K-(n+1))+1 := by omega\n     \
+   simpa only [heq] using ih (by omega) j (by omega)\n  have hz : \[ForAll] \
+j, h tau j=false := by\n    intro j\n    simpa [H] using back K (by omega) j \
+(by omega)\n  exact zero_of_later_zero (canonical U) b h hh tau hz\n\ntheorem \
+small_pow (n : Nat) : n < 2^n := by\n  induction n with\n  | zero => decide\n \
+ | succ n ih => rw [Nat.pow_succ]; omega\n\n/-- No W, no second-background \
+recurrence and no initial subset premise. -/\ntheorem \
+no_eventually_bounded_band (U : Nat) (b h : Nat \[RightArrow] Nat \
+\[RightArrow] Bool)\n    (hh : Evolution (canonical U) b h) (hne : \[Exists] \
+j, h 0 j=true) :\n    \[Not] \[Exists] T L : Nat, \[ForAll] t, T \[LessEqual] \
+t \[RightArrow] \[ForAll] j, L \[LessEqual] j \[RightArrow] h t j=false := by\
+\n  rintro \:27e8T,L,hb\:27e9\n  let E := U+T+L+1\n  let tau := 2^E-U\n  have \
+hp := small_pow E\n  have hreset : U+tau=2^E := by dsimp [E,tau] at *; omega\n\
+  have htau : T \[LessEqual] tau := by dsimp [E,tau] at *; omega\n  have hz \
+:= window_forces_zero U E L L tau (by dsimp [E]; omega) hreset (by omega) b h \
+hh\n    (fun k _ j hj => hb (tau+k) (by omega) j hj)\n  obtain \:27e8j,hj\
+\:27e9 := hne\n  rw [hz j] at hj\n  cases hj\n\n/-- An explicit finite escape \
+window after any chosen dyadic return. -/\ntheorem escapes_near_reset (U E L \
+tau : Nat) (he : L \[LessEqual] E) (ht : U+tau=2^E)\n    (b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution (canonical U) b h)\n    \
+(hne : \[Exists] j, h 0 j=true) :\n    \[Exists] k, k \[LessEqual] (L+1)/2 \
+\[And] \[Exists] j, L \[LessEqual] j \[And] h (tau+k) j=true := by\n  apply \
+Classical.byContradiction\n  intro hn\n  have hb : \[ForAll] k, k \
+\[LessEqual] (L+1)/2 \[RightArrow] \[ForAll] j, L \[LessEqual] j \
+\[RightArrow] h (tau+k) j=false := by\n    intro k hk j hj\n    cases hc : h \
+(tau+k) j with\n    | false => rfl\n    | true => exact False.elim (hn \
+\:27e8k,hk,j,hj,hc\:27e9)\n  have hz := window_forces_zero U E L ((L+1)/2) \
+tau he ht (by omega) b h hh hb\n  obtain \:27e8j,hj\:27e9 := hne\n  rw [hz j] \
+at hj\n  cases hj\n\ntheorem arbitrarily_deep_after_any_time (U : Nat) (b h : \
+Nat \[RightArrow] Nat \[RightArrow] Bool)\n    (hh : Evolution (canonical U) \
+b h) (hne : \[Exists] j, h 0 j=true) (T L : Nat) :\n    \[Exists] t, T \
+\[LessEqual] t \[And] \[Exists] j, L \[LessEqual] j \[And] h t j=true := by\n \
+ apply Classical.byContradiction\n  intro hn\n  apply \
+no_eventually_bounded_band U b h hh hne\n  refine \:27e8T,L,?_\:27e9\n  intro \
+t ht j hj\n  cases hc : h t j with\n  | false => rfl\n  | true => exact \
+False.elim (hn \:27e8t,ht,j,hj,hc\:27e9)\n\n\nnamespace Ordinary\nopen \
+_root_.Ruliology.CellularAutomata.Rule30Jen (cell)\n\ndef read (U : Nat) (h : \
+Nat \[RightArrow] Int \[RightArrow] Bool) (t j : Nat) : Bool :=\n  h t ((U : \
+Int)+t-j)\ndef readB (U V t j : Nat) : Bool := cell (V+t) ((U : Int)+t-j)\n\n\
+theorem read_evolution (U V : Nat) (hUV : V \[LessEqual] U) (h : Nat \
+\[RightArrow] Int \[RightArrow] Bool)\n    (hh : RightWedge.Mode U V h) (hi : \
+\[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) :\n    Evolution \
+(canonical U) (readB U V) (read U h) := by\n  intro t j\n  cases j with\n  | \
+zero =>\n    change h (t+1) ((U : Int)+(t+1)-0)=h t ((U : Int)+t-0)\n    simp \
+only [Int.sub_zero]\n    have h1 := RightWedge.mode_right_edge U V h hh hi \
+(t+1)\n    have h0 := RightWedge.mode_right_edge U V h hh hi t\n    simpa \
+only [Int.natCast_add,Int.natCast_one] using h1.trans h0.symm\n  | succ j =>\n\
+    cases j with\n    | zero =>\n      have hm := hh t ((U : Int)+t)\n      \
+unfold RightWedge.dStep at hm\n      have hb := \
+Rule30Diagonals.cell_eq_false_of_gt (V+t) ((U : Int)+t+1) (by omega)\n      \
+have hz := RightWedge.mode_right_white U V h hh hi t ((U : Int)+t+1) (by \
+omega)\n      rw [hb,hz] at hm\n      change h (t+1) ((U : Int)+(t+1)-1)=_\n  \
+    rw [show (U : Int)+(t+1)-1=(U : Int)+t by omega]\n      simpa [read,step] \
+using hm\n    | succ j =>\n      let p : Int := (U : Int)+(t+1)-(j+2)\n      \
+have hl : p-1=(U : Int)+t-(j+2) := by dsimp [p]; omega\n      have hc : p=(U \
+: Int)+t-(j+1) := by dsimp [p]; omega\n      have hr : p+1=(U : Int)+t-j := \
+by dsimp [p]; omega\n      have hm := hh t p\n      unfold RightWedge.dStep \
+at hm\n      rw [hl,hr,hc] at hm\n      change h (t+1) p=step (canonical U t) \
+(readB U V t) (read U h t) (j+2)\n      rw [hc]\n      simpa \
+[read,readB,step,canonical,R,Int.natCast_add] using hm\n\ntheorem \
+read_nonzero (U : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    \
+(hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) (hne : \[Exists] \
+p, h 0 p=true) :\n    \[Exists] j, read U h 0 j=true := by\n  obtain \
+\:27e8p,hp\:27e9 := hne\n  have hpU : p \[LessEqual] U := by\n    apply \
+Classical.byContradiction\n    intro hn\n    rw [hi p (by omega)] at hp\n    \
+cases hp\n  refine \:27e8((U : Int)-p).toNat,?_\:27e9\n  have he : (U : \
+Int)+0-(((U : Int)-p).toNat : Int)=p := by omega\n  simpa only \
+[read,Int.natCast_zero,he] using hp\n\n/-- Ordinary coordinates: every \
+nonzero initially upper-bounded D field\nvisits arbitrarily far behind the \
+older moving right front, after every time.\nNo common-gauge or initial \
+subset hypothesis is used. -/\ntheorem arbitrarily_far_behind_front (U V : \
+Nat) (hUV : V \[LessEqual] U)\n    (h : Nat \[RightArrow] Int \[RightArrow] \
+Bool) (hh : RightWedge.Mode U V h)\n    (hi : \[ForAll] p, (U : Int) < p \
+\[RightArrow] h 0 p=false) (hne : \[Exists] p, h 0 p=true)\n    (T L : Nat) :\
+\n    \[Exists] t, T \[LessEqual] t \[And] \[Exists] p : Int, p \[LessEqual] \
+(U : Int)+t-L \[And] h t p=true := by\n  obtain \:27e8t,ht,j,hj,hblack\:27e9 \
+:= arbitrarily_deep_after_any_time U (readB U V) (read U h)\n    \
+(read_evolution U V hUV h hh hi) (read_nonzero U h hi hne) T L\n  exact \
+\:27e8t,ht,(U : Int)+t-j,by omega,hblack\:27e9\n\nend Ordinary\n\nend \
+BandEscape\nend Rule30Submission\n\"", ShowStringCharacters -> False, 
+            FontFamily -> "Source Code Pro"]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]},
+       "IconizedObject"]],
+     "import Rule30PrizeKit\nimport Ruliology.CellularAutomata.Rule30Prize\n\
+import Ruliology.CellularAutomata.Rule30Diagonals\n\n/-!\nAll-time \
+common-gauge rigidity with a zero background. The auxiliary field\nis not \
+assumed to be a physical Rule30 history. This adapts the catalog's\n\
+XOR-rigidity gap argument, keeping an asymmetric black right endpoint.\nThe \
+right-wedge section applies it uniformly to every actual canonical age\npair \
+U>V. Beyond the younger row's right front, any supported common field\nequals \
+its initial older-right-edge bit times the older canonical row.\nThe \
+finite-horizon version has a distance-dependent bound. The overlap\n\
+containing the center and the left edge remains unresolved.\nThe BandEscape \
+section proves that every nonzero field over a canonical\nolder background \
+visits arbitrarily large right-edge depths after every\ntime. It uses dyadic \
+returns and a backward peeling argument, without W\nor an evolution \
+hypothesis for the second coefficient background. This\ndoes not force a \
+visit to the moving center depth.\nProof and formalization: Troy Lowry with \
+OpenAI Codex.\n-/\n\nnamespace Rule30Submission\nopen \
+Ruliology.CellularAutomata\nopen Ruliology.CellularAutomata.Rule30Jen (rule)\n\
+\ndef lin (a l c r : Bool) : Bool := xor (xor l c) ((!a) && r)\n\ndef Good (a \
+b c d : Bool) : Prop := (a && d)=(c && b)\n\ntheorem good_self (a b : Bool) : \
+Good a b a b := rfl\ntheorem good_symm : \[ForAll] a b c d : Bool, Good a b c \
+d \[RightArrow] Good c d a b := by\n  unfold Good; decide +kernel\ntheorem \
+middle_zero : \[ForAll] a b c d e f : Bool,\n    \[Not] Good a b e f \
+\[RightArrow] Good a b c d \[RightArrow] Good c d e f \[RightArrow] c=false \
+\[And] d=false := by\n  unfold Good; decide +kernel\n\ntheorem gap_two : \
+\[ForAll] a b d e f : Bool,\n    Good (rule a false true) (lin false b false \
+d)\n      (rule false true e) (lin true false d f) \[RightArrow] Good a b \
+true d := by\n  unfold Good; decide +kernel\n\nnamespace HalfLine\ndef Actual \
+(A : Nat \[RightArrow] Nat \[RightArrow] Bool) : Prop :=\n  \[ForAll] t i, A \
+(t+1) i=rule (A t i) (A t (i+1)) (A t (i+2))\ndef Driven (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) : Prop :=\n  \[ForAll] t i, h (t+1) \
+i=lin (A t (i+1)) (h t i) (h t (i+1)) (h t (i+2))\ndef Common (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) : Prop :=\n  \[ForAll] t i, Good (A t \
+i) (h t i) (A t (i+1)) (h t (i+1))\ndef CommonThrough (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (N : Nat) : Prop :=\n  \[ForAll] t, t \
+\[LessEqual] N \[RightArrow] \[ForAll] i, Good (A t i) (h t i) (A t (i+1)) (h \
+t (i+1))\n\n/-- No physical-history premise on h. The right endpoint must be \
+black in A. -/\ntheorem distant_good_right_black_through (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool)\n    (ha : Actual A) (hh : Driven A h) \
+(N : Nat) (hw : CommonThrough A h N) (d : Nat) :\n    \[ForAll] t p, t+d/2 \
+\[LessEqual] N \[RightArrow] A t (p+d)=true \[RightArrow]\n      Good (A t p) \
+(h t p) (A t (p+d)) (h t (p+d)) := by\n  induction d using Nat.strongRecOn \
+with\n  | ind d ih =>\n    intro t p ht hblack\n    by_cases hd0 : d=0\n    \
+\[CenterDot] subst d; exact good_self _ _\n    by_cases hd1 : d=1\n    \
+\[CenterDot] subst d; exact hw t (by omega) p\n    apply \
+Classical.byContradiction\n    intro bad\n    have mid : \[ForAll] k, p<k \
+\[RightArrow] k<p+d \[RightArrow] A t k=false \[And] h t k=false := by\n      \
+intro k hpk hkq\n      have hr := ih (p+d-k) (by omega) t k (by omega)\n      \
+  (by simpa [show k+(p+d-k)=p+d by omega] using hblack)\n      rw [show \
+k+(p+d-k)=p+d by omega] at hr\n      by_cases hak : A t k=true\n      \
+\[CenterDot] have hl := ih (k-p) (by omega) t p (by omega)\n          (by \
+simpa [show p+(k-p)=k by omega] using hak)\n        rw [show p+(k-p)=k by \
+omega] at hl\n        have hz := middle_zero _ _ _ _ _ _ bad hl hr\n        \
+rw [hak] at hz\n        cases hz.1\n      \[CenterDot] have hak0 : A t \
+k=false := by cases he : A t k <;> simp_all\n        refine \:27e8hak0, ?_\
+\:27e9\n        simpa [Good, hak0, hblack] using hr.symm\n    by_cases hd2 : \
+d=2\n    \[CenterDot] subst d\n      obtain \:27e8az,hz\:27e9 := mid (p+1) \
+(by omega) (by omega)\n      have hn := hw (t+1) (by omega) p\n      rw [ha t \
+p, hh t p, ha t (p+1), hh t (p+1), az,hz,\n        show p+1+1=p+2 by omega, \
+show p+1+2=p+3 by omega, hblack] at hn\n      apply bad\n      rw [hblack]\n  \
+    exact gap_two (A t p) (h t p) (h t (p+2)) (A t (p+3)) (h t (p+3)) hn\n    \
+\[CenterDot] obtain \:27e8a1,h1\:27e9 := mid (p+1) (by omega) (by omega)\n    \
+  obtain \:27e8a2,h2\:27e9 := mid (p+2) (by omega) (by omega)\n      obtain \
+\:27e8az,hz\:27e9 := mid (p+d-2) (by omega) (by omega)\n      obtain \
+\:27e8az1,hz1\:27e9 := mid (p+d-1) (by omega) (by omega)\n      have \
+hnextblack : A (t+1) (p+(d-2))=true := by\n        rw [show p+(d-2)=p+d-2 by \
+omega, ha, az,\n          show p+d-2+1=p+d-1 by omega, show p+d-2+2=p+d by \
+omega, az1,hblack]\n        rfl\n      have hn := ih (d-2) (by omega) (t+1) p \
+(by omega) hnextblack\n      rw [show p+(d-2)=p+d-2 by omega, ha t p,hh t p,\n\
+        ha t (p+d-2),hh t (p+d-2), a1,h1,a2,h2,az,hz,\n        show \
+p+d-2+1=p+d-1 by omega, show p+d-2+2=p+d by omega,\n        az1,hz1,hblack] \
+at hn\n      exact bad (by simpa [rule,lin,hblack] using hn)\n\ntheorem \
+distant_good_right_black (A h : Nat \[RightArrow] Nat \[RightArrow] Bool)\n   \
+ (ha : Actual A) (hh : Driven A h) (hw : Common A h) (d t p : Nat)\n    \
+(hblack : A t (p+d)=true) :\n    Good (A t p) (h t p) (A t (p+d)) (h t (p+d)) \
+:=\n  distant_good_right_black_through A h ha hh (t+d/2) (fun s _ i => hw s \
+i)\n    d t p (by omega) hblack\n\ntheorem initial_phase (A h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool)\n    (ha : Actual A) (hh : Driven A h) \
+(hw : Common A h)\n    (hs : \[ForAll] i, (h 0 i && A 0 i)=h 0 i) :\n    \
+\[Exists] b : Bool, \[ForAll] i, h 0 i=(b && A 0 i) := by\n  by_cases hex : \
+\[Exists] q, A 0 q=true\n  \[CenterDot] obtain \:27e8q,hq\:27e9 := hex\n    \
+refine \:27e8h 0 q, ?_\:27e9\n    intro p\n    cases hp : A 0 p with\n    | \
+false => simpa [hp] using (hs p).symm\n    | true =>\n      have hg : Good (A \
+0 p) (h 0 p) (A 0 q) (h 0 q) := by\n        by_cases hle : p \[LessEqual] q\n \
+       \[CenterDot] have hg := distant_good_right_black A h ha hh hw (q-p) 0 \
+p\n            (by simpa [Nat.add_sub_of_le hle] using hq)\n          simpa \
+[Nat.add_sub_of_le hle] using hg\n        \[CenterDot] have hg := \
+distant_good_right_black A h ha hh hw (p-q) 0 q\n            (by simpa \
+[Nat.add_sub_of_le (by omega : q \[LessEqual] p)] using hp)\n          apply \
+good_symm\n          simpa [Nat.add_sub_of_le (by omega : q \[LessEqual] p)] \
+using hg\n      simpa [Good,hp,hq] using hg.symm\n  \[CenterDot] refine \
+\:27e8false, ?_\:27e9\n    intro p\n    have hp : A 0 p=false := by\n      \
+cases he : A 0 p with\n      | false => rfl\n      | true => exact False.elim \
+(hex \:27e8p,he\:27e9)\n    simpa [hp] using (hs p).symm\n\ntheorem lin_self \
+: \[ForAll] a b c : Bool, lin b a b c=rule a b c := by decide +kernel\n\n\
+theorem common_mode_classification (A h : Nat \[RightArrow] Nat \[RightArrow] \
+Bool)\n    (ha : Actual A) (hh : Driven A h) (hw : Common A h)\n    (hs : \
+\[ForAll] i, (h 0 i && A 0 i)=h 0 i) :\n    \[Exists] b : Bool, \[ForAll] t \
+i, h t i=(b && A t i) := by\n  obtain \:27e8b,hb\:27e9 := initial_phase A h \
+ha hh hw hs\n  refine \:27e8b, ?_\:27e9\n  intro t\n  induction t with\n  | \
+zero => exact hb\n  | succ t ih =>\n    intro i\n    rw [hh t i, ih i,ih \
+(i+1),ih (i+2),ha t i]\n    cases b\n    \[CenterDot] simp [lin]\n    \
+\[CenterDot] simpa using lin_self (A t i) (A t (i+1)) (A t (i+2))\n\nend \
+HalfLine\n\nnamespace RightWedge\nopen \
+_root_.Ruliology.CellularAutomata.Rule30Jen (cell)\n\ndef delta (U V t : Nat) \
+(p : Int) := xor (cell (U+t) p) (cell (V+t) p)\ndef dStep (U V : Nat) (h : \
+Nat \[RightArrow] Int \[RightArrow] Bool) (t : Nat) (p : Int) :=\n  xor (xor \
+(h t (p-1)) ((!cell (V+t) (p+1)) && h t p))\n    ((!cell (U+t) p) && h t \
+(p+1))\ndef Mode (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) : \
+Prop :=\n  \[ForAll] t p, h (t+1) p=dStep U V h t p\ndef Common (U V : Nat) \
+(h : Nat \[RightArrow] Int \[RightArrow] Bool) : Prop :=\n  \[ForAll] t p, \
+Good (delta U V t p) (h t p) (delta U V t (p+1)) (h t (p+1))\ndef \
+CommonThrough (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (N : \
+Nat) : Prop :=\n  \[ForAll] t, t \[LessEqual] N \[RightArrow] \[ForAll] p, \
+Good (delta U V t p) (h t p) (delta U V t (p+1)) (h t (p+1))\n\ndef site (V t \
+i : Nat) : Int := (V : Int)+1+t+i\ndef rightA (U V : Nat) (t i : Nat) := cell \
+(U+t) (site V t i)\ndef rightH (V : Nat) (h : Nat \[RightArrow] Int \
+\[RightArrow] Bool) (t i : Nat) := h t (site V t i)\n\ntheorem site_left (V t \
+i : Nat) : site V (t+1) i-1=site V t i := by\n  simp only [site]; omega\n\
+theorem site_center (V t i : Nat) : site V (t+1) i=site V t (i+1) := by\n  \
+simp only [site]; omega\ntheorem site_right (V t i : Nat) : site V (t+1) \
+i+1=site V t (i+2) := by\n  simp only [site]; omega\ntheorem site_neighbor (V \
+t i : Nat) : site V t i+1=site V t (i+1) := by\n  simp only [site]; omega\n\
+theorem younger_white (V t i : Nat) : cell (V+t) (site V t i)=false := by\n  \
+apply Rule30Diagonals.cell_eq_false_of_gt\n  simp only [site]; omega\n\n\
+theorem right_cut_actual (U V : Nat) : HalfLine.Actual (rightA U V) := by\n  \
+intro t i\n  change cell (U+(t+1)) (site V (t+1) i)=_\n  rw [show \
+U+(t+1)=(U+t)+1 by omega]\n  change rule (cell (U+t) (site V (t+1) i-1)) \
+(cell (U+t) (site V (t+1) i))\n    (cell (U+t) (site V (t+1) i+1)) = _\n  rw \
+[site_left, site_right, site_center]\n  rfl\n\ntheorem right_cut_driven (U V \
+: Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (hh : Mode U V h) :\n   \
+ HalfLine.Driven (rightA U V) (rightH V h) := by\n  intro t i\n  have hm := \
+hh t (site V (t+1) i)\n  unfold dStep at hm\n  rw \
+[site_left,site_right,site_center,younger_white] at hm\n  simpa only \
+[rightA,rightH,lin,site_center,Bool.not_false,Bool.true_and] using hm\n\n\
+theorem right_cut_common (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] \
+Bool) (hw : Common U V h) :\n    HalfLine.Common (rightA U V) (rightH V h) := \
+by\n  intro t i\n  have hm := hw t (site V t i)\n  unfold delta at hm\n  rw \
+[site_neighbor,younger_white,younger_white] at hm\n  simpa only \
+[rightA,rightH,Bool.xor_false] using hm\n\ntheorem right_cut_common_through \
+(U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (N : Nat)\n    (hw \
+: CommonThrough U V h N) :\n    HalfLine.CommonThrough (rightA U V) (rightH V \
+h) N := by\n  intro t ht i\n  have hm := hw t ht (site V t i)\n  unfold delta \
+at hm\n  rw [site_neighbor,younger_white,younger_white] at hm\n  simpa only \
+[rightA,rightH,Bool.xor_false] using hm\n\ntheorem mode_right_white (U V : \
+Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) (hh : Mode U V h)\n    \
+(hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) :\n    \[ForAll] \
+(t : Nat) (p : Int), (U : Int)+t < p \[RightArrow] h t p=false := by\n  intro \
+t\n  induction t with\n  | zero => intro p hp; exact hi p (by omega)\n  | \
+succ t ih =>\n    intro p hp\n    rw [hh t p]\n    simp only [dStep,ih (p-1) \
+(by omega),ih p (by omega),ih (p+1) (by omega)]\n    simp\n\ntheorem \
+mode_right_edge (U V : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool) \
+(hh : Mode U V h)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 \
+p=false) :\n    \[ForAll] t, h t ((U : Int)+t)=h 0 U := by\n  intro t\n  \
+induction t with\n  | zero => simp\n  | succ t ih =>\n    rw [hh]\n    have e \
+: (U : Int)+(t+1 : Nat)-1=(U : Int)+t := by omega\n    have hw0 := \
+mode_right_white U V h hh hi t ((U : Int)+(t+1 : Nat)) (by omega)\n    have \
+hw1 := mode_right_white U V h hh hi t ((U : Int)+(t+1 : Nat)+1) (by omega)\n  \
+  rw [dStep,e,hw0,hw1]\n    simpa using ih\n\n/-- A finite, \
+distance-dependent common-gauge horizon suffices in the right\nexterior. It \
+does not give a fixed horizon independent of the ages. -/\ntheorem \
+right_wedge_phase_through (U V : Nat) (hUV : V<U) (h : Nat \[RightArrow] Int \
+\[RightArrow] Bool)\n    (hh : Mode U V h) (N : Nat) (hw : CommonThrough U V \
+h N)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false)\n    (t \
+: Nat) (p : Int) (hp : (V : Int)+t < p)\n    (ht : t+((U : Int)+t-p).toNat/2 \
+\[LessEqual] N) :\n    h t p=(h 0 U && cell (U+t) p) := by\n  by_cases hout : \
+(U : Int)+t < p\n  \[CenterDot] rw [mode_right_white U V h hh hi t p hout,\n  \
+    Rule30Diagonals.cell_eq_false_of_gt (U+t) p (by omega)]\n    simp\n  \
+\[CenterDot] let i := (p-((V : Int)+1+t)).toNat\n    let q := U-V-1\n    have \
+hiq : i \[LessEqual] q := by dsimp [i,q]; omega\n    have hsi : site V t i=p \
+:= by dsimp [site,i]; omega\n    have hsq : site V t q=(U : Int)+t := by \
+dsimp [site,q]; omega\n    have heq : i+(q-i)=q := Nat.add_sub_of_le hiq\n    \
+have hd : q-i=((U : Int)+t-p).toNat := by dsimp [q,i]; omega\n    have hblack \
+: rightA U V t (i+(q-i))=true := by\n      rw [heq]\n      change cell (U+t) \
+(site V t q)=true\n      rw [hsq]\n      simpa only \
+[Rule30Diagonals.R,Int.natCast_zero,Int.sub_zero,Int.natCast_add] using\n     \
+   Rule30Diagonals.R_zero (U+t)\n    have hg := \
+HalfLine.distant_good_right_black_through (rightA U V) (rightH V h)\n      \
+(right_cut_actual U V) (right_cut_driven U V h hh) N\n      \
+(right_cut_common_through U V h N hw) (q-i) t i (by omega) hblack\n    rw \
+[heq] at hg\n    have haedge : cell (U+t) ((U : Int)+t)=true := by\n      \
+simpa only [Rule30Diagonals.R,Int.natCast_zero,Int.sub_zero,Int.natCast_add] \
+using\n        Rule30Diagonals.R_zero (U+t)\n    simpa \
+[rightA,rightH,hsi,hsq,Good,haedge,mode_right_edge U V h hh hi t,\n      \
+Bool.and_comm] using hg.symm\n\n/-- All-time consequence for every actual \
+canonical age pair U>V. -/\ntheorem right_wedge_phase (U V : Nat) (hUV : V<U) \
+(h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hh : Mode U V h) (hw : \
+Common U V h)\n    (hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 \
+p=false) :\n    \[ForAll] (t : Nat) (p : Int), (V : Int)+t < p \[RightArrow] \
+h t p=(h 0 U && cell (U+t) p) := by\n  intro t p hp\n  exact \
+right_wedge_phase_through U V hUV h hh (t+((U : Int)+t-p).toNat/2)\n    (fun \
+s _ x => hw s x) hi t p hp (by omega)\n\ntheorem subset_right_white (U V : \
+Nat) (hUV : V<U) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hs : \
+\[ForAll] p, (h 0 p && delta U V 0 p)=h 0 p) :\n    \[ForAll] p, (U : Int) < \
+p \[RightArrow] h 0 p=false := by\n  intro p hp\n  have ha := \
+Rule30Diagonals.cell_eq_false_of_gt U p hp\n  have hb := \
+Rule30Diagonals.cell_eq_false_of_gt V p (by omega)\n  have h := hs p\n  simpa \
+[delta,ha,hb] using h.symm\n\ntheorem right_wedge_phase_subset (U V : Nat) \
+(hUV : V<U) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    (hh : Mode U \
+V h) (hw : Common U V h)\n    (hs : \[ForAll] p, (h 0 p && delta U V 0 p)=h 0 \
+p) :\n    \[ForAll] (t : Nat) (p : Int), (V : Int)+t < p \[RightArrow] h t \
+p=(h 0 U && cell (U+t) p) :=\n  right_wedge_phase U V hUV h hh hw \
+(subset_right_white U V hUV h hs)\n\nend RightWedge\n\nnamespace BandEscape\n\
+open _root_.Ruliology.CellularAutomata.Rule30Diagonals (R R_periodic)\n\ndef \
+step (a b h : Nat \[RightArrow] Bool) : Nat \[RightArrow] Bool\n  | 0 => h 0\n\
+  | 1 => xor (h 1) (h 0)\n  | j+2 => xor (xor (h (j+2)) ((!b j) && h (j+1))) \
+((!a (j+1)) && h j)\n\ndef Evolution (a b h : Nat \[RightArrow] Nat \
+\[RightArrow] Bool) : Prop :=\n  \[ForAll] t j, h (t+1) j=step (a t) (b t) (h \
+t) j\n\ndef canonical (U t j : Nat) : Bool := R j (U+t)\n\ntheorem \
+R_periodic_mul (j q t : Nat) : R j (t+q*2^j)=R j t := by\n  induction q with\n\
+  | zero => simp\n  | succ q ih =>\n    rw [Nat.succ_mul,show \
+t+(q*2^j+2^j)=(t+q*2^j)+2^j by omega,R_periodic,ih]\n\ntheorem \
+R_dyadic_return (E j k : Nat) (hj : j \[LessEqual] E) : R j (2^E+k)=R j k := \
+by\n  have hp : 2^E=2^(E-j)*2^j := by\n    rw [\[LeftArrow] \
+Nat.pow_add,Nat.sub_add_cancel hj]\n  rw [show 2^E+k=k+2^(E-j)*2^j by \
+omega,R_periodic_mul]\n\ntheorem R_white (k j : Nat) (hj : 2*k < j) : R j \
+k=false := by\n  apply Rule30Jen.cell_eq_false_of_lt\n  omega\n\ntheorem \
+step_zero (a b h : Nat \[RightArrow] Bool) (hz : \[ForAll] j, step a b h \
+j=false) :\n    \[ForAll] j, h j=false := by\n  intro j\n  induction j using \
+Nat.strongRecOn with\n  | ind j ih =>\n    cases j with\n    | zero => exact \
+hz 0\n    | succ j =>\n      cases j with\n      | zero => simpa [step,ih 0 \
+(by omega)] using hz 1\n      | succ j => simpa [step,ih j (by omega),ih \
+(j+1) (by omega)] using hz (j+2)\n\ntheorem zero_of_later_zero (a b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution a b h) (t : Nat) :\n    \
+(\[ForAll] j, h t j=false) \[RightArrow] \[ForAll] j, h 0 j=false := by\n  \
+induction t with\n  | zero => exact fun hz => hz\n  | succ t ih =>\n    intro \
+hz\n    apply ih\n    apply step_zero (a t) (b t) (h t)\n    intro j\n    rw \
+[\[LeftArrow] hh t j]\n    exact hz j\n\n/-- Peel two cells backward through \
+a white part of the older background. -/\ntheorem peel (a b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution a b h) (k L : Nat)\n    \
+(ha : \[ForAll] j, 2*k < j \[RightArrow] j \[LessEqual] L \[RightArrow] a k \
+j=false)\n    (hb : \[ForAll] j, L \[LessEqual] j \[RightArrow] h k j=false)\n\
+    (hn : \[ForAll] j, 2*(k+1) \[LessEqual] j \[RightArrow] h (k+1) j=false) \
+:\n    \[ForAll] j, 2*k \[LessEqual] j \[RightArrow] h k j=false := by\n  \
+have key : \[ForAll] n : Nat, \[ForAll] j, L-j=n \[RightArrow] 2*k \
+\[LessEqual] j \[RightArrow] h k j=false := by\n    intro n\n    induction n \
+using Nat.strongRecOn with\n    | ind n ih =>\n      intro j hj hk\n      \
+by_cases hlarge : L \[LessEqual] j\n      \[CenterDot] exact hb j hlarge\n    \
+  \[CenterDot] have h1 := ih (L-(j+1)) (by omega) (j+1) rfl (by omega)\n      \
+  have h2 := ih (L-(j+2)) (by omega) (j+2) rfl (by omega)\n        have hm := \
+hh k (j+2)\n        rw [hn (j+2) (by omega)] at hm\n        simpa \
+[step,h1,h2,ha (j+1) (by omega) (by omega)] using hm.symm\n  intro j hj\n  \
+exact key (L-j) j rfl hj\n\n/-- At a dyadic return, a finite window of band \
+confinement forces h=0. -/\ntheorem window_forces_zero (U E L K tau : Nat) \
+(he : L \[LessEqual] E) (ht : U+tau=2^E)\n    (hk : L \[LessEqual] 2*K)\n    \
+(b h : Nat \[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution (canonical \
+U) b h)\n    (hb : \[ForAll] k, k \[LessEqual] K \[RightArrow] \[ForAll] j, L \
+\[LessEqual] j \[RightArrow] h (tau+k) j=false) :\n    \[ForAll] j, h 0 \
+j=false := by\n  let A : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> R j (2^E+k)\n  let B : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> b (tau+k) j\n  let H : Nat \[RightArrow] Nat \[RightArrow] Bool := fun k j \
+=> h (tau+k) j\n  have hH : Evolution A B H := by\n    intro k j\n    have hm \
+:= hh (tau+k) j\n    have ht' : U+(tau+k)=2^E+k := by omega\n    change h \
+((tau+k)+1) j=step (fun j => R j (U+(tau+k))) (b (tau+k)) (h (tau+k)) j at hm\
+\n    rw [ht'] at hm\n    simpa only [H,A,B,Nat.add_assoc] using hm\n  have \
+white : \[ForAll] k j, 2*k < j \[RightArrow] j \[LessEqual] L \[RightArrow] A \
+k j=false := by\n    intro k j hj hjL\n    change R j (2^E+k)=false\n    rw \
+[R_dyadic_return E j k (by omega)]\n    exact R_white k j hj\n  have back : \
+\[ForAll] n : Nat, n \[LessEqual] K \[RightArrow] \[ForAll] j, 2*(K-n) \
+\[LessEqual] j \[RightArrow] H (K-n) j=false := by\n    intro n\n    \
+induction n with\n    | zero =>\n      intro _ j hj\n      exact hb K (by \
+omega) j (by omega)\n    | succ n ih =>\n      intro hn\n      apply peel A B \
+H hH (K-(n+1)) L\n      \[CenterDot] exact white (K-(n+1))\n      \
+\[CenterDot] intro j hj\n        exact hb (K-(n+1)) (by omega) j hj\n      \
+\[CenterDot] intro j hj\n        have heq : K-n=(K-(n+1))+1 := by omega\n     \
+   simpa only [heq] using ih (by omega) j (by omega)\n  have hz : \[ForAll] \
+j, h tau j=false := by\n    intro j\n    simpa [H] using back K (by omega) j \
+(by omega)\n  exact zero_of_later_zero (canonical U) b h hh tau hz\n\ntheorem \
+small_pow (n : Nat) : n < 2^n := by\n  induction n with\n  | zero => decide\n \
+ | succ n ih => rw [Nat.pow_succ]; omega\n\n/-- No W, no second-background \
+recurrence and no initial subset premise. -/\ntheorem \
+no_eventually_bounded_band (U : Nat) (b h : Nat \[RightArrow] Nat \
+\[RightArrow] Bool)\n    (hh : Evolution (canonical U) b h) (hne : \[Exists] \
+j, h 0 j=true) :\n    \[Not] \[Exists] T L : Nat, \[ForAll] t, T \[LessEqual] \
+t \[RightArrow] \[ForAll] j, L \[LessEqual] j \[RightArrow] h t j=false := by\
+\n  rintro \:27e8T,L,hb\:27e9\n  let E := U+T+L+1\n  let tau := 2^E-U\n  have \
+hp := small_pow E\n  have hreset : U+tau=2^E := by dsimp [E,tau] at *; omega\n\
+  have htau : T \[LessEqual] tau := by dsimp [E,tau] at *; omega\n  have hz \
+:= window_forces_zero U E L L tau (by dsimp [E]; omega) hreset (by omega) b h \
+hh\n    (fun k _ j hj => hb (tau+k) (by omega) j hj)\n  obtain \:27e8j,hj\
+\:27e9 := hne\n  rw [hz j] at hj\n  cases hj\n\n/-- An explicit finite escape \
+window after any chosen dyadic return. -/\ntheorem escapes_near_reset (U E L \
+tau : Nat) (he : L \[LessEqual] E) (ht : U+tau=2^E)\n    (b h : Nat \
+\[RightArrow] Nat \[RightArrow] Bool) (hh : Evolution (canonical U) b h)\n    \
+(hne : \[Exists] j, h 0 j=true) :\n    \[Exists] k, k \[LessEqual] (L+1)/2 \
+\[And] \[Exists] j, L \[LessEqual] j \[And] h (tau+k) j=true := by\n  apply \
+Classical.byContradiction\n  intro hn\n  have hb : \[ForAll] k, k \
+\[LessEqual] (L+1)/2 \[RightArrow] \[ForAll] j, L \[LessEqual] j \
+\[RightArrow] h (tau+k) j=false := by\n    intro k hk j hj\n    cases hc : h \
+(tau+k) j with\n    | false => rfl\n    | true => exact False.elim (hn \
+\:27e8k,hk,j,hj,hc\:27e9)\n  have hz := window_forces_zero U E L ((L+1)/2) \
+tau he ht (by omega) b h hh hb\n  obtain \:27e8j,hj\:27e9 := hne\n  rw [hz j] \
+at hj\n  cases hj\n\ntheorem arbitrarily_deep_after_any_time (U : Nat) (b h : \
+Nat \[RightArrow] Nat \[RightArrow] Bool)\n    (hh : Evolution (canonical U) \
+b h) (hne : \[Exists] j, h 0 j=true) (T L : Nat) :\n    \[Exists] t, T \
+\[LessEqual] t \[And] \[Exists] j, L \[LessEqual] j \[And] h t j=true := by\n \
+ apply Classical.byContradiction\n  intro hn\n  apply \
+no_eventually_bounded_band U b h hh hne\n  refine \:27e8T,L,?_\:27e9\n  intro \
+t ht j hj\n  cases hc : h t j with\n  | false => rfl\n  | true => exact \
+False.elim (hn \:27e8t,ht,j,hj,hc\:27e9)\n\n\nnamespace Ordinary\nopen \
+_root_.Ruliology.CellularAutomata.Rule30Jen (cell)\n\ndef read (U : Nat) (h : \
+Nat \[RightArrow] Int \[RightArrow] Bool) (t j : Nat) : Bool :=\n  h t ((U : \
+Int)+t-j)\ndef readB (U V t j : Nat) : Bool := cell (V+t) ((U : Int)+t-j)\n\n\
+theorem read_evolution (U V : Nat) (hUV : V \[LessEqual] U) (h : Nat \
+\[RightArrow] Int \[RightArrow] Bool)\n    (hh : RightWedge.Mode U V h) (hi : \
+\[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) :\n    Evolution \
+(canonical U) (readB U V) (read U h) := by\n  intro t j\n  cases j with\n  | \
+zero =>\n    change h (t+1) ((U : Int)+(t+1)-0)=h t ((U : Int)+t-0)\n    simp \
+only [Int.sub_zero]\n    have h1 := RightWedge.mode_right_edge U V h hh hi \
+(t+1)\n    have h0 := RightWedge.mode_right_edge U V h hh hi t\n    simpa \
+only [Int.natCast_add,Int.natCast_one] using h1.trans h0.symm\n  | succ j =>\n\
+    cases j with\n    | zero =>\n      have hm := hh t ((U : Int)+t)\n      \
+unfold RightWedge.dStep at hm\n      have hb := \
+Rule30Diagonals.cell_eq_false_of_gt (V+t) ((U : Int)+t+1) (by omega)\n      \
+have hz := RightWedge.mode_right_white U V h hh hi t ((U : Int)+t+1) (by \
+omega)\n      rw [hb,hz] at hm\n      change h (t+1) ((U : Int)+(t+1)-1)=_\n  \
+    rw [show (U : Int)+(t+1)-1=(U : Int)+t by omega]\n      simpa [read,step] \
+using hm\n    | succ j =>\n      let p : Int := (U : Int)+(t+1)-(j+2)\n      \
+have hl : p-1=(U : Int)+t-(j+2) := by dsimp [p]; omega\n      have hc : p=(U \
+: Int)+t-(j+1) := by dsimp [p]; omega\n      have hr : p+1=(U : Int)+t-j := \
+by dsimp [p]; omega\n      have hm := hh t p\n      unfold RightWedge.dStep \
+at hm\n      rw [hl,hr,hc] at hm\n      change h (t+1) p=step (canonical U t) \
+(readB U V t) (read U h t) (j+2)\n      rw [hc]\n      simpa \
+[read,readB,step,canonical,R,Int.natCast_add] using hm\n\ntheorem \
+read_nonzero (U : Nat) (h : Nat \[RightArrow] Int \[RightArrow] Bool)\n    \
+(hi : \[ForAll] p, (U : Int) < p \[RightArrow] h 0 p=false) (hne : \[Exists] \
+p, h 0 p=true) :\n    \[Exists] j, read U h 0 j=true := by\n  obtain \
+\:27e8p,hp\:27e9 := hne\n  have hpU : p \[LessEqual] U := by\n    apply \
+Classical.byContradiction\n    intro hn\n    rw [hi p (by omega)] at hp\n    \
+cases hp\n  refine \:27e8((U : Int)-p).toNat,?_\:27e9\n  have he : (U : \
+Int)+0-(((U : Int)-p).toNat : Int)=p := by omega\n  simpa only \
+[read,Int.natCast_zero,he] using hp\n\n/-- Ordinary coordinates: every \
+nonzero initially upper-bounded D field\nvisits arbitrarily far behind the \
+older moving right front, after every time.\nNo common-gauge or initial \
+subset hypothesis is used. -/\ntheorem arbitrarily_far_behind_front (U V : \
+Nat) (hUV : V \[LessEqual] U)\n    (h : Nat \[RightArrow] Int \[RightArrow] \
+Bool) (hh : RightWedge.Mode U V h)\n    (hi : \[ForAll] p, (U : Int) < p \
+\[RightArrow] h 0 p=false) (hne : \[Exists] p, h 0 p=true)\n    (T L : Nat) :\
+\n    \[Exists] t, T \[LessEqual] t \[And] \[Exists] p : Int, p \[LessEqual] \
+(U : Int)+t-L \[And] h t p=true := by\n  obtain \:27e8t,ht,j,hj,hblack\:27e9 \
+:= arbitrarily_deep_after_any_time U (readB U V) (read U h)\n    \
+(read_evolution U V hUV h hh hi) (read_nonzero U h hi hne) T L\n  exact \
+\:27e8t,ht,(U : Int)+t-j,by omega,hblack\:27e9\n\nend Ordinary\n\nend \
+BandEscape\nend Rule30Submission\n",
+     SelectWithContents->True,
+     Selectable->False], ",", " ", 
+    RowBox[{"\"\<ProjectDir\>\"", " ", "->", " ", "$Rule30PrizeKit"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[5]:= ",
+ CellID->943101875,ExpressionUUID->"779c57de-bb93-d239-1da4-4e983e27a103"],
+
+Cell["Formal checks", "Section",
+ CellID->67888809,ExpressionUUID->"2867ea9b-6e8d-517b-581c-03c50b382041"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"formalHeadline", "=", 
+   RowBox[{
+   "rule30Submission", 
+    "[", "\"\<Rule30Submission.BandEscape.Ordinary.arbitrarily_far_behind_\
+front\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"formalKernelCheck", "=", 
+   RowBox[{"formalHeadline", "[", "\"\<KernelCheck\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"formalType", "=", 
+   RowBox[{"formalHeadline", "[", "\"\<TypeForm\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"formalAxioms", "=", 
+   RowBox[{"formalHeadline", "[", "\"\<Axioms\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{"{", 
+  RowBox[{"formalType", ",", "formalAxioms", ",", "formalKernelCheck"}], 
+  "}"}]}], "Input",
+ CellLabel->"In[6]:= ",
+ CellID->1432876021,ExpressionUUID->"76dfbc62-92ac-7b6e-1ee4-364c275949b4"],
+
+Cell[BoxData[
+ RowBox[{"AssociationMap", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"rule30Submission", "[", 
+      RowBox[{"\"\<Rule30Submission.\>\"", "<>", "#"}], "]"}], 
+     "[", "\"\<TypeForm\>\"", "]"}], "&"}], ",", "\n", " ", 
+   RowBox[{"{", 
+    RowBox[{"\"\<HalfLine.distant_good_right_black_through\>\"", 
+     ",", "\"\<HalfLine.common_mode_classification\>\"", ",", "\n", 
+     "  ", "\"\<RightWedge.right_wedge_phase_through\>\"", 
+     ",", "\"\<RightWedge.right_wedge_phase_subset\>\"", ",", "\n", 
+     "  ", "\"\<BandEscape.escapes_near_reset\>\"", 
+     ",", "\"\<BandEscape.no_eventually_bounded_band\>\""}], "}"}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[7]:= ",
+ CellID->876231958,ExpressionUUID->"0df4b6a5-173c-e15a-3b8b-2f0fa2ceb3a0"],
+
+Cell["Limits", "Section",
+ CellID->1020575516,ExpressionUUID->"4d620fc7-5cf2-d9d8-7b11-a6a15484ab22"],
+
+Cell["\<\
+The exterior theorem concerns p>V+t and assumes D and W. The escape theorem \
+needs D but does not force a nonzero value at the moving center depth U+t. \
+The broader arbitrary-three-bit-background conjecture remains unproved. \
+Neither result proves invisible canonical fields impossible, backward \
+closure, or center nonperiodicity. No solution of Problems 1, 2 or 3 is \
+claimed.\
+\>", "Text",
+ CellID->1967685850,ExpressionUUID->"741b091d-feb2-1a39-1c38-a146fb476903"],
+
+Cell["References", "Section",
+ CellID->1044562475,ExpressionUUID->"3bf5a20e-c541-e06e-698a-446becf5b2b4"],
+
+Cell[TextData[{
+ ButtonBox["Core catalog proposal, PR28",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/WolframInstitute/Rule30PrizeKit/pull/28"], 
+    None}],
+ "."
+}], "Item",
+ CellID->1653200050,ExpressionUUID->"07964fa7-8d1e-ff14-2dae-660124a8c27e"],
+
+Cell[TextData[{
+ ButtonBox["Existing XOR-rigidity method",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/WolframInstitute/Rule30PrizeKit/blob/\
+0090056412733accaa27643d3cbbf982104f2251/lean/Ruliology/CellularAutomata/\
+Rule30XorRigidity.lean"], None}],
+ "."
+}], "Item",
+ CellID->1384978530,ExpressionUUID->"3e367b18-9aa8-58f9-67ce-73421f5d2ac3"]
+},
+LightDark->"Light",
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (June 2, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1dbaaaf7-1388-e538-4b59-43b1a622cc02"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[560, 20, 170, 3, 70, "Title",ExpressionUUID->"77d99fdb-a351-2d53-1de6-1684d6e477b9",
+ CellID->874461601],
+Cell[730, 25, 120, 1, 70, "Text",ExpressionUUID->"04646437-faee-7dfc-2c1c-7e70fe9b47c6",
+ CellID->36768919],
+Cell[852, 28, 846, 16, 70, "Text",ExpressionUUID->"1cbde497-e826-5557-4442-fdd089d33fbd",
+ CellID->1699946459],
+Cell[1685, 46, 834, 16, 70, "Text",ExpressionUUID->"6ecb37d0-fbcc-3e82-16c8-ae9dfe7e84e8",
+ CellID->1535504786],
+Cell[2506, 64, 108, 1, 70, "Section",ExpressionUUID->"4c358d3e-86d3-ec5f-75ca-25783367b6a5",
+ CellID->1208482393],
+Cell[2616, 67, 321, 5, 70, "Text",ExpressionUUID->"1f908cf3-3c70-d55a-45af-25bdb50abfa0",
+ CellID->28909615],
+Cell[2935, 74, 648, 18, 70, "Input",ExpressionUUID->"5dac66ba-272d-3627-0b54-7fe452d99d0d",
+ CellID->193832008],
+Cell[3568, 94, 145, 1, 70, "CodeText",ExpressionUUID->"110914de-bbdd-83a1-4736-8d983e69d18b",
+ CellID->684317082],
+Cell[3715, 97, 526, 14, 70, "Input",ExpressionUUID->"76d004f9-29e5-6665-1eef-9da34f904d4f",
+ CellID->528485616],
+Cell[4230, 113, 107, 1, 70, "Section",ExpressionUUID->"2c76c797-c249-79ca-540d-ded0f7fc4b10",
+ CellID->1392207227],
+Cell[4339, 116, 403, 6, 70, "Text",ExpressionUUID->"35077f55-9291-6519-633d-771f27244c63",
+ CellID->705466992],
+Cell[4739, 124, 2637, 75, 70, "Input",ExpressionUUID->"4ebf3687-f906-130d-7644-afe0f8b37e57",
+ CellID->1350516518],
+Cell[7304, 201, 109, 1, 70, "Section",ExpressionUUID->"65de4a87-3471-cd9f-13e6-63e1bd0597e5",
+ CellID->907546795],
+Cell[7415, 204, 543, 8, 70, "Text",ExpressionUUID->"7bedd9bd-1d84-ddaa-2992-d0e79436a7f0",
+ CellID->814772321],
+Cell[7953, 214, 473, 7, 70, "Text",ExpressionUUID->"4c37f35a-e1a6-07fe-75cc-eb0790536dc4",
+ CellID->1054628905],
+Cell[8422, 223, 484, 7, 70, "Text",ExpressionUUID->"02f88238-86c8-66df-3287-2462337d4c25",
+ CellID->2043779557],
+Cell[8902, 232, 106, 1, 70, "Section",ExpressionUUID->"034d641c-5834-e412-3173-7e4659c6cf78",
+ CellID->17830494],
+Cell[9010, 235, 349, 8, 70, "Input",ExpressionUUID->"52ce4f6a-032d-a48b-02f6-6734b6d90ed1",
+ CellID->1589986527],
+Cell[9354, 245, 53582, 710, 70, "Input",ExpressionUUID->"5bfe104a-50de-a555-0985-8a1461680fbf",
+ CellID->943101875],
+Cell[62229, 957, 107, 1, 70, "Section",ExpressionUUID->"134534fb-1061-d656-417a-ada5a115bcbc",
+ CellID->67888809],
+Cell[62338, 960, 795, 20, 70, "Input",ExpressionUUID->"2cd98fd2-34e7-e188-54e6-269cbc93b3d2",
+ CellID->1432876021],
+Cell[63116, 982, 786, 17, 70, "Input",ExpressionUUID->"6e1c99a5-dcef-9c28-1623-100ed49be772",
+ CellID->876231958],
+Cell[63888, 1001, 102, 1, 70, "Section",ExpressionUUID->"608e87cc-8fce-afdf-10b5-1e962a78f525",
+ CellID->1020575516],
+Cell[63992, 1004, 491, 8, 70, "Text",ExpressionUUID->"2aa912c6-4938-1bb7-5a56-8ba068cd699d",
+ CellID->1967685850],
+Cell[64478, 1014, 106, 1, 70, "Section",ExpressionUUID->"66b4bee0-d247-b105-0e4b-37cde7f3006f",
+ CellID->1044562475],
+Cell[64586, 1017, 284, 8, 70, "Item",ExpressionUUID->"337c2d89-644e-5b5e-6103-c4d30dfb29a4",
+ CellID->1653200050],
+Cell[64865, 1027, 378, 9, 70, "Item",ExpressionUUID->"5f7c2741-1c81-ec9b-0503-bf2b9535b6e1",
+ CellID->1384978530]
+}
+]
+*)
+
+(* End of internal cache information *)

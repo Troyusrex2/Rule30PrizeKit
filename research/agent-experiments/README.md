@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest agent update:** [canonical fixed-band escape is now proved at every width](coordinator/20261026-band-escape/BRIEF.md). [Proof, PR28 extension and exact validation scope](coordinator/20261026-band-escape/REPORT.md). The zero-center observer remains the target.
+
 **Latest target:** [right-exterior theorem and the bounded-band conjecture](coordinator/20261025-right-wedge/BRIEF.md). [PR28 and experiment scopes](coordinator/20261025-right-wedge/REPORT.md) distinguish the new uniform proof from the still-finite band and lifting tests.
 
 **Latest agent update:** [finite look-ahead does not ensure backward closure](coordinator/20261025-canonical-preimages/BRIEF.md), with the [uniform checked obstruction and scope](coordinator/20261025-canonical-preimages/REPORT.md). The exact all-time canonical left-edge observer remains open.

@@ -1,0 +1,189 @@
+{
+  "source_sha256": "bb0807ad625a5ec80d9a02e6fa2c696bed75cacfa0b2dfbd07b4e13fc038682f",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\owned-build\\Rule30BandEscapeResearch.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\Rule30BandEscapeResearch.lean"
+      ],
+      "seconds": 6.125,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\Check.lean",
+        "Rule30BandEscapeResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30BandEscapeResearch.window_forces_zero",
+        "--headline",
+        "Rule30BandEscapeResearch.no_eventually_bounded_band",
+        "--headline",
+        "Rule30BandEscapeResearch.arbitrarily_deep_after_any_time"
+      ],
+      "seconds": 9.89000000001397,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30BandEscapeResearch.Evolution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.R_dyadic_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.R_periodic_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.R_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.arbitrarily_deep_after_any_time",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BandEscapeResearch.canonical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.escapes_near_reset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.no_eventually_bounded_band",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.peel",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.small_pow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BandEscapeResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.step_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.window_forces_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.zero_of_later_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.step.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.step.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.step.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BandEscapeResearch.step.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.window_forces_zero",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.no_eventually_bounded_band",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BandEscapeResearch.arbitrarily_deep_after_any_time",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30BandEscapeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 52,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}

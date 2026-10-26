@@ -1,0 +1,515 @@
+{
+  "source_sha256": "14d953c5c4eb3aa15f42dabd4702f6bed8500de18b1e7b65600a7ef28233c8f5",
+  "kit_commit": "0090056412733accaa27643d3cbbf982104f2251",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker_unchanged": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--root=D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier",
+        "-o",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\owned-build\\Rule30Submission.olean",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\Rule30Submission.lean"
+      ],
+      "seconds": 31.687999999994645,
+      "exit_code": 0
+    },
+    {
+      "stage": "check",
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lake.exe",
+        "env",
+        "lean",
+        "--run",
+        "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\band-mechanism-20261026T0004\\owned-verifier\\Check.lean",
+        "Rule30Submission",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30Submission.HalfLine.distant_good_right_black_through",
+        "--headline",
+        "Rule30Submission.HalfLine.common_mode_classification",
+        "--headline",
+        "Rule30Submission.RightWedge.right_wedge_phase_through",
+        "--headline",
+        "Rule30Submission.RightWedge.right_wedge_phase_subset",
+        "--headline",
+        "Rule30Submission.BandEscape.escapes_near_reset",
+        "--headline",
+        "Rule30Submission.BandEscape.no_eventually_bounded_band",
+        "--headline",
+        "Rule30Submission.BandEscape.Ordinary.arbitrarily_far_behind_front"
+      ],
+      "seconds": 25.75,
+      "exit_code": 0
+    }
+  ],
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30Submission.Good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.gap_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.good_self",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.good_symm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.lin",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.middle_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.Evolution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.R_dyadic_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.R_periodic_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.R_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.arbitrarily_deep_after_any_time",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.canonical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.escapes_near_reset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.no_eventually_bounded_band",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.peel",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.small_pow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.step_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.window_forces_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.zero_of_later_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.Good.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.HalfLine.Actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.HalfLine.Common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.HalfLine.CommonThrough",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.HalfLine.Driven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.common_mode_classification",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.distant_good_right_black",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.distant_good_right_black_through",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.initial_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.lin_self",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.Common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.CommonThrough",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.Mode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.dStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.mode_right_edge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.mode_right_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.rightA",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.rightH",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_cut_actual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_cut_common",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_cut_common_through",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_cut_driven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_wedge_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_wedge_phase_subset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_wedge_phase_through",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.RightWedge.site",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.site_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.site_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.site_neighbor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.site_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.subset_right_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.younger_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.lin.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.arbitrarily_far_behind_front",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.Ordinary.read",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.Ordinary.readB",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.read_evolution",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.read_nonzero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.canonical.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.step.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.step.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.step.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30Submission.BandEscape.step.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.dStep.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.delta.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.rightA.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.rightH.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.site.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.read.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.readB.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.distant_good_right_black_through",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.HalfLine.common_mode_classification",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_wedge_phase_through",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.RightWedge.right_wedge_phase_subset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.escapes_near_reset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.no_eventually_bounded_band",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30Submission.BandEscape.Ordinary.arbitrarily_far_behind_front",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30Submission",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 164,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "full_problem_solved": false
+}
