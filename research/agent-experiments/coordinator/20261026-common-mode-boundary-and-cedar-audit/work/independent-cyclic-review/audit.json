@@ -1,0 +1,421 @@
+{
+  "passed": true,
+  "kernel_checked": false,
+  "search_performed": false,
+  "frozen_definitions_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+  "encoding": "Each integer is a six-bit spatial row, with LSB at position0. Extend bits by position modulo6. The lists are temporal states, not cyclic time words.",
+  "states": [
+    {
+      "t": 0,
+      "A": 58,
+      "B": 23,
+      "H": 12,
+      "difference": 45,
+      "common_all_six_edges": true,
+      "subset_failures": []
+    },
+    {
+      "t": 1,
+      "A": 5,
+      "B": 40,
+      "H": 12,
+      "difference": 45,
+      "common_all_six_edges": true,
+      "subset_failures": []
+    },
+    {
+      "t": 2,
+      "A": 27,
+      "B": 27,
+      "H": 36,
+      "difference": 0,
+      "common_all_six_edges": true,
+      "subset_failures": [
+        2,
+        5
+      ]
+    },
+    {
+      "t": 3,
+      "A": 36,
+      "B": 36,
+      "H": 36,
+      "difference": 0,
+      "common_all_six_edges": true,
+      "subset_failures": [
+        2,
+        5
+      ]
+    },
+    {
+      "t": 4,
+      "A": 63,
+      "B": 63,
+      "H": 63,
+      "difference": 0,
+      "common_all_six_edges": true,
+      "subset_failures": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "t": 5,
+      "A": 0,
+      "B": 0,
+      "H": 63,
+      "difference": 0,
+      "common_all_six_edges": true,
+      "subset_failures": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "stationary_tail": {
+    "A": 0,
+    "B": 0,
+    "H": 63,
+    "starts_at": 5
+  },
+  "all_time_argument": "The listed five transitions reach the stationary joint state(0,0,63). Thus finite verification plus induction proves the entire temporal sequence. Six residues and wrap verify every site of a bi-infinite spatially periodic strip; on Nat they verify Actual-interior and Mode-interior for j>=2, and Common for every adjacent pair.",
+  "failure_scope": "Initial SubAt holds at every spatial position, remains true at t1, then fails at residues2 and5 at t2. A=B from t2 onward makes Common tautological; H remains nonzero. This refutes initial-only subset propagation for the interior/spatial-periodic setting.",
+  "white_boundary_failures": [
+    {
+      "t": 0,
+      "row": "A",
+      "boundary_failures": [
+        0,
+        1
+      ]
+    },
+    {
+      "t": 0,
+      "row": "B",
+      "boundary_failures": [
+        0
+      ]
+    },
+    {
+      "t": 1,
+      "row": "B",
+      "boundary_failures": [
+        0,
+        1
+      ]
+    },
+    {
+      "t": 2,
+      "row": "A",
+      "boundary_failures": [
+        0
+      ]
+    },
+    {
+      "t": 2,
+      "row": "B",
+      "boundary_failures": [
+        0
+      ]
+    },
+    {
+      "t": 3,
+      "row": "A",
+      "boundary_failures": [
+        0,
+        1
+      ]
+    },
+    {
+      "t": 3,
+      "row": "B",
+      "boundary_failures": [
+        0,
+        1
+      ]
+    },
+    {
+      "t": 3,
+      "row": "H",
+      "boundary_failures": [
+        0,
+        1
+      ]
+    },
+    {
+      "t": 4,
+      "row": "A",
+      "boundary_failures": [
+        0
+      ]
+    },
+    {
+      "t": 4,
+      "row": "B",
+      "boundary_failures": [
+        0
+      ]
+    },
+    {
+      "t": 4,
+      "row": "H",
+      "boundary_failures": [
+        1
+      ]
+    }
+  ],
+  "not_a_white_Actual": "The frozen Actual and Mode definitions include special equations at0 and1. The supplied periodic trajectories violate those boundary equations, starting with A and B at t0. They are not a counterexample to the full Nat Actual+Mode+Common statement.",
+  "finite_white_cone_control": {
+    "horizon": 12,
+    "width": 31,
+    "fixed_protected_core": [
+      24,
+      29
+    ],
+    "right_neighbor_available": 30,
+    "checks": [
+      {
+        "t": 0,
+        "fixed_core_common": true,
+        "subset_failures": []
+      },
+      {
+        "t": 1,
+        "fixed_core_common": true,
+        "subset_failures": []
+      },
+      {
+        "t": 2,
+        "fixed_core_common": true,
+        "subset_failures": [
+          26,
+          29
+        ]
+      },
+      {
+        "t": 3,
+        "fixed_core_common": true,
+        "subset_failures": [
+          26,
+          29
+        ]
+      },
+      {
+        "t": 4,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 5,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 6,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 7,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 8,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 9,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 10,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 11,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "t": 12,
+        "fixed_core_common": true,
+        "subset_failures": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    ],
+    "global_common_failures": [
+      {
+        "t": 1,
+        "indices": [
+          1
+        ]
+      },
+      {
+        "t": 3,
+        "indices": [
+          1
+        ]
+      },
+      {
+        "t": 4,
+        "indices": [
+          4
+        ]
+      },
+      {
+        "t": 5,
+        "indices": [
+          1,
+          4
+        ]
+      },
+      {
+        "t": 6,
+        "indices": [
+          4,
+          5
+        ]
+      },
+      {
+        "t": 7,
+        "indices": [
+          1,
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "t": 8,
+        "indices": [
+          5,
+          7
+        ]
+      },
+      {
+        "t": 9,
+        "indices": [
+          1,
+          5,
+          6,
+          7,
+          12
+        ]
+      },
+      {
+        "t": 10,
+        "indices": [
+          5,
+          6,
+          9,
+          12,
+          13
+        ]
+      },
+      {
+        "t": 11,
+        "indices": [
+          1,
+          5,
+          6,
+          11,
+          12,
+          15,
+          16
+        ]
+      },
+      {
+        "t": 12,
+        "indices": [
+          4,
+          5,
+          8,
+          9,
+          15
+        ]
+      }
+    ],
+    "scope": "The exact given periodic initial rows, repeated and evolved with genuine white missing older cells, match the periodic reference at every j>=2t. The six fixed core cells satisfy Common through12 and show subset failure at2. Common already fails near the white boundary at t1,j1. This is a local finite-horizon witness, not global all-time Common."
+  },
+  "cyclic_time_search_limit": "The initial joint state never returns: the two distinct backgrounds merge at2 and become zero at5. A search imposing temporal cyclic wrap fromt0 excludes this transient mechanism.",
+  "excluded_claims": [
+    "No full white-boundary Actual counterexample",
+    "No FrontStable counterexample or audit",
+    "No finite-support/all-time Common counterexample",
+    "No fixed-center or prize conclusion"
+  ]
+}

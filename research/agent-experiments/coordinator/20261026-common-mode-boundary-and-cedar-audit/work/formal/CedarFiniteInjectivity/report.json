@@ -1,0 +1,93 @@
+{
+  "module": "CedarFiniteInjectivity",
+  "source_sha256": "e9750262c68c5deea556e2d336687bf37afdf33ac09b32515619c97abaa2a4e1",
+  "seconds": 1.476286599994637,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.F_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.accepted_of_safe_eventual_accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.change_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.evolution_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.return8_of_eventual_accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.return8_of_eventual_return8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.xor_right_cancel",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.F_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.return8_of_eventual_accepted",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarFiniteInjectivity.accepted_of_safe_eventual_accepted",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarFiniteInjectivity",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 7,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "created_utc": "2026-10-26T16:57:35.622025+00:00",
+  "status": "PARTIAL_KERNEL_CHECKED",
+  "review": "Independent source/hypothesis audit and full unchanged-checker replay passed",
+  "published_commit": "64197054b1e4f5b768a624c16bd3c1db0555f3cb",
+  "kit_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "modules": [
+    {
+      "module": "Rule30CommonPastResearch",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "constants": 100,
+      "passed": true
+    },
+    {
+      "module": "Rule30OrClockObserverResearch",
+      "source_sha256": "9928288f7c038406e6979852d845f6de17a5d8f887bddefe3d31494e2b8b83c2",
+      "constants": 24,
+      "passed": true
+    },
+    {
+      "module": "Rule30ClockJetResearch",
+      "source_sha256": "0cb60f8710596347c6a72753638a4aebeba25b22315a09f498711b0e576660c2",
+      "constants": 13,
+      "passed": true
+    },
+    {
+      "module": "Rule30ClockModeResearch",
+      "source_sha256": "0d7f9dc8ff048cbb50d45e68e85d63d31f69d512556c87c50459f95b895250e1",
+      "constants": 29,
+      "passed": true
+    },
+    {
+      "module": "Rule30EvenModeRigidityResearch",
+      "source_sha256": "38e74acb17c0ddc2b40dc92e49052cb567056621bb8b18e8e28e16983f4b452b",
+      "constants": 17,
+      "passed": true
+    },
+    {
+      "module": "Rule30SaturatedOrPeriodResearch",
+      "source_sha256": "8cdc3aff12601822a24ecc288df02378bca026d4b9e0b5407cdf5192939505f8",
+      "constants": 8,
+      "passed": true
+    },
+    {
+      "module": "Rule30PeriodicOrPeriodResearch",
+      "source_sha256": "a4573b2955f6e4aa83e01a8dc09206f3bd3009f23209ec52fd057789387d786f",
+      "constants": 5,
+      "passed": true
+    },
+    {
+      "module": "Rule30PeriodicOrPairCertificate",
+      "source_sha256": "1407f153157fd3403f8884265e4539c36ff4ea3da0ce44939e3963f49e00704c",
+      "constants": 138,
+      "passed": true
+    },
+    {
+      "module": "Rule30TwoPlateauClockResearch",
+      "source_sha256": "e3c43118ced8847ac5c75ed07374919574ec195c57b07042f9b4aa852e3fb386",
+      "constants": 54,
+      "passed": true
+    }
+  ],
+  "all_custom_constants": 388,
+  "files": {
+    "audit-attempts/audit_graph_attempt1.py": {
+      "sha256": "0a13aebcfd1b7014d460a0ff1612f7a68d57ddd50fcb57a078a5812e98607228",
+      "bytes": 4272
+    },
+    "audit_graph.py": {
+      "sha256": "1509c6fb6a0a746ed59d902002b89b406b4dafabac19a435e9329edb1aeca5b4",
+      "bytes": 4533
+    },
+    "freeze_sources.py": {
+      "sha256": "ea584ae3c6d45e94a4cb09ab085875cfefa8f92985bc462a331b117b057261a7",
+      "bytes": 1298
+    },
+    "graph-audit.json": {
+      "sha256": "327c12e1a6d6312864bf8f06f43ec763d3bd88aa52b60a5a9da72109dd8e8fa0",
+      "bytes": 1593
+    },
+    "guard-evidence/verifier-clock-full-replay-e4f2fe9e.json": {
+      "sha256": "35577a8152caff81df226702372323985336f73c607b6372a4bdc614e0fc3197",
+      "bytes": 796
+    },
+    "guard-evidence/verifier-clock-full-replay-e4f2fe9e.log": {
+      "sha256": "f959f116db6c2a168ab24c6cf81240e4fa52471d31b61c191761c266af455ff8",
+      "bytes": 3976
+    },
+    "guard-evidence/verifier-clock-graph-audit-4160853e.json": {
+      "sha256": "12a73a89950eea2d08d239b4a1560327007670de1382e4d2ed5597b5f6f8f375",
+      "bytes": 550
+    },
+    "guard-evidence/verifier-clock-graph-audit-4160853e.log": {
+      "sha256": "0afe25e323bd217a1364c672692f3cf28a26f4733959d8e2969f72f6f4836d2a",
+      "bytes": 260
+    },
+    "guard-evidence/verifier-clock-graph-audit2-d33a1fd9.json": {
+      "sha256": "472a4feee0f5fe79f76489ce23ae1137bc33c436201193ab9b88eab460ea64bf",
+      "bytes": 552
+    },
+    "guard-evidence/verifier-clock-graph-audit2-d33a1fd9.log": {
+      "sha256": "c1a3db1e6ed74a9766beb08bb277563fc269c2b8e3fb4d8d530d16afc241e2af",
+      "bytes": 1029
+    },
+    "published/.gitattributes": {
+      "sha256": "b3a7af0b7f1dc98d45e5f8f77abb5715193c8952078dd004910fb50c0198cee7",
+      "bytes": 42
+    },
+    "published/artifacts.json": {
+      "sha256": "8cd4f46c14255b7971f174f668a706782e99f3c7db39d48cdf6ba5a9aff02842",
+      "bytes": 4682
+    },
+    "published/provenance.json": {
+      "sha256": "8e4b185995f5a0fb47df0f99b56a942d7a0de80a6719462a9f9da3bdbb4d8b28",
+      "bytes": 1862
+    },
+    "published/REPORT.md": {
+      "sha256": "dd1dcc3452230260f8f0830927af2bb0d443ce3cf4aa6f13282ada5826e682bc",
+      "bytes": 4785
+    },
+    "published/REPRODUCE.md": {
+      "sha256": "ac319152f625b7fc5c8b073950865427a0091af50479759aca918675fe2a58ab",
+      "bytes": 1551
+    },
+    "published/summary.json": {
+      "sha256": "c071031b4dfedf1ff88c7f3e0b31f8926125413e7a4fae27b03ddbcfaf23c1c7",
+      "bytes": 749
+    },
+    "published/verify_artifacts.py": {
+      "sha256": "8b144f3a4b3c486f4ddfd105e7b6333ea7faa9d9da4de4d17f744db4266e1e88",
+      "bytes": 4669
+    },
+    "published/work/attempts/main-1/build.log": {
+      "sha256": "71ea84279ac15f37adfd806c5a406c7ee6ef060fa95499c90870e95c79ef7404",
+      "bytes": 1464
+    },
+    "published/work/attempts/main-1/guard.json": {
+      "sha256": "3c9df697198e8aad847bcfb552eeb82afbde5de7be1df4b947b66c48d021433f",
+      "bytes": 522
+    },
+    "published/work/attempts/main-1/source.lean": {
+      "sha256": "4d490d0effb6a6daba6692448861c33474aca5fbdba5854c12379e0328ad5676",
+      "bytes": 10170
+    },
+    "published/work/audit_finite_clock_controls.py": {
+      "sha256": "07e2d3f60c4fc5af074a3120d87cb604caf50ed32962164234289281c9b0a92c",
+      "bytes": 3140
+    },
+    "published/work/dependencies/Rule30ClockJetResearch.lean": {
+      "sha256": "0cb60f8710596347c6a72753638a4aebeba25b22315a09f498711b0e576660c2",
+      "bytes": 3937
+    },
+    "published/work/dependencies/Rule30ClockModeResearch.lean": {
+      "sha256": "0d7f9dc8ff048cbb50d45e68e85d63d31f69d512556c87c50459f95b895250e1",
+      "bytes": 4912
+    },
+    "published/work/dependencies/Rule30CommonPastResearch.lean": {
+      "sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "bytes": 16107
+    },
+    "published/work/dependencies/Rule30EvenModeRigidityResearch.lean": {
+      "sha256": "38e74acb17c0ddc2b40dc92e49052cb567056621bb8b18e8e28e16983f4b452b",
+      "bytes": 6348
+    },
+    "published/work/dependencies/Rule30OrClockObserverResearch.lean": {
+      "sha256": "9928288f7c038406e6979852d845f6de17a5d8f887bddefe3d31494e2b8b83c2",
+      "bytes": 7499
+    },
+    "published/work/dependencies/Rule30SaturatedOrPeriodResearch.lean": {
+      "sha256": "8cdc3aff12601822a24ecc288df02378bca026d4b9e0b5407cdf5192939505f8",
+      "bytes": 3447
+    },
+    "published/work/evidence/audit_finite_clock_controls.guard.json": {
+      "sha256": "03d6ac2ca8b3bdbb0c4c1abef326635be35a62287b244800b3356740f2d021a3",
+      "bytes": 513
+    },
+    "published/work/evidence/periodic_or_pair_probe.guard.json": {
+      "sha256": "0960f281c6ec0f34cc6bafb92fd73296876c19bda64f2f25fb49b974383f7695",
+      "bytes": 508
+    },
+    "published/work/evidence/replay-Rule30PeriodicOrPairCertificate.guard.json": {
+      "sha256": "d0bbdc9cf128817174078b1dcb3e2c057caa51b1e84e0f333aa8f04a6e95b5fa",
+      "bytes": 523
+    },
+    "published/work/evidence/replay-Rule30PeriodicOrPeriodResearch.guard.json": {
+      "sha256": "29e4c83bb19ca023391d6c9d9185e063b53028972842ee9bbbc7a9d37d2f00a6",
+      "bytes": 523
+    },
+    "published/work/evidence/replay-Rule30TwoPlateauClockResearch.guard.json": {
+      "sha256": "34bc5e948bababb89e76bf29e330310fcdf0bc617982b0576fd89005f2ab2ac3",
+      "bytes": 522
+    },
+    "published/work/finite-clock-controls.json": {
+      "sha256": "f4a0164984e4f3573c6ec354530dd741e66dec5a4e4b235cfa3640f1cd0094ae",
+      "bytes": 1742
+    },
+    "published/work/formal/Rule30PeriodicOrPairCertificate/build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "published/work/formal/Rule30PeriodicOrPairCertificate/check.log": {
+      "sha256": "e10541f23c9885ac5879c9e979c975d7217f7e92ab998040ec281933b5a3501e",
+      "bytes": 8834
+    },
+    "published/work/formal/Rule30PeriodicOrPairCertificate/report.json": {
+      "sha256": "21ab02e15664253c3fad9c5f122793555650c66be8434e38feec6ba4a00d4ff8",
+      "bytes": 13341
+    },
+    "published/work/formal/Rule30PeriodicOrPeriodResearch/build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "published/work/formal/Rule30PeriodicOrPeriodResearch/check.log": {
+      "sha256": "ae756a3d9fd8eac5dfcbfa1dc0c8fb0474ec94b5da75b8d65bc4b7646b1c911c",
+      "bytes": 1071
+    },
+    "published/work/formal/Rule30PeriodicOrPeriodResearch/report.json": {
+      "sha256": "be727a5ebfc2258f71268f6516f3bf4ce5d4dbcdee4ea778fb80638eaed88284",
+      "bytes": 1314
+    },
+    "published/work/formal/Rule30TwoPlateauClockResearch/build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "published/work/formal/Rule30TwoPlateauClockResearch/check.log": {
+      "sha256": "b7a4ccfc4ce5422877116012f64a06c9d1cea7c68c53848a688b2450634fe680",
+      "bytes": 4676
+    },
+    "published/work/formal/Rule30TwoPlateauClockResearch/report.json": {
+      "sha256": "8f009ad2a028b3a3e2ea3134d4b8ad6cca918c5fc202b657300d100aeddba4c9",
+      "bytes": 6873
+    },
+    "published/work/generate_periodic_or_certificate.py": {
+      "sha256": "eb8a4e0938c7b6f11e0e9deafb538d28f27e41f72ec89bfc403845f9d595803a",
+      "bytes": 5956
+    },
+    "published/work/guard.py": {
+      "sha256": "475695f7cbe9ec6d1321c01c9d42ff6631b4130ff36fd229824b52c4159f3d34",
+      "bytes": 2879
+    },
+    "published/work/periodic-or-certificate.json": {
+      "sha256": "7acd98586eacfcae676b788bc855470be4ef05640d6db2b6365b703bbdbc9652",
+      "bytes": 14555
+    },
+    "published/work/periodic-or-pair-probe.json": {
+      "sha256": "f769636e4a85a9508c5baf0670084315aa85647f27025d8053d9c90346d39898",
+      "bytes": 1531
+    },
+    "published/work/periodic_or_pair_probe.py": {
+      "sha256": "47aab4b3d5e4f0aeb7f6dde34ee3d386a2c339d578657c859d2bcbfd69a17fa0",
+      "bytes": 3303
+    },
+    "published/work/replay.py": {
+      "sha256": "876c14b97db099f4ecf175216557933988ef74ccbcd80cc1bda02895c42ffd6c",
+      "bytes": 2946
+    },
+    "published/work/Rule30PeriodicOrPairCertificate.lean": {
+      "sha256": "1407f153157fd3403f8884265e4539c36ff4ea3da0ce44939e3963f49e00704c",
+      "bytes": 36354
+    },
+    "published/work/Rule30PeriodicOrPeriodResearch.lean": {
+      "sha256": "a4573b2955f6e4aa83e01a8dc09206f3bd3009f23209ec52fd057789387d786f",
+      "bytes": 3002
+    },
+    "published/work/Rule30TwoPlateauClockResearch.lean": {
+      "sha256": "e3c43118ced8847ac5c75ed07374919574ec195c57b07042f9b4aa852e3fb386",
+      "bytes": 12125
+    },
+    "replay_review.py": {
+      "sha256": "2a9bbba2f3c5ce4e13574469fce0222b0f48cc57f720056eecd7cca62148dd2a",
+      "bytes": 6783
+    },
+    "reproduction/commands.json": {
+      "sha256": "a9445b277fe52efa76c62f1d96b849b9d683787d90f3dcfce75a5a4116bf3059",
+      "bytes": 15345
+    },
+    "reproduction/logs/archive.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30ClockJetResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30ClockModeResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30CommonPastResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30EvenModeRigidityResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30OrClockObserverResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30PeriodicOrPairCertificate.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30PeriodicOrPeriodResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30SaturatedOrPeriodResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Rule30TwoPlateauClockResearch.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Ruliology.CellularAutomata.Rule30Diagonals.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Ruliology.CellularAutomata.Rule30Jen.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/build-Ruliology.CellularAutomata.Rule30Prize.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reproduction/logs/replay-Rule30ClockJetResearch.log": {
+      "sha256": "e195a533b6961da635fa8eb75f536afc23c3552dbd8324d7fbf3e1f758ed13d8",
+      "bytes": 1813
+    },
+    "reproduction/logs/replay-Rule30ClockModeResearch.log": {
+      "sha256": "a9831ad4c736d9e1adc5f8859c76f3ffe3c1d0322986151da1b5578bd458fa23",
+      "bytes": 2653
+    },
+    "reproduction/logs/replay-Rule30CommonPastResearch.log": {
+      "sha256": "61f98ae5e34346d400271f813716f5388aee348a6d7c49acd3d15883be96f8fd",
+      "bytes": 5003
+    },
+    "reproduction/logs/replay-Rule30EvenModeRigidityResearch.log": {
+      "sha256": "666a8ef5c3296427393531d9aa7b7fb83b0322a606573da1535aa9b1b42889f4",
+      "bytes": 2253
+    },
+    "reproduction/logs/replay-Rule30OrClockObserverResearch.log": {
+      "sha256": "4eb6f1c2a7d3bcb4a57d682b36100f1e581b48a6471d94c94a659b7df9f8cbb4",
+      "bytes": 2752
+    },
+    "reproduction/logs/replay-Rule30PeriodicOrPairCertificate.log": {
+      "sha256": "8ba628f6c33bd3293a27e9767b6968ed840a62e1f653d97fe580a7c1ce4c88ff",
+      "bytes": 8768
+    },
+    "reproduction/logs/replay-Rule30PeriodicOrPeriodResearch.log": {
+      "sha256": "0745f824fb662ccb7ba0efaa5e5f095054da28156ea32eb2b99796c0b7bc86b3",
+      "bytes": 1005
+    },
+    "reproduction/logs/replay-Rule30SaturatedOrPeriodResearch.log": {
+      "sha256": "e4a63118a7fe8bf3ea7e1b0cad7d9e025f826e5090834156e2e9c17363145fce",
+      "bytes": 1201
+    },
+    "reproduction/logs/replay-Rule30TwoPlateauClockResearch.log": {
+      "sha256": "c9a5b3faa071604581f503fe9261c2ad1c3facb77596df342a7d03af0d8e25ad",
+      "bytes": 4610
+    },
+    "reproduction/logs/version.log": {
+      "sha256": "cf9749f49a3b102ce1920c0af00c7bfac45ed75e63b4e66b487611ee5d9a7b3a",
+      "bytes": 104
+    },
+    "reproduction/official-source-hashes.json": {
+      "sha256": "7209d89633e1956fa63b6031acff24662d8dda73b98662ae0c0398e6627eb884",
+      "bytes": 33264
+    },
+    "reproduction/report.json": {
+      "sha256": "cfda87d3698f3a6c6fb291509d22a87bfcc2666379bc0c19d9d8ad69e078326c",
+      "bytes": 18577
+    },
+    "reproduction/Rule30ClockJetResearch.json": {
+      "sha256": "445e22a01bc3541eb8af9feca2b850156f8647c1194233b8602188712b272d57",
+      "bytes": 2517
+    },
+    "reproduction/Rule30ClockModeResearch.json": {
+      "sha256": "32adb4709ee5d2f4d6165bb6c476c1e7522a30353ef48868625955b5fd1235ab",
+      "bytes": 3799
+    },
+    "reproduction/Rule30CommonPastResearch.json": {
+      "sha256": "92ba476094ca57754b1c448d5ee94025c8fcd162f61a7657cb7a762c171bd55a",
+      "bytes": 7522
+    },
+    "reproduction/Rule30EvenModeRigidityResearch.json": {
+      "sha256": "64a4743fdca217992002ef4227a84912ed614a0bd8dac14fc792bbd2feb4fd74",
+      "bytes": 3063
+    },
+    "reproduction/Rule30OrClockObserverResearch.json": {
+      "sha256": "2db9bb68c4f97fcbdb83fa65ce47152cf0971be98470664f28345bcc98af0167",
+      "bytes": 3904
+    },
+    "reproduction/Rule30PeriodicOrPairCertificate.json": {
+      "sha256": "2c5153d47f7e5f2de3493caedf36faed39705ea55ed33fc2c4d897219f1d8142",
+      "bytes": 13256
+    },
+    "reproduction/Rule30PeriodicOrPeriodResearch.json": {
+      "sha256": "0d4fd570707c8eb092b0ee77fad831a2ace6da94d28c7839d335d1f77fd1ea80",
+      "bytes": 1227
+    },
+    "reproduction/Rule30SaturatedOrPeriodResearch.json": {
+      "sha256": "0085a8d2b9f282dfaf861b4acc824fe773d2dab0270e28a57f8ad82b5017f158",
+      "bytes": 1522
+    },
+    "reproduction/Rule30TwoPlateauClockResearch.json": {
+      "sha256": "8cfee666c50ee3c344503486eae85b4644f65c8a707dc52fb6487d4584033756",
+      "bytes": 6787
+    },
+    "REVIEW.md": {
+      "sha256": "971c5bd1bf4c4493c81b1403f145cf0b8df69e83a02d008791d9abbf47979afe",
+      "bytes": 5345
+    },
+    "select_review.py": {
+      "sha256": "d3cae255bc93cea49f6cbee4e2e093b8fde1bb9b1c550a84b9120b0f1b021741",
+      "bytes": 2816
+    },
+    "source-manifest.json": {
+      "sha256": "89763c12a25db8445d0d2672e00909d97ad99ecc55c6dab61c606907d6e3cb70",
+      "bytes": 12870
+    }
+  },
+  "total_bytes": 386595,
+  "scope": "Even source half-clock cannot be hidden in the OR across two newer cells, nor eventually in the next fixed-depth column. No physical-center, prize, or safety-completeness claim.",
+  "preserved_failure": "First literal audit overrequired odd-R next-column periodicity; corrected without changing published source.",
+  "excludes": "No compiled libraries, source archives, caches, or private kit copy selected."
+}

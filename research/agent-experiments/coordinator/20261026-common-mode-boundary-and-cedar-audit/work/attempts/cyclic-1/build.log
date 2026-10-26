@@ -1,0 +1,25 @@
+C:\Users\troyu\Rule30-offload\research\global-clock-20261026T1650\Rule30CyclicSubsetObstructionResearch.lean:50:2: error: failed to synthesize
+  Decidable (∀ (t : Fin 5), Common (A ↑t) (B ↑t) (H ↑t))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\troyu\Rule30-offload\research\global-clock-20261026T1650\Rule30CyclicSubsetObstructionResearch.lean:55:45: error: failed to synthesize
+  Decidable
+    ((∀ (j : Fin 6), bits 0 j = actualStep (bits 0) j) ∧
+      (∀ (j : Fin 6), bits 63 j = modeStep (bits 0) (bits 0) (bits 63) j) ∧ Common (bits 0) (bits 0) (bits 63))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\troyu\Rule30-offload\research\global-clock-20261026T1650\Rule30CyclicSubsetObstructionResearch.lean:85:58: error: failed to synthesize
+  Decidable (Subset (A 0) (B 0) (H 0))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\troyu\Rule30-offload\research\global-clock-20261026T1650\Rule30CyclicSubsetObstructionResearch.lean:86:62: error: failed to synthesize
+  Decidable ¬Subset (A 2) (B 2) (H 2)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\troyu\Rule30-offload\research\global-clock-20261026T1650\Rule30CyclicSubsetObstructionResearch.lean:87:63: error: Tactic `rfl` failed: The left-hand side
+  A (t + 2)
+is not definitionally equal to the right-hand side
+  B (t + 2)
+
+t : Nat
+⊢ A (t + 2) = B (t + 2)

@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "search_performed": false,
+  "kernel_checked": false,
+  "source_sha256": "7f1a4feaa79e5eb18c12a4ad0da921bf0fb4a2dd8eb00564b2bd9800f435f331",
+  "reports": [
+    {
+      "horizon": 1,
+      "width": 10,
+      "target": 4,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 16,
+        "mode": 8,
+        "common": 16
+      },
+      "passed": true
+    },
+    {
+      "horizon": 2,
+      "width": 14,
+      "target": 6,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 44,
+        "mode": 22,
+        "common": 33
+      },
+      "passed": true
+    },
+    {
+      "horizon": 3,
+      "width": 18,
+      "target": 8,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 84,
+        "mode": 42,
+        "common": 56
+      },
+      "passed": true
+    },
+    {
+      "horizon": 4,
+      "width": 22,
+      "target": 10,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 136,
+        "mode": 68,
+        "common": 85
+      },
+      "passed": true
+    },
+    {
+      "horizon": 6,
+      "width": 30,
+      "target": 14,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 276,
+        "mode": 138,
+        "common": 161
+      },
+      "passed": true
+    },
+    {
+      "horizon": 8,
+      "width": 38,
+      "target": 18,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 464,
+        "mode": 232,
+        "common": 261
+      },
+      "passed": true
+    },
+    {
+      "horizon": 12,
+      "width": 54,
+      "target": 26,
+      "initial_subset": true,
+      "subset_loss_time": 1,
+      "scalar_checks": {
+        "actual": 984,
+        "mode": 492,
+        "common": 533
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Finite triangular domains only. At time t equations and Common are checked only at j>=2t. No equations constrain the excluded older boundary, and no all-time extension is established. These are different witnesses from the six-cycle transient and the verifier-created H12 white cone."
+}

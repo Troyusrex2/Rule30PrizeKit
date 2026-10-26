@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "supplied_source_sha256": "4c7afb6a97daeb6c0305a07cc0a6b54f3a74f2dc65e387d9b5026333c760b45e",
+  "kit_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "modules": [
+    {
+      "module": "Rule30CyclicSubsetObstructionResearch",
+      "source_sha256": "4c7afb6a97daeb6c0305a07cc0a6b54f3a74f2dc65e387d9b5026333c760b45e",
+      "constants": 48,
+      "passed": true
+    }
+  ],
+  "all_custom_constants": 48,
+  "official_built": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize"
+  ],
+  "seconds": 11.171999999962281,
+  "no_reference_cache": true,
+  "no_reference_write": true,
+  "no_install": true,
+  "commands": [
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--version"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 0.09399999998277053,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\version.log"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\MWB\\Rule30\\Rule30PrizeKit",
+        "archive",
+        "--format=tar",
+        "--output",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit-source.tar",
+        "5473ffd075f63c9d626e63b8455805d4831b39ca"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 0.061999999976251274,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\archive.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit\\private-lib\\Ruliology\\CellularAutomata\\Rule30Jen.olean",
+        "lean/Ruliology/CellularAutomata/Rule30Jen.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 2.187000000034459,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\build-Ruliology.CellularAutomata.Rule30Jen.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit\\private-lib\\Ruliology\\CellularAutomata\\Rule30Prize.olean",
+        "lean/Ruliology/CellularAutomata/Rule30Prize.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5469999999622814,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\build-Ruliology.CellularAutomata.Rule30Prize.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit\\private-lib\\Rule30CyclicSubsetObstructionResearch.olean",
+        "Rule30CyclicSubsetObstructionResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.6410000000032596,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\build-Rule30CyclicSubsetObstructionResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30CyclicSubsetObstructionResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30CyclicSubsetObstructionResearch.cyclic_subset_preservation_fails",
+        "--headline",
+        "Rule30CyclicSubsetObstructionResearch.backgrounds_coalesce",
+        "--headline",
+        "Rule30CyclicSubsetObstructionResearch.white_boundary_fails"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.327999999979511,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\mode-transient-review\\reproduction\\logs\\replay-Rule30CyclicSubsetObstructionResearch.log"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "level_counts": [
+    640,
+    192,
+    112,
+    90
+  ],
+  "projection_count": 20,
+  "projected_even_reach_pairs": 438,
+  "source_sha256": "1407f153157fd3403f8884265e4539c36ff4ea3da0ce44939e3963f49e00704c",
+  "certificate_sha256": "7acd98586eacfcae676b788bc855470be4ef05640d6db2b6365b703bbdbc9652",
+  "induction_scope": "The exact two-step closure applies to every natural number of step pairs. Each actual infinite path lies in all three viability prunings. The two oldest inputs of each copy are independently free on every edge; no older period or clock truncation enters.",
+  "odd_control": {
+    "width": 7,
+    "seed": 20,
+    "older_first": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "j": 0,
+    "R": 1,
+    "full_orbit": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "orbit_period": 2,
+    "source_antiperiod": true,
+    "older_period": true,
+    "newest_or_period": true,
+    "next_column_period": false
+  },
+  "preserved_audit_failure": "Attempt1 mistakenly required the odd-R OR counterexample also to make the next column R-periodic. The publication claimed only the OR counterexample. Its next column actually flips. The overstrong audit assertion/source/log are preserved.",
+  "kernel_scope": "This independent script is an exact-computation audit. Separate unchanged-checker reports establish the Lean constants."
+}

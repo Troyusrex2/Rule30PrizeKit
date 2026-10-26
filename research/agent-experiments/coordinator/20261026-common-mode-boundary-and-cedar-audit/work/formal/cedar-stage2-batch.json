@@ -1,0 +1,342 @@
+{
+  "passed": true,
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "seconds": 17.754640600003768,
+  "dependency_builds": [
+    {
+      "module": "CedarSafetySoundness",
+      "seconds": 10.408076300052926,
+      "source_sha256": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a"
+    },
+    {
+      "module": "CedarSafetySemantics",
+      "seconds": 0.5158267999649979,
+      "source_sha256": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b"
+    },
+    {
+      "module": "CedarSafetyBridge",
+      "seconds": 0.7129613000433892,
+      "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8"
+    },
+    {
+      "module": "CedarWhiteTransport",
+      "seconds": 0.41309350001392886,
+      "source_sha256": "cbacbf023edfb7bc68b11c4a84ef2e0dbac63a03133917339513ffae2422c021"
+    },
+    {
+      "module": "CedarZeroFront",
+      "seconds": 0.8305816000211053,
+      "source_sha256": "9421590c995451594085ea908a98ca051ea16ea4ecf5882a6dd02fac9b7cd293"
+    },
+    {
+      "module": "CedarFiniteInjectivity",
+      "seconds": 0.38506219995906577,
+      "source_sha256": "e9750262c68c5deea556e2d336687bf37afdf33ac09b32515619c97abaa2a4e1"
+    }
+  ],
+  "new_modules": [
+    {
+      "module": "CedarZeroFront",
+      "source_sha256": "9421590c995451594085ea908a98ca051ea16ea4ecf5882a6dd02fac9b7cd293",
+      "seconds": 4.225207600044087,
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.actual_trace",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.block",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.block_transport",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.core",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.core_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.escape",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.escape_bound",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.evolution_singleton",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.front",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.length_change",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.length_evolution",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.newest_drop",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.newest_prefix_cone",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.not_safe_zero_front",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.rank_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.safe_shift",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.stationary_terminal",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.terminal_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.terminal_not_safe",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.traceRow",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.trace_initial",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.trace_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.trace_terminal",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarSafety.newest.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.block.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarZeroFront.core.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.escape.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "CedarZeroFront.traceRow.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarZeroFront.not_safe_zero_front",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarZeroFront.rank_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarZeroFront.newest_prefix_cone",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarZeroFront.block_transport",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "CedarZeroFront",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 41,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "CedarFiniteInjectivity",
+      "source_sha256": "e9750262c68c5deea556e2d336687bf37afdf33ac09b32515619c97abaa2a4e1",
+      "seconds": 1.476286599994637,
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.F_injective",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.accepted_of_safe_eventual_accepted",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.change_injective",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.evolution_injective",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.return8_of_eventual_accepted",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.return8_of_eventual_return8",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.xor_right_cancel",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.F_injective",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.return8_of_eventual_accepted",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "CedarFiniteInjectivity.accepted_of_safe_eventual_accepted",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "CedarFiniteInjectivity",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 7,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ],
+  "scope": "Two Cedar partial results; no safety completeness or physical-center claim"
+}

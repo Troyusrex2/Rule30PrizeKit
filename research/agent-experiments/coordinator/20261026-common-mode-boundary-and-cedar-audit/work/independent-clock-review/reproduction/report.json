@@ -1,0 +1,422 @@
+{
+  "passed": true,
+  "published_commit": "64197054b1e4f5b768a624c16bd3c1db0555f3cb",
+  "kit_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "modules": [
+    {
+      "module": "Rule30CommonPastResearch",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "constants": 100,
+      "passed": true
+    },
+    {
+      "module": "Rule30OrClockObserverResearch",
+      "source_sha256": "9928288f7c038406e6979852d845f6de17a5d8f887bddefe3d31494e2b8b83c2",
+      "constants": 24,
+      "passed": true
+    },
+    {
+      "module": "Rule30ClockJetResearch",
+      "source_sha256": "0cb60f8710596347c6a72753638a4aebeba25b22315a09f498711b0e576660c2",
+      "constants": 13,
+      "passed": true
+    },
+    {
+      "module": "Rule30ClockModeResearch",
+      "source_sha256": "0d7f9dc8ff048cbb50d45e68e85d63d31f69d512556c87c50459f95b895250e1",
+      "constants": 29,
+      "passed": true
+    },
+    {
+      "module": "Rule30EvenModeRigidityResearch",
+      "source_sha256": "38e74acb17c0ddc2b40dc92e49052cb567056621bb8b18e8e28e16983f4b452b",
+      "constants": 17,
+      "passed": true
+    },
+    {
+      "module": "Rule30SaturatedOrPeriodResearch",
+      "source_sha256": "8cdc3aff12601822a24ecc288df02378bca026d4b9e0b5407cdf5192939505f8",
+      "constants": 8,
+      "passed": true
+    },
+    {
+      "module": "Rule30PeriodicOrPeriodResearch",
+      "source_sha256": "a4573b2955f6e4aa83e01a8dc09206f3bd3009f23209ec52fd057789387d786f",
+      "constants": 5,
+      "passed": true
+    },
+    {
+      "module": "Rule30PeriodicOrPairCertificate",
+      "source_sha256": "1407f153157fd3403f8884265e4539c36ff4ea3da0ce44939e3963f49e00704c",
+      "constants": 138,
+      "passed": true
+    },
+    {
+      "module": "Rule30TwoPlateauClockResearch",
+      "source_sha256": "e3c43118ced8847ac5c75ed07374919574ec195c57b07042f9b4aa852e3fb386",
+      "constants": 54,
+      "passed": true
+    }
+  ],
+  "all_custom_constants": 388,
+  "official_built": [
+    "Ruliology.CellularAutomata.Rule30Diagonals",
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize"
+  ],
+  "seconds": 70.42200000002049,
+  "no_reference_cache": true,
+  "no_reference_write": true,
+  "no_install": true,
+  "commands": [
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--version"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 0.23399999999674037,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\version.log"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\MWB\\Rule30\\Rule30PrizeKit",
+        "archive",
+        "--format=tar",
+        "--output",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit-source.tar",
+        "5473ffd075f63c9d626e63b8455805d4831b39ca"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 0.10899999999674037,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\archive.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Ruliology\\CellularAutomata\\Rule30Jen.olean",
+        "lean/Ruliology/CellularAutomata/Rule30Jen.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.9689999999827705,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Ruliology.CellularAutomata.Rule30Jen.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Ruliology\\CellularAutomata\\Rule30Prize.olean",
+        "lean/Ruliology/CellularAutomata/Rule30Prize.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Ruliology.CellularAutomata.Rule30Prize.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Ruliology\\CellularAutomata\\Rule30Diagonals.olean",
+        "lean/Ruliology/CellularAutomata/Rule30Diagonals.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.9060000000172295,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Ruliology.CellularAutomata.Rule30Diagonals.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30CommonPastResearch.olean",
+        "Rule30CommonPastResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.875,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30CommonPastResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30CommonPastResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30CommonPastResearch.actual_periodic"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 6.688000000023749,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30CommonPastResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30OrClockObserverResearch.olean",
+        "Rule30OrClockObserverResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.625,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30OrClockObserverResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30OrClockObserverResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30OrClockObserverResearch.shift_flag"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.375,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30OrClockObserverResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30ClockJetResearch.olean",
+        "Rule30ClockJetResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5160000000032596,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30ClockJetResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30ClockJetResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ClockJetResearch.plateau_or_double"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.0619999999762513,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30ClockJetResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30ClockModeResearch.olean",
+        "Rule30ClockModeResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30ClockModeResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30ClockModeResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30ClockModeResearch.actual_lower_observer_data"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.202999999979511,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30ClockModeResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30EvenModeRigidityResearch.olean",
+        "Rule30EvenModeRigidityResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5780000000377186,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30EvenModeRigidityResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30EvenModeRigidityResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30EvenModeRigidityResearch.actual_even_plateau_or_clock_rigidity"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.375,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30EvenModeRigidityResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30SaturatedOrPeriodResearch.olean",
+        "Rule30SaturatedOrPeriodResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5309999999590218,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30SaturatedOrPeriodResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30SaturatedOrPeriodResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30SaturatedOrPeriodResearch.actual_saturated_or_double_period"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.219000000040978,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30SaturatedOrPeriodResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30PeriodicOrPeriodResearch.olean",
+        "Rule30PeriodicOrPeriodResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 1.5,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30PeriodicOrPeriodResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30PeriodicOrPeriodResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30PeriodicOrPeriodResearch.actual_periodic_or_double_period"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 3.219000000040978,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30PeriodicOrPeriodResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30PeriodicOrPairCertificate.olean",
+        "Rule30PeriodicOrPairCertificate.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 6.875,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30PeriodicOrPairCertificate.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30PeriodicOrPairCertificate",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30PeriodicOrPairCertificate.base_check",
+        "--headline",
+        "Rule30PeriodicOrPairCertificate.successors_check",
+        "--headline",
+        "Rule30PeriodicOrPairCertificate.closed_check",
+        "--headline",
+        "Rule30PeriodicOrPairCertificate.excludes_check"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 7.985000000044238,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30PeriodicOrPairCertificate.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "-o",
+        "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit\\private-lib\\Rule30TwoPlateauClockResearch.olean",
+        "Rule30TwoPlateauClockResearch.lean"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 2.8910000000032596,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\build-Rule30TwoPlateauClockResearch.log"
+    },
+    {
+      "command": [
+        "D:\\MWB\\Rule30\\toolchain\\lean-4.35.0-windows\\bin\\lean.exe",
+        "--run",
+        "Check.lean",
+        "Rule30TwoPlateauClockResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30TwoPlateauClockResearch.actual_even_two_plateau_or_clock_rigidity",
+        "--headline",
+        "Rule30TwoPlateauClockResearch.actual_third_column_no_half_period",
+        "--headline",
+        "Rule30TwoPlateauClockResearch.actual_third_column_no_eventual_half_period"
+      ],
+      "cwd": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\kit",
+      "started": true,
+      "exit_code": 0,
+      "seconds": 4.844000000040978,
+      "log": "D:\\MWB\\Rule30\\cedar-followup-20261026T154236Z\\verifier\\root-clock-review\\reproduction\\logs\\replay-Rule30TwoPlateauClockResearch.log"
+    }
+  ]
+}

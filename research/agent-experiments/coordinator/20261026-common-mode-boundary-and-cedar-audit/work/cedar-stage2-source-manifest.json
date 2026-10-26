@@ -1,0 +1,44 @@
+{
+  "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "snapshot_manifest_sha256": "bac858c5c8085538464a0746644b322555e6ba2b0fb878d0a8063833b338b69f",
+  "all_snapshot_hashes_checked": 177,
+  "modules": [
+    {
+      "module": "CedarZeroFront",
+      "source_sha256": "9421590c995451594085ea908a98ca051ea16ea4ecf5882a6dd02fac9b7cd293",
+      "headlines": [
+        "CedarZeroFront.not_safe_zero_front",
+        "CedarZeroFront.rank_step",
+        "CedarZeroFront.newest_prefix_cone",
+        "CedarZeroFront.block_transport"
+      ]
+    },
+    {
+      "module": "CedarFiniteInjectivity",
+      "source_sha256": "e9750262c68c5deea556e2d336687bf37afdf33ac09b32515619c97abaa2a4e1",
+      "headlines": [
+        "CedarFiniteInjectivity.F_injective",
+        "CedarFiniteInjectivity.return8_of_eventual_accepted",
+        "CedarFiniteInjectivity.accepted_of_safe_eventual_accepted"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module": "CedarSafetySoundness",
+      "source_sha256": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a"
+    },
+    {
+      "module": "CedarSafetySemantics",
+      "source_sha256": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b"
+    },
+    {
+      "module": "CedarSafetyBridge",
+      "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8"
+    },
+    {
+      "module": "CedarWhiteTransport",
+      "source_sha256": "cbacbf023edfb7bc68b11c4a84ef2e0dbac63a03133917339513ffae2422c021"
+    }
+  ]
+}
