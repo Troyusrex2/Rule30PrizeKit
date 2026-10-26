@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"HeightOneTransfer.four_of_derivative_two","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.genuine_no11011","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.height_one_four_of_shorter_completeness","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.height_one_shorter_counterexample","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.small_return4","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.split_last","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.trace_period_of_return","standardAxioms":true},{"kind":"theorem","name":"HeightOneTransfer.transfer_three","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"HeightOneTransfer.height_one_shorter_counterexample","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"HeightOneTransfer","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":22,"ok":true},"verdict":"pass","verifiedTargets":[]}

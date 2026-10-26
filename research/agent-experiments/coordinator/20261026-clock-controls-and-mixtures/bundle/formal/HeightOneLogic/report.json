@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "module": "HeightOneLogic",
+  "attempt": "dependencies_root01",
+  "source_sha256": "a8421f7776feb9c2c65e474006a3e5c9d8b06f3509703f6333a02a96c8cb8908",
+  "compiled_sha256": "77a70de84ad5328203602a42f59218a209c0e1a4dec8242e3b97900701fa4648",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.567671699973289,
+  "total_seconds": 5.611283399979584,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "HeightOneLogic.D",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneLogic.No11011",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneLogic.Periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneLogic.SpanOne",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "HeightOneLogic.WH",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.height_shift_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.isolated_derivative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.isolated_forces_twins",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.no010",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.no101",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.sign_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.span_one_of_closed_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.twin_local",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.white_height_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "HeightOneLogic.WH.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "HeightOneLogic.span_one_of_closed_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "HeightOneLogic",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 30,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

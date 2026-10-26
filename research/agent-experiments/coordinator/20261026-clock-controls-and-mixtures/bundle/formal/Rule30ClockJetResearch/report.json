@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "module": "Rule30ClockJetResearch",
+  "attempt": "dependencies_root01",
+  "source_sha256": "0cb60f8710596347c6a72753638a4aebeba25b22315a09f498711b0e576660c2",
+  "compiled_sha256": "c482240d093cb9c366d32f0119e7106607bce8a309688be13762e4608c5be4a6",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.4088138999650255,
+  "total_seconds": 1.4998906999826431,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.actual_plateau_jet",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ClockJetResearch.delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.delta_telescope",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.gate_delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.mask_delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.masked_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30ClockJetResearch.orTrace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.plateau_or_double",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.shift_difference_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.shift_or_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.shift_or_mask",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30ClockJetResearch.actual_plateau_jet",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30ClockJetResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 13,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

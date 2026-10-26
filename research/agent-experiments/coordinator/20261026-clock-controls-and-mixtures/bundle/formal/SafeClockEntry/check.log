@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"SafeClockEntry.SpanTwo","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.height_two_of_safe_antiperiod","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.nonreturn_leaf_antiperiod","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.not_safe_even_antiperiod","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.safe_clock_jump_entry","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.safe_clock_plateau_of_not_height_two","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.safe_extension_preserves_even_return","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.safe_two_cell_clock_jump_height","standardAxioms":true},{"kind":"theorem","name":"SafeClockEntry.two_step_recurrence","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"SafeClockEntry.safe_extension_preserves_even_return","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"SafeClockEntry","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":21,"ok":true},"verdict":"pass","verifiedTargets":[]}

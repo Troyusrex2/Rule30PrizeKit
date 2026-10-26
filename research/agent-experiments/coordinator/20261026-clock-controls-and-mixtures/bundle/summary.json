@@ -1,0 +1,594 @@
+{
+  "status": "publication candidate; assembly only, no new replay during assembly",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "lean_version": "4.35.0",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "prize_solved": false,
+  "module_count": 30,
+  "leaf_module_count": 6,
+  "reused_dependency_module_count": 24,
+  "constants": 1317,
+  "leaf_constants": 169,
+  "reused_dependency_constants": 1148,
+  "count_definition": "Per-module kernel-replayed constants, including generated internal constants; not handwritten theorem counts.",
+  "build_order": [
+    "CedarSafetySoundness",
+    "FrontBlackInterval",
+    "PhysicalEarlyCases",
+    "RootEventHeight",
+    "Rule30CommonPastResearch",
+    "SingleSeedOnsetObstruction",
+    "CedarGenuinePlateauControl",
+    "CedarPhysicalAgeBridge",
+    "CedarSafetySemantics",
+    "HeightOneLogic",
+    "PhysicalCapture",
+    "RootAntiPeriodHeight",
+    "Rule30OrClockObserverResearch",
+    "CedarNo11011",
+    "CedarSafetyBridge",
+    "CedarWhiteTransport",
+    "PhysicalMaintenance",
+    "Rule30ClockJetResearch",
+    "PhysicalEntryBarrier",
+    "PhysicalMixtures",
+    "RootShortExtensionCore",
+    "Rule30ClockModeResearch",
+    "HeightOneSemantics",
+    "PhysicalMixtureWord",
+    "RootReturningPrefixSafety",
+    "Rule30EvenModeRigidityResearch",
+    "HeightOneTransfer",
+    "HeightOnePeriodicity",
+    "SafeClockEntry",
+    "EvenClockLifting"
+  ],
+  "modules": [
+    {
+      "module": "CedarSafetySoundness",
+      "role": "reused_dependency",
+      "source_sha256": "e2e17bdb5be676ba8739a477e88e7e0ffc00da58422eb88c4b37303c26165e1a",
+      "constants": 137,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "3971813c83ca5d981a3c524b9c4ceb9c0c50c6548185296af4a90b0551d81a3e",
+      "root_check_log_sha256": "cf5721e12be3eb273c0cef9caf5f344b58e5ab6c667adc4ac4616a59550d1ca4",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ],
+      "headlines": [
+        "CedarSafetySoundness.accepted_return_eight"
+      ]
+    },
+    {
+      "module": "FrontBlackInterval",
+      "role": "reused_dependency",
+      "source_sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+      "constants": 57,
+      "root_phase": "front-interval-root-review-20261026T2128",
+      "root_report_sha256": "0a1014e50c983df1d597a02ebee4850f0feb6dfa1524ebd6f8129f32a5d24aa2",
+      "root_check_log_sha256": "bc40765354a39382aa88e9741a4e7927ee86fdd2fe6ad1274bcc268065e345b8",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Diagonals",
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ],
+      "headlines": [
+        "FrontBlackInterval.uniform_period",
+        "FrontBlackInterval.reset_inherits",
+        "FrontBlackInterval.no_aged_black_interval",
+        "FrontBlackInterval.aged_white_witness"
+      ]
+    },
+    {
+      "module": "PhysicalEarlyCases",
+      "role": "reused_dependency",
+      "source_sha256": "ea6daa684582f401e777aacfeccaf75984f2c4b0f12b822d08b1bb3919503c89",
+      "constants": 54,
+      "root_phase": "physical-age-root-review-20261026T2145",
+      "root_report_sha256": "1045bd22f7316a9c9ab872cb24892eb27db651e46c2aad925f40eff7bebc7d17",
+      "root_check_log_sha256": "a955312fcd78b03bb2f2197b678c81ac0b864adbb57920ca74f3184034fb27a3",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30BlackRuns"
+      ],
+      "headlines": [
+        "PhysicalEarlyCases.stationary_cone",
+        "PhysicalEarlyCases.stripe_stationary",
+        "PhysicalEarlyCases.early_white_witness_at",
+        "PhysicalEarlyCases.early_white_witness",
+        "PhysicalEarlyCases.distant_white_witness_at",
+        "PhysicalEarlyCases.distant_white_witness"
+      ]
+    },
+    {
+      "module": "RootEventHeight",
+      "role": "reused_dependency",
+      "source_sha256": "c3e092489185d6f38bf3313c027776b90e66b1485c431c2ab9e1ee33ed8248b4",
+      "constants": 43,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "5776c30cf1dc1eddd0c92b9bed478a58451bfe64c95e776859eab90ae885d74b",
+      "root_check_log_sha256": "70c907eedd32e6bef15b10134954adbac592f7760de2eb56104ae6c146a27177",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Tactic.Ring"
+      ],
+      "headlines": [
+        "RootEventHeight.signed_height_identity"
+      ]
+    },
+    {
+      "module": "Rule30CommonPastResearch",
+      "role": "reused_dependency",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "constants": 100,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "372ec074b70eae79bacba0f6295824b2f83757d269f23be7f048047a8a0afb3e",
+      "root_check_log_sha256": "dccacc5e0a04a875610528ff60a3774628b5185b8da338bcfede2fd5068e59d6",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Ruliology.CellularAutomata.Rule30Diagonals"
+      ],
+      "headlines": [
+        "Rule30CommonPastResearch.actual_periodic"
+      ]
+    },
+    {
+      "module": "SingleSeedOnsetObstruction",
+      "role": "leaf",
+      "source_sha256": "d8227bcac04bfead71d96ae898893f6f6fa9ac52e53181f5e952d0508425851c",
+      "constants": 22,
+      "root_phase": "onset-obstruction-root-review-20261026T2225",
+      "root_report_sha256": "63f436a7b9843a32aba19205d28e310ff127febd53b4a23607d20477af137c24",
+      "root_check_log_sha256": "53e8e2aec1bc2d6674deb0d9dc30351948931f7b3db89ef2ce22874fd421c9f3",
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Diagonals",
+        "Ruliology.CellularAutomata.Rule30Window"
+      ],
+      "headlines": [
+        "SingleSeedOnsetObstruction.diagonal32_periodic",
+        "SingleSeedOnsetObstruction.center_crossing_onset_fails",
+        "SingleSeedOnsetObstruction.no_center_crossing_uniform_onset"
+      ]
+    },
+    {
+      "module": "CedarGenuinePlateauControl",
+      "role": "leaf",
+      "source_sha256": "2297e8884a31cce8cb5a230c02944fafa6fb108f64463106c2de58be69660ca7",
+      "constants": 18,
+      "root_phase": "genuine-plateau-root-review-20261026T2132",
+      "root_report_sha256": "dac5064240e5fb984aa68214b6f17fbd4c85225a9fb82ddd7b79cafa29d51cec",
+      "root_check_log_sha256": "653c8efa37bd0fffe6ca87c9da4362f79f246039ce394686476397c0fd0076b4",
+      "private_imports": [
+        "CedarSafetySoundness"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "CedarGenuinePlateauControl.birth_certificate",
+        "CedarGenuinePlateauControl.birth_anti16_finite",
+        "CedarGenuinePlateauControl.children_return32",
+        "CedarGenuinePlateauControl.children_nonreturn16",
+        "CedarGenuinePlateauControl.children_defect_witnesses",
+        "CedarGenuinePlateauControl.children_not_anti16",
+        "CedarGenuinePlateauControl.children_not_periodic16"
+      ]
+    },
+    {
+      "module": "CedarPhysicalAgeBridge",
+      "role": "reused_dependency",
+      "source_sha256": "527ded7dc05fd3c1d11796bd5ed2435aa58e8f907df0303ec912b681a96252f8",
+      "constants": 91,
+      "root_phase": "physical-age-root-review-20261026T2145",
+      "root_report_sha256": "56b0368a0edb570c7c52be7f32221f02670a5f3e678f69db15f94b2d310be132",
+      "root_check_log_sha256": "666464298d8a13eda14d3be5c254ceb76ec095babb858513889d4896fc51d612",
+      "private_imports": [
+        "FrontBlackInterval",
+        "PhysicalEarlyCases"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Realization"
+      ],
+      "headlines": [
+        "CedarPhysicalAgeBridge.free_support",
+        "CedarPhysicalAgeBridge.front_recurrence",
+        "CedarPhysicalAgeBridge.before_arrival",
+        "CedarPhysicalAgeBridge.after_cone",
+        "CedarPhysicalAgeBridge.late_witness",
+        "CedarPhysicalAgeBridge.white_backwards",
+        "CedarPhysicalAgeBridge.physical_white_witness",
+        "CedarPhysicalAgeBridge.block_bound"
+      ]
+    },
+    {
+      "module": "CedarSafetySemantics",
+      "role": "reused_dependency",
+      "source_sha256": "5b0ff7ea84e8270534d3f289e76906b01f3b663a4f47c33a1bc22ab48884c50b",
+      "constants": 75,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "8df460dcb8b0f7515a7cd9019cdfef7090a204b96998de2221d7796db7827a12",
+      "root_check_log_sha256": "8793543034602bbc91f641eb7c556e8df1e9c66166b456cf497e8e3ba15af1ac",
+      "private_imports": [
+        "CedarSafetySoundness"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "CedarSafety.trace_white"
+      ]
+    },
+    {
+      "module": "HeightOneLogic",
+      "role": "reused_dependency",
+      "source_sha256": "a8421f7776feb9c2c65e474006a3e5c9d8b06f3509703f6333a02a96c8cb8908",
+      "constants": 30,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "abb0e8d8df5d00596a2523b91b981bcb1e0b0dabbe88261869458303f6e67d6f",
+      "root_check_log_sha256": "3e9dee30c8acbccf114a0872b1239091e887017bca8dad85294fe549ac6bcfa4",
+      "private_imports": [
+        "RootEventHeight"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "HeightOneLogic.span_one_of_closed_period"
+      ]
+    },
+    {
+      "module": "PhysicalCapture",
+      "role": "reused_dependency",
+      "source_sha256": "2a6bc724ccd06669d7c6a19604c71002b03f5d84b4e8c855293096d24f62d1cb",
+      "constants": 64,
+      "root_phase": "padded-exclusion-root-review-20261026T2155",
+      "root_report_sha256": "4e9f4cbd17a2d0da50547e5b6bedd50b018d0648253baa2cfb2a3efbfed9c744",
+      "root_check_log_sha256": "95a7fcb37dfff9c52d8de636fd209809e3b3e60c02fd6c02e9b52518506ef2a2",
+      "private_imports": [
+        "PhysicalEarlyCases"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "PhysicalCapture.black_step",
+        "PhysicalCapture.near_white_run",
+        "PhysicalCapture.capture_after_black",
+        "PhysicalCapture.stripe_after_black_run",
+        "PhysicalCapture.tail_and_stripe"
+      ]
+    },
+    {
+      "module": "RootAntiPeriodHeight",
+      "role": "reused_dependency",
+      "source_sha256": "513de31a591d3fa7afbeb69e4ac8a3967718a1ba8ced6df39a4ba2039083ed57",
+      "constants": 26,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "432ee91d323526a05ae8cca107c8be6a666d2ef050b4446c80280e46358bbe2f",
+      "root_check_log_sha256": "95c78ad85b8e65ddc2856ff672ced39414b79247b5eedb5abcf904408992ba45",
+      "private_imports": [
+        "RootEventHeight"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "RootAntiPeriodHeight.paired_height_identity"
+      ]
+    },
+    {
+      "module": "Rule30OrClockObserverResearch",
+      "role": "reused_dependency",
+      "source_sha256": "9928288f7c038406e6979852d845f6de17a5d8f887bddefe3d31494e2b8b83c2",
+      "constants": 24,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "6d773c5a9ed5431deabb9863352b9eab135dc7c0220ebc1dc68efe97a397a6f3",
+      "root_check_log_sha256": "7f1c266954446a7a7697fae2b2ed5ea322df20e8c2f682d9c643b82e653cc0fc",
+      "private_imports": [
+        "Rule30CommonPastResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "Rule30OrClockObserverResearch.actual_or_clock_observer"
+      ]
+    },
+    {
+      "module": "CedarNo11011",
+      "role": "reused_dependency",
+      "source_sha256": "951a3da95ec9e2b11a58ea3aa677e405e4666277acaf8fda5dd52fd27a059d9e",
+      "constants": 31,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "08a196f53427f11781bad2f1699f5834c7697cab47c6d0da7a338f994e83140a",
+      "root_check_log_sha256": "dbf851ddd412ac4e05a53e233cdf1e66c0a2f711d08b84c39d10eeb9da772623",
+      "private_imports": [
+        "CedarSafetySemantics"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "CedarNo11011.finite_white_no11011"
+      ]
+    },
+    {
+      "module": "CedarSafetyBridge",
+      "role": "reused_dependency",
+      "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8",
+      "constants": 8,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "693c903fb8a32a70606e6dcfe65fa2ea888c2204eba7d28ef588891bdb90b75e",
+      "root_check_log_sha256": "889e2a5af565b234a4712e9f09777366fbfa0f011d16ebac1b85e92844ef3eb4",
+      "private_imports": [
+        "CedarSafetySemantics"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "CedarSafetyBridge.safe_return_iff_accepted"
+      ]
+    },
+    {
+      "module": "CedarWhiteTransport",
+      "role": "reused_dependency",
+      "source_sha256": "cbacbf023edfb7bc68b11c4a84ef2e0dbac63a03133917339513ffae2422c021",
+      "constants": 18,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "cf064b049784f7bbe2dd7c29f710a986b132fdd24f31acfd8d4979c8d1c14581",
+      "root_check_log_sha256": "eb05c4b4fb970b9d62e297603dd350b6f125fca83a5206987f1bf61c441877ef",
+      "private_imports": [
+        "CedarSafetySemantics"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "CedarWhiteTransport.take_evolution"
+      ]
+    },
+    {
+      "module": "PhysicalMaintenance",
+      "role": "reused_dependency",
+      "source_sha256": "5cb038cf1779464cb84132bf5aa1fe1b8fee4783d08f12fc6d40db7ac6380402",
+      "constants": 54,
+      "root_phase": "maintenance-root-review-20261026T2205",
+      "root_report_sha256": "96bd83bf1f1b2350765d5790378b3a821fb4d4376bcdd94f4bf5779ac908699a",
+      "root_check_log_sha256": "998af70dc0a00072e5f6fb650e0f49674defc02f615510c8461dad4c429984be",
+      "private_imports": [
+        "PhysicalEarlyCases",
+        "PhysicalCapture"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "PhysicalMaintenance.padding_eq",
+        "PhysicalMaintenance.short_white_witness",
+        "PhysicalMaintenance.maintain",
+        "PhysicalMaintenance.finite_cone_agree",
+        "PhysicalMaintenance.response_agree"
+      ]
+    },
+    {
+      "module": "Rule30ClockJetResearch",
+      "role": "reused_dependency",
+      "source_sha256": "0cb60f8710596347c6a72753638a4aebeba25b22315a09f498711b0e576660c2",
+      "constants": 13,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "97fbf2dbc4c524c0e0f61e1c9af60277ae45cbb9de8a7b468d0b4a982a0873f3",
+      "root_check_log_sha256": "775f19c27cb9af73ac39df26866d1386d7e34fd7c1343da33094cb798c3706f9",
+      "private_imports": [
+        "Rule30OrClockObserverResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "Rule30ClockJetResearch.actual_plateau_jet"
+      ]
+    },
+    {
+      "module": "PhysicalEntryBarrier",
+      "role": "leaf",
+      "source_sha256": "9eb5fcbf8103c15fbc08620edc503deb5e7e513052a42aa2b05dece3bf0b8fbe",
+      "constants": 23,
+      "root_phase": "entry-barrier-root-review-20261026T2228",
+      "root_report_sha256": "d7f0ef64f8d986b5d78f862229b7849b1c3ef449d9555e012af9bae1db895111",
+      "root_check_log_sha256": "4f151a9f6e6462a6409fbb60bf8c1a1f42aff1ed03943c60aff5f47cb75a1ebe",
+      "private_imports": [
+        "PhysicalMaintenance"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "PhysicalEntryBarrier.narrow_white_witness",
+        "PhysicalEntryBarrier.narrow_to_big",
+        "PhysicalEntryBarrier.failed_narrow_black_prefix",
+        "PhysicalEntryBarrier.failed_narrow_deadline_white"
+      ]
+    },
+    {
+      "module": "PhysicalMixtures",
+      "role": "leaf",
+      "source_sha256": "0b6020cf82289b32a4006f84519845cd634d1b0bbd1a13602462e5e0ea4bca4c",
+      "constants": 58,
+      "root_phase": "mixtures-root-review-20261026T2215",
+      "root_report_sha256": "6b02e40d8cb5eb74c1ab7f73e33cc19d999ef1e43055e3b9553a9387fa9ccc5b",
+      "root_check_log_sha256": "e33b2a26de86076997bd09e042c12d6654037e2d4b2d0ed34664f6965c2f2670",
+      "private_imports": [
+        "PhysicalMaintenance",
+        "CedarPhysicalAgeBridge"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30StripCertificates"
+      ],
+      "headlines": [
+        "PhysicalMixtures.walk_stripes",
+        "PhysicalMixtures.cycle_stripes",
+        "PhysicalMixtures.periodic_of_phases",
+        "PhysicalMixtures.not_repeats_from_stripe",
+        "PhysicalMixtures.not_repeats_seed_pair"
+      ]
+    },
+    {
+      "module": "RootShortExtensionCore",
+      "role": "reused_dependency",
+      "source_sha256": "42ff71d255a0cd27be3938f223c7e21b4aa008b833522368b4d2acbf417f5a22",
+      "constants": 36,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "a40d7077e93e91811840e9289af1525d8c2b4b5b307ef02e653d963d11a9b25b",
+      "root_check_log_sha256": "8950ad6b2367a0fa3121bbdc71c5f05e92a3a39b73508dcaad82405da6c3428b",
+      "private_imports": [
+        "CedarSafetyBridge"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "RootShortExtensionCore.driven_white"
+      ]
+    },
+    {
+      "module": "Rule30ClockModeResearch",
+      "role": "reused_dependency",
+      "source_sha256": "0d7f9dc8ff048cbb50d45e68e85d63d31f69d512556c87c50459f95b895250e1",
+      "constants": 29,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "cdde4ed94c91699c7b07294884b5cc58e90e8f010b77b06d820a93fc0f7b5d0c",
+      "root_check_log_sha256": "4d7c59ffd9c3afe15ebec27141f43a27b775e7107251b952e83117142fb3f3f2",
+      "private_imports": [
+        "Rule30ClockJetResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "Rule30ClockModeResearch.actual_lower_observer_data"
+      ]
+    },
+    {
+      "module": "HeightOneSemantics",
+      "role": "reused_dependency",
+      "source_sha256": "a80a984938dd74b76e09776dfa976fdb14fbc58635405bfe4a83446cb42d2c6a",
+      "constants": 67,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "51e8c393492871bc69bc1d84609a6d8977c8f640cb38d1869282b6e651f72e4b",
+      "root_check_log_sha256": "943301d4daba5f472f03d9df8198978c866dae59e5d93dd3d75af9f2bd8cb689",
+      "private_imports": [
+        "HeightOneLogic",
+        "RootShortExtensionCore",
+        "CedarWhiteTransport",
+        "CedarNo11011"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "HeightOneSemantics.leaf_flip_trace",
+        "HeightOneSemantics.leaf_flip_return"
+      ]
+    },
+    {
+      "module": "PhysicalMixtureWord",
+      "role": "leaf",
+      "source_sha256": "028f327dab51051e20747074d8bfbc4b17d8743abaad398cfc049681652bb981",
+      "constants": 31,
+      "root_phase": "mixtures-root-review-20261026T2215",
+      "root_report_sha256": "f6defd97028be5c979ba10cc2724017f4101e682f7c6f3dc613090a074dceae1",
+      "root_check_log_sha256": "db0c184921fa34a8e6d7876a19363c33c2a1f74224cd199264416edb87190721",
+      "private_imports": [
+        "PhysicalMixtures"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30StripCertificates"
+      ],
+      "headlines": [
+        "PhysicalMixtureWord.word_length",
+        "PhysicalMixtureWord.segment_getD",
+        "PhysicalMixtureWord.eventuallyWord_repeats",
+        "PhysicalMixtureWord.not_eventually_word_seed_pair"
+      ]
+    },
+    {
+      "module": "RootReturningPrefixSafety",
+      "role": "reused_dependency",
+      "source_sha256": "c26040099924f86f5a2ace97dfb32de411df352c50d11d0b7f5af5e2cf74f47b",
+      "constants": 85,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "2ce1a151062e419dd242c37214a5254ddd85060a24f1ce126361145a90cf6d96",
+      "root_check_log_sha256": "ce442c3c8e1979fd815fc61a2dc0ef3735f0c6fc2b5e8bb70a441fd1dc61db29",
+      "private_imports": [
+        "RootShortExtensionCore"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "RootReturningPrefixSafety.returning_prefix_safe_extension"
+      ]
+    },
+    {
+      "module": "Rule30EvenModeRigidityResearch",
+      "role": "reused_dependency",
+      "source_sha256": "38e74acb17c0ddc2b40dc92e49052cb567056621bb8b18e8e28e16983f4b452b",
+      "constants": 17,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "0cffd11b031434039b4f6afd9dbb27f44ebcffa4077604a58a72cacd088bb2a6",
+      "root_check_log_sha256": "bd5a39bed03a46cc5e958e12faf7521658af6db9355970775885ddf3c2dd269b",
+      "private_imports": [
+        "Rule30ClockModeResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "Rule30EvenModeRigidityResearch.actual_even_plateau_or_clock_rigidity"
+      ]
+    },
+    {
+      "module": "HeightOneTransfer",
+      "role": "reused_dependency",
+      "source_sha256": "ce1ab3a7e2d406f7f6ad814326c38fa2032db756e9db6d44535f3cb9619d712d",
+      "constants": 22,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "305b6a5db7e1d966fccd7a84400f09e6737019946be01e67c8df71d9ce3b47ca",
+      "root_check_log_sha256": "002a282ebfe1355027b5de96087d19458e6e2d0eab0d59c471e1963f85b75158",
+      "private_imports": [
+        "HeightOneSemantics"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "HeightOneTransfer.height_one_shorter_counterexample"
+      ]
+    },
+    {
+      "module": "HeightOnePeriodicity",
+      "role": "reused_dependency",
+      "source_sha256": "96d7575d1db70090da3aa05d5cd187dafcb72648772964a11aadeb95de7b069c",
+      "constants": 46,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "24aeb33b635bba17ebb5bc3609f938d95af14097ee78245518cc63a0029cc4cc",
+      "root_check_log_sha256": "992a907d9b635d66659f3a54372e77d12e855fcae04a00d80d25399c4ef5a18c",
+      "private_imports": [
+        "HeightOneTransfer",
+        "Rule30CommonPastResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "HeightOnePeriodicity.exists_even_column_period"
+      ]
+    },
+    {
+      "module": "SafeClockEntry",
+      "role": "reused_dependency",
+      "source_sha256": "102fdfe2c55b8bafad83405af0c0baf3026917b401dbff8449eb6d695fa3086d",
+      "constants": 21,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "49147226454293ee09b38014224c3f87a227df8abda80f210d88da12c85a6ec5",
+      "root_check_log_sha256": "68bc14136a6189f928de5db702777df9f6bedc2a01d72f2db779eb9a8ecb08c4",
+      "private_imports": [
+        "HeightOnePeriodicity",
+        "RootAntiPeriodHeight",
+        "RootReturningPrefixSafety"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "SafeClockEntry.safe_extension_preserves_even_return"
+      ]
+    },
+    {
+      "module": "EvenClockLifting",
+      "role": "leaf",
+      "source_sha256": "8fb6a0f3ebed86fe1c3385db0a6a85652857783dc1e9863e33cc4d291522fc45",
+      "constants": 17,
+      "root_phase": "even-lifting-root-review-20261026T2132",
+      "root_report_sha256": "c0010a04b1c9772877245ee3da43cd9d2ac15c9a2d9c020953c6a59c90f5ddb5",
+      "root_check_log_sha256": "11689d7765b9e985125f24a875664a6fb3c325377b5710890d89fc6fce5e4916",
+      "private_imports": [
+        "SafeClockEntry",
+        "Rule30EvenModeRigidityResearch"
+      ],
+      "official_imports": [],
+      "headlines": [
+        "EvenClockLifting.periodic_forcing",
+        "EvenClockLifting.no_drop_one",
+        "EvenClockLifting.no_drop_two",
+        "EvenClockLifting.short_extension_clock_lifting"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "source_sha256": "d8227bcac04bfead71d96ae898893f6f6fa9ac52e53181f5e952d0508425851c",
+  "compiled_sha256": "0226a70b51458697c24c7aac7c84a72241238d1cd91af9a05db40d63658b94bb",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.43840079999063164,
+  "total_seconds": 1.7167759999865666,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.center_crossing_onset_fails",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.cycle_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.diagonal32_period_multiple",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.diagonal32_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.diagonal_as_packed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.no_center_crossing_uniform_onset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.phase_values",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.prefix_cycle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.prefix_future",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.diagonal32_periodic",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.center_crossing_onset_fails",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SingleSeedOnsetObstruction.no_center_crossing_uniform_onset",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "SingleSeedOnsetObstruction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 22,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

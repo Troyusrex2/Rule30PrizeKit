@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "source_sha256": "028f327dab51051e20747074d8bfbc4b17d8743abaad398cfc049681652bb981",
+  "compiled_sha256": "21dd6fa137388bd62d8ba43d5e8f6d0c0222aaa713b363cd0f4c82c4debe6048",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.48786890000337735,
+  "total_seconds": 1.7738623000332154,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.eventuallyWord_repeats",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.getD_append_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.getD_append_offset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.not_eventually_word_seed_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.padded_getD",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.segment_getD",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMixtureWord.word",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.word_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.word.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.word.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.word.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMixtureWord.word.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMixtureWord.word_length.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.word_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.segment_getD",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.eventuallyWord_repeats",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtureWord.not_eventually_word_seed_pair",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PhysicalMixtureWord",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 31,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

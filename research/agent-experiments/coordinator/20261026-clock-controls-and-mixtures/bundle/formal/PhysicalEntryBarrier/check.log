@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"PhysicalEntryBarrier.NarrowStripe","standardAxioms":true},{"kind":"theorem","name":"PhysicalEntryBarrier.failed_narrow_black_prefix","standardAxioms":true},{"kind":"theorem","name":"PhysicalEntryBarrier.failed_narrow_deadline_white","standardAxioms":true},{"kind":"theorem","name":"PhysicalEntryBarrier.narrow_to_big","standardAxioms":true},{"kind":"theorem","name":"PhysicalEntryBarrier.narrow_white_witness","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"PhysicalEntryBarrier.narrow_white_witness","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"PhysicalEntryBarrier.narrow_to_big","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"PhysicalEntryBarrier.failed_narrow_black_prefix","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"PhysicalEntryBarrier.failed_narrow_deadline_white","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"PhysicalEntryBarrier","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":23,"ok":true},"verdict":"pass","verifiedTargets":[]}

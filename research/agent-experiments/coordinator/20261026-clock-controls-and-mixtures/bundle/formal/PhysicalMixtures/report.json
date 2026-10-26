@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "source_sha256": "0b6020cf82289b32a4006f84519845cd634d1b0bbd1a13602462e5e0ea4bca4c",
+  "compiled_sha256": "cd1b45aa7c3ebbb3f06ec0470d60826f10d9be08c2443f9b5bf9106e331b8c11",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.7278597000404261,
+  "total_seconds": 2.3376145000220276,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "PhysicalMixtures.RepeatsSegments",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.cycle_stripes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.not_repeats_from_stripe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.not_repeats_seed_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMixtures.offset",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.offset_cover",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.offset_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.periodic_of_phases",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.repeats_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.walk_stripes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMaintenance.StripeAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.offset.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.offset.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalMixtures.offset.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PhysicalMixtures.offset.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtures.walk_stripes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtures.cycle_stripes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtures.periodic_of_phases",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtures.not_repeats_from_stripe",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalMixtures.not_repeats_seed_pair",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PhysicalMixtures",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 58,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

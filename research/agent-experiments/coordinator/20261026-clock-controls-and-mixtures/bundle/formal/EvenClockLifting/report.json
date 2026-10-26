@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "module": "EvenClockLifting",
+  "attempt": "root01",
+  "source_sha256": "8fb6a0f3ebed86fe1c3385db0a6a85652857783dc1e9863e33cc4d291522fc45",
+  "compiled_sha256": "587adccd33307ad04e49a22fb5a2d67e690cf868838597596ed67bc70571014a",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.4586429999908432,
+  "total_seconds": 5.292198000010103,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.anti_xor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.drop_snoc",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.no_drop_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.no_drop_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.old_eq_previous",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.periodic_forcing",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.return_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.return_three",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.return_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.short_extension_clock_lifting",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "EvenClockLifting.trace_recurrence",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "EvenClockLifting.periodic_forcing",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "EvenClockLifting.no_drop_one",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "EvenClockLifting.no_drop_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "EvenClockLifting.short_extension_clock_lifting",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "EvenClockLifting",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 17,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

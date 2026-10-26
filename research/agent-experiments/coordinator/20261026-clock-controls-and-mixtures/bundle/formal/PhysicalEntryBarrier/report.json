@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "source_sha256": "9eb5fcbf8103c15fbc08620edc503deb5e7e513052a42aa2b05dece3bf0b8fbe",
+  "compiled_sha256": "080290c19e4ad00eeb6665c2e80fe58d4a1cdb6057fa768d73892b96cc012293",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.5298731999937445,
+  "total_seconds": 1.7996801999979652,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "PhysicalEntryBarrier.NarrowStripe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.failed_narrow_black_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.failed_narrow_deadline_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.narrow_to_big",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.narrow_white_witness",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.narrow_white_witness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.narrow_to_big",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.failed_narrow_black_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PhysicalEntryBarrier.failed_narrow_deadline_white",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PhysicalEntryBarrier",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 23,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

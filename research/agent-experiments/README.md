@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New reproducible controls:** [clock lifting, genuine plateau/onset obstructions, stripe entry conditions, and finite padded mixtures](coordinator/20261026-clock-controls-and-mixtures/REPORT.md). The portable 30-module source replay passed; the six leaves contain 169 module constants. These are partial results and counterexamples to particular shortcuts, not a solution of P1.
+
 **New arbitrary-block theorem:** [every black-containing finite block is excluded with sufficiently long white padding](coordinator/20261026-arbitrary-white-padding/REPORT.md). Six independently replayed modules also prove stripe maintenance with only `19N+10` white cells after entry. Initial entry still has a very large bound; arbitrary periods and the prize remain open.
 
 **New exact marker-phase results:** [all-width reconstruction, alternating hidden suffixes, a false projected safe cycle, and a saturated anchored-defect abstraction](coordinator/20261026-marker-phases-and-abstraction/REPORT.md). Five modules independently replayed. Hidden phase coherence and genuine white ancestry remain essential; no actual Safe/nonreturn counterexample or prize solution is claimed.

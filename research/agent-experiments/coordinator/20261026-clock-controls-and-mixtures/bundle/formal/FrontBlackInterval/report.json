@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "source_sha256": "6fbae106f9af8b3c8cba937c0a3f31071bf59e4664af530023fc2811d2c481da",
+  "compiled_sha256": "4e8eb33db36994f48f9b4f6d121d8dedceb3744383a30eb482826ad8310b155e",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.6229229999589734,
+  "total_seconds": 1.9598924999590963,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "FrontBlackInterval.PeriodFrom",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "FrontBlackInterval.Recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.aged_white_witness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.black_erodes",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.black_interval_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.no_aged_black_interval",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.period_double",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.period_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.period_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.rec_at",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.reset_inherits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.uniform_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "FrontBlackInterval.PeriodFrom.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FrontBlackInterval.uniform_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FrontBlackInterval.reset_inherits",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FrontBlackInterval.no_aged_black_interval",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FrontBlackInterval.aged_white_witness",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "FrontBlackInterval",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 57,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

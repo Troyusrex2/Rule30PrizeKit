@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "module": "Rule30OrClockObserverResearch",
+  "attempt": "dependencies_root01",
+  "source_sha256": "9928288f7c038406e6979852d845f6de17a5d8f887bddefe3d31494e2b8b83c2",
+  "compiled_sha256": "132b92ae6cd2f1db7a0f53443f386672dee0f92c88236d32f93b7c483e04e190",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.4412509999820031,
+  "total_seconds": 1.58292519999668,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30OrClockObserverResearch.BandFacts",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.actual_or_clock_observer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30OrClockObserverResearch.band",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30OrClockObserverResearch.bandTable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.band_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.band_facts",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.band_periodic",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.flip_ne",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.hidden_difference_impossible",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30OrClockObserverResearch.instDecidableBandFacts",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.masked_ne",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.older_recovered",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.or_delta",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.or_pair_injective_of_anti",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.plateau_local_counterexample",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.shift_flag",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.xor_cancel_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.xor_recover",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.BandFacts.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.band.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30OrClockObserverResearch.actual_or_clock_observer",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30OrClockObserverResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 24,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

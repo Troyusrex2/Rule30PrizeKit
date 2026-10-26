@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "module": "SafeClockEntry",
+  "attempt": "dependencies_root01",
+  "source_sha256": "102fdfe2c55b8bafad83405af0c0baf3026917b401dbff8449eb6d695fa3086d",
+  "compiled_sha256": "56cd3867587bb5556cce581c7769e08fe24c27d973a9834361a6bd859dd21c0d",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.5159664999810047,
+  "total_seconds": 5.534807299962267,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "SafeClockEntry.SpanTwo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.height_two_of_safe_antiperiod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.nonreturn_leaf_antiperiod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.not_safe_even_antiperiod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.safe_clock_jump_entry",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.safe_clock_plateau_of_not_height_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.safe_extension_preserves_even_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.safe_two_cell_clock_jump_height",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "SafeClockEntry.two_step_recurrence",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "SafeClockEntry.safe_extension_preserves_even_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "SafeClockEntry",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 21,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
