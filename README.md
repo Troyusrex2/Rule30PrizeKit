@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Finite-window clock decoder and a lower-clock mode target](research/agent-experiments/coordinator/20261026-clock-search-mode-observer/REPORT.md): three new checked modules and fresh replay of 41 modules against the updated official kit. A restricted clock-64 mode experiment has no collisions; the uniform mode observer, full reconstruction and prize remain open.
+
 [Clock-shift identities and a cubic-decoder obstruction](research/agent-experiments/coordinator/20261026-clock-jets-and-cubic-obstruction/REPORT.md): an exact width-105 counterexample defeats the cubic template. All packed cycle/moment facts and actual canonical-phase semantics pass full kernel replay; the final general cubic-impossibility inference is not yet formalized. The unrestricted observer and prize problem remain open.
 
 [Checked one-bit observer reduction and clock inverse](research/agent-experiments/coordinator/20261026-observer-clock-reduction/REPORT.md): a uniform penultimate-bit decoder would suffice for reader completeness. Includes a proved local barrier and explicit finite cubic filters; the decoder and prize problem remain open.

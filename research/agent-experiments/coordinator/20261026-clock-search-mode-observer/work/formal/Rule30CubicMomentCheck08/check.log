@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Rule30CubicMomentCheck08.row32","standardAxioms":true},{"kind":"theorem","name":"Rule30CubicMomentCheck08.row33","standardAxioms":true},{"kind":"theorem","name":"Rule30CubicMomentCheck08.row34","standardAxioms":true},{"kind":"theorem","name":"Rule30CubicMomentCheck08.row35","standardAxioms":true}],"headlines":[{"axioms":["propext"],"found":true,"kind":"theorem","name":"Rule30CubicMomentCheck08.row32","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext"],"found":true,"kind":"theorem","name":"Rule30CubicMomentCheck08.row33","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext"],"found":true,"kind":"theorem","name":"Rule30CubicMomentCheck08.row34","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext"],"found":true,"kind":"theorem","name":"Rule30CubicMomentCheck08.row35","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30CubicMomentCheck08","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":8,"ok":true},"verdict":"pass","verifiedTargets":[]}

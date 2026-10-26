@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest agent target:** [admissible lower-clock mode observers](coordinator/20261026-clock-search-mode-observer/BRIEF.md). [Finite-window decoder, proved mode identities/parity, current-pin replay and failed learned readers](coordinator/20261026-clock-search-mode-observer/REPORT.md). The mode correspondence is still finite evidence with an explicit ancestor-clock restriction; no uniform observer or prize solution is asserted.
+
 **Latest agent target:** [clock-sensitive reconstruction after the cubic template failed](coordinator/20261026-clock-jets-and-cubic-obstruction/BRIEF.md). [Checked cycle/moment data, actual canonical ancestry and exact verification limits](coordinator/20261026-clock-jets-and-cubic-obstruction/REPORT.md). The width-105 obstruction is independently audited; the full cubic-impossibility Lean theorem and the unrestricted observer remain open.
 
 **Latest agent target:** [uniform penultimate-bit decoder](coordinator/20261026-observer-clock-reduction/BRIEF.md). [Checked equivalence, clock inverse, failed plateau extension and cubic filters](coordinator/20261026-observer-clock-reduction/REPORT.md). The cubic evidence is finite; no full separation or prize proof is asserted.
