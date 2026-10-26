@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "module": "CedarReturnEightReduction",
+  "source_sha256": "5ada2f1358591ff4f37b3b577c963104071f6cf2bf769701285f97f8a0b53c63",
+  "compiled_sha256": "864b799e9bc38d5ddbd81fc17ba859ae6730f1e8d4534d7cfb752dc0fd1f5a98",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.6295915999799035,
+  "total_seconds": 2.0203277000109665,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "CedarReturnEightReduction.ShortTwo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarReturnEightReduction.category",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.category_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.category_le",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.dispatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.return_eight_iff_prefix_two",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarReturnEightReduction.run2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.run2_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.run2_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.short_two_cons",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.short_two_small",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.ShortTwo.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.run2.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.category_certificate",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.dispatch",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarReturnEightReduction.return_eight_iff_prefix_two",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarReturnEightReduction",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 26,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

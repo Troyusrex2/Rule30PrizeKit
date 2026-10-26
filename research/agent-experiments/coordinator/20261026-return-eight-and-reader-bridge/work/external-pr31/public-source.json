@@ -1,0 +1,33 @@
+{
+  "upstream_repository": "AIOvernight/Rule30PrizeKit",
+  "upstream_commit": "88dd51194cc4ae48bff5339418d33b54265330cb",
+  "pr": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/31",
+  "sources": {
+    "Ruliology.CellularAutomata.Rule30WhiteEndNine": {
+      "local_file": "Rule30WhiteEndNine.lean",
+      "sha256": "25f485f20667a973c0b2960a0cffda4a2e7cf59121f8d6873ac6d265abe5b6ff",
+      "git_blob_sha1": "343b3e06b5bea7a2fdebaedbdcd50e21552efb6d",
+      "byte_count": 45905,
+      "imports": [
+        "Ruliology.CellularAutomata.Rule30StripCertificates",
+        "Ruliology.CellularAutomata.Rule30MaskedJen"
+      ]
+    },
+    "Ruliology.CellularAutomata.Rule30PaddedWords": {
+      "local_file": "Rule30PaddedWords.lean",
+      "sha256": "d2072051c4be3121de1e311dd340d471b0500e1020de66a0271daecc4b93408c",
+      "git_blob_sha1": "7c0cce3d8bcf93fc20c452773b935bb96241236a",
+      "byte_count": 5150,
+      "imports": [
+        "Ruliology.CellularAutomata.Rule30SixTailSharpened",
+        "Ruliology.CellularAutomata.Rule30WhitePad10111",
+        "Ruliology.CellularAutomata.Rule30WhiteEndNine",
+        "Ruliology.CellularAutomata.Rule30WhiteRunEight",
+        "Ruliology.CellularAutomata.Rule30WordRotation",
+        "Ruliology.CellularAutomata.Rule30Realization"
+      ]
+    }
+  },
+  "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "fetch_method": "GitHub connector github_fetch_file with exact commit ref, base64 decoded without text normalization"
+}

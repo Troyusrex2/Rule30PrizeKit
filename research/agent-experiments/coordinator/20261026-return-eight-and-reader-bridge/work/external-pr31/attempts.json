@@ -1,0 +1,17 @@
+{
+  "setup_attempts": [
+    {
+      "action": "initial prepare_overlay.py using the prior audit's all-precompiled assumption",
+      "result": "AssertionError: Ruliology.CellularAutomata.Rule30SixTailSharpened",
+      "cause": "The pinned reference has source but lacks 27 compiled dependencies required by PaddedWords.",
+      "effect": "Only existing matching compiled artifacts had been copied into this new owned overlay. No reference file was modified and no Lean proof compilation had run.",
+      "resolution": "Check all 43 pinned source hashes; copy the 16 available compiled module groups; compile the missing 27 into this private overlay under the same resource guards."
+    },
+    {
+      "action": "read-only SSH PowerShell listing using Select-Object BaseName",
+      "result": "The nested shell pipeline operated on serialized output and could not find BaseName.",
+      "effect": "No file or process mutation.",
+      "resolution": "Use the Python overlay receipt to enumerate exact missing modules."
+    }
+  ]
+}

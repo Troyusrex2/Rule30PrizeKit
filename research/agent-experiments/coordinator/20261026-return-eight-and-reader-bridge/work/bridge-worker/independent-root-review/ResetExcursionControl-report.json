@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "module": "ResetExcursionControl",
+  "source_sha256": "e9cf39dc7e58b1b76971e6d0685756d323998e549d2fc57b7fadb76820e4bb1b",
+  "compiled_sha256": "d23fb0e44f25636e328242cd608c8d00be70791cf7f37362240ebeb2835c8def",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 0.42016829998465255,
+  "total_seconds": 1.5307248000171967,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "ResetExcursionControl.a",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ResetExcursionControl.b",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ResetExcursionControl.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ResetExcursionControl.one_excursion_counterexample",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ResetExcursionControl.trace8",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ResetExcursionControl.one_excursion_counterexample",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "ResetExcursionControl",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 6,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

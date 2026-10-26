@@ -1,0 +1,41 @@
+--- official5473/Rule30PaddedWords.lean
++++ public88dd/Rule30PaddedWords.lean
+@@ -2,7 +2,7 @@
+ 
+ public import Ruliology.CellularAutomata.Rule30SixTailSharpened
+ public import Ruliology.CellularAutomata.Rule30WhitePad10111
+-public import Ruliology.CellularAutomata.Rule30WhiteEnd
++public import Ruliology.CellularAutomata.Rule30WhiteEndNine
+ public import Ruliology.CellularAutomata.Rule30WhiteRunEight
+ public import Ruliology.CellularAutomata.Rule30WordRotation
+ public import Ruliology.CellularAutomata.Rule30Realization
+@@ -19,7 +19,7 @@
+ |---|---|---|
+ | `11` | 8 | `Rule30WhiteRunEight.no_white_run_11_ge8` |
+ | `10111` | 9 | `Rule30WhitePad10111.not_eventually_zeros_10111` |
+-| `1` | 10 | `Rule30WhiteEnd.not_eventuallyWord_white_end`, rotated |
++| `1` | 9 | `Rule30WhiteEndNine.not_eventually_white_end_ge9`, rotated |
+ | any other of at most four cells | 49 | `Rule30ShortTail.no_short_tail_seed` |
+ | any other of five cells | 69 | `Rule30FiveTail.no_five_tail_seed` |
+ | any other of six cells | 74 | `Rule30SixTailSharpened.no_six_tail_seed` |
+@@ -38,7 +38,7 @@
+ def paddedBound (u : List Bool) : Nat :=
+   if u = [true, true] then 8
+   else if u = [true, false, true, true, true] then 9
+-  else if u = [true] then 10
++  else if u = [true] then 9
+   else if u.length ≤ 4 then 49
+   else if u.length ≤ 5 then 69
+   else 74
+@@ -53,9 +53,9 @@
+     Rule30WordRotation.eventuallyWord_swap hpos h'
+ 
+ /-- `0^q 1` is the white end `1 0^q`, read from its white run. -/
+-theorem not_eventuallyWord_zeros_one (q : Nat) (hq : 10 ≤ q) :
++theorem not_eventuallyWord_zeros_one (q : Nat) (hq : 9 ≤ q) :
+     ¬ EventuallyWord (List.replicate q false ++ [true]) := fun h =>
+-  Rule30WhiteEnd.not_eventuallyWord_white_end q hq (eventuallyWord_swap (by simp) h)
++  Rule30WhiteEndNine.not_eventually_white_end_ge9 q hq (eventuallyWord_swap (by simp) h)
+ 
+ /-- `0^r 1 1` as an eventual word: its white run and its two black cells, with period `r + 2`. -/
+ theorem not_eventuallyWord_zeros_11 (r : Nat) (hr : 8 ≤ r) :

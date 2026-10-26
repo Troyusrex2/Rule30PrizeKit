@@ -1,0 +1,10 @@
+C:\Users\troyu\Rule30-offload\research\prize-bridge-audit-20261026T1920\PrizeSafetyBridge.lean:57:2: error: Missing cases:
+(Fin.mk (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ (Nat.succ _)))))))))))))))))))))))))))) _), _
+C:\Users\troyu\Rule30-offload\research\prize-bridge-audit-20261026T1920\PrizeSafetyBridge.lean:150:57: error: Application type mismatch: The argument
+  ha
+has type
+  accepted (CedarSafetySoundness.read 0 (List.map Prod.fst ss)) = true
+but is expected to have type
+  accepted (CedarSafetySoundness.read (CedarSafetySoundness.state ⟨0, ?m.72⟩).q (List.map Prod.fst ss)) = true
+in the application
+  accepted_profiles ss ⟨0, ?m.72⟩ ⟨0, ?m.76⟩ ha

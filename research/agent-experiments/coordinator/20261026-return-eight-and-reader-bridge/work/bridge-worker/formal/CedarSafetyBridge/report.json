@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "source_sha256": "3aa89fd43fe2ac970b4caa7408a7fb721ada0e667c5f9550faa8ef4bc39cbdd8",
+  "compiled_sha256": "2feda43636ddabf2769d2cebba66e1f75162516eb25f9945e91bcfcdffe255c7",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.6920622999896295,
+  "total_seconds": 1.936595999985002,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.accepted_iff_return_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.bridge_aux",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.endpoint_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.return_completeness_iff_language_completeness",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.safe_return_iff_accepted",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetyBridge.state",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.transition_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "CedarSafetyBridge.state.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "CedarSafetyBridge.safe_return_iff_accepted",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "CedarSafetyBridge",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 8,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

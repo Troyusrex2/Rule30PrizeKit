@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "module": "RootOrientedHeight",
+  "source_sha256": "a1c5f671983bad585f1dec94a4ed9193d0a719be47423d1fe22f0909296f1bd6",
+  "compiled_sha256": "63982bf904c33fd3d30c4fc81949f3d7a94dc75081f7fb44b1c6ed925dbffe22",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 3.6885776999988593,
+  "total_seconds": 5.969577400013804,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "RootOrientedHeight.event_height_zero_of_oriented_range",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootOrientedHeight.event_zero_of_height_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootOrientedHeight.safe_iff_oriented_height_range",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootOrientedHeight.safe_of_oriented_height_range",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "RootOrientedHeight.unmarked_range_is_insufficient",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootOrientedHeight.safe_of_oriented_height_range",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootOrientedHeight.safe_iff_oriented_height_range",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "RootOrientedHeight.unmarked_range_is_insufficient",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "RootOrientedHeight",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 13,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

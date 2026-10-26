@@ -1,0 +1,335 @@
+{
+  "passed": true,
+  "module": "PrizeSafetyBridge",
+  "source_sha256": "dfe6ac2e1010a8e04d2b8bcae4f71501950cfb4a2de83e56bbfc604f7a009b17",
+  "compiled_sha256": "2a680365bcd4e36bff4e65ee4ef6e3c90b560f504061098f9103b2b76686970f",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "compile_seconds": 1.5194297999842092,
+  "total_seconds": 3.7859611000167206,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.PairStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.ReturnComplete",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.accepted_profiles",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.instDecidablePairStep",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.output_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.pairState",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.pair_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.profile_ext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.rtable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_equal_reader",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_language_equal_reader",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_sink_separates",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.single_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.snext",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.stable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_0",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_10",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_11",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_12",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_13",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_14",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_15",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_16",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_17",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_18",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_19",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_20",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_21",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_22",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_23",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_24",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_25",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_26",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_27",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.step_9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_10",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_7",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "CedarSafety.profileAt.eq_9",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "PrizeSafetyBridge.pair_step.match_1_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_language_equal_reader",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_equal_reader",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "PrizeSafetyBridge.safe_sink_separates",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "PrizeSafetyBridge",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 100,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

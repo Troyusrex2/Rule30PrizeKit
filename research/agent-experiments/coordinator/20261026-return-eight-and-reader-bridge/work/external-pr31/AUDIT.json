@@ -1,0 +1,129 @@
+{
+  "verdict": "PASS",
+  "scope": "External PR31 exact-source review and full declaration replay of two updated modules, not own mathematical novelty or prize solution",
+  "created_utc": "2026-10-26T19:48:36.610339+00:00",
+  "upstream": {
+    "upstream_repository": "AIOvernight/Rule30PrizeKit",
+    "upstream_commit": "88dd51194cc4ae48bff5339418d33b54265330cb",
+    "pr": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/31",
+    "sources": {
+      "Ruliology.CellularAutomata.Rule30WhiteEndNine": {
+        "local_file": "Rule30WhiteEndNine.lean",
+        "sha256": "25f485f20667a973c0b2960a0cffda4a2e7cf59121f8d6873ac6d265abe5b6ff",
+        "git_blob_sha1": "343b3e06b5bea7a2fdebaedbdcd50e21552efb6d",
+        "byte_count": 45905,
+        "imports": [
+          "Ruliology.CellularAutomata.Rule30StripCertificates",
+          "Ruliology.CellularAutomata.Rule30MaskedJen"
+        ]
+      },
+      "Ruliology.CellularAutomata.Rule30PaddedWords": {
+        "local_file": "Rule30PaddedWords.lean",
+        "sha256": "d2072051c4be3121de1e311dd340d471b0500e1020de66a0271daecc4b93408c",
+        "git_blob_sha1": "7c0cce3d8bcf93fc20c452773b935bb96241236a",
+        "byte_count": 5150,
+        "imports": [
+          "Ruliology.CellularAutomata.Rule30SixTailSharpened",
+          "Ruliology.CellularAutomata.Rule30WhitePad10111",
+          "Ruliology.CellularAutomata.Rule30WhiteEndNine",
+          "Ruliology.CellularAutomata.Rule30WhiteRunEight",
+          "Ruliology.CellularAutomata.Rule30WordRotation",
+          "Ruliology.CellularAutomata.Rule30Realization"
+        ]
+      }
+    },
+    "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+    "fetch_method": "GitHub connector github_fetch_file with exact commit ref, base64 decoded without text normalization"
+  },
+  "source_scope_review": "PASS",
+  "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "formal": {
+    "Rule30WhiteEndNine": {
+      "passed": true,
+      "declarations": 204,
+      "headline_count": 8,
+      "new_axioms": [],
+      "compile_seconds": 1.6270312000415288,
+      "replay_inclusive_seconds": 4.324345600034576,
+      "guard": {
+        "command": [
+          "C:\\Users\\troyu\\Miniconda3\\python.exe",
+          "-B",
+          "C:\\Users\\troyu\\Rule30-offload\\research\\public-mode-pumping-audit-20261026T1930\\replay.py",
+          "Rule30WhiteEndNine"
+        ],
+        "exit_code": 0,
+        "guard_stop": null,
+        "elapsed_seconds": 4.468112600035965,
+        "peak_owned_rss_bytes": 851374080,
+        "minimum_system_available_bytes": 43781890048,
+        "limits": {
+          "seconds": 300,
+          "owned_rss_gib": 8,
+          "minimum_system_available_gib": 2
+        },
+        "sampling_seconds": 0.1
+      }
+    },
+    "Rule30PaddedWords": {
+      "passed": true,
+      "declarations": 14,
+      "headline_count": 3,
+      "new_axioms": [],
+      "compile_seconds": 0.453214899986051,
+      "replay_inclusive_seconds": 1.9206208999967203,
+      "guard": {
+        "command": [
+          "C:\\Users\\troyu\\Miniconda3\\python.exe",
+          "-B",
+          "C:\\Users\\troyu\\Rule30-offload\\research\\public-mode-pumping-audit-20261026T1930\\replay.py",
+          "Rule30PaddedWords"
+        ],
+        "exit_code": 0,
+        "guard_stop": null,
+        "elapsed_seconds": 2.077133499959018,
+        "peak_owned_rss_bytes": 810250240,
+        "minimum_system_available_bytes": 43472580608,
+        "limits": {
+          "seconds": 300,
+          "owned_rss_gib": 8,
+          "minimum_system_available_gib": 2
+        },
+        "sampling_seconds": 0.1
+      }
+    }
+  },
+  "pumping_threshold": 10,
+  "kernel_base_case": 9,
+  "same_certificate_formula_for_all_q_ge9": true,
+  "pumping_from_nine_negative_control_verified": true,
+  "padded_bound_single_true": 9,
+  "official_dependencies": {
+    "total": 43,
+    "copied_precompiled": 16,
+    "freshly_compiled": 27,
+    "aggregate_completed_before_timeout": 14,
+    "separate_successful_jobs": 13
+  },
+  "attempts": {
+    "guarded_jobs": 16,
+    "successful_jobs": 15,
+    "preserved_wall_timeout_jobs": 1,
+    "guard_limits": {
+      "seconds": 300,
+      "owned_rss_gib": 8,
+      "minimum_system_available_gib": 2
+    },
+    "explanation": "The aggregate official dependency job hit 300 s after 14 successful compiles; remaining dependencies passed separate guarded compiles without source changes."
+  },
+  "no_public_source_edits": true,
+  "reference_write": false,
+  "publication_performed": false,
+  "all_owned_jobs_terminal": true,
+  "not_verified": [
+    "Whole repository export/catalog build",
+    "Additional PR-body mixed-gap codebook/search claims",
+    "Any full prize theorem, ReturnComplete, D3, or ancestry completeness"
+  ]
+}

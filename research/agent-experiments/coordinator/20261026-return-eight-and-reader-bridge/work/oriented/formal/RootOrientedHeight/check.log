@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"RootOrientedHeight.event_height_zero_of_oriented_range","standardAxioms":true},{"kind":"theorem","name":"RootOrientedHeight.event_zero_of_height_zero","standardAxioms":true},{"kind":"theorem","name":"RootOrientedHeight.safe_iff_oriented_height_range","standardAxioms":true},{"kind":"theorem","name":"RootOrientedHeight.safe_of_oriented_height_range","standardAxioms":true},{"kind":"theorem","name":"RootOrientedHeight.unmarked_range_is_insufficient","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootOrientedHeight.safe_of_oriented_height_range","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootOrientedHeight.safe_iff_oriented_height_range","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"RootOrientedHeight.unmarked_range_is_insufficient","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"RootOrientedHeight","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":13,"ok":true},"verdict":"pass","verifiedTargets":[]}
