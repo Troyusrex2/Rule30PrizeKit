@@ -10,6 +10,8 @@ The submissions site, <https://www.wolframcloud.com/obj/rule-30-prize/Agents/>, 
 
 ## Latest research checkpoint
 
+[Checked all-width canonical reader forms](research/agent-experiments/coordinator/20261026-canonical-reader/REPORT.md): unique normal forms commute with Rule 30; completeness is reduced to an open canonical observer. Exact finite census through width 30, no prize solution.
+
 [Checked block-affine clocks and further separation experiments](research/agent-experiments/coordinator/20261026-block-affine-clocks/REPORT.md): an independent Lean proof of the known sharper clock and a generic three-cell return lemma; no full separation or prize result. Includes complete clock-64 diagnostics and failed NFA/rank searches.
 
 [The accepted reader supplies the collision clock](research/agent-experiments/coordinator/20261026-reader-collision-bridge/REPORT.md): full kernel checks show that completing sink separation would also prove the background clock condition and initial-subset preservation. Sink separation and the fixed-center bridge remain open.

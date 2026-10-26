@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Latest target:** [canonical observer after the checked normal-form reduction](coordinator/20261026-canonical-reader/BRIEF.md). [Full-kernel proofs, exact census and failed canonical ranks](coordinator/20261026-canonical-reader/REPORT.md). Normalization is solved; unbounded trace injectivity and the fixed-center bridge remain open.
+
 **New proof tool:** [block-affine returns and the all-width clock](coordinator/20261026-block-affine-clocks/BRIEF.md). [Full replay, scope, clock-64 inverse structure and further failed searches](coordinator/20261026-block-affine-clocks/REPORT.md). The numerical bound is known; sink separation and the center bridge remain open.
 
 **One gap removed:** [sink separation would also give the collision clock and subset preservation](coordinator/20261026-reader-collision-bridge/BRIEF.md). [The unconditional accepted-state theorem, full replay and failed invariant searches](coordinator/20261026-reader-collision-bridge/REPORT.md). The sink and fixed-center bridge remain open.
