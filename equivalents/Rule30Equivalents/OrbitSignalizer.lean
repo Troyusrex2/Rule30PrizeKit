@@ -32,8 +32,6 @@ Infinitude of these exact section maps does not rule out a finite quotient prese
 property. No property-preserving reader quotient, arbitrary return theorem, or solution of
 Prize Problem 1 follows here. The physical center reads the moving bit `t` of `Phi^t(1)`.
 
-The proof bodies combine the independently checked CedarSectionDegree and CedarOrbitSignalizer
-research modules; only their namespace and module organization have changed.
 -/
 
 @[expose] public section
@@ -155,7 +153,7 @@ theorem period_is_least (n v : Nat) (hv : v < 2 ^ n) :
 
 /-- Exact section reconstruction under a genuine prefix return. The argument
 uses only the forward T-function congruence, never surjectivity on Nat. -/
-theorem section_reconstruction (n v p : Nat) (hv : v < 2 ^ n)
+theorem section_reconstruction (n v p : Nat) (_hv : v < 2 ^ n)
     (hret : Phi^[p] v % 2 ^ n = v) (x : Nat) :
     Phi^[p] (v + 2 ^ n * x) = v + 2 ^ n * tailSection n v p x := by
   have hin : (v + 2 ^ n * x) % 2 ^ n = v % 2 ^ n := by
@@ -215,7 +213,7 @@ theorem finite_tail_distinguishes (n v p n' v' p' : Nat)
       have hm := Nat.le_max_right p p'; dsimp [k]; omega))
   refine ⟨k, ?_, ?_⟩
   · have hh : 2 ^ 0 < 2 ^ k := Nat.pow_lt_pow_right (by omega) (by dsimp [k]; omega)
-    simpa using hh
+    exact hh
   · rw [Nat.mod_eq_of_lt hl0, Nat.mod_eq_of_lt hl1]
     intro he
     have hh := congrArg Nat.log2 he
