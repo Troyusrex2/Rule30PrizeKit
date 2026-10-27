@@ -28,10 +28,7 @@ finite-profile argument, uniformly in the temporal preperiod.
 
 These are synthetic temporal inputs, not proved finite-right responses or
 the canonical single-seed center column. Each spatial member is periodic;
-the periods across the family are unbounded. The result supplies no
-density bound, does not solve Q01 or CQ01, and solves no prize problem.
-
-Contributed by Troy Lowry with OpenAI Codex, 2026-10-25.
+the periods across the family are unbounded.
 -/
 
 @[expose] public section
