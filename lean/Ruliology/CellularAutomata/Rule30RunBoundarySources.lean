@@ -19,14 +19,10 @@ phase H-1 every diagonal bit up to e is black; just after H the prefix
 agrees with the early seed orbit. A positive-depth run-boundary source
 vanishes at every phase selected by the binary support condition.
 
-This core module states the mask explicitly. Its interpretation through
-Lucas coefficients and the complete Rule90 Duhamel sum is supplied by
-separate research proofs using Mathlib. No source deeper than e is
-restricted here, no full source-sum noncancellation is asserted, and no
-prize problem is solved. The standard diagonal periodicity and local
-Boolean decomposition are not claimed as new historical results.
-
-Contributed by Troy Lowry with OpenAI Codex, 2026-10-25.
+The Mathlib module `Rule30Equivalents.DyadicSources` interprets this mask
+through Lucas coefficients and applies `selected_event_iff_outer` in the
+complete Rule90 source expansion. It writes the center at time 2H-1 as
+1 plus the unrestricted contribution from depths greater than e.
 -/
 @[expose] public section
 namespace Ruliology.CellularAutomata.Rule30RunBoundarySources
@@ -183,8 +179,8 @@ theorem outer_kernel_iff (e s : Nat) (hs : s<2*(2^e)-1) :
     rw [hk,show 2*(2^e)-2-(2^e-1)=2^e-1 by have := Nat.two_pow_pos e; omega]
     exact Nat.and_self _
 
-/-- A source selected by the explicit binary support mask. The relation of
-this mask to a full Rule90 Duhamel sum is not asserted here. -/
+/-- A source selected by the explicit binary support mask used by the
+Rule90 Duhamel sum in `Rule30Equivalents.DyadicSources`. -/
 def SelectedEvent (e d s : Nat) : Prop :=
   s<2*(2^e)-1 ∧ d%2=0 ∧
   ((2^e-1-d/2) &&& (2*(2^e)-2-s)) = (2^e-1-d/2) ∧ source d s=true

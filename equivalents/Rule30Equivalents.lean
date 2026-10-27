@@ -38,6 +38,7 @@ public import Rule30Equivalents.ProblemTwo
 public import Rule30Equivalents.BuchiConverse
 public import Rule30Equivalents.Odometer
 public import Rule30Equivalents.CenterFormulas
+public import Rule30Equivalents.DyadicSources
 public import Rule30Equivalents.OneTapeRegular
 public import Rule30Equivalents.UniformMorphic
 public import Rule30Equivalents.MeromorphicExtension
