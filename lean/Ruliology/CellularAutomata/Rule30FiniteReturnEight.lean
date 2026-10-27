@@ -182,9 +182,9 @@ private theorem dispatch (xs : List Bool) : ∀ i : Fin 36,
     intro i
     simp only [run8_nil,List.length_nil,Nat.zero_add,true_iff]
     by_cases h : category i = 0
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       exact short_two_small _ _ [] (by simp)
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
       exact category_le i
   | cons v vs ih =>
     intro i
@@ -200,9 +200,9 @@ private theorem dispatch (xs : List Bool) : ∀ i : Fin 36,
     change run8 p r (v::vs) = v::vs ↔
       if category i = 0 then ShortTwo p r (v::vs) else (v::vs).length+category i ≤ 3
     by_cases h3 : category i = 3
-    · simp only [h3,if_true] at cert
+    · simp only [h3,ite_true] at cert
       simp [run8_cons,List.cons.injEq,cert,h3]
-    · simp only [h3,if_false] at cert
+    · simp only [h3,ite_false] at cert
       obtain ⟨h8,j,hp,hr,hcat⟩ := cert
       have sub := ih j
       rw [hp,hr] at sub
@@ -210,11 +210,11 @@ private theorem dispatch (xs : List Bool) : ∀ i : Fin 36,
       simp only [true_and]
       rw [sub]
       by_cases h0 : category i = 0
-      · simp only [h0,if_true] at hcat ⊢
+      · simp only [h0,ite_true] at hcat ⊢
         by_cases h2 : (nextProfile p r v).t2 = v
-        · have hj : category j = 0 := by simpa only [h2,if_true] using hcat
+        · have hj : category j = 0 := by simpa only [h2,ite_true] using hcat
           rw [hj]
-          simp only [if_true]
+          simp only [ite_true]
           rw [short_two_cons]
           simp only [h2,true_and]
           constructor
@@ -223,13 +223,13 @@ private theorem dispatch (xs : List Bool) : ∀ i : Fin 36,
             rcases h with hs | hs
             · exact short_two_small _ _ vs (by omega)
             · exact hs
-        · have hj : category j = 1 := by simpa only [h2,if_false] using hcat
+        · have hj : category j = 1 := by simpa only [h2,ite_false] using hcat
           rw [hj]
-          simp only [show ¬ (1:Nat)=0 by decide,if_false,short_two_cons,h2,false_and,or_false]
+          simp only [show ¬ (1:Nat)=0 by decide,ite_false,short_two_cons,h2,false_and,or_false]
           omega
-      · simp only [h0,if_false] at hcat ⊢
+      · simp only [h0,ite_false] at hcat ⊢
         have hj : category j ≠ 0 := by omega
-        simp only [hj,if_false,List.length_cons]
+        simp only [hj,ite_false,List.length_cons]
         omega
 
 /-- Exact all-width finite-white reduction. Empty and short prefixes are
@@ -384,7 +384,7 @@ theorem iterate_finite_return_eight_iff (x : Rule30ControlledResponse.State)
     funext k
     by_cases hk : k < W
     · simp [Rule30ControlledResponse.word,xs,List.getD_eq_getElem?_getD,
-        List.getElem?_eq_getElem, hk]
+        hk]
     · have hw : W ≤ k := by omega
       rw [hx k hw]
       exact getD_out xs k (by simp [xs]; omega)
