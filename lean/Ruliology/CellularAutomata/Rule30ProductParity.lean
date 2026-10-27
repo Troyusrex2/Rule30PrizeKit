@@ -4,19 +4,17 @@ public import Init.Data.Fin.Lemmas
 public import Ruliology.CellularAutomata.Rule30Prize
 
 /-!
+# Product parity conservation, uniformly in window width
+
 All-width mod-two local conservation classification for any coordinatewise
 product of Rule30. Every cyclically conserved finite-window parity score is
 constant plus a spatial coboundary, and conversely. The conserved change is
 for FOUR shrinking Rule30 steps, as the semantics theorem verifies.
 
 No fixed window cutoff, local-current hypothesis, or finite-ring census is
-a premise. This rules out a parity-charge strategy; it does not solve a prize
-problem or rule out every kind of invariant. This core-only specialization
-follows the accompanying arbitrary-abelian-group proof; both extend the
-earlier integer scalar range-reduction argument.
-
-Proof and formalization: Troy Lowry with OpenAI Codex. No literature novelty
-is claimed. Coefficients are Fin2 with their core modular addition/subtraction.
+a premise. This core-only specialization extends the integer scalar
+range-reduction argument of Rule30LocalConservation to coordinatewise
+products and Fin2 coefficients with their core modular addition/subtraction.
 -/
 
 @[expose] public section
