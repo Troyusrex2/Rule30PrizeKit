@@ -28,10 +28,7 @@ physical column.
 Sources: the Boolean transducer argument is
 `Rule30Diagonals.transducer_periodic`; the exact `Ld` definition, white-left
 hypothesis, and recurrence are from `Rule30FiniteDiagonals`. The interval bound
-combines those ingredients with the literal Rule 30 causal cone. No claim of
-literature priority is made.
-
-AI used: OpenAI Codex.
+combines those ingredients with the literal Rule 30 causal cone.
 -/
 
 @[expose] public section
@@ -63,40 +60,10 @@ theorem period_double {x : Nat → Bool} {T P : Nat} (h : PeriodFrom x T P) :
   intro t ht
   rw [show t+2*P=t+P+P by omega, h _ (by omega), h t ht]
 
-/-- Uniform onset, valid for every initial row, not only an odd front. -/
+/-- Uniform onset inherited from the general left-recurrence clock theorem. -/
 theorem uniform_period {b : Nat → Nat → Bool} (h : Recurrence b) :
-    ∀ i, PeriodFrom (b i) (2^i-1) (2^i) := by
-  have pair : ∀ i, PeriodFrom (b i) (2^i-1) (2^i) ∧
-      PeriodFrom (b (i+1)) (2^(i+1)-1) (2^(i+1)) := by
-    intro i
-    induction i with
-    | zero =>
-      constructor
-      · intro t _
-        simpa using h.1 t
-      · have ht := Rule30Diagonals.transducer_periodic
-          (x := b 1) (F := fun t x => b 0 t || x) (T := 0) (L := 1)
-          (fun t _ => h.2.1 t)
-          (fun t _ => by funext x; rw [h.1 t])
-        simpa [PeriodFrom] using ht
-    | succ i ih =>
-      refine ⟨ih.2, ?_⟩
-      have hp : 0 < 2^(i+1) := Nat.two_pow_pos _
-      have hpow : 2^(i+2) = 2*2^(i+1) := by
-        rw [show i+2=(i+1)+1 by omega, Nat.pow_succ]; omega
-      have hpow0 : 2^(i+1) = 2*2^i := by rw [Nat.pow_succ]; omega
-      have old : PeriodFrom (b i) (2^(i+1)-1) (2^(i+1)) := by
-        rw [hpow0]
-        exact period_mono (period_double ih.1) (by omega)
-      have ht := Rule30Diagonals.transducer_periodic
-        (x := b (i+2)) (F := fun t x => xor (b i t) (b (i+1) t || x))
-        (T := 2^(i+1)-1) (L := 2^(i+1))
-        (fun t _ => h.2.2 i t)
-        (fun t ht => by funext x; rw [old t ht, ih.2 t ht])
-      intro t ht0
-      rw [show i+1+1=i+2 by omega, hpow] at ht0 ⊢
-      exact ht t (by omega)
-  exact fun i => (pair i).1
+    ∀ i, PeriodFrom (b i) (2^i-1) (2^i) :=
+  Rule30FiniteDiagonals.left_recurrence_uniform_period b h.1 h.2.1 h.2.2
 
 /-- A reset gives eventual P-periodicity. Known Q-periodicity pulls it back
 to the stated onset T; no backward transfer is assumed without that clock. -/
@@ -225,14 +192,6 @@ theorem Ld_recurrence {x : Int → Bool} {anchor : Int}
   ⟨Rule30FiniteDiagonals.Ld_zero_succ hleft,
     Rule30FiniteDiagonals.Ld_one_succ hleft,
     fun i t => Rule30FiniteDiagonals.Ld_step (x := x) (lo := anchor) i t⟩
-
-/-- Every left diagonal has an explicit uniform onset for its power-of-two
-period, independently of the initial configuration to the right. -/
-theorem Ld_uniform_period {x : Int → Bool} {anchor : Int}
-    (hleft : ∀ p, p < anchor → x p = false) (i t : Nat) (ht : 2^i-1 ≤ t) :
-    Rule30FiniteDiagonals.Ld x anchor i (t+2^i) =
-      Rule30FiniteDiagonals.Ld x anchor i t :=
-  uniform_period (Ld_recurrence hleft) i t ht
 
 /-- At every sufficiently old age, a bounded interval of left-diagonal
 indices contains a white cell. The interval start is any positive natural. -/

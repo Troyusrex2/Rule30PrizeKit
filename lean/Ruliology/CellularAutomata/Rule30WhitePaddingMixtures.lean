@@ -42,11 +42,8 @@ block and gap hypotheses remain outside the theorem.
 Sources: `Rule30ArbitraryWhitePadding` supplies the symbolic physical witness
 and capture lemmas, and records the nearest-cell capture antecedents from
 @AIOvernight's Lean-verified `R30-20261026-8cca17` and `R30-20261026-4d375d`.
-Those antecedents credit OpenAI Codex and Claude (Anthropic). This module
-adds linear stripe maintenance and the finite-mixture schedule and word
-interfaces. No literature-priority claim is made.
-
-AI used for this contribution: OpenAI Codex.
+This module adds linear stripe maintenance and the finite-mixture schedule
+and word interfaces.
 -/
 
 @[expose] public section
@@ -91,7 +88,7 @@ theorem exists_last (u : List Bool) : ∀ m, m ≤ u.length →
         subst j'; exact hc
 
 /-- The even middle cell of the incoming stripe survives any fewer than N ticks. -/
-theorem short_white_witness (N t ell : Nat) (hN : 1 ≤ N) (hell : ell < N)
+theorem short_white_witness (N t ell : Nat) (_hN : 1 ≤ N) (hell : ell < N)
     (hstripe : StripeAt N t) :
     ∃ p : Nat, 1 ≤ p ∧ p ≤ N+1 ∧ cell (t+ell) p = false := by
   let p := N+N%2

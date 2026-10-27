@@ -46,11 +46,8 @@ Sources: `Rule30AgedLeftDiagonals` supplies the aged interval bound;
 The nearest-cell capture arguments and black-tick white-witness strategy
 adapt @AIOvernight's Lean-verified submissions `R30-20261026-8cca17` and its
 successor `R30-20261026-4d375d`, whose fixed-distance capture step is here
-parametric. Those submissions credit OpenAI Codex and Claude (Anthropic).
-The arbitrary-block age bound, physical composition, and symbolic stripe
-regeneration are the present extensions; no literature-priority claim is made.
-
-AI used for this contribution: OpenAI Codex.
+parametric. The arbitrary-block age bound, physical composition, and symbolic
+stripe regeneration extend those capture arguments.
 -/
 
 @[expose] public section
@@ -111,7 +108,7 @@ theorem white_prefix (a K : Nat) (M : Int)
     rfl
 
 /-- A black column 1 followed by 9n white center ticks gives a protected white witness. -/
-theorem early_white_witness_at (n a j : Nat) (hn : 1 ≤ n) (hj : j < n)
+theorem early_white_witness_at (n a j : Nat) (_hn : 1 ≤ n) (hj : j < n)
     (hc : ∀ r, r < 9 * n → cell (a + r) 0 = false)
     (hb : cell a 1 = true) :
     ∃ p : Nat, 1 ≤ p ∧ p ≤ 2 * n + 1 ∧ cell (a + 9 * n + j) p = false := by
@@ -161,7 +158,7 @@ theorem early_white_witness (n N t j : Nat) (hn : 1 ≤ n) (hj : j < n)
   simpa [Nat.add_assoc] using early_white_witness_at n (t + N) j hn hj hc hblack
 
 /-- A distant all-white prefix leaves p=n white after the warmup and j<n arbitrary ticks. -/
-theorem distant_white_witness_at (n a j : Nat) (hn : 1 ≤ n) (hj : j < n)
+theorem distant_white_witness_at (n a j : Nat) (_hn : 1 ≤ n) (hj : j < n)
     (hc : ∀ r, r < 9 * n → cell (a + r) 0 = false)
     (hprefix : ∀ p : Int, 1 ≤ p → p < 11 * (n : Int) → cell a p = false) :
     cell (a + 9 * n + j) n = false := by
@@ -433,7 +430,7 @@ theorem near_min {t : Nat} : ∀ m, Near t m →
       | true => exact (hn ⟨q, hq1, by omega, hc⟩).elim
 
 /-- White tick, first black cell at column `p ≥ 3`: it moves to column `p - 1`. -/
-theorem white_step_far (t p : Nat) (h0 : cell t 0 = false) (hp : 3 ≤ p)
+theorem white_step_far (t p : Nat) (_h0 : cell t 0 = false) (hp : 3 ≤ p)
     (hw : ∀ q : Nat, 1 ≤ q → q < p → cell t q = false) (hb : cell t p = true) :
     cell (t + 1) ((p - 1 : Nat) : Int) = true := by
   rw [cell_succ]
