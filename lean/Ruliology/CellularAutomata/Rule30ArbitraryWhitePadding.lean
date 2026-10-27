@@ -18,14 +18,14 @@ For `n = u.length`, the explicit bound is
 ```
 L = 20*n
 F = L + 2^(L+1)
-N = 2^F - 1
+N = (2^L - 1) + 2*2^L*2^L
 W = N + 9*n
 B = F + 11*n
 K = n + B
 Q = max W (B + 9*K).
 ```
 Here `Physical.warmup n = W`, `Physical.bound n = B`, and
-`paddingThreshold n = Q`. These bounds are deliberately large.
+`paddingThreshold n = Q`. The bound is singly exponential in the block length.
 
 The aged left-diagonal interval theorem supplies a physical white witness
 after a long white-center warmup. At the last black phase of a candidate
@@ -275,7 +275,7 @@ theorem after_cone (t N : Nat) (D : Int)
 
 def lower (n : Nat) : Nat := 20*n
 def upper (n : Nat) : Nat := lower n + 2^(lower n+1)
-def age (n : Nat) : Nat := 2^(upper n)-1
+def age (n : Nat) : Nat := Rule30AgedLeftDiagonals.resetAge (lower n)
 def warmup (n : Nat) : Nat := age n + 9*n
 def bound (n : Nat) : Nat := upper n + 11*n
 
@@ -290,17 +290,11 @@ theorem late_witness (t n j : Nat) (hn : 1 ≤ n) (hj : j < n) (D : Int)
   have hN : ∀ p : Int, 0 < p → freeEvol t D N p = cell (t+N) p :=
     before_arrival t N D (by dsimp [N]; omega) hrow hw N (by omega)
   have hlo : 1 ≤ lower n := by dsimp [lower]; omega
-  have he : lower n-1+1=lower n := by omega
-  have hage : 2^(lower n-1+1+2^(lower n-1+2))-1 ≤ N+s := by
-    have he2 : lower n-1+2=lower n+1 := by omega
-    rw [he, he2]
-    exact Nat.le_add_right (age n) s
-  obtain ⟨i, hi1, hi2, hiw⟩ := Rule30AgedLeftDiagonals.aged_white_witness
-    (front_recurrence t D) (lower n-1) (N+s) hage
-  rw [he] at hi1 hi2
-  have hi2' : i ≤ upper n := by
-    have he2 : lower n-1+2=lower n+1 := by omega
-    simpa [upper, he2] using hi2
+  have hage : Rule30AgedLeftDiagonals.resetAge (lower n) ≤ N+s :=
+    Nat.le_add_right (age n) s
+  obtain ⟨i, hi1, hi2, hiw⟩ := Rule30AgedLeftDiagonals.white_witness_after_reset
+    (front_recurrence t D) (lower n) (N+s) hlo hage
+  have hi2' : i ≤ upper n := by simpa only [upper] using hi2
   let p : Int := D-(N:Int)-(s:Int)+(i:Int)
   have hps : (s:Int) < p := by dsimp [p, s, N, lower] at *; omega
   have hpb : p ≤ (bound n:Int) := by

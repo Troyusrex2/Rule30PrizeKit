@@ -8,16 +8,18 @@ public import Ruliology.CellularAutomata.Rule30Prize
 
 For every Rule 30 configuration `x` that is white left of an integer anchor,
 `Rule30FiniteDiagonals.Ld x anchor j t` reads position `anchor - t + j` at time `t`.
-For any `lo >= 1`, put `B = lo + 2^(lo+1)`. At every age `A >= 2^B - 1`,
-some left diagonal with index in `[lo,B]` is white (`Ld_aged_white_witness`).
+For any `lo >= 1`, put `P = 2^lo` and `B = lo + 2*P`. At every age
+`A >= resetAge lo = 2*P^2+P-1`, some left diagonal with index in `[lo,B]`
+is white (`Ld_white_witness_after_reset`).
 The initial configuration to the right of the anchor is arbitrary; the anchor
 itself need not be black. No finite support or finite-width certificate is used.
 
-The proof first makes the diagonal clock onset explicit: coordinate `i` has
-period `2^i` from time `2^i-1`. A hypothetical black interval resets successive
-coordinates, transmitting a shorter period across the interval. Known longer
-periods move that inherited period back to the stated onset. The resulting
-return to black contradicts the all-black interval's white causal interior.
+The proof starts with the explicit clock onset: coordinate `i` has period
+`2^i` from time `2^i-1`. A hypothetical black interval resets successive
+coordinates. Each reset occurs within the first known driver period, so the
+common period P crosses one coordinate at an onset cost of P. After 2*P
+coordinates, a return to black contradicts the interval's white causal interior.
+The original `2^B-1` statements and reset-backshift helpers remain available.
 
 The abstract recurrence theorems apply to any Boolean array satisfying the
 triangular left-diagonal recurrence. `Ld_recurrence` supplies the exact bridge
@@ -212,6 +214,148 @@ theorem evol_aged_white_witness {x : Int → Bool} {anchor : Int}
       Rule30Realization.evol x A (anchor - (A : Int) + (i : Int)) = false := by
   simpa only [Rule30FiniteDiagonals.Ld] using
     Ld_aged_white_witness hleft lo A hlo hA
+
+/-! ### A forward-reset onset without an output-period premise -/
+
+/-- A black reset occurs within the first known driver period. Its output is
+P-periodic from T+P, without any prior periodicity assumption on the output. -/
+theorem reset_first_period {x l g : Nat → Bool} {T P A : Nat}
+    (hx : ∀ t, x (t+1) = xor (l t) (g t || x t))
+    (hl : PeriodFrom l T P) (hg : PeriodFrom g T P)
+    (hP : 0 < P) (hA : T ≤ A) (hblack : g A = true) :
+    PeriodFrom x (T+P) P := by
+  let R := T+(A-T)%P
+  have hr0 : T ≤ R := by dsimp [R]; omega
+  have hr1 : R < T+P := by
+    have hm := Nat.mod_lt (A-T) hP
+    dsimp [R]
+    omega
+  have he : R+((A-T)/P)*P = A := by
+    have hd := Nat.mod_add_div (A-T) P
+    rw [Nat.mul_comm P ((A-T)/P)] at hd
+    dsimp [R]
+    omega
+  have hb : g R = true := by
+    have hh := period_mul hg ((A-T)/P) R hr0
+    rw [he,hblack] at hh
+    exact hh.symm
+  have start : x (R+1+P) = x (R+1) := by
+    rw [show R+1+P=R+P+1 by omega,hx,hx,hl R hr0,hg R hr0,hb]
+    simp
+  have future : ∀ s, x (R+1+s+P) = x (R+1+s) := by
+    intro s
+    induction s with
+    | zero => simpa using start
+    | succ s ih =>
+        rw [show R+1+(s+1)+P=(R+1+s+P)+1 by omega,
+          show R+1+(s+1)=(R+1+s)+1 by omega,hx,hx,
+          hl _ (by omega),hg _ (by omega),ih]
+  intro t ht
+  have hf := future (t-(R+1))
+  simpa only [show R+1+(t-(R+1))=t by omega] using hf
+
+/-- A common P-clock crosses a black interval at an onset cost of P per
+coordinate. Only the two base clocks use the general uniform clock bound. -/
+theorem black_interval_period_forward {b : Nat → Nat → Bool} (h : Recurrence b)
+    (a B A : Nat) (haB : a+1 ≤ B)
+    (hA : (2^(a+1)-1)+(B-a-1)*2^(a+1) ≤ A)
+    (hb : ∀ i, a+1 ≤ i → i ≤ B → b i A = true) :
+    PeriodFrom (b B) ((2^(a+1)-1)+(B-a-1)*2^(a+1)) (2^(a+1)) := by
+  let P := 2^(a+1)
+  let T := P-1
+  have hP : 0 < P := Nat.two_pow_pos _
+  have base0 : PeriodFrom (b a) T P := by
+    have hp : PeriodFrom (b a) T (2^a) :=
+      period_mono (uniform_period h a)
+        (Nat.sub_le_sub_right (Nat.pow_le_pow_right (by decide) (by omega)) 1)
+    have hd := period_double hp
+    have he : P=2*2^a := by dsimp [P]; rw [Nat.pow_succ]; omega
+    simpa only [← he] using hd
+  have base1 : PeriodFrom (b (a+1)) T P := uniform_period h (a+1)
+  have pairs : ∀ k, a+k+1 ≤ B →
+      PeriodFrom (b (a+k)) (T+k*P) P ∧
+      PeriodFrom (b (a+k+1)) (T+k*P) P := by
+    intro k
+    induction k with
+    | zero => intro _; simpa using And.intro base0 base1
+    | succ k ih =>
+        intro hk
+        have hp := ih (by omega)
+        have hmul : k*P ≤ (B-a-1)*P := Nat.mul_le_mul_right P (by omega)
+        have hTA : T+k*P ≤ A := by change T+(B-a-1)*P ≤ A at hA; omega
+        have hn := reset_first_period
+          (x := b (a+k+2)) (l := b (a+k)) (g := b (a+k+1))
+          (fun t => h.2.2 (a+k) t) hp.1 hp.2 hP hTA
+          (hb (a+k+1) (by omega) (by omega))
+        change PeriodFrom (b (a+k+1)) (T+(k+1)*P) P ∧
+          PeriodFrom (b (a+k+2)) (T+(k+1)*P) P
+        have hon : T+(k+1)*P=(T+k*P)+P := by rw [Nat.succ_mul]; omega
+        rw [hon]
+        exact ⟨period_mono hp.2 (by omega),hn⟩
+  have hh := (pairs (B-a-1) (by omega)).2
+  simpa only [show a+(B-a-1)+1=B by omega] using hh
+
+/-- With P=2^lo, this is 2*P^2+P-1. -/
+def resetAge (lo : Nat) : Nat := (2^lo-1)+2*2^lo*2^lo
+
+/-- At the forward-reset onset, an interval of 2P+1 simultaneous black
+cells contradicts its own inherited P-clock and the white causal interior. -/
+theorem no_black_interval_after_reset {b : Nat → Nat → Bool} (h : Recurrence b)
+    (a A : Nat) (hA : resetAge (a+1) ≤ A) :
+    ¬ (∀ i, a+1 ≤ i → i ≤ a+1+2^(a+2) → b i A = true) := by
+  intro hb
+  let B := a+1+2^(a+2)
+  let P := 2^(a+1)
+  have hP : 0 < P := Nat.two_pow_pos _
+  have hB : B=a+1+2*P := by
+    dsimp [B,P]
+    rw [show a+2=(a+1)+1 by omega,Nat.pow_succ]
+    omega
+  have hBA : B-a-1=2*P := by omega
+  have hT : (2^(a+1)-1)+(B-a-1)*2^(a+1)=resetAge (a+1) := by
+    rw [hBA]
+    rfl
+  have hp := black_interval_period_forward h a B A (by omega)
+    (by rw [hT]; exact hA) hb
+  have he := black_erodes h hb (P-1) B (by omega) (Nat.le_refl _)
+  rw [show P-1+1=P by omega] at he
+  have hper := hp A (by rw [hT]; exact hA)
+  change b B (A+P)=b B A at hper
+  rw [he,hb B (by omega) (Nat.le_refl _)] at hper
+  cases hper
+
+theorem white_witness_after_reset {b : Nat → Nat → Bool} (h : Recurrence b)
+    (lo A : Nat) (hlo : 1 ≤ lo) (hA : resetAge lo ≤ A) :
+    ∃ i, lo ≤ i ∧ i ≤ lo+2^(lo+1) ∧ b i A=false := by
+  classical
+  apply Classical.byContradiction
+  intro hn
+  have he : lo-1+1=lo := by omega
+  have he2 : lo-1+2=lo+1 := by omega
+  apply no_black_interval_after_reset h (lo-1) A (by simpa only [he] using hA)
+  intro i hi hj
+  rw [he] at hi
+  rw [he,he2] at hj
+  cases hc : b i A
+  · exact (hn ⟨i,hi,hj,hc⟩).elim
+  · rfl
+
+/-- The literal Ld witness has the improved age and arbitrary right-hand
+initial data. The white-left anchor itself need not be black. -/
+theorem Ld_white_witness_after_reset {x : Int → Bool} {anchor : Int}
+    (hleft : ∀ p, p < anchor → x p=false)
+    (lo A : Nat) (hlo : 1 ≤ lo) (hA : resetAge lo ≤ A) :
+    ∃ i, lo ≤ i ∧ i ≤ lo+2^(lo+1) ∧
+      Rule30FiniteDiagonals.Ld x anchor i A=false :=
+  white_witness_after_reset (Ld_recurrence hleft) lo A hlo hA
+
+theorem evol_white_witness_after_reset {x : Int → Bool} {anchor : Int}
+    (hleft : ∀ p, p < anchor → x p=false)
+    (lo A : Nat) (hlo : 1 ≤ lo) (hA : resetAge lo ≤ A) :
+    ∃ i : Nat, lo ≤ i ∧ i ≤ lo+2^(lo+1) ∧
+      Rule30Realization.evol x A (anchor-(A:Int)+(i:Int))=false := by
+  simpa only [Rule30FiniteDiagonals.Ld] using Ld_white_witness_after_reset hleft lo A hlo hA
+
 
 end Rule30AgedLeftDiagonals
 end Ruliology.CellularAutomata

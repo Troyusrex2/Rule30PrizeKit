@@ -16,7 +16,7 @@ Every gap must satisfy `q i >= 19*N+10`. Two designated cyclically adjacent
 gaps provide entry around block zero. With
 ```
 F(N) = 20*N + 2^(20*N+1)
-W(N) = 2^F(N) - 1 + 9*N
+W(N) = (2^(20*N) - 1) + 2*2^(20*N)*2^(20*N) + 9*N
 B(N) = F(N) + 11*N,
 ```
 the additional requirements are `q (r-1) >= W(N)` and
