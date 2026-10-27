@@ -1,0 +1,25 @@
+Rule30CAResponseFilterResearch.response_constraints : ∀ (u : List Bool),
+  u ≠ [] →
+    ∀ (g h g' h' : Bool) (t : Nat),
+      (Rule30CAResponseFilterResearch.responseR u g h g' h' t ^^
+            Rule30CAResponseFilterResearch.responseS u g h g' h' t) =
+          ((g ^^ g') && !Rule30CAClockDemodulationResearch.outR u t) ∧
+        (Rule30CAResponseFilterResearch.responseS u g h g' h' t ^^
+            Rule30CAResponseFilterResearch.responseR u g h g' h' (t + 1)) =
+          ((g ^^ g') && !Rule30CAClockDemodulationResearch.outS u t)
+Rule30CAResponseFilterResearch.filtered_response : ∀ (u : List Bool),
+  u ≠ [] →
+    ∀ (g h g' h' : Bool) (n t : Nat),
+      Rule30CAResponseFilterResearch.filtered (n + 1) (Rule30CAResponseFilterResearch.responseR u g h g' h') t =
+          ((g ^^ g') && Rule30CAResponseFilterResearch.filtered n (Rule30CAResponseFilterResearch.chi u) t) ∧
+        Rule30CAResponseFilterResearch.filtered (n + 1) (Rule30CAResponseFilterResearch.responseS u g h g' h') t =
+          ((g ^^ g') &&
+            (Rule30CAResponseFilterResearch.filtered n (Rule30CAResponseFilterResearch.chi u) t ^^
+              Rule30CAResponseFilterResearch.filtered (n + 1) (Rule30CAClockDemodulationResearch.outR u) t))
+Rule30CAResponseFilterResearch.erases_pair_iff : ∀ (u : List Bool),
+  u ≠ [] →
+    ∀ (n : Nat),
+      Rule30CAResponseFilterResearch.ErasesPair u (n + 1) ↔
+        ∀ (t : Nat),
+          Rule30CAResponseFilterResearch.filtered n (Rule30CAResponseFilterResearch.chi u) t = false ∧
+            Rule30CAResponseFilterResearch.filtered (n + 1) (Rule30CAClockDemodulationResearch.outR u) t = false

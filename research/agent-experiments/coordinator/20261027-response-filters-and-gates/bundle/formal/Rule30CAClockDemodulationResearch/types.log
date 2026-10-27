@@ -1,0 +1,46 @@
+Rule30CAClockDemodulationResearch.masked_demodulation : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    Rule30CAObserverResearch.titer u P = u →
+      ∀ (t : Nat),
+        Rule30CAClockDemodulationResearch.demodR P (u ++ [g, h]) t =
+            (Rule30CAClockDemodulationResearch.birth P u g && !Rule30CAClockDemodulationResearch.outR u t) ∧
+          Rule30CAClockDemodulationResearch.demodS P (u ++ [g, h]) t =
+            (Rule30CAClockDemodulationResearch.birth P u g && !Rule30CAClockDemodulationResearch.outS u t)
+Rule30CAClockDemodulationResearch.older_white_witness : ∀ (u : List Bool) (P : Nat),
+  u ≠ [] →
+    0 < P →
+      Rule30CAObserverResearch.titer u P = u →
+        ∃ t,
+          t < P ∧
+            (Rule30CAClockDemodulationResearch.outR u t = false ∨ Rule30CAClockDemodulationResearch.outS u t = false)
+Rule30CAClockDemodulationResearch.birth_detector : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    0 < P →
+      Rule30CAObserverResearch.titer u P = u →
+        Rule30CAClockDemodulationResearch.birth P u g =
+          (List.range P).any fun t =>
+            Rule30CAClockDemodulationResearch.demodR P (u ++ [g, h]) t ||
+              Rule30CAClockDemodulationResearch.demodS P (u ++ [g, h]) t
+Rule30CAClockDemodulationResearch.demodulation_of_birth : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    Rule30CAObserverResearch.titer u P = u →
+      Rule30CAClockDemodulationResearch.birth P u g = true →
+        ∀ (t : Nat),
+          Rule30CAClockDemodulationResearch.outR u t = !Rule30CAClockDemodulationResearch.demodR P (u ++ [g, h]) t ∧
+            Rule30CAClockDemodulationResearch.outS u t = !Rule30CAClockDemodulationResearch.demodS P (u ++ [g, h]) t
+Rule30CAClockDemodulationResearch.observe_birth_transfer : ∀ (u v : List Bool) (g h g' h' : Bool) (P : Nat),
+  u ≠ [] →
+    v ≠ [] →
+      0 < P →
+        Rule30CAObserverResearch.titer u P = u →
+          Rule30CAObserverResearch.titer v P = v →
+            (∀ (t : Nat),
+                Rule30CAClockDemodulationResearch.outR (u ++ [g, h]) t =
+                    Rule30CAClockDemodulationResearch.outR (v ++ [g', h']) t ∧
+                  Rule30CAClockDemodulationResearch.outS (u ++ [g, h]) t =
+                    Rule30CAClockDemodulationResearch.outS (v ++ [g', h']) t) →
+              Rule30CAClockDemodulationResearch.birth P u g = Rule30CAClockDemodulationResearch.birth P v g' ∧
+                (Rule30CAClockDemodulationResearch.birth P u g = true →
+                  ∀ (t : Nat),
+                    Rule30CAClockDemodulationResearch.outR u t = Rule30CAClockDemodulationResearch.outR v t ∧
+                      Rule30CAClockDemodulationResearch.outS u t = Rule30CAClockDemodulationResearch.outS v t)

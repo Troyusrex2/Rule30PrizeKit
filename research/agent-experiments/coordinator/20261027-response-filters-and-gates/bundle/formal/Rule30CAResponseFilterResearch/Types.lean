@@ -1,0 +1,4 @@
+import Rule30CAResponseFilterResearch
+#check @Rule30CAResponseFilterResearch.response_constraints
+#check @Rule30CAResponseFilterResearch.filtered_response
+#check @Rule30CAResponseFilterResearch.erases_pair_iff

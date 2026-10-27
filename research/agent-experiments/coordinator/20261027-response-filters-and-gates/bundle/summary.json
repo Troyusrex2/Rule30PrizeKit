@@ -1,0 +1,253 @@
+{
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_order": [
+    "Rule30CommonPastResearch",
+    "Rule30ColumnReaderResearch",
+    "Rule30ReaderEquivalenceResearch",
+    "Rule30ReaderCanonicalResearch",
+    "Rule30CanonicalLanguageResearch",
+    "Rule30CAObserverResearch",
+    "Rule30BoolPolynomial",
+    "Rule30CASymbolic",
+    "Rule30CAInvariantResearch",
+    "Rule30LinearObservationModule",
+    "Rule30CALinearBarrier",
+    "Rule30AnchoredConstantResearch",
+    "Rule30CAClockDemodulationResearch",
+    "Rule30CAGateReturnResearch",
+    "Rule30CAResponseFilterResearch"
+  ],
+  "modules": [
+    {
+      "module": "Rule30CommonPastResearch",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "constants": 100,
+      "headlines": [
+        "Rule30CommonPastResearch.actual_periodic"
+      ],
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Ruliology.CellularAutomata.Rule30Diagonals"
+      ]
+    },
+    {
+      "module": "Rule30ColumnReaderResearch",
+      "source_sha256": "ad1d09b6d460b1849017fcf7c99151ad0304ceee8dfc80e78f43bfc1a917da3b",
+      "constants": 119,
+      "headlines": [
+        "Rule30ColumnReaderResearch.initial_mem"
+      ],
+      "private_imports": [
+        "Rule30CommonPastResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderEquivalenceResearch",
+      "source_sha256": "574920fd28265f590b6f030784bb22979770f0fb1da023f328825bc3cade6dd7",
+      "constants": 83,
+      "headlines": [
+        "Rule30ReaderEquivalenceResearch.shared_representative"
+      ],
+      "private_imports": [
+        "Rule30ColumnReaderResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderCanonicalResearch",
+      "source_sha256": "832fd7632331f8ad6101bc4725a7b954e81e692843017c7df529a52a3901641a",
+      "constants": 215,
+      "headlines": [
+        "Rule30ReaderCanonicalResearch.canonical_completeness_reduction"
+      ],
+      "private_imports": [
+        "Rule30ReaderEquivalenceResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CanonicalLanguageResearch",
+      "source_sha256": "2c0aacfc6b48f74b7e289487f83d9b6c0ad1d551ab3e8a3122f584de5c1a6033",
+      "constants": 53,
+      "headlines": [
+        "Rule30CanonicalLanguageResearch.canonical_iff",
+        "Rule30CanonicalLanguageResearch.zpad_true_injective",
+        "Rule30CanonicalLanguageResearch.phase_injective",
+        "Rule30CanonicalLanguageResearch.phase_ne",
+        "Rule30CanonicalLanguageResearch.canonical_phase_iff",
+        "Rule30CanonicalLanguageResearch.not_core_phase",
+        "Rule30CanonicalLanguageResearch.core_step_two",
+        "Rule30CanonicalLanguageResearch.core_observe_injective"
+      ],
+      "private_imports": [
+        "Rule30ReaderCanonicalResearch"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CAObserverResearch",
+      "source_sha256": "476236dd07f0252604a2f24e751ac41f94bd08a937497d0cae434498743838fc",
+      "constants": 134,
+      "headlines": [
+        "Rule30CAObserverResearch.trace_aligned_iff",
+        "Rule30CAObserverResearch.trace_phase_iff",
+        "Rule30CAObserverResearch.iter_period",
+        "Rule30CAObserverResearch.trace_shift_cancel",
+        "Rule30CAObserverResearch.canonical_observer_iff",
+        "Rule30CAObserverResearch.reader_complete_iff"
+      ],
+      "private_imports": [
+        "Rule30CanonicalLanguageResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30BoolPolynomial",
+      "source_sha256": "65524746d47ed34f6a4fbd5cbd68759ba634903f9321b302a8544b6ad4a0c5d6",
+      "constants": 74,
+      "headlines": [
+        "Rule30BoolPolynomial.eval_add",
+        "Rule30BoolPolynomial.eval_mul"
+      ],
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CASymbolic",
+      "source_sha256": "b8e0496554945beec3e45025e003eca62c389eef3baa68d7b27b80998be8b94b",
+      "constants": 139,
+      "headlines": [
+        "Rule30CASymbolic.invariant_macro",
+        "Rule30CASymbolic.coordinate_stream_identity"
+      ],
+      "private_imports": [
+        "Rule30BoolPolynomial",
+        "Rule30CAObserverResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CAInvariantResearch",
+      "source_sha256": "51593685f64d0bd6061f0783310099f8fcc410ca75d5b3d68b35d6bacd898b54",
+      "constants": 36,
+      "headlines": [
+        "Rule30CAInvariantResearch.invariant_T",
+        "Rule30CAInvariantResearch.invariant_titer",
+        "Rule30CAInvariantResearch.invariant_coordinate_stream",
+        "Rule30CAInvariantResearch.first_T",
+        "Rule30CAInvariantResearch.third_T"
+      ],
+      "private_imports": [
+        "Rule30CASymbolic"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30LinearObservationModule",
+      "source_sha256": "cca3710a695e086186ac8112e225a27bd9ec604a8034114e32698ad06a3c790f",
+      "constants": 19,
+      "headlines": [
+        "Rule30LinearObservationModule.quotient_two_generated",
+        "Rule30LinearObservationModule.two_generated_fixed_finrank_le",
+        "Rule30LinearObservationModule.orbitOperator_spans",
+        "Rule30LinearObservationModule.not_three_fixed_independent"
+      ],
+      "private_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas"
+      ]
+    },
+    {
+      "module": "Rule30CALinearBarrier",
+      "source_sha256": "cbc7a9c8a451323d3f5f1bcb3f933b9ae9f770a99ee6a68167bfe8a97a7073d4",
+      "constants": 72,
+      "headlines": [
+        "Rule30CALinearBarrier.label_fixed",
+        "Rule30CALinearBarrier.label_combo",
+        "Rule30CALinearBarrier.three_independent",
+        "Rule30CALinearBarrier.no_two_output_affine_decoder"
+      ],
+      "private_imports": [
+        "Rule30CAInvariantResearch",
+        "Rule30LinearObservationModule"
+      ],
+      "official_imports": [
+        "Mathlib.Algebra.Field.ZMod",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    {
+      "module": "Rule30AnchoredConstantResearch",
+      "source_sha256": "965d2e2a9dbc53332ea7de8b7721ef43d5fb45df166a661280c8a0be53b96010",
+      "constants": 10,
+      "headlines": [
+        "Rule30AnchoredConstantResearch.no_constant_after_black",
+        "Rule30AnchoredConstantResearch.trace_full",
+        "Rule30AnchoredConstantResearch.not_always_black"
+      ],
+      "private_imports": [
+        "Rule30CAObserverResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CAClockDemodulationResearch",
+      "source_sha256": "bd045ef89262150f99457aaff4aedd8e8dce8a7c2ed993ca9d1e0d6ecdd5bb80",
+      "constants": 63,
+      "headlines": [
+        "Rule30CAClockDemodulationResearch.masked_demodulation",
+        "Rule30CAClockDemodulationResearch.older_white_witness",
+        "Rule30CAClockDemodulationResearch.birth_detector",
+        "Rule30CAClockDemodulationResearch.demodulation_of_birth",
+        "Rule30CAClockDemodulationResearch.observe_birth_transfer"
+      ],
+      "private_imports": [
+        "Rule30AnchoredConstantResearch"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CAGateReturnResearch",
+      "source_sha256": "5c7307c33d2f3875fb668fee4e74d788521b0fedef04e6fb32ea1ed4398c6b17",
+      "constants": 11,
+      "headlines": [
+        "Rule30CAGateReturnResearch.not_constant_outputs",
+        "Rule30CAGateReturnResearch.gated_no_birth",
+        "Rule30CAGateReturnResearch.gated_return"
+      ],
+      "private_imports": [
+        "Rule30CAClockDemodulationResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CAResponseFilterResearch",
+      "source_sha256": "17e628266760bc5202ea06153456cfe6b716dc06de848e8adbea9ae2b20b0949",
+      "constants": 35,
+      "headlines": [
+        "Rule30CAResponseFilterResearch.response_constraints",
+        "Rule30CAResponseFilterResearch.filtered_response",
+        "Rule30CAResponseFilterResearch.erases_pair_iff"
+      ],
+      "private_imports": [
+        "Rule30CAClockDemodulationResearch"
+      ],
+      "official_imports": []
+    }
+  ],
+  "module_count": 15,
+  "constants": 1163,
+  "new_leaf_constants": 46,
+  "reused_dependency_constants": 1117,
+  "prize_solved": false
+}

@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\verifier9-20261026\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"Rule30CAGateReturnResearch.Gated","standardAxioms":true},{"kind":"theorem","name":"Rule30CAGateReturnResearch.cancel_gate_R","standardAxioms":true},{"kind":"theorem","name":"Rule30CAGateReturnResearch.cancel_gate_S","standardAxioms":true},{"kind":"theorem","name":"Rule30CAGateReturnResearch.gated_no_birth","standardAxioms":true},{"kind":"theorem","name":"Rule30CAGateReturnResearch.gated_return","standardAxioms":true},{"kind":"theorem","name":"Rule30CAGateReturnResearch.not_constant_outputs","standardAxioms":true},{"kind":"theorem","name":"Rule30CAClockDemodulationResearch.outR.eq_1","standardAxioms":true},{"kind":"theorem","name":"Rule30CAObserverResearch.r.eq_1","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30CAGateReturnResearch.not_constant_outputs","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30CAGateReturnResearch.gated_no_birth","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Rule30CAGateReturnResearch.gated_return","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Rule30CAGateReturnResearch","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":11,"ok":true},"verdict":"pass","verifiedTargets":[]}

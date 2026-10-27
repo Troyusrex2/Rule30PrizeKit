@@ -1,0 +1,10 @@
+Rule30AnchoredConstantResearch.no_constant_after_black : ∀ (a : Nat → Nat → Bool),
+  Rule30CommonPastResearch.Actual a →
+    (∀ (t : Nat), a t 0 = true) → ∀ (j : Nat), 0 < j → ∀ (b : Bool), ¬∀ (t : Nat), a t j = b
+Rule30AnchoredConstantResearch.trace_full : ∀ (xs : List Bool),
+  0 < xs.length → ∀ (t : Nat), Rule30CAObserverResearch.trace xs t = Rule30CAObserverResearch.full xs t (xs.length - 1)
+Rule30AnchoredConstantResearch.not_always_black : ∀ (xs : List Bool),
+  xs ≠ [] →
+    ¬∀ (t : Nat),
+        Rule30CAObserverResearch.r (Rule30CAObserverResearch.titer xs t) = true ∧
+          Rule30CAObserverResearch.s (Rule30CAObserverResearch.titer xs t) = true

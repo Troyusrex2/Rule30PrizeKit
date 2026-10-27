@@ -1,0 +1,6 @@
+import Rule30CAClockDemodulationResearch
+#check @Rule30CAClockDemodulationResearch.masked_demodulation
+#check @Rule30CAClockDemodulationResearch.older_white_witness
+#check @Rule30CAClockDemodulationResearch.birth_detector
+#check @Rule30CAClockDemodulationResearch.demodulation_of_birth
+#check @Rule30CAClockDemodulationResearch.observe_birth_transfer

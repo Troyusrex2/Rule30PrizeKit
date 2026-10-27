@@ -1,0 +1,33 @@
+{
+  "status": "exact paper return relation; uniform halving OPEN",
+  "official_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "new_lean_build": false,
+  "new_kernel_claim": false,
+  "new_state_period_gap_sweep": false,
+  "new_public_write": false,
+  "positive_results": [
+    "D^t(1+2^(4q)m)=1 XOR 2^(4q-2t)Phi^t(m), for t<=2q",
+    "q>1 decreases by one every two steps, retaining tail Phi^2(m)",
+    "exact five-register cocycle over actual R=D^2 tail",
+    "guarded normalized return N(m)=Phi^(2s)(R^J(m)/16^s)",
+    "whole 2P return guarantees J+s<=P",
+    "finite positive tail bit length is conserved by N"
+  ],
+  "control": "one prespecified inherited infinite-tail return PASS",
+  "independent_paper_audit": "prize_bridge_audit PASS; not Lean replay",
+  "remaining_obligation": "exclude a recurrent guarded actual-tail path using finite whiteness",
+  "prior_sources": [
+    {
+      "path": "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\uniform-gate-halving-20261027T0010\\PAPER.md",
+      "sha256": "f367c61a45fdc72149a46719d4e4709a2961600cdc432c944272dac71dda8107"
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\predecessor-periodicity-paper-20261026T2305\\PAPER.md",
+      "sha256": "930933b256fed3f4576748033f934b1b946a9148351e6d0fafc81d447c6480a2"
+    },
+    {
+      "path": "D:\\MWB\\Rule30\\wolfram-local\\agent-seven-20261024\\gate-half-defect-20261027T0015\\PAPER.md",
+      "sha256": "a6c512037bb69e803e10456dba3a53be38a65cd3d5ef2978f525cd8732544329"
+    }
+  ]
+}

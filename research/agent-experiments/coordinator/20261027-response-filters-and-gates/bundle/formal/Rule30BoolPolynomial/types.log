@@ -1,0 +1,6 @@
+Rule30BoolPolynomial.eval_add : ∀ (n : Nat) (p q : Rule30BoolPolynomial.Poly) (x : Nat → Bool),
+  Rule30BoolPolynomial.eval n (Rule30BoolPolynomial.add p q) x =
+    (Rule30BoolPolynomial.eval n p x ^^ Rule30BoolPolynomial.eval n q x)
+Rule30BoolPolynomial.eval_mul : ∀ (n : Nat) (p q : Rule30BoolPolynomial.Poly) (x : Nat → Bool),
+  Rule30BoolPolynomial.eval n (Rule30BoolPolynomial.mul p q) x =
+    (Rule30BoolPolynomial.eval n p x && Rule30BoolPolynomial.eval n q x)

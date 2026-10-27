@@ -1,0 +1,4 @@
+Rule30CASymbolic.invariant_macro : ∀ (x : Rule30CASymbolic.Row),
+  Rule30CASymbolic.inv (Rule30CASymbolic.rstep x) = Rule30CASymbolic.inv x
+Rule30CASymbolic.coordinate_stream_identity : ∀ (x : Rule30CASymbolic.Row),
+  Rule30CASymbolic.inv x = Rule30CASymbolic.samples (Rule30CASymbolic.rit x)

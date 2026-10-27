@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New verified results:** [exact response-filter criterion and gated whole returns](coordinator/20261027-response-filters-and-gates/REPORT.md), with complete portable replay and separately labelled counterexample notes. Spatial inheritance and P1 remain open.
+
 **New verified tools:** [recover older observations across a clock birth](coordinator/20261027-clock-demodulation/REPORT.md), with a finite detector and an all-width limitation on affine full-state decoders. The complete13-module source replay passed. General plateaus and P1 remain open.
 
 **New reader reduction:** [an exact two-output CA observer criterion](coordinator/20261026-ca-observer/REPORT.md), including all tail widths and both phases. The portable six-module replay passed. Both observation properties and P1 remain open.

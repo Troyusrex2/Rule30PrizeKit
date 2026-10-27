@@ -1,0 +1,5 @@
+import Rule30LinearObservationModule
+#check @Rule30LinearObservationModule.quotient_two_generated
+#check @Rule30LinearObservationModule.two_generated_fixed_finrank_le
+#check @Rule30LinearObservationModule.orbitOperator_spans
+#check @Rule30LinearObservationModule.not_three_fixed_independent

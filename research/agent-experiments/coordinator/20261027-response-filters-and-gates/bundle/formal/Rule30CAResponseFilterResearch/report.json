@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "source_sha256": "17e628266760bc5202ea06153456cfe6b716dc06de848e8adbea9ae2b20b0949",
+  "compiled_sha256": "06175d836e95eae6cc87a11db6f128df89ad39ba972fbed0502c793defc50974",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.44077450002077967,
+  "total_seconds": 1.894345099979546,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.ErasesPair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.cancel_middle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.chi",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.diff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.erases_pair_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.filtered",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered_mask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered_not",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered_xor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.g_initial_response",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.masked_sum",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.responseR",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.responseR_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.responseS",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.responseS_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.response_constraints",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.response_derivative",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.xor_recover",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.xor_shuffle",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.xor_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30CAResponseFilterResearch.filtered.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.response_constraints",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.filtered_response",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAResponseFilterResearch.erases_pair_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CAResponseFilterResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 35,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

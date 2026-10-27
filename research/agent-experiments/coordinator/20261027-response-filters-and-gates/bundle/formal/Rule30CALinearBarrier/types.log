@@ -1,0 +1,8 @@
+Rule30CALinearBarrier.label_fixed : ∀ (m : ℕ),
+  6 ≤ m → (Rule30CALinearBarrier.U m) (Rule30CALinearBarrier.label m) = Rule30CALinearBarrier.label m
+Rule30CALinearBarrier.label_combo : ∀ (m : ℕ),
+  8 ≤ m → Rule30CALinearBarrier.label m = Rule30CALinearBarrier.combo m Rule30CASymbolic.terms
+Rule30CALinearBarrier.three_independent : ∀ (m : ℕ),
+  8 ≤ m → LinearIndependent Rule30CALinearBarrier.F (Rule30CALinearBarrier.three m)
+Rule30CALinearBarrier.no_two_output_affine_decoder : ∀ (m : ℕ),
+  8 ≤ m → ∀ (a b : Rule30CALinearBarrier.Obs m), ¬Rule30CALinearBarrier.AffineDecodes m a b

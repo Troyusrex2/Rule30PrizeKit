@@ -1,0 +1,12 @@
+Rule30CAGateReturnResearch.not_constant_outputs : ∀ (u : List Bool),
+  u ≠ [] →
+    ∀ (b : Bool),
+      ¬∀ (t : Nat), Rule30CAClockDemodulationResearch.outR u t = b ∧ Rule30CAClockDemodulationResearch.outS u t = b
+Rule30CAGateReturnResearch.gated_no_birth : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    Rule30CAObserverResearch.titer u P = u →
+      Rule30CAGateReturnResearch.Gated u g h → Rule30CAClockDemodulationResearch.birth P u g = false
+Rule30CAGateReturnResearch.gated_return : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    Rule30CAObserverResearch.titer u P = u →
+      Rule30CAGateReturnResearch.Gated u g h → Rule30CAObserverResearch.titer (u ++ [g, h]) P = u ++ [g, h]
