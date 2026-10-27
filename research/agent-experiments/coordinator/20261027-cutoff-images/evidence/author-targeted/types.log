@@ -1,0 +1,68 @@
+Rule30CutoffImagesResearch.last_sites_mod_zero (N : Nat) (h : N % 3 = 0) :
+  Rule30CutoffImagesResearch.leftLast N = ↑N - 1 ∧ Rule30CutoffImagesResearch.rightLast N = ↑N - 2
+'Rule30CutoffImagesResearch.last_sites_mod_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.last_sites_mod_one (N : Nat) (h : N % 3 = 1) :
+  Rule30CutoffImagesResearch.leftLast N = ↑N - 2 ∧ Rule30CutoffImagesResearch.rightLast N = ↑N
+'Rule30CutoffImagesResearch.last_sites_mod_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.last_sites_mod_two (N : Nat) (h : N % 3 = 2) :
+  Rule30CutoffImagesResearch.leftLast N = ↑N ∧ Rule30CutoffImagesResearch.rightLast N = ↑N - 1
+'Rule30CutoffImagesResearch.last_sites_mod_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.capped_second_image (K : Int) (hK : 2 ≤ K) :
+  Ruliology.CellularAutomata.Rule30Realization.evol (Rule30CutoffImagesResearch.cappedCommon K) 1 =
+    Rule30CutoffImagesResearch.withIsolated (K + 1)
+'Rule30CutoffImagesResearch.capped_second_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.cutoff_first_images (N : Nat) (hN : 2 ≤ N) :
+  Ruliology.CellularAutomata.Rule30Realization.evol
+        (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N
+          Ruliology.CellularAutomata.Rule30TraceMerge.leftExample)
+        1 =
+      Rule30CutoffImagesResearch.cappedCommon (Rule30CutoffImagesResearch.leftLast N + 1) ∧
+    Ruliology.CellularAutomata.Rule30Realization.evol
+        (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N
+          Ruliology.CellularAutomata.Rule30TraceMerge.rightExample)
+        1 =
+      Rule30CutoffImagesResearch.cappedCommon (Rule30CutoffImagesResearch.rightLast N + 1)
+'Rule30CutoffImagesResearch.cutoff_first_images' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.cutoff_second_images (N : Nat) (hN : 2 ≤ N) :
+  Ruliology.CellularAutomata.Rule30Realization.evol
+        (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N
+          Ruliology.CellularAutomata.Rule30TraceMerge.leftExample)
+        2 =
+      Rule30CutoffImagesResearch.withIsolated (Rule30CutoffImagesResearch.leftLast N + 2) ∧
+    Ruliology.CellularAutomata.Rule30Realization.evol
+        (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N
+          Ruliology.CellularAutomata.Rule30TraceMerge.rightExample)
+        2 =
+      Rule30CutoffImagesResearch.withIsolated (Rule30CutoffImagesResearch.rightLast N + 2)
+'Rule30CutoffImagesResearch.cutoff_second_images' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.cutoff_fronts (N : Nat) (hN : 2 ≤ N) :
+  Rule30CutoffImagesResearch.PrimitiveFront100
+      (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N Ruliology.CellularAutomata.Rule30TraceMerge.leftExample)
+      (Rule30CutoffImagesResearch.leftLast N) ∧
+    Rule30CutoffImagesResearch.PrimitiveFront100
+      (Ruliology.CellularAutomata.Rule30TraceAmbiguity.cutoff N
+        Ruliology.CellularAutomata.Rule30TraceMerge.rightExample)
+      (Rule30CutoffImagesResearch.rightLast N)
+'Rule30CutoffImagesResearch.cutoff_fronts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30CutoffImagesResearch.arbitrarily_long_primitive_finite_ambiguity (H : Nat) :
+  ∃ x y r s,
+    Ruliology.CellularAutomata.Rule30PeriodTwoSideways.FinConfig x ∧
+      Ruliology.CellularAutomata.Rule30PeriodTwoSideways.FinConfig y ∧
+        Ruliology.CellularAutomata.Rule30TraceEdge.HasLeftEdge x (-3) ∧
+          Ruliology.CellularAutomata.Rule30TraceEdge.HasLeftEdge y (-3) ∧
+            x (-1) ≠ y (-1) ∧
+              Rule30CutoffImagesResearch.PrimitiveFront100 x r ∧
+                Rule30CutoffImagesResearch.PrimitiveFront100 y s ∧
+                  ∀ (t : Nat),
+                    t < H →
+                      Ruliology.CellularAutomata.Rule30Realization.evol x t 0 =
+                        Ruliology.CellularAutomata.Rule30Realization.evol y t 0
+'Rule30CutoffImagesResearch.arbitrarily_long_primitive_finite_ambiguity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Rule30CutoffImagesResearch.isolated_images_finite_agreement (N t : Nat) (hN : 2 ≤ N) (ht : t + 2 ≤ N) :
+  Ruliology.CellularAutomata.Rule30Realization.evol
+      (Rule30CutoffImagesResearch.withIsolated (Rule30CutoffImagesResearch.leftLast N + 2)) t 0 =
+    Ruliology.CellularAutomata.Rule30Realization.evol
+      (Rule30CutoffImagesResearch.withIsolated (Rule30CutoffImagesResearch.rightLast N + 2)) t 0
+'Rule30CutoffImagesResearch.isolated_images_finite_agreement' depends on axioms: [propext, Classical.choice, Quot.sound]

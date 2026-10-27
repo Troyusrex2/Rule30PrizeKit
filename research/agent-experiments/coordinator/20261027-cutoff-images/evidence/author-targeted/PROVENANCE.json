@@ -1,0 +1,41 @@
+{
+  "validation_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "reference_cache_original_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "fresh_research_modules": 1,
+  "fresh_missing_official_modules": 3,
+  "reused_official_modules": 15,
+  "constants": 94,
+  "headlines": 9,
+  "original_author_manifest_sha256": "1a7567c5837bb17e0be368a0a8ff24ce3a4a2d0250fbb48035a831033512f3c8",
+  "original_author_report_sha256": "35db20d47bb97725d31e86277023e75ec47dc605f76f952cf8e5ae435ff6cb60",
+  "raw_mathematical_json_and_type_logs_copied_unchanged": true,
+  "stdout_redaction": {
+    "original_sha256": "94ce3ed3cee22d283263da97d32343038ecbfc4428de1d38bf10dcbf180f59d3",
+    "redacted_sha256": "ad5885847eb28648979c221bef6cc8190e7e7aa504c5bf942536e8acd43c7c43",
+    "replacement_count": 1,
+    "scope": "Only the absolute filename prefix ending in Check.lean is replaced with relative Check.lean; warning text and exact mathematical JSON bytes are unchanged."
+  },
+  "failed_attempts": [
+    {
+      "attempt": "01",
+      "stage": "dependency preflight only",
+      "reason": "Reference lacks the compiled TraceAmbiguity object; no Lean run.",
+      "guard_sha256": "f36bf005a74e42bcb8a4d4bdb9070da517c038cb32cfd7c2fcc42092cedb52a3"
+    },
+    {
+      "attempt": "02",
+      "stage": "missing official dependency compile",
+      "reason": "Partial Ruliology overlay shadowed the remaining reference namespace; fixed by populating the exact full closure.",
+      "guard_sha256": "8323498e8101aeab97dd076a9213e4b6613debb7e8dc490c685a79cb28c846b9"
+    },
+    {
+      "attempt": "03",
+      "stage": "new research source compile",
+      "reason": "Four integer arithmetic elaboration goals; no statement weakened.",
+      "source_sha256": "3486896d04c94a1802b9e72d439497d9222b51206c869796a4d63597ba347528",
+      "build_log_sha256": "75751dead3fe291ef1d0ac027ce1ea064070911ab6a3010dc729c9ce9135c92a",
+      "guard_sha256": "e9b19c689b9698c542d7ccc1fc4491dcd7f409e58090af0653b58cd188d1e91b"
+    }
+  ],
+  "raw_failure_logs": "Preserved in the sealed private author bundle; not included here because they contain private execution paths."
+}
