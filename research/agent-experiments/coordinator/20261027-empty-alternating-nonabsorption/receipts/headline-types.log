@@ -1,0 +1,79 @@
+Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.good_all : ∀ (q : Nat),
+  q < 262144 → Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.Good q
+Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.entry : Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall
+    (Ruliology.CellularAutomata.Rule30DrivenPrefix.white 146) =
+  true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_trim : ∀ (a : Nat),
+  Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall (a % 2 ^ 18) =
+    Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall a
+Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_step : ∀ (a : Nat),
+  Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall a = true →
+    Ruliology.CellularAutomata.Rule30DrivenPrefix.Observe a ∧
+      Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall
+          (Ruliology.CellularAutomata.Rule30DrivenPrefix.double a) =
+        true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.white_wall : ∀ (n : Nat),
+  Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.wall
+      (Ruliology.CellularAutomata.Rule30DrivenPrefix.white (146 + n)) =
+    true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_windows : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30DrivenPrefix.Window Ruliology.CellularAutomata.Rule30EmptyAlternating.gate r
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_spaced : Ruliology.CellularAutomata.Rule30SpacingRenormalization.Spaced
+  Ruliology.CellularAutomata.Rule30EmptyAlternating.gate
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_next_gap : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30EmptyAlternating.gate r = true →
+    Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 3) = true ∧
+        Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 4) = false ∧
+          Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 5) = false ∨
+      Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 3) = false ∧
+        Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 4) = false ∧
+          Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 5) = true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_six_white : ∀ (r : Nat),
+  (Ruliology.CellularAutomata.Rule30EmptyAlternating.gate r ||
+              Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 1) ||
+            Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 2) ||
+          Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 3) ||
+        Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 4) ||
+      Ruliology.CellularAutomata.Rule30EmptyAlternating.gate (r + 5)) =
+    true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_black_after : ∀ (r : Nat),
+  ∃ s, r ≤ s ∧ Ruliology.CellularAutomata.Rule30EmptyAlternating.gate s = true
+Ruliology.CellularAutomata.Rule30EmptyAlternating.wordAt_alt : ∀ (t : Nat),
+  Ruliology.CellularAutomata.Rule30Ether.wordAt Ruliology.CellularAutomata.Rule30EmptyAlternating.wAlt4 t =
+    Ruliology.CellularAutomata.Rule30PeriodTwoCoupled.altCol t
+Ruliology.CellularAutomata.Rule30EmptyAlternating.aligned_alt_column : ∀ (j s : Nat),
+  Ruliology.CellularAutomata.Rule30Ether.aligned Ruliology.CellularAutomata.Rule30EmptyAlternating.wAlt4 j s = true →
+    j % 7 = 3
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_not_eventually_two : ¬∃ T,
+    ∀ (r : Nat),
+      T ≤ r →
+        Ruliology.CellularAutomata.Rule30PeriodTwoSideways.u Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty
+            (r + 2) =
+          Ruliology.CellularAutomata.Rule30PeriodTwoSideways.u Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty
+            r
+Ruliology.CellularAutomata.Rule30EmptyAlternating.gate_two_of_family : ∀ (R : Nat → Bool) (j s t1 : Nat),
+  (∀ (t : Nat),
+      t1 ≤ t →
+        Ruliology.CellularAutomata.Rule30Ether.drv Ruliology.CellularAutomata.Rule30PeriodTwoCoupled.altCol R t 0 =
+          Ruliology.CellularAutomata.Rule30Ether.ether j (t + s)) →
+    j % 7 = 3 →
+      Ruliology.CellularAutomata.Rule30Ether.InFamily
+          (Ruliology.CellularAutomata.Rule30Ether.drv Ruliology.CellularAutomata.Rule30PeriodTwoCoupled.altCol R) j s
+          t1 →
+        ∀ (r : Nat),
+          t1 ≤ r →
+            Ruliology.CellularAutomata.Rule30PeriodTwoSideways.u R (r + 2) =
+              Ruliology.CellularAutomata.Rule30PeriodTwoSideways.u R r
+Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_aligned_family : ∀ (j s t1 : Nat),
+  Ruliology.CellularAutomata.Rule30Ether.aligned Ruliology.CellularAutomata.Rule30EmptyAlternating.wAlt4 j s = true →
+    ¬Ruliology.CellularAutomata.Rule30Ether.InFamily
+        (Ruliology.CellularAutomata.Rule30Ether.drv Ruliology.CellularAutomata.Rule30PeriodTwoCoupled.altCol
+          Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty)
+        j s t1
+Ruliology.CellularAutomata.Rule30EmptyAlternating.not_absorption_alt : ∀ (A : List (Nat × Nat)),
+  (∀ (a : Nat × Nat),
+      a ∈ A →
+        Ruliology.CellularAutomata.Rule30Ether.aligned Ruliology.CellularAutomata.Rule30EmptyAlternating.wAlt4 a.fst
+            a.snd =
+          true) →
+    ¬Ruliology.CellularAutomata.Rule30Ether.Absorption Ruliology.CellularAutomata.Rule30EmptyAlternating.wAlt4 A

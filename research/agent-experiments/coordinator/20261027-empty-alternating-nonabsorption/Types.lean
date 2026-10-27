@@ -1,0 +1,17 @@
+import Ruliology.CellularAutomata.Rule30EmptyAlternating
+#check @Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.good_all
+#check @Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.entry
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_trim
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_step
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.white_wall
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_windows
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_spaced
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_next_gap
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_six_white
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_black_after
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.wordAt_alt
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.aligned_alt_column
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_not_eventually_two
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.gate_two_of_family
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_aligned_family
+#check @Ruliology.CellularAutomata.Rule30EmptyAlternating.not_absorption_alt

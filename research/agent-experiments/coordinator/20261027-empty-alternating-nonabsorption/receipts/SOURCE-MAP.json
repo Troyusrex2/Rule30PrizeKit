@@ -1,0 +1,56 @@
+{
+  "prefix_entire_source_exact_after_two_namespace_replacements_and_LF": true,
+  "public_prefix_sha256": "7be112c4105a8f94196eb8fe08335238df415d53176146ffcd847e6cd3b988dc",
+  "Spaced_body_exact": true,
+  "Spaced_body": "(G : Nat \u2192 Bool) : Prop :=\n  \u2200 r, (G r && G (r+1)) = false \u2227 (G r && G (r+2)) = false",
+  "certificate_source_sha256": "5df98d5cf7af40b35e5bde6c01da4d3404122ae638dc1d127376b355f457678a",
+  "certificate_normalized_body_sha256": "5df98d5cf7af40b35e5bde6c01da4d3404122ae638dc1d127376b355f457678a",
+  "certificate_only_replacements": [
+    "Rule30DrivenPrefixResearch -> Rule30DrivenPrefix",
+    "Rule30Certificates.DrivenEmptyWall -> Rule30Certificates.AlternatingEmptyWall"
+  ],
+  "certificate_mask_exact": true,
+  "helpers_body_sha256": "960e84c5d6379be287d73291296de9c865d55085e2cc4db0922d499dfd92c78f",
+  "leaf_body_sha256": "7051373be25b4b165bdec58100a65ae7b4ceef2a94c72874138f6b018681e1b8",
+  "leaf_raw_sha256": "82dd1be7531ce6c778e66d00b6a6c78c6ef17b0c56b575f246761e5a7539923c",
+  "omitted_declarations": [
+    "empty_reconstruction_translate",
+    "transformed_empty_not_spaced"
+  ],
+  "proof_edits": false,
+  "headlines": {
+    "Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall": [
+      "Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.good_all",
+      "Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.entry"
+    ],
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating": [
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_trim",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.wall_step",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.white_wall",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_windows",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_spaced",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_next_gap",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_six_white",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_black_after",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.wordAt_alt",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.aligned_alt_column",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_not_eventually_two",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.gate_two_of_family",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_aligned_family",
+      "Ruliology.CellularAutomata.Rule30EmptyAlternating.not_absorption_alt"
+    ]
+  },
+  "prior_printed_headlines": [
+    "Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.good_all",
+    "Ruliology.CellularAutomata.Rule30Certificates.AlternatingEmptyWall.entry",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_spaced",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_black_after",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.wordAt_alt",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.aligned_alt_column",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_not_eventually_two",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.gate_two_of_family",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.empty_no_aligned_family",
+    "Ruliology.CellularAutomata.Rule30EmptyAlternating.not_absorption_alt"
+  ],
+  "spacing_entire_source_exact_after_namespace_replacement_and_LF": true
+}
