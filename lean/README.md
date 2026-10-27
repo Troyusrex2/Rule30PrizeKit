@@ -339,6 +339,8 @@ Q01 was also kernel-checked for width ≤ 56 during the attempt. That finite che
 |---|---|---|---|
 | `Rule30Realization` | R1 | Some configuration realizes any right half together with any column 0. Rules 90, 150 and 210 meet Jen's hypotheses, yet their center columns are eventually constant. | `column_realizable_unique`, `seed_perturbation`, `barrier` |
 | `Rule30ZeroBoundaryBarriers` | R2 | For `Q01` there is no ranking through a finite abstraction, no local ranking and no edge-DFA ranking. Also gives a two-sided barrier. | `finite_abstraction_has_lasso`, `no_local_ranking`, `no_edge_dfa_ranking`, `no_joint_local_ranking` |
+| `Rule30PeriodicBirthCounterexample` | 10-27 | An infinite physical orbit has period-2 center and period-6 right neighbor. Comparing it with itself four ticks earlier produces N distinct mismatch births before time 6N; its initial support is infinite. | `physical_recurrence`, `center_period2`, `right_not_period4`, `linear_birth_witnesses`, `initial_support_unbounded` |
+| `Rule30LocalBirthPotential` | 10-27 | For every radius, no integer-valued potential of the current and four-ticks-earlier physical windows and phase modulo 4 pays every true mismatch birth on all finite nonzero configurations with the stated finite local alternating-center condition. Whole-row, ancestry-dependent and single-seed-only potentials are outside this claim. | `cut_finite_nonzero`, `cut_observation_loop`, `cut_true_births`, `no_local_birth_potential` |
 
 ### Other catalog entries (not about Problem 1)
 
