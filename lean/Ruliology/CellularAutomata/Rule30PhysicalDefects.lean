@@ -12,8 +12,11 @@ actual time-shift relation and cancels two identical P-blocks of center forcing.
 
 The module also identifies true mismatch births, derives the exact physical
 recurrence, and counts at least one masked defect in each disjoint doubling
-window. A conditional Problem1 interface states the fixed upper budget that
-would contradict those lower counts; the interface does not supply that budget.
+window. Padded doubling blocks contain distinct true births: for fixed
+n0 >= T+2P and n0 >= 4P, their count before 4^m*n0 is at least 2m-1.
+The count excludes the final source tick, so every resulting mismatch occurs
+strictly before the horizon. Conditional Problem1 interfaces state fixed upper
+budgets that would contradict these lower counts; neither upper budget is proved.
 -/
 
 @[expose] public section
@@ -231,4 +234,142 @@ theorem true_birth_iff {T Q : Nat}
   unfold mismatch persists forcing
   cases cell t 1 <;> cases cell (t-Q) 1 <;> cases cell t 2 <;> cases cell (t-Q) 2 <;> decide
 
+
+def trueBirth (Q t : Nat) : Bool :=
+  !(mismatch Q t) && mismatch Q (t+1)
+
+/-- The half-open source interval [n0,X-1), empty if X-1≤n0. -/
+def birthCount (Q n0 X : Nat) : Nat :=
+  intervalCount (trueBirth Q) n0 (X-1)
+
+theorem zero_one_between (p : Nat → Bool) (z s : Nat)
+    (hzs : z≤s) (hz : p z=false) (hs : p s=true) :
+    ∃ u, z≤u ∧ u<s ∧ p u=false ∧ p (u+1)=true := by
+  have hd : ∀ d, p (z+d)=true →
+      ∃ u, z≤u ∧ u<z+d ∧ p u=false ∧ p (u+1)=true := by
+    intro d
+    induction d with
+    | zero => intro h; simp [hz] at h
+    | succ d ih =>
+        intro h
+        cases hp : p (z+d)
+        · refine ⟨z+d,by omega,by omega,hp,?_⟩
+          simpa only [Nat.add_assoc] using h
+        · obtain ⟨u,hzu,hus,hu,hn⟩ := ih hp
+          exact ⟨u,hzu,by omega,hu,hn⟩
+  simpa only [show z+(s-z)=s by omega] using hd (s-z) (by
+    simpa only [show z+(s-z)=s by omega] using hs)
+
+/-- A reset followed by an actual MaskedJen witness forces a distinct birth.
+The birth's successor is strictly inside the padded doubling window. -/
+theorem birth_window {T P : Nat} (hP : 0<P)
+    (hc : ∀ t, T≤t → cell (t+P) 0=cell t 0)
+    (n : Nat) (hn : T+2*P≤n) :
+    ∃ u, n≤u ∧ u+1<2*(n+2*P) ∧ trueBirth (2*P) u=true := by
+  obtain ⟨j,hj,hz⟩ := bounded_mismatch_episode hP hc n hn
+  have hPQ : P∣2*P := ⟨2,by omega⟩
+  have hq := periodic_multiple hc hPQ
+  obtain ⟨s,hns,hsn,_hw,hd⟩ :=
+    Rule30MaskedJen.periodic_window (show 0<2*P by omega) hq (n+2*P) (by omega)
+  have hs : mismatch (2*P) s=true := by
+    unfold mismatch
+    cases h1 : cell s 1 <;> cases h2 : cell (s-2*P) 1 <;> simp [h1,h2] at hd ⊢
+  obtain ⟨u,hzu,hus,hu,hu1⟩ :=
+    zero_one_between (mismatch (2*P)) (n+j) s (by omega) hz hs
+  refine ⟨u,by omega,by omega,?_⟩
+  simp [trueBirth,hu,hu1]
+
+def blockStart (Q n0 : Nat) : Nat → Nat
+  | 0 => n0
+  | k+1 => 2*(blockStart Q n0 k+Q)
+
+theorem blockStart_ge (Q n0 k : Nat) : n0≤blockStart Q n0 k := by
+  induction k with
+  | zero => exact Nat.le_refl n0
+  | succ k ih => simp only [blockStart]; omega
+
+theorem blockStart_formula (Q n0 k : Nat) :
+    blockStart Q n0 k+2*Q=2^k*(n0+2*Q) := by
+  induction k with
+  | zero => simp [blockStart]
+  | succ k ih =>
+      calc
+        blockStart Q n0 (k+1)+2*Q = 2*(blockStart Q n0 k+2*Q) := by
+          simp only [blockStart]; omega
+        _ = 2*(2^k*(n0+2*Q)) := by rw [ih]
+        _ = 2^(k+1)*(n0+2*Q) := by
+          simp only [Nat.pow_succ,Nat.mul_assoc,Nat.mul_comm 2]
+
+theorem intervalCount_mono_hi (p : Nat → Bool) {a b c : Nat}
+    (hab : a≤b) (hbc : b≤c) : intervalCount p a b≤intervalCount p a c := by
+  rw [intervalCount_split p hab hbc]
+  omega
+
+/-- Disjoint padded blocks count births, not repeated live-mismatch readings. -/
+theorem block_birth_lower {T P n0 : Nat} (hP : 0<P)
+    (hc : ∀ t, T≤t → cell (t+P) 0=cell t 0) (hn0 : T+2*P≤n0) (k : Nat) :
+    k≤intervalCount (trueBirth (2*P)) n0 (blockStart (2*P) n0 k) := by
+  induction k with
+  | zero => simp [blockStart,intervalCount]
+  | succ k ih =>
+      have hb := blockStart_ge (2*P) n0 k
+      obtain ⟨u,hu,hu1,hbirth⟩ := birth_window hP hc
+        (blockStart (2*P) n0 k) (by omega)
+      have hw : 1≤intervalCount (trueBirth (2*P))
+          (blockStart (2*P) n0 k) (blockStart (2*P) n0 (k+1)) := by
+        apply intervalCount_pos _ hu ?_ hbirth
+        simp only [blockStart]
+        omega
+      rw [intervalCount_split _ hb (by simp only [blockStart]; omega)]
+      omega
+
+/-- All parameters, particularly Q=2P, are fixed before m. The bound includes
+m=0 and respects the excluded final source tick X-1. -/
+theorem base_four_birth_lower {T P n0 : Nat} (hP : 0<P)
+    (hc : ∀ t, T≤t → cell (t+P) 0=cell t 0)
+    (hn0 : T+2*P≤n0) (hsize : 4*P≤n0) (m : Nat) :
+    2*m≤birthCount (2*P) n0 (4^m*n0)+1 := by
+  cases m with
+  | zero => omega
+  | succ m =>
+      have hb := blockStart_formula (2*P) n0 (2*m+1)
+      have he : 2^(2*m+1)*2=4^(m+1) := by
+        calc
+          2^(2*m+1)*2 = 2^((2*m+1)+1) := (Nat.pow_succ 2 (2*m+1)).symm
+          _ = 2^(2*(m+1)) := by rw [show (2*m+1)+1=2*(m+1) by omega]
+          _ = 4^(m+1) := by
+            simp only [Nat.pow_mul,show (2:Nat)^2=4 by decide]
+      have hmul := Nat.mul_le_mul_left (2^(2*m+1))
+        (show n0+2*(2*P)≤2*n0 by omega)
+      rw [show 2^(2*m+1)*(2*n0)=(2^(2*m+1)*2)*n0 from
+        (Nat.mul_assoc _ _ _).symm,he] at hmul
+      have hend : blockStart (2*P) n0 (2*m+1)≤4^(m+1)*n0-1 := by omega
+      have lo := block_birth_lower hP hc hn0 (2*m+1)
+      have hm := intervalCount_mono_hi (trueBirth (2*P))
+        (blockStart_ge (2*P) n0 (2*m+1)) hend
+      unfold birthCount
+      omega
+
+/-- Exact physical interpretation of a counted event on the valid tail. -/
+theorem trueBirth_physical_iff {T P : Nat}
+    (hc : ∀ t, T≤t → cell (t+P) 0=cell t 0)
+    (t : Nat) (ht : T+2*P≤t) :
+    trueBirth (2*P) t=true ↔
+      (cell t 1=false ∧ cell (t-2*P) 1=false ∧ cell t 2≠cell (t-2*P) 2) := by
+  have hPQ : P∣2*P := ⟨2,by omega⟩
+  have hh := true_birth_iff (periodic_multiple hc hPQ) t ht
+  simpa [trueBirth] using hh
+
+/-- The unproved upper-frequency premise is the remaining obligation.
+It chooses n0,C,M once for each hypothetical period, before every horizon. -/
+theorem problem1_of_fixed_birth_budget
+    (upper : ∀ T P : Nat, 0<P →
+      (∀ t, T≤t → cell (t+P) 0=cell t 0) →
+      ∃ n0 C M : Nat, T+2*P≤n0 ∧ 4*P≤n0 ∧
+        ∀ m, M≤m → birthCount (2*P) n0 (4^m*n0)≤C+m) : Problem1 := by
+  rintro ⟨T,P,hP,hc⟩
+  obtain ⟨n0,C,M,hn0,hsize,hu⟩ := upper T P hP hc
+  have lo := base_four_birth_lower hP hc hn0 hsize (M+C+2)
+  have hi := hu (M+C+2) (by omega)
+  omega
 end Ruliology.CellularAutomata.Rule30PhysicalDefects
