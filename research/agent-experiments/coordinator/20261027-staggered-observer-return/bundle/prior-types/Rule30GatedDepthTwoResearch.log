@@ -1,0 +1,91 @@
+Rule30GatedDepthTwoResearch.marked_aux_exclusion : ∀ (P : Nat),
+  P % 2 = 0 →
+    ∀ (z f g k l m q : Nat → Bool),
+      (∀ (t : Nat), z (t + P) = !z t) →
+        (∀ (t : Nat), z (t + 1) = (z t ^^ (f t || g t))) →
+          (∀ (t : Nat), f (t + 1) = (f t ^^ (g t || k t))) →
+            (∀ (t : Nat), g (t + 1) = (g t ^^ (k t || l t))) →
+              (∀ (t : Nat), k (t + 1) = (k t ^^ (l t || m t))) →
+                (∀ (t : Nat), q (t + 1) = (q t ^^ f t)) →
+                  (∀ (t : Nat),
+                      (Rule30GatedDepthTwoResearch.E t && (f (t + 1) ^^ f t)) =
+                        (f t ^^ (f t || g t) && (q (t + 1) ^^ Rule30GatedDepthTwoResearch.E t))) →
+                    False
+Rule30GatedDepthTwoResearch.defect_step : ∀ (x : Nat → Nat → Bool) (P : Nat),
+  Rule30GatedDepthTwoResearch.Actual x →
+    ∀ (i t : Nat),
+      Rule30GatedDepthTwoResearch.defect x P i (t + 1) =
+        (Rule30GatedDepthTwoResearch.defect x P i t ^^
+          (!x (i + 2) t && Rule30GatedDepthTwoResearch.defect x P (i + 1) t ^^
+            !x (i + 1) (t + P) && Rule30GatedDepthTwoResearch.defect x P (i + 2) t))
+Rule30GatedDepthTwoResearch.depth_two_impossible : ∀ (x : Nat → Nat → Bool) (P : Nat),
+  0 < P →
+    P % 2 = 0 →
+      Rule30GatedDepthTwoResearch.Actual x →
+        Rule30GatedDepthTwoResearch.Period P (x 3) →
+          (∀ (t : Nat), Rule30GatedDepthTwoResearch.defect x P 2 t = true) →
+            (∀ (t : Nat),
+                Rule30GatedDepthTwoResearch.defect x P 0 t =
+                  (Rule30GatedDepthTwoResearch.E t && Rule30GatedDepthTwoResearch.defect x P 1 t)) →
+              False
+Rule30GatedDepthTwoResearch.unit_birth_not_near : ∀ (x : Nat → Nat → Bool) (P j : Nat),
+  0 < P →
+    P % 2 = 0 →
+      Rule30GatedDepthTwoResearch.Actual x →
+        (∀ (i : Nat), j < i → Rule30GatedDepthTwoResearch.Period P (x i)) →
+          (∀ (t : Nat), Rule30GatedDepthTwoResearch.defect x P j t = true) →
+            (∀ (t : Nat),
+                Rule30GatedDepthTwoResearch.defect x P 0 t =
+                  (Rule30GatedDepthTwoResearch.E t && Rule30GatedDepthTwoResearch.defect x P 1 t)) →
+              3 ≤ j
+Rule30GatedDepthTwoResearch.orbit_actual : ∀ (x : Ruliology.CellularAutomata.Rule30ControlledResponse.State),
+  Rule30GatedDepthTwoResearch.Actual (Rule30GatedDepthTwoResearch.orbit x)
+Rule30GatedDepthTwoResearch.tail_period_from_return : ∀ (x : Nat → Nat → Bool) (P d : Nat),
+  Rule30GatedDepthTwoResearch.Actual x →
+    (∀ (i : Nat), d ≤ i → x i P = x i 0) → ∀ (i : Nat), d ≤ i → Rule30GatedDepthTwoResearch.Period P (x i)
+Rule30GatedDepthTwoResearch.oldest_failure_unit : ∀ (x : Nat → Nat → Bool) (P j : Nat),
+  Rule30GatedDepthTwoResearch.Actual x →
+    (∀ (i : Nat), j < i → x i P = x i 0) →
+      x j P ≠ x j 0 → ∀ (t : Nat), Rule30GatedDepthTwoResearch.defect x P j t = true
+Rule30GatedDepthTwoResearch.staggered_tail_return : ∀ (x : Nat → Nat → Bool) (P : Nat),
+  0 < P →
+    P % 2 = 0 →
+      Rule30GatedDepthTwoResearch.Actual x →
+        (∀ (i : Nat), 3 ≤ i → x i P = x i 0) →
+          (∀ (t : Nat),
+              Rule30GatedDepthTwoResearch.defect x P 0 t =
+                (Rule30GatedDepthTwoResearch.E t && Rule30GatedDepthTwoResearch.defect x P 1 t)) →
+            ∀ (i : Nat), x i P = x i 0
+Rule30GatedDepthTwoResearch.iterate_tail : ∀ (x : Ruliology.CellularAutomata.Rule30ControlledResponse.State)
+  (d t i : Nat),
+  Ruliology.CellularAutomata.Rule30ControlledResponse.iterate x t (i + d) =
+    Ruliology.CellularAutomata.Rule30ControlledResponse.iterate (fun k => x (k + d)) t i
+Rule30GatedDepthTwoResearch.state_staggered_return : ∀ (x : Ruliology.CellularAutomata.Rule30ControlledResponse.State)
+  (P : Nat),
+  0 < P →
+    P % 2 = 0 →
+      (Ruliology.CellularAutomata.Rule30ControlledResponse.iterate (fun k => x (k + 3)) P = fun k => x (k + 3)) →
+        (∀ (t : Nat),
+            Rule30GatedDepthTwoResearch.defect (Rule30GatedDepthTwoResearch.orbit x) P 0 t =
+              (Rule30GatedDepthTwoResearch.E t &&
+                Rule30GatedDepthTwoResearch.defect (Rule30GatedDepthTwoResearch.orbit x) P 1 t)) →
+          Ruliology.CellularAutomata.Rule30ControlledResponse.iterate x P = x
+Rule30GatedDepthTwoResearch.word_staggered_three_return : ∀ (u : List Bool) (a b c : Bool) (P : Nat),
+  0 < P →
+    P % 2 = 0 →
+      Ruliology.CellularAutomata.Rule30ControlledResponse.iterate
+            (Ruliology.CellularAutomata.Rule30ControlledResponse.word u) P =
+          Ruliology.CellularAutomata.Rule30ControlledResponse.word u →
+        (∀ (t : Nat),
+            Rule30GatedDepthTwoResearch.defect
+                (Rule30GatedDepthTwoResearch.orbit
+                  (Ruliology.CellularAutomata.Rule30ControlledResponse.word ([a, b, c] ++ u)))
+                P 0 t =
+              (Rule30GatedDepthTwoResearch.E t &&
+                Rule30GatedDepthTwoResearch.defect
+                  (Rule30GatedDepthTwoResearch.orbit
+                    (Ruliology.CellularAutomata.Rule30ControlledResponse.word ([a, b, c] ++ u)))
+                  P 1 t)) →
+          Ruliology.CellularAutomata.Rule30ControlledResponse.iterate
+              (Ruliology.CellularAutomata.Rule30ControlledResponse.word ([a, b, c] ++ u)) P =
+            Ruliology.CellularAutomata.Rule30ControlledResponse.word ([a, b, c] ++ u)

@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New verified observer result:** [staggered-observer return lifting across three coordinates](coordinator/20261027-staggered-observer-return/README.md). A positive even return of the older tail lifts to three arbitrary newer bits when their actual staggered observation has that period. The extended word needs no supplied clock. Full kernel replay covers all 70 module constants and 11 headlines; independent source/type review accompanies it. This concerns a different observer premise from the prior OR theorem; the full-gated corollary was already known. Arbitrary distance and the physical-center bridge remain open.
+
 **New verified physical result:** [bounded mismatch episodes and defect budgets](coordinator/20261027-physical-defect-episodes/README.md). Under a hypothetical center period P, every 2P+1 consecutive readings contain a zero of the actual 2P-shift mismatch in column 1. The sources also identify true births and prove counting/charging interfaces. Full kernel validation covers all three sources; the frequency of births and the subcritical upper bound remain open.
 
 **New verified result:** [gated observation-period transfer](coordinator/20261027-gated-observation-periods/README.md): a common period of the older two observation streams transfers to a gated child, without a supplied whole older return. Fresh portable replay and an independent source/type audit accompany the theorem; quadratic phase parity and temporal algebraic closure are separately labelled paper-only failed routes. Whole-return reconstruction, gate inheritance, and the physical-center bridge remain open.
