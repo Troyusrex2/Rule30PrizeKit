@@ -92,6 +92,7 @@ public import Ruliology.CellularAutomata.Rule30SpacingRenormalization
 public import Ruliology.CellularAutomata.Rule30PackedReconstruction
 public import Ruliology.CellularAutomata.Rule30SpacingGapCounterexample
 public import Ruliology.CellularAutomata.Rule30DrivenPrefix
+public import Ruliology.CellularAutomata.Rule30EmptyAlternating
 public import Ruliology.CellularAutomata.Rule30ExactReturn
 public import Ruliology.CellularAutomata.Rule30ControlledResponse
 public import Ruliology.CellularAutomata.Rule30PeriodicProfileCounter
