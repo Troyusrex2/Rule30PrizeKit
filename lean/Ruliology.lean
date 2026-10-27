@@ -5,6 +5,7 @@ public import Ruliology.CellularAutomata.Rule30PredecessorCounts
 public import Ruliology.CellularAutomata.Rule30Blocks
 public import Ruliology.CellularAutomata.Rule30Jen
 public import Ruliology.CellularAutomata.Rule30Prize
+public import Ruliology.CellularAutomata.Rule30CommonGauge
 public import Ruliology.CellularAutomata.Rule30Window
 public import Ruliology.CellularAutomata.Rule30MaskedJen
 public import Ruliology.CellularAutomata.Rule30BlackRuns
@@ -46,8 +47,10 @@ public import Ruliology.CellularAutomata.Rule30WhiteRunEight
 public import Ruliology.CellularAutomata.Rule30PeriodTwoSideways
 public import Ruliology.CellularAutomata.Rule30LightCone
 public import Ruliology.CellularAutomata.Rule30FiniteConfigs
+public import Ruliology.CellularAutomata.Rule30DividedDifference
 public import Ruliology.CellularAutomata.Rule30FiniteMaskedJen
 public import Ruliology.CellularAutomata.Rule30Coupled
+public import Ruliology.CellularAutomata.Rule30CoupledGerms
 public import Ruliology.CellularAutomata.Rule30FiniteBlackRuns
 public import Ruliology.CellularAutomata.Rule30FiniteBlackRunBlocks
 public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
@@ -60,6 +63,7 @@ public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift
 public import Ruliology.CellularAutomata.Rule30Certificates.StripeTail13Completion
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFourComplete
 public import Ruliology.CellularAutomata.Rule30WhiteEnd
+public import Ruliology.CellularAutomata.Rule30WhiteEndNine
 public import Ruliology.CellularAutomata.Rule30FiveTail
 public import Ruliology.CellularAutomata.Rule30SuffixFamilies
 public import Ruliology.CellularAutomata.Rule30BackwardVacuum
