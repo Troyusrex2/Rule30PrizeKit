@@ -1,0 +1,285 @@
+{
+  "passed": true,
+  "source_sha256": "65524746d47ed34f6a4fbd5cbd68759ba634903f9321b302a8544b6ad4a0c5d6",
+  "compiled_sha256": "6d33513fe0ee69024c169b5aefc3d92137dbc56a0c7450ebc6740693790518d4",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.43115259998012334,
+  "total_seconds": 1.935517699981574,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.Poly",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.bor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.eval",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_add",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_bor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_insert",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_neg",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_scale",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.gate_join",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.insert",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.mon",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mon_or",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mon_zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.neg",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.one",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.or_poly",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.scale",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.var",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.xor_cancel",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.add.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.add.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.add.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.add.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.bor.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.eval.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.insert.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.insert.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.insert.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mon.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mon.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mon.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30BoolPolynomial.mon.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mul.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mul.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.mul.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.neg.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.one.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.scale.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.scale.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.scale.eq_def",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_add",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30BoolPolynomial.eval_mul",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30BoolPolynomial",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 74,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

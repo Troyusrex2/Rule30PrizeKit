@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "source_sha256": "965d2e2a9dbc53332ea7de8b7721ef43d5fb45df166a661280c8a0be53b96010",
+  "compiled_sha256": "c38e2cf34c9a6cd9c345ae48c377bd594de8f1c872ac942dbfcb48effe44e81f",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.4086984000168741,
+  "total_seconds": 1.8991065000300296,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.last_take",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.no_constant_after_black",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.not_always_black",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.trace_full",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.word0_first_black",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.no_constant_after_black",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.trace_full",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30AnchoredConstantResearch.not_always_black",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30AnchoredConstantResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 10,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

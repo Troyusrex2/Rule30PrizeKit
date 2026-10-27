@@ -1,0 +1,15 @@
+Rule30CAInvariantResearch.invariant_T : ∀ (xs : List Bool),
+  6 ≤ xs.length →
+    Rule30CAInvariantResearch.invariant (Rule30CAObserverResearch.T xs) = Rule30CAInvariantResearch.invariant xs
+Rule30CAInvariantResearch.invariant_titer : ∀ (xs : List Bool),
+  6 ≤ xs.length →
+    ∀ (t : Nat),
+      Rule30CAInvariantResearch.invariant (Rule30CAObserverResearch.titer xs t) = Rule30CAInvariantResearch.invariant xs
+Rule30CAInvariantResearch.invariant_coordinate_stream : ∀ (xs : List Bool),
+  8 ≤ xs.length → Rule30CAInvariantResearch.invariant xs = Rule30CAInvariantResearch.stream xs
+Rule30CAInvariantResearch.first_T : ∀ (xs : List Bool),
+  0 < xs.length →
+    Rule30CAInvariantResearch.initial (Rule30CAObserverResearch.T xs) 0 = !Rule30CAInvariantResearch.initial xs 0
+Rule30CAInvariantResearch.third_T : ∀ (xs : List Bool),
+  3 ≤ xs.length →
+    Rule30CAInvariantResearch.initial (Rule30CAObserverResearch.T xs) 2 = Rule30CAInvariantResearch.initial xs 2

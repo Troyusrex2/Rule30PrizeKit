@@ -1,0 +1,14 @@
+@Rule30LinearObservationModule.quotient_two_generated : ∀ {K V : Type} [inst : Field K] [inst_1 : AddCommGroup V]
+  [inst_2 : Module K V] (U : V →ₗ[K] V) (a b : V),
+  Rule30LinearObservationModule.OrbitSpan U a b = ⊤ →
+    Submodule.span K (Set.range fun i => (U - LinearMap.id).range.mkQ (if i = true then a else b)) = ⊤
+@Rule30LinearObservationModule.two_generated_fixed_finrank_le : ∀ {K V : Type} [inst : Field K]
+  [inst_1 : AddCommGroup V] [inst_2 : Module K V] [FiniteDimensional K V] (U : V →ₗ[K] V) (a b : V),
+  Rule30LinearObservationModule.OrbitSpan U a b = ⊤ → Module.finrank K ↥(U - LinearMap.id).ker ≤ 2
+@Rule30LinearObservationModule.orbitOperator_spans : ∀ {K V : Type} [inst : Field K] [inst_1 : AddCommGroup V]
+  [inst_2 : Module K V] (U : V →ₗ[K] V) (a b : V),
+  Rule30LinearObservationModule.OrbitSpan (Rule30LinearObservationModule.orbitOperator U a b) ⟨a, ⋯⟩ ⟨b, ⋯⟩ = ⊤
+@Rule30LinearObservationModule.not_three_fixed_independent : ∀ {K V : Type} [inst : Field K] [inst_1 : AddCommGroup V]
+  [inst_2 : Module K V] [FiniteDimensional K V] (U : V →ₗ[K] V) (a b : V) (v : Fin 3 → V),
+  (∀ (i : Fin 3), v i ∈ Rule30LinearObservationModule.OrbitSpan U a b) →
+    (∀ (i : Fin 3), U (v i) = v i) → ¬LinearIndependent K v

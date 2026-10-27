@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "source_sha256": "cca3710a695e086186ac8112e225a27bd9ec604a8034114e32698ad06a3c790f",
+  "compiled_sha256": "23dc8c6bcc3c9320b26fb047369bbd6727516d3680a6d5ae1830126f7f80481a",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 4.045655199966859,
+  "total_seconds": 11.43715259997407,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30LinearObservationModule.OrbitSpan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.left_mem_orbitSpan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.not_three_fixed_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LinearObservationModule.orbitOperator",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.orbitOperator_iterate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.orbitOperator_spans",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.orbitSpan_stable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.quotient_iterate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.quotient_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.quotient_two_generated",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.right_mem_orbitSpan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.two_generated_fixed_finrank_le",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.quotient_two_generated",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.two_generated_fixed_finrank_le",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.orbitOperator_spans",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LinearObservationModule.not_three_fixed_independent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30LinearObservationModule",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 19,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

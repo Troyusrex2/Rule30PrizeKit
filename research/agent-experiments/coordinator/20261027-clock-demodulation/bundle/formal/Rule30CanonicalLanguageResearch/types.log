@@ -1,0 +1,29 @@
+Rule30CanonicalLanguageResearch.canonical_iff : ∀ (xs : List Bool),
+  Rule30ReaderCanonicalResearch.Canonical xs ↔
+    Rule30CanonicalLanguageResearch.Core xs ∨
+      (∃ k x, x ≠ [] ∧ xs = Rule30CanonicalLanguageResearch.zpad k ([true, false, false] ++ x)) ∨
+        ∃ k y, y ≠ [] ∧ xs = Rule30CanonicalLanguageResearch.zpad k ([true, true, true] ++ y)
+@Rule30CanonicalLanguageResearch.zpad_true_injective : ∀ {k l : Nat} {xs ys : List Bool},
+  Rule30CanonicalLanguageResearch.zpad k (true :: xs) = Rule30CanonicalLanguageResearch.zpad l (true :: ys) →
+    k = l ∧ xs = ys
+@Rule30CanonicalLanguageResearch.phase_injective : ∀ {k l : Nat} {b c : Bool} {xs ys : List Bool},
+  Rule30CanonicalLanguageResearch.zpad k ([true, b, b] ++ xs) =
+      Rule30CanonicalLanguageResearch.zpad l ([true, c, c] ++ ys) →
+    k = l ∧ b = c ∧ xs = ys
+Rule30CanonicalLanguageResearch.phase_ne : ∀ (k l : Nat) (xs ys : List Bool),
+  Rule30CanonicalLanguageResearch.zpad k ([true, false, false] ++ xs) ≠
+    Rule30CanonicalLanguageResearch.zpad l ([true, true, true] ++ ys)
+Rule30CanonicalLanguageResearch.canonical_phase_iff : ∀ (k : Nat) (b : Bool) (xs : List Bool),
+  Rule30ReaderCanonicalResearch.Canonical (Rule30CanonicalLanguageResearch.zpad k ([true, b, b] ++ xs)) ↔ xs ≠ []
+Rule30CanonicalLanguageResearch.not_core_phase : ∀ (k : Nat) (b : Bool) (xs : List Bool),
+  ¬Rule30CanonicalLanguageResearch.Core (Rule30CanonicalLanguageResearch.zpad k ([true, b, b] ++ xs))
+Rule30CanonicalLanguageResearch.core_step_two : ∀ (xs : List Bool),
+  Rule30CanonicalLanguageResearch.Core xs → Rule30ReaderCanonicalResearch.iter xs 2 = xs
+Rule30CanonicalLanguageResearch.core_observe_injective : ∀ (xs ys : List Bool),
+  Rule30CanonicalLanguageResearch.Core xs →
+    Rule30CanonicalLanguageResearch.Core ys →
+      xs.length = ys.length →
+        Rule30ReaderCanonicalResearch.lastBit false xs = Rule30ReaderCanonicalResearch.lastBit false ys →
+          Rule30ReaderCanonicalResearch.lastBit false (Rule30ReaderCanonicalResearch.singleStep xs) =
+              Rule30ReaderCanonicalResearch.lastBit false (Rule30ReaderCanonicalResearch.singleStep ys) →
+            xs = ys

@@ -1,0 +1,4 @@
+import Rule30AnchoredConstantResearch
+#check @Rule30AnchoredConstantResearch.no_constant_after_black
+#check @Rule30AnchoredConstantResearch.trace_full
+#check @Rule30AnchoredConstantResearch.not_always_black

@@ -1,0 +1,30 @@
+@Rule30CAObserverResearch.trace_aligned_iff : ∀ {xs ys : List Bool},
+  xs ≠ [] →
+    ys ≠ [] →
+      (Rule30ReaderCanonicalResearch.TraceEqual (Rule30CAObserverResearch.word0 xs)
+          (Rule30CAObserverResearch.word0 ys) ↔
+        ∀ (t : Nat),
+          Rule30CAObserverResearch.r (Rule30CAObserverResearch.titer xs t) =
+              Rule30CAObserverResearch.r (Rule30CAObserverResearch.titer ys t) ∧
+            Rule30CAObserverResearch.s (Rule30CAObserverResearch.titer xs t) =
+              Rule30CAObserverResearch.s (Rule30CAObserverResearch.titer ys t))
+@Rule30CAObserverResearch.trace_phase_iff : ∀ {xs ys : List Bool},
+  xs ≠ [] →
+    ys ≠ [] →
+      (Rule30ReaderCanonicalResearch.TraceEqual (Rule30CAObserverResearch.word0 xs)
+          (Rule30CAObserverResearch.word1 ys) ↔
+        ∀ (t : Nat),
+          Rule30CAObserverResearch.r (Rule30CAObserverResearch.titer xs t) =
+              Rule30CAObserverResearch.s (Rule30CAObserverResearch.titer ys t) ∧
+            Rule30CAObserverResearch.s (Rule30CAObserverResearch.titer xs t) =
+              Rule30CAObserverResearch.r (Rule30CAObserverResearch.titer ys (t + 1)))
+Rule30CAObserverResearch.iter_period : ∀ (xs : List Bool) (n : Nat),
+  xs.length ≤ n →
+    ∀ (t : Nat), Rule30ReaderCanonicalResearch.iter xs (t + 2 ^ n) = Rule30ReaderCanonicalResearch.iter xs t
+@Rule30CAObserverResearch.trace_shift_cancel : ∀ {xs ys : List Bool},
+  (∀ (t : Nat), Rule30CAObserverResearch.trace xs (t + 1) = Rule30CAObserverResearch.trace ys (t + 1)) →
+    Rule30ReaderCanonicalResearch.TraceEqual xs ys
+Rule30CAObserverResearch.canonical_observer_iff : Rule30ReaderCanonicalResearch.CanonicalObserver ↔
+  Rule30CAObserverResearch.Aligned ∧ Rule30CAObserverResearch.PhaseSeparated
+Rule30CAObserverResearch.reader_complete_iff : Rule30ReaderCanonicalResearch.ReaderComplete ↔
+  Rule30CAObserverResearch.Aligned ∧ Rule30CAObserverResearch.PhaseSeparated
