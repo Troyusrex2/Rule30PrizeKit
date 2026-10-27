@@ -1,0 +1,186 @@
+{
+  "reference_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "current_compatible_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "lean": "4.35.0",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_order": [
+    "Rule30CommonPastResearch",
+    "Rule30ColumnReaderResearch",
+    "Rule30ReaderEquivalenceResearch",
+    "Rule30ReaderCanonicalResearch",
+    "Rule30CanonicalLanguageResearch",
+    "Rule30CAObserverResearch",
+    "Rule30AnchoredConstantResearch",
+    "Rule30CAClockDemodulationResearch",
+    "Rule30CAGateReturnResearch",
+    "Rule30GatedObservationResetResearch"
+  ],
+  "modules": [
+    {
+      "module": "Rule30CommonPastResearch",
+      "source_sha256": "17eb07047e8b1780b25de532e72dcb73385f20eaffa91db366e92c210b394ec3",
+      "headlines": [
+        "Rule30CommonPastResearch.actual_periodic"
+      ],
+      "research_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize",
+        "Ruliology.CellularAutomata.Rule30Diagonals"
+      ]
+    },
+    {
+      "module": "Rule30ColumnReaderResearch",
+      "source_sha256": "ad1d09b6d460b1849017fcf7c99151ad0304ceee8dfc80e78f43bfc1a917da3b",
+      "headlines": [
+        "Rule30ColumnReaderResearch.initial_mem"
+      ],
+      "research_imports": [
+        "Rule30CommonPastResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderEquivalenceResearch",
+      "source_sha256": "574920fd28265f590b6f030784bb22979770f0fb1da023f328825bc3cade6dd7",
+      "headlines": [
+        "Rule30ReaderEquivalenceResearch.shared_representative"
+      ],
+      "research_imports": [
+        "Rule30ColumnReaderResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30ReaderCanonicalResearch",
+      "source_sha256": "832fd7632331f8ad6101bc4725a7b954e81e692843017c7df529a52a3901641a",
+      "headlines": [
+        "Rule30ReaderCanonicalResearch.canonical_completeness_reduction"
+      ],
+      "research_imports": [
+        "Rule30ReaderEquivalenceResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CanonicalLanguageResearch",
+      "source_sha256": "2c0aacfc6b48f74b7e289487f83d9b6c0ad1d551ab3e8a3122f584de5c1a6033",
+      "headlines": [
+        "Rule30CanonicalLanguageResearch.canonical_iff",
+        "Rule30CanonicalLanguageResearch.zpad_true_injective",
+        "Rule30CanonicalLanguageResearch.phase_injective",
+        "Rule30CanonicalLanguageResearch.phase_ne",
+        "Rule30CanonicalLanguageResearch.canonical_phase_iff",
+        "Rule30CanonicalLanguageResearch.not_core_phase",
+        "Rule30CanonicalLanguageResearch.core_step_two",
+        "Rule30CanonicalLanguageResearch.core_observe_injective"
+      ],
+      "research_imports": [
+        "Rule30ReaderCanonicalResearch"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CAObserverResearch",
+      "source_sha256": "476236dd07f0252604a2f24e751ac41f94bd08a937497d0cae434498743838fc",
+      "headlines": [
+        "Rule30CAObserverResearch.trace_aligned_iff",
+        "Rule30CAObserverResearch.trace_phase_iff",
+        "Rule30CAObserverResearch.iter_period",
+        "Rule30CAObserverResearch.trace_shift_cancel",
+        "Rule30CAObserverResearch.canonical_observer_iff",
+        "Rule30CAObserverResearch.reader_complete_iff"
+      ],
+      "research_imports": [
+        "Rule30CanonicalLanguageResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30AnchoredConstantResearch",
+      "source_sha256": "965d2e2a9dbc53332ea7de8b7721ef43d5fb45df166a661280c8a0be53b96010",
+      "headlines": [
+        "Rule30AnchoredConstantResearch.no_constant_after_black",
+        "Rule30AnchoredConstantResearch.trace_full",
+        "Rule30AnchoredConstantResearch.not_always_black"
+      ],
+      "research_imports": [
+        "Rule30CAObserverResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30CAClockDemodulationResearch",
+      "source_sha256": "bd045ef89262150f99457aaff4aedd8e8dce8a7c2ed993ca9d1e0d6ecdd5bb80",
+      "headlines": [
+        "Rule30CAClockDemodulationResearch.masked_demodulation",
+        "Rule30CAClockDemodulationResearch.older_white_witness",
+        "Rule30CAClockDemodulationResearch.birth_detector",
+        "Rule30CAClockDemodulationResearch.demodulation_of_birth",
+        "Rule30CAClockDemodulationResearch.observe_birth_transfer"
+      ],
+      "research_imports": [
+        "Rule30AnchoredConstantResearch"
+      ],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30Prize"
+      ]
+    },
+    {
+      "module": "Rule30CAGateReturnResearch",
+      "source_sha256": "5c7307c33d2f3875fb668fee4e74d788521b0fedef04e6fb32ea1ed4398c6b17",
+      "headlines": [
+        "Rule30CAGateReturnResearch.not_constant_outputs",
+        "Rule30CAGateReturnResearch.gated_no_birth",
+        "Rule30CAGateReturnResearch.gated_return"
+      ],
+      "research_imports": [
+        "Rule30CAClockDemodulationResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30GatedObservationResetResearch",
+      "source_sha256": "a73205ebbe1316d2a16fd6716cf077245fbe33b206221ea4088df57562880258",
+      "headlines": [
+        "Rule30GatedObservationResetResearch.latch_eventual",
+        "Rule30GatedObservationResetResearch.latch_period",
+        "Rule30GatedObservationResetResearch.gated_latch",
+        "Rule30GatedObservationResetResearch.gated_observation_period"
+      ],
+      "research_imports": [
+        "Rule30CAGateReturnResearch"
+      ],
+      "official_imports": []
+    }
+  ],
+  "official_modules": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "unchanged_between_pins": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "unchanged_between_pins": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "unchanged_between_pins": true
+    }
+  ],
+  "counts_policy": "Fresh replay derives module constant/declaration/headline totals from its returned receipts; prior receipts are provenance only.",
+  "prize_solved": false
+}

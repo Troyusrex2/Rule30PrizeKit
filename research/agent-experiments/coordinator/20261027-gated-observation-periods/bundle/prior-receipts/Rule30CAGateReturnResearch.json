@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "source_sha256": "5c7307c33d2f3875fb668fee4e74d788521b0fedef04e6fb32ea1ed4398c6b17",
+  "compiled_sha256": "b5332141105a3ec951b5b6b67ab3b542665fcf82dd7e21c558365daa04575889",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.4210425000055693,
+  "total_seconds": 1.9463077000109479,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30CAGateReturnResearch.Gated",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.cancel_gate_R",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.cancel_gate_S",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.gated_no_birth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.gated_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.not_constant_outputs",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAClockDemodulationResearch.outR.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAObserverResearch.r.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.not_constant_outputs",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.gated_no_birth",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30CAGateReturnResearch.gated_return",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30CAGateReturnResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 11,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

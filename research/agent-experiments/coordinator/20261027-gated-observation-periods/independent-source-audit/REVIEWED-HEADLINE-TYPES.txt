@@ -1,0 +1,25 @@
+@Rule30GatedObservationResetResearch.latch_eventual : ∀ {x f c : Nat → Bool} {P : Nat},
+  (∀ (t : Nat), x (t + 1) = if c t = true then !f t else x t) →
+    Rule30GatedObservationResetResearch.Period f P →
+      Rule30GatedObservationResetResearch.Period c P → 0 < P → ∀ (t : Nat), P ≤ t → x (t + P) = x t
+@Rule30GatedObservationResetResearch.latch_period : ∀ {x f c : Nat → Bool} {P M : Nat},
+  (∀ (t : Nat), x (t + 1) = if c t = true then !f t else x t) →
+    Rule30GatedObservationResetResearch.Period f P →
+      Rule30GatedObservationResetResearch.Period c P →
+        0 < P → 0 < M → Rule30GatedObservationResetResearch.Period x M → Rule30GatedObservationResetResearch.Period x P
+Rule30GatedObservationResetResearch.gated_latch : ∀ (u : List Bool) (g h : Bool),
+  u ≠ [] →
+    Rule30CAGateReturnResearch.Gated u g h →
+      ∀ (t : Nat),
+        Rule30CAClockDemodulationResearch.giter u g (t + 1) =
+          if (Rule30CAClockDemodulationResearch.outR u t ^^ Rule30CAClockDemodulationResearch.outS u t) = true then
+            !Rule30CAClockDemodulationResearch.outR u t
+          else Rule30CAClockDemodulationResearch.giter u g t
+Rule30GatedObservationResetResearch.gated_observation_period : ∀ (u : List Bool) (g h : Bool) (P : Nat),
+  u ≠ [] →
+    0 < P →
+      Rule30CAGateReturnResearch.Gated u g h →
+        Rule30GatedObservationResetResearch.Period (Rule30CAClockDemodulationResearch.outR u) P →
+          Rule30GatedObservationResetResearch.Period (Rule30CAClockDemodulationResearch.outS u) P →
+            Rule30GatedObservationResetResearch.Period (Rule30CAClockDemodulationResearch.outR (u ++ [g, h])) P ∧
+              Rule30GatedObservationResetResearch.Period (Rule30CAClockDemodulationResearch.outS (u ++ [g, h])) P

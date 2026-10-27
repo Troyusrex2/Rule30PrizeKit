@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New verified result:** [gated observation-period transfer](coordinator/20261027-gated-observation-periods/README.md): a common period of the older two observation streams transfers to a gated child, without a supplied whole older return. Fresh portable replay and an independent source/type audit accompany the theorem; quadratic phase parity and temporal algebraic closure are separately labelled paper-only failed routes. Whole-return reconstruction, gate inheritance, and the physical-center bridge remain open.
+
 **New verified results:** [exact response-filter criterion and gated whole returns](coordinator/20261027-response-filters-and-gates/REPORT.md), with complete portable replay and separately labelled counterexample notes. Spatial inheritance and P1 remain open.
 
 **New verified tools:** [recover older observations across a clock birth](coordinator/20261027-clock-demodulation/REPORT.md), with a finite detector and an all-width limitation on affine full-state decoders. The complete13-module source replay passed. General plateaus and P1 remain open.

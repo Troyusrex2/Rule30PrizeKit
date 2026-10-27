@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "source_sha256": "a73205ebbe1316d2a16fd6716cf077245fbe33b206221ea4088df57562880258",
+  "compiled_sha256": "9f28dbc77dab7f0665355f44b469112236413689c2d7747787c5702b4ab31dc5",
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.48783420003019273,
+  "total_seconds": 2.0827621999778785,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30GatedObservationResetResearch.Period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.gated_latch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.gated_observation_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.latch_eventual",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.latch_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.memory_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.outR_has_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.period_mul",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.snoc_of_nonempty",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.two_step_last",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAClockDemodulationResearch.memory.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAClockDemodulationResearch.memory.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30CAClockDemodulationResearch.memory.eq_def",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.latch_eventual",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.latch_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.gated_latch",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30GatedObservationResetResearch.gated_observation_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GatedObservationResetResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 24,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
