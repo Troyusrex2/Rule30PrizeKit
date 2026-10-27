@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "source_sha256": "3d682d14add52be39d954edcd121e1d95ff4c25efed4b8fb947c06a9dd21c32c",
+  "compiled_sha256": "5f4fdbc053b578ad43ac09eb4dc4ddb342a4180db86a474aeb26f7f40d4369d7",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "seconds": 7.249297500005923,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30PositiveAutomatonBounds.AgreeUpTo",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.act_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.cancel_right_upto",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.distinguishing_input",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.faithful_at_twice_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.faithful_upto",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.run_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.sections_upto",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.take_append_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.undo_length",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.upto_of_exact",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.faithful_upto",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.faithful_at_twice_length",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PositiveAutomatonBounds.distinguishing_input",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PositiveAutomatonBounds",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 16,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

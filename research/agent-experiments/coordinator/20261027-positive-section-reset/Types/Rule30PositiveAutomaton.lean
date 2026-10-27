@@ -1,0 +1,11 @@
+import Rule30PositiveAutomaton
+#check Rule30PositiveAutomaton.act_memory
+#print axioms Rule30PositiveAutomaton.act_memory
+#check Rule30PositiveAutomaton.act_A_eq_ruleScan
+#print axioms Rule30PositiveAutomaton.act_A_eq_ruleScan
+#check Rule30PositiveAutomaton.act_bijective
+#print axioms Rule30PositiveAutomaton.act_bijective
+#check Rule30PositiveAutomaton.two_bit_reset
+#print axioms Rule30PositiveAutomaton.two_bit_reset
+#check Rule30PositiveAutomaton.positive_word_freeness
+#print axioms Rule30PositiveAutomaton.positive_word_freeness

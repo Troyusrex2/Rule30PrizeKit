@@ -1,0 +1,7 @@
+import Rule30PositiveSectionsResearch
+#check Rule30PositiveSectionsResearch.run_drop_common
+#print axioms Rule30PositiveSectionsResearch.run_drop_common
+#check Rule30PositiveSectionsResearch.common_sections
+#print axioms Rule30PositiveSectionsResearch.common_sections
+#check Rule30PositiveSectionsResearch.birth_sections_injective
+#print axioms Rule30PositiveSectionsResearch.birth_sections_injective

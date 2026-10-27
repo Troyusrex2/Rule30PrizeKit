@@ -1,0 +1,16 @@
+Rule30PositiveAutomaton.act_memory (previous older : Bool) (xs : List Bool) :
+  Rule30PositiveAutomaton.act (Rule30PositiveAutomaton.memory previous older) xs =
+    Rule30PositiveAutomaton.ruleScan previous older xs
+'Rule30PositiveAutomaton.act_memory' depends on axioms: [propext]
+Rule30PositiveAutomaton.act_A_eq_ruleScan (xs : List Bool) :
+  Rule30PositiveAutomaton.act Rule30PositiveAutomaton.State.A xs = Rule30PositiveAutomaton.ruleScan false false xs
+'Rule30PositiveAutomaton.act_A_eq_ruleScan' depends on axioms: [propext]
+Rule30PositiveAutomaton.act_bijective (q : Rule30PositiveAutomaton.State) :
+  Function.Bijective (Rule30PositiveAutomaton.act q)
+'Rule30PositiveAutomaton.act_bijective' depends on axioms: [propext]
+Rule30PositiveAutomaton.two_bit_reset (q : Rule30PositiveAutomaton.State) (x y : Bool) :
+  Rule30PositiveAutomaton.sectionState q [x, y] = Rule30PositiveAutomaton.reset x y
+'Rule30PositiveAutomaton.two_bit_reset' does not depend on any axioms
+Rule30PositiveAutomaton.positive_word_freeness (u v : List Rule30PositiveAutomaton.State) :
+  Rule30PositiveAutomaton.Equivalent u v ↔ u = v
+'Rule30PositiveAutomaton.positive_word_freeness' depends on axioms: [propext, Classical.choice, Quot.sound]

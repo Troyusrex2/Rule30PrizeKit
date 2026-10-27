@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "mathlib_pin": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "fresh_sources": 5,
+  "fresh_Ruliology_sources": 2,
+  "fresh_research_sources": 3,
+  "research_results": [
+    {
+      "module": "Rule30PositiveAutomaton",
+      "constants": 153,
+      "headlines": 5,
+      "source_sha256": "09f265e5f99a5cd736357bfe0be5ae78ba459806028ad5690d7ec43dec69dfdf",
+      "full_replay": true,
+      "types_match_author_receipt": true
+    },
+    {
+      "module": "Rule30PositiveAutomatonBounds",
+      "constants": 16,
+      "headlines": 3,
+      "source_sha256": "3d682d14add52be39d954edcd121e1d95ff4c25efed4b8fb947c06a9dd21c32c",
+      "full_replay": true,
+      "types_match_author_receipt": true
+    },
+    {
+      "module": "Rule30PositiveSectionsResearch",
+      "constants": 27,
+      "headlines": 3,
+      "source_sha256": "f5a3ae3da807d383e98b3ddf21af9466cc5f177bd9bfe4d034af7c4af8c4ae53",
+      "full_replay": true,
+      "types_match_author_receipt": true
+    }
+  ],
+  "total_research_constants": 196,
+  "total_headlines": 11,
+  "source_warnings": 0,
+  "new_axioms": [],
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean_executable_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "reused_library_entry_hashes": [
+    {
+      "module": "Mathlib.Data.List.Basic",
+      "relative_object": "Mathlib/Data/List/Basic.olean",
+      "sha256": "5ed2301fc4f5fea31db9674897058486d41cf331b177bbbf951d15f2baca2a0b",
+      "role": "reused existing direct Mathlib import; transitive package revisions pinned in lake-manifest.json"
+    }
+  ],
+  "cached_contribution_objects_used": false,
+  "validation_kind": "Fresh standalone Lean compilation; existing pinned Mathlib/toolchain reused, not a cold package rebuild"
+}

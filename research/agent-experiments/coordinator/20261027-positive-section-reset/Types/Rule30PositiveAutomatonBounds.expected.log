@@ -1,0 +1,12 @@
+Rule30PositiveAutomatonBounds.faithful_upto (n : ℕ) (u v : List Rule30PositiveAutomaton.State) :
+  u.length = n → v.length = n → Rule30PositiveAutomatonBounds.AgreeUpTo u v (2 * n) → u = v
+'Rule30PositiveAutomatonBounds.faithful_upto' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30PositiveAutomatonBounds.faithful_at_twice_length (n : ℕ) (u v : List Rule30PositiveAutomaton.State)
+  (hu : u.length = n) (hv : v.length = n)
+  (h : ∀ (xs : List Bool), xs.length = 2 * n → Rule30PositiveAutomaton.run u xs = Rule30PositiveAutomaton.run v xs) :
+  u = v
+'Rule30PositiveAutomatonBounds.faithful_at_twice_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30PositiveAutomatonBounds.distinguishing_input (n : ℕ) (u v : List Rule30PositiveAutomaton.State)
+  (hu : u.length = n) (hv : v.length = n) (hne : u ≠ v) :
+  ∃ xs, xs.length = 2 * n ∧ Rule30PositiveAutomaton.run u xs ≠ Rule30PositiveAutomaton.run v xs
+'Rule30PositiveAutomatonBounds.distinguishing_input' depends on axioms: [propext, Classical.choice, Quot.sound]

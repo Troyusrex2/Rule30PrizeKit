@@ -1,0 +1,16 @@
+Rule30PositiveSectionsResearch.run_drop_common (n : ℕ) (u v : List Rule30PositiveAutomaton.State) (hu : u.length = n)
+  (hv : v.length = n) (xs : List Bool) :
+  List.drop (2 * n) (Rule30PositiveAutomaton.run u xs) = List.drop (2 * n) (Rule30PositiveAutomaton.run v xs)
+'Rule30PositiveSectionsResearch.run_drop_common' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30PositiveSectionsResearch.common_sections (n : ℕ) (u v : List Rule30PositiveAutomaton.State) (hu : u.length = n)
+  (hv : v.length = n) (xs : List Bool) (hxs : 2 * n ≤ xs.length) :
+  Rule30PositiveAutomaton.sections u xs = Rule30PositiveAutomaton.sections v xs
+'Rule30PositiveSectionsResearch.common_sections' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rule30PositiveSectionsResearch.birth_sections_injective (u v : List Rule30PositiveAutomaton.State)
+  (hlen : u.length = v.length) (hu : Rule30PositiveAutomaton.run u [false] = [true])
+  (hv : Rule30PositiveAutomaton.run v [false] = [true])
+  (h :
+    Rule30PositiveAutomaton.Equivalent (Rule30PositiveAutomaton.sections (u ++ u) [false])
+      (Rule30PositiveAutomaton.sections (v ++ v) [false])) :
+  u = v
+'Rule30PositiveSectionsResearch.birth_sections_injective' depends on axioms: [propext, Classical.choice, Quot.sound]

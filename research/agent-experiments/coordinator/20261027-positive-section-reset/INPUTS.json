@@ -1,0 +1,64 @@
+{
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "mathlib_pin": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "build_order": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "Rule30PositiveAutomaton",
+    "Rule30PositiveAutomatonBounds",
+    "Rule30PositiveSectionsResearch"
+  ],
+  "module_paths": {
+    "Ruliology.CellularAutomata.Rule30Jen": "Ruliology/CellularAutomata/Rule30Jen.lean",
+    "Ruliology.CellularAutomata.Rule30Prize": "Ruliology/CellularAutomata/Rule30Prize.lean",
+    "Rule30PositiveAutomaton": "Rule30PositiveAutomaton.lean",
+    "Rule30PositiveAutomatonBounds": "Rule30PositiveAutomatonBounds.lean",
+    "Rule30PositiveSectionsResearch": "Rule30PositiveSectionsResearch.lean"
+  },
+  "research_modules": [
+    "Rule30PositiveAutomaton",
+    "Rule30PositiveAutomatonBounds",
+    "Rule30PositiveSectionsResearch"
+  ],
+  "headlines": {
+    "Rule30PositiveAutomaton": [
+      "Rule30PositiveAutomaton.act_memory",
+      "Rule30PositiveAutomaton.act_A_eq_ruleScan",
+      "Rule30PositiveAutomaton.act_bijective",
+      "Rule30PositiveAutomaton.two_bit_reset",
+      "Rule30PositiveAutomaton.positive_word_freeness"
+    ],
+    "Rule30PositiveAutomatonBounds": [
+      "Rule30PositiveAutomatonBounds.faithful_upto",
+      "Rule30PositiveAutomatonBounds.faithful_at_twice_length",
+      "Rule30PositiveAutomatonBounds.distinguishing_input"
+    ],
+    "Rule30PositiveSectionsResearch": [
+      "Rule30PositiveSectionsResearch.run_drop_common",
+      "Rule30PositiveSectionsResearch.common_sections",
+      "Rule30PositiveSectionsResearch.birth_sections_injective"
+    ]
+  },
+  "expected_constants": {
+    "Rule30PositiveAutomaton": 153,
+    "Rule30PositiveAutomatonBounds": 16,
+    "Rule30PositiveSectionsResearch": 27
+  },
+  "files": {
+    "Ruliology/CellularAutomata/Rule30Jen.lean": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology/CellularAutomata/Rule30Prize.lean": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Rule30PositiveAutomaton.lean": "09f265e5f99a5cd736357bfe0be5ae78ba459806028ad5690d7ec43dec69dfdf",
+    "Rule30PositiveAutomatonBounds.lean": "3d682d14add52be39d954edcd121e1d95ff4c25efed4b8fb947c06a9dd21c32c",
+    "Rule30PositiveSectionsResearch.lean": "f5a3ae3da807d383e98b3ddf21af9466cc5f177bd9bfe4d034af7c4af8c4ae53",
+    "Check.lean": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lakefile.toml": "9c9d9f1b57c00bf081ab80fcd81952ac8f9b481c3222d7c7e65dd42dc3dc5dcc",
+    "lake-manifest.json": "7bb6ddaaf4236d8fa04cffda10bcce657f98c9a74621234231850c173d19bd03",
+    "Types/Rule30PositiveAutomaton.expected.log": "5fa12ad19ddd67b34bcf14482e6902fe6d29de565519847165ec9ac971b829d5",
+    "Types/Rule30PositiveAutomaton.lean": "21512b5010c25f390aa4a0d02f097d860c14de6799703b819855e0c0b8af468e",
+    "Types/Rule30PositiveAutomatonBounds.expected.log": "d7437f417761b8777e5524a0b2a2bfd72fde2770b414c03e09481543dcb2544b",
+    "Types/Rule30PositiveAutomatonBounds.lean": "ccbe5ad79b0c85323ac7a3553fca04cfceee4691572ce92cadb33dd7beaa7900",
+    "Types/Rule30PositiveSectionsResearch.expected.log": "7354484c8df73a7b2947356c6216fc6804247e2181cfc67e1c4329d1611812c1",
+    "Types/Rule30PositiveSectionsResearch.lean": "d33d69624ce551f3b07dd40995f946e49fb43ddc89f4c7ce612a27c24400c1b2"
+  }
+}

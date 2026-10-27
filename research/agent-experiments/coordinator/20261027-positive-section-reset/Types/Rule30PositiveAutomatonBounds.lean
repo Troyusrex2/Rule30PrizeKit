@@ -1,0 +1,7 @@
+import Rule30PositiveAutomatonBounds
+#check Rule30PositiveAutomatonBounds.faithful_upto
+#print axioms Rule30PositiveAutomatonBounds.faithful_upto
+#check Rule30PositiveAutomatonBounds.faithful_at_twice_length
+#print axioms Rule30PositiveAutomatonBounds.faithful_at_twice_length
+#check Rule30PositiveAutomatonBounds.distinguishing_input
+#print axioms Rule30PositiveAutomatonBounds.distinguishing_input
