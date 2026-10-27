@@ -1,0 +1,32 @@
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.linear_birth_witnesses (N : Nat) :
+  ∃ u,
+    (∀ (i : Fin N), 4 ≤ u i ∧ u i + 1 < 6 * N) ∧
+      (∀ (i j : Fin N), u i = u j → i = j) ∧
+        ∀ (i : Fin N),
+          Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (u i) = false ∧
+            Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (u i + 1) = true
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.no_local_birth_potential (R : Nat) :
+  ¬∃ E,
+      ∀ (z : Int → Bool),
+        Ruliology.CellularAutomata.Rule30LocalBirthPotential.FiniteNonzero z →
+          ∀ (t : Nat),
+            4 ≤ t →
+              Ruliology.CellularAutomata.Rule30LocalBirthPotential.LocalAlt z t →
+                (E (Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R z (t + 1)) +
+                    if Ruliology.CellularAutomata.Rule30LocalBirthPotential.TrueBirth z t then 1 else 0) ≤
+                  E (Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R z t)
+Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_terminal_second_birth (Q A Z a b : Nat) (ha : A ≤ a)
+  (hab : a < b) (hb : b ≤ Z)
+  (hc :
+    ∀ (t : Nat),
+      A ≤ t →
+        t ≤ Z → Ruliology.CellularAutomata.Rule30Jen.cell (Q + t) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0)
+  (hp :
+    ∀ (t : Nat), A ≤ t → t ≤ Z → Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference Q 2 t = true)
+  (ba :
+    Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.Birth
+      (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference Q 1) a)
+  (bb :
+    Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.Birth
+      (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference Q 1) b) :
+  b = Z ∧ Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference Q 2 (b + 1) = false

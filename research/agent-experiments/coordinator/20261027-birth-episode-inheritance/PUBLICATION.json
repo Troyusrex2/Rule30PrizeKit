@@ -12,5 +12,18 @@
   "wolfram_submission": false,
   "human_review_or_kit_adoption_claimed": false,
   "portable_verifier_execution": "Audit-only passed; equivalent fresh build/check/type commands independently ran in the validation harness.",
-  "archive_byte_preservation": "Archive-local attributes preserve the exact sealed bytes."
+  "archive_byte_preservation": "Archive-local attributes preserve the exact sealed bytes.",
+  "extensions": [
+    {
+      "path": "extensions/canonical",
+      "manifest_sha256": "b7c12af9734c1f10d6aba007c6c07d5023f2a844c09725d5580d7205b4230fb4",
+      "canonical_source_sha256": "0f145167770fc8f75dffd170f174319363535061c4ace5f97b82fb5b4abb29f0",
+      "fresh_sources": 7,
+      "owned_constants": 37,
+      "headlines": 6,
+      "three_import_smoke": "Separate cached-object check passed; initial library-root setup failure retained.",
+      "packaging_review": "Root verified hashes, provenance extracts, source mapping, privacy, and audit-only verifier; no new build.",
+      "pull_request": "https://github.com/WolframInstitute/Rule30PrizeKit/pull/41"
+    }
+  ]
 }

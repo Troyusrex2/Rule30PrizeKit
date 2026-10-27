@@ -1,0 +1,135 @@
+{
+  "integration_manifest_sha256": "8222643a85cc52e4e2113c5375cbf362c0aa7b174e52d562af34320962d1c097",
+  "parent_preparation_manifest_sha256": "36586d546f32ca0351dde7c1bfa2d91c90122daa7ebb92fd1f085a125fef979a",
+  "independent_audit_sha256": "8a3de5af06fd2f70a8bfac08d61d3fd319da194500d1689cc1eec26e30a0664b",
+  "files": [
+    {
+      "archive_path": "Ruliology/CellularAutomata/Rule30BirthEpisodeInheritance.lean",
+      "role": "Exact canonical source, two namespace-line changes only",
+      "original_sha256": "0f145167770fc8f75dffd170f174319363535061c4ace5f97b82fb5b4abb29f0",
+      "archive_sha256": "0f145167770fc8f75dffd170f174319363535061c4ace5f97b82fb5b4abb29f0",
+      "normalizations": []
+    },
+    {
+      "archive_path": "lakefile.toml",
+      "role": "Exact official pinned core configuration",
+      "original_sha256": "88de90d6e7b1e88c078f8c8f017e9f657040935ed7e4d8de08aa0755c446455f",
+      "archive_sha256": "88de90d6e7b1e88c078f8c8f017e9f657040935ed7e4d8de08aa0755c446455f",
+      "normalizations": []
+    },
+    {
+      "archive_path": "lean-toolchain",
+      "role": "Exact official pinned core configuration",
+      "original_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "archive_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "normalizations": []
+    },
+    {
+      "archive_path": "RENAME-DIFF.patch",
+      "role": "Exact source/type mapping and comparison",
+      "original_sha256": "c59e978db93abd5f2d7ae1533a1292052e3ee63fbda28bb2ec42cdff1de61518",
+      "archive_sha256": "c59e978db93abd5f2d7ae1533a1292052e3ee63fbda28bb2ec42cdff1de61518",
+      "normalizations": []
+    },
+    {
+      "archive_path": "SOURCE-MAP.json",
+      "role": "Exact source/type mapping and comparison",
+      "original_sha256": "e56ed095f66c767b5ce906057ac4b5f776e227efe76dacc299b726b16bb9e500",
+      "archive_sha256": "e56ed095f66c767b5ce906057ac4b5f776e227efe76dacc299b726b16bb9e500",
+      "normalizations": []
+    },
+    {
+      "archive_path": "FINAL-COMPARISON.json",
+      "role": "Exact source/type mapping and comparison",
+      "original_sha256": "df1387d170920c73aa5c65782b66afeab746342da82743fd8e0b89c7e361bace",
+      "archive_sha256": "df1387d170920c73aa5c65782b66afeab746342da82743fd8e0b89c7e361bace",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/fresh7/lake-build.log",
+      "role": "Exact canonical fresh-seven-source validation",
+      "original_sha256": "d0497c0d8eb445dddb6ca56bdccff643060e7037e15bf7485675919dc35c0ae6",
+      "archive_sha256": "d0497c0d8eb445dddb6ca56bdccff643060e7037e15bf7485675919dc35c0ae6",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/fresh7/Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.check.log",
+      "role": "Exact canonical fresh-seven-source validation",
+      "original_sha256": "950f78dd10b585ad5bfa1f711eec98b2efca5730e4355f64c8f353d067791d5a",
+      "archive_sha256": "950f78dd10b585ad5bfa1f711eec98b2efca5730e4355f64c8f353d067791d5a",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/fresh7/Types.log",
+      "role": "Exact canonical fresh-seven-source validation",
+      "original_sha256": "3ae29244e32c59b7e78e410a1c522cc37c244bb630b5605c42e0922ae7de9fcd",
+      "archive_sha256": "3ae29244e32c59b7e78e410a1c522cc37c244bb630b5605c42e0922ae7de9fcd",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/fresh7/RESULT.json",
+      "role": "Exact canonical fresh-seven-source validation",
+      "original_sha256": "a171726ac48914ed16bd8251667cc08998925560b0eee87f6f5cd8bf6056f789",
+      "archive_sha256": "a171726ac48914ed16bd8251667cc08998925560b0eee87f6f5cd8bf6056f789",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/smoke01/ThreeImports.log",
+      "role": "Failed separate-library-root smoke diagnostic, not a proof failure",
+      "original_sha256": "3d434717d060b8877e128d4b128d5d035097ae0ceed5c244240149adc51a4d41",
+      "archive_sha256": "eb1dd1711fe5bc1b7da7750aaf8febf7fd7e8c7e754875fd76982d7021619f31",
+      "normalizations": [
+        "Remove the absolute owned-project prefix from diagnostic locations only."
+      ]
+    },
+    {
+      "archive_path": "evidence/smoke02/ThreeImports.log",
+      "role": "Exact successful merged-object smoke evidence; older modules reused",
+      "original_sha256": "8dd1d1f5279054b63884b1ec6f47e6fee0e164712b0fabdf30ac4773e864ef82",
+      "archive_sha256": "8dd1d1f5279054b63884b1ec6f47e6fee0e164712b0fabdf30ac4773e864ef82",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/smoke02/RESULT.json",
+      "role": "Exact successful merged-object smoke evidence; older modules reused",
+      "original_sha256": "4db68f6c6e9df388945a08b6185085115d4e8ef46d655e86816a1bbce61c0787",
+      "archive_sha256": "4db68f6c6e9df388945a08b6185085115d4e8ef46d655e86816a1bbce61c0787",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/ThreeImports.lean",
+      "role": "Exact three-import smoke input",
+      "original_sha256": "773ef488a810fde164d34fc13fc0cf41622aaf46f37d7e48e96989d430b99a7e",
+      "archive_sha256": "773ef488a810fde164d34fc13fc0cf41622aaf46f37d7e48e96989d430b99a7e",
+      "normalizations": []
+    },
+    {
+      "archive_path": "AUDIT.md",
+      "role": "Exact public-safe independent static audit; reviewer performed no build",
+      "original_sha256": "8a3de5af06fd2f70a8bfac08d61d3fd319da194500d1689cc1eec26e30a0664b",
+      "archive_sha256": "8a3de5af06fd2f70a8bfac08d61d3fd319da194500d1689cc1eec26e30a0664b",
+      "normalizations": []
+    },
+    {
+      "archive_path": "evidence/fresh7-and-smoke01/RESOURCE-EXTRACT.json",
+      "role": "Resource-only extract; the first job exited1 only at the subsequent smoke",
+      "original_sha256": "c4f904fbaeeaa365c347dbf72b36dc3b9683ad52fe410cd7ab9f9d33ef807021",
+      "archive_sha256": "a661d055f5f59bdef48afd1b32ad059064f559606c217f5aa66dbfe9024fd28e",
+      "normalizations": [
+        "Omit private process command only."
+      ]
+    },
+    {
+      "archive_path": "evidence/smoke02/RESOURCE-EXTRACT.json",
+      "role": "Resource-only extract; the first job exited1 only at the subsequent smoke",
+      "original_sha256": "5b9bf8c53dd80e9b6d37f6950d2b4e7bb1627463d57abeaacb90b674d6c0e021",
+      "archive_sha256": "ccc816c14eefc54835c37d97c041f2eddb3889f3ab9acc30dc0d239004d5681b",
+      "normalizations": [
+        "Omit private process command only."
+      ]
+    }
+  ],
+  "omitted": "Six official sources and unchanged checker are reused from the parent archive; compiled objects, private process commands, account/host inventories and operational scripts are not bundled.",
+  "source_changes": "Only the opening and closing namespace declarations differ from the parent research leaf.",
+  "no_new_build_for_packaging": true
+}

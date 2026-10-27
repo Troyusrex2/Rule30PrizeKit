@@ -1,0 +1,214 @@
+{
+  "passed": true,
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "fresh_sources": 7,
+  "reference_objects_used": false,
+  "build_seconds": 8.524140499997884,
+  "source_hashes": {
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Ether": "dc3d84cd13e0f091c400d60a0594e45dba59d9bc86aa224a328b2af66f06d756",
+    "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance": "0f145167770fc8f75dffd170f174319363535061c4ace5f97b82fb5b4abb29f0"
+  },
+  "object_hashes": {
+    "Ruliology.CellularAutomata.Rule30Jen": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec",
+    "Ruliology.CellularAutomata.Rule30Prize": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "25dbe7e0798e2367da5cc4ddc27808eb3b50fa9cf9cfa32886479173e95b0350",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076",
+    "Ruliology.CellularAutomata.Rule30Ether": "2d4bb9c315431f589bea6451791f1547a90e65f95c515c1768e9eea47b34e1b6",
+    "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance": "6dcb36973d2c784f2e9dc92a9a1e4a0602f7da3aec2c16870254470dbf293d9a"
+  },
+  "checks": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance",
+      "seconds": 1.2585662000346929,
+      "result": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.Birth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_lag_death",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_no_ordered_three_births",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_terminal_second_birth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.death_boolean",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.death_termination",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.difference",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.exists_death",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference_eq",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.no_ordered_three_births",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.seedHistory",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.seedHistory_actual",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.terminal_second_birth",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.Birth.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.difference.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.lagDifference.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.seedHistory.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.death_termination",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.terminal_second_birth",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.no_ordered_three_births",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_lag_death",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_terminal_second_birth",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance.actual_no_ordered_three_births",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 37,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ],
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "source_warning": false
+}
