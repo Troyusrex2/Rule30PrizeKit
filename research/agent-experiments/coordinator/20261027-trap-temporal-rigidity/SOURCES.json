@@ -1,0 +1,97 @@
+{
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "core_only": true,
+  "mathlib_used": false,
+  "official_order": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "Ruliology.CellularAutomata.Rule30MaskedJen",
+    "Ruliology.CellularAutomata.Rule30StripCertificates",
+    "Ruliology.CellularAutomata.Rule30Diagonals",
+    "Ruliology.CellularAutomata.Rule30Ether",
+    "Ruliology.CellularAutomata.Rule30EtherThree",
+    "Ruliology.CellularAutomata.Rule30EtherThreeTrap"
+  ],
+  "modules": [
+    "Ruliology.CellularAutomata.Rule30Period21Profiles",
+    "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21",
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline",
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21"
+  ],
+  "heads": {
+    "Ruliology.CellularAutomata.Rule30Period21Profiles": [
+      "Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath_sound",
+      "Ruliology.CellularAutomata.Rule30Period21Profiles.no_return_of_safe_cycle",
+      "Ruliology.CellularAutomata.Rule30Period21Profiles.bounded_inverse_return"
+    ],
+    "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21": [
+      "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.reach",
+      "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.closed_safe_cycle",
+      "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head_no_return",
+      "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.no_bounded_inverse"
+    ],
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline": [
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_agrees_from",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_periodic",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_isR30",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_preserves_column",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_finite_agreement",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.exists_periodic_representative",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_forward",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_propagates",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_commuting",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.common_period_head_rigidity",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline.eventual_common_period_head_rigidity"
+    ],
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21": [
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_eventual_period21_trapped",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_common_eventual_period_trapped",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_step",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_injective",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.decoded_head_no_return",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.normalized_pairs_ne",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_normalized_after",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late"
+    ]
+  },
+  "sources": {
+    "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21": "0bb6834c784e0ef3c1033c6e8a1fbaf7d886098a2503ea0cd02c99cfca9faae2",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Ether": "dc3d84cd13e0f091c400d60a0594e45dba59d9bc86aa224a328b2af66f06d756",
+    "Ruliology.CellularAutomata.Rule30EtherThree": "d49ed8342f9810711266d0be6ba75ccfde1d85e8eda7ecdabea1c4dabdc3b1de",
+    "Ruliology.CellularAutomata.Rule30EtherThreeTrap": "ca8f0808bcae176e975c80d585021a953871e4e50c0b8b098a5761cdf9975b63",
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30Period21Profiles": "2f00a1755f210c020883fd6767485488ca723826721f89bfa5856a012657f46f",
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline": "842edbbf3aef6c2b949b80937fe971737a17e936d6dd26080ff2da219c00b76f",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94",
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21": "959f423c2319f4d56fab923f7db52b86c17080cd0555225e1df83a093a2e0d36"
+  },
+  "variant": "Canonical generic half-line and t001 temporal-pair rigidity extension; fresh twelve-source validation",
+  "integration_manifest_sha256": "183183ccb726db8cf0b61ba09e578ad3e42d8d4f92bc209e59fb2498ade1b16b",
+  "prior_public_head": "64be1a7c7b60e4d545e380457bc683f6b10bf895",
+  "prior_verified_owned_constants": 728,
+  "separate_new_research_leaf_replays": [
+    {
+      "constants": 29,
+      "headlines": 7
+    },
+    {
+      "constants": 37,
+      "headlines": 6
+    },
+    {
+      "constants": 20,
+      "headlines": 6
+    }
+  ],
+  "note": "Prior staged leaf receipts are not a fresh combined-module verdict. Exact canonical sources must pass verify.py."
+}

@@ -1,0 +1,97 @@
+{
+  "status": "FINAL PREPARED BYTES; no canonical build yet; all included research sources previously kernel checked",
+  "baseline_commit": "64be1a7c7b60e4d545e380457bc683f6b10bf895",
+  "source_hashes": {
+    "Rule30EventualPeriodicHalflineResearch": "4589a56076b1502f9213e28dab6c70dbf8d98102cf07d864f7a9c2b1b962e876",
+    "Rule30TrapPeriod21EventualResearch": "19e208227b96ecd5a216ed4d87c75393d177a46fc32c30f3d2f08a23dd261a37",
+    "Rule30CommonPeriodRigidityResearch": "fe0b5aded48d995bc1470ddca3526d02b2486687013523b39f070fcf1fc4f856",
+    "Rule30TrapPairInjectivityResearch": "9cd7d4593230a61b87eb39aa54099776fd4f6a4bae753d216ae1c6f32df963c6"
+  },
+  "segments": [
+    {
+      "source": "Rule30EventualPeriodicHalflineResearch",
+      "target": "Rule30PeriodicHalfline",
+      "kind": "whole namespace body",
+      "replacements": [],
+      "before_sha256": "3587d6956726edcac05494a7d965695fe74797d98870b434f966c93cf8f16dbe",
+      "after_sha256": "3587d6956726edcac05494a7d965695fe74797d98870b434f966c93cf8f16dbe"
+    },
+    {
+      "source": "Rule30CommonPeriodRigidityResearch",
+      "target": "Rule30PeriodicHalfline",
+      "kind": "prefix through eventual_common_period_head_rigidity",
+      "replacements": [
+        "remove unused Rule30EtherThree from open",
+        "remove old onset namespace from open; definitions now colocated"
+      ],
+      "before_sha256": "33593dd78728ff4ef155b9ba21692b7029d7b9b046af76bf3eb94f229935f529",
+      "after_sha256": "4b5acee6c534b99b44bc62b147aeeebbd7c7c93d1331f1407b2a9bfe785c6eeb"
+    },
+    {
+      "source": "Rule30TrapPeriod21EventualResearch",
+      "target": "Rule30TrapPeriod21",
+      "kind": "whole namespace body",
+      "replacements": [
+        "open Rule30EventualPeriodicHalflineResearch -> open Rule30PeriodicHalfline"
+      ],
+      "before_sha256": "bfe9f67e4aee9ebede576aa27c6954f0fe81b7848586cb11bbf301adb6b9cc15",
+      "after_sha256": "b0bee2e29ff3c87dbd20c01afcd8987e0af34250afeddaace14334fc9be1c959"
+    },
+    {
+      "source": "Rule30CommonPeriodRigidityResearch",
+      "target": "Rule30TrapPeriod21",
+      "kind": "suffix starting trapped_head_period21",
+      "replacements": [
+        "Rule30TrapPeriod21EventualResearch.no_eventual_period21_trapped -> Rule30TrapPeriod21.no_eventual_period21_trapped"
+      ],
+      "before_sha256": "cb41c5c9eccaac2a8082fd038dda17b667cc5a9dc27ea911e49541844e9aee8d",
+      "after_sha256": "e4958174a9c2de0b5c5db6e0a5eaab9387d8ed8188c50def168c2a253cc36a43"
+    },
+    {
+      "source": "Rule30TrapPairInjectivityResearch",
+      "target": "Rule30TrapPeriod21",
+      "kind": "whole namespace body",
+      "replacements": [
+        "open Rule30CommonPeriodRigidityResearch -> open Rule30PeriodicHalfline",
+        "headline rename trapped_pairs_eventually_distinct -> trapped_pairs_differ_arbitrarily_late; theorem type and proof unchanged"
+      ],
+      "before_sha256": "350d73a153611744f94663e7e7d63ca57636216a7d486ee3888efe69b774a770",
+      "after_sha256": "852d393888fce2fb6bbe10b298baf6440335695bf80651e5ddc5de5a327da867"
+    }
+  ],
+  "original_trap_body_preserved": true,
+  "original_profile_and_certificate_bytes_preserved": true,
+  "newline_policy": "new/extracted fragments normalize CRLF to LF; original three canonical module bytes preserved except inserted family import and appended proofs",
+  "namespace_map": {
+    "Rule30EventualPeriodicHalflineResearch": "Ruliology.CellularAutomata.Rule30PeriodicHalfline",
+    "Rule30CommonPeriodRigidityResearch generic prefix": "Ruliology.CellularAutomata.Rule30PeriodicHalfline",
+    "Rule30TrapPeriod21EventualResearch": "Ruliology.CellularAutomata.Rule30TrapPeriod21",
+    "Rule30CommonPeriodRigidityResearch trap suffix": "Ruliology.CellularAutomata.Rule30TrapPeriod21",
+    "Rule30TrapPairInjectivityResearch": "Ruliology.CellularAutomata.Rule30TrapPeriod21"
+  },
+  "import_graph": {
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline": [
+      "Ruliology.CellularAutomata.Rule30Period21Profiles",
+      "Ruliology.CellularAutomata.Rule30Ether"
+    ],
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21": [
+      "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21",
+      "Ruliology.CellularAutomata.Rule30EtherThreeTrap",
+      "Ruliology.CellularAutomata.Rule30PeriodicHalfline"
+    ]
+  },
+  "topological_order": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "Ruliology.CellularAutomata.Rule30MaskedJen",
+    "Ruliology.CellularAutomata.Rule30StripCertificates",
+    "Ruliology.CellularAutomata.Rule30Diagonals",
+    "Ruliology.CellularAutomata.Rule30Ether",
+    "Ruliology.CellularAutomata.Rule30EtherThree",
+    "Ruliology.CellularAutomata.Rule30EtherThreeTrap",
+    "Ruliology.CellularAutomata.Rule30Period21Profiles",
+    "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21",
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline",
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21"
+  ]
+}

@@ -1,0 +1,9 @@
+import Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21
+#check Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.reach
+#print axioms Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.reach
+#check Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.closed_safe_cycle
+#print axioms Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.closed_safe_cycle
+#check Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head_no_return
+#print axioms Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head_no_return
+#check Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.no_bounded_inverse
+#print axioms Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.no_bounded_inverse

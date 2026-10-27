@@ -1,0 +1,73 @@
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_agrees_from (F : Nat → Nat → Bool) (p : Nat)
+  (onset : Nat → Nat) (i T : Nat) (h : ∀ (t : Nat), T ≤ t → F (t + p) i = F t i) (t : Nat) (ht : T ≤ t) :
+  Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset t i = F t i
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_agrees_from' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_periodic (F : Nat → Nat → Bool) (p : Nat) (hp : 0 < p)
+  (onset : Nat → Nat) (h : ∀ (i t : Nat), onset i ≤ t → F (t + p) i = F t i) (t i : Nat) :
+  Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset (t + p) i =
+    Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset t i
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_periodic' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_isR30 (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (p : Nat) (hp : 0 < p) (onset : Nat → Nat)
+  (h : ∀ (i t : Nat), onset i ≤ t → F (t + p) i = F t i) :
+  Ruliology.CellularAutomata.Rule30Ether.IsR30
+    (Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset)
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_isR30' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_preserves_column (F : Nat → Nat → Bool) (p : Nat)
+  (onset : Nat → Nat) (i : Nat) (h : ∀ (t : Nat), F (t + p) i = F t i) (t : Nat) :
+  Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset t i = F t i
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_preserves_column' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_finite_agreement (F : Nat → Nat → Bool) (p : Nat)
+  (onset : Nat → Nat) (h : ∀ (i t : Nat), onset i ≤ t → F (t + p) i = F t i) (b : Nat) :
+  ∃ S,
+    ∀ (i : Nat),
+      i ≤ b →
+        ∀ (t : Nat), S ≤ t → Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative F p onset t i = F t i
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.representative_finite_agreement' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.exists_periodic_representative (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (p : Nat) (hp : 0 < p)
+  (h : ∀ (i : Nat), ∃ T, ∀ (t : Nat), T ≤ t → F (t + p) i = F t i) :
+  ∃ G,
+    Ruliology.CellularAutomata.Rule30Ether.IsR30 G ∧
+      (∀ (t i : Nat), G (t + p) i = G t i) ∧ ∀ (i : Nat), ∃ T, ∀ (t : Nat), T ≤ t → G t i = F t i
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.exists_periodic_representative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_forward {α : Type} (f : α → α) (s : Nat → α) (w : Nat)
+  (code : α → List Bool) (hlen : ∀ (n : Nat), (code (s n)).length = w)
+  (hinj : ∀ (i j : Nat), code (s i) = code (s j) → s i = s j) (hs : ∀ (n : Nat), f (s (n + 1)) = s n) (n : Nat) :
+  ∃ k, Ruliology.CellularAutomata.Rule30Period21Profiles.advance f k (s 0) = s n
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_propagates {α : Type} (f : α → α) (s : Nat → α)
+  (w : Nat) (code : α → List Bool) (hlen : ∀ (n : Nat), (code (s n)).length = w)
+  (hinj : ∀ (i j : Nat), code (s i) = code (s j) → s i = s j) (hs : ∀ (n : Nat), f (s (n + 1)) = s n) (P : α → Prop)
+  (hstep : ∀ (a : α), P a → P (f a)) (h0 : P (s 0)) (n : Nat) : P (s n)
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_propagates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_commuting {α : Type} (f H : α → α) (s : Nat → α)
+  (w : Nat) (code : α → List Bool) (hlen : ∀ (n : Nat), (code (s n)).length = w)
+  (hinj : ∀ (i j : Nat), code (s i) = code (s j) → s i = s j) (hs : ∀ (n : Nat), f (s (n + 1)) = s n)
+  (hc : ∀ (a : α), H (f a) = f (H a)) (h0 : H (s 0) = s 0) (n : Nat) : H (s n) = s n
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.coded_inverse_commuting' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.common_period_head_rigidity (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (p : Nat) (hp : 0 < p)
+  (hper : ∀ (t j : Nat), F (t + p) j = F t j) (r : Nat) (h0 : ∀ (t : Nat), F (t + r) 0 = F t 0)
+  (h1 : ∀ (t : Nat), F (t + r) 1 = F t 1) (t j : Nat) : F (t + r) j = F t j
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.common_period_head_rigidity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicHalfline.eventual_common_period_head_rigidity (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (p : Nat) (hp : 0 < p)
+  (hper : ∀ (j : Nat), ∃ S, ∀ (t : Nat), S ≤ t → F (t + p) j = F t j) (r : Nat)
+  (h0 : ∃ T, ∀ (t : Nat), T ≤ t → F (t + r) 0 = F t 0) (h1 : ∃ T, ∀ (t : Nat), T ≤ t → F (t + r) 1 = F t 1) (j : Nat) :
+  ∃ T, ∀ (t : Nat), T ≤ t → F (t + r) j = F t j
+'Ruliology.CellularAutomata.Rule30PeriodicHalfline.eventual_common_period_head_rigidity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

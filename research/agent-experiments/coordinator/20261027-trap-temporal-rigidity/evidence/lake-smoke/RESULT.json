@@ -1,0 +1,255 @@
+{
+  "passed": true,
+  "commands": [
+    [
+      "lake",
+      "build",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "--run",
+      "Check.lean",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21",
+      "--claim",
+      "partial",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late"
+    ]
+  ],
+  "seconds": [
+    14.686262900009751,
+    1.7385103999986313
+  ],
+  "source_hashes": {
+    "Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21": "0bb6834c784e0ef3c1033c6e8a1fbaf7d886098a2503ea0cd02c99cfca9faae2",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Ether": "dc3d84cd13e0f091c400d60a0594e45dba59d9bc86aa224a328b2af66f06d756",
+    "Ruliology.CellularAutomata.Rule30EtherThree": "d49ed8342f9810711266d0be6ba75ccfde1d85e8eda7ecdabea1c4dabdc3b1de",
+    "Ruliology.CellularAutomata.Rule30EtherThreeTrap": "ca8f0808bcae176e975c80d585021a953871e4e50c0b8b098a5761cdf9975b63",
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30Period21Profiles": "2f00a1755f210c020883fd6767485488ca723826721f89bfa5856a012657f46f",
+    "Ruliology.CellularAutomata.Rule30PeriodicHalfline": "842edbbf3aef6c2b949b80937fe971737a17e936d6dd26080ff2da219c00b76f",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94",
+    "Ruliology.CellularAutomata.Rule30TrapPeriod21": "959f423c2319f4d56fab923f7db52b86c17080cd0555225e1df83a093a2e0d36"
+  },
+  "lake_executable_sha256": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+  "lean_executable_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Bounded",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.actualPair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.actualPair_predecessor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_advance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.decoded_head_no_return",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_common_eventual_period_trapped",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_eventual_period21_trapped",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.normalized_pairs_ne",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.step_bounded",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_head_period21",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_normalized_after",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Period21Profiles.rotate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_eq_literal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.testBit_encode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.testBit_rotate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.encode.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30TrapPeriod21",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 80,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "scope": "Actual standalone Lake build and one required named-head invocation; distinct from fresh12 full replay"
+}

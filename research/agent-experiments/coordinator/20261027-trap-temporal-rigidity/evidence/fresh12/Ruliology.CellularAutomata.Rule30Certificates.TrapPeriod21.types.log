@@ -1,0 +1,28 @@
+Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.reach :
+  Ruliology.CellularAutomata.Rule30Period21Profiles.advance Ruliology.CellularAutomata.Rule30Period21Profiles.step 1967
+      Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head =
+    Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.entry
+'Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.reach' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.closed_safe_cycle :
+  Ruliology.CellularAutomata.Rule30Period21Profiles.SafePath Ruliology.CellularAutomata.Rule30Period21Profiles.step
+    Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head 26313
+    Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.entry
+    Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.entry
+'Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.closed_safe_cycle' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head_no_return (p : Nat) :
+  0 < p →
+    Ruliology.CellularAutomata.Rule30Period21Profiles.advance Ruliology.CellularAutomata.Rule30Period21Profiles.step p
+        Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head ≠
+      Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head
+'Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head_no_return' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.no_bounded_inverse
+  (s : Nat → Ruliology.CellularAutomata.Rule30Period21Profiles.State)
+  (h0 : s 0 = Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.head)
+  (hb :
+    ∀ (n : Nat),
+      (s n).fst < Ruliology.CellularAutomata.Rule30Period21Profiles.modulus ∧
+        (s n).snd < Ruliology.CellularAutomata.Rule30Period21Profiles.modulus)
+  (hs : ∀ (n : Nat), Ruliology.CellularAutomata.Rule30Period21Profiles.step (s (n + 1)) = s n) : False
+'Ruliology.CellularAutomata.Rule30Certificates.TrapPeriod21.no_bounded_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

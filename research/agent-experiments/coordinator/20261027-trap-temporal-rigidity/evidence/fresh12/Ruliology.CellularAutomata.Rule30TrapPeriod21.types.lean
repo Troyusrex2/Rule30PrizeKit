@@ -1,0 +1,29 @@
+import Ruliology.CellularAutomata.Rule30TrapPeriod21
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.no_eventual_period21_trapped
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.no_eventual_period21_trapped
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.no_common_eventual_period_trapped
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.no_common_eventual_period_trapped
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_step
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_step
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_injective
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.decode21_injective
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.decoded_head_no_return
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.decoded_head_no_return
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.normalized_pairs_ne
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.normalized_pairs_ne
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_normalized_after
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_normalized_after
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.trapped_pairs_differ_arbitrarily_late

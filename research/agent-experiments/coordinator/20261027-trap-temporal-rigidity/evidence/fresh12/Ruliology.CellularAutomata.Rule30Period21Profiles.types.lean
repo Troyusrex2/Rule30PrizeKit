@@ -1,0 +1,7 @@
+import Ruliology.CellularAutomata.Rule30Period21Profiles
+#check Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath_sound
+#print axioms Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath_sound
+#check Ruliology.CellularAutomata.Rule30Period21Profiles.no_return_of_safe_cycle
+#print axioms Ruliology.CellularAutomata.Rule30Period21Profiles.no_return_of_safe_cycle
+#check Ruliology.CellularAutomata.Rule30Period21Profiles.bounded_inverse_return
+#print axioms Ruliology.CellularAutomata.Rule30Period21Profiles.bounded_inverse_return
