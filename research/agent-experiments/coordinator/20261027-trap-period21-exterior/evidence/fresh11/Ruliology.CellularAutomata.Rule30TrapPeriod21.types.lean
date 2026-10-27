@@ -1,0 +1,13 @@
+import Ruliology.CellularAutomata.Rule30TrapPeriod21
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits
+#check Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped
+#print axioms Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped

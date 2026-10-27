@@ -1,0 +1,49 @@
+Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (hper : ∀ (t j : Nat), F (t + 21) j = F t j) (j : Nat) :
+  Ruliology.CellularAutomata.Rule30Period21Profiles.step
+      (Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column F (j + 1),
+        Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column F (j + 2)) =
+    (Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column F j,
+      Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column F (j + 1))
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.column_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (hper : ∀ (t j : Nat), F (t + 21) j = F t j)
+  (h0 : ∀ (k : Nat), k < 21 → F k 0 = Nat.testBit 1198372 k)
+  (h1 : ∀ (k : Nat), k < 21 → F k 1 = Nat.testBit 1591590 k) : False
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.Physical.no_period21_history' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check :
+  Ruliology.CellularAutomata.Rule30EtherThree.allBelowT
+      (fun i =>
+        (Ruliology.CellularAutomata.Rule30EtherThree.t001.st i).testBit 0 ==
+          Nat.testBit 1591590 (Ruliology.CellularAutomata.Rule30EtherThree.t001.lab i))
+      Ruliology.CellularAutomata.Rule30EtherThree.t001.n =
+    true
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head_check' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head {i : Nat}
+  (hi : i < Ruliology.CellularAutomata.Rule30EtherThree.t001.n) :
+  (Ruliology.CellularAutomata.Rule30EtherThree.t001.st i).testBit 0 =
+    Nat.testBit 1591590 (Ruliology.CellularAutomata.Rule30EtherThree.t001.lab i)
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.full_head' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits (k : Nat) (hk : k < 21) :
+  Ruliology.CellularAutomata.Rule30EtherThree.wordAt3 Ruliology.CellularAutomata.Rule30EtherThree.w001 k =
+    Nat.testBit 1198372 k
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.driver_bits' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped (F : Nat → Nat → Bool)
+  (hF : Ruliology.CellularAutomata.Rule30Ether.IsR30 F) (hper : ∀ (t j : Nat), F (t + 21) j = F t j) (T : Nat)
+  (hc :
+    ∀ (t : Nat),
+      T ≤ t →
+        F t 0 =
+          Ruliology.CellularAutomata.Rule30EtherThree.wordAt3 Ruliology.CellularAutomata.Rule30EtherThree.t001.w
+            (t - T))
+  (t1 i : Nat) (ht1 : T ≤ t1) (hi : i < Ruliology.CellularAutomata.Rule30EtherThree.t001.n)
+  (hph : (t1 - T) % 3 = Ruliology.CellularAutomata.Rule30EtherThree.t001.lab i % 3)
+  (hr :
+    Ruliology.CellularAutomata.Rule30EtherThree.EncF F Ruliology.CellularAutomata.Rule30EtherThree.t001.b t1 0
+      (Ruliology.CellularAutomata.Rule30EtherThree.t001.st i)) :
+  False
+'Ruliology.CellularAutomata.Rule30TrapPeriod21.no_period21_trapped' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

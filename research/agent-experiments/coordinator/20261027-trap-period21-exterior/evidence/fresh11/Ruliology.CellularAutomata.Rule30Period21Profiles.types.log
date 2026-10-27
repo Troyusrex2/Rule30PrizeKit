@@ -1,0 +1,24 @@
+Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath_sound {α : Type} [DecidableEq α] (f : α → α) (forbidden : α)
+  (n : Nat) (a b : α) (h : Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath f forbidden n a b = true) :
+  Ruliology.CellularAutomata.Rule30Period21Profiles.SafePath f forbidden n a b
+'Ruliology.CellularAutomata.Rule30Period21Profiles.checkPath_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Period21Profiles.no_return_of_safe_cycle {α : Type} {f : α → α} {seed c : α}
+  {r n : Nat} (hn : 0 < n) (reach : Ruliology.CellularAutomata.Rule30Period21Profiles.advance f r seed = c)
+  (cycle : Ruliology.CellularAutomata.Rule30Period21Profiles.SafePath f seed n c c) (p : Nat) :
+  0 < p → Ruliology.CellularAutomata.Rule30Period21Profiles.advance f p seed ≠ seed
+'Ruliology.CellularAutomata.Rule30Period21Profiles.no_return_of_safe_cycle' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Period21Profiles.bounded_inverse_return
+  (s : Nat → Ruliology.CellularAutomata.Rule30Period21Profiles.State)
+  (hb :
+    ∀ (n : Nat),
+      (s n).fst < Ruliology.CellularAutomata.Rule30Period21Profiles.modulus ∧
+        (s n).snd < Ruliology.CellularAutomata.Rule30Period21Profiles.modulus)
+  (hs : ∀ (n : Nat), Ruliology.CellularAutomata.Rule30Period21Profiles.step (s (n + 1)) = s n) :
+  ∃ p,
+    0 < p ∧
+      Ruliology.CellularAutomata.Rule30Period21Profiles.advance Ruliology.CellularAutomata.Rule30Period21Profiles.step p
+          (s 0) =
+        s 0
+'Ruliology.CellularAutomata.Rule30Period21Profiles.bounded_inverse_return' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
