@@ -1,0 +1,50 @@
+{
+  "normalizations": [
+    {
+      "path": "evidence/author/attempt01/Rule30Cut31ForcedMapResearch/build.log",
+      "raw_sha256": "ca05e6d56a57b797dae37d2c53d2e04a9bb5c2d4108dffc333fdf85c4a9a51b1",
+      "portable_sha256": "3d8ef70723854c68ed0dd3d78bc1f20af776bd3a8f503dea2da23fcc24cae5e6",
+      "operation": "Replace only the absolute private workspace prefix with <author-workspace>/; retain full diagnostics and checker JSON"
+    },
+    {
+      "path": "evidence/author/attempt01/Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore/check.log",
+      "raw_sha256": "678a0454485950eb142047c1ebcc900799d609bd03eeb1e7405ec72a5bc6506b",
+      "portable_sha256": "7ff26b223d1aa6881764495f1198b91f564e9889137ac6fd762b6764d62472b1",
+      "operation": "Replace only the absolute private workspace prefix with <author-workspace>/; retain full diagnostics and checker JSON"
+    },
+    {
+      "path": "evidence/author/attempt01/Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch/check.log",
+      "raw_sha256": "95f4cc008a0dc11dba436b786503d8a571f43a7186a49bc9ca120703bf900dc0",
+      "portable_sha256": "fd7ca39a030181a05178ee458bd9c837931bccf2ace62d04b4075aac1fc3e8cd",
+      "operation": "Replace only the absolute private workspace prefix with <author-workspace>/; retain full diagnostics and checker JSON"
+    },
+    {
+      "path": "evidence/author/attempt02/Rule30Cut31ForcedMapResearch/build.log",
+      "raw_sha256": "2d931c36f34a2a833f13ff64f8816ab599af4802076b1883a380fa6d1a264ee8",
+      "portable_sha256": "2113d425c38c236e02c1f97fd37142174ce9490196e584f44b44e5273bb165d6",
+      "operation": "Replace only the absolute private workspace prefix with <author-workspace>/; retain full diagnostics and checker JSON"
+    },
+    {
+      "path": "evidence/author/attempt03/Rule30Cut31ForcedMapResearch/check.log",
+      "raw_sha256": "4ae45f8681ad1b4aa87ce498e676526aa9936d23da28aada20e51327c3d211ba",
+      "portable_sha256": "54ed16c203651b0bf82fee789907ca241e188a3199d4a3d529736b5fa935a1d3",
+      "operation": "Replace only the absolute private workspace prefix with <author-workspace>/; retain full diagnostics and checker JSON"
+    },
+    {
+      "path": "evidence/author/FINAL-RESULT.json",
+      "raw_sha256": "b032643dea2cdb23321174bbad985eee22a888837efe177f247d35aa60690068",
+      "portable_sha256": "cd1a0b67ba16dbeaff7baceda3ab5ed0aeb3aa1a6166bb93259e677184fbb6aa",
+      "operation": "Remove only guard.command; retain status, all mathematical fields and resource/timing fields"
+    },
+    {
+      "path": "evidence/author/REPORT.md",
+      "raw_sha256": "c58313f03c6e6758a02e507edc0469641ce9494d803fae6277ccb9c129e3604f",
+      "portable_sha256": "e458107d4d065c4492fa1a8fec22e0fd26688a1875975b630b8bded73d1ee7b3",
+      "operation": "Replace only the private worker label with 'remote worker'; preserve all mathematical/validation statements"
+    }
+  ],
+  "root_evidence": "All root run mathematical logs, JSON and types retained byte-for-byte; guard is a labeled resource extract.",
+  "exclusions": "No compiled objects, binary or IR sidecars, private launch scripts, credentials or usage/budget data.",
+  "version": "V2; V1 payload remains sealed separately",
+  "v1_manifest_sha256": "82b6f3f641da71309a947024ab2ce6d1cc126dbb7da4fbfbdb067cd34e3c060a"
+}

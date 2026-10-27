@@ -1,0 +1,113 @@
+{
+  "module": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch",
+  "source_sha256": "760c24aad39146131c045662e12366c905fd48ec5e8a1de03a6e1f3c77ebd65e",
+  "object_sha256": "ae6eeca99bb430ad8a2fceca6d899269fd8f18fd1ca53b99565a74b95f22dcc5",
+  "build_seconds": 0.47513510001590475,
+  "total_seconds": 2.0061111000250094,
+  "heads": [
+    "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed",
+    "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps"
+  ],
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.core_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.core_trim",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate_eq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refined_next_gap",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refined_spaced",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.white_core",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 18,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,57 @@
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:59:41: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hi, show i + (n - 7) < n + 1 by omega, Nat.add_comm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:106:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (columns a n).snd.testBit (t + 1)
+in the target expression
+  ((columns a n).snd.testBit (1 + t) ^^ ((columns a n).snd.testBit t || (columns a n).fst.testBit t)) =
+    recon a.testBit (n + 1 + 1) t
+
+case succ
+a n : Nat
+ih :
+  ∀ (t : Nat),
+    (columns a n).fst.testBit t = recon a.testBit n t ∧ (columns a n).snd.testBit t = recon a.testBit (n + 1) t
+t : Nat
+⊢ ((columns a n).snd.testBit (1 + t) ^^ ((columns a n).snd.testBit t || (columns a n).fst.testBit t)) =
+    recon a.testBit (n + 1 + 1) t
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:147:39: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:148:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (pack ?f ?n).testBit ?i
+in the target expression
+  (if t % 2 = 0 then !if t / 2 < 17 then G (r + t / 2) else false else true) =
+    if (2 * r + t) % 2 = 0 then !G ((2 * r + t) / 2) else true
+
+G : Nat → Bool
+r t : Nat
+ht : t < 33
+⊢ (if t % 2 = 0 then !if t / 2 < 17 then G (r + t / 2) else false else true) =
+    if (2 * r + t) % 2 = 0 then !G ((2 * r + t) / 2) else true
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:160:29: error: Application type mismatch: The argument
+  hh
+has type
+  ∀ (j : Nat), j < k → (packedBoundary (word G r 17)).testBit (t + j) = boundary G (t + j + 2 * r)
+but is expected to have type
+  ∀ (j : Nat), j < k → ?m.76 (t + j) = ?m.77 (t + j)
+in the application
+  recon_local k t hh
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Nat.land ↦ 2
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:209:40: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+<author-workspace>/Rule30Cut31ForcedMapResearch.lean:221:2: error: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

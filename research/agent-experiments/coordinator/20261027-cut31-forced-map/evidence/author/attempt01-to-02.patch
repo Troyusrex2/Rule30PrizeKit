@@ -1,0 +1,100 @@
+--- attempt01
++++ attempt02
+@@ -2,7 +2,8 @@
+ 
+ public import Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch
+ 
+-/-!+# The complete cut-31 boundary of the actual empty-driven gate
++/-!
++# The complete cut-31 boundary of the actual empty-driven gate
+ 
+ The certified eight-bit windows cover the actual gate from its first index.
+ Overlapping these windows gives a small 17-bit certificate, which computes
+@@ -56,7 +57,7 @@
+   change (((word G r (n+1) >>> (n-7)) % 2^8).testBit i) = _
+   simp only [Nat.testBit_mod_two_pow, Nat.testBit_shiftRight, word, pack_bit]
+   by_cases hi : i<8
+-  · simp [hi, show i+(n-7)<n+1 by omega, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm]
++  · simp [hi, show i+(n-7)<n+1 by omega, Nat.add_comm, Nat.add_left_comm]
+   · simp [hi]
+ 
+ theorem actual_prefixes : ∀ n r, word refinedGate r (8+n) ∈ prefixes n := by
+@@ -103,7 +104,7 @@
+       intro t
+       refine ⟨(ih t).2, ?_⟩
+       simp only [columns, Nat.testBit_xor, Nat.testBit_or, Nat.testBit_shiftRight]
+-      rw [(ih (t+1)).2, (ih t).2, (ih t).1]
++      rw [Nat.add_comm 1 t, (ih (t+1)).2, (ih t).2, (ih t).1]
+       rfl
+ 
+ def packedBoundary (w : Nat) : Nat := pack (boundary w.testBit) 33
+@@ -144,10 +145,9 @@
+ 
+ theorem encoded_boundary (G : Nat → Bool) (r t : Nat) (ht : t<33) :
+     (packedBoundary (word G r 17)).testBit t = boundary G (2*r+t) := by
+-  simp only [packedBoundary, pack_bit, if_pos ht, boundary, word]
+-  rw [pack_bit]
++  simp only [packedBoundary, pack_bit, ite_eq_left ht, boundary, word]
+   have hh : t/2<17 := by omega
+-  simp only [if_pos hh]
++  simp only [ite_eq_left hh]
+   have hm : (2*r+t)%2=t%2 := by omega
+   have hd : (2*r+t)/2=r+t/2 := by omega
+   rw [hm,hd]
+@@ -157,7 +157,8 @@
+   have hh : ∀ j, j<k → (packedBoundary (word G r 17)).testBit (t+j) = boundary G (t+j+2*r) := by
+     intro j hj
+     simpa [Nat.add_comm, Nat.add_left_comm, Nat.add_assoc] using encoded_boundary G r (t+j) (by omega)
+-  have he := recon_local k t hh
++  have he := recon_local (a := (packedBoundary (word G r 17)).testBit)
++    (b := fun s => boundary G (s+2*r)) k t hh
+   rw [← recon_shift] at he
+   simpa [Nat.add_comm] using he
+ 
+@@ -200,15 +201,20 @@
+   | n+2,t => xor (forcedTail b l (n+1) (t+1))
+       (forcedTail b l (n+1) t || forcedTail b l n t)
+ 
+-theorem forced_tail_exact (G : Nat → Bool) : ∀ n t,
+-    forcedTail (B G) (L G) n t = X G (n+32) t := by
+-  have hb (t : Nat) : forcedTail (B G) (L G) 1 t = X G 33 t := by
+-    simp only [forcedTail,B,L,X]
+-    rw [show 33=31+2 by omega,recon_two]
+-    cases recon (boundary G) 32 (t+1) <;> cases recon (boundary G) 32 t <;>
+-      cases recon (boundary G) 31 t <;> rfl
+-  have key : ∀ n, (∀ t, forcedTail (B G) (L G) n t = X G (n+32) t) ∧
+-      (∀ t, forcedTail (B G) (L G) (n+1) t = X G (n+33) t) := by
++theorem masked_stencil (a b c : Bool) : xor (xor c b) (a && !b) = xor c (b || a) := by
++  cases a <;> cases b <;> cases c <;> rfl
++
++theorem forced_tail_at (G : Nat → Bool) (j : Nat) : ∀ n t,
++    forcedTail (X G (j+1)) (fun t => X G j t && !X G (j+1) t) n t = X G (n+j+1) t := by
++  let b := X G (j+1)
++  let l := fun t => X G j t && !X G (j+1) t
++  have hb (t : Nat) : forcedTail b l 1 t = X G (j+2) t := by
++    change xor (xor (X G (j+1) (t+1)) (X G (j+1) t))
++      (X G j t && !X G (j+1) t) = _
++    rw [masked_stencil]
++    exact (recon_two (boundary G) j t).symm
++  have key : ∀ n, (∀ t, forcedTail b l n t = X G (n+j+1) t) ∧
++      (∀ t, forcedTail b l (n+1) t = X G (n+j+2) t) := by
+     intro n
+     induction n with
+     | zero => exact ⟨fun _ => rfl,hb⟩
+@@ -216,9 +222,14 @@
+         refine ⟨ih.2,?_⟩
+         intro t
+         rw [show n+1+1=n+2 by omega,forcedTail,ih.2 (t+1),ih.2 t,ih.1 t]
+-        change _ = recon (boundary G) (n+1+33) t
+-        rw [show n+1+33=(n+32)+2 by omega,recon_two]
++        change _ = recon (boundary G) (n+1+j+2) t
++        rw [show n+1+j+2=(n+j+1)+2 by omega,recon_two]
++        rfl
+   exact fun n => (key n).1
++
++theorem forced_tail_exact (G : Nat → Bool) (n t : Nat) :
++    forcedTail (B G) (L G) n t = X G (n+32) t := by
++  exact forced_tail_at G 31 n t
+ 
+ theorem actual_forced_tail (n t : Nat) :
+     forcedTail (B refinedGate) (L refinedGate) n t = zrow (Psi empty) (t+311) (n+32) := by

@@ -1,0 +1,54 @@
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_seventeen : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.word
+      Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r 17 ∈
+    Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.allowed17
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_seventeen' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.cut31_actual : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.B
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (2 * r) =
+      Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.bEven
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r ∧
+    Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.B
+          Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (2 * r + 1) =
+        Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.bOdd
+          Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r ∧
+      Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L
+            Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (2 * r) =
+          Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.lEven
+            Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r ∧
+        Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L
+            Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (2 * r + 1) =
+          Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.lOdd
+            Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.cut31_actual' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_history311 : ∀ (t : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow
+      (Ruliology.CellularAutomata.Rule30PeriodTwoSideways.Psi Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty)
+      (t + 311) 1 =
+    Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch.boundary
+      Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate t
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_history311' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_reconstruction : ∀ (k t : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.X
+      Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate k t =
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow
+      (Ruliology.CellularAutomata.Rule30PeriodTwoSideways.Psi Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty)
+      (t + 311) k
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_reconstruction' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forced_tail_exact : ∀ (G : Nat → Bool) (n t : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forcedTail
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.B G)
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L G) n t =
+    Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.X G (n + 32) t
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forced_tail_exact' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_forced_tail : ∀ (n t : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forcedTail
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.B
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate)
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate)
+      n t =
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow
+      (Ruliology.CellularAutomata.Rule30PeriodTwoSideways.Psi Ruliology.CellularAutomata.Rule30PeriodTwoSideways.empty)
+      (t + 311) (n + 32)
+'Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_forced_tail' depends on axioms: [propext, Quot.sound]

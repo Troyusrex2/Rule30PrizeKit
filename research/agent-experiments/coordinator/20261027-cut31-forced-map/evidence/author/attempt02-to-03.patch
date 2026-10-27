@@ -1,0 +1,31 @@
+--- attempt02
++++ attempt03
+@@ -217,14 +217,21 @@
+       (∀ t, forcedTail b l (n+1) t = X G (n+j+2) t) := by
+     intro n
+     induction n with
+-    | zero => exact ⟨fun _ => rfl,hb⟩
++    | zero =>
++        constructor
++        · intro t
++          simp only [Nat.zero_add, forcedTail]
++          rfl
++        · simpa only [Nat.zero_add] using hb
+     | succ n ih =>
+-        refine ⟨ih.2,?_⟩
+-        intro t
+-        rw [show n+1+1=n+2 by omega,forcedTail,ih.2 (t+1),ih.2 t,ih.1 t]
+-        change _ = recon (boundary G) (n+1+j+2) t
+-        rw [show n+1+j+2=(n+j+1)+2 by omega,recon_two]
+-        rfl
++        constructor
++        · intro t
++          simpa only [show n+1+j+1=n+j+2 by omega] using ih.2 t
++        · intro t
++          rw [show n+1+1=n+2 by omega,forcedTail,ih.2 (t+1),ih.2 t,ih.1 t]
++          change _ = recon (boundary G) (n+1+j+2) t
++          rw [show n+1+j+2=(n+j+1)+2 by omega,recon_two]
++          rfl
+   exact fun n => (key n).1
+ 
+ theorem forced_tail_exact (G : Nat → Bool) (n t : Nat) :

@@ -1,0 +1,10 @@
+Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord r ∈ [8, 9, 16, 18, 33, 36, 66, 72, 132, 144]
+'Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps : ∀ (r : Nat),
+  (Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate r &&
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (r + 3) &&
+      Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (r + 6)) =
+    false
+'Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps' depends on axioms: [propext,
+ Quot.sound]

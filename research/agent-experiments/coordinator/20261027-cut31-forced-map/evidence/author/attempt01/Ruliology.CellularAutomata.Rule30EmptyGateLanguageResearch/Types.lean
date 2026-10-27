@@ -1,0 +1,5 @@
+import Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch
+#check @Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed
+#print axioms Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.windowWord_allowed
+#check @Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps
+#print axioms Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.no_successive_short_gaps

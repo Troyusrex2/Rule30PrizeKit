@@ -1,0 +1,13 @@
+import Rule30Cut31ForcedMapResearch
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_seventeen
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_seventeen
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.cut31_actual
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.cut31_actual
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_history311
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_history311
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_reconstruction
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_reconstruction
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forced_tail_exact
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.forced_tail_exact
+#check @Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_forced_tail
+#print axioms Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.actual_forced_tail

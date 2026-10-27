@@ -1,0 +1,7 @@
+Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.good_all : ∀ (q : Nat),
+  q < 262144 → Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.Good q
+'Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.good_all' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.entry : Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.wall
+    (Ruliology.CellularAutomata.Rule30DrivenPrefixResearch.white 155) =
+  true
+'Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore.entry' depends on axioms: [propext]
