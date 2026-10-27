@@ -24,9 +24,16 @@ farther left is arbitrary.
 anchor rules out two perpetually black observation streams; this turns the masked
 identities into the finite `birth_detector`. `demodulation_of_birth` recovers the
 older streams, and `observe_birth_transfer` applies this to two equal observed
-histories, allowing different older widths. A zero birth flag does not reconstruct
-the older streams. These statements concern moving right diagonals and observation
-streams, not the fixed physical center or reconstruction of the whole older state.
+histories, allowing different older widths.
+
+`observe_birth_phase_transfer` handles opposite-phase histories:
+`r_v(t)=s_w(t)` and `s_v(t)=r_w(t+1)`. The rotated finite detector preserves
+the flag, and at a nonzero flag the older streams satisfy the same relation,
+including its one-update lag. The singleton-parent base obstruction is explicit.
+A zero birth flag does not reconstruct the older streams; general mixed-width
+phase separation remains open. These statements concern moving right diagonals
+and observation streams, not the fixed physical center or reconstruction of the
+whole older state.
 -/
 
 @[expose] public section
@@ -575,5 +582,109 @@ theorem Rd_observations {x : Int → Bool} {hi : Int} (xs : List Bool)
   constructor
   · exact (ht (2*t)).symm.trans (trace_even xs t)
   · exact (ht (2*t+1)).symm.trans (trace_odd hne t)
+
+/-! ### Opposite-phase descent with the one-update lag retained -/
+
+/-- The two difference profiles exchange under a half-step observation shift;
+the second exchanged profile is advanced by one whole tail update. -/
+theorem phase_demodulation (v w : List Bool) (P : Nat)
+    (heq : ∀ t, outR v t=outS w t ∧ outS v t=outR w (t+1)) :
+    ∀ t, demodR P v t=demodS P w t ∧
+      demodS P v t=demodR P w (t+1) := by
+  intro t
+  constructor
+  · simp only [demodR,demodS,delta,(heq (t+P)).1,(heq (t+P)).2,
+      (heq t).1,(heq t).2]
+  · simp only [demodR,demodS,delta,(heq (t+P)).2,(heq (t+1+P)).1,
+      (heq t).2,(heq (t+1)).1,show t+P+1=t+1+P by omega]
+
+/-- The cyclically shifted pair of demodulators detects exactly the same
+birth. The first-channel wrap uses the supplied whole older P-return. -/
+theorem birth_detector_opposite (u : List Bool) (g h : Bool) (P : Nat)
+    (hu : u≠[]) (hP : 0<P) (hp : titer u P=u) :
+    birth P u g=(List.range P).any (fun t =>
+      demodS P (u++[g,h]) t || demodR P (u++[g,h]) (t+1)) := by
+  cases hb : birth P u g with
+  | false =>
+      symm
+      apply List.any_eq_false.mpr
+      intro t ht
+      rw [(masked_demodulation u g h P hu hp t).2,
+        (masked_demodulation u g h P hu hp (t+1)).1,hb]
+      intro hc
+      cases hc
+  | true =>
+      symm
+      apply List.any_eq_true.mpr
+      obtain ⟨t,ht,hw⟩ := older_white_witness u P hu hP hp
+      rcases hw with hr | hs
+      · cases t with
+        | zero =>
+            refine ⟨P-1,List.mem_range.mpr (by omega),?_⟩
+            rw [(masked_demodulation u g h P hu hp (P-1)).2,
+              (masked_demodulation u g h P hu hp (P-1+1)).1,hb,
+              show P-1+1=P by omega]
+            have hrP : outR u P=false := by
+              have hh := outR_period u P hp 0
+              simpa only [Nat.zero_add,hr] using hh
+            rw [hrP]
+            cases outS u (P-1) <;> rfl
+        | succ t =>
+            refine ⟨t,List.mem_range.mpr (by omega),?_⟩
+            rw [(masked_demodulation u g h P hu hp t).2,
+              (masked_demodulation u g h P hu hp (t+1)).1,hb,hr]
+            cases outS u t <;> rfl
+      · refine ⟨t,List.mem_range.mpr ht,?_⟩
+        rw [(masked_demodulation u g h P hu hp t).2,
+          (masked_demodulation u g h P hu hp (t+1)).1,hb,hs]
+        rfl
+
+/-- Opposite phase forces equal flags. At a nonzero birth it descends to
+the older observations, with the essential lag on the second equality. -/
+theorem observe_birth_phase_transfer (u z : List Bool) (g h g' h' : Bool) (P : Nat)
+    (hu : u≠[]) (hz : z≠[]) (hP : 0<P)
+    (hpu : titer u P=u) (hpz : titer z P=z)
+    (heq : ∀ t, outR (u++[g,h]) t=outS (z++[g',h']) t ∧
+      outS (u++[g,h]) t=outR (z++[g',h']) (t+1)) :
+    birth P u g=birth P z g' ∧
+      (birth P u g=true → ∀ t,
+        outR u t=outS z t ∧ outS u t=outR z (t+1)) := by
+  have hd := phase_demodulation (u++[g,h]) (z++[g',h']) P heq
+  have hf : demodR P (u++[g,h])=demodS P (z++[g',h']) :=
+    funext (fun t => (hd t).1)
+  have hg : demodS P (u++[g,h])=(fun t => demodR P (z++[g',h']) (t+1)) :=
+    funext (fun t => (hd t).2)
+  have hb : birth P u g=birth P z g' := by
+    rw [birth_detector u g h P hu hP hpu,
+      birth_detector_opposite z g' h' P hz hP hpz,hf,hg]
+  refine ⟨hb,?_⟩
+  intro hbu t
+  have hbz : birth P z g'=true := hb.symm.trans hbu
+  have hu0 := demodulation_of_birth u g h P hu hpu hbu t
+  have hz0 := demodulation_of_birth z g' h' P hz hpz hbz t
+  have hz1 := demodulation_of_birth z g' h' P hz hpz hbz (t+1)
+  rw [(hd t).1,(hd t).2] at hu0
+  exact ⟨hu0.1.trans hz0.2.symm,hu0.2.trans hz1.1.symm⟩
+
+/-- Two singleton tails cannot have opposite-phase observations: at t=0
+their equal half-step values would also have to equal the negated next value. -/
+theorem singleton_not_opposite (a b : Bool) :
+    ¬ (∀ t, outR [a] t=outS [b] t ∧ outS [a] t=outR [b] (t+1)) := by
+  intro h
+  have h0 := h 0
+  cases a <;> cases b <;> rcases h0 with ⟨h1,h2⟩ <;> cases h1 <;> cases h2
+
+/-- A positive birth cannot support opposite-phase equality when both
+older prefixes are singleton tails. This is only a conditional base case. -/
+theorem singleton_birth_not_opposite (a b g h g' h' : Bool) (P : Nat)
+    (hP : 0<P) (hpa : titer [a] P=[a]) (hpb : titer [b] P=[b])
+    (hb : birth P [a] g=true) :
+    ¬ (∀ t, outR ([a]++[g,h]) t=outS ([b]++[g',h']) t ∧
+      outS ([a]++[g,h]) t=outR ([b]++[g',h']) (t+1)) := by
+  intro heq
+  have hd := observe_birth_phase_transfer [a] [b] g h g' h' P
+    (by simp) (by simp) hP hpa hpb heq
+  exact singleton_not_opposite a b (hd.2 hb)
+
 
 end Ruliology.CellularAutomata.Rule30ClockBirthDemodulation
