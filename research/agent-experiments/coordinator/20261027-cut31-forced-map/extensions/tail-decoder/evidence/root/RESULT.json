@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "module": "Rule30Cut31TailDecoderResearch",
+  "source_sha256": "2b563e10d29840681e3bb33b6780a69a693a753d683ed19db29dc82ffcb8f40b",
+  "object_sha256": "e4d48b8d24cc6b660df900879fd73eafbcbe7680b2e8fe987b4fdeb01a819552",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.gateRead",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.markerRead",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.marker_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.marker_polynomial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.xor_recover",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30Cut31TailDecoderResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 9,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "reused_dependency_count": 21,
+  "reused_sources": {
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30BlackRuns": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+    "Ruliology.CellularAutomata.Rule30DrivenLeft": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+    "Ruliology.CellularAutomata.Rule30PeriodTwo": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+    "Ruliology.CellularAutomata.Rule30ZeroBoundary": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+    "Ruliology.CellularAutomata.Rule30Realization": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5",
+    "Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers": "d16659ead7a294ff46d1ee37019d720fed76d4d35aa8be310a7ea65757289765",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94",
+    "Ruliology.CellularAutomata.Rule30Ether": "dc3d84cd13e0f091c400d60a0594e45dba59d9bc86aa224a328b2af66f06d756",
+    "Ruliology.CellularAutomata.Rule30PeriodTwoCoupled": "caa2f8ba78d0a48dc8c7db6f8adf65375b1d1442b85021eb5a676c1e185f3d22",
+    "Ruliology.CellularAutomata.Rule30PeriodTwoSideways": "d08b1d0d0ea35051855323fbf1e8a88f01ab39a89ad0361b76f161437c206b54",
+    "Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch": "4c2788c5a106019e6acba6b0821b0da53103dc75c56ab6dfa8e2e5c3ddb3702d",
+    "Ruliology.CellularAutomata.Rule30DrivenPrefixResearch": "377b464d3e4393f9960415ae49b8ca22d8657ef77d354f430353664cb800f987",
+    "Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore": "31d7c9c491e96ae505101c79591bc85f32b8da1e4c92b261b5be1d4b95cbc2d7",
+    "Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyWall": "5df98d5cf7af40b35e5bde6c01da4d3404122ae638dc1d127376b355f457678a",
+    "Ruliology.CellularAutomata.Rule30EmptyGateSpacingResearch": "4ee35ad6f170543d498905ee564fe9d3f8f9fd6307cb86441665c760e0837d46",
+    "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch": "760c24aad39146131c045662e12366c905fd48ec5e8a1de03a6e1f3c77ebd65e",
+    "Rule30Cut31ForcedMapResearch": "40f5dee5473493137db9c25f10dd76e2051424321ea0c08fc52452ea1df846ca"
+  },
+  "reused_objects": {
+    "Ruliology.CellularAutomata.Rule30Jen": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076",
+    "Ruliology.CellularAutomata.Rule30Prize": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19",
+    "Ruliology.CellularAutomata.Rule30BlackRuns": "fb8bab938cfe8d4c30b8ab050ea8e2e0d128614755e2eed25e5c070aac22f8b2",
+    "Ruliology.CellularAutomata.Rule30DrivenLeft": "e034e6df5f14b9ce8f9ede575ad76d16e6029264588daa04c8d14546e41a38c0",
+    "Ruliology.CellularAutomata.Rule30PeriodTwo": "617875b1d1d0743d1396258c91cad3fd5d06d01500e6815a5b801f21cf5ad7fc",
+    "Ruliology.CellularAutomata.Rule30ZeroBoundary": "54ea23e682222ce0ea79f08087673487310bccbdfb6a6306d454fd58f57245bc",
+    "Ruliology.CellularAutomata.Rule30Realization": "852cf51c88b39ec7edf738b40ec863d31257c8ae84219faf26456f2de01e00a5",
+    "Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers": "5b7ca33115915898913fc34d8b8a08eced0205d00e3256e4322e0c99a8bbf361",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "25dbe7e0798e2367da5cc4ddc27808eb3b50fa9cf9cfa32886479173e95b0350",
+    "Ruliology.CellularAutomata.Rule30Ether": "2d4bb9c315431f589bea6451791f1547a90e65f95c515c1768e9eea47b34e1b6",
+    "Ruliology.CellularAutomata.Rule30PeriodTwoCoupled": "b83b26c4cf474508890241fd80e004e93a7b64bde55ae789a6a20dc5638bcb67",
+    "Ruliology.CellularAutomata.Rule30PeriodTwoSideways": "7775343acb0abecde953cc27d8a38cd7de2e11f25f2e012b90663c33f1ab6f5c",
+    "Ruliology.CellularAutomata.Rule30SpacingRenormalizationResearch": "1e8fffd71bd4e8ab703f471bf3ed583cfb0a68c8ce3196f2a15a9c8943e2244c",
+    "Ruliology.CellularAutomata.Rule30DrivenPrefixResearch": "02a04f0a167a829fe31824b6aa5698bae572d852801d0a936c2f42283c6de0fc",
+    "Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyCore": "3bcfb471a1321d6920fc72597ae24190b7f1c760df17c9702bcbf02973db108a",
+    "Ruliology.CellularAutomata.Rule30Certificates.DrivenEmptyWall": "31423b1f9dea74ce166fd8f7a00d05fe848723007ebb25cc7ec61be7fea4fa9a",
+    "Ruliology.CellularAutomata.Rule30EmptyGateSpacingResearch": "e6f7d078d3296fc46415bdfc52a4a2558da0090b76e39bc08f7ec0cb7c77ef0d",
+    "Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch": "42ba747fbadd38dc49caf8018738cbe4c772aac90785c9f20c772a06a6d637a7",
+    "Rule30Cut31ForcedMapResearch": "865757fa575579b6aae002d2af93332f4d489e54374394adf3d1a05f16001cb2"
+  },
+  "dependency_objects_unchanged": true,
+  "elapsed_seconds": 1.9464203999959864,
+  "source_warning": false,
+  "fresh_full_closure_build": false
+}

@@ -1,0 +1,5 @@
+import Rule30Cut31TailDecoderResearch
+#check @Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder
+#print axioms Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder
+#check @Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder
+#print axioms Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder

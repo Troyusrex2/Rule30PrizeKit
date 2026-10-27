@@ -1,0 +1,19 @@
+Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.markerRead
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate)
+      r =
+    Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.pulse
+      Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (r + 7)
+'Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.gateRead
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.B
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate)
+      (Ruliology.CellularAutomata.Rule30Cut31ForcedMapResearch.L
+        Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate)
+      r =
+    Ruliology.CellularAutomata.Rule30EmptyGateLanguageResearch.refinedGate (r + 7)
+'Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder' depends on axioms: [propext,
+ Quot.sound]

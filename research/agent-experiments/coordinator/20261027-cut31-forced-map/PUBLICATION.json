@@ -14,5 +14,21 @@
   "candidate_manifest_sha256": "ce0846290e5db38fad4f3a17ecb50e35da46bca25c93ab5842058b9a698d8e6a",
   "paper_only": "Five/six nonzero forcing ticks per interior short-start packet.",
   "portable_verifier_execution": "Audit-only mode passed; the complete fresh build/check commands ran in the independent validation harness.",
-  "archive_byte_preservation": "Local .gitattributes disables newline conversion only inside this archive, preserving exact manifest/source/receipt hashes."
+  "archive_byte_preservation": "Local .gitattributes disables newline conversion only inside this archive, preserving exact manifest/source/receipt hashes.",
+  "extensions": [
+    {
+      "path": "extensions/tail-decoder",
+      "manifest_sha256": "51b16ccc600b6e2c661b07c3f826b0e02eb119ae796d274216244ade27daa855",
+      "module": "Rule30Cut31TailDecoderResearch",
+      "source_sha256": "2b563e10d29840681e3bb33b6780a69a693a753d683ed19db29dc82ffcb8f40b",
+      "new_constants": 9,
+      "new_headlines": 2,
+      "validation": "Independent fresh decoder compilation and full 9/2 replay using 21 hash-checked dependencies from the parent fresh build.",
+      "combined_fresh_22_source_build_performed": false,
+      "factor_control": "Specified spacetime factor fails an actual interior stencil; exact scalar witness retained.",
+      "finite_support_descent": "OPEN",
+      "problem1": "OPEN",
+      "wolfram_submission": false
+    }
+  ]
 }

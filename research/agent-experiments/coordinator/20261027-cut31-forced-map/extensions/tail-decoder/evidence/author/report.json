@@ -1,0 +1,88 @@
+{
+  "module": "Rule30Cut31TailDecoderResearch",
+  "source_sha256": "2b563e10d29840681e3bb33b6780a69a693a753d683ed19db29dc82ffcb8f40b",
+  "object_sha256": "e4d48b8d24cc6b660df900879fd73eafbcbe7680b2e8fe987b4fdeb01a819552",
+  "build_seconds": 0.4164371000370011,
+  "total_seconds": 1.9105506000341848,
+  "heads": [
+    "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder",
+    "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder"
+  ],
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.gateRead",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.markerRead",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.marker_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.marker_polynomial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.xor_recover",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_marker_decoder",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Cut31TailDecoderResearch.actual_gate_tail_decoder",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30Cut31TailDecoderResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 9,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "transformations": [
+    {
+      "path": "evidence/author/check.log",
+      "source_artifact": "cut31-tail-decoder-formal-20261027T0900/attempt01/Rule30Cut31TailDecoderResearch/check.log",
+      "original_sha256": "6cabd0120079dd1d19a4976762a889ffb49008aa18ee6073e423c9fee6a055db",
+      "sha256": "01115711cc9c67a895637e52a4ad07975ef2f09cecf8827d25dca43fa5ae7eeb",
+      "bytes": 1995,
+      "operation": "Replace only the absolute private workspace prefix with <validation-workspace>/"
+    },
+    {
+      "path": "evidence/root/check.log",
+      "source_artifact": "cut31-decoder-root-validation-20261027T0920/run/check.log",
+      "original_sha256": "c8206e874371f4531820ba689cfb77b6ab26c48abc82c27b3db8c87e215ba763",
+      "sha256": "01115711cc9c67a895637e52a4ad07975ef2f09cecf8827d25dca43fa5ae7eeb",
+      "bytes": 1995,
+      "operation": "Replace only the absolute private workspace prefix with <validation-workspace>/"
+    },
+    {
+      "path": "evidence/author/FINAL-RESULT.json",
+      "source_artifact": "cut31-tail-decoder-formal-20261027T0900/FINAL-RESULT.json",
+      "original_sha256": "31e132e32e4a1082aa8474a7ce2cacdebf10e9b819facf34aac5179527057dd2",
+      "sha256": "0b05137285ad666f5a05ea869146fd4f26df1490238c57b8fef3ddb6587709d7",
+      "bytes": 1222,
+      "operation": "Remove only guard.command and add labeled provenance"
+    },
+    {
+      "path": "evidence/author/REPORT.md",
+      "source_artifact": "cut31-tail-decoder-formal-20261027T0900/REPORT.md",
+      "original_sha256": "2fb6ab1d9e7d70b09109ed735e545dd81d3582100e48130cf680c5564949b0a1",
+      "sha256": "67086cd216d2c88cb671b924f03f8d574eea6615860ba06a9284acdbf2a41980",
+      "bytes": 4821,
+      "operation": "Replace only the private worker label with remote worker"
+    },
+    {
+      "path": "factor-control/PROTOCOL.md",
+      "source_artifact": "cut31-next-factor-test-20261027T0905/PROTOCOL.md",
+      "original_sha256": "6d01faf55d1932f067fd4bc942836ddde101a725d8253e397f84e1815391c7d2",
+      "sha256": "e7d7c514f915844c0c6eac8fad4b7a3f46da786683af72b9e5ca442b50e83c6f",
+      "bytes": 2679,
+      "operation": "Replace only the private worker label with remote worker"
+    },
+    {
+      "path": "factor-control/REPORT.md",
+      "source_artifact": "cut31-next-factor-test-20261027T0905/REPORT.md",
+      "original_sha256": "8cd7e81bf9c3f6d3f7edf2b98f5fe740c4580e770c71ca46396dffb71cc7f08d",
+      "sha256": "7879169f98cd55beb2dff4d0313c8a2c4a9a6be48088ea6eb97c240e2ffa9198",
+      "bytes": 4371,
+      "operation": "Replace only the private worker label with remote worker"
+    }
+  ],
+  "guard_extracts": "Resource-only extracts retain original hashes; private commands are omitted.",
+  "scope": "No proof, mathematical checker JSON or source type was changed; historical protocol/result hashes refer to their original sealed versions."
+}
