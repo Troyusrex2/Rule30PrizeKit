@@ -30,11 +30,6 @@ and does not settle a Rule30 prize problem. Absence-of-conservation results
 and local-current constructions have a substantial prior literature; no
 literature novelty is claimed for this direct formalization.
 
-Proof and formalization: Troy Lowry with OpenAI Codex. The independent
-backend agent's round-two conservation question motivated the proof.
-Research and exact verification records:
-https://github.com/Troyusrex2/Rule30PrizeKit/tree/61832c8f56b0aee58d185aa933ca7a3e4365bc4b/research/agent-experiments/coordinator/20261025-greedy-and-conservation
-
 References:
 * T. Hattori and S. Takesue, Additive conserved quantities in discrete-time
   lattice dynamical systems, Physica D49(1991),295-322.
