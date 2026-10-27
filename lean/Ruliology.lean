@@ -108,6 +108,7 @@ public import Ruliology.CellularAutomata.Rule30StripeMeeting
 public import Ruliology.CellularAutomata.Rule30PaddedWords
 public import Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample
 public import Ruliology.CellularAutomata.Rule30LocalBirthPotential
+public import Ruliology.CellularAutomata.Rule30BirthEpisodeInheritance
 
 /-!
 # Rule 30 Prize: Lean snapshot
