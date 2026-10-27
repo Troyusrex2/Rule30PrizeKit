@@ -20,12 +20,8 @@ cell yields spatial period 2p after at most 3p steps, for any initial pair.
 t+1 has period p after depth D+1, and its period contains a white cell,
 row t has period 2p after depth D+3p. Both p and D are unbounded.
 
-The result permits successive period doublings. It does not bound all
-spatial periods by 28, prove absorption, supply a density bound, or solve
-Q01, CQ01 or a prize problem. The white-cell hypothesis is necessary:
-the all-black driver transfer has a three-cycle.
-
-Contributed by Troy Lowry with OpenAI Codex, 2026-10-25.
+The result permits successive period doublings. The white-cell hypothesis
+is necessary: the all-black driver transfer has a three-cycle.
 -/
 
 @[expose] public section
