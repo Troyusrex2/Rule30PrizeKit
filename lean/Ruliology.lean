@@ -106,6 +106,8 @@ public import Ruliology.CellularAutomata.Rule30WhiteTailErosion
 public import Ruliology.CellularAutomata.Rule30XorRigidity
 public import Ruliology.CellularAutomata.Rule30StripeMeeting
 public import Ruliology.CellularAutomata.Rule30PaddedWords
+public import Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample
+public import Ruliology.CellularAutomata.Rule30LocalBirthPotential
 
 /-!
 # Rule 30 Prize: Lean snapshot
