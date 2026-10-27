@@ -54,6 +54,7 @@ public import Ruliology.CellularAutomata.Rule30CoupledGerms
 public import Ruliology.CellularAutomata.Rule30FiniteBlackRuns
 public import Ruliology.CellularAutomata.Rule30FiniteBlackRunBlocks
 public import Ruliology.CellularAutomata.Rule30FiniteDiagonals
+public import Ruliology.CellularAutomata.Rule30ClockBirthDemodulation
 public import Ruliology.CellularAutomata.Rule30FiniteWhiteRuns
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFour
 public import Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFrontLift
