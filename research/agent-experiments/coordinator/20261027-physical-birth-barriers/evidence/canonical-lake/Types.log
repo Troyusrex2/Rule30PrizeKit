@@ -1,0 +1,106 @@
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.physical_recurrence (t p : Int) :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit (t + 1) p =
+    Ruliology.CellularAutomata.Rule30Jen.rule
+      (Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t (p - 1))
+      (Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t p)
+      (Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t (p + 1))
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.physical_recurrence' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.temporal_period6 (t p : Int) :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit (t + 6) p =
+    Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t p
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.temporal_period6' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.spatial_period84 (t p : Int) :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t (p + 84) =
+    Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t p
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.spatial_period84' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.center_period2 (t : Int) :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit (t + 2) 0 =
+    Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t 0
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.center_period2' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.right_not_period4 :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit (1 + 4) 1 ≠
+    Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit 1 1
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.right_not_period4' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.temporal_least6 (p : Nat) (hp : 0 < p)
+  (h :
+    ∀ (t j : Int),
+      Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit (t + ↑p) j =
+        Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit t j) :
+  6 ≤ p
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.temporal_least6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.true_birth_every_six (k : Nat) :
+  Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (6 * k + 4) = false ∧
+    Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (6 * k + 4 + 1) = true
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.true_birth_every_six' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.births_arbitrarily_late (B : Nat) :
+  ∃ u,
+    B ≤ u ∧
+      4 ≤ u ∧
+        Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch u = false ∧
+          Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (u + 1) = true
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.births_arbitrarily_late' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.linear_birth_witnesses (N : Nat) :
+  ∃ u,
+    (∀ (i : Fin N), 4 ≤ u i ∧ u i + 1 < 6 * N) ∧
+      (∀ (i j : Fin N), u i = u j → i = j) ∧
+        ∀ (i : Fin N),
+          Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (u i) = false ∧
+            Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.backwardMismatch (u i + 1) = true
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.linear_birth_witnesses' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.initial_support_unbounded (N : Nat) :
+  ∃ p, ↑N < p ∧ Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.orbit 0 p = true
+'Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample.initial_support_unbounded' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_finite_nonzero (R : Nat) :
+  Ruliology.CellularAutomata.Rule30LocalBirthPotential.FiniteNonzero
+    (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R)
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_finite_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.evol_orbit (t : Nat) (p : Int) :
+  Ruliology.CellularAutomata.Rule30Realization.evol (Ruliology.CellularAutomata.Rule30LocalBirthPotential.Cycle.orbit 0)
+      t p =
+    Ruliology.CellularAutomata.Rule30LocalBirthPotential.Cycle.orbit (↑t) p
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.evol_orbit' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_agrees (R s : Nat) (hs : s ≤ 16) (p : Int)
+  (hp0 : -(↑R + 1) ≤ p) (hp1 : p ≤ ↑R + 1) :
+  Ruliology.CellularAutomata.Rule30Realization.evol (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) s p =
+    Ruliology.CellularAutomata.Rule30LocalBirthPotential.Cycle.orbit (↑s) p
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_agrees' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_local_alt (R t : Nat) (ht : 4 ≤ t) (ht' : t ≤ 15) :
+  Ruliology.CellularAutomata.Rule30LocalBirthPotential.LocalAlt
+    (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) t
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_local_alt' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_observation_loop (R : Nat) :
+  Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R
+      (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) 16 =
+    Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R
+      (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) 4
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_observation_loop' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_true_births (R : Nat) :
+  Ruliology.CellularAutomata.Rule30LocalBirthPotential.TrueBirth
+      (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) 4 ∧
+    Ruliology.CellularAutomata.Rule30LocalBirthPotential.TrueBirth
+      (Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut R) 10
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.cut_true_births' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30LocalBirthPotential.no_local_birth_potential (R : Nat) :
+  ¬∃ E,
+      ∀ (z : Int → Bool),
+        Ruliology.CellularAutomata.Rule30LocalBirthPotential.FiniteNonzero z →
+          ∀ (t : Nat),
+            4 ≤ t →
+              Ruliology.CellularAutomata.Rule30LocalBirthPotential.LocalAlt z t →
+                (E (Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R z (t + 1)) +
+                    if Ruliology.CellularAutomata.Rule30LocalBirthPotential.TrueBirth z t then 1 else 0) ≤
+                  E (Ruliology.CellularAutomata.Rule30LocalBirthPotential.observe R z t)
+'Ruliology.CellularAutomata.Rule30LocalBirthPotential.no_local_birth_potential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

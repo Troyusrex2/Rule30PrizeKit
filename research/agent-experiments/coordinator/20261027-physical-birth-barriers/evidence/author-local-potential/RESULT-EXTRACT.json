@@ -1,0 +1,348 @@
+{
+  "passed": true,
+  "module": "Rule30LocalBirthPotentialResearch",
+  "source_sha256": "369377cab23bff97d686bcf9441be04069bede425b8d28ac2494b4e5c0bba984",
+  "object_sha256": "2fe5e75ecd268c8ed940b4ac3ad45337c807dfa82cafc95f54000f1e3391d00b",
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "core_only": true,
+  "build_seconds": 0.4963432000367902,
+  "check_seconds": 1.2539724999805912,
+  "source_build_warning": false,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "checker_result": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.FiniteNonzero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.LocalAlt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.Observation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.TrueBirth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.coordinate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.coordinate_bounds",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.cut",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_agrees",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_finite_nonzero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_local_alt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_mismatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_observation_loop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_true_births",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cycle_center",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.evol_orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.instDecidableTrueBirth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.mismatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.no_local_birth_potential",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.observe",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30LocalBirthPotentialResearch.Cycle.orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_finite_nonzero",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.evol_orbit",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_agrees",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_local_alt",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_observation_loop",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.cut_true_births",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30LocalBirthPotentialResearch.no_local_birth_potential",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30LocalBirthPotentialResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 45,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "types_sha256": "3be5c46adcab00e5e1ed427c7276db4ca8af855e313de77cc66fe9df9daaf6e9",
+  "dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "4417b773634d0ecde29ef4d89ba91b974d4544d35f0ca840879282f83fd54e1a",
+      "auxiliary_objects": [
+        {
+          "suffix": ".private",
+          "sha256": "2e493dec694e6b593888b0d73f767649272f82ad1e5aae601b7aa57c40eab4e6"
+        },
+        {
+          "suffix": ".server",
+          "sha256": "87b23aa9b10757a66701c471e1c8a4c65f1a23a8c1c88827c35fcd2b763f1bf7"
+        }
+      ],
+      "fresh": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "bc0a43b68ea92dcb9c69baced034c858a778b226f88b94e4e9d39494388bc423",
+      "auxiliary_objects": [
+        {
+          "suffix": ".private",
+          "sha256": "558aeebe536012a331ffc3782e0d19beb23286c1858a3eb0799b0d419a508c86"
+        },
+        {
+          "suffix": ".server",
+          "sha256": "8c1f38bf05124719edcf2753ac390b0d62a868fbf9efd6d60636e7d43fca86b8"
+        }
+      ],
+      "fresh": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodicBirthCounterexample",
+      "source_sha256": "feb16ec4ddd636f751a5984d23093d18409355df1c8d38f594b5a151774f9632",
+      "object_sha256": "88f34da1a07e242d8311748a6c31ce48d79ff66510e705710b29ca71725c6049",
+      "auxiliary_objects": [
+        {
+          "suffix": ".private",
+          "sha256": "28262eb2e1e8a951d8145afdc196d8fe3f173f495cb2efe22bd6244af710afaa"
+        },
+        {
+          "suffix": ".server",
+          "sha256": "0ae14ecfa28281d10b896868166277a64381785cfb09051a5b5471701c699a09"
+        }
+      ],
+      "fresh": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "object_sha256": "4cfd184537740ca20170bcac3b9a2eb6b671694e731e965ae3cdcd7ef4d6e005",
+      "fresh": false,
+      "build_seconds": 0.5559386999811977,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "object_sha256": "c883743baa178ad83c70ca18d0044a554cfdb12a159ef2a85824262e69af2f3f",
+      "fresh": false,
+      "build_seconds": 0.4927130000432953,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BlackRuns",
+      "source_sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+      "object_sha256": "bec3ece940425ed8bcc502d79402079eb4a804cf45e11e00d8cb1aaa943f5a07",
+      "fresh": false,
+      "build_seconds": 6.932780800038017,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "source_sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "object_sha256": "2c04d021448c377d92809472ae81bd826535fb2cd3de5d8b217d6afceba7de85",
+      "fresh": false,
+      "build_seconds": 0.8620384999667294,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwo",
+      "source_sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+      "object_sha256": "78b98cf986976853ec43986b56246db6643fdb1d856b007ee322a7d2a9c7d389",
+      "fresh": false,
+      "build_seconds": 0.9585159999551252,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundary",
+      "source_sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+      "object_sha256": "669df211c91549877df387e38fae1b19377fcd8dc04c81db45254d728202c777",
+      "fresh": false,
+      "build_seconds": 2.757959300011862,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Realization",
+      "source_sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5",
+      "object_sha256": "8fd7552d203c93412421f2688f9c1b0846ed518951ec1faaa482ec1f94312660",
+      "fresh": false,
+      "build_seconds": 0.6453594999620691,
+      "warning": false,
+      "reused_from_owned_closure": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundaryBarriers",
+      "source_sha256": "d16659ead7a294ff46d1ee37019d720fed76d4d35aa8be310a7ea65757289765",
+      "object_sha256": "49aeb873406ff5dfb6f9d90483a122ecf5e085c6f899d55e34510f2c98610ab0",
+      "fresh": false,
+      "build_seconds": 2.6325687000062317,
+      "warning": false,
+      "reused_from_owned_closure": true
+    }
+  ],
+  "original_record_sha256": "751f79b150f3e4cef9d03148d0dd2d0e2c154d54925aa4ef21764fb274f4d0cd",
+  "extraction": "Private object paths omitted; checker JSON and all mathematical fields retained"
+}

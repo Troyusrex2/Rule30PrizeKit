@@ -1,0 +1,291 @@
+{
+  "passed": true,
+  "module": "Rule30PeriodicBirthCounterexample",
+  "source_sha256": "f861ad573fa7b079d25cb8ae11fc1401bbe95e49db2c9a328685ac81a7690c40",
+  "object_sha256": "5d020d60bb0124be6c88e25bb2853f3779c0d4c4808df91ed642b06602b894e7",
+  "core_only": true,
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "build_seconds": 0.8589033000171185,
+  "check_seconds": 1.5552975999889895,
+  "build_warning": false,
+  "checker_result": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Rule30PeriodicBirthCounterexample.backwardMismatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.births_arbitrarily_late",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PeriodicBirthCounterexample.bit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.center_not_period1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.center_period2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.initial_support_unbounded",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.linear_birth_witnesses",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PeriodicBirthCounterexample.orbit",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.orbit_nat_phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.physical_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PeriodicBirthCounterexample.profiles",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PeriodicBirthCounterexample.residue",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.residue_lt",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.residue_pred84",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.residue_succ6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.residue_succ84",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.right_not_period4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.right_short_period_failure",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.spatial_period84",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.stencils",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.temporal_least6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.temporal_period6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.true_birth_every_six",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.orbit.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.residue.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.physical_recurrence",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.temporal_period6",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.spatial_period84",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.center_period2",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.right_not_period4",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.temporal_least6",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.true_birth_every_six",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.births_arbitrarily_late",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.linear_birth_witnesses",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PeriodicBirthCounterexample.initial_support_unbounded",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PeriodicBirthCounterexample",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 44,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "types_sha256": "6edea474e4069a1c2b295e08d6295fca08f597f58a92167ba3f15ad0d5995f07",
+  "dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "4417b773634d0ecde29ef4d89ba91b974d4544d35f0ca840879282f83fd54e1a",
+      "fresh_in_this_run": false
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "bc0a43b68ea92dcb9c69baced034c858a778b226f88b94e4e9d39494388bc423",
+      "fresh_in_this_run": false
+    }
+  ],
+  "original_record_sha256": "a66b7fba27137245b5bad722ef25cafa53b487f43e0e32c80836ddc32e6a7282",
+  "extraction": "Private object paths omitted; checker JSON and all mathematical fields retained"
+}

@@ -1,0 +1,27 @@
+Rule30LocalBirthPotentialResearch.lean:29:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Rule30LocalBirthPotentialResearch.lean:32:13: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Rule30LocalBirthPotentialResearch.lean:49:39: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Rule30LocalBirthPotentialResearch.lean:49:46: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Rule30LocalBirthPotentialResearch.lean:49:20: error: unsolved goals
+R s : Nat
+hs : s ≤ 16
+p : Int
+hp0 : -(↑R + 1) ≤ p
+hp1 : p ≤ ↑R + 1
+j : Int
+h0 : -(↑R + 20) ≤ j
+h1 : j ≤ ↑R + 20
+⊢ (if -(↑R + 20) ≤ j ∧ j ≤ ↑R + 20 then Cycle.orbit 0 j else false) = Cycle.orbit 0 j
+Rule30LocalBirthPotentialResearch.lean:155:6: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲

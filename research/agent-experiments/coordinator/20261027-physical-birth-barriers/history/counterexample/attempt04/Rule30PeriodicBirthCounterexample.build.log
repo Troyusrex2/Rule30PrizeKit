@@ -1,0 +1,21 @@
+Rule30PeriodicBirthCounterexample.lean:140:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 3
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑N
+ b := ↑↑i
+ c := ↑((fun i => 6 * ↑i + 4) i)
+Rule30PeriodicBirthCounterexample.lean:140:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+  6*a - c ≤ 1
+where
+ a := ↑N
+ b := ↑↑i
+ c := ↑((fun i => 6 * ↑i + 4) i)
