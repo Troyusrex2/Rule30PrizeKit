@@ -1,0 +1,120 @@
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.doubling_lower : ∀ {T Q n0 : Nat},
+  0 < Q →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + Q ≤ n0 → ∀ (k : Nat), k ≤ Ruliology.CellularAutomata.Rule30PhysicalDefects.defectCount Q n0 (2 ^ k * n0)
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_lower : ∀ {T Q n0 : Nat},
+  0 < Q →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + Q ≤ n0 → ∀ (m : Nat), 2 * m ≤ Ruliology.CellularAutomata.Rule30PhysicalDefects.defectCount Q n0 (4 ^ m * n0)
+Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_budget : (∀ (T P : Nat),
+    0 < P →
+      (∀ (t : Nat),
+          T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+        ∃ Q n0 C M,
+          0 < Q ∧
+            P ∣ Q ∧
+              T + Q ≤ n0 ∧
+                ∀ (m : Nat),
+                  M ≤ m → Ruliology.CellularAutomata.Rule30PhysicalDefects.defectCount Q n0 (4 ^ m * n0) ≤ C + m) →
+  Ruliology.CellularAutomata.Rule30Prize.Problem1
+Ruliology.CellularAutomata.Rule30PhysicalDefects.or_difference : ∀ (r z ro zo : Bool),
+  ((r || z) ^^ (ro || zo)) = (!z && (r ^^ ro) ^^ !ro && (z ^^ zo))
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch_step : ∀ {Q t : Nat},
+  Q ≤ t →
+    Ruliology.CellularAutomata.Rule30Jen.cell t 0 = Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 0 →
+      Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q (t + 1) =
+        (Ruliology.CellularAutomata.Rule30PhysicalDefects.persists t &&
+            Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q t ^^
+          Ruliology.CellularAutomata.Rule30PhysicalDefects.forcing Q t)
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.periodic_mismatch_step : ∀ {T Q : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q (t + 1) =
+          (Ruliology.CellularAutomata.Rule30PhysicalDefects.persists t &&
+              Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q t ^^
+            Ruliology.CellularAutomata.Rule30PhysicalDefects.forcing Q t)
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect_eq_or_difference : ∀ {T Q : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect Q t =
+          (Ruliology.CellularAutomata.Rule30MaskedJen.orCol 0 t ^^
+            Ruliology.CellularAutomata.Rule30MaskedJen.orCol 0 (t - Q))
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.live_mismatch_step : ∀ {T Q : Nat},
+  (∀ (s : Nat),
+      T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q t = true →
+          Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q (t + 1) = true →
+            Ruliology.CellularAutomata.Rule30Jen.cell (t + 1) 1 =
+              (Ruliology.CellularAutomata.Rule30Jen.cell t 0 ^^ Ruliology.CellularAutomata.Rule30Jen.cell t 1)
+Ruliology.CellularAutomata.Rule30PhysicalDefects.xor_two_blocks : ∀ (x c : Nat → Bool) (P t : Nat),
+  (∀ (j : Nat), j < P → c (t + P + j) = c (t + j)) →
+    (∀ (j : Nat), j < 2 * P → x (t + j + 1) = (c (t + j) ^^ x (t + j))) → x (t + 2 * P) = x t
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.bounded_mismatch_episode : ∀ {T P : Nat},
+  0 < P →
+    (∀ (s : Nat),
+        T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+      ∀ (t : Nat),
+        T + 2 * P ≤ t →
+          ∃ j, j ≤ 2 * P ∧ Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch (2 * P) (t + j) = false
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.true_birth_iff : ∀ {T Q : Nat},
+  (∀ (s : Nat),
+      T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        (Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q t = false ∧
+            Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch Q (t + 1) = true ↔
+          Ruliology.CellularAutomata.Rule30Jen.cell t 1 = false ∧
+            Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 1 = false ∧
+              Ruliology.CellularAutomata.Rule30Jen.cell t 2 ≠ Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 2)
+Ruliology.CellularAutomata.Rule30PhysicalDefects.zero_one_between : ∀ (p : Nat → Bool) (z s : Nat),
+  z ≤ s → p z = false → p s = true → ∃ u, z ≤ u ∧ u < s ∧ p u = false ∧ p (u + 1) = true
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.birth_window : ∀ {T P : Nat},
+  0 < P →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      ∀ (n : Nat),
+        T + 2 * P ≤ n →
+          ∃ u, n ≤ u ∧ u + 1 < 2 * (n + 2 * P) ∧ Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth (2 * P) u = true
+Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart_formula : ∀ (Q n0 k : Nat),
+  Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart Q n0 k + 2 * Q = 2 ^ k * (n0 + 2 * Q)
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.block_birth_lower : ∀ {T P n0 : Nat},
+  0 < P →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + 2 * P ≤ n0 →
+        ∀ (k : Nat),
+          k ≤
+            Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount (Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth (2 * P)) n0
+              (Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart (2 * P) n0 k)
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_birth_lower : ∀ {T P n0 : Nat},
+  0 < P →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + 2 * P ≤ n0 →
+        4 * P ≤ n0 → ∀ (m : Nat), 2 * m ≤ Ruliology.CellularAutomata.Rule30PhysicalDefects.birthCount (2 * P) n0 (4 ^ m * n0) + 1
+@Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth_physical_iff : ∀ {T P : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    ∀ (t : Nat),
+      T + 2 * P ≤ t →
+        (Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth (2 * P) t = true ↔
+          Ruliology.CellularAutomata.Rule30Jen.cell t 1 = false ∧
+            Ruliology.CellularAutomata.Rule30Jen.cell (t - 2 * P) 1 = false ∧
+              Ruliology.CellularAutomata.Rule30Jen.cell t 2 ≠ Ruliology.CellularAutomata.Rule30Jen.cell (t - 2 * P) 2)
+Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_birth_budget : (∀ (T P : Nat),
+    0 < P →
+      (∀ (t : Nat),
+          T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+        ∃ n0 C M,
+          T + 2 * P ≤ n0 ∧
+            4 * P ≤ n0 ∧
+              ∀ (m : Nat), M ≤ m → Ruliology.CellularAutomata.Rule30PhysicalDefects.birthCount (2 * P) n0 (4 ^ m * n0) ≤ C + m) →
+  Ruliology.CellularAutomata.Rule30Prize.Problem1

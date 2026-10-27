@@ -1,0 +1,477 @@
+{
+  "passed": true,
+  "module": "Ruliology.CellularAutomata.Rule30PhysicalDefects",
+  "source_sha256": "d3b32e63d4dc6bffcf599fb478feb8dd4bde20189ca2a551740dc4bbeda8b063",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_birth_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.birthCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.birth_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart_formula",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart_ge",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.block_birth_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.bounded_mismatch_episode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.defectCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.defect_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.doubling_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.forcing",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount_mono_hi",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount_pos",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount_split",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.live_mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect_eq_or_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.or_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.or_of_live_defect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.periodic_mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.periodic_multiple",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.persists",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_birth_budget",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_budget",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth_physical_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.true_birth_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.xor_same_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.xor_two_blocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.zero_one_between",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.defectCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.intervalCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.doubling_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_budget",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.or_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.periodic_mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect_eq_or_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.live_mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.xor_two_blocks",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.bounded_mismatch_episode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.true_birth_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.zero_one_between",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.birth_window",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart_formula",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.block_birth_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_birth_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth_physical_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_birth_budget",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30PhysicalDefects",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 106,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "own_constants": 106,
+  "noninternal_declarations": 42,
+  "headlines": 18,
+  "fresh_lake_source_modules": 4,
+  "source_warnings": 0,
+  "mathlib_required": false,
+  "types_equal_prior_up_to_namespace_and_whitespace": true,
+  "source_bodies_verbatim": true,
+  "objects": {
+    "Ruliology.CellularAutomata.Rule30Prize": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86",
+    "Ruliology.CellularAutomata.Rule30Jen": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19",
+    "Ruliology.CellularAutomata.Rule30PhysicalDefects": "924fc8d77f83d19049775495918d6be0eed925672c8f39b6a1a038d10eed9b40"
+  },
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "worktree_base": "0364e4e8b51cac4b1c14559bb7667d42f007ed06",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "tool_sha256": {
+    "lean": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "lake": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c"
+  },
+  "no_reference_writes": true
+}

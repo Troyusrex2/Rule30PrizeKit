@@ -1,0 +1,95 @@
+[
+  {
+    "label": "lean-version",
+    "command": [
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "seconds": 0.041315099981147796
+  },
+  {
+    "label": "lake-version",
+    "command": [
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lake.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "seconds": 0.0479046999826096
+  },
+  {
+    "label": "lake-build",
+    "command": [
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lake.exe",
+      "--no-cache",
+      "build",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects"
+    ],
+    "exit_code": 0,
+    "seconds": 2.337696300004609
+  },
+  {
+    "label": "full-check",
+    "command": [
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lake.exe",
+      "--no-cache",
+      "env",
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+      "--run",
+      "Check.lean",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects",
+      "--claim",
+      "partial",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.doubling_lower",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_lower",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_budget",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.or_difference",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.mismatch_step",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.periodic_mismatch_step",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.maskedDefect_eq_or_difference",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.live_mismatch_step",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.xor_two_blocks",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.bounded_mismatch_episode",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.true_birth_iff",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.zero_one_between",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.birth_window",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.blockStart_formula",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.block_birth_lower",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.base_four_birth_lower",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.trueBirth_physical_iff",
+      "--headline",
+      "Ruliology.CellularAutomata.Rule30PhysicalDefects.problem1_of_fixed_birth_budget"
+    ],
+    "exit_code": 0,
+    "seconds": 1.6901450000004843
+  },
+  {
+    "label": "headline-types",
+    "command": [
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lake.exe",
+      "--no-cache",
+      "env",
+      "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+      "Types.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.39469539996935055
+  }
+]
