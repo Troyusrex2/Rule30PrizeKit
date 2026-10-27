@@ -1,0 +1,91 @@
+{
+  "reference_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "current_compatible_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "lean": "4.35.0",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_order": [
+    "Rule30PhysicalDefectBudgetResearch",
+    "Rule30PhysicalDefectChargeResearch",
+    "Rule30PhysicalDefectEpisodeResearch"
+  ],
+  "modules": [
+    {
+      "module": "Rule30PhysicalDefectBudgetResearch",
+      "source_sha256": "0ce4c056a39b761d297e4a51468e32d8deb7baf662507c6297cf477e1e2f506f",
+      "headlines": [
+        "Rule30PhysicalDefectBudgetResearch.doubling_lower",
+        "Rule30PhysicalDefectBudgetResearch.base_four_lower",
+        "Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget",
+        "Rule30PhysicalDefectBudgetResearch.or_difference",
+        "Rule30PhysicalDefectBudgetResearch.mismatch_step",
+        "Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step",
+        "Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference"
+      ],
+      "research_imports": [],
+      "official_imports": [
+        "Ruliology.CellularAutomata.Rule30MaskedJen"
+      ]
+    },
+    {
+      "module": "Rule30PhysicalDefectChargeResearch",
+      "source_sha256": "f55ad8100296ce6db1a143fbdb5785c3efc757e4435c1f14e62227820c980149",
+      "headlines": [
+        "Rule30PhysicalDefectChargeResearch.weight_expanded",
+        "Rule30PhysicalDefectChargeResearch.injected_expanded",
+        "Rule30PhysicalDefectChargeResearch.count_as_sum",
+        "Rule30PhysicalDefectChargeResearch.charge",
+        "Rule30PhysicalDefectChargeResearch.physical_charge"
+      ],
+      "research_imports": [
+        "Rule30PhysicalDefectBudgetResearch"
+      ],
+      "official_imports": []
+    },
+    {
+      "module": "Rule30PhysicalDefectEpisodeResearch",
+      "source_sha256": "e7f9b792bc8b8db49725417cc309d60ffbde8832a8d8252e7292ea5ca1adb0d2",
+      "headlines": [
+        "Rule30PhysicalDefectEpisodeResearch.live_mismatch_step",
+        "Rule30PhysicalDefectEpisodeResearch.xor_two_blocks",
+        "Rule30PhysicalDefectEpisodeResearch.bounded_mismatch_episode",
+        "Rule30PhysicalDefectEpisodeResearch.true_birth_iff"
+      ],
+      "research_imports": [
+        "Rule30PhysicalDefectBudgetResearch"
+      ],
+      "official_imports": []
+    }
+  ],
+  "official_modules": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "compiled_sha256": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "unchanged_between_pins": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "compiled_sha256": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "unchanged_between_pins": true
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source_path": "official-sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "compiled_sha256": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86",
+      "source_url_at_reference": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/5473ffd075f63c9d626e63b8455805d4831b39ca/lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_url_at_current": "https://raw.githubusercontent.com/WolframInstitute/Rule30PrizeKit/7d665044b904117af9e82328aeb90a30692b2b85/lean/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "unchanged_between_pins": true
+    }
+  ],
+  "counts_policy": "Fresh replay derives counts from returned checker results; prior receipts are provenance only.",
+  "prize_solved": false,
+  "upper_budget_proved": false
+}

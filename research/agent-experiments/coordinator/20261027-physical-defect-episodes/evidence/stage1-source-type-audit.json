@@ -1,0 +1,51 @@
+{
+  "source_type_quantifier_audit": "pass",
+  "fresh_execution": {
+    "research_modules": 2,
+    "module_owned_constants": 94,
+    "noninternal_declarations": 48,
+    "accepted_headlines": 12,
+    "build_warnings": 0
+  },
+  "modules": {
+    "Rule30PhysicalDefectBudgetResearch": {
+      "fresh_printed_types_match_prior_bytes": true,
+      "fresh_type_sha256": "07415f880843ba12836b96bae666dcc5e48c242943855e39cf9d34111baf8abc",
+      "source_sha256": "0ce4c056a39b761d297e4a51468e32d8deb7baf662507c6297cf477e1e2f506f",
+      "replayed_constants": 35,
+      "noninternal_declarations": 19,
+      "headlines": 7
+    },
+    "Rule30PhysicalDefectChargeResearch": {
+      "fresh_printed_types_match_prior_bytes": true,
+      "fresh_type_sha256": "bcade33349556b6df6ea02a2b013e133a959a260e6262e38b6437672c476bbe6",
+      "source_sha256": "f55ad8100296ce6db1a143fbdb5785c3efc757e4435c1f14e62227820c980149",
+      "replayed_constants": 59,
+      "noninternal_declarations": 29,
+      "headlines": 5
+    }
+  },
+  "official_source_compatibility_independently_checked": "Raw git source bytes equal at 5473ffd075f63c9d626e63b8455805d4831b39ca and 7d665044b904117af9e82328aeb90a30692b2b85; actual compiled reference is 5473.",
+  "quantifiers": [
+    "For every hypothetical center period P>0 from T, Q,n0,C,M are chosen before all m\u2265M.",
+    "Q>0 and P divides Q; n0\u2265T+Q ensures n0>0 and the past-time subtraction domain.",
+    "The upper estimate is an explicit premise; no upper budget is supplied."
+  ],
+  "physical_scope": [
+    "All cells are official single-seed Rule30Jen.cell at physical columns 0,1,2.",
+    "Mismatch recurrence needs Q\u2264t and equality of the physical center at t and t\u2212Q.",
+    "The eventual-period adapter uses t\u2265T+Q.",
+    "physical_charge itself allows Q=0; positivity is needed by the lower bound and conditional prize application."
+  ],
+  "endpoint_checks": [
+    "intervalCount counts the half-open interval [lo,hi), empty if hi\u2264lo.",
+    "doubling_lower at k=0 and base_four_lower at m=0 count the empty interval.",
+    "Initial mismatch at n0 is retained with an empty survival product.",
+    "The outer injection sum has length X\u2212n0\u22121 and last possible index X\u22122.",
+    "Injection at u begins contributing at u+1; reset at u still allows reading at u."
+  ],
+  "missing_upper_budget_open": true,
+  "no_unconditional_problem1_claim": true,
+  "archive_privacy": "Only two frozen research sources, three official references, mathematical reports and verification receipts/logs are copied. No Cedar input files, usage/session data, or monitor artifacts are included.",
+  "backend_verdict_claimed": false
+}

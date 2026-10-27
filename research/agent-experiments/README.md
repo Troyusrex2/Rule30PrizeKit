@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**New verified physical result:** [bounded mismatch episodes and defect budgets](coordinator/20261027-physical-defect-episodes/README.md). Under a hypothetical center period P, every 2P+1 consecutive readings contain a zero of the actual 2P-shift mismatch in column 1. The sources also identify true births and prove counting/charging interfaces. Full kernel validation covers all three sources; the frequency of births and the subcritical upper bound remain open.
+
 **New verified result:** [gated observation-period transfer](coordinator/20261027-gated-observation-periods/README.md): a common period of the older two observation streams transfers to a gated child, without a supplied whole older return. Fresh portable replay and an independent source/type audit accompany the theorem; quadratic phase parity and temporal algebraic closure are separately labelled paper-only failed routes. Whole-return reconstruction, gate inheritance, and the physical-center bridge remain open.
 
 **New verified results:** [exact response-filter criterion and gated whole returns](coordinator/20261027-response-filters-and-gates/REPORT.md), with complete portable replay and separately labelled counterexample notes. Spatial inheritance and P1 remain open.

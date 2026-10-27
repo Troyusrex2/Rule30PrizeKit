@@ -1,0 +1,44 @@
+Rule30PhysicalDefectChargeResearch.weight_expanded : ∀ (a mask : Nat → Bool) (s n : Nat),
+  Rule30PhysicalDefectChargeResearch.weight a mask s n =
+    Rule30PhysicalDefectChargeResearch.sumFrom
+      (fun t =>
+        Rule30PhysicalDefectChargeResearch.bit (mask t) * Rule30PhysicalDefectChargeResearch.survival a s (t - s))
+      s n
+Rule30PhysicalDefectChargeResearch.injected_expanded : ∀ (a b mask : Nat → Bool) (s n : Nat),
+  Rule30PhysicalDefectChargeResearch.injected a b mask s n =
+    Rule30PhysicalDefectChargeResearch.sumFrom
+      (fun u =>
+        Rule30PhysicalDefectChargeResearch.bit (b u) *
+          Rule30PhysicalDefectChargeResearch.weight a mask (u + 1) (s + n - (u + 1)))
+      s (n - 1)
+Rule30PhysicalDefectChargeResearch.count_as_sum : ∀ (mask x : Nat → Bool) (s n : Nat),
+  Rule30PhysicalDefectBudgetResearch.intervalCount (fun t => mask t && x t) s (s + n) =
+    Rule30PhysicalDefectChargeResearch.sumFrom
+      (fun t => Rule30PhysicalDefectChargeResearch.bit (mask t) * Rule30PhysicalDefectChargeResearch.bit (x t)) s n
+Rule30PhysicalDefectChargeResearch.charge : ∀ (x a b mask : Nat → Bool) (s n : Nat),
+  (∀ (t : Nat), s ≤ t → x (t + 1) = (a t && x t ^^ b t)) →
+    Rule30PhysicalDefectBudgetResearch.intervalCount (fun t => mask t && x t) s (s + n) ≤
+      Rule30PhysicalDefectChargeResearch.bit (x s) * Rule30PhysicalDefectChargeResearch.weight a mask s n +
+        Rule30PhysicalDefectChargeResearch.injected a b mask s n
+@Rule30PhysicalDefectChargeResearch.physical_charge : ∀ {T Q n0 X : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    T + Q ≤ n0 →
+      n0 ≤ X →
+        Rule30PhysicalDefectBudgetResearch.defectCount Q n0 X ≤
+          Rule30PhysicalDefectChargeResearch.bit (Rule30PhysicalDefectBudgetResearch.mismatch Q n0) *
+              Rule30PhysicalDefectChargeResearch.sumFrom
+                (fun t =>
+                  (Rule30PhysicalDefectChargeResearch.bit !Ruliology.CellularAutomata.Rule30Jen.cell t 0) *
+                    Rule30PhysicalDefectChargeResearch.survival Rule30PhysicalDefectBudgetResearch.persists n0 (t - n0))
+                n0 (X - n0) +
+            Rule30PhysicalDefectChargeResearch.sumFrom
+              (fun u =>
+                Rule30PhysicalDefectChargeResearch.bit (Rule30PhysicalDefectBudgetResearch.forcing Q u) *
+                  Rule30PhysicalDefectChargeResearch.sumFrom
+                    (fun t =>
+                      (Rule30PhysicalDefectChargeResearch.bit !Ruliology.CellularAutomata.Rule30Jen.cell t 0) *
+                        Rule30PhysicalDefectChargeResearch.survival Rule30PhysicalDefectBudgetResearch.persists (u + 1)
+                          (t - (u + 1)))
+                    (u + 1) (X - (u + 1)))
+              n0 (X - n0 - 1)

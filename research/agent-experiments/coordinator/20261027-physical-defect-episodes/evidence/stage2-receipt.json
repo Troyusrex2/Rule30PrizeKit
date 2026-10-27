@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "module": "Rule30PhysicalDefectEpisodeResearch",
+  "source_sha256": "e7f9b792bc8b8db49725417cc309d60ffbde8832a8d8252e7292ea5ca1adb0d2",
+  "compiled_sha256": "41217756cf34762ee4f8be37b50c0c5cb88ab78b9eea22eaf8ab68e87210d9d2",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.bounded_mismatch_episode",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.live_mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.or_of_live_defect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.true_birth_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.xor_same_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.xor_two_blocks",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.live_mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.xor_two_blocks",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.bounded_mismatch_episode",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectEpisodeResearch.true_birth_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PhysicalDefectEpisodeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 23,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "seconds": 2.061081399966497,
+  "build_warning_count": 0,
+  "fresh_type_matches_prior": true,
+  "commands": [
+    {
+      "stage": "build",
+      "command": [
+        "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+        "-o",
+        "C:\\Users\\troyu\\Rule30-offload\\research\\physical-defect-episode-publication-prep-20261027T0140\\results\\lib\\Rule30PhysicalDefectEpisodeResearch.olean",
+        "C:\\Users\\troyu\\Rule30-offload\\research\\physical-defect-episode-publication-prep-20261027T0140\\results\\Rule30PhysicalDefectEpisodeResearch.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.49691709998296574
+    },
+    {
+      "stage": "check",
+      "command": [
+        "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+        "--run",
+        "C:\\Users\\troyu\\Rule30-offload\\research\\verifier9-20261026\\project\\Check.lean",
+        "Rule30PhysicalDefectEpisodeResearch",
+        "--claim",
+        "partial",
+        "--headline",
+        "Rule30PhysicalDefectEpisodeResearch.live_mismatch_step",
+        "--headline",
+        "Rule30PhysicalDefectEpisodeResearch.xor_two_blocks",
+        "--headline",
+        "Rule30PhysicalDefectEpisodeResearch.bounded_mismatch_episode",
+        "--headline",
+        "Rule30PhysicalDefectEpisodeResearch.true_birth_iff"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1817164000240155
+    },
+    {
+      "stage": "types",
+      "command": [
+        "C:\\Users\\troyu\\Rule30-offload\\_cache\\payload\\toolchain\\bin\\lean.exe",
+        "C:\\Users\\troyu\\Rule30-offload\\research\\physical-defect-episode-publication-prep-20261027T0140\\results\\Types.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3765371000044979
+    }
+  ],
+  "reused_portable_dependency_receipt_sha256": "8c52bf8a05d5d9d6fcf19a3aeed3ac672a66c50277cf1182807d010025599db9",
+  "reused_research_modules": [
+    "Rule30PhysicalDefectBudgetResearch",
+    "Rule30PhysicalDefectChargeResearch"
+  ],
+  "only_new_leaf_built_and_replayed": true,
+  "compiled_reference_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "source_compatible_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean_executable_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea"
+}

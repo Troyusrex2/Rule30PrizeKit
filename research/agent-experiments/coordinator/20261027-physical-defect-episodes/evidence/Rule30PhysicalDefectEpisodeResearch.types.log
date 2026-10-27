@@ -1,0 +1,27 @@
+@Rule30PhysicalDefectEpisodeResearch.live_mismatch_step : ∀ {T Q : Nat},
+  (∀ (s : Nat),
+      T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Rule30PhysicalDefectBudgetResearch.mismatch Q t = true →
+          Rule30PhysicalDefectBudgetResearch.mismatch Q (t + 1) = true →
+            Ruliology.CellularAutomata.Rule30Jen.cell (t + 1) 1 =
+              (Ruliology.CellularAutomata.Rule30Jen.cell t 0 ^^ Ruliology.CellularAutomata.Rule30Jen.cell t 1)
+Rule30PhysicalDefectEpisodeResearch.xor_two_blocks : ∀ (x c : Nat → Bool) (P t : Nat),
+  (∀ (j : Nat), j < P → c (t + P + j) = c (t + j)) →
+    (∀ (j : Nat), j < 2 * P → x (t + j + 1) = (c (t + j) ^^ x (t + j))) → x (t + 2 * P) = x t
+@Rule30PhysicalDefectEpisodeResearch.bounded_mismatch_episode : ∀ {T P : Nat},
+  0 < P →
+    (∀ (s : Nat),
+        T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+      ∀ (t : Nat), T + 2 * P ≤ t → ∃ j, j ≤ 2 * P ∧ Rule30PhysicalDefectBudgetResearch.mismatch (2 * P) (t + j) = false
+@Rule30PhysicalDefectEpisodeResearch.true_birth_iff : ∀ {T Q : Nat},
+  (∀ (s : Nat),
+      T ≤ s → Ruliology.CellularAutomata.Rule30Jen.cell (s + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell s 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        (Rule30PhysicalDefectBudgetResearch.mismatch Q t = false ∧
+            Rule30PhysicalDefectBudgetResearch.mismatch Q (t + 1) = true ↔
+          Ruliology.CellularAutomata.Rule30Jen.cell t 1 = false ∧
+            Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 1 = false ∧
+              Ruliology.CellularAutomata.Rule30Jen.cell t 2 ≠ Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 2)

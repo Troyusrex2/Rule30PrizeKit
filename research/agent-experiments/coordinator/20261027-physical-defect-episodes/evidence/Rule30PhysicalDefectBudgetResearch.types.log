@@ -1,0 +1,44 @@
+@Rule30PhysicalDefectBudgetResearch.doubling_lower : ∀ {T Q n0 : Nat},
+  0 < Q →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + Q ≤ n0 → ∀ (k : Nat), k ≤ Rule30PhysicalDefectBudgetResearch.defectCount Q n0 (2 ^ k * n0)
+@Rule30PhysicalDefectBudgetResearch.base_four_lower : ∀ {T Q n0 : Nat},
+  0 < Q →
+    (∀ (t : Nat),
+        T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+      T + Q ≤ n0 → ∀ (m : Nat), 2 * m ≤ Rule30PhysicalDefectBudgetResearch.defectCount Q n0 (4 ^ m * n0)
+Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget : (∀ (T P : Nat),
+    0 < P →
+      (∀ (t : Nat),
+          T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + P) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+        ∃ Q n0 C M,
+          0 < Q ∧
+            P ∣ Q ∧
+              T + Q ≤ n0 ∧
+                ∀ (m : Nat), M ≤ m → Rule30PhysicalDefectBudgetResearch.defectCount Q n0 (4 ^ m * n0) ≤ C + m) →
+  Ruliology.CellularAutomata.Rule30Prize.Problem1
+Rule30PhysicalDefectBudgetResearch.or_difference : ∀ (r z ro zo : Bool),
+  ((r || z) ^^ (ro || zo)) = (!z && (r ^^ ro) ^^ !ro && (z ^^ zo))
+@Rule30PhysicalDefectBudgetResearch.mismatch_step : ∀ {Q t : Nat},
+  Q ≤ t →
+    Ruliology.CellularAutomata.Rule30Jen.cell t 0 = Ruliology.CellularAutomata.Rule30Jen.cell (t - Q) 0 →
+      Rule30PhysicalDefectBudgetResearch.mismatch Q (t + 1) =
+        (Rule30PhysicalDefectBudgetResearch.persists t && Rule30PhysicalDefectBudgetResearch.mismatch Q t ^^
+          Rule30PhysicalDefectBudgetResearch.forcing Q t)
+@Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step : ∀ {T Q : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Rule30PhysicalDefectBudgetResearch.mismatch Q (t + 1) =
+          (Rule30PhysicalDefectBudgetResearch.persists t && Rule30PhysicalDefectBudgetResearch.mismatch Q t ^^
+            Rule30PhysicalDefectBudgetResearch.forcing Q t)
+@Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference : ∀ {T Q : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Ruliology.CellularAutomata.Rule30Jen.cell (t + Q) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+    ∀ (t : Nat),
+      T + Q ≤ t →
+        Rule30PhysicalDefectBudgetResearch.maskedDefect Q t =
+          (Ruliology.CellularAutomata.Rule30MaskedJen.orCol 0 t ^^
+            Ruliology.CellularAutomata.Rule30MaskedJen.orCol 0 (t - Q))

@@ -1,0 +1,453 @@
+{
+  "passed": true,
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "compiled_reference_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "current_source_compatible_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "fresh_research_objects_only": true,
+  "official_library_reused": true,
+  "new_axioms": [],
+  "prize_solved": false,
+  "totals": {
+    "research_modules": 2,
+    "module_owned_constants": 94,
+    "noninternal_declarations": 48,
+    "accepted_headlines": 12,
+    "build_warnings": 0
+  },
+  "results": [
+    {
+      "module": "Rule30PhysicalDefectBudgetResearch",
+      "source_sha256": "0ce4c056a39b761d297e4a51468e32d8deb7baf662507c6297cf477e1e2f506f",
+      "compiled_sha256": "ed3553bdf9c9656aaceb7c94fd496d39e849c641fd34e1ef814925c97b237785",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.base_four_lower",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.defectCount",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.defect_window",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.doubling_lower",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.forcing",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.intervalCount",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.intervalCount_pos",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.intervalCount_split",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.mismatch",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.mismatch_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.or_difference",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.periodic_multiple",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectBudgetResearch.persists",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.defectCount.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.intervalCount.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.doubling_lower",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.base_four_lower",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.or_difference",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.mismatch_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30PhysicalDefectBudgetResearch",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 35,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.1765207999851555,
+      "build_warning_count": 0
+    },
+    {
+      "module": "Rule30PhysicalDefectChargeResearch",
+      "source_sha256": "f55ad8100296ce6db1a143fbdb5785c3efc757e4435c1f14e62227820c980149",
+      "compiled_sha256": "b23cf98df78d72637a148619f7b143006185e8ca0009cab023d53453c9af0aea",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.bit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.bit_and",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.charge",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.count_as_sum",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.injected",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.injected_expanded",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.physical_charge",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom_congr",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom_mul",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.survival",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.weight",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.weight_expanded",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.bit.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.bit.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.bit.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.injected.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.injected.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.injected.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "Rule30PhysicalDefectChargeResearch.sumFrom.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.survival.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.survival.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.survival.eq_def",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.weight.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.weight.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.weight.eq_def",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.weight_expanded",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.injected_expanded",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.count_as_sum",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.charge",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "Rule30PhysicalDefectChargeResearch.physical_charge",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "Rule30PhysicalDefectChargeResearch",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 59,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "seconds": 2.017693500034511,
+      "build_warning_count": 0
+    }
+  ]
+}

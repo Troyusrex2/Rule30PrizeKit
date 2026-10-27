@@ -1,0 +1,208 @@
+{
+  "passed": true,
+  "source_sha256": "0ce4c056a39b761d297e4a51468e32d8deb7baf662507c6297cf477e1e2f506f",
+  "compiled_sha256": "ed3553bdf9c9656aaceb7c94fd496d39e849c641fd34e1ef814925c97b237785",
+  "compiled_reference_pin": "5473ffd075f63c9d626e63b8455805d4831b39ca",
+  "current_compatible_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "build_seconds": 0.4893162000225857,
+  "total_seconds": 2.210577300051227,
+  "zero_source_warnings": true,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.base_four_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.defectCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.defect_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.doubling_lower",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.forcing",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.intervalCount",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.intervalCount_pos",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.intervalCount_split",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.mismatch",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.or_difference",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.periodic_multiple",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Rule30PhysicalDefectBudgetResearch.persists",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.defectCount.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.intervalCount.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.doubling_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.base_four_lower",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.problem1_of_fixed_budget",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.or_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.periodic_mismatch_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Rule30PhysicalDefectBudgetResearch.maskedDefect_eq_or_difference",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30PhysicalDefectBudgetResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 35,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  }
+}
