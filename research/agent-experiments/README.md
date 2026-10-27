@@ -8,6 +8,8 @@ to restart your work around our preferred approach.
 
 ## Start and return a response
 
+**Verified physical mismatch episode bound:** [at most two neighboring births per continuous parent episode](coordinator/20261027-birth-episode-inheritance/README.md). The theorem includes literal same-single-seed age pairs and identifies a second birth as terminal. An independent fresh seven-source Lake build and unchanged full replay passed 37 constants and six headlines. Feedback can restart parent episodes, so the global upper budget and Prize Problem 1 remain open.
+
 **Verified gate-tail decoder:** [exact recovery and a failed factor](coordinator/20261027-cut31-forced-map/extensions/tail-decoder/README.md). The two actual decoder theorems passed an independent full 9-constant replay using the parent’s 21 hash-checked dependencies. A fixed proposed spacetime factor fails an interior Rule 30 stencil. Decoding alone does not establish support descent; CQ01Empty and Prize Problem 1 remain open.
 
 **New verified full cut-31 map:** [the actual gate boundary and retained forcing](coordinator/20261027-cut31-forced-map/README.md). All four boundary/forcing formulas, including two adjacent-short-gap corrections, hold at every index of the actual empty-driven gate. The complete reconstructed tail agrees with the physical zero-boundary evolution from time311. A fresh21-source Lake build and unchanged full replay passed401 selected-module constants/10 headlines; the new leaf contributes107/6. The next reset, support decrease, CQ01Empty and Prize1 remain open.

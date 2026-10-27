@@ -1,0 +1,51 @@
+--- attempt01/source.lean
++++ attempt02/source.lean
+@@ -80,10 +80,11 @@
+   have hk := death_termination hF hG d (hc d (by omega) (by omega)) hd hd1
+     (hp d (by omega) (by omega)) (hp (d+1) (by omega) (by omega))
+   have hz : Z<d+2 := by
+-    by_contra hn
+-    have htrue := hp (d+2) (by omega) (by omega)
+-    rw [htrue] at hk
+-    contradiction
++    by_cases hn : Z<d+2
++    · exact hn
++    · have htrue := hp (d+2) (by omega) (by omega)
++      rw [htrue] at hk
++      contradiction
+   refine ⟨by omega,?_⟩
+   simpa only [show d+2=b+1 by omega] using hk
+ 
+@@ -102,8 +103,12 @@
+ 
+ theorem seedHistory_actual (age : Nat) : IsR30 (seedHistory age) := by
+   intro t p
+-  simp only [seedHistory,show age+(t+1)=(age+t)+1 by omega,cell]
+-  congr 1 <;> omega
++  change cell ((age+t)+1) ((p+1:Nat):Int) =
++    rule (cell (age+t) (p:Int)) (cell (age+t) ((p+1:Nat):Int))
++      (cell (age+t) ((p+2:Nat):Int))
++  have hl : ((p+1:Nat):Int)-1=(p:Int) := by omega
++  have hr : ((p+1:Nat):Int)+1=((p+2:Nat):Int) := by omega
++  rw [cell,hl,hr]
+ 
+ def lagDifference (Q i t : Nat) : Bool := xor (cell (Q+t) (i:Int)) (cell t (i:Int))
+ 
+@@ -119,7 +124,7 @@
+     lagDifference Q 2 (d+2)=false := by
+   simp only [lagDifference_eq] at h1 hd h2 h2n ⊢
+   apply death_termination (seedHistory_actual Q) (seedHistory_actual 0) d
+-    (by simpa only [seedHistory,Nat.zero_add] using hc) h1 hd h2 h2n
++    (by simpa only [seedHistory,Nat.zero_add,Int.natCast_zero] using hc) h1 hd h2 h2n
+ 
+ theorem actual_terminal_second_birth (Q A Z a b : Nat)
+     (ha : A≤a) (hab : a<b) (hb : b≤Z)
+@@ -128,7 +133,7 @@
+     (ba : Birth (lagDifference Q 1) a) (bb : Birth (lagDifference Q 1) b) :
+     b=Z ∧ lagDifference Q 2 (b+1)=false := by
+   have h := terminal_second_birth (seedHistory_actual Q) (seedHistory_actual 0) A Z a b
+-    ha hab hb (by simpa only [seedHistory,Nat.zero_add] using hc)
++    ha hab hb (by simpa only [seedHistory,Nat.zero_add,Int.natCast_zero] using hc)
+     (by simpa only [lagDifference_eq] using hp)
+     (by simpa only [Birth,lagDifference_eq] using ba)
+     (by simpa only [Birth,lagDifference_eq] using bb)

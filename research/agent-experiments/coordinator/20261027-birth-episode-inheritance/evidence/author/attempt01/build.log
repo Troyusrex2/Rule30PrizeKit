@@ -1,0 +1,63 @@
+Rule30BirthEpisodeInheritanceResearch.lean:83:5: error: unknown tactic
+Rule30BirthEpisodeInheritanceResearch.lean:82:21: error: unsolved goals
+F G : Nat → Nat → Bool
+hF : IsR30 F
+hG : IsR30 G
+A Z a b : Nat
+ha : A ≤ a
+hab : a < b
+hb : b ≤ Z
+hc : ∀ (t : Nat), A ≤ t → t ≤ Z → F t 0 = G t 0
+hp : ∀ (t : Nat), A ≤ t → t ≤ Z → difference F G 2 t = true
+ba : Birth (difference F G 1) a
+bb : Birth (difference F G 1) b
+hend : a + 1 + (b - (a + 1)) = b
+d : Nat
+hda : a + 1 ≤ d
+hdb : d < b
+hd : difference F G 1 d = true
+hd1 : difference F G 1 (d + 1) = false
+hk : difference F G 2 (d + 2) = false
+⊢ Z < d + 2
+Rule30BirthEpisodeInheritanceResearch.lean:75:42: error: unsolved goals
+F G : Nat → Nat → Bool
+hF : IsR30 F
+hG : IsR30 G
+A Z a b : Nat
+ha : A ≤ a
+hab : a < b
+hb : b ≤ Z
+hc : ∀ (t : Nat), A ≤ t → t ≤ Z → F t 0 = G t 0
+hp : ∀ (t : Nat), A ≤ t → t ≤ Z → difference F G 2 t = true
+ba : Birth (difference F G 1) a
+bb : Birth (difference F G 1) b
+hend : a + 1 + (b - (a + 1)) = b
+d : Nat
+hda : a + 1 ≤ d
+hdb : d < b
+hd : difference F G 1 d = true
+hd1 : difference F G 1 (d + 1) = false
+hk : difference F G 2 (d + 2) = false
+hz : Z < d + 2
+⊢ b = Z ∧ difference F G 2 (b + 1) = false
+Rule30BirthEpisodeInheritanceResearch.lean:106:14: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+Rule30BirthEpisodeInheritanceResearch.lean:105:25: warning: This simp argument is unused:
+  show age + (t + 1) = (age + t) + 1 by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [seedHistory, cell]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Rule30BirthEpisodeInheritanceResearch.lean:122:8: error: Type mismatch: After simplification, term
+  hc
+ has type
+  @Eq Bool (cell (Q + d) 0) (cell d 0)
+but is expected to have type
+  @Eq Bool (cell (Q + d) ↑0) (cell d ↑0)
+Rule30BirthEpisodeInheritanceResearch.lean:131:18: error: Type mismatch: After simplification, term
+  hc
+ has type
+  ∀ (t : Nat), A ≤ t → t ≤ Z → @Eq Bool (cell (Q + t) 0) (cell t 0)
+but is expected to have type
+  ∀ (t : Nat), A ≤ t → t ≤ Z → @Eq Bool (cell (Q + t) ↑0) (cell t ↑0)

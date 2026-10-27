@@ -1,0 +1,104 @@
+@Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.death_termination : ∀ {F G : Nat → Nat → Bool},
+  Ruliology.CellularAutomata.Rule30Ether.IsR30 F →
+    Ruliology.CellularAutomata.Rule30Ether.IsR30 G →
+      ∀ (d : Nat),
+        F d 0 = G d 0 →
+          Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1 d = true →
+            Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1 (d + 1) = false →
+              Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 d = true →
+                Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 (d + 1) = true →
+                  Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 (d + 2) = false
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.death_termination' depends on axioms: [propext,
+ Quot.sound]
+@Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.terminal_second_birth : ∀ {F G : Nat → Nat → Bool},
+  Ruliology.CellularAutomata.Rule30Ether.IsR30 F →
+    Ruliology.CellularAutomata.Rule30Ether.IsR30 G →
+      ∀ (A Z a b : Nat),
+        A ≤ a →
+          a < b →
+            b ≤ Z →
+              (∀ (t : Nat), A ≤ t → t ≤ Z → F t 0 = G t 0) →
+                (∀ (t : Nat),
+                    A ≤ t →
+                      t ≤ Z →
+                        Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 t = true) →
+                  Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                      (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1) a →
+                    Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                        (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1) b →
+                      b = Z ∧
+                        Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 (b + 1) =
+                          false
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.terminal_second_birth' depends on axioms: [propext,
+ Quot.sound]
+@Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.no_ordered_three_births : ∀ {F G : Nat → Nat → Bool},
+  Ruliology.CellularAutomata.Rule30Ether.IsR30 F →
+    Ruliology.CellularAutomata.Rule30Ether.IsR30 G →
+      ∀ (A Z a b c : Nat),
+        A ≤ a →
+          a < b →
+            b < c →
+              c ≤ Z →
+                (∀ (t : Nat), A ≤ t → t ≤ Z → F t 0 = G t 0) →
+                  (∀ (t : Nat),
+                      A ≤ t →
+                        t ≤ Z →
+                          Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 2 t = true) →
+                    Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                        (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1) a →
+                      Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                          (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1) b →
+                        Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                            (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.difference F G 1) c →
+                          False
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.no_ordered_three_births' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_lag_death : ∀ (Q d : Nat),
+  Ruliology.CellularAutomata.Rule30Jen.cell (Q + d) 0 = Ruliology.CellularAutomata.Rule30Jen.cell d 0 →
+    Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1 d = true →
+      Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1 (d + 1) = false →
+        Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 d = true →
+          Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 (d + 1) = true →
+            Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 (d + 2) = false
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_lag_death' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_terminal_second_birth : ∀ (Q A Z a b : Nat),
+  A ≤ a →
+    a < b →
+      b ≤ Z →
+        (∀ (t : Nat),
+            A ≤ t →
+              t ≤ Z →
+                Ruliology.CellularAutomata.Rule30Jen.cell (Q + t) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+          (∀ (t : Nat),
+              A ≤ t →
+                t ≤ Z → Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 t = true) →
+            Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1) a →
+              Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                  (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1) b →
+                b = Z ∧
+                  Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 (b + 1) = false
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_terminal_second_birth' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_no_ordered_three_births : ∀ (Q A Z a b c : Nat),
+  A ≤ a →
+    a < b →
+      b < c →
+        c ≤ Z →
+          (∀ (t : Nat),
+              A ≤ t →
+                t ≤ Z →
+                  Ruliology.CellularAutomata.Rule30Jen.cell (Q + t) 0 = Ruliology.CellularAutomata.Rule30Jen.cell t 0) →
+            (∀ (t : Nat),
+                A ≤ t →
+                  t ≤ Z → Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 2 t = true) →
+              Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                  (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1) a →
+                Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                    (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1) b →
+                  Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.Birth
+                      (Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.lagDifference Q 1) c →
+                    False
+'Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_no_ordered_three_births' depends on axioms: [propext,
+ Quot.sound]

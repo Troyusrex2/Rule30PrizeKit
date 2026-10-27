@@ -1,0 +1,56 @@
+{
+  "official_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "sources": {
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30StripCertificates": "9a359c0afc4151b62bcb7a05f240a56c37f3c93d3233bb1f0a0af4d54b72fb94",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Ether": "dc3d84cd13e0f091c400d60a0594e45dba59d9bc86aa224a328b2af66f06d756",
+    "Rule30BirthEpisodeInheritanceResearch": "9feefc92e8ef907368b1f90f0fdbb57d5e64d1ade5faf81578ac30c2a8644589"
+  },
+  "order": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "Ruliology.CellularAutomata.Rule30MaskedJen",
+    "Ruliology.CellularAutomata.Rule30StripCertificates",
+    "Ruliology.CellularAutomata.Rule30Diagonals",
+    "Ruliology.CellularAutomata.Rule30Ether",
+    "Rule30BirthEpisodeInheritanceResearch"
+  ],
+  "official_sources": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "Ruliology.CellularAutomata.Rule30MaskedJen",
+    "Ruliology.CellularAutomata.Rule30StripCertificates",
+    "Ruliology.CellularAutomata.Rule30Diagonals",
+    "Ruliology.CellularAutomata.Rule30Ether"
+  ],
+  "research_sources": [
+    "Rule30BirthEpisodeInheritanceResearch"
+  ],
+  "heads": {
+    "Rule30BirthEpisodeInheritanceResearch": [
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.death_termination",
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.terminal_second_birth",
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.no_ordered_three_births",
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_lag_death",
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_terminal_second_birth",
+      "Ruliology.CellularAutomata.Rule30BirthEpisodeInheritanceResearch.actual_no_ordered_three_births"
+    ]
+  },
+  "expected_constants": {
+    "Rule30BirthEpisodeInheritanceResearch": 37
+  },
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "lean_version": "4.35.0",
+  "validation_windows_lean_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "config_delta": "Append only one lean_lib entry for the research module.",
+  "config_hashes": {
+    "lakefile.toml": "c74d5a16721dfad09eb63d1c6692737cbeb1fcbc89de48c40c2a9d086e9d7139",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "build_targets": [
+    "Rule30BirthEpisodeInheritanceResearch"
+  ]
+}
