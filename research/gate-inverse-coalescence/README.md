@@ -14,20 +14,25 @@ The final extension also erases the inverse's initial **wall bit**, with agreeme
 
 The independent `Rule30InverseRunsResearch` module classifies first-inverse finiteness for arbitrary finite rows. Starting from a false flag, each zero-separated black run updates it by its length modulo three: 0 preserves, 1 resets false, 2 toggles. A final true flag characterizes a finite prescribed head-1 inverse. The formal run statement assumes an explicit block representation; the general scan criterion covers every support bound, including zero.
 
+`Rule30GatePastThreeResearch` proves a further finite-prefix editing result for an **arbitrary infinite shared future**. Two admissible three-bit gate pasts reconstruct equal spatial rows at every depth >=20, so either both reconstructions have finite support or neither does. It checks the six inverse layers jointly, not just the final row. This fixes the edited past length to three; it does not establish the conjecture for arbitrarily long pasts.
+
 See [PROOF.md](PROOF.md) for the exact hypotheses and proof structure.
 
 ## Verification
 
-The unchanged official checker passed after a **fresh ten-source build**, without reused objects:
+The unchanged official checker passed after a **fresh eleven-source build**, without reused objects:
 
 | Module | Owned constants replayed | Headline statements |
 |---|---:|---:|
 | `Rule30GateInverseMergeResearch` | 166 | 15 |
 | `Rule30InverseRunsResearch` | 109 | 3 |
+| `Rule30GatePastThreeResearch` | 52 | 6 |
 
-Both proof sources and all eight official dependency sources built without warnings. All headline types matched, and no new axioms were found. No `sorry`, `native_decide`, `bv_decide`, or modified checker is used. Finite certificates are checked with kernel computation and connected by general proofs to the official dynamics and inverse functions.
+All three proof sources and all eight official dependency sources built without warnings. All headline types matched, and no new axioms were found. No `sorry`, `native_decide`, `bv_decide`, or modified checker is used. Finite certificates are checked with kernel computation and connected by general proofs to the official dynamics and inverse functions.
 
-The final owned-process guard exited 0 in 23.135 seconds, with approximately 1.83 GB peak owned RSS and 41.3 GB minimum free system memory. This is a fresh build of the stated ten-source closure, **not** the whole 141-module catalog. Final receipts and printed types are in [evidence/fresh10-final](evidence/fresh10-final/RESULT.json). The first fresh build of the 141-constant version remains separately labelled in `evidence/fresh10`; cached-dependency validations are in `evidence/reused`.
+Final receipts and printed types are in [evidence/fresh11](evidence/fresh11/RESULT.json). This is the stated eleven-source closure, **not** the whole 141-module catalog. The earlier two-module and 141-constant builds remain separately labelled in `evidence/fresh10-final` and `evidence/fresh10`; cached-dependency validations are in `evidence/reused`.
+
+The [canonical catalog adaptation](canonical/README.md) also passed a fresh eleven-source Lake build, all three unchanged-checker replays, and a combined import smoke. It changes module/import names and line endings, with proof bodies preserved.
 
 The official source/checker closure is byte-identical between the original validation pin `7d665044b904117af9e82328aeb90a30692b2b85` and current main `932cf8dde039b89b1dcbe9636867bb1b2057fef0`; see [MAIN-COMPATIBILITY.json](evidence/MAIN-COMPATIBILITY.json). The fresh build is pinned to the latter.
 
@@ -38,9 +43,9 @@ python verify.py --audit-only
 python verify.py --lean /path/to/lean --out /a/new/output/directory
 ```
 
-The verifier checks exact source/script hashes, refuses an existing output directory, builds the eight official dependencies and two proof modules into a new library, replays both modules with the unchanged `Check.lean`, and prints every selected type and axiom list. It needs only Python's standard library. The historical resource guard additionally used `psutil`.
+The verifier checks exact source/script hashes, refuses an existing output directory, builds the eight official dependencies and three proof modules into a new library, replays all three modules with the unchanged `Check.lean`, and prints every selected type and axiom list. It needs only Python's standard library. The historical resource guard additionally used `psutil`.
 
-`certificate/generate_history_certificate.py` regenerates the coalescence source from the retained base proof and extension plus twelve explicit finite tables; the generated source is written inside that directory. The checker verifies the tables rather than trusting Python's calculation. The Lean theorem `gate_prefix_coverage` exhaustively proves that the twelve tables cover every legal ten-bit prefix, not merely sampled periodic gates.
+`certificate/generate_history_certificate.py` regenerates the coalescence source from the retained base proof and extensions plus twelve explicit finite tables; the generated source is written inside that directory. Running `certificate/generate_past_three.py` afterward regenerates the three-past proof, using the first generator's table output. The checker verifies the tables rather than trusting Python's calculation. The Lean theorem `gate_prefix_coverage` exhaustively proves that the twelve tables cover every legal ten-bit prefix, not merely sampled periodic gates.
 
 ## Related work and limits
 

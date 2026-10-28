@@ -1,0 +1,93 @@
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree : ∀ (L : Nat → Bool)
+  (c : Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate),
+  c ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.historyCertificates →
+    (∀ (t : Nat),
+        t < 20 →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L t 1 =
+            Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.oddPhase c.gate t) →
+      ∀ (p q : Fin 8),
+        Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed c.gate p →
+          Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed c.gate q →
+            ∀ (k : Nat),
+              20 ≤ k →
+                Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history p L 6 k =
+                  Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history q L 6 k
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree : ∀ (L : Nat → Bool)
+  (w : Fin 1024),
+  (∀ (i : Fin 3), ↑w >>> ↑i &&& 255 ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words) →
+    (∀ (t : Nat),
+        t < 20 →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L t 1 =
+            Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.oddPhase (↑w) t) →
+      ∀ (p q : Fin 8),
+        Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) p →
+          Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) q →
+            ∀ (k : Nat),
+              20 ≤ k →
+                Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history p L 6 k =
+                  Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history q L 6 k
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff : ∀ (L : Nat → Bool)
+  (w : Fin 1024),
+  (∀ (i : Fin 3), ↑w >>> ↑i &&& 255 ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words) →
+    (∀ (t : Nat),
+        t < 20 →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L t 1 =
+            Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.oddPhase (↑w) t) →
+      ∀ (p q : Fin 8),
+        Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) p →
+          Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) q →
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+                (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history p L 6) ↔
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+                (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history q L 6))
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix : ∀ (p : Fin 8) (G : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history p
+      (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace G))
+      6 =
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace
+        (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3 p G))
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree : ∀ (G : Nat → Bool)
+  (w : Fin 1024),
+  (∀ (i : Fin 3), ↑w >>> ↑i &&& 255 ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words) →
+    (∀ (r : Fin 10), G ↑r = (↑w).testBit ↑r) →
+      ∀ (p q : Fin 8),
+        Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) p →
+          Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) q →
+            ∀ (k : Nat),
+              20 ≤ k →
+                Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                    (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace
+                      (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3 p G))
+                    k =
+                  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                    (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace
+                      (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3 q G))
+                    k
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff : ∀ (G : Nat → Bool)
+  (w : Fin 1024),
+  (∀ (i : Fin 3), ↑w >>> ↑i &&& 255 ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words) →
+    (∀ (r : Fin 10), G ↑r = (↑w).testBit ↑r) →
+      ∀ (p q : Fin 8),
+        Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) p →
+          Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed (↑w) q →
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+                (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                  (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace
+                    (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3 p G))) ↔
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+                (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                  (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace
+                    (Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3 q G))))
+'Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff' depends on axioms: [propext,
+ Quot.sound]

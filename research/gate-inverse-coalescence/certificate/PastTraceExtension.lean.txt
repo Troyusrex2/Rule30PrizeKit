@@ -1,0 +1,92 @@
+
+/-! The inverse-head description is exactly prepending three bits to the gate. -/
+def tracePrepend (b : Bool) (a : Nat → Bool) : Nat → Bool
+  | 0 => b
+  | t+1 => a t
+
+def oddTrace (G : Nat → Bool) (t : Nat) : Bool :=
+  if t%2=0 then !(G (t/2)) else true
+
+def prependGate3 (p : Fin 8) (G : Nat → Bool) (r : Nat) : Bool :=
+  if r<3 then Nat.testBit p.val r else G (r-3)
+
+def tracePast3 (p : Fin 8) (a : Nat → Bool) : Nat → Bool :=
+  tracePrepend (!(Nat.testBit p.val 0))
+    (tracePrepend true (tracePrepend (!(Nat.testBit p.val 1))
+      (tracePrepend true (tracePrepend (!(Nat.testBit p.val 2)) (tracePrepend true a)))))
+
+theorem back_lam (b : Bool) (a : Nat → Bool) :
+    back b (lam a) = lam (tracePrepend b a) := by
+  have ht : ∀ t, zrow (back b (lam a)) t 1 = tracePrepend b a t := by
+    intro t
+    cases t with
+    | zero => rfl
+    | succ t =>
+        rw [back_trace]
+        exact (realization a).1 t
+  have hh := (realization (tracePrepend b a)).2 (back b (lam a)) ht
+  rw [zrow_back_zero] at hh
+  exact hh
+
+theorem history_six_lam (p : Fin 8) (a : Nat → Bool) :
+    history p (lam a) 6 = lam (tracePast3 p a) := by
+  change back (!(Nat.testBit p.val 0)) (back true
+    (back (!(Nat.testBit p.val 1)) (back true
+      (back (!(Nat.testBit p.val 2)) (back true (lam a)))))) = _
+  simp only [back_lam]
+  rfl
+
+theorem trace_past3 (p : Fin 8) (G : Nat → Bool) :
+    tracePast3 p (oddTrace G) = oddTrace (prependGate3 p G) := by
+  funext t
+  by_cases ht : t<6
+  · have hx : t=0 ∨ t=1 ∨ t=2 ∨ t=3 ∨ t=4 ∨ t=5 := by omega
+    rcases hx with rfl | rfl | rfl | rfl | rfl | rfl <;> rfl
+  · obtain ⟨u,rfl⟩ : ∃ u, t=u+6 := ⟨t-6,by omega⟩
+    change oddTrace G u = oddTrace (prependGate3 p G) (u+6)
+    unfold oddTrace
+    rw [show (u+6)%2=u%2 by omega]
+    by_cases hu : u%2=0
+    · rw [ite_eq_left hu,ite_eq_left hu]
+      unfold prependGate3
+      rw [ite_eq_right (by omega),show (u+6)/2-3=u/2 by omega]
+    · rw [ite_eq_right hu,ite_eq_right hu]
+
+theorem history_gate_prefix (p : Fin 8) (G : Nat → Bool) :
+    history p (lam (oddTrace G)) 6 = lam (oddTrace (prependGate3 p G)) := by
+  rw [history_six_lam,trace_past3]
+
+theorem reconstructed_gate_prefix_edits_agree (G : Nat → Bool) (w : Fin 1024)
+    (hw : ∀ i : Fin 3, ((w.val >>> i.val) &&& 255) ∈ words)
+    (hbits : ∀ r : Fin 10, G r = Nat.testBit w.val r)
+    (p q : Fin 8) (hp : Allowed w.val p) (hq : Allowed w.val q) :
+    ∀ k, 20 ≤ k → lam (oddTrace (prependGate3 p G)) k =
+      lam (oddTrace (prependGate3 q G)) k := by
+  have hh : ∀ t, t<20 → zrow (lam (oddTrace G)) t 1 = oddPhase w.val t := by
+    intro t ht
+    rw [(realization (oddTrace G)).1 t]
+    unfold oddTrace oddPhase
+    by_cases hm : t%2=0
+    · rw [ite_eq_left hm,ite_eq_left hm]
+      exact congrArg Bool.not (hbits ⟨t/2,by omega⟩)
+    · rw [ite_eq_right hm,ite_eq_right hm]
+  rw [← history_gate_prefix p G,← history_gate_prefix q G]
+  exact legal_gate_prefix_edits_agree (lam (oddTrace G)) w hw hh p q hp hq
+
+theorem reconstructed_gate_prefix_edits_finite_iff (G : Nat → Bool) (w : Fin 1024)
+    (hw : ∀ i : Fin 3, ((w.val >>> i.val) &&& 255) ∈ words)
+    (hbits : ∀ r : Fin 10, G r = Nat.testBit w.val r)
+    (p q : Fin 8) (hp : Allowed w.val p) (hq : Allowed w.val q) :
+    FinSupp (lam (oddTrace (prependGate3 p G))) ↔
+      FinSupp (lam (oddTrace (prependGate3 q G))) := by
+  have he := reconstructed_gate_prefix_edits_agree G w hw hbits p q hp hq
+  constructor
+  · rintro ⟨W,hW⟩
+    refine ⟨max W 20,fun k hk => ?_⟩
+    rw [← he k (by omega)]
+    exact hW k (by omega)
+  · rintro ⟨W,hW⟩
+    refine ⟨max W 20,fun k hk => ?_⟩
+    rw [he k (by omega)]
+    exact hW k (by omega)
+

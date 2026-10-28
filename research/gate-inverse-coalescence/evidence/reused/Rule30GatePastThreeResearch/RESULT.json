@@ -1,0 +1,291 @@
+{
+  "passed": true,
+  "pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "module": "Rule30GatePastThreeResearch",
+  "source_sha256": "1526bcb39f0d99151ba65c65b18ce6669542027f2cd6b083034999ff013fb8ef",
+  "object_sha256": "74721b707cc241d7cbf6db693cb5ea9f95297d91f8595f2cb4cb73e40e7372da",
+  "reused_dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source": "Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source": "Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "object_sha256": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source": "Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source": "Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "object_sha256": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BlackRuns",
+      "source": "Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "source_sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+      "object_sha256": "fb8bab938cfe8d4c30b8ab050ea8e2e0d128614755e2eed25e5c070aac22f8b2"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "source": "Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "source_sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "object_sha256": "e034e6df5f14b9ce8f9ede575ad76d16e6029264588daa04c8d14546e41a38c0"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwo",
+      "source": "Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "source_sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+      "object_sha256": "617875b1d1d0743d1396258c91cad3fd5d06d01500e6815a5b801f21cf5ad7fc"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundary",
+      "source": "Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "source_sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+      "object_sha256": "54ea23e682222ce0ea79f08087673487310bccbdfb6a6306d454fd58f57245bc"
+    },
+    {
+      "module": "Rule30GateInverseMergeResearch",
+      "source": "Rule30GateInverseMergeResearch.lean",
+      "source_sha256": "96cd07a894ca14dc74360b0257df6cfc72c6f8360c059ee7f30c45c5b6868574",
+      "object_sha256": "48b61da1be45d82a355a43d150cd24aa1867bc681b88f24f13c66ee6bd7efd17",
+      "remote_object": "<cached-gate-merge>/lib/Rule30GateInverseMergeResearch.olean"
+    }
+  ],
+  "reused_objects_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Allowed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.Valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.back_lam",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.certificates_valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.head",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_six_lam",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.joint_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.model",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.modelData",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.model_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.oddTrace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.prependGate3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.tracePast3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.tracePrepend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.trace_past3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.validDecidable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.modelData.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GatePastThreeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 52,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "heads": [
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree",
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree",
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff",
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix",
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree",
+    "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff"
+  ],
+  "seconds": 8.67207850003615,
+  "source_warnings": false
+}

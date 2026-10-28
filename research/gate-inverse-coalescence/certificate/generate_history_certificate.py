@@ -249,7 +249,7 @@ wall_extension = root/'WallExtension.lean.txt'
 if wall_extension.exists():
     text += wall_extension.read_text(encoding='utf-8')
 text += ending+'\n'
-module.write_text(text, encoding='utf-8')
+module.write_text(text, encoding='utf-8', newline='\r\n')
 (root/'HISTORY-CERTIFICATE-DATA.json').write_text(json.dumps(
     [{'gate10':w,'columns':cols,'preimages':data} for w,cols,data in entries], indent=2)+'\n', encoding='utf-8')
 print(json.dumps({'entries': len(entries), 'source_bytes': len(text.encode('utf-8'))}))

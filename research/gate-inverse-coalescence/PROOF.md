@@ -51,6 +51,14 @@ This settles the first-inverse finiteness issue for actual positive-age left row
 
 A positive white gap normalizes B and C to B without changing acceptance. Thus a black run's length modulo three gives the exact flag update. `finite_inverse_run_blocks` states this for a supplied exact list of black/white blocks; it does not conceal an all-time condition or claim a general temporal invariant.
 
+## Editing three gate bits against an arbitrary future
+
+The separate `Rule30GatePastThreeResearch` module fixes a common gate future G and two admissible three-bit pasts p,q. The function `history` prepends six inverse heads, alternating a forced black head with the complement of the next gate-past bit. `history_gate_prefix` proves this is exactly the official reconstruction of p::G or q::G, rather than leaving the temporal interpretation implicit.
+
+The twelve future-prefix certificates carry all six intermediate inverse layers. A generic model-soundness induction identifies each layer with actual `back`. The certificate checks equal adjacent cells at depths20,21 in every layer, and `joint_tail` propagates the whole coupled state to every larger spatial depth. Comparing only the final layer would have been insufficient when its targets differ; the formal proof checks the complete coupled state.
+
+`reconstructed_gate_prefix_edits_agree` and its finite-support equivalence quantify over an arbitrary infinite shared future whose first ten bits have the stated legal-window encoding. Only the first three bits are edited, and each three-bit past must make the straddling S-windows legal. No periodic-future premise is used. The extension to an unbounded edited past is not proved.
+
 ## Failed development attempts
 
 The first coalescence compilation needed a corrected final list-membership case and updated core conditional lemma names. The next extension needed a core-compatible replacement for an unavailable tactic. The table certificate needed an explicit global decidability instance; two local-instance formulations failed elaboration/kernel compilation, and an anonymous finite-index inequality needed explicit coercion reduction. All these failed builds were rejected before the final successful replay. The final source has zero warnings and no new axioms.

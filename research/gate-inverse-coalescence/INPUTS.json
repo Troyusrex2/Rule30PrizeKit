@@ -79,9 +79,24 @@
         "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks",
         "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks"
       ]
+    },
+    {
+      "module": "Rule30GatePastThreeResearch",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.three_legal_pasts_agree",
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_agree",
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.legal_gate_prefix_edits_finite_iff",
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.history_gate_prefix",
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_agree",
+        "Ruliology.CellularAutomata.Rule30GatePastThreeResearch.reconstructed_gate_prefix_edits_finite_iff"
+      ]
     }
   ],
   "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "50524bc54be6323af4266e11f2ca0b4d574bad39253c8c5293eca7d3173fa822"
+    },
     {
       "path": ".gitignore",
       "sha256": "948246262475099d6c709d6f4afdfd641b891267d132276c5a1e087dd203e81a"
@@ -92,11 +107,19 @@
     },
     {
       "path": "certificate/generate_history_certificate.py",
-      "sha256": "2fa20f5be80097e60b827be3393d602540b73cd022231474ff9fc99b752a9788"
+      "sha256": "ac4b8171f871475be2ab3e8bbf0ebeb8195a6f5f3954583d30f7ebcff650a50d"
+    },
+    {
+      "path": "certificate/generate_past_three.py",
+      "sha256": "1c09fc601edf22e9c2c4c1e1be4bf709ee73db89780b0e5476b8dcde51251bb1"
     },
     {
       "path": "certificate/HistoryFinalExtension.lean.txt",
       "sha256": "5e6752c22a5c3a463f0714b156ba3ca9999cb4e9e0a193f941a266cbd9154ee1"
+    },
+    {
+      "path": "certificate/PastTraceExtension.lean.txt",
+      "sha256": "1520d8324496db6a5f93304a2d4ac64b880fe21cc479c9b19c2a70b2aea120ed"
     },
     {
       "path": "certificate/WallExtension.lean.txt",
@@ -109,6 +132,10 @@
     {
       "path": "Rule30GateInverseMergeResearch.lean",
       "sha256": "96cd07a894ca14dc74360b0257df6cfc72c6f8360c059ee7f30c45c5b6868574"
+    },
+    {
+      "path": "Rule30GatePastThreeResearch.lean",
+      "sha256": "1526bcb39f0d99151ba65c65b18ce6669542027f2cd6b083034999ff013fb8ef"
     },
     {
       "path": "Rule30InverseRunsResearch.lean",
