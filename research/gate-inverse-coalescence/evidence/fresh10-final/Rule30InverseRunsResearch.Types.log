@@ -1,0 +1,26 @@
+Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan : ∀ (y : Nat → Bool) (W : Nat),
+  (∀ (k : Nat), W < k → y k = false) →
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true y) ↔
+      Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan
+          Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.b (List.map (fun i => y (i + 1)) (List.range W)) =
+        Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.a)
+'Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks : ∀ (q : Bool) (xs : List (Nat × Nat)),
+  Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan
+      (Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag q)
+      (Ruliology.CellularAutomata.Rule30InverseRunsResearch.encoded xs) =
+    Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag
+      (Ruliology.CellularAutomata.Rule30InverseRunsResearch.flags q xs)
+'Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks : ∀ (y : Nat → Bool) (W : Nat)
+  (xs : List (Nat × Nat)),
+  (∀ (k : Nat), W < k → y k = false) →
+    List.map (fun i => y (i + 1)) (List.range W) = Ruliology.CellularAutomata.Rule30InverseRunsResearch.encoded xs →
+      (Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true y) ↔
+        Ruliology.CellularAutomata.Rule30InverseRunsResearch.flags false xs = true)
+'Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

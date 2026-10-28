@@ -1,0 +1,76 @@
+
+/-! The numeric certificate list covers every legal ten-bit gate prefix. -/
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 8000000 in
+theorem gate_prefix_coverage : ∀ w : Fin 1024,
+    (∀ i : Fin 3, ((w.val >>> i.val) &&& 255) ∈ words) ↔
+      w.val ∈ historyCertificates.map (fun c => c.gate) := by
+  decide +kernel
+
+def AdmissibleHistory20 (L : Nat → Bool) : Prop :=
+  ∃ w, w < 1024 ∧
+    (∀ i : Fin 3, ((w >>> i.val) &&& 255) ∈ words) ∧
+    (∀ t, t < 20 → zrow L t 1 = oddPhase w t)
+
+theorem admissible_history_legal (L : Nat → Bool) (h : AdmissibleHistory20 L) :
+    LegalHistory20 L := by
+  obtain ⟨w,hw,hlegal,htrace⟩ := h
+  have hm := (gate_prefix_coverage ⟨w,hw⟩).1 hlegal
+  obtain ⟨c,hc,hcw⟩ := List.mem_map.mp hm
+  refine ⟨c,hc,?_⟩
+  simpa only [hcw] using htrace
+
+theorem first_actual_preimage_iff_prescribed (L : Nat → Bool) (h : OddGateWindow L) :
+    (∃ P : Nat → Bool, P 0 = false ∧ FinSupp P ∧
+      ∀ k, 1 ≤ k → zrow P 1 k = L k) ↔ FinSupp (back true L) := by
+  constructor
+  · rintro ⟨P,h0,hfin,him⟩
+    have hp : P = back (P 1) L := by
+      funext k
+      exact (congrFun (zrow_zero_self h0) k).symm.trans (eq_back him k)
+    apply (first_preimage_exists_iff_prescribed L h).1
+    refine ⟨P 1,?_⟩
+    rw [← hp]
+    exact hfin
+  · intro hf
+    exact ⟨back true L,rfl,hf,zrow_back true L⟩
+
+theorem actual_two_step_iff_heads (L : Nat → Bool) :
+    (∃ Q : Nat → Bool, Q 0 = false ∧ FinSupp Q ∧
+      ∀ k, 1 ≤ k → zrow Q 2 k = L k) ↔
+    (∃ b₀ b₁ : Bool, FinSupp (back b₁ (back b₀ L))) := by
+  constructor
+  · rintro ⟨Q,h0,hfin,him⟩
+    let P := zrow Q 1
+    have hPim : ∀ k, 1 ≤ k → zrow P 1 k = L k := by
+      intro k hk
+      exact (zrow_shift Q 1 1 k).symm.trans (him k hk)
+    have hp : P = back (P 1) L := by
+      funext k
+      exact (congrFun (zrow_zero_self (zrow_wall Q 1)) k).symm.trans (eq_back hPim k)
+    have hq : Q = back (Q 1) P := by
+      funext k
+      exact (congrFun (zrow_zero_self h0) k).symm.trans
+        (eq_back (fun j hj => rfl) k)
+    have hboth : Q = back (Q 1) (back (P 1) L) :=
+      hq.trans (congrArg (back (Q 1)) hp)
+    refine ⟨P 1,Q 1,?_⟩
+    rw [← hboth]
+    exact hfin
+  · rintro ⟨b₀,b₁,hfin⟩
+    refine ⟨back b₁ (back b₀ L),rfl,hfin,?_⟩
+    intro k hk
+    calc
+      zrow (back b₁ (back b₀ L)) 2 k =
+          zrow (zrow (back b₁ (back b₀ L)) 1) 1 k :=
+        zrow_shift (back b₁ (back b₀ L)) 1 1 k
+      _ = zrow (back b₀ L) 1 k := zrow_congr (zrow_back b₁ (back b₀ L)) 1 k
+      _ = L k := zrow_back b₀ L k hk
+
+theorem any_actual_two_step_preimage_iff_canonical (L : Nat → Bool)
+    (h : AdmissibleHistory20 L) :
+    (∃ Q : Nat → Bool, Q 0 = false ∧ FinSupp Q ∧
+      ∀ k, 1 ≤ k → zrow Q 2 k = L k) ↔ FinSupp (back true (back true L)) := by
+  rw [actual_two_step_iff_heads L]
+  exact any_two_step_preimage_iff_canonical L (admissible_history_legal L h)
+

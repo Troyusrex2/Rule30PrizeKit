@@ -1,0 +1,154 @@
+{
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "original_validation_pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source": "Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source": "Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "object_sha256": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source": "Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source": "Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "object_sha256": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BlackRuns",
+      "source": "Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "source_sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+      "object_sha256": "fb8bab938cfe8d4c30b8ab050ea8e2e0d128614755e2eed25e5c070aac22f8b2"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "source": "Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "source_sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "object_sha256": "e034e6df5f14b9ce8f9ede575ad76d16e6029264588daa04c8d14546e41a38c0"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwo",
+      "source": "Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "source_sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+      "object_sha256": "617875b1d1d0743d1396258c91cad3fd5d06d01500e6815a5b801f21cf5ad7fc"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundary",
+      "source": "Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "source_sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+      "object_sha256": "54ea23e682222ce0ea79f08087673487310bccbdfb6a6306d454fd58f57245bc"
+    }
+  ],
+  "proofs": [
+    {
+      "module": "Rule30GateInverseMergeResearch",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_and_head_agree",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_actual_image_transfer",
+        "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.single_seed_left_inverse_finite"
+      ]
+    },
+    {
+      "module": "Rule30InverseRunsResearch",
+      "headlines": [
+        "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan",
+        "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks",
+        "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "948246262475099d6c709d6f4afdfd641b891267d132276c5a1e087dd203e81a"
+    },
+    {
+      "path": "certificate/BASE-VERIFIED.lean",
+      "sha256": "19a9f10e03fa00e6028a77fc1969c120ad8496c0c8e155db4cd262c96d07c11a"
+    },
+    {
+      "path": "certificate/generate_history_certificate.py",
+      "sha256": "2fa20f5be80097e60b827be3393d602540b73cd022231474ff9fc99b752a9788"
+    },
+    {
+      "path": "certificate/HistoryFinalExtension.lean.txt",
+      "sha256": "5e6752c22a5c3a463f0714b156ba3ca9999cb4e9e0a193f941a266cbd9154ee1"
+    },
+    {
+      "path": "certificate/WallExtension.lean.txt",
+      "sha256": "25f0d98004d2bb525a81154c90b75a6190f1d8a521077efff387f7266586aea5"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    },
+    {
+      "path": "Rule30GateInverseMergeResearch.lean",
+      "sha256": "96cd07a894ca14dc74360b0257df6cfc72c6f8360c059ee7f30c45c5b6868574"
+    },
+    {
+      "path": "Rule30InverseRunsResearch.lean",
+      "sha256": "913d02f7f62f4b9ad77b26843ec3d9aeaa5db05ecffdafda2cfcac97bf7c9bf5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "ddcf363c58b0cdc99e5863580eec1b73bdef75e72b24a54f524985657506fb0d"
+    }
+  ]
+}

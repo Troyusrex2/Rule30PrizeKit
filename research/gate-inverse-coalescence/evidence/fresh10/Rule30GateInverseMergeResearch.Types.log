@@ -1,0 +1,110 @@
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven : ∀ (y : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LocalWindow y →
+    ∀ (k : Nat),
+      11 ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.back false y k =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.back true y k
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true : ∀ (y : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LocalWindow y →
+    ((∃ b,
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b y)) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true y))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow L →
+    ∀ (k : Nat),
+      11 ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.back false
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L) k =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L) k
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow L →
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.back false
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L)) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L)))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow L →
+    ∀ (k : Nat),
+      7 ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.back false L k =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L k
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow L →
+    ((∃ b,
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b L)) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LegalHistory20 L →
+    ∀ (b₀ b₁ : Bool) (k : Nat),
+      20 ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₁ (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₀ L)
+            k =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L) k
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LegalHistory20 L →
+    ∀ (b₀ b₁ : Bool),
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₁
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₀ L)) ↔
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LegalHistory20 L →
+    ((∃ b₀ b₁,
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₁
+            (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b₀ L))) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L)))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage : ∀ (w : Fin 1024),
+  (∀ (i : Fin 3), ↑w >>> ↑i &&& 255 ∈ Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words) ↔
+    ↑w ∈ List.map (fun c => c.gate) Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.historyCertificates
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow L →
+    ((∃ P,
+        P 0 = false ∧
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp P ∧
+            ∀ (k : Nat), 1 ≤ k → Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow P 1 k = L k) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical : ∀
+  (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.AdmissibleHistory20 L →
+    ((∃ Q,
+        Q 0 = false ∧
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp Q ∧
+            ∀ (k : Nat), 1 ≤ k → Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow Q 2 k = L k) ↔
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.back true L)))
+'Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical' depends on axioms: [propext,
+ Quot.sound]

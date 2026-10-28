@@ -1,0 +1,442 @@
+{
+  "passed": true,
+  "pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "module": "Rule30InverseRunsResearch",
+  "source_sha256": "913d02f7f62f4b9ad77b26843ec3d9aeaa5db05ecffdafda2cfcac97bf7c9bf5",
+  "object_sha256": "edcd662a1204fbbe42c4b49b51899468a04d4e36b04820ca25bfd3d476d74100",
+  "reused_dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source": "Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source": "Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "object_sha256": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source": "Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source": "Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "object_sha256": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BlackRuns",
+      "source": "Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "source_sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+      "object_sha256": "fb8bab938cfe8d4c30b8ab050ea8e2e0d128614755e2eed25e5c070aac22f8b2"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "source": "Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "source_sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "object_sha256": "e034e6df5f14b9ce8f9ede575ad76d16e6029264588daa04c8d14546e41a38c0"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwo",
+      "source": "Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "source_sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+      "object_sha256": "617875b1d1d0743d1396258c91cad3fd5d06d01500e6815a5b801f21cf5ad7fc"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundary",
+      "source": "Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "source_sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+      "object_sha256": "54ea23e682222ce0ea79f08087673487310bccbdfb6a6306d454fd58f57245bc"
+    }
+  ],
+  "reused_objects_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.collapse",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.collapse_a",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.collapse_back",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.collapse_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.encoded",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.false_preserves_acceptance",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_prefix",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.flags",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.norm",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.readCells",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_append",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_ones",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_range",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_run",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_zeros",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.update",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.a",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.b",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.c",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.ctorElim",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.ctorElimType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.collapse.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.encoded.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.norm.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.norm.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.norm.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.ofFlag.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.readCells.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.readCells.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.readCells.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.readCells.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan.eq_def",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_4",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_5",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.eq_6",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.step.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.update.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.a.elim",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.a.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.b.elim",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.b.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.c.elim",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.State.c.sizeOf_spec",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30InverseRunsResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 109,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "heads": [
+    "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_iff_scan",
+    "Ruliology.CellularAutomata.Rule30InverseRunsResearch.scan_blocks",
+    "Ruliology.CellularAutomata.Rule30InverseRunsResearch.finite_inverse_run_blocks"
+  ],
+  "seconds": 3.8419296000502072,
+  "source_warnings": false
+}

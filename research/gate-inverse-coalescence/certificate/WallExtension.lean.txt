@@ -1,0 +1,112 @@
+
+/-! ### The near-wall cell of an actual predecessor may also be black -/
+def wallBack (w b : Bool) (y : Nat → Bool) : Nat → Bool
+  | 0 => w
+  | 1 => b
+  | k+2 => xor (y (k+1)) (wallBack w b y (k+1) || wallBack w b y k)
+
+theorem wall_back_congr_pair (w b : Bool) (y z : Nat → Bool) (n : Nat)
+    (h : ∀ k, 1 ≤ k → k ≤ n → y k = z k) :
+    wallBack w b y n = wallBack w b z n ∧
+      wallBack w b y (n+1) = wallBack w b z (n+1) := by
+  induction n with
+  | zero => constructor <;> rfl
+  | succ n ih =>
+      obtain ⟨h0,h1⟩ := ih (fun k hk hn => h k hk (by omega))
+      constructor
+      · exact h1
+      · change xor (y (n+1)) (wallBack w b y (n+1) || wallBack w b y n) =
+          xor (z (n+1)) (wallBack w b z (n+1) || wallBack w b z n)
+        rw [h (n+1) (by omega) (by omega), h0, h1]
+
+def WallMergeValid (c : HistoryCertificate) : Prop :=
+  ∀ w b : Bool,
+    wallBack w b (tabRow c) 12 = back true (tabRow c) 12 ∧
+    wallBack w b (tabRow c) 13 = back true (tabRow c) 13
+
+instance wallMergeDecidable : DecidablePred WallMergeValid := fun c => by
+  unfold WallMergeValid
+  infer_instance
+
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 8000000 in
+theorem wall_merge_certificate : ∀ c ∈ historyCertificates, WallMergeValid c := by
+  decide +kernel
+
+theorem recurrence_tail (y P Q : Nat → Bool)
+    (hP : ∀ k, P (k+2) = xor (y (k+1)) (P (k+1) || P k))
+    (hQ : ∀ k, Q (k+2) = xor (y (k+1)) (Q (k+1) || Q k))
+    (n : Nat) (h0 : P n = Q n) (h1 : P (n+1) = Q (n+1)) :
+    ∀ k, n ≤ k → P k = Q k := by
+  have key : ∀ j, P (n+j) = Q (n+j) ∧ P (n+j+1) = Q (n+j+1) := by
+    intro j
+    induction j with
+    | zero => simpa using And.intro h0 h1
+    | succ j ih =>
+        constructor
+        · simpa only [Nat.add_assoc] using ih.2
+        · rw [show n+(j+1)+1=(n+j)+2 by omega, hP, hQ, ih.1, ih.2]
+  intro k hk
+  simpa only [Nat.add_sub_of_le hk] using (key (k-n)).1
+
+theorem wall_and_head_agree (L : Nat → Bool) (h : LegalHistory20 L) :
+    ∀ w b : Bool, ∀ k, 12 ≤ k → wallBack w b L k = back true L k := by
+  obtain ⟨c,hc,hh⟩ := h
+  have rowmatch := history_row_matches L c (history_certificates_valid c hc).1 hh
+  intro w b
+  have hw := wall_back_congr_pair w b L (tabRow c) 12
+    (fun k hk hn => rowmatch k hk (by omega))
+  have hb := back_congr_pair true L (tabRow c) 12
+    (fun k hk hn => rowmatch k hk (by omega))
+  have hm := wall_merge_certificate c hc w b
+  apply recurrence_tail L (wallBack w b L) (back true L)
+    (fun k => rfl) (fun k => rfl) 12
+  · exact hw.1.trans (hm.1.trans hb.1.symm)
+  · exact hw.2.trans (hm.2.trans hb.2.symm)
+
+theorem actual_image_representation (L P : Nat → Bool)
+    (h : ∀ k, L (k+1) = xor (P (k+2)) (P (k+1) || P k)) :
+    P = wallBack (P 0) (P 1) L := by
+  have key : ∀ n, P n = wallBack (P 0) (P 1) L n ∧
+      P (n+1) = wallBack (P 0) (P 1) L (n+1) := by
+    intro n
+    induction n with
+    | zero => constructor <;> rfl
+    | succ n ih =>
+        constructor
+        · exact ih.2
+        · have hn : P (n+2) = xor (L (n+1)) (P (n+1) || P n) := by
+            rw [h n]
+            cases P (n+2) <;> cases (P (n+1) || P n) <;> rfl
+          change P (n+2) = xor (L (n+1))
+            (wallBack (P 0) (P 1) L (n+1) || wallBack (P 0) (P 1) L n)
+          rw [hn, ih.1, ih.2]
+  funext n
+  exact (key n).1
+
+theorem finite_actual_image_transfer (L : Nat → Bool) (h : AdmissibleHistory20 L)
+    (P : Nat → Bool) (hfin : FinSupp P)
+    (him : ∀ k, L (k+1) = xor (P (k+2)) (P (k+1) || P k)) :
+    FinSupp (back true L) := by
+  have he := wall_and_head_agree L (admissible_history_legal L h) (P 0) (P 1)
+  have hp := actual_image_representation L P him
+  obtain ⟨W,hW⟩ := hfin
+  refine ⟨max W 12,fun k hk => ?_⟩
+  rw [← he k (by omega), ← hp]
+  exact hW k (by omega)
+
+theorem single_seed_left_inverse_finite (t : Nat)
+    (h : AdmissibleHistory20 (fun k => Rule30Jen.cell (t+1) (-(k : Int)))) :
+    FinSupp (back true (fun k => Rule30Jen.cell (t+1) (-(k : Int)))) := by
+  apply finite_actual_image_transfer _ h (fun k => Rule30Jen.cell t (-(k : Int)))
+  · exact ⟨t,fun k hk => Rule30Jen.cell_eq_false_of_lt t _ (by omega)⟩
+  · intro k
+    change Rule30Jen.cell (t+1) (-((k+1 : Nat) : Int)) =
+      xor (Rule30Jen.cell t (-((k+2 : Nat) : Int)))
+        (Rule30Jen.cell t (-((k+1 : Nat) : Int)) || Rule30Jen.cell t (-(k : Int)))
+    rw [Rule30Jen.cell]
+    change xor (Rule30Jen.cell t (-((k+1 : Nat) : Int)-1))
+      (Rule30Jen.cell t (-((k+1 : Nat) : Int)) || Rule30Jen.cell t (-((k+1 : Nat) : Int)+1)) = _
+    rw [show -((k+1 : Nat) : Int)-1 = -((k+2 : Nat) : Int) by omega,
+      show -((k+1 : Nat) : Int)+1 = -(k : Int) by omega]
+

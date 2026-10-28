@@ -1,0 +1,666 @@
+{
+  "passed": true,
+  "pin": "7d665044b904117af9e82328aeb90a30692b2b85",
+  "module": "Rule30GateInverseMergeResearch",
+  "source_sha256": "96cd07a894ca14dc74360b0257df6cfc72c6f8360c059ee7f30c45c5b6868574",
+  "object_sha256": "48b61da1be45d82a355a43d150cd24aa1867bc681b88f24f13c66ee6bd7efd17",
+  "reused_dependencies": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "source": "Ruliology/CellularAutomata/Rule30Jen.lean",
+      "source_sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "object_sha256": "6572c0a42e3fc4316edafab8f0580b9fb4466227966552c41300ccd101be3eec"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Diagonals",
+      "source": "Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "source_sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+      "object_sha256": "fd4cae0aa2c00a7e39d6d58abf406d182681f1e08272eb95419eb258b039e076"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "source": "Ruliology/CellularAutomata/Rule30Prize.lean",
+      "source_sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "object_sha256": "a1caddb0033a4296ef8c344c381ec604a6620a8d11eed414c8ed495be3919b86"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "source": "Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "source_sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "object_sha256": "a7e44a0b4e36b7b8875b9e1ef171a1134dc6151c8acab3c7a4445a6c2f472f19"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30BlackRuns",
+      "source": "Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "source_sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+      "object_sha256": "fb8bab938cfe8d4c30b8ab050ea8e2e0d128614755e2eed25e5c070aac22f8b2"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "source": "Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "source_sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "object_sha256": "e034e6df5f14b9ce8f9ede575ad76d16e6029264588daa04c8d14546e41a38c0"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwo",
+      "source": "Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "source_sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+      "object_sha256": "617875b1d1d0743d1396258c91cad3fd5d06d01500e6815a5b801f21cf5ad7fc"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30ZeroBoundary",
+      "source": "Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "source_sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+      "object_sha256": "54ea23e682222ce0ea79f08087673487310bccbdfb6a6306d454fd58f57245bc"
+    }
+  ],
+  "reused_objects_unchanged": true,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.AdmissibleHistory20",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.BackValid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "inductive",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryValid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LegalHistory20",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.LocalWindow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.OddGateWindow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.TriangleValid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.WallMergeValid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.actual_image_representation",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.actual_two_step_iff_heads",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.admissible_history_legal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.back_congr_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.back_tail_of_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.back_tails_of_equal_targets",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.back_trace",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.back_valid_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.child",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_actual_image_transfer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_head_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_finite_head_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_window",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_merge_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.historyCertificates",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.historyValidDecidable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.history_certificates_valid",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.history_row_matches",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.instDecidableEqHistoryCertificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.merge_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.oddPhase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.oddTemplate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.odd_window_match",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.parent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.phase",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.recurrence_tail",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.row_eq_odd_template",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.row_eq_template",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.single_seed_left_inverse_finite",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.tab",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.tabRow",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.template",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.triangle_sound",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wallBack",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wallMergeDecidable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_and_head_agree",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_back_congr_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_merge_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.casesOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.columns",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.ctorIdx",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.gate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "constructor",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.mk",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.noConfusionType",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.preimages",
+        "standardAxioms": true
+      },
+      {
+        "kind": "recursor",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.rec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.recOn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.instDecidableEqHistoryCertificate.decEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wallBack.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.words.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.mk.inj",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.mk.injEq",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.mk.noConfusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.HistoryCertificate.mk.sizeOf_spec",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.instDecidableEqHistoryCertificate.decEq.match_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_and_head_agree",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_actual_image_transfer",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.single_seed_left_inverse_finite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Rule30GateInverseMergeResearch",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 166,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "heads": [
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.heads_agree_after_eleven",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_preimage_iff_head_true",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_heads_agree",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.second_inverse_finite_head_independent",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_inverse_heads_agree",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_preimage_exists_iff_prescribed",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.all_two_step_heads_agree",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.two_step_finiteness_independent",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_two_step_preimage_iff_canonical",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.gate_prefix_coverage",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.first_actual_preimage_iff_prescribed",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.any_actual_two_step_preimage_iff_canonical",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.wall_and_head_agree",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.finite_actual_image_transfer",
+    "Ruliology.CellularAutomata.Rule30GateInverseMergeResearch.single_seed_left_inverse_finite"
+  ],
+  "seconds": 7.3419883999740705,
+  "source_warnings": false
+}
