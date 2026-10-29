@@ -1,0 +1,201 @@
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.row_add_multiple : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (p : Phase) (k j : Nat),
+  C.row p (C.width * j + k) = C.row p k
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.row_add_multiple' depends on axioms: [propext]
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.back_tail_bound : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (offset : Nat) (p : Phase) (y : Nat → Bool)
+  (b : Bool) (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = C.row p (k + offset)) →
+    ∀ (k : Nat),
+      N + 2 * C.width ≤ k → Ruliology.CellularAutomata.Rule30ZeroBoundary.back b y k = C.row (C.prev p) (k + offset)
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.back_tail_bound' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.history_tail_bound : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (offset : Nat) (p : Phase) (y : Nat → Bool)
+  (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = C.row p (k + offset)) →
+    ∀ (h : Nat → Bool) (n k : Nat),
+      N + 2 * C.width * n ≤ k →
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.history h n y k =
+          C.row (Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase C p n) (k + offset)
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.history_tail_bound' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_history_tail_bound : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (offset : Nat) (p : Phase) (y : Nat → Bool)
+  (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = C.row p (k + offset)) →
+    ∀ (h : Nat → Bool) (n k : Nat),
+      N + 4 * C.width * n ≤ k →
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.gateHistory h n y k =
+          C.row (Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase C p n) (k + offset)
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_history_tail_bound' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_pasts_agree_from : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (offset : Nat) (p : Phase) (y : Nat → Bool)
+  (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = C.row p (k + offset)) →
+    ∀ (h g : Nat → Bool) (n k : Nat),
+      N + 4 * C.width * n ≤ k →
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.gateHistory h n y k =
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.gateHistory g n y k
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_pasts_agree_from' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30SynchronizingCarrier.reconstructed_gate_pasts_agree_from : ∀ {Phase : Type}
+  (C : Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier Phase) (offset : Nat) (p : Phase) (G : Nat → Bool)
+  (N : Nat),
+  (∀ (k : Nat),
+      N ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.lam (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace G)
+            k =
+          C.row p (k + offset)) →
+    ∀ (h g : Nat → Bool) (n k : Nat),
+      N + 4 * C.width * n ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+            (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+              (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n G))
+            k =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+            (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+              (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n G))
+            k
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.reconstructed_gate_pasts_agree_from' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gap_five_bound_recovered : ∀ (h g : Nat → Bool) (n k : Nat),
+  1 + 620 * n ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+            Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate))
+        k =
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+            Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate))
+        k
+'Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gap_five_bound_recovered' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_step : ∀ (p k : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p (k + 2) =
+    (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 1) (k + 1) ^^
+      (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p (k + 1) ||
+        Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p k))
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_reference : ∀ (p k : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 15) (k + 2) =
+    (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p (k + 1) ^^
+      (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 15) (k + 1) ||
+        Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 15) k))
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_reference' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_sync : ∀ (p : Nat) (a b : Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.scan (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p) 325
+      (a, b) =
+    (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 15) 324,
+      Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row (p + 15) 325)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_sync' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_initial : ∀ (t : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow 0 t = false ∧
+    Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow 1 t =
+      Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary t
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_initial' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_step : ∀ (k t : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow (k + 2) t =
+    (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow (k + 1) (t + 1) ^^
+      (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow (k + 1) t ||
+        Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow k t))
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_full : ∀ (k t : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.recon Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary k t =
+    Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow k t
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_full' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.lam_tail : ∀ (k : Nat),
+  40 ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary k =
+      Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row 0 (k + 285)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.lam_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gate_legal_eight_windows : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gateWindow r ∈ [8, 9, 16, 18, 33, 36, 66, 72, 132, 144]
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gate_legal_eight_windows' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_odd_trace : Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary =
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+    Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_odd_trace' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree_from : ∀ (h g : Nat → Bool) (n k : Nat),
+  40 + 1300 * n ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+            Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate))
+        k =
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+            Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate))
+        k
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree_from' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree : ∀ (h g : Nat → Bool) (n : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.EventuallyEq
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+          Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate)))
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+          Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate)))
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_shift : ∀ (a : Nat → Bool) (p k t : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.recon (fun s => a (p + s)) k t =
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a k (p + t)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_shift' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.temporal_phase_tail : ∀ (p k : Nat),
+  40 ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (fun t => Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary (p + t)) k =
+      Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row p (k + 285)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.temporal_phase_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_shift_odd_trace : ∀ (s : Nat),
+  (fun t => Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary (2 * s + t)) =
+    Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+      (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_shift_odd_trace' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shifted_gate_pasts_agree_from : ∀ (s : Nat) (h g : Nat → Bool)
+  (n k : Nat),
+  40 + 1300 * n ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+            (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s)))
+        k =
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+            (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s)))
+        k
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shifted_gate_pasts_agree_from' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.prefixed_gate_tail : ∀ (s : Nat) (q : Nat → Bool) (m k : Nat),
+  40 + 1300 * m ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend q m
+            (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s)))
+        k =
+      Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row
+        (Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase
+          Ruliology.CellularAutomata.Rule30PeriodicThreeFive.carrier (2 * s) m)
+        (k + 285)
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.prefixed_gate_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicThreeFive.eventually_three_five_pasts_agree_from : ∀ (s : Nat)
+  (q h g : Nat → Bool) (m n k : Nat),
+  40 + 1300 * (m + n) ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+            (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend q m
+              (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s))))
+        k =
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+            (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend q m
+              (Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate s))))
+        k
+'Ruliology.CellularAutomata.Rule30PeriodicThreeFive.eventually_three_five_pasts_agree_from' depends on axioms: [propext,
+ Quot.sound]

@@ -1,0 +1,740 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "fresh_source_modules": 11,
+  "reused_objects": false,
+  "whole_catalog_build": false,
+  "checkers": {
+    "Ruliology.CellularAutomata.Rule30SynchronizingCarrier": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "inductive",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.back_tail_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gapFiveCarrier",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gap_five_bound_recovered",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_history_tail_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_pasts_agree_from",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.history_tail_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.reconstructed_gate_pasts_agree_from",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.row_add_multiple",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.casesOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.ctorIdx",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.mk",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.noConfusionType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.positive",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.prev",
+          "standardAxioms": true
+        },
+        {
+          "kind": "recursor",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.rec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.recOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.reference",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.row",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.row_mod",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.sync",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.width",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gatePhase.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.pastPhase.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.mk.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.mk.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.mk.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.Carrier.mk.sizeOf_spec",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.row_add_multiple",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.back_tail_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.history_tail_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_history_tail_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gate_pasts_agree_from",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.reconstructed_gate_pasts_agree_from",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier.gap_five_bound_recovered",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30SynchronizingCarrier",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 61,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    "Ruliology.CellularAutomata.Rule30PeriodicThreeFive": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree_from",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_odd_trace",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_shift_odd_trace",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.carrier",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.eventually_three_five_pasts_agree_from",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_initial",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gateWindow",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gate_legal_eight_windows",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.lam_tail",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.packedCycle",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.packedPrefix",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.prefixed_gate_tail",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_full",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_shift",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_phase_add_mod",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_phase_mod",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_phase_sixteen",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_reference",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_sync",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shifted_gate_pasts_agree_from",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.temporal_phase_tail",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.fullRow.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gapThreeFiveGate.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gateWindow.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shiftedGate.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_reference",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.row_sync",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_initial",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.full_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_full",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.lam_tail",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.gate_legal_eight_windows",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_odd_trace",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree_from",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.arbitrary_gate_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.recon_shift",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.temporal_phase_tail",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.boundary_shift_odd_trace",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.shifted_gate_pasts_agree_from",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.prefixed_gate_tail",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive.eventually_three_five_pasts_agree_from",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30PeriodicThreeFive",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 70,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
+  },
+  "owned_declarations": 131,
+  "headlines": 24,
+  "source_files": [
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodicGateTail.lean",
+      "sha256": "948e1dd57d9f928a617abdbd23fe8290d3b2d5763d99f5adae6fb1a40ae0428b"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodicThreeFive.lean",
+      "sha256": "d6962cdac721104390b7a97030800c84f5801a09480208713bcfc1b87fb83bc0"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30SynchronizingCarrier.lean",
+      "sha256": "61f257227cc0a4a24a7e90ff8e502bace937ebc11f25e9ccfbd3ad780d6c6ebb"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    }
+  ],
+  "source_warnings": false,
+  "seconds": 26.2204677000409
+}
