@@ -1,0 +1,104 @@
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.profile_step : ∀ (p k : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + 2) =
+    (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 1) (k + 1) ^^
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + 1) ||
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p k))
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.profile_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.scan_sync : ∀ (p : Nat) (a b : Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.scan
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p) 155 (a, b) =
+    (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) 154,
+      Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) 155)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.scan_sync' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.reference_rec : ∀ (p k : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) (k + 2) =
+    (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + 1) ^^
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) (k + 1) ||
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) k))
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.reference_rec' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.back_tail : ∀ (offset p : Nat) (y : Nat → Bool) (b : Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset p y →
+    Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset (p + 9)
+      (Ruliology.CellularAutomata.Rule30ZeroBoundary.back b y)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.back_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.history_tail : ∀ (offset p : Nat) (y : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset p y →
+    ∀ (h : Nat → Bool) (n : Nat),
+      Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset (p + 9 * n)
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.history h n y)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.history_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.all_histories_agree : ∀ (offset p : Nat) (y : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset p y →
+    ∀ (h g : Nat → Bool) (n : Nat),
+      Ruliology.CellularAutomata.Rule30PeriodicGateTail.EventuallyEq
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.history h n y)
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.history g n y)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.all_histories_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.lam_gap_five_tail : Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail
+  153 0 (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.lam_gap_five_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.gap_five_histories_agree : ∀ (h g : Nat → Bool) (n : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.EventuallyEq
+    (Ruliology.CellularAutomata.Rule30PeriodicGateTail.history h n
+      (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary))
+    (Ruliology.CellularAutomata.Rule30PeriodicGateTail.history g n
+      (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary))
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.gap_five_histories_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.gate_history_tail : ∀ (offset p : Nat) (y : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset p y →
+    ∀ (h : Nat → Bool) (n : Nat),
+      Ruliology.CellularAutomata.Rule30PeriodicGateTail.Tail offset (p + 18 * n)
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gateHistory h n y)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.gate_history_tail' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary_odd_trace : Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary =
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+    Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.boundary_odd_trace' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.arbitrary_gate_pasts_agree : ∀ (h g : Nat → Bool) (n : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodicGateTail.EventuallyEq
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate)))
+    (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate)))
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.arbitrary_gate_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.back_tail_bound : ∀ (offset p : Nat) (y : Nat → Bool) (b : Bool)
+  (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + offset)) →
+    ∀ (k : Nat),
+      N + 310 ≤ k →
+        Ruliology.CellularAutomata.Rule30ZeroBoundary.back b y k =
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9) (k + offset)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.back_tail_bound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.history_tail_bound : ∀ (offset p : Nat) (y : Nat → Bool) (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + offset)) →
+    ∀ (h : Nat → Bool) (n k : Nat),
+      N + 310 * n ≤ k →
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.history h n y k =
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 9 * n) (k + offset)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.history_tail_bound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.gate_history_tail_bound : ∀ (offset p : Nat) (y : Nat → Bool)
+  (N : Nat),
+  (∀ (k : Nat), N ≤ k → y k = Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow p (k + offset)) →
+    ∀ (h : Nat → Bool) (n k : Nat),
+      N + 620 * n ≤ k →
+        Ruliology.CellularAutomata.Rule30PeriodicGateTail.gateHistory h n y k =
+          Ruliology.CellularAutomata.Rule30PeriodicGateTail.profileRow (p + 18 * n) (k + offset)
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.gate_history_tail_bound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodicGateTail.arbitrary_gate_pasts_agree_from : ∀ (h g : Nat → Bool) (n k : Nat),
+  1 + 620 * n ≤ k →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend h n
+            Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate))
+        k =
+      Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+        (Ruliology.CellularAutomata.Rule30PeriodicGateTail.oddTrace
+          (Ruliology.CellularAutomata.Rule30PeriodicGateTail.gatePrepend g n
+            Ruliology.CellularAutomata.Rule30PeriodicGateTail.gapFiveGate))
+        k
+'Ruliology.CellularAutomata.Rule30PeriodicGateTail.arbitrary_gate_pasts_agree_from' depends on axioms: [propext,
+ Quot.sound]
