@@ -1,0 +1,18 @@
+Ruliology.CellularAutomata.Rule30PairedColumnRuns.zero_run_le : ∀ (x : Int → Bool) (P : Nat),
+  2 ≤ P →
+    Ruliology.CellularAutomata.Rule30PairedColumnRuns.PerAll x 0 P →
+      Ruliology.CellularAutomata.Rule30PairedColumnRuns.PerAll x 1 P →
+        (∃ t, Ruliology.CellularAutomata.Rule30Realization.evol x t 0 = true) →
+          ∀ (d R : Nat), 1 ≤ d → (∀ (i : Nat), d ≤ i → i < d + R → x (-↑i) = false) → R ≤ 2 * P - 2
+'Ruliology.CellularAutomata.Rule30PairedColumnRuns.zero_run_le' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PairedColumnRuns.odd_zero_run_le : ∀ (x : Int → Bool) (P : Nat),
+  1 ≤ P →
+    Ruliology.CellularAutomata.Rule30PairedColumnRuns.PerAll x 0 P →
+      Ruliology.CellularAutomata.Rule30PairedColumnRuns.PerAll x 1 P →
+        (∃ t, Ruliology.CellularAutomata.Rule30Realization.evol x t 0 = true) →
+          ∀ (d m : Nat),
+            1 ≤ d →
+              1 ≤ m →
+                (∀ (i : Nat), d ≤ i → i ≤ d + 2 * m → x (-↑i) = false) →
+                  x (-↑(d - 1)) = true → x (-↑(d + 2 * m + 1)) = true → m + 3 ≤ P
+'Ruliology.CellularAutomata.Rule30PairedColumnRuns.odd_zero_run_le' depends on axioms: [propext, Quot.sound]

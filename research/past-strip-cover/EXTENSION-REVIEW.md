@@ -1,0 +1,3 @@
+The20n candidate is FALSE: literal, independently implemented triangular inversion confirms row0 differences at column20n for n10,11,12. Each witness includes a legal infinite completion with eventual gap5, so it remains within the already proved periodic-tail locality subclass. This is not a counterexample to eventual locality.
+
+Next bounded pass resumes ONLY the unresolved frontiers8,47,110 for n10,11,12, raises the respective future caps to200,220,240 and retains90seconds/200000 processed prefixes/1GiB each. Do not infer an arbitrary-n bound from any completion. Save every remaining branch as UNKNOWN at a cap.

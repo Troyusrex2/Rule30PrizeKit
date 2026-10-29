@@ -1,0 +1,43 @@
+Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair : ∀ (a b : Nat → Bool) (T M : Nat),
+  (∀ (t : Nat), T ≤ t → a t = b t) →
+    (∀ (t : Nat),
+        t < T →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a M t =
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b M t) →
+      (∀ (t : Nat),
+          t < T →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a (M + 1) t =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b (M + 1) t) →
+        ∀ (k : Nat),
+          M ≤ k →
+            ∀ (t : Nat),
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a k t =
+                Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b k t
+'Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound : ∀ (c : Ruliology.CellularAutomata.Rule30PastStrip.Triangle)
+  (a : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30PastStrip.Valid c a →
+    ∀ (k t : Nat),
+      k + t < c.horizon →
+        Ruliology.CellularAutomata.Rule30PastStrip.cell c k t =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a k t
+'Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.future_legal : Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+  Ruliology.CellularAutomata.Rule30PastStrip.future
+'Ruliology.CellularAutomata.Rule30PastStrip.future_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal : Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+    (Ruliology.CellularAutomata.Rule30PastStrip.prepend 132 Ruliology.CellularAutomata.Rule30PastStrip.future) ∧
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+    (Ruliology.CellularAutomata.Rule30PastStrip.prepend 528 Ruliology.CellularAutomata.Rule30PastStrip.future)
+'Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200 : Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+        (Ruliology.CellularAutomata.Rule30PastStrip.prepend 132 Ruliology.CellularAutomata.Rule30PastStrip.future))
+      200 =
+    true ∧
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+        (Ruliology.CellularAutomata.Rule30PastStrip.prepend 528 Ruliology.CellularAutomata.Rule30PastStrip.future))
+      200 =
+    false
+'Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200' depends on axioms: [propext, Quot.sound]
