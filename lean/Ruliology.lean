@@ -122,6 +122,7 @@ public import Ruliology.CellularAutomata.Rule30PrefixMerger
 public import Ruliology.CellularAutomata.Rule30InverseRuns
 public import Ruliology.CellularAutomata.Rule30GateInverseMerge
 public import Ruliology.CellularAutomata.Rule30GatePastThree
+public import Ruliology.CellularAutomata.Rule30PeriodicGateTail
 
 /-!
 # Rule 30 Prize: Lean snapshot
