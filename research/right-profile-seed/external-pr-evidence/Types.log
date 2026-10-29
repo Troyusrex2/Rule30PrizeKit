@@ -1,0 +1,169 @@
+Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_source_weight : ∀ (f : Nat → Bool) (q s : Nat),
+  s < q →
+    f q = f 0 →
+      Ruliology.CellularAutomata.Rule30TemporalProfiles.weight
+          (Ruliology.CellularAutomata.Rule30TemporalProfiles.profileSource f s) q =
+        2 * Ruliology.CellularAutomata.Rule30TemporalProfiles.rises f q +
+          Ruliology.CellularAutomata.Rule30TemporalProfiles.correction (f (s + 1)) (f s)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_source_weight' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_child_holes : ∀ (q l : Nat) (C D : Nat → Bool),
+  1 ≤ l →
+    l < q →
+      C l = true →
+        (∀ (t : Nat), 1 ≤ t → t < l → C t = false) →
+          D q = D 0 →
+            (∀ (t : Nat), t < q → D (t + 1) = (decide (t = 0) ^^ (C t || D t))) →
+              ∀ (t : Nat), t ≤ q → D t = decide (t = 0 ∨ l < t)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_child_holes' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TemporalProfiles.actual_pulse_delays : ∀ (q l arrival : Nat) (C D : Nat → Bool),
+  1 ≤ l →
+    l < q →
+      1 ≤ arrival →
+        arrival ≤ q →
+          C l = true →
+            (∀ (t : Nat), 1 ≤ t → t < l → C t = false) →
+              Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q C →
+                Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q D →
+                  (∀ (t : Nat),
+                      D (t + 1) = (Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse q t ^^ (C t || D t))) →
+                    Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack
+                        (Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse q) arrival (q - arrival) ∧
+                      arrival + (q - arrival + 1) = q + 1 ∧
+                        Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack C (q + 1) (l - 1) ∧
+                          Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack D (q + l + 1) 0
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.actual_pulse_delays' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow_pulse_bound : ∀ (x : Int → Bool) (j : Int)
+  (T0 q l arrival : Nat),
+  4 ≤ q →
+    1 ≤ l →
+      l < q →
+        1 ≤ arrival →
+          arrival ≤ q →
+            (∀ (t : Nat),
+                Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x j T0 t =
+                  Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse q t) →
+              Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 1) T0 l = true →
+                (∀ (t : Nat),
+                    1 ≤ t →
+                      t < l → Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 1) T0 t = false) →
+                  Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q
+                      (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 1) T0) →
+                    Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q
+                        (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 2) T0) →
+                      (Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack
+                            (Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse q) arrival (q - arrival) ∧
+                          arrival + (q - arrival + 1) = q + 1 ∧
+                            Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack
+                                (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 1) T0) (q + 1)
+                                (l - 1) ∧
+                              Ruliology.CellularAutomata.Rule30TemporalProfiles.FirstBlack
+                                (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 2) T0) (q + l + 1)
+                                0) ∧
+                        Ruliology.CellularAutomata.Rule30TemporalProfiles.intervalDebt2 ↑(q - arrival + 1) ↑l ≤
+                          2 * ↑q - 5 + max 0 (2 * ↑l - 5)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow_pulse_bound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_window_attained : ∀ (q l : Nat),
+  4 ≤ q →
+    l < q →
+      Ruliology.CellularAutomata.Rule30TemporalProfiles.intervalDebt2 ↑(q - 1 + 1) ↑l = 2 * ↑q - 5 + max 0 (2 * ↑l - 5)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.pulse_window_attained' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30TemporalProfiles.child_unique : ∀ {q : Nat},
+  0 < q →
+    ∀ {A B C C' : Nat → Bool},
+      Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q C →
+        Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q C' →
+          Ruliology.CellularAutomata.Rule30TemporalProfiles.Child (fun x => x + 1) A B C →
+            Ruliology.CellularAutomata.Rule30TemporalProfiles.Child (fun x => x + 1) A B C' →
+              ∀ {t0 : Nat}, B t0 = true → C = C'
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.child_unique' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30TemporalProfiles.child_exists : ∀ {q : Nat},
+  0 < q →
+    ∀ {A B : Nat → Bool},
+      Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q A →
+        Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q B →
+          ∀ {t0 : Nat},
+            B t0 = true →
+              Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q
+                  (Ruliology.CellularAutomata.Rule30TemporalProfiles.childOf A B q t0) ∧
+                Ruliology.CellularAutomata.Rule30TemporalProfiles.Child (fun x => x + 1) A B
+                  (Ruliology.CellularAutomata.Rule30TemporalProfiles.childOf A B q t0)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.child_exists' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30TemporalProfiles.rooted_chain_returns_bounded : ∀ {q : Nat},
+  0 < q →
+    ∀ (w : Nat → Nat → Bool),
+      (∀ (k : Nat), Ruliology.CellularAutomata.Rule30TemporalProfiles.Periodic q (w k)) →
+        (∀ (t : Nat), w 0 t = false) →
+          (∀ (k : Nat),
+              Ruliology.CellularAutomata.Rule30TemporalProfiles.Child (fun x => x + 1) (w k) (w (k + 1)) (w (k + 2))) →
+            ∃ k, 1 ≤ k ∧ k ≤ 2 ^ (q + q) ∧ ∀ (t : Nat), w k t = false
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.rooted_chain_returns_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow_child : ∀ (x : Int → Bool) (j : Int) (T0 : Nat),
+  Ruliology.CellularAutomata.Rule30TemporalProfiles.Child (fun t => t + 1)
+    (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x j T0)
+    (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 1) T0)
+    (Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow x (j + 2) T0)
+'Ruliology.CellularAutomata.Rule30TemporalProfiles.leftWindow_child' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.shift_law : ∀ (q : Nat),
+  q % 2 = 0 →
+    ∀ (d a b c z : Nat → Bool),
+      (∀ (t : Nat), d (t + q) = d t) →
+        (∀ (t : Nat), a (t + q) = !a t) →
+          (∀ (t : Nat), b (t + 2 * q) = b t) →
+            (∀ (t : Nat), c (t + 2 * q) = !c t) →
+              (∀ (t : Nat), b (t + 1) = (b t ^^ (a t || d t))) →
+                (∀ (t : Nat), z (t + 1) = (z t ^^ (c t || b t))) →
+                  ∀ (t : Nat), z (t + 4 * q) = (z t ^^ Ruliology.CellularAutomata.Rule30RightProfiles.eta q d)
+'Ruliology.CellularAutomata.Rule30RightProfiles.shift_law' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag_step : ∀ (x : Int → Bool) (j : Int) (t : Nat),
+  Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x j (t + 1) =
+    (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x j t ^^
+      (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j - 1) t ||
+        Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j - 2) t))
+'Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag_shift_law : ∀ (x : Int → Bool) (j : Int) (q : Nat),
+  q % 2 = 0 →
+    (∀ (t : Nat),
+        Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j - 1) (t + q) =
+          Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j - 1) t) →
+      (∀ (t : Nat),
+          Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x j (t + q) =
+            !Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x j t) →
+        (∀ (t : Nat),
+            Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 1) (t + 2 * q) =
+              Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 1) t) →
+          (∀ (t : Nat),
+              Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 2) (t + 2 * q) =
+                !Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 2) t) →
+            ∀ (t : Nat),
+              Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 3) (t + 4 * q) =
+                (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 3) t ^^
+                  Ruliology.CellularAutomata.Rule30RightProfiles.eta q
+                    (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j - 1)))
+'Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag_shift_law' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30RightProfiles.running_shift : ∀ {D g : Nat → Bool} {p : Nat},
+  (∀ (t : Nat), D (t + 1) = (D t ^^ g t)) →
+    (∀ (t : Nat), g (t + p) = g t) →
+      ∀ (t : Nat), D (t + p) = (D t ^^ Ruliology.CellularAutomata.Rule30RightProfiles.xr g p)
+'Ruliology.CellularAutomata.Rule30RightProfiles.running_shift' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.E_mod4 : ∀ (q : Nat),
+  q % 4 = 0 →
+    ∀ (d h : Nat → Bool),
+      (∀ (t : Nat), d (t + 1) = (d t ^^ h t)) →
+        Ruliology.CellularAutomata.Rule30RightProfiles.E q d =
+          Ruliology.CellularAutomata.Rule30RightProfiles.xr (fun s => h (4 * s) ^^ h (4 * s + 1)) (q / 4)
+'Ruliology.CellularAutomata.Rule30RightProfiles.E_mod4' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.eta_false_of_antiperiod : ∀ (q : Nat),
+  q % 8 = 0 →
+    ∀ (d : Nat → Bool),
+      (∀ (t : Nat), d (t + q / 2) = !d t) → Ruliology.CellularAutomata.Rule30RightProfiles.eta q d = false
+'Ruliology.CellularAutomata.Rule30RightProfiles.eta_false_of_antiperiod' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.eta_four : ∀ (d : Nat → Bool),
+  (∀ (t : Nat), d (t + 2) = !d t) → Ruliology.CellularAutomata.Rule30RightProfiles.eta 4 d = true
+'Ruliology.CellularAutomata.Rule30RightProfiles.eta_four' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightProfiles.eta_false_of_period_half : ∀ (q : Nat),
+  q % 4 = 0 →
+    ∀ (d : Nat → Bool),
+      (∀ (t : Nat), d (t + q / 2) = d t) → Ruliology.CellularAutomata.Rule30RightProfiles.eta q d = false
+'Ruliology.CellularAutomata.Rule30RightProfiles.eta_false_of_period_half' depends on axioms: [propext, Quot.sound]

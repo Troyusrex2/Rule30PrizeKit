@@ -1,0 +1,27 @@
+@Ruliology.CellularAutomata.Rule30RightProfileSeed.no_11011_period : ∀ {j E : Nat},
+  1 ≤ j →
+    2 ≤ E →
+      Ruliology.CellularAutomata.Rule30RightPeriods.Per j (2 ^ E) →
+        ¬Ruliology.CellularAutomata.Rule30RightPeriods.Per (j + 1) (2 ^ E) →
+          ¬Ruliology.CellularAutomata.Rule30RightPeriods.Per (j + 2) (2 ^ (E + 1)) →
+            ¬Ruliology.CellularAutomata.Rule30RightPeriods.Per (j + 4) (2 ^ (E + 2)) →
+              Ruliology.CellularAutomata.Rule30RightPeriods.Per (j + 5) (2 ^ (E + 3))
+'Ruliology.CellularAutomata.Rule30RightProfileSeed.no_11011_period' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30RightProfileSeed.exponent_1101_forces_stay : ∀ {j E : Nat},
+  1 ≤ j →
+    2 ≤ E →
+      Ruliology.CellularAutomata.Rule30RightPeriods.IsE j E →
+        Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 1) (E + 1) →
+          Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 2) (E + 2) →
+            Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 4) (E + 3) →
+              Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 5) (E + 3)
+'Ruliology.CellularAutomata.Rule30RightProfileSeed.exponent_1101_forces_stay' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30RightProfileSeed.no_11011_exponents : ∀ {j E : Nat},
+  1 ≤ j →
+    2 ≤ E →
+      Ruliology.CellularAutomata.Rule30RightPeriods.IsE j E →
+        Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 1) (E + 1) →
+          Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 2) (E + 2) →
+            Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 4) (E + 3) →
+              ¬Ruliology.CellularAutomata.Rule30RightPeriods.IsE (j + 5) (E + 4)
+'Ruliology.CellularAutomata.Rule30RightProfileSeed.no_11011_exponents' depends on axioms: [propext, Quot.sound]
