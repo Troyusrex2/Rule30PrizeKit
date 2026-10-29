@@ -1,0 +1,75 @@
+Ruliology.CellularAutomata.Rule30UniversalStart.universal_start : ∀ (x : Int → Bool),
+  x 0 = true →
+    (∀ (i : Int), 0 < i → x i = false) →
+      ∀ (m : Nat),
+        2 ≤ m →
+          x (-↑m) = x (-(↑m - 1)) →
+            (∀ (d : Nat), 2 ≤ d → d < m → x (-↑d) ≠ x (-(↑d - 1))) →
+              Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                  (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 1)) 4 ∧
+                Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                    (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 2)) 8 ∧
+                  Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                      (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 3)) 8 ∧
+                    Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                        (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 4)) 16 ∧
+                      Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                          (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 5)) 32 ∧
+                        Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                            (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 6)) 32 ∧
+                          (Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                              (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 7)) 32 ∨
+                            Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                              (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 7)) 64)
+'Ruliology.CellularAutomata.Rule30UniversalStart.universal_start' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStart.universal_start_finite : ∀ (x : Int → Bool),
+  x 0 = true →
+    (∀ (i : Int), 0 < i → x i = false) →
+      ∀ (L : Nat),
+        (∀ (i : Int), i < -↑L → x i = false) →
+          ∃ m,
+            2 ≤ m ∧
+              Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                  (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 1)) 4 ∧
+                Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                    (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 2)) 8 ∧
+                  Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                      (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 3)) 8 ∧
+                    Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                        (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 4)) 16 ∧
+                      Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                          (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 5)) 32 ∧
+                        Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                            (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 6)) 32 ∧
+                          (Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                              (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 7)) 32 ∨
+                            Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                              (Ruliology.CellularAutomata.Rule30UniversalStart.rightDiag x (↑m + 7)) 64)
+'Ruliology.CellularAutomata.Rule30UniversalStart.universal_start_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStart.universal_start_profiles : ∀ (p : Bool) (bits : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 0)
+      4 ∧
+    Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+        (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 1) 8 ∧
+      Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+          (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 2) 8 ∧
+        Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+            (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 3) 16 ∧
+          Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+              (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 4) 32 ∧
+            Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 5) 32 ∧
+              (Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                  (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 6) 32 ∨
+                Ruliology.CellularAutomata.Rule30UniversalStart.LeastPer
+                  (Ruliology.CellularAutomata.Rule30UniversalStart.E p bits 6) 64)
+'Ruliology.CellularAutomata.Rule30UniversalStart.universal_start_profiles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStart.cert : ∀ (p b0 b1 b2 b3 b4 b5 b6 : Bool),
+  Ruliology.CellularAutomata.Rule30UniversalStart.certOK p b0 b1 b2 b3 b4 b5 b6 = true
+'Ruliology.CellularAutomata.Rule30UniversalStart.cert' depends on axioms: [propext]
