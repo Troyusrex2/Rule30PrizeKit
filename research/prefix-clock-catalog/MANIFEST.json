@@ -1,5 +1,5 @@
 {
-  "scope": "partial: checked prefix clocks/contact structure; unbounded contact claim and Prize remain open",
+  "scope": "partial: checked clock structure and stronger two-back condition; unbounded no-return/Prize remain open",
   "files": [
     {
       "path": ".gitattributes",
@@ -8,8 +8,8 @@
     },
     {
       "path": "CATALOG.json",
-      "sha256": "c0067a8e6488ed49bf932725df0dfbd0ef40be6bdb42c581c43459ef9b0e72a3",
-      "bytes": 3659
+      "sha256": "c293d9d82c29cb153c312553640ad74e3f48d4cc8ab67b41431d7f1f349a5c09",
+      "bytes": 5343
     },
     {
       "path": "data/PROFILE-GRAPH.json",
@@ -38,88 +38,93 @@
     },
     {
       "path": "evidence/build.log",
-      "sha256": "6a975e0af60db049743ba7eb2c6182e8f79676b917b6c8585f9a40c029c33fdc",
-      "bytes": 3973
+      "sha256": "006cc1a6e4007570dccdb12752a50aa4891a7cb69cc94eb1bcf954da96cb8f03",
+      "bytes": 4085
     },
     {
       "path": "evidence/check-0.log",
-      "sha256": "1bbb9937d80aabf16fc081013ffa1904efcd8858ddc0d9a0c761fd115748db86",
-      "bytes": 3984
+      "sha256": "787e891c238299b291240ff092fdefa7179a0068388e88e53072efc467a36add",
+      "bytes": 3978
     },
     {
       "path": "evidence/check-1.log",
-      "sha256": "5d409bb66bd44959798ad29c7af6b05fc4bfce42d71695ff542a24cb8f50b642",
-      "bytes": 6005
+      "sha256": "22b374c72da9e37a57406914483888afd39b13af9e992e8f679954ba7d476552",
+      "bytes": 5999
     },
     {
       "path": "evidence/check-10.log",
-      "sha256": "50a6d1549619cdec017018e9afc77f59dd007753b13c95d2348b2c87737e1cf0",
-      "bytes": 4529
+      "sha256": "8dbe1ee2c38063f25a2e3906857fd73c6dca1dbc806c16d4cbd3a5863af0acd0",
+      "bytes": 4523
     },
     {
       "path": "evidence/check-11.log",
-      "sha256": "95ae76cc89d4d90d674114d4452706f2be27ae6212866bfa81205b5245776ac1",
-      "bytes": 5901
+      "sha256": "560ef5468ccf9a9f1d60df5165ec5bac322190202e5c9c04f1ef79d458aa9038",
+      "bytes": 5895
+    },
+    {
+      "path": "evidence/check-12.log",
+      "sha256": "aedbbcffefe33dc0835fb59f40945d05008221cbbfdf8c3b884dd9a6afbf8906",
+      "bytes": 1460
     },
     {
       "path": "evidence/check-2.log",
-      "sha256": "fff1f1310bbf753c315618801f12e460f726c1be04d3fb552754dc1175a2ac7b",
-      "bytes": 4369
+      "sha256": "c7623d290dc0e72b9e0eeacc2eb345439dd59f801600d6f72e835a187c3f6a7b",
+      "bytes": 4363
     },
     {
       "path": "evidence/check-3.log",
-      "sha256": "660d97d1b3fe3f382bee705ccbee6d71e154292a0f3e70f0083e0f104fcb3649",
-      "bytes": 2450
+      "sha256": "c8910a878a2deffb8c772b6f9931c4f1bdb36a180f393b81a816c76e3a9ba7a1",
+      "bytes": 2444
     },
     {
       "path": "evidence/check-4.log",
-      "sha256": "d775c3c3cf6eb43fcd4cd8f7ed6e247d1cc89e2a831939a19992114efa4e92bd",
-      "bytes": 7310
+      "sha256": "ab5eabbf7d03109543f97b953c498ca1e41186d4fa37df0648b04c17b4838a33",
+      "bytes": 7304
     },
     {
       "path": "evidence/check-5.log",
-      "sha256": "12cbb7c8aabe15b300ac7b5c240e4aaffbb3faee5e1c60181ac04c2ff016986f",
-      "bytes": 2507
+      "sha256": "7722c3293ebc156a1cd6637bee9eeb4ccd58d1153824d3395cf512d80c0d9a56",
+      "bytes": 2501
     },
     {
       "path": "evidence/check-6.log",
-      "sha256": "021622e5c61d4eb0e2e2d2d46ef3eb09ae92242df8a4f5e790c25da80388812e",
-      "bytes": 1518
+      "sha256": "0c9d0e2d5f27d673118d151201f770113540c6a133ec670e19f72283a951d341",
+      "bytes": 1512
     },
     {
       "path": "evidence/check-7.log",
-      "sha256": "ca267a7b2cb34229213f5124d367734dcfc24394597fc5170211927913b75604",
-      "bytes": 3074
+      "sha256": "da4af1a0a1c7a7f44600ffa49c8d14afd8b36d18fe89ba17a2c15d418b04f82d",
+      "bytes": 3068
     },
     {
       "path": "evidence/check-8.log",
-      "sha256": "3a6dbe58717fe1ae23142b8a835b3532451bf073292da16a3b01be28f3a9732a",
-      "bytes": 2189
+      "sha256": "007815a361dc5394413cf44a0ce2644e14ea88732a600717d9a5c414d09c2b9b",
+      "bytes": 2183
     },
     {
       "path": "evidence/check-9.log",
-      "sha256": "f4a3424a3d86f3e1d55e168751c447bcb1e0fa89ddcfd43963bdc9db88e212de",
-      "bytes": 5627
+      "sha256": "9ad96c785e96b72b46541c09bbad05924972c263bba0481f2637aa14dcd8c2ff",
+      "bytes": 5621
     },
     {
       "path": "evidence/job-attempt01.guard.json",
-      "sha256": "b5607ab1965fbb7eec98dd314f0ba622bebba983e62820d25e76213682b8ad55",
-      "bytes": 507
+      "sha256": "170ef2a84a289cfb81ac495aa11f577e729ae088616aad0eaab71e11fc7f4ed9",
+      "bytes": 501
     },
     {
       "path": "evidence/RESULT.json",
-      "sha256": "cc1de53d3d72998acb8f09f2e35dd6e26f85677f9f2fa851eb05c80c653e34af",
-      "bytes": 76351
+      "sha256": "7bab068deeb9f9f075e8790bfbcee3943da964c2bee3cbec9d03b9dc54ce68b3",
+      "bytes": 78074
     },
     {
       "path": "evidence/Types.log",
-      "sha256": "7ea0e2ac62a499b4fc3f0e4d2ef33f3ca82d0fe769de673842454f911073075f",
-      "bytes": 45489
+      "sha256": "10246172748bb4cbc7e2ae6b7aa9f93290df2425b589ef591b696063859778bf",
+      "bytes": 46953
     },
     {
       "path": "README.md",
-      "sha256": "7ce8da98972a5d6afea741b49a4a664eeb5e6b478c0473a2c9fc483740956d53",
-      "bytes": 6420
+      "sha256": "97391a428b41fc7d948d3369158d85efcc5dcab4c212ccb880d34029cafb7c7d",
+      "bytes": 6858
     },
     {
       "path": "replay/Check.lean",
@@ -128,8 +133,8 @@
     },
     {
       "path": "replay/INPUTS.json",
-      "sha256": "b19ecff6a1dabd004fb4322ac4a48e615e9bfec2f3a08df3a346dbcdd9ac7292",
-      "bytes": 8162
+      "sha256": "c2fc73abb38be6b2437f65d5544eebc05294596bad258517a1f1d3adff1bae3c",
+      "bytes": 8387
     },
     {
       "path": "replay/sources/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
@@ -272,6 +277,11 @@
       "bytes": 60217
     },
     {
+      "path": "replay/sources/Ruliology/CellularAutomata/Rule30TwoBackClock.lean",
+      "sha256": "cfc977b145cfa08b262f31a8ec66cdb429bb1946b7869374e9ed234333915d68",
+      "bytes": 3332
+    },
+    {
       "path": "replay/sources/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
       "sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
       "bytes": 62531
@@ -303,8 +313,8 @@
     },
     {
       "path": "replay/verify.py",
-      "sha256": "3c6c94ccc4683f5b60031521521d51df1724a1543112ef814f5b736e814868e9",
-      "bytes": 10254
+      "sha256": "dbb652a0e951aab27b44d2374af48d41862ef53696ac587dcf6b42ef11b695bc",
+      "bytes": 10498
     }
   ]
 }

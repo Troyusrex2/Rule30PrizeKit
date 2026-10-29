@@ -684,3 +684,25 @@ Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no0
         (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 2))
 'Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no00' depends on axioms: [propext,
  Quot.sound]
+Ruliology.CellularAutomata.Rule30TwoBackClock.two_back_period_two : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n : Nat),
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) 32 →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 2))) 2 →
+          Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 1))) 2
+'Ruliology.CellularAutomata.Rule30TwoBackClock.two_back_period_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30TwoBackClock.counter_two_back_clock64 : ∀ (x : Int → Bool) (R : Int)
+  (hx : ∀ (p : Int), R < p → x p = false) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+      (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 2))) 2 →
+    ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 1))) 2 →
+      6 ≤ Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hx n
+'Ruliology.CellularAutomata.Rule30TwoBackClock.counter_two_back_clock64' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

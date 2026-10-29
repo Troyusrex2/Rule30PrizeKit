@@ -1,7 +1,7 @@
 {
   "passed": true,
   "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
-  "fresh_source_modules": 34,
+  "fresh_source_modules": 35,
   "reused_objects": false,
   "whole_catalog_build": false,
   "checkers": {
@@ -2244,10 +2244,64 @@
       },
       "verdict": "pass",
       "verifiedTargets": []
+    },
+    "Ruliology.CellularAutomata.Rule30TwoBackClock": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30TwoBackClock.counter_two_back_clock64",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30TwoBackClock.two_back_period_two",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30TwoBackClock.two_back_period_two",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30TwoBackClock.counter_two_back_clock64",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30TwoBackClock",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 15,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
     }
   },
-  "owned_declarations": 1126,
-  "headlines": 77,
+  "owned_declarations": 1141,
+  "headlines": 79,
   "source_files": [
     {
       "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
@@ -2388,8 +2442,12 @@
     {
       "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwoContact.lean",
       "sha256": "9677580af67e0d18a45b9600a80ccf73bd394d2eedcd7d9849a8894ef52ce25c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30TwoBackClock.lean",
+      "sha256": "cfc977b145cfa08b262f31a8ec66cdb429bb1946b7869374e9ed234333915d68"
     }
   ],
   "source_warnings": false,
-  "seconds": 154.07094350003172
+  "seconds": 160.62022330006585
 }

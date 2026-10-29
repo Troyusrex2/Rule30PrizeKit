@@ -22,19 +22,21 @@ Finally, if a rightmost black cell R exists, global period 32 of the whole right
 
 An additional unbounded constraint concerns profiles with no temporal00: unless such a profile has period2, it cannot introduce a new whole-prefix period, for any prior period p. The common-zero/no-return-to-two equivalence and necessary isolated-zero condition for a counterexample are formalized, while the unbounded common-zero assertion itself remains open. See the companion [contact archive](../period-two-contact) for exact statements, bounded experiments and their limitations.
 
+The isolated-zero argument also strengthens the possible-return condition: a non-period-two predecessor followed by a period2 profile requires a prefix clock at least64 two diagonals before the returned profile. Equivalently, period32 of that earlier prefix excludes the return. This does not prove arbitrary-clock no-return. The companion [two-back archive](../two-back-clock) contains the short proof and exact types.
+
 ## Catalog form and dependencies
 
 The proposed catalog branch is stacked on ghywel's [PR51](https://github.com/WolframInstitute/Rule30PrizeKit/pull/51), exact original commit `5d4cc975534cb09cd424646696de2488838afb52`; its RightProfiles source and authorship are preserved. The official base is `932cf8dde039b89b1dcbe9636867bb1b2057fef0`. Merge PR51 first. Its shift-law module is a dependency, not our contribution.
 
-Ten main catalog modules are registered in Ruliology and the Added-in-the-kit table: RightPrefixClock, RightPrefixBound, FrontHalfPeriod, PrefixClockGrowth, ProfileGraph, ProfileGraphCases, ProfileClockEscape, ProfileClockSharpness, LowClockWaves, and PeriodTwoContact. Heavy graph/rank checks live under Rule30Certificates in ProfileGraph32 and ProfileClockRank32. Public theorem names remain stable across the data-module extraction.
+Eleven main catalog modules are registered in Ruliology and the Added-in-the-kit table: RightPrefixClock, RightPrefixBound, FrontHalfPeriod, PrefixClockGrowth, ProfileGraph, ProfileGraphCases, ProfileClockEscape, ProfileClockSharpness, LowClockWaves, PeriodTwoContact, and TwoBackClock. Heavy graph/rank checks live under Rule30Certificates in ProfileGraph32 and ProfileClockRank32. Public theorem names remain stable across the data-module extraction.
 
 The finite-front application was prompted by G.P.J.W. Quint and Gemini's [PR45](https://github.com/WolframInstitute/Rule30PrizeKit/pull/45). It uses the already official FrontLift module and does not depend on PR45's unmerged module. The elementary orbit-return shift identity is also used there. Official half-rate and moving-edge proofs are credited in their source modules.
 
 ## Validation
 
-The final LF catalog sources passed a fresh 34-source dependency-closure build and the unchanged official checker replayed **all 1126 owned declarations** across all 12 new modules, with 77 explicit headlines. Combined imports, theorem types, and axioms were checked. There were no reused objects, source warnings, or new axioms. Most of the declaration count consists of certificate helpers, not separate mathematical insights.
+The final LF catalog sources passed a fresh 35-source dependency-closure build and the unchanged official checker replayed **all 1141 owned declarations** across all 13 new modules, with 79 explicit headlines. Combined imports, theorem types, and axioms were checked. There were no reused objects, source warnings, or new axioms. Most of the declaration count consists of certificate helpers, not separate mathematical insights.
 
-The successful integration took 154.07seconds and peaked at about1.84GiB owned RSS, within fixed 300-second/8GiB guards on G913. This is a focused dependency-closure build, not a whole-catalog build. These are local unchanged-checker results, not a claim of Wolfram reviewer approval.
+The successful integration took 160.62seconds and peaked at about1.84GiB owned RSS, within fixed 300-second/8GiB guards on G913. This is a focused dependency-closure build, not a whole-catalog build. These are local unchanged-checker results, not a claim of Wolfram reviewer approval.
 
 Reproduce with Python and the exact recorded Lean4.35.0 Windows toolchain:
 
