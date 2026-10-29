@@ -1,0 +1,8 @@
+{
+ "purpose":"Check whether the unrefuted leading-border integer repair can even hold uniformly at later offsets, as a recurrence-based iteration would need",
+ "candidate":"For the actual singleton trajectory, a shifted H1=(c(s)) is invertible mod2 and newest source c(s+1)*cell(s+1,1)=1 implies shifted integer H2 is nonsingular",
+ "exact_formula":"When c(s)=1, det H2=c(s+2)-c(s+1)^2",
+ "limits":{"offset_min":0,"offset_max":128,"center_horizon":130,"wall_seconds":10},
+ "failure":"c(s)=c(s+1)=c(s+2)=1 and cell(s+1,1)=1",
+ "scope":"A counterexample rejects only the shift-uniform integer repair, not the still-unrefuted leading-border candidate"
+}

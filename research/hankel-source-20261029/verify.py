@@ -16,7 +16,8 @@ HEADS={
  'EndpointCountermodel':['endpoint_complete','endpoint_complete_periodic_center',
   'endpoint_control_does_not_imply_seed_aperiodicity'],
  'ResetCountermodel':['reset0101_constant','evol_ether','resets_every_time_constant_center',
-  'ether_is_not_left_finite','finite_prefix_reset_counterfamily']}
+  'ether_is_not_left_finite','finite_prefix_reset_counterfamily'],
+ 'SmallIntegerWitness':['certificate_matches','witness_bits','shifted_integer_fresh_source_cancels']}
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 

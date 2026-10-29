@@ -1,0 +1,8 @@
+{
+ "purpose":"Try a concrete exact renormalization rather than assume the two-step parity row closes",
+ "candidate":"A nonconstant Boolean map h of each adjacent pair of cells turns two Rule30 steps into one radius1 binary CA step on the pair lattice",
+ "limits":{"block_size":2,"time_steps":2,"all_maps":16,"all_six_bit_input_windows":64,"wall_seconds":10,"no_extension":true},
+ "test":"For every map h, outputs must be constant on fibers of the projected left/center/right pair triple",
+ "failure":"For each nonconstant map, two input windows have identical projected triples but different projected updated pairs",
+ "scope":"Exact finite factor-map question only; excludes neither larger blocks nor more states nor nonlocal or history-dependent renormalizations"
+}

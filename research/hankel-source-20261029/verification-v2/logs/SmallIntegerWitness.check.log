@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"SmallIntegerWitness.certificate","standardAxioms":true},{"kind":"theorem","name":"SmallIntegerWitness.certificate_base","standardAxioms":true},{"kind":"theorem","name":"SmallIntegerWitness.certificate_matches","standardAxioms":true},{"kind":"theorem","name":"SmallIntegerWitness.certificate_steps","standardAxioms":true},{"kind":"theorem","name":"SmallIntegerWitness.shifted_integer_fresh_source_cancels","standardAxioms":true},{"kind":"def","name":"SmallIntegerWitness.table","standardAxioms":true},{"kind":"theorem","name":"SmallIntegerWitness.witness_bits","standardAxioms":true}],"headlines":[{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"SmallIntegerWitness.certificate_matches","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"SmallIntegerWitness.witness_bits","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Classical.choice","Quot.sound"],"found":true,"kind":"theorem","name":"SmallIntegerWitness.shifted_integer_fresh_source_cancels","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"SmallIntegerWitness","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":25,"ok":true},"verdict":"pass","verifiedTargets":[]}

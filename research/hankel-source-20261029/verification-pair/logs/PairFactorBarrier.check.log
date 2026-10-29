@@ -1,0 +1,9 @@
+Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"def","name":"PairFactorBarrier.Factor","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.bit","standardAxioms":true},{"kind":"theorem","name":"PairFactorBarrier.certificates","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.eval","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.middle","standardAxioms":true},{"kind":"theorem","name":"PairFactorBarrier.no_nonconstant_pair_factor","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.projected","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.updatedPair","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.witness","standardAxioms":true},{"kind":"def","name":"PairFactorBarrier.witnesses","standardAxioms":true}],"headlines":[{"axioms":["propext"],"found":true,"kind":"theorem","name":"PairFactorBarrier.no_nonconstant_pair_factor","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"PairFactorBarrier","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":11,"ok":true},"verdict":"pass","verifiedTargets":[]}

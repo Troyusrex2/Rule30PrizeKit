@@ -56,6 +56,18 @@ ResetCountermodel.lean:
   proposed asymptotic singleton-seed Hankel bound; it shows precisely why a
   generic finite reset count cannot by itself force rank growth.
 
+SmallIntegerWitness.lean (later addendum):
+- A shifted integer repair also fails on the actual singleton trajectory:
+  at offset36, center bits01010 give H2 determinant-1 and H3 determinant0,
+  even though the newest product source at time39 is1.
+- An explicit Boolean spacetime certificate checks every local transition
+  in the kernel and connects the finite table to the actual cell definition.
+- A separate n1 counterexample at offset129 is Python/Wolfram checked only;
+  direct packed-Nat proof attempts hit their bounded timeouts. The smaller
+  Boolean certificate was used rather than increasing those time limits.
+- This rejects the SHIFT-UNIFORM repair. The leading-border-only claim was
+  not refuted by the original fixed-range test and remains unproved.
+
 COMPUTATIONAL AND PAPER CONTENT
 
 experiments/ contains fixed-limit tests and exact results. The primary
@@ -104,3 +116,16 @@ The distinct arbitrary-driver effective-boundary transport result is
 submitted for catalog review as https://github.com/WolframInstitute/Rule30PrizeKit/pull/57 .
 Its PeriodicMaskExclusion hypothesis is OPEN. This research archive is not
 another catalog PR and is not a formal Wolfram prize submission.
+
+REPLAY VERSIONS: verification/ records the original five modules. verification-v2/ records the later full six-module replay including SmallIntegerWitness. The immutable original archive remains available in parent commit0f8545a989891e577d87c4ab28d8af377fdc77b3.
+
+PairFactorBarrier.lean (separate core-Lean addendum): exhaustive certificates
+rule out every nonconstant pair-to-bit projection as an exact factor from
+two Rule30 steps to one binary radius1 step. This is ONLY block2/time2, not
+an all-scale or all-state renormalization obstruction. Its independent fresh
+replay has no Mathlib dependency:
+
+python verify-pair.py --lean <Lean4.35 executable> --out <another-new-path>
+
+Run BOTH verify.py (the six-module research closure) and verify-pair.py for
+all seven owned proof files. verification-pair/ records this focused replay.
