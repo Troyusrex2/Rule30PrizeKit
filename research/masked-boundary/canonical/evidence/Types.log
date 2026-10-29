@@ -1,0 +1,74 @@
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.driven_eq_of_mask : ∀ (a b : Nat → Bool) (s : Int → Bool),
+  (∀ (t : Nat),
+      (Ruliology.CellularAutomata.Rule30DrivenLeft.L a s t (-1) || a t) =
+        (Ruliology.CellularAutomata.Rule30DrivenLeft.L a s t (-1) || b t)) →
+    ∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L a s t p = Ruliology.CellularAutomata.Rule30DrivenLeft.L b s t p
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.driven_eq_of_mask' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.falling_transport : ∀ (c : Nat → Bool) (s : Int → Bool),
+  Ruliology.CellularAutomata.Rule30DrivenMaskTransport.FallingPins c s →
+    ∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L c s t p =
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L
+            (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c) s t p
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.falling_transport' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective_falling_transport : ∀ (c : Nat → Bool) (s : Int → Bool),
+  (∀ (t : Nat),
+      c t = true →
+        c (t + 1) = false →
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L
+              (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c) s t (-1) =
+            true) →
+    ∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c)
+            s t p =
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L c s t p
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective_falling_transport' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.falling_of_transport : ∀ (c : Nat → Bool) (s : Int → Bool),
+  (∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L c s t p =
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L
+            (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c) s t p) →
+    Ruliology.CellularAutomata.Rule30DrivenMaskTransport.FallingPins c s
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.falling_of_transport' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.transport_iff_falling : ∀ (c : Nat → Bool) (s : Int → Bool),
+  (∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L c s t p =
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L
+            (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c) s t p) ↔
+    Ruliology.CellularAutomata.Rule30DrivenMaskTransport.FallingPins c s
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.transport_iff_falling' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.consistent_transport : ∀ (c : Nat → Bool) (s : Int → Bool),
+  Ruliology.CellularAutomata.Rule30DrivenMaskTransport.Consistent c s →
+    ∀ (t : Nat) (p : Int),
+      p < 0 →
+        Ruliology.CellularAutomata.Rule30DrivenLeft.L c s t p =
+          Ruliology.CellularAutomata.Rule30DrivenLeft.L
+            (Ruliology.CellularAutomata.Rule30DrivenMaskTransport.effective c) s t p
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.consistent_transport' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.consistency_iff : ∀ (c : Nat → Bool) (s : Int → Bool),
+  Ruliology.CellularAutomata.Rule30DrivenMaskTransport.Consistent c s ↔
+    Ruliology.CellularAutomata.Rule30DrivenMaskTransport.EffectiveConsistent c s
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.consistency_iff' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.actual_consistent : ∀ (T : Nat),
+  Ruliology.CellularAutomata.Rule30DrivenMaskTransport.Consistent
+    (fun t => Ruliology.CellularAutomata.Rule30Prize.center (T + t)) fun p =>
+    Ruliology.CellularAutomata.Rule30Jen.cell T p
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.actual_consistent' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.tail_both_values : ∀ (T : Nat),
+  Ruliology.CellularAutomata.Rule30DrivenMaskTransport.BothValues fun t =>
+    Ruliology.CellularAutomata.Rule30Prize.center (T + t)
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.tail_both_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30DrivenMaskTransport.problem1_of_periodic_mask_exclusion : Ruliology.CellularAutomata.Rule30DrivenMaskTransport.PeriodicMaskExclusion →
+  Ruliology.CellularAutomata.Rule30Prize.Problem1
+'Ruliology.CellularAutomata.Rule30DrivenMaskTransport.problem1_of_periodic_mask_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
