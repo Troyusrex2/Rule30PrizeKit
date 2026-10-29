@@ -12,7 +12,8 @@ For `transfer b (p,q) = (b XOR (p OR q),p)`, read an inverse-input word in scan 
 * **Exact damage connection:** the corrected Boolean damage recurrence is the XOR of two scans with a common input. Universal death of all initial damage pairs is equivalent to inverse merging. For a physical row `a`, the inverse input is its **next** row, `a(k+2) XOR (a(k+1) OR a(k))`.
 * **The remaining claim is substantive:** universal closing beyond every spatial depth already implies that the initial row cannot have an eventually white tail. There is no proof that all S-legal forced rows have this property.
 * **Unrestricted closing is false:** the gate `01` repeated gives the odd-black boundary `1101` repeated, in low-time order. The official `recon`/`zrow` solution has the spatial temporal-profile cycle `[11,6,12,8,8,12,10]` after the white wall. At physical time zero, the positive-depth row is `1000000` repeated; its next row is `1100001` repeated. Two inverse paths stay distinct on every segment at every starting depth. The gate has window value 170 and is **not S-legal**.
-* **Time phase matters:** shifting the odd-black boundary one tick gives the complementary even-black boundary. A proof about one phase does not cover both phases without an additional argument.
+* **Positive-fraction killing is insufficient:** `ClosingLogic.local_kill_not_universal_extinction` gives an immortal all-zero path even though exactly one of the two child choices kills at every live node. This refutes the proposed logical implication, not the Rule30 conjecture. `linear_no_finite_closing` proves the inverse linear skeleton cannot close any nonzero two-column state, for every finite number of updates.
+* **Time phase matters:** shifting the odd-black boundary one tick gives the complementary even-black boundary. A proof about one phase does not cover both phases without an additional argument. The SAME explicit physical orbit fails universal closing at time zero and satisfies it at time one (`RowClosingCounter.actual_phase_dependence`).
 
 Main names are `RunClosing.synchronized_iff_reset_run`, `run_resets`, `all_damage_dies_iff`, `row_closing_iff_runs`, `row_closing_not_finite`, `boundary_shift_one`, and `RowClosingCounter.initial_evolution`, `no_segment_synchronizes`, `unrestricted_closing_false`.
 
@@ -24,11 +25,11 @@ Use an official Lean 4.35.0 toolchain with `lean` and `lake` in the same directo
 python replay/verify.py --lean C:/path/to/lean.exe --out C:/new/empty/output
 ```
 
-On Unix pass the path to `lean`; the script selects its sibling `lake`. The output directory must not exist. The script checks the frozen source hashes, builds all eleven source modules from source, and runs the unchanged official `Check.lean` on each of the three owned modules with all 21 selected headlines. Every owned declaration is replayed, not just the headline dependencies. Per-command timeouts and one Lean worker bound the run.
+On Unix pass the path to `lean`; the script selects its sibling `lake`. The output directory must not exist. The script checks the frozen source hashes, builds all twelve source modules from source, and runs the unchanged official `Check.lean` on each of the four owned modules with all 27 selected headlines. Every owned declaration is replayed, not just the headline dependencies. Per-command timeouts and one Lean worker bound the run.
 
 The reference run is Windows Lean 4.35.0. Its binary hash is recorded in the receipt; other platforms have different binary hashes and must use the same official Lean version. The checker hash is fixed across platforms. The checker emits its existing replay-deprecation warning; the research source builds have no warnings.
 
-`SOURCE-HASHES.json` freezes the package. `evidence/RESULT.json` records the independent fresh check: 204 owned constants, 21 headlines, standard axioms only, 11 source modules including 8 unchanged official dependencies. This is not a whole-catalog or cold standard-library build. No claim is made for a notebook/portal submission.
+`SOURCE-HASHES.json` freezes the package. `evidence/RESULT.json` records the independent fresh check: 232 owned constants, 27 headlines, standard axioms only, 12 source modules including 8 unchanged official dependencies. This is not a whole-catalog or cold standard-library build. No claim is made for a notebook/portal submission. The generic logical counterexample and linear inverse are supporting tools, not prize results.
 
 ## Provenance and limits
 

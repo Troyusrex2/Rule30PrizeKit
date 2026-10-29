@@ -154,4 +154,34 @@ theorem unrestricted_closing_false : ¬RowClosing initial := by
   obtain ⟨n,hn⟩ := ht 0
   exact no_prefix_synchronizes n hn
 
+def rowOne (k : Nat) : Bool := full k 1
+
+theorem forward_row_one (k : Nat) : forward rowOne k=full (k+1) 2 := by
+  unfold forward rowOne
+  rw [full_step k 1]
+  have cancel (a b : Bool) : xor (xor a b) b=a := by cases a <;> cases b <;> rfl
+  exact cancel _ _
+
+theorem phase_one_reset (d : Nat) :
+    segment (forward rowOne) (7*d+4) 4=[false,true,false,false] := by
+  simp [segment,forward_row_one,full,profile,profiles,Nat.add_mod]
+  decide
+
+/-- A change of time phase genuinely changes the closing property. -/
+theorem phase_one_closes : RowClosing rowOne := by
+  rw [row_closing_iff]
+  intro d
+  refine ⟨7*d+4,4,by omega,?_⟩
+  rw [phase_one_reset]
+  exact run_resets 0 false
+
+theorem actual_phase_dependence :
+    ¬RowClosing initial ∧ RowClosing (fun k => zrow initial 1 k) := by
+  refine ⟨unrestricted_closing_false,?_⟩
+  have h : (fun k => zrow initial 1 k)=rowOne := by
+    funext k
+    exact initial_evolution 1 k
+  rw [h]
+  exact phase_one_closes
+
 end RowClosingCounter

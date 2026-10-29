@@ -22,7 +22,8 @@ def run(args,log):
     with (out/log).open('wb') as f:r=subprocess.run(list(map(str,args)),cwd=project,env=env,stdout=f,stderr=subprocess.STDOUT,timeout=180)
     if r.returncode:print((out/log).read_text(encoding='utf-8',errors='replace')[-6000:]);r.check_returncode()
 start=time.monotonic();specs=json.loads((root/'replay/SPECS.json').read_text())
-run([lake,'build','RunClosing','RowClosingCounter'],'build.log')
+official=json.loads((root/'replay/OFFICIAL-INPUTS.json').read_text())
+run([lake,'build',*specs],'build.log')
 checks={}
 for module,heads in specs.items():
     args=[lake,'env',lean,'--run',project/'Check.lean',module,'--claim','partial']
@@ -31,7 +32,7 @@ for module,heads in specs.items():
     c=json.loads(next(l for l in reversed((out/log).read_text(encoding='utf-8').splitlines()) if l.startswith('{')))
     assert c['verdict']=='pass' and c['replay']['ok'] and not c['newAxioms']
     assert all(h['ok'] and h['typeMatches'] for h in c['headlines']);checks[module]=c
-result={'passed':True,'checks':checks,'fresh_sources':11,'reused_owned_objects':False,
+result={'passed':True,'checks':checks,'fresh_sources':len(official['modules'])+len(specs),'reused_owned_objects':False,
         'lean_version':version,'lean_binary_sha256':sha(lean),
         'constants':sum(c['replay']['constants'] for c in checks.values()),
         'headlines':sum(len(c['headlines']) for c in checks.values()),

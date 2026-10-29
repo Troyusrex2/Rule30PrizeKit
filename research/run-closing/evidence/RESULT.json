@@ -11,8 +11,8 @@
     "Ruliology.CellularAutomata.Rule30BlackRuns": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
     "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
   },
-  "fresh_source_modules": 11,
-  "owned_modules": 3,
+  "fresh_source_modules": 12,
+  "owned_modules": 4,
   "reused_owned_objects": false,
   "whole_catalog_build": false,
   "checks": {
@@ -688,6 +688,11 @@
       "claim": "partial",
       "declared": [
         {
+          "kind": "theorem",
+          "name": "RowClosingCounter.actual_phase_dependence",
+          "standardAxioms": true
+        },
+        {
           "kind": "def",
           "name": "RowClosingCounter.boundary",
           "standardAxioms": true
@@ -710,6 +715,11 @@
         {
           "kind": "theorem",
           "name": "RowClosingCounter.forward_initial",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.forward_row_one",
           "standardAxioms": true
         },
         {
@@ -803,6 +813,16 @@
           "standardAxioms": true
         },
         {
+          "kind": "theorem",
+          "name": "RowClosingCounter.phase_one_closes",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.phase_one_reset",
+          "standardAxioms": true
+        },
+        {
           "kind": "def",
           "name": "RowClosingCounter.profile",
           "standardAxioms": true
@@ -825,6 +845,11 @@
         {
           "kind": "theorem",
           "name": "RowClosingCounter.root_odd_black",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.rowOne",
           "standardAxioms": true
         },
         {
@@ -993,6 +1018,42 @@
           "ok": true,
           "problems": [],
           "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.phase_one_reset",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.phase_one_closes",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.actual_phase_dependence",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
         }
       ],
       "importsStatements": true,
@@ -1001,7 +1062,156 @@
       "official": [],
       "reasons": [],
       "replay": {
-        "constants": 50,
+        "constants": 56,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    "ClosingLogic": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "ClosingLogic.Live",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.Vec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.add",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.add_cancel",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.false_child_live",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.linearIterate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.linearNext",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.linearPrev",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.linear_inverse",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.linear_no_finite_closing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.linear_zero_reflect",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.local_kill_not_universal_extinction",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.shift",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.true_child_dead",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.zero_path_live",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.Live.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "ClosingLogic.linearIterate.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.linearNext.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "ClosingLogic.linearPrev.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "ClosingLogic.local_kill_not_universal_extinction",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "ClosingLogic.linear_inverse",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "ClosingLogic.linear_no_finite_closing",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "ClosingLogic",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 22,
         "ok": true
       },
       "verdict": "pass",
@@ -1011,12 +1221,13 @@
   "source_hashes": {
     "RunClosingData.lean": "0f9be5ef327ee8354f41ad88c093498e9a0090f34659bad52af8d7e990dedab1",
     "RunClosing.lean": "03d1f439e20d7383abdb231d3dd00478935171b19d8ec81362943f5db391e597",
-    "RowClosingCounter.lean": "91ffbecd19b99eea665ff8c1a801194e740f74c00ca6c067600c2021b2968419"
+    "RowClosingCounter.lean": "c27cb990a197e81ae8e12ef1ce0ccb7f20f6f3d249b5d41b781256d46ebc9b2a",
+    "ClosingLogic.lean": "9199e3770df77010e012ded16082538352631b89db4be6fb49313812a961b24f"
   },
   "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
-  "constants": 204,
-  "headlines": 21,
+  "constants": 232,
+  "headlines": 27,
   "source_warnings": false,
-  "seconds": 53.39099999994505,
+  "seconds": 57.42200000002049,
   "prize_solution": false
 }

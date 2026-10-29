@@ -58,3 +58,21 @@ RowClosingCounter.no_segment_synchronizes : ∀ (d n : Nat),
 'RowClosingCounter.no_segment_synchronizes' depends on axioms: [propext, Quot.sound]
 RowClosingCounter.unrestricted_closing_false : ¬RunClosing.RowClosing RowClosingCounter.initial
 'RowClosingCounter.unrestricted_closing_false' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.phase_one_reset : ∀ (d : Nat),
+  RunClosing.segment (RunClosing.forward RowClosingCounter.rowOne) (7 * d + 4) 4 = [false, true, false, false]
+'RowClosingCounter.phase_one_reset' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.phase_one_closes : RunClosing.RowClosing RowClosingCounter.rowOne
+'RowClosingCounter.phase_one_closes' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.actual_phase_dependence : ¬RunClosing.RowClosing RowClosingCounter.initial ∧
+  RunClosing.RowClosing fun k => Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow RowClosingCounter.initial 1 k
+'RowClosingCounter.actual_phase_dependence' depends on axioms: [propext, Quot.sound]
+ClosingLogic.local_kill_not_universal_extinction : (∀ (w : List Bool),
+    ClosingLogic.Live w → ClosingLogic.Live (w ++ [false]) ∧ ¬ClosingLogic.Live (w ++ [true])) ∧
+  ∀ (n : Nat), ClosingLogic.Live (List.replicate n false)
+'ClosingLogic.local_kill_not_universal_extinction' depends on axioms: [propext, Quot.sound]
+ClosingLogic.linear_inverse : ∀ (u v : ClosingLogic.Vec),
+  ClosingLogic.linearPrev (ClosingLogic.linearNext u v).fst (ClosingLogic.linearNext u v).snd = (u, v)
+'ClosingLogic.linear_inverse' depends on axioms: [propext, Quot.sound]
+ClosingLogic.linear_no_finite_closing : ∀ (n : Nat) (u v : ClosingLogic.Vec),
+  ClosingLogic.linearIterate n (u, v) = (fun x => false, fun x => false) → (u = fun x => false) ∧ v = fun x => false
+'ClosingLogic.linear_no_finite_closing' depends on axioms: [propext, Quot.sound]
