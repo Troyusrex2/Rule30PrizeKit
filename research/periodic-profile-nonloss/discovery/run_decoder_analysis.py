@@ -1,7 +1,9 @@
 from pathlib import Path
 import json,collections
 ROOT=Path(__file__).resolve().parent
-g=json.loads((ROOT/'attempt01-g913/RESULTS.json').read_text())['graphs'][-1]
+input_path=ROOT/'attempt01-g913/RESULTS.json'
+if not input_path.exists():input_path=ROOT/'PROFILE-GRAPH.json'
+g=json.loads(input_path.read_text())['graphs'][-1]
 groups=collections.defaultdict(set);both={tuple(p) for p in g['nodes']};complement=True;deriv=collections.defaultdict(set);mask=(1<<32)-1
 for a,b in g['nodes']:
     complement=complement and (a,b^mask) in both
