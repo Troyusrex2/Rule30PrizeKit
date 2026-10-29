@@ -1,0 +1,77 @@
+{
+  "scope": "bounded table analysis only, not an unbounded theorem",
+  "source_sha256": "99d39e9105bc2df53129bbbbe576644b22a48021d5a70a2688e0b04c9128c288",
+  "results": [
+    {
+      "q": 2,
+      "profiles": 4,
+      "no00_profiles": 3,
+      "no00_nonperiod_two_counterexamples": [],
+      "or_cover_nonperiod_two_counterexamples": []
+    },
+    {
+      "q": 4,
+      "profiles": 8,
+      "no00_profiles": 3,
+      "no00_nonperiod_two_counterexamples": [],
+      "or_cover_nonperiod_two_counterexamples": []
+    },
+    {
+      "q": 8,
+      "profiles": 32,
+      "no00_profiles": 11,
+      "no00_nonperiod_two_counterexamples": [
+        87,
+        93,
+        117
+      ],
+      "or_cover_nonperiod_two_counterexamples": []
+    },
+    {
+      "q": 16,
+      "profiles": 64,
+      "no00_profiles": 11,
+      "no00_nonperiod_two_counterexamples": [
+        22359,
+        23901,
+        30069
+      ],
+      "or_cover_nonperiod_two_counterexamples": []
+    },
+    {
+      "q": 32,
+      "profiles": 2112,
+      "no00_profiles": 11,
+      "no00_nonperiod_two_counterexamples": [
+        1465341783,
+        1566399837,
+        1970632053
+      ],
+      "or_cover_nonperiod_two_counterexamples": []
+    }
+  ],
+  "no00_shortcut_counterexample": {
+    "seed": 33,
+    "black_positions": [
+      0,
+      -5
+    ],
+    "diagonal": 5,
+    "whole_prefix_cycle": 8,
+    "whole_prefix_orbit": [
+      33,
+      39,
+      57,
+      15,
+      49,
+      23,
+      41,
+      31
+    ],
+    "profile_word_little_endian": 87,
+    "no00_circularly": true,
+    "not_period_two": true,
+    "ordinary_literal_rule30_replay_matches": true,
+    "scope": "numerical exact finite-cycle witness, not a new Lean certificate"
+  }
+}

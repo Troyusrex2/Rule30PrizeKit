@@ -1,0 +1,80 @@
+{
+  "scope": "validator controls only; no Rule30 invariant found",
+  "scalar_recognizer_controls": 510,
+  "positive_zero_forcing_control": {
+    "states": 25,
+    "scope": "exact finite-word DFA sufficient criterion, not a Lean certificate",
+    "root": null,
+    "closure": null,
+    "separation": null,
+    "passed": true
+  },
+  "negative_rule30_control": {
+    "states": 25,
+    "scope": "exact finite-word DFA sufficient criterion, not a Lean certificate",
+    "root": null,
+    "closure": {
+      "letters": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "initial_c": 0
+    },
+    "separation": null,
+    "passed": false
+  },
+  "universal_acceptor_control": {
+    "states": 1,
+    "scope": "exact finite-word DFA sufficient criterion, not a Lean certificate",
+    "root": null,
+    "closure": null,
+    "separation": {
+      "letters": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "passed": false
+  },
+  "root_only_control": {
+    "states": 2,
+    "scope": "exact finite-word DFA sufficient criterion, not a Lean certificate",
+    "root": null,
+    "closure": {
+      "letters": [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "initial_c": 1
+    },
+    "separation": null,
+    "passed": false
+  },
+  "seconds": 0.0
+}

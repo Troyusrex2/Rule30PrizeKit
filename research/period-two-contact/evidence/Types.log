@@ -1,0 +1,92 @@
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.forcing_constant : ∀ (c f : Nat → Bool),
+  (∀ (t : Nat), c (t + 1) = (c t ^^ f t)) →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.Period c 2 → ∀ (t : Nat), f t = f 0
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.forcing_constant' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_forces_zero : ∀ (a b c : Nat → Bool),
+  (∀ (t : Nat), c (t + 1) = (c t ^^ (a t || b t))) →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.Period c 2 →
+      ∀ (u : Nat), a u = false → b u = false → ∀ (t : Nat), b t = false
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_forces_zero' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_forces_period_two : ∀ (a b c : Nat → Bool),
+  (∀ (t : Nat), c (t + 1) = (c t ^^ (a t || b t))) →
+    (∀ (t : Nat), (a t || b t) = true) → Ruliology.CellularAutomata.Rule30RightPrefixClock.Period c 2
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_forces_period_two' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_toggle : ∀ (f : Nat → Bool) (p : Nat),
+  (∀ (t : Nat), f (t + p) = !f t) →
+    Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00 f → ∀ (t : Nat), f (t + 1) = !f t
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_toggle' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_period_two : ∀ (f : Nat → Bool) (p : Nat),
+  (∀ (t : Nat), f (t + p) = !f t) →
+    Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00 f →
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period f 2
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_period_two' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.no00_nonperiod_two_no_growth : ∀ (D : Int → Nat → Bool) (j : Int)
+  (p : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence D →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer D j p →
+      Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00 (D (j + 1)) →
+        ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period (D (j + 1)) 2 →
+          Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer D (j + 1) p
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.no00_nonperiod_two_no_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_no00_nonperiod_two_no_growth : ∀ (x : Int → Bool) (j : Int)
+  (p : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+      (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) j p →
+    Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00
+        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 1)) →
+      ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (j + 1)) 2 →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 1) p
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_no00_nonperiod_two_no_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.period_two_successor_forces_cover : ∀ (a b c : Nat → Bool),
+  (∀ (t : Nat), c (t + 1) = (c t ^^ (a t || b t))) →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.Period c 2 →
+      ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period b 2 → ∀ (t : Nat), (a t || b t) = true
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.period_two_successor_forces_cover' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_running_forces_no00 : ∀ (d a b : Nat → Bool),
+  (∀ (t : Nat), b (t + 1) = (b t ^^ (a t || d t))) →
+    (∀ (t : Nat), (a t || b t) = true) → Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00 b
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_running_forces_no00' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_iff_no_return : ∀ (P : Nat → Nat → Bool),
+  (∀ (n t : Nat), P (n + 2) (t + 1) = (P (n + 2) t ^^ (P n t || P (n + 1) t))) →
+    (Ruliology.CellularAutomata.Rule30PeriodTwoContact.ContactProgress P ↔
+      Ruliology.CellularAutomata.Rule30PeriodTwoContact.NoReturnTwo P)
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_iff_no_return' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.counter_predecessor_no00 : ∀ (P : Nat → Nat → Bool),
+  (∀ (n t : Nat), P (n + 2) (t + 1) = (P (n + 2) t ^^ (P n t || P (n + 1) t))) →
+    ∀ (n : Nat),
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period (P (n + 3)) 2 →
+        ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period (P (n + 2)) 2 →
+          Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00 (P (n + 2))
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.counter_predecessor_no00' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_step : ∀ (x : Int → Bool) (n t : Nat),
+  Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 2) (t + 1) =
+    (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 2) t ^^
+      (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x n t ||
+        Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 1) t))
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_contact_iff_no_return : ∀ (x : Int → Bool),
+  Ruliology.CellularAutomata.Rule30PeriodTwoContact.ContactProgress
+      (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x) ↔
+    Ruliology.CellularAutomata.Rule30PeriodTwoContact.NoReturnTwo
+      (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x)
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_contact_iff_no_return' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no00 : ∀ (x : Int → Bool) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+      (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 3)) 2 →
+    ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+          (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 2)) 2 →
+      Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00
+        (Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles x (n + 2))
+'Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no00' depends on axioms: [propext,
+ Quot.sound]

@@ -1,5 +1,4 @@
 {
-  "parent": "5d4cc975534cb09cd424646696de2488838afb52",
   "main_modules": [
     "Ruliology.CellularAutomata.Rule30RightPrefixClock",
     "Ruliology.CellularAutomata.Rule30RightPrefixBound",
@@ -9,7 +8,8 @@
     "Ruliology.CellularAutomata.Rule30ProfileGraphCases",
     "Ruliology.CellularAutomata.Rule30ProfileClockEscape",
     "Ruliology.CellularAutomata.Rule30ProfileClockSharpness",
-    "Ruliology.CellularAutomata.Rule30LowClockWaves"
+    "Ruliology.CellularAutomata.Rule30LowClockWaves",
+    "Ruliology.CellularAutomata.Rule30PeriodTwoContact"
   ],
   "own_modules": [
     "Ruliology.CellularAutomata.Rule30RightPrefixClock",
@@ -17,25 +17,57 @@
     "Ruliology.CellularAutomata.Rule30FrontHalfPeriod",
     "Ruliology.CellularAutomata.Rule30PrefixClockGrowth",
     "Ruliology.CellularAutomata.Rule30ProfileGraph",
+    "Ruliology.CellularAutomata.Rule30Certificates.ProfileGraph32",
     "Ruliology.CellularAutomata.Rule30ProfileGraphCases",
+    "Ruliology.CellularAutomata.Rule30Certificates.ProfileClockRank32",
     "Ruliology.CellularAutomata.Rule30ProfileClockEscape",
     "Ruliology.CellularAutomata.Rule30ProfileClockSharpness",
     "Ruliology.CellularAutomata.Rule30LowClockWaves",
-    "Ruliology.CellularAutomata.Rule30Certificates.ProfileGraph32",
-    "Ruliology.CellularAutomata.Rule30Certificates.ProfileClockRank32"
+    "Ruliology.CellularAutomata.Rule30PeriodTwoContact"
   ],
-  "source_count": 33,
-  "catalog_files": [
-    "lean/Ruliology/CellularAutomata/Rule30RightPrefixClock.lean",
-    "lean/Ruliology/CellularAutomata/Rule30RightPrefixBound.lean",
-    "lean/Ruliology/CellularAutomata/Rule30FrontHalfPeriod.lean",
-    "lean/Ruliology/CellularAutomata/Rule30PrefixClockGrowth.lean",
-    "lean/Ruliology/CellularAutomata/Rule30ProfileGraph.lean",
-    "lean/Ruliology/CellularAutomata/Rule30ProfileGraphCases.lean",
-    "lean/Ruliology/CellularAutomata/Rule30ProfileClockEscape.lean",
-    "lean/Ruliology/CellularAutomata/Rule30ProfileClockSharpness.lean",
-    "lean/Ruliology/CellularAutomata/Rule30LowClockWaves.lean",
-    "lean/Ruliology/CellularAutomata/Rule30Certificates/ProfileGraph32.lean",
-    "lean/Ruliology/CellularAutomata/Rule30Certificates/ProfileClockRank32.lean"
-  ]
+  "expected_declarations": 1126,
+  "expected_headlines": 77,
+  "fresh_sources": 34,
+  "prior_head": "11f716633a7de0fa069e1e5327e50ad66f91d99f",
+  "prior_stage": {
+    "parent": "5d4cc975534cb09cd424646696de2488838afb52",
+    "main_modules": [
+      "Ruliology.CellularAutomata.Rule30RightPrefixClock",
+      "Ruliology.CellularAutomata.Rule30RightPrefixBound",
+      "Ruliology.CellularAutomata.Rule30FrontHalfPeriod",
+      "Ruliology.CellularAutomata.Rule30PrefixClockGrowth",
+      "Ruliology.CellularAutomata.Rule30ProfileGraph",
+      "Ruliology.CellularAutomata.Rule30ProfileGraphCases",
+      "Ruliology.CellularAutomata.Rule30ProfileClockEscape",
+      "Ruliology.CellularAutomata.Rule30ProfileClockSharpness",
+      "Ruliology.CellularAutomata.Rule30LowClockWaves"
+    ],
+    "own_modules": [
+      "Ruliology.CellularAutomata.Rule30RightPrefixClock",
+      "Ruliology.CellularAutomata.Rule30RightPrefixBound",
+      "Ruliology.CellularAutomata.Rule30FrontHalfPeriod",
+      "Ruliology.CellularAutomata.Rule30PrefixClockGrowth",
+      "Ruliology.CellularAutomata.Rule30ProfileGraph",
+      "Ruliology.CellularAutomata.Rule30ProfileGraphCases",
+      "Ruliology.CellularAutomata.Rule30ProfileClockEscape",
+      "Ruliology.CellularAutomata.Rule30ProfileClockSharpness",
+      "Ruliology.CellularAutomata.Rule30LowClockWaves",
+      "Ruliology.CellularAutomata.Rule30Certificates.ProfileGraph32",
+      "Ruliology.CellularAutomata.Rule30Certificates.ProfileClockRank32"
+    ],
+    "source_count": 33,
+    "catalog_files": [
+      "lean/Ruliology/CellularAutomata/Rule30RightPrefixClock.lean",
+      "lean/Ruliology/CellularAutomata/Rule30RightPrefixBound.lean",
+      "lean/Ruliology/CellularAutomata/Rule30FrontHalfPeriod.lean",
+      "lean/Ruliology/CellularAutomata/Rule30PrefixClockGrowth.lean",
+      "lean/Ruliology/CellularAutomata/Rule30ProfileGraph.lean",
+      "lean/Ruliology/CellularAutomata/Rule30ProfileGraphCases.lean",
+      "lean/Ruliology/CellularAutomata/Rule30ProfileClockEscape.lean",
+      "lean/Ruliology/CellularAutomata/Rule30ProfileClockSharpness.lean",
+      "lean/Ruliology/CellularAutomata/Rule30LowClockWaves.lean",
+      "lean/Ruliology/CellularAutomata/Rule30Certificates/ProfileGraph32.lean",
+      "lean/Ruliology/CellularAutomata/Rule30Certificates/ProfileClockRank32.lean"
+    ]
+  }
 }

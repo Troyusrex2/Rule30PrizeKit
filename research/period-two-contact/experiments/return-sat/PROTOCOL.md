@@ -1,0 +1,9 @@
+# Fixed test of return to period two
+
+Missing unbounded claim: an actual right diagonal that has left temporal period2 never returns to period2 at a later spatial depth. This is weaker than full individual period nonloss. PR55 proves it when the entire prefix clock is at most32; no larger-clock claim is assumed.
+
+Before running, fix temporal cycle64 and initial prefix widths25..32 inclusive. Earlier complete width24 census found no actual adjacent period drop, so begin at25. At widthW constrain the exact right-moving update on every bit and all64 times, with a white right boundary, black bit0, and a closed64-tick whole-prefix orbit. Require the last bit to alternate while the preceding bit differs between times0 and2. Rotating any cyclic counterexample in time can move one period2 violation to time0, so this latter normalization loses no such counterexample within the fixed model.
+
+Use existing native Cadical only,2seconds per case; stop on first SAT counterexample or UNKNOWN/timeout. Do not increase width, period or timeout. Positive control removes the predecessor violation atW3 and must return a literal-replayed actual alternating orbit; negative controlW3 requires the violation and must be UNSAT. Exhaustively test the CNF truth-table encoding on all16 assignments independently before solver use. Any SAT witness must replay the literal eight-entry Rule30 table,64-cycle closure, exact seed bits and profile properties before being reported. UNSAT is solver-only bounded evidence, not Lean verification or a general theorem.
+
+One G913 job,60seconds/1GiB owned process-tree RSS/2GiB system-available minimum. Kill only that job's owned tree if a cap fires. No installations or paid workers. If SAT, stop for exact all-time Lean realization; if no SAT, do not make a no-return claim.

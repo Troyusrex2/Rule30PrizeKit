@@ -20,19 +20,21 @@ A rank certificate gives a sharper finite-clock obstruction: if diagonal n is no
 
 Finally, if a rightmost black cell R exists, global period 32 of the whole right-diagonal array holds exactly when the initial left tail alternates from one cell left of R. Those two configurations already have global right-diagonal period 2. This is a bounded-clock classification of right-moving waves, not a statement about an ordinary vertical center column or about clocks64 and above.
 
+An additional unbounded constraint concerns profiles with no temporal00: unless such a profile has period2, it cannot introduce a new whole-prefix period, for any prior period p. The common-zero/no-return-to-two equivalence and necessary isolated-zero condition for a counterexample are formalized, while the unbounded common-zero assertion itself remains open. See the companion [contact archive](../period-two-contact) for exact statements, bounded experiments and their limitations.
+
 ## Catalog form and dependencies
 
-The proposed catalog branch is stacked on ghywel's [PR51](https://github.com/WolframInstitute/Rule 30PrizeKit/pull/51), exact original commit `5d4cc975534cb09cd424646696de2488838afb52`; its RightProfiles source and authorship are preserved. The official base is `932cf8dde039b89b1dcbe9636867bb1b2057fef0`. Merge PR51 first. Its shift-law module is a dependency, not our contribution.
+The proposed catalog branch is stacked on ghywel's [PR51](https://github.com/WolframInstitute/Rule30PrizeKit/pull/51), exact original commit `5d4cc975534cb09cd424646696de2488838afb52`; its RightProfiles source and authorship are preserved. The official base is `932cf8dde039b89b1dcbe9636867bb1b2057fef0`. Merge PR51 first. Its shift-law module is a dependency, not our contribution.
 
-Nine main catalog modules are registered in Ruliology and the Added-in-the-kit table: RightPrefixClock, RightPrefixBound, FrontHalfPeriod, PrefixClockGrowth, ProfileGraph, ProfileGraphCases, ProfileClockEscape, ProfileClockSharpness, and LowClockWaves. Heavy graph/rank checks live under Rule30Certificates in ProfileGraph32 and ProfileClockRank32. Public theorem names remain stable across the data-module extraction.
+Ten main catalog modules are registered in Ruliology and the Added-in-the-kit table: RightPrefixClock, RightPrefixBound, FrontHalfPeriod, PrefixClockGrowth, ProfileGraph, ProfileGraphCases, ProfileClockEscape, ProfileClockSharpness, LowClockWaves, and PeriodTwoContact. Heavy graph/rank checks live under Rule30Certificates in ProfileGraph32 and ProfileClockRank32. Public theorem names remain stable across the data-module extraction.
 
-The finite-front application was prompted by G.P.J.W. Quint and Gemini's [PR45](https://github.com/WolframInstitute/Rule 30PrizeKit/pull/45). It uses the already official FrontLift module and does not depend on PR45's unmerged module. The elementary orbit-return shift identity is also used there. Official half-rate and moving-edge proofs are credited in their source modules.
+The finite-front application was prompted by G.P.J.W. Quint and Gemini's [PR45](https://github.com/WolframInstitute/Rule30PrizeKit/pull/45). It uses the already official FrontLift module and does not depend on PR45's unmerged module. The elementary orbit-return shift identity is also used there. Official half-rate and moving-edge proofs are credited in their source modules.
 
 ## Validation
 
-The final LF catalog sources passed a fresh 33-source dependency-closure build and the unchanged official checker replayed **all 1101 owned declarations** across all 11 new modules, with 63 explicit headlines. Combined imports, theorem types, and axioms were checked. There were no reused objects, source warnings, or new axioms. Most of the declaration count consists of certificate helpers, not separate mathematical insights.
+The final LF catalog sources passed a fresh 34-source dependency-closure build and the unchanged official checker replayed **all 1126 owned declarations** across all 12 new modules, with 77 explicit headlines. Combined imports, theorem types, and axioms were checked. There were no reused objects, source warnings, or new axioms. Most of the declaration count consists of certificate helpers, not separate mathematical insights.
 
-The successful integration took 152.31seconds and peaked at about1.84GiB owned RSS, within fixed 300-second/8GiB guards on G913. This is a focused dependency-closure build, not a whole-catalog build. These are local unchanged-checker results, not a claim of Wolfram reviewer approval.
+The successful integration took 154.07seconds and peaked at about1.84GiB owned RSS, within fixed 300-second/8GiB guards on G913. This is a focused dependency-closure build, not a whole-catalog build. These are local unchanged-checker results, not a claim of Wolfram reviewer approval.
 
 Reproduce with Python and the exact recorded Lean4.35.0 Windows toolchain:
 
@@ -40,4 +42,4 @@ Reproduce with Python and the exact recorded Lean4.35.0 Windows toolchain:
 
 The verifier builds a fresh project, checks source/toolchain/checker hashes, replays every owned declaration in every new main/data module, and prints all headline types/axioms. All source inputs, build/check/type logs, guard receipt, and a byte manifest are included.
 
-Earlier immutable archives retain [prefix/front/growth controls](https://github.com/Troyusrex2/Rule 30PrizeKit/tree/c1c5750d84a608083640e329a63a8aaa5ad90f3c/research/front-half-period) and [graph generation, independent literal audits, and failed decoder experiments](https://github.com/Troyusrex2/Rule 30PrizeKit/tree/57e602a712a771da55b2ae6e321581a5b1cc33db/research/periodic-profile-nonloss). Their numerical observations remain explicitly separate from the kernel proofs. This bundle is the final catalog layout, including the sharp escape bound and explicit wave classification.
+Earlier immutable archives retain [prefix/front/growth controls](https://github.com/Troyusrex2/Rule30PrizeKit/tree/c1c5750d84a608083640e329a63a8aaa5ad90f3c/research/front-half-period) and [graph generation, independent literal audits, and failed decoder experiments](https://github.com/Troyusrex2/Rule30PrizeKit/tree/57e602a712a771da55b2ae6e321581a5b1cc33db/research/periodic-profile-nonloss). Their numerical observations remain explicitly separate from the kernel proofs. This bundle is the final catalog layout, including the sharp escape bound and explicit wave classification.

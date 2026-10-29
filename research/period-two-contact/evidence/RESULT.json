@@ -1,0 +1,327 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "fresh_source_modules": 6,
+  "reused_objects": false,
+  "whole_catalog_build": false,
+  "checkers": {
+    "Ruliology.CellularAutomata.Rule30PeriodTwoContact": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.ContactProgress",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.No00",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.NoReturnTwo",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_contact_iff_no_return",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no00",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_no00_nonperiod_two_no_growth",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_period_two",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_toggle",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_forces_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_iff_no_return",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.counter_predecessor_no00",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_forces_period_two",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_running_forces_no00",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.forcing_constant",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.no00_nonperiod_two_no_growth",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.period_two_successor_forces_cover",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actualProfiles.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.forcing_constant",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_forces_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_forces_period_two",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_toggle",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.antiperiod_no00_period_two",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.no00_nonperiod_two_no_growth",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_no00_nonperiod_two_no_growth",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.period_two_successor_forces_cover",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.cover_running_forces_no00",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.contact_iff_no_return",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.counter_predecessor_no00",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_contact_iff_no_return",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PeriodTwoContact.actual_counter_predecessor_no00",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30PeriodTwoContact",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 25,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
+  },
+  "owned_declarations": 25,
+  "headlines": 14,
+  "source_files": [
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwoContact.lean",
+      "sha256": "9677580af67e0d18a45b9600a80ccf73bd394d2eedcd7d9849a8894ef52ce25c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Realization.lean",
+      "sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30RightPrefixClock.lean",
+      "sha256": "df313348868140e2b7f0a3f87df075e65baa2fe53c60fdb4bf97aee77512f43b"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30RightProfiles.lean",
+      "sha256": "014be30fa094111eb9bdd9d457ccb82c9c46220c908cdf7eaa5fe74951889ac1"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    }
+  ],
+  "source_warnings": false,
+  "seconds": 5.681920100003481
+}

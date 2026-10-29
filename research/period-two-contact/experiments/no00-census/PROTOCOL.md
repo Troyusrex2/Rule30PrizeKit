@@ -1,0 +1,7 @@
+# One fixed test of the isolated-zero profile classification
+
+New candidate, NOT assumed: every actual right-diagonal profile avoiding temporal00 has period dividing8. In the complete profile graphs for whole clocks2,4,8,16,32, the no00 profiles stabilize at11: all-black, two alternating phases, and the eight rotations of87/8bits. The simpler no00=>period2 claim is already FALSE: seed33, black positions0/-5, actualD5 has8-tick profile87 and no00.
+
+One new query of the fixed finite-width24 state space: enumerate all2^24 states/cycles of the exact right-moving triangular map T(w)=w XOR((w<<1)OR(w<<2)), masked to24bits. Independently determine each bit's least dyadic temporal exponent, and whether its cyclic profile has a00. Stop at the first no00 profile with exponent>3, retaining actual seed, bit position, closed orbit and literal checks. Otherwise report ONLY the complete width24 bounded result. No larger width or second search.
+
+Controls: synthetic16-cycle with one zero must trigger the detector; alternating profile must not; all256 width8 states compare both period exponents and no00 flags against separate scalar literal oracles. One G913 job60seconds/1GiB owned tree/2GiB available. No installs/paid workers. All results remain numerical, not Lean theorems. This query differs from the earlier width24 period-nonloss census: it tests the newly identified stronger no00=>period8 classification.
