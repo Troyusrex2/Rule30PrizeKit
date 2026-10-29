@@ -1,0 +1,67 @@
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.first_defect_nonperiod_two : ∀ (x : Int → Bool),
+  x 0 = true →
+    (∀ (i : Int), 0 < i → x i = false) →
+      ∀ (m : Nat),
+        Ruliology.CellularAutomata.Rule30UniversalStartEscape.FirstDefect x m →
+          ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x ↑(m + 1)) 2
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.first_defect_nonperiod_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.escape_fifteen : ∀ (x : Int → Bool),
+  (∀ (i : Int), 0 < i → x i = false) →
+    ∀ (m : Nat),
+      ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x ↑(m + 1)) 2 →
+        ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (↑m + 15) 32
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.escape_fifteen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.first_defect_no_prefix32 : ∀ (x : Int → Bool),
+  x 0 = true →
+    (∀ (i : Int), 0 < i → x i = false) →
+      ∀ (m : Nat),
+        Ruliology.CellularAutomata.Rule30UniversalStartEscape.FirstDefect x m →
+          ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (↑m + 15) 32
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.first_defect_no_prefix32' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.finite_seed_no_prefix32 : ∀ (x : Int → Bool),
+  x 0 = true →
+    (∀ (i : Int), 0 < i → x i = false) →
+      ∀ (L : Nat),
+        (∀ (i : Int), i < -↑L → x i = false) →
+          ∃ m,
+            2 ≤ m ∧
+              ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+                  (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (↑m + 15) 32
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.finite_seed_no_prefix32' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.witness_first_defect : Ruliology.CellularAutomata.Rule30UniversalStartEscape.FirstDefect
+  (Ruliology.CellularAutomata.Rule30ProfileClockSharpness.wordSeed 47649) 2
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.witness_first_defect' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.sharp_fifteen_witness : Ruliology.CellularAutomata.Rule30UniversalStartEscape.FirstDefect
+    (Ruliology.CellularAutomata.Rule30ProfileClockSharpness.wordSeed 47649) 2 ∧
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+      (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag
+        (Ruliology.CellularAutomata.Rule30ProfileClockSharpness.wordSeed 47649))
+      16 32 ∧
+    ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag
+          (Ruliology.CellularAutomata.Rule30ProfileClockSharpness.wordSeed 47649))
+        17 32
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.sharp_fifteen_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30UniversalStartEscape.fourteen_after_defect_is_not_uniform : ¬∀ (x : Int → Bool),
+    x 0 = true →
+      (∀ (i : Int), 0 < i → x i = false) →
+        ∀ (m : Nat),
+          Ruliology.CellularAutomata.Rule30UniversalStartEscape.FirstDefect x m →
+            ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+                (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (↑m + 14) 32
+'Ruliology.CellularAutomata.Rule30UniversalStartEscape.fourteen_after_defect_is_not_uniform' depends on axioms: [propext,
+ Quot.sound]
