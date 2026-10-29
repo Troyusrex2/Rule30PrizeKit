@@ -1,0 +1,80 @@
+[
+  {
+    "q": 2,
+    "full_graph_states": 16,
+    "edges": 20,
+    "drop_edges": 0,
+    "drop_edges_with_arbitrarily_deep_older_context": 0,
+    "max_older_edges_into_any_drop": null,
+    "surviving_states": 8,
+    "example": null,
+    "seconds": 0.0,
+    "kernel_verified": false
+  },
+  {
+    "q": 4,
+    "full_graph_states": 256,
+    "edges": 272,
+    "drop_edges": 112,
+    "drop_edges_with_arbitrarily_deep_older_context": 0,
+    "max_older_edges_into_any_drop": 3,
+    "surviving_states": 12,
+    "example": null,
+    "seconds": 0.0,
+    "kernel_verified": false
+  },
+  {
+    "q": 8,
+    "full_graph_states": 65536,
+    "edges": 65792,
+    "drop_edges": 13216,
+    "drop_edges_with_arbitrarily_deep_older_context": 16,
+    "max_older_edges_into_any_drop": 9,
+    "surviving_states": 132,
+    "example": {
+      "drop_edge": [
+        [
+          21,
+          234
+        ],
+        [
+          234,
+          170
+        ]
+      ],
+      "backwards_states": [
+        [
+          21,
+          234
+        ],
+        [
+          154,
+          21
+        ],
+        [
+          149,
+          154
+        ],
+        [
+          86,
+          149
+        ],
+        [
+          89,
+          86
+        ],
+        [
+          101,
+          89
+        ],
+        [
+          149,
+          101
+        ]
+      ],
+      "cycle_starts_backwards_index": 3
+    },
+    "seconds": 0.09299999999348074,
+    "kernel_verified": false
+  }
+]
