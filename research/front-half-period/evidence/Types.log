@@ -1,0 +1,171 @@
+@Ruliology.CellularAutomata.Rule30RightPrefixClock.growth_antiperiod : ∀ {D : Int → Nat → Bool} {j : Int} {p : Nat},
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence D →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer D j p →
+      ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer D (j + 1) p →
+        ∀ (t : Nat), D (j + 1) (t + p) = !D (j + 1) t
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.growth_antiperiod' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30RightPrefixClock.exponent_step : ∀ {D : Int → Nat → Bool} {j : Int} {e f : Nat},
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence D →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D j e →
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 1) f → f = e ∨ f = e + 1
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.exponent_step' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30RightPrefixClock.no_11011 : ∀ {D : Int → Nat → Bool},
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence D →
+    ∀ (j : Int) (E : Nat),
+      2 ≤ E →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D j E →
+          Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 1) (E + 1) →
+            Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 2) (E + 2) →
+              Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 3) (E + 2) →
+                Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 4) (E + 3) →
+                  ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE D (j + 5) (E + 4)
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.no_11011' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixClock.exists_prefix_exponent : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (j : Int),
+      ∃ e,
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) j e
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.exists_prefix_exponent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_no_11011 : ∀ (x : Int → Bool) (j : Int) (E : Nat),
+  2 ≤ E →
+    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) j E →
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 1) (E + 1) →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 2) (E + 2) →
+          Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 3) (E + 2) →
+            Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+                (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 4) (E + 3) →
+              ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+                  (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (j + 5) (E + 4)
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_no_11011' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_recurrence : ∀ (x : Int → Bool),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence
+    (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x)
+'Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_recurrence' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_two_mul_le : ∀
+  (C : Ruliology.CellularAutomata.Rule30RightPrefixBound.Clock) (d : Nat),
+  C.exponent (2 * d) ≤ d + Ruliology.CellularAutomata.Rule30RecordCharge.Q 0 d
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_two_mul_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_le_B : ∀
+  (C : Ruliology.CellularAutomata.Rule30RightPrefixBound.Clock) (j : Nat),
+  C.exponent j ≤ Ruliology.CellularAutomata.Rule30RecordCharge.B j
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_le_B' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent_spec : ∀ (x : Int → Bool) (R : Int)
+  (hx : ∀ (p : Int), R < p → x p = false) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+    (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n)
+    (Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hx n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_exponent_half : ∀ (x : Int → Bool) (R : Int)
+  (hx : ∀ (p : Int), R < p → x p = false) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hx n ≤
+    Ruliology.CellularAutomata.Rule30RecordCharge.B n
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_exponent_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_prefix_half : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n : Nat),
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n)
+        (2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_prefix_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.evol_right_diagonal_half : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n t : Nat),
+      Ruliology.CellularAutomata.Rule30Realization.evol x (t + 2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n)
+          (R + ↑(t + 2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n) - ↑n) =
+        Ruliology.CellularAutomata.Rule30Realization.evol x t (R + ↑t - ↑n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.evol_right_diagonal_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30FrontHalfPeriod.code_high : ∀ (W i : Nat),
+  (Ruliology.CellularAutomata.Rule30FrontHalfPeriod.code W).testBit (i + 3) = W.testBit i
+'Ruliology.CellularAutomata.Rule30FrontHalfPeriod.code_high' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30FrontHalfPeriod.anchors : ∀ (W t : Nat),
+  Ruliology.CellularAutomata.Rule30FrontHalfPeriod.D W 1 t = Ruliology.CellularAutomata.Rule30FrontHalfPeriod.phase t ∧
+    Ruliology.CellularAutomata.Rule30FrontHalfPeriod.D W 2 t = !Ruliology.CellularAutomata.Rule30FrontHalfPeriod.phase t
+'Ruliology.CellularAutomata.Rule30FrontHalfPeriod.anchors' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30FrontHalfPeriod.orb_bit : ∀ (K W t i : Nat),
+  i < K →
+    (Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb K t (W, 0)).fst.testBit i =
+      Ruliology.CellularAutomata.Rule30FrontHalfPeriod.D W (↑(i + 3)) t
+'Ruliology.CellularAutomata.Rule30FrontHalfPeriod.orb_bit' depends on axioms: [propext, Classical.choice, Quot.sound]
+Ruliology.CellularAutomata.Rule30FrontHalfPeriod.front_half_period_zero : ∀ (K W : Nat),
+  W < 2 ^ K →
+    Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb K
+        (2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B (K + 2)) (W, 0) =
+      (W, 0)
+'Ruliology.CellularAutomata.Rule30FrontHalfPeriod.front_half_period_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30FrontHalfPeriod.front_half_period : ∀ (K W p : Nat),
+  W < 2 ^ K →
+    p < 2 →
+      Ruliology.CellularAutomata.Rule30ZeroBoundaryStripeFront.orb K
+          (2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B (K + 2)) (W, p) =
+        (W, p)
+'Ruliology.CellularAutomata.Rule30FrontHalfPeriod.front_half_period' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PrefixClockGrowth.edge_witness : ∀ (x : Int → Bool) (L : Int),
+  x L = true →
+    (∀ (i : Int), i < L → x i = false) →
+      ∀ (p : Nat),
+        0 < p →
+          ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-L + 2 * ↑p)) p
+'Ruliology.CellularAutomata.Rule30PrefixClockGrowth.edge_witness' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_period_edge_bound : ∀ (x : Int → Bool) (R L : Int),
+  x L = true →
+    (∀ (i : Int), i < L → x i = false) →
+      ∀ (n p : Nat),
+        0 < p →
+          Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) p →
+            ↑n < R - L + 2 * ↑p
+'Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_period_edge_bound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_exponent_lower : ∀ (x : Int → Bool) (R L : Int)
+  (hright : ∀ (i : Int), R < i → x i = false),
+  x L = true →
+    (∀ (i : Int), i < L → x i = false) →
+      ∀ (n e : Nat),
+        (R - L).toNat + 2 * 2 ^ e ≤ n →
+          e < Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hright n
+'Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_exponent_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_exponents_unbounded : ∀ (x : Int → Bool) (R L : Int)
+  (hright : ∀ (i : Int), R < i → x i = false),
+  x L = true →
+    (∀ (i : Int), i < L → x i = false) →
+      ∀ (e : Nat),
+        ∃ N, ∀ (n : Nat), N ≤ n → e < Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hright n
+'Ruliology.CellularAutomata.Rule30PrefixClockGrowth.prefix_exponents_unbounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30PrefixClockGrowth.two_sided_prefix_clock : ∀ (x : Int → Bool) (R L : Int)
+  (hright : ∀ (i : Int), R < i → x i = false),
+  x L = true →
+    (∀ (i : Int), i < L → x i = false) →
+      ∀ (n : Nat),
+        Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hright n ≤
+            Ruliology.CellularAutomata.Rule30RecordCharge.B n ∧
+          ↑n < R - L + 2 * ↑(2 ^ Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hright n)
+'Ruliology.CellularAutomata.Rule30PrefixClockGrowth.two_sided_prefix_clock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
