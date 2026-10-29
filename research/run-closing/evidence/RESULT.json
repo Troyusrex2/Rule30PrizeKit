@@ -1,0 +1,1022 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "official_source_hashes": {
+    "Ruliology.CellularAutomata.Rule30ZeroBoundary": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d",
+    "Ruliology.CellularAutomata.Rule30PeriodTwo": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769",
+    "Ruliology.CellularAutomata.Rule30DrivenLeft": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30BlackRuns": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
+  },
+  "fresh_source_modules": 11,
+  "owned_modules": 3,
+  "reused_owned_objects": false,
+  "whole_catalog_build": false,
+  "checks": {
+    "RunClosingData": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "RunClosing.records",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.records_length",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.records_length",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "RunClosingData",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 2,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    "RunClosing": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "RunClosing.Constant",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.Good",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.HasResetRun",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.Index",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.PendingRun",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.RowClosing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.State",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.SuffixRun",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.Synchronized",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.TailClosing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.advance",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.all_damage_dies_iff",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.applyMap",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.boundary_shift_one",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.byte",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.damageStep",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.damage_identity",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.evenBlack",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.forward",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.forward_rule",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.forward_transfer",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.good_read",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.good_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.initial",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.initial_map",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.initial_phase",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.map_read",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.nextVal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.next_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.oddBlack",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.ones_pattern",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.patternRead",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.patternStep",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.pattern_append",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.pending_done",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.pending_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.phase",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.phase_read",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.process",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.process_damage",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.readIndex",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.record",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.reference_scan",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.reset_append",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_iff",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_iff_runs",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_not_finite",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.run_resets",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.scan",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.scan_append",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.scan_false",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.segment",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.segment_add",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.suffix_one",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.suffix_three",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.suffix_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.synchronized_context",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.synchronized_iff_pattern",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.synchronized_iff_reset_run",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.table_constant",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.table_transition",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.tail_closing_iff",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.tail_closing_not_finite",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.transfer",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.xorPair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.xorPair_cancel",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.xorPair_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.zeros_not_synchronized",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Constant.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_5",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Good.eq_6",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.Synchronized.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.TailClosing.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.forward.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.patternRead.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.patternRead.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.patternRead.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.patternRead.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.patternStep.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.process.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.process.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.process.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.process.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.readIndex.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.readIndex.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.readIndex.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.readIndex.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.scan.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.scan.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.scan.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.scan.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.segment.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.segment.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.segment.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RunClosing.segment.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.transfer.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.synchronized_iff_pattern",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.run_resets",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.synchronized_iff_reset_run",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.damage_identity",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.process_damage",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.all_damage_dies_iff",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_iff",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_iff_runs",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.row_closing_not_finite",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RunClosing.boundary_shift_one",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "RunClosing",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 152,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    "RowClosingCounter": {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.boundary",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.boundary_gate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.boundary_gate_certificate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.bulk_certificate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.forward_initial",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.full",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.full_recon",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.full_root",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.full_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.futureWord",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.future_certificate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.gate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.gate_not_S",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.head_certificate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.initial",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.initial_evolution",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.no_prefix_synchronizes",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.no_segment_synchronizes",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.pathA",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.pathB",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.paths_certificate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.paths_scan",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.paths_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.profile",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.profile_add_seven",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.profile_mod",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.profiles",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.root_odd_black",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "RowClosingCounter.stateAt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.unrestricted_closing_false",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.boundary.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.full.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.gate.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.profile.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.profiles.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RowClosingCounter.stateAt.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "RunClosing.oddBlack.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.full_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.full_recon",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.initial_evolution",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.boundary_gate",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.root_odd_black",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.gate_not_S",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.forward_initial",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.no_prefix_synchronizes",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.no_segment_synchronizes",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "RowClosingCounter.unrestricted_closing_false",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "RowClosingCounter",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 50,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
+  },
+  "source_hashes": {
+    "RunClosingData.lean": "0f9be5ef327ee8354f41ad88c093498e9a0090f34659bad52af8d7e990dedab1",
+    "RunClosing.lean": "03d1f439e20d7383abdb231d3dd00478935171b19d8ec81362943f5db391e597",
+    "RowClosingCounter.lean": "91ffbecd19b99eea665ff8c1a801194e740f74c00ca6c067600c2021b2968419"
+  },
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "constants": 204,
+  "headlines": 21,
+  "source_warnings": false,
+  "seconds": 53.39099999994505,
+  "prize_solution": false
+}

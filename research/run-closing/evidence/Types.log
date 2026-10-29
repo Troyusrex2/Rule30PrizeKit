@@ -1,0 +1,60 @@
+RunClosing.records_length : RunClosing.records.length = 41
+'RunClosing.records_length' does not depend on any axioms
+RunClosing.synchronized_iff_pattern : ∀ (w : List Bool), RunClosing.Synchronized w ↔ RunClosing.patternRead 0 w = 5
+'RunClosing.synchronized_iff_pattern' depends on axioms: [propext, Quot.sound]
+RunClosing.run_resets : ∀ (k : Nat) (b : Bool),
+  RunClosing.Synchronized ([false] ++ List.replicate (3 * k + 1) true ++ [false, b])
+'RunClosing.run_resets' depends on axioms: [propext, Quot.sound]
+RunClosing.synchronized_iff_reset_run : ∀ (w : List Bool), RunClosing.Synchronized w ↔ RunClosing.HasResetRun w
+'RunClosing.synchronized_iff_reset_run' depends on axioms: [propext, Quot.sound]
+RunClosing.damage_identity : ∀ (b : Bool) (x d : RunClosing.State),
+  RunClosing.xorPair (RunClosing.transfer b x) (RunClosing.transfer b (RunClosing.xorPair x d)) =
+    RunClosing.damageStep x d
+'RunClosing.damage_identity' does not depend on any axioms
+RunClosing.process_damage : ∀ (w : List Bool) (x d : RunClosing.State),
+  (RunClosing.process w x d).snd = RunClosing.xorPair (RunClosing.scan w x) (RunClosing.scan w (RunClosing.xorPair x d))
+'RunClosing.process_damage' does not depend on any axioms
+RunClosing.all_damage_dies_iff : ∀ (w : List Bool) (x : RunClosing.State),
+  (∀ (a b : Bool), (RunClosing.process w x (a, b)).snd = (false, false)) ↔ RunClosing.Synchronized w
+'RunClosing.all_damage_dies_iff' depends on axioms: [propext]
+RunClosing.row_closing_iff : ∀ (a : Nat → Bool), RunClosing.RowClosing a ↔ RunClosing.TailClosing (RunClosing.forward a)
+'RunClosing.row_closing_iff' depends on axioms: [propext, Quot.sound]
+RunClosing.row_closing_iff_runs : ∀ (a : Nat → Bool),
+  RunClosing.RowClosing a ↔
+    ∀ (d : Nat), ∃ k n, d ≤ k ∧ RunClosing.HasResetRun (RunClosing.segment (RunClosing.forward a) k n)
+'RunClosing.row_closing_iff_runs' depends on axioms: [propext, Quot.sound]
+RunClosing.row_closing_not_finite : ∀ (a : Nat → Bool), RunClosing.RowClosing a → ¬∃ W, ∀ (k : Nat), W ≤ k → a k = false
+'RunClosing.row_closing_not_finite' depends on axioms: [propext, Quot.sound]
+RunClosing.boundary_shift_one : ∀ (G : Nat → Bool) (t : Nat),
+  RunClosing.oddBlack G (t + 1) = RunClosing.evenBlack (fun r => !G (r + 1)) t
+'RunClosing.boundary_shift_one' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.full_step : ∀ (k t : Nat),
+  RowClosingCounter.full (k + 2) t =
+    (RowClosingCounter.full (k + 1) (t + 1) ^^ (RowClosingCounter.full (k + 1) t || RowClosingCounter.full k t))
+'RowClosingCounter.full_step' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.full_recon : ∀ (k t : Nat),
+  RowClosingCounter.full k t = Ruliology.CellularAutomata.Rule30ZeroBoundary.recon RowClosingCounter.boundary k t
+'RowClosingCounter.full_recon' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.initial_evolution : ∀ (t k : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow RowClosingCounter.initial t k = RowClosingCounter.full k t
+'RowClosingCounter.initial_evolution' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.boundary_gate : ∀ (t : Nat),
+  RowClosingCounter.boundary t = RunClosing.oddBlack RowClosingCounter.gate t
+'RowClosingCounter.boundary_gate' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.root_odd_black : ∀ (r : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow RowClosingCounter.initial (2 * r + 1) 1 = true
+'RowClosingCounter.root_odd_black' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.gate_not_S : ¬List.foldl (fun w i => w + (RowClosingCounter.gate i).toNat * 2 ^ i) 0 (List.range 8) ∈
+    [8, 9, 16, 18, 33, 36, 66, 72, 132, 144]
+'RowClosingCounter.gate_not_S' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.forward_initial : ∀ (k : Nat),
+  RunClosing.forward RowClosingCounter.initial k = RowClosingCounter.futureWord[k % 7]!
+'RowClosingCounter.forward_initial' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.no_prefix_synchronizes : ∀ (n : Nat),
+  ¬RunClosing.Synchronized (RunClosing.segment (RunClosing.forward RowClosingCounter.initial) 0 n)
+'RowClosingCounter.no_prefix_synchronizes' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.no_segment_synchronizes : ∀ (d n : Nat),
+  ¬RunClosing.Synchronized (RunClosing.segment (RunClosing.forward RowClosingCounter.initial) d n)
+'RowClosingCounter.no_segment_synchronizes' depends on axioms: [propext, Quot.sound]
+RowClosingCounter.unrestricted_closing_false : ¬RunClosing.RowClosing RowClosingCounter.initial
+'RowClosingCounter.unrestricted_closing_false' depends on axioms: [propext, Quot.sound]

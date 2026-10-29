@@ -1,0 +1,37 @@
+# Inverse merging, reset runs, and a rooted non-closing example
+
+**Problem 1 remains open. This is a research tool and a scope check, not a prize solution.** It does not prove the S-legal closing conjecture, nonperiodicity of the physical center, or frequency 1/2. No claim of priority is made for the underlying transfer algebra or the period-four ether.
+
+This package connects the corrected top-slice damage process to the kit's predecessor-transfer algebra. It replaces an informal automaton condition with an exact run criterion and provides an explicit unrestricted counterexample using the official reconstruction definitions.
+
+## Checked claims
+
+For `transfer b (p,q) = (b XOR (p OR q),p)`, read an inverse-input word in scan order.
+
+* **Exact criterion, all word lengths:** every register pair merges to the same pair iff the word contains `0 1^(3*k+1) 0 b`, for some `k >= 0`, either bit `b`, and arbitrary surrounding context. The extra input bit after the second zero is essential: `010` alone is not a reset. The 41-element transfer semigroup is checked against a six-state run recognizer, and induction proves the statement for arbitrary words.
+* **Exact damage connection:** the corrected Boolean damage recurrence is the XOR of two scans with a common input. Universal death of all initial damage pairs is equivalent to inverse merging. For a physical row `a`, the inverse input is its **next** row, `a(k+2) XOR (a(k+1) OR a(k))`.
+* **The remaining claim is substantive:** universal closing beyond every spatial depth already implies that the initial row cannot have an eventually white tail. There is no proof that all S-legal forced rows have this property.
+* **Unrestricted closing is false:** the gate `01` repeated gives the odd-black boundary `1101` repeated, in low-time order. The official `recon`/`zrow` solution has the spatial temporal-profile cycle `[11,6,12,8,8,12,10]` after the white wall. At physical time zero, the positive-depth row is `1000000` repeated; its next row is `1100001` repeated. Two inverse paths stay distinct on every segment at every starting depth. The gate has window value 170 and is **not S-legal**.
+* **Time phase matters:** shifting the odd-black boundary one tick gives the complementary even-black boundary. A proof about one phase does not cover both phases without an additional argument.
+
+Main names are `RunClosing.synchronized_iff_reset_run`, `run_resets`, `all_damage_dies_iff`, `row_closing_iff_runs`, `row_closing_not_finite`, `boundary_shift_one`, and `RowClosingCounter.initial_evolution`, `no_segment_synchronizes`, `unrestricted_closing_false`.
+
+## Reproduce
+
+Use an official Lean 4.35.0 toolchain with `lean` and `lake` in the same directory, plus Python 3. No Mathlib or downloads are needed. Standard-library compiled objects from the toolchain are used. From this directory:
+
+```text
+python replay/verify.py --lean C:/path/to/lean.exe --out C:/new/empty/output
+```
+
+On Unix pass the path to `lean`; the script selects its sibling `lake`. The output directory must not exist. The script checks the frozen source hashes, builds all eleven source modules from source, and runs the unchanged official `Check.lean` on each of the three owned modules with all 21 selected headlines. Every owned declaration is replayed, not just the headline dependencies. Per-command timeouts and one Lean worker bound the run.
+
+The reference run is Windows Lean 4.35.0. Its binary hash is recorded in the receipt; other platforms have different binary hashes and must use the same official Lean version. The checker hash is fixed across platforms. The checker emits its existing replay-deprecation warning; the research source builds have no warnings.
+
+`SOURCE-HASHES.json` freezes the package. `evidence/RESULT.json` records the independent fresh check: 204 owned constants, 21 headlines, standard axioms only, 11 source modules including 8 unchanged official dependencies. This is not a whole-catalog or cold standard-library build. No claim is made for a notebook/portal submission.
+
+## Provenance and limits
+
+Developed by Troy Lowry with OpenAI Codex. The corrected top-slice process was suggested in the independent Claude packet R5-04 v02; its computational CP* conjecture is not adopted as a theorem here. The transfer map and run-modulo-three mechanism build on the kit's [corrected Feynman predecessor theorem](https://github.com/WolframInstitute/Rule30PrizeKit/blob/932cf8dde039b89b1dcbe9636867bb1b2057fef0/lean/Ruliology/CellularAutomata/Rule30Predecessors.lean). Reconstruction uses unchanged [Rule30ZeroBoundary](https://github.com/WolframInstitute/Rule30PrizeKit/blob/932cf8dde039b89b1dcbe9636867bb1b2057fef0/lean/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean). The periodic counterexample is related to the known period-four ether; the new purpose is to check the closing hypothesis's scope.
+
+The specific open target is now a run-recurrence statement on the next physical rows generated by **legal** gate futures. Proving it would rule out finite rows in that gate class; the direct application is a period-two/empty-right route, not automatically the full prize. Increasing a bounded-depth search or proving the unrestricted claim does not fill that gap.
