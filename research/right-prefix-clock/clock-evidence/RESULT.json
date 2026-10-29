@@ -1,0 +1,216 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "fresh_source_modules": 5,
+  "reused_objects": false,
+  "whole_catalog_build": false,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.Period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.Recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_no_11011",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_recurrence",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.exists_prefix_exponent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.exponent_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.forcing_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.growth_antiperiod",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.next_shift",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.no_11011",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.prefix_double",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.prefix_extend",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.prefix_mono",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.prefix_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.right_bounded_prefix_power",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.right_white",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.growth_antiperiod",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.exponent_step",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.no_11011",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.right_bounded_prefix_power",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.exists_prefix_exponent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30RightPrefixClock.actual_no_11011",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "Ruliology.CellularAutomata.Rule30RightPrefixClock",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 57,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "source_files": [
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Realization.lean",
+      "sha256": "da6444504fc3d9789ccdae0f042f63e980b6f0de1ce23958d5387e6d4999eac5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30RightProfiles.lean",
+      "sha256": "014be30fa094111eb9bdd9d457ccb82c9c46220c908cdf7eaa5fe74951889ac1"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30RightPrefixClock.lean",
+      "sha256": "2b74c47ffc22f6f7cf8ad9c912ab389cffb182db4137ca2571590c961c35a2c6"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    }
+  ],
+  "source_warnings": false,
+  "seconds": 4.742870299960487
+}

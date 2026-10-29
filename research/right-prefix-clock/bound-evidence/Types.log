@@ -1,0 +1,45 @@
+Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_two_mul_le : ∀
+  (C : Ruliology.CellularAutomata.Rule30RightPrefixBound.Clock) (d : Nat),
+  C.exponent (2 * d) ≤ d + Ruliology.CellularAutomata.Rule30RecordCharge.Q 0 d
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_two_mul_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_le_B : ∀
+  (C : Ruliology.CellularAutomata.Rule30RightPrefixBound.Clock) (j : Nat),
+  C.exponent j ≤ Ruliology.CellularAutomata.Rule30RecordCharge.B j
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.exponent_le_B' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent_spec : ∀ (x : Int → Bool) (R : Int)
+  (hx : ∀ (p : Int), R < p → x p = false) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+    (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n)
+    (Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hx n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_exponent_half : ∀ (x : Int → Bool) (R : Int)
+  (hx : ∀ (p : Int), R < p → x p = false) (n : Nat),
+  Ruliology.CellularAutomata.Rule30RightPrefixBound.prefixExponent x R hx n ≤
+    Ruliology.CellularAutomata.Rule30RecordCharge.B n
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_exponent_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_prefix_half : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n : Nat),
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n)
+        (2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.right_bounded_prefix_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30RightPrefixBound.evol_right_diagonal_half : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n t : Nat),
+      Ruliology.CellularAutomata.Rule30Realization.evol x (t + 2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n)
+          (R + ↑(t + 2 ^ Ruliology.CellularAutomata.Rule30RecordCharge.B n) - ↑n) =
+        Ruliology.CellularAutomata.Rule30Realization.evol x t (R + ↑t - ↑n)
+'Ruliology.CellularAutomata.Rule30RightPrefixBound.evol_right_diagonal_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
