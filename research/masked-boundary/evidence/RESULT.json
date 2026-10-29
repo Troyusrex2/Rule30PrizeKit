@@ -1,0 +1,266 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "official_source_hashes": {
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "Ruliology.CellularAutomata.Rule30MaskedJen": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+    "Ruliology.CellularAutomata.Rule30DrivenLeft": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053"
+  },
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean_binary_sha256": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "fresh_source_modules": 5,
+  "owned_modules": 1,
+  "reused_owned_objects": false,
+  "whole_catalog_build": false,
+  "constants": 28,
+  "headlines": 10,
+  "source_warnings": false,
+  "source_sha256": "95f79248c3a16ba4ecdcf8f0384668aa18234d8f322a21ece08281acd7ca302a",
+  "check": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "MaskedTransport.BothValues",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.Consistent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.EffectiveConsistent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.FallingPins",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.FiniteNonzeroLeft",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.PeriodicMaskExclusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.actual_consistent",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.consistency_iff",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.consistent_falling",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.consistent_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.driven_eq_of_mask",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskedTransport.effective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.effective_falling_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.falling_of_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.falling_transport",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.problem1_of_periodic_mask_exclusion",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.tail_both_values",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.transport_iff_falling",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskedTransport.effective.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30Prize.center.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.driven_eq_of_mask",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.falling_transport",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.effective_falling_transport",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.falling_of_transport",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.transport_iff_falling",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.consistent_transport",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.consistency_iff",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.actual_consistent",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.tail_both_values",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskedTransport.problem1_of_periodic_mask_exclusion",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MaskedTransport",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 28,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "partial_check_accepts_arbitrary_theorem_types": true,
+  "explicit_type_guards_passed": true,
+  "open_exclusion_hypothesis_proved": false,
+  "prize_solution": false,
+  "seconds": 15.858999999938533
+}
