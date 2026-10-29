@@ -1,0 +1,38 @@
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.alternating_xor_constant : ∀ (v w : Nat → Bool),
+  (∀ (t : Nat), v (t + 1) = !v t) → (∀ (t : Nat), w (t + 1) = !w t) → ∀ (t : Nat), (v t ^^ w t) = (v 0 ^^ w 0)
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.alternating_xor_constant' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.no_drop_after_antiperiod : ∀ (u v w r : Nat → Bool) (h : Nat),
+  Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic u h →
+    Ruliology.CellularAutomata.Rule30EdgeClockDrop.Antiperiodic v h →
+      (∀ (t : Nat), v (t + 1) = (v t ^^ (u t || r t))) →
+        (∀ (t : Nat), w (t + 1) = (w t ^^ (v t || u t))) → ¬Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic w h
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.no_drop_after_antiperiod' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.no_drop_at_step : ∀ (x : Nat → Nat → Bool),
+  Ruliology.CellularAutomata.Rule30EdgeClockDrop.Triangular x →
+    ∀ (j h : Nat),
+      Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic (x (j + 1)) h →
+        Ruliology.CellularAutomata.Rule30EdgeClockDrop.Antiperiodic (x (j + 2)) h →
+          ¬Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic (x (j + 3)) h
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.no_drop_at_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.iter_triangular : ∀ (c : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30EdgeClockDrop.Triangular fun j t =>
+    Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c j
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.iter_triangular' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.edge_no_drop_after_antiperiod : ∀ (c : Nat → Bool) (j h : Nat),
+  Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic
+      (fun t => Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c j) h →
+    Ruliology.CellularAutomata.Rule30EdgeClockDrop.Antiperiodic
+        (fun t => Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c (j + 1)) h →
+      ¬Ruliology.CellularAutomata.Rule30EdgeClockDrop.Periodic
+          (fun t => Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c (j + 2)) h
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.edge_no_drop_after_antiperiod' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.constant_column_white_prefix : ∀ (x : Nat → Nat → Bool),
+  (∀ (t : Nat), x 1 (t + 1) = (x 1 t ^^ x 0 t)) →
+    Ruliology.CellularAutomata.Rule30EdgeClockDrop.Triangular x →
+      ∀ (j : Nat), (∀ (t : Nat), x j t = x j 0) → ∀ (i : Nat), i < j → ∀ (t : Nat), x i t = false
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.constant_column_white_prefix' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30EdgeClockDrop.edge_constant_column_white_prefix : ∀ (c : Nat → Bool) (j : Nat),
+  (∀ (t : Nat), Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c j = c j) →
+    ∀ (i : Nat), i < j → ∀ (t : Nat), Ruliology.CellularAutomata.Rule30FrozenRuler.iter t c i = false
+'Ruliology.CellularAutomata.Rule30EdgeClockDrop.edge_constant_column_white_prefix' depends on axioms: [propext,
+ Quot.sound]

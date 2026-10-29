@@ -1,0 +1,80 @@
+{
+  "audit": [
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-20261028T215028Z-54f49ae3-v01",
+      "path": "src/period_drop_audit.py",
+      "sha256": "4c84870c3bed9771220d8b3c67ea8a0bc9fd1b13f1607a50fc4cc449955e9e3f"
+    },
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-20261028T215028Z-54f49ae3-v01",
+      "path": "evidence/cyclic-audit-W1-20.txt",
+      "sha256": "acaf5bce3ad59910e11756dc5058f7936e76d180186321c8a3d584f9357b690c"
+    },
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-20261028T215028Z-54f49ae3-v01",
+      "path": "REPORT.md",
+      "sha256": "06d501d94fe88e7c485d5a3273385b9f19b3f84af553fa121fd8ed25e1d57454"
+    },
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-lemma-20261028T215735Z-dcfdba60-v01",
+      "path": "src/lemma_check.py",
+      "sha256": "04b08e4f7dd1c814ad5568859b12ba24852fd82a21c3146176228b1b79f7a42d"
+    },
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-lemma-20261028T215735Z-dcfdba60-v01",
+      "path": "evidence/lemma-verification-W1-20.txt",
+      "sha256": "d3f8e5f463f2aa23dddd73ec692e3c86d6e5563c2f5a691d81db1d7f74d26c83"
+    },
+    {
+      "response": "r30-coinailyzer-swarm-r4-05-lemma-20261028T215735Z-dcfdba60-v01",
+      "path": "REPORT.md",
+      "sha256": "cbb4c640ec4db8d8ac0aa1cdc648a07239b6c61c2b521f3e62e016a1152b655d"
+    }
+  ],
+  "generic_counterexample": {
+    "q": 4,
+    "x": 3,
+    "y": 12,
+    "x_period": 4,
+    "y_period": 4,
+    "gap": true
+  },
+  "local_tests": [
+    {
+      "q": 2,
+      "condition": "y subset delta(x); x exact period q; OR half-periodic with even half parity",
+      "count": 0,
+      "first": null
+    },
+    {
+      "q": 4,
+      "condition": "y subset delta(x); x exact period q; OR half-periodic with even half parity",
+      "count": 8,
+      "first": {
+        "x": 7,
+        "y": 12,
+        "y_period": 4
+      }
+    },
+    {
+      "q": 8,
+      "condition": "y subset delta(x); x exact period q; OR half-periodic with even half parity",
+      "count": 240,
+      "first": {
+        "x": 25,
+        "y": 145,
+        "y_period": 8
+      }
+    },
+    {
+      "q": 16,
+      "condition": "y subset delta(x); x exact period q; OR half-periodic with even half parity",
+      "count": 175456,
+      "first": {
+        "x": 385,
+        "y": 33025,
+        "y_period": 16
+      }
+    }
+  ]
+}
