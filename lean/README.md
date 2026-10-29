@@ -239,6 +239,7 @@ These modules are not in the 2026-10-15 snapshot of the catalog, and `SHA256SUMS
 | `Rule30ProfileClockEscape` | 2026-10-29 | Rank 13 certificate gives clock at least 64 within 14 diagonals after any non-period-two profile; global period 32 forces period 2. Certificate in Rule30Certificates.ProfileClockRank32. Contributed by Troy Lowry with OpenAI Codex. | `nonperiod_two_forces_clock64`, `global_period32_forces_period2` |
 | `Rule30ProfileClockSharpness` | 2026-10-29 | Reverse realization of finite profile diagrams and actual finite seed 47649 proving the uniform 14-diagonal escape bound sharp. Contributed by Troy Lowry with OpenAI Codex. | `realize_words`, `sharpness_witness`, `thirteen_is_not_uniform` |
 | `Rule30LowClockWaves` | 2026-10-29 | With a rightmost black cell, global period 32 holds exactly for the two alternating-left-tail configurations, which already have period 2. Larger clocks remain open. Contributed by Troy Lowry with OpenAI Codex. | `global32_iff_alternating_tail` |
+| `Rule30PeriodTwoContact` | 2026-10-29 | An isolated-zero non-period-two profile cannot introduce a new whole-prefix period, uniformly in the prior period. No-return-to-two is equivalent to an adjacent common-zero claim; any counterexample has an isolated-zero predecessor. The unbounded common-zero claim remains open. Contributed by Troy Lowry with OpenAI Codex. | `actual_no00_nonperiod_two_no_growth`, `actual_contact_iff_no_return`, `actual_counter_predecessor_no00` |
 
 ## Certificate data
 

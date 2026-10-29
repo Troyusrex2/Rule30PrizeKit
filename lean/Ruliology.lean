@@ -130,6 +130,7 @@ public import Ruliology.CellularAutomata.Rule30ProfileGraphCases
 public import Ruliology.CellularAutomata.Rule30ProfileClockEscape
 public import Ruliology.CellularAutomata.Rule30ProfileClockSharpness
 public import Ruliology.CellularAutomata.Rule30LowClockWaves
+public import Ruliology.CellularAutomata.Rule30PeriodTwoContact
 
 /-!
 # Rule 30 Prize: Lean snapshot
