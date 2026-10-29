@@ -22,3 +22,7 @@ The fresh11-source check passed all131 declarations owned by the two new modules
 The Python audit independently evaluates the literal eight-entry Rule30 truth table for5200 carrier recurrence cells,640 transient cells,64 inverse-block maps, and all8 Gate windows. It also checks that the exact packed Lean constants equal the raw data. These numerical controls are distinguished from the all-length Lean theorem.
 
 Dependencies include the original gap-five/zero-boundary sources from PR47; their exact bytes and unchanged checker are frozen in `replay/INPUTS.json`. All new sources use the same project conventions. `.gitattributes` preserves validated bytes on checkout. `MANIFEST.json` hashes all payloads except itself. Earlier archived evidence is retained as a historical snapshot.
+
+## Catalog PR integration
+
+The six modules in the expanded PR47 also passed together from a fresh14-source closure:583 total owned declarations and63 headline types, no source warnings/new axioms/reused objects. These totals include the original452/39 and the new131/24. All six imports were checked together. The concrete module was normalized from CRLF in the unit replay to LF in the catalog integration and then checked afresh; see `LINE-ENDING-ADAPTATION.json`. This remains a focused closure build, not a whole-catalog build. Replay with `python integration-replay/verify.py --lean /absolute/path/to/lean.exe --out /new/empty/output`; actual receipts are in `integration-evidence/`, including the final `job-attempt02.guard.json`.
