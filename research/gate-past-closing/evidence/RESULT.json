@@ -1,0 +1,2775 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "fresh_source_modules": 13,
+  "reused_objects": false,
+  "whole_catalog_build": false,
+  "checkers": [
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.GateLegal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "inductive",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.bitNat",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.cell",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.common_future_recon",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.future",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.future_legal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.oddTrace",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.prepend",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.triangleA",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.triangleB",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.validDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.window",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.window_congr",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.words",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.casesOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.columns",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.ctorIdx",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.horizon",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.mk",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.noConfusionType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "recursor",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.rec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.recOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.mk.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.mk.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.mk.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.Triangle.mk.sizeOf_spec",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.future_legal",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30PastStrip",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 70,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Allowed",
+          "standardAxioms": true
+        },
+        {
+          "kind": "inductive",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.ExtendValid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "inductive",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.LeafValid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.PackedValid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Prefix",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.allowedDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.allowed_of_prefix",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.column",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.cover_sound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.extendDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.finiteGate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf10",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf11",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf12",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf5",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf6",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf7",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf8",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf9",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leafValidDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf_sound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.packedDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.packed_sound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.prefix_extend",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.prependN",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.root_cover",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.shared_trace_future",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.trace_prefix",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.treeFor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.triangle",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.window_bits",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.below",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.brecOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.casesOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.ctorElim",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.ctorElimType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.ctorIdx",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.noConfusionType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "recursor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.rec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.recOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.reject",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.casesOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.ctorIdx",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.edge",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.gate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.length",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.mk",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.noConfusionType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "recursor",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.rec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.recOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.reference",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.tables",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.bound.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree.eq_3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.checkTree.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.treeFor.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.window.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch.elim",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.branch.sizeOf_spec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.brecOn.eq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.brecOn.go",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf.elim",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.leaf.sizeOf_spec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.reject.elim",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree.reject.sizeOf_spec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.mk.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.mk.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.mk.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.Leaf.mk.sizeOf_spec",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.allowed_of_prefix",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.trace_prefix",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.packed_sound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.leaf_sound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.prefix_extend",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.cover_sound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.window_bits",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.root_cover",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_valid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCover.four_legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30GatePastCover",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 127,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.checked_branch",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.checked_leaf",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.words.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf0_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf10",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf10_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf11",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf11_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf12",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf12_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf13",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf13_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf14",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf14_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf15",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf15_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf16",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf16_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf1_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf2_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf3_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf4_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf5",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf5_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf6",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf6_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf7",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf7_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf8",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf8_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf9",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.leaf9_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.trees",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf0_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf10",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf10_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf11",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf11_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf12",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf12_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf13",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf13_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf14",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf14_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf15",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf15_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf16",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf16_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf17",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf17_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf18",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf18_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf19",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf19_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf1_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf20",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf20_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf21",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf21_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf22",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf22_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf23",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf23_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf24",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf24_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf25",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf25_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf26",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf26_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf27",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf27_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf28",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf28_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf29",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf29_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf2_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf30",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf30_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf31",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf31_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf32",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf32_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf33",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf33_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf34",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf34_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf35",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf35_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf36",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf36_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf37",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf37_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf38",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf38_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf39",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf39_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf3_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf40",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf40_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf41",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf41_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf42",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf42_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf43",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf43_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf44",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf44_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf45",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf45_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf46",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf46_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf47",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf47_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf48",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf48_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf49",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf49_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf4_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf5",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf50",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf50_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf51",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf51_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf52",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf52_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf53",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf53_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf54",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf54_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf55",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf55_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf56",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf56_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf57",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf57_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf58",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf58_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf59",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf59_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf5_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf6",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf60",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf60_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf61",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf61_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf62",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf62_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf63",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf63_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf64",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf64_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf65",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf65_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf66",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf66_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf67",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf67_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf68",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf68_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf69",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf69_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf6_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf7",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf70",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf70_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf7_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf8",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf8_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf9",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.leaf9_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.trees",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf0_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf10",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf10_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf11",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf11_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf12",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf12_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf13",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf13_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf14",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf14_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf15",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf15_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf16",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf16_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf17",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf17_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf18",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf18_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf19",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf19_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf1_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf20",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf20_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf21",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf21_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf22",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf22_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf23",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf23_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf24",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf24_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf25",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf25_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf26",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf26_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf27",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf27_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf28",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf28_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf29",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf29_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf2_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf30",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf30_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf31",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf31_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf32",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf32_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf33",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf33_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf34",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf34_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf35",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf35_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf3_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf4_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf5",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf5_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf6",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf6_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf7",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf7_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf8",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf8_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf9",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.leaf9_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.trees",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.trees.match_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_valid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_valid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_valid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_bound",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30Certificates.GatePastCases",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 2727,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30GatePastCases",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 3,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.AllPastClosing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.EventuallyEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.FiniteCoverFamily",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.HomoclinicClosing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.PeriodicSplicing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.Successor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.all_pasts_of_finite_covers",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.all_pasts_of_homoclinic",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.bridge",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.bridgeLength",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.closing_equivalence",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code_bits",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_all_past_closing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_closing_and_splicing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_finite_covers",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_shift_legal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.homoclinic_of_all_pasts",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.last_black_nonzero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.pack8",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.paths",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.pattern",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodicGate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_gate_legal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_gate_period",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_prefix_clock",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_splicing",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.stream_bits",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.stream_gate_legal",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.successorDecidable",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.successor_bits",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.support_bound_of_common_future",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.window_successor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.code.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.pack8.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.bitNat.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.oddTrace.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30PastStrip.words.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.closing_equivalence",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.support_bound_of_common_future",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.window_successor",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.stream_gate_legal",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_gate_legal",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_splicing",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_all_past_closing",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.all_pasts_of_finite_covers",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_finite_covers",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30GateTailReduction",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 130,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
+  ],
+  "aggregate_constants": 3057,
+  "headline_count": 37,
+  "source_files": [
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PastStrip.lean",
+      "sha256": "2abc512d5f08bb4181a9f9788d63cb39b866457c3bcc1f631b2937731d578663"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30GatePastCover.lean",
+      "sha256": "852bef73c65c2269251e33f623c114e71eefc5a9e3e6996a1b5c5be2a2eeeb7f"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Certificates/GatePastCases.lean",
+      "sha256": "fdf685fc4e27e6528c76fcbba93af305209eccd8361cb2c3a17ba2bd54688217"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30GateTailReduction.lean",
+      "sha256": "1c0f4dec9722a072f064596edb74231a9ac126c19eb90ee10381a8ee186fd202"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30GatePastCases.lean",
+      "sha256": "a59e04b05b89147446097fe1c854aa6af7e5cee89f7cc1174add39bf4ac3594b"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    }
+  ],
+  "source_warnings": false,
+  "seconds": 204.47924929996952
+}

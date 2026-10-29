@@ -1,0 +1,9 @@
+C:\Users\troyu\Rule30-offload\research\gate-past-integration-20261029\attempt01\project\Check.lean:124:17: warning: `Lean.Environment.replay` has been deprecated: Use `Lean.Kernel.Environment.replay` instead
+
+Note: The updated constant has a different type:
+  Std.HashMap Name ConstantInfo → Kernel.Environment → IO Kernel.Environment
+instead of
+  Std.HashMap Name ConstantInfo → Environment → IO Environment
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.replay` to `Kernel.Environment.replay x`).
+{"claim":"partial","declared":[{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree","standardAxioms":true},{"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree","standardAxioms":true}],"headlines":[{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree","ok":true,"problems":[],"typeMatches":true},{"axioms":["propext","Quot.sound"],"found":true,"kind":"theorem","name":"Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree","ok":true,"problems":[],"typeMatches":true}],"importsStatements":true,"module":"Ruliology.CellularAutomata.Rule30GatePastCases","newAxioms":[],"official":[],"reasons":[],"replay":{"constants":3,"ok":true},"verdict":"pass","verifiedTargets":[]}

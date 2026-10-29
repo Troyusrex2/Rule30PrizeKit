@@ -1,0 +1,357 @@
+Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair : ∀ (a b : Nat → Bool) (T M : Nat),
+  (∀ (t : Nat), T ≤ t → a t = b t) →
+    (∀ (t : Nat),
+        t < T →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a M t =
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b M t) →
+      (∀ (t : Nat),
+          t < T →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a (M + 1) t =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b (M + 1) t) →
+        ∀ (k : Nat),
+          M ≤ k →
+            ∀ (t : Nat),
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a k t =
+                Ruliology.CellularAutomata.Rule30ZeroBoundary.recon b k t
+'Ruliology.CellularAutomata.Rule30PastStrip.tail_of_strip_pair' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound : ∀ (c : Ruliology.CellularAutomata.Rule30PastStrip.Triangle)
+  (a : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30PastStrip.Valid c a →
+    ∀ (k t : Nat),
+      k + t < c.horizon →
+        Ruliology.CellularAutomata.Rule30PastStrip.cell c k t =
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.recon a k t
+'Ruliology.CellularAutomata.Rule30PastStrip.triangle_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.future_legal : Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+  Ruliology.CellularAutomata.Rule30PastStrip.future
+'Ruliology.CellularAutomata.Rule30PastStrip.future_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal : Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+    (Ruliology.CellularAutomata.Rule30PastStrip.prepend 132 Ruliology.CellularAutomata.Rule30PastStrip.future) ∧
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+    (Ruliology.CellularAutomata.Rule30PastStrip.prepend 528 Ruliology.CellularAutomata.Rule30PastStrip.future)
+'Ruliology.CellularAutomata.Rule30PastStrip.both_pasts_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200 : Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+        (Ruliology.CellularAutomata.Rule30PastStrip.prepend 132 Ruliology.CellularAutomata.Rule30PastStrip.future))
+      200 =
+    true ∧
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+        (Ruliology.CellularAutomata.Rule30PastStrip.prepend 528 Ruliology.CellularAutomata.Rule30PastStrip.future))
+      200 =
+    false
+'Ruliology.CellularAutomata.Rule30PastStrip.ten_bit_pasts_differ_at_200' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.allowed_of_prefix : ∀ (n m f p : Nat) (G : Nat → Bool),
+  8 ≤ m →
+    Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G m f →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n p G) →
+        Ruliology.CellularAutomata.Rule30GatePastCover.Allowed n f p
+'Ruliology.CellularAutomata.Rule30GatePastCover.allowed_of_prefix' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.trace_prefix : ∀ (n m f p : Nat) (G : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G m f →
+    ∀ (t : Nat),
+      t < 2 * (n + m) →
+        Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+            (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n p G) t =
+          Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+            (Ruliology.CellularAutomata.Rule30GatePastCover.finiteGate n p f) t
+'Ruliology.CellularAutomata.Rule30GatePastCover.trace_prefix' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.packed_sound : ∀
+  (c : Ruliology.CellularAutomata.Rule30PastStrip.Triangle) (a : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30GatePastCover.PackedValid c a → Ruliology.CellularAutomata.Rule30PastStrip.Valid c a
+'Ruliology.CellularAutomata.Rule30GatePastCover.packed_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.leaf_sound : ∀ (n : Nat)
+  (c : Ruliology.CellularAutomata.Rule30GatePastCover.Leaf),
+  Ruliology.CellularAutomata.Rule30GatePastCover.LeafValid n c →
+    ∀ (G : Nat → Bool) (p q : Fin (2 ^ n)),
+      Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G c.length c.gate →
+        Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+            (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G) →
+          Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+              (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G) →
+            ∀ (k : Nat),
+              c.edge ≤ k →
+                Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                    (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                      (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G))
+                    k =
+                  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                    (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                      (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G))
+                    k
+'Ruliology.CellularAutomata.Rule30GatePastCover.leaf_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.prefix_extend : ∀ (G : Nat → Bool) (m f next : Nat) (b : Bool),
+  Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G m f →
+    G m = b →
+      Ruliology.CellularAutomata.Rule30GatePastCover.ExtendValid m f b next →
+        Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G (m + 1) next
+'Ruliology.CellularAutomata.Rule30GatePastCover.prefix_extend' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.cover_sound : ∀ (n : Nat)
+  (tree : Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree) (G : Nat → Bool) (p q : Fin (2 ^ n)),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G) →
+        ∀ (m f : Nat),
+          Ruliology.CellularAutomata.Rule30GatePastCover.checkTree n m f tree = true →
+            Ruliology.CellularAutomata.Rule30GatePastCover.Prefix G m f →
+              ∀ (k : Nat),
+                Ruliology.CellularAutomata.Rule30GatePastCover.bound tree ≤ k →
+                  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G))
+                      k =
+                    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G))
+                      k
+'Ruliology.CellularAutomata.Rule30GatePastCover.cover_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.window_bits : ∀ (G : Nat → Bool) (r : Nat) (i : Fin 8),
+  (Ruliology.CellularAutomata.Rule30PastStrip.window G r).testBit ↑i = G (r + ↑i)
+'Ruliology.CellularAutomata.Rule30GatePastCover.window_bits' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.root_cover : ∀ (n B : Nat)
+  (trees : Nat → Ruliology.CellularAutomata.Rule30GatePastCover.CoverTree),
+  (∀ (w : Nat),
+      w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+        Ruliology.CellularAutomata.Rule30GatePastCover.checkTree n 8 w (trees w) = true) →
+    (∀ (w : Nat),
+        w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+          Ruliology.CellularAutomata.Rule30GatePastCover.bound (trees w) ≤ B) →
+      ∀ (G : Nat → Bool) (p q : Fin (2 ^ n)),
+        Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+          Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+              (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G) →
+            Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+                (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G) →
+              ∀ (k : Nat),
+                B ≤ k →
+                  Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑p) G))
+                      k =
+                    Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                      (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN n (↑q) G))
+                      k
+'Ruliology.CellularAutomata.Rule30GatePastCover.root_cover' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_valid : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.checkTree 4 8 w
+        (Ruliology.CellularAutomata.Rule30GatePastCover.treeFor w) =
+      true
+'Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_valid' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_bound : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.bound (Ruliology.CellularAutomata.Rule30GatePastCover.treeFor w) ≤ 38
+'Ruliology.CellularAutomata.Rule30GatePastCover.four_bit_cover_bound' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30GatePastCover.four_legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 16),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 4 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 4 (↑q) G) →
+        ∀ (k : Nat),
+          38 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 4 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 4 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30GatePastCover.four_legal_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_valid : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.checkTree 5 8 w
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.trees w) =
+      true
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_valid' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_bound : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.bound
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.trees w) ≤
+      49
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.certificates_bound' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 32),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑q) G) →
+        ∀ (k : Nat),
+          49 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Five.legal_pasts_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_valid : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.checkTree 6 8 w
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.trees w) =
+      true
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_valid' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_bound : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.bound
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.trees w) ≤
+      99
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.certificates_bound' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 64),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑q) G) →
+        ∀ (k : Nat),
+          99 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Six.legal_pasts_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_valid : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.checkTree 7 8 w
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.trees w) =
+      true
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_valid' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_bound : ∀ (w : Nat),
+  w ∈ Ruliology.CellularAutomata.Rule30PastStrip.words →
+    Ruliology.CellularAutomata.Rule30GatePastCover.bound
+        (Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.trees w) ≤
+      107
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.certificates_bound' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.legal_pasts_agree : ∀ (G : Nat → Bool)
+  (p q : Fin 128),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑q) G) →
+        ∀ (k : Nat),
+          107 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30Certificates.GatePastCases.Seven.legal_pasts_agree' depends on axioms: [propext,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 32),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑q) G) →
+        ∀ (k : Nat),
+          49 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 5 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30GatePastCases.Five.legal_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 64),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑q) G) →
+        ∀ (k : Nat),
+          99 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 6 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30GatePastCases.Six.legal_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree : ∀ (G : Nat → Bool) (p q : Fin 128),
+  Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+        (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑p) G) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+          (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑q) G) →
+        ∀ (k : Nat),
+          107 ≤ k →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑p) G))
+                k =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.lam
+                (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace
+                  (Ruliology.CellularAutomata.Rule30GatePastCover.prependN 7 (↑q) G))
+                k
+'Ruliology.CellularAutomata.Rule30GatePastCases.Seven.legal_pasts_agree' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.closing_equivalence : Ruliology.CellularAutomata.Rule30GateTailReduction.HomoclinicClosing ↔
+  Ruliology.CellularAutomata.Rule30GateTailReduction.AllPastClosing
+'Ruliology.CellularAutomata.Rule30GateTailReduction.closing_equivalence' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.support_bound_of_common_future : ∀ (A B : Nat → Bool) (W T : Nat),
+  (∀ (k : Nat), W < k → A k = false) →
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp B →
+      (∀ (t : Nat),
+          T ≤ t →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow A t 1 =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow B t 1) →
+        ∀ (k : Nat), W < k → B k = false
+'Ruliology.CellularAutomata.Rule30GateTailReduction.support_bound_of_common_future' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.window_successor : ∀ (G : Nat → Bool) (r : Nat),
+  Ruliology.CellularAutomata.Rule30GateTailReduction.Successor (Ruliology.CellularAutomata.Rule30PastStrip.window G r)
+    (Ruliology.CellularAutomata.Rule30PastStrip.window G (r + 1))
+'Ruliology.CellularAutomata.Rule30GateTailReduction.window_successor' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30GateTailReduction.stream_gate_legal : ∀ (W : Nat → Nat),
+  (∀ (r : Nat), W r ∈ Ruliology.CellularAutomata.Rule30PastStrip.words) →
+    (∀ (r : Nat), Ruliology.CellularAutomata.Rule30GateTailReduction.Successor (W r) (W (r + 1))) →
+      Ruliology.CellularAutomata.Rule30PastStrip.GateLegal fun r => (W r).testBit 0
+'Ruliology.CellularAutomata.Rule30GateTailReduction.stream_gate_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_gate_legal : Ruliology.CellularAutomata.Rule30PastStrip.GateLegal
+  Ruliology.CellularAutomata.Rule30GateTailReduction.periodicGate
+'Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_gate_legal' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_splicing : Ruliology.CellularAutomata.Rule30GateTailReduction.PeriodicSplicing
+'Ruliology.CellularAutomata.Rule30GateTailReduction.periodic_splicing' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_all_past_closing : Ruliology.CellularAutomata.Rule30GateTailReduction.AllPastClosing →
+  ∀ (G : Nat → Bool),
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+      ¬Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace G))
+'Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_all_past_closing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.all_pasts_of_finite_covers : Ruliology.CellularAutomata.Rule30GateTailReduction.FiniteCoverFamily →
+  Ruliology.CellularAutomata.Rule30GateTailReduction.AllPastClosing
+'Ruliology.CellularAutomata.Rule30GateTailReduction.all_pasts_of_finite_covers' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_finite_covers : Ruliology.CellularAutomata.Rule30GateTailReduction.FiniteCoverFamily →
+  ∀ (G : Nat → Bool),
+    Ruliology.CellularAutomata.Rule30PastStrip.GateLegal G →
+      ¬Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.lam (Ruliology.CellularAutomata.Rule30PastStrip.oddTrace G))
+'Ruliology.CellularAutomata.Rule30GateTailReduction.gate_rows_infinite_of_finite_covers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
