@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-29T23:15:19Z",
+  "timestamp_note": "Corrected the draft timestamp to the file creation UTC after execution; the question, limits, equation and success/failure criteria were all written before execution and were not changed.",
+  "question": "Does Rule30 have a nontrivial translation-invariant local additive charge over F2 of block width at most 8?",
+  "reason": "Turn the external differential/homology suggestion into an exact finite cohomology calculation, using a discrete flux rather than Kahler differentials of the Boolean quotient.",
+  "equation": "rho(F(w)[0..k-1])+rho(w[1..k])=J(w[0..k])+J(w[1..k+1]) for every binary word w of length k+2",
+  "unknowns": "2^k density values and 2^(k+1) flux values over F2",
+  "quotient": "Factor out constants and rho(block)=h(prefix)+h(suffix), dimension 2^(k-1) for k>=1",
+  "projected_density_dimension": "3*2^k-1-rank(full constraint matrix); flux-only matrix is connected de Bruijn incidence, rank 2^(k+1)-1, independently checked by elimination",
+  "limits": {"min_width":1,"max_width":8,"wall_seconds":30,"no_automatic_extension":true},
+  "falsifier": "Projected density dimension equals the trivial dimension at every tested width: no such nontrivial law in this finite range only",
+  "positive_result": "Extract a density and flux, verify the local identity on every word, then inspect whether the charge can constrain the actual seed; existence alone is not a prize implication",
+  "proof_status": "Exact finite Python linear algebra, not Lean until separately formalized"
+}

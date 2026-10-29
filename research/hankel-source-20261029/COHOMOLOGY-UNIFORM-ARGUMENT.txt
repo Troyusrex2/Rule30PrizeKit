@@ -1,0 +1,133 @@
+Rule30 local parity-charge obstruction: candidate uniform argument
+Troy Lowry research block, 2026-10-29. Status distinctions matter.
+
+STATUS
+
+Exact finite computation: all F2 local density/flux laws at widths 1..8
+are trivial after quotienting constants and spatial coboundaries. Independent
+Wolfram MatrixRank controls agree through width 6. These are computations,
+not Lean proofs and not an all-width theorem.
+
+Kernel-checked ingredient: EndpointTransport.lean reconstructs ANY finite
+middle output word with TWO WHITE right registers, proves the equality of
+the input/output endpoint rectangles, and proves the resulting obstruction
+to a separable endpoint flux for a normalized density with a genuine right
+endpoint interaction. This theorem is uniform in the middle word length.
+
+PAPER ARGUMENT BELOW IS NOT YET FULLY FORMALIZED. No novelty claim. The
+standard local additive-conservation framework predates this work, e.g.
+Hattori and Takesue, Physica D 49 (1991), 295-322,
+https://doi.org/10.1016/0167-2789(91)90150-8 . The F2 specialization and the
+specific span argument below were derived independently in this block.
+
+TARGET
+
+For Rule30 on binary configurations, every translation-invariant finite-range
+additive conserved density over F2 is a constant plus a spatial coboundary.
+Equivalently, there is no nontrivial charge of this local additive kind. This
+would be a barrier to one proposed homology route, NOT a proof of Problem1.
+
+1. NORMAL FORM MODULO COBBOUNDARIES
+
+Write a local Boolean function rho in its unique squarefree algebraic normal
+form (ANF) over F2. Identify monomials that differ only by a spatial shift:
+sum_i monomial(x shifted by i) is unchanged by translating its support.
+Move the minimum index of every nonconstant monomial to 0 and XOR equal
+shapes. Constants are a separate, trivial conserved density.
+
+This is a canonical representative of the local additive charge. The
+difference from the original density is a finite sum of adjacent spatial
+differences, hence a coboundary. Every nonconstant monomial in the resulting
+representative contains x_0; thus rho(0, rest)=0. If the representative is
+nonzero, let m be its largest monomial span (max index - min index + 1).
+For m>=2, the mixed derivative in x_0 and x_(m-1) is a nonzero function Q of
+the interior m-2 bits. For m=1 the only nonzero representative is x_0.
+
+This is also valid over cyclic words of every sufficiently large length:
+take a ring length greater than twice the maximal support width. Each
+nonempty monomial shape then has a unique cyclic gap longer than half the
+ring, so different anchored shapes are distinguishable. Thus a nonzero
+canonical coefficient cannot disappear just by summing over translations.
+
+2. EXTREMAL SPAN UNDER THE RULE30 PULLBACK
+
+Let F_i=x_(i-1)+x_i+x_(i+1)+x_i*x_(i+1), over F2.
+For m>=2, compose rho with (F_0,...,F_(m-1)). This polynomial uses positions
+-1,...,m, so its maximum possible span is m+2. Its mixed derivative in the
+two OUTER input variables x_(-1),x_m is exactly
+
+  (1+x_(m-1)) * Q(F_1,...,F_(m-2)).
+
+Reason: x_(-1) occurs only in F_0 with coefficient 1; x_m occurs only in
+F_(m-1), with coefficient 1+x_(m-1). Boolean derivatives are finite
+differences, not Kahler differentials in the Boolean quotient.
+
+This expression is NOT identically zero. Set x_(m-1)=0. Fix x_(m-2)=0 too.
+For ANY desired word (F_1,...,F_(m-2)), solve backwards using left
+permutivity: x_(i-1)=F_i + (x_i OR x_(i+1)). Thus choose an interior word
+where Q=1, and the displayed derivative is 1. The same decoding and
+endpoint-rectangle assertion are checked in EndpointTransport.lean.
+
+Therefore the composed density has at least one nonzero ANF monomial with
+both outer endpoints -1 and m. Every such monomial has span m+2 and those
+are the only possible placements of that span in [-1,m]. Consequently
+canonicalization by spatial shifts cannot cancel these coefficients: two
+different maximal-span monomials here cannot be translates of one another.
+Shorter original monomials cannot reach both outer endpoints either.
+
+Thus the canonical pullback has span EXACTLY m+2. For m=1, F_0 modulo shifts
+is x_0+x_0*x_1, whose span is 2. In both cases the span strictly increases.
+
+3. CONSEQUENCE AND LIMITS
+
+An invariant additive density would have the same canonical class before
+and after pullback, contradicting strict span increase. Iteration would also
+exclude any finite cycle of these classes (including a moving spatial
+frame, since the quotient already discards translations).
+
+This does NOT exclude arbitrary invariants. The assumptions are finite
+spatial range, additive sum of translates, F2-valued charge, and validity for
+ALL configurations. Seed-specific, nonlocal, boundary-relative,
+inhomogeneous, or nonadditive constructions are outside this statement.
+It supplies no implication from bounded center Hankel rank to such a charge.
+
+There is a stronger checked warning about that missing bridge. The endpoint
+decoder/rectangle property holds for EVERY rule left XOR g(center,right)
+with g(false,r)=r. In particular it holds for Rule210, g(c,r)=NOT c AND r.
+The official kit proves Rule210's single-seed center is white for every
+positive time. EndpointCountermodel.lean combines these statements into an
+all-width, all-time countermodel to endpoint-control implying seed
+aperiodicity. This reuses the official center210 theorem, with credit.
+The span-growth paper argument also applies to Rule210: the two white
+right registers still make the outer right variable permutive, and its
+single-site quotient is x_0*x_1. Thus even a completed no-local-charge
+theorem would not distinguish Rule30 from this periodic-center control.
+Any prize route using it must add a genuinely seed-specific step.
+
+CHECKS BEFORE PROMOTING THE ALL-WIDTH CLAIM
+
+(a) Formalize the ANF normal form and prove that the spatial-shape quotient
+detects additive densities on sufficiently large rings; do not assume
+distinct ANF monomials remain distinct after quotient without this step.
+(b) Formalize the extremal coefficient formula, including the single-site
+exception and the fact that the right registers can be fixed white.
+(c) Check that local pullback is well defined on the coboundary quotient.
+(d) Search the conservation-law literature for this exact F2 result; even a
+correct proof need not be new. Do not publish a novelty or prize claim.
+
+BOUNDED FALSIFICATION ALREADY RUN
+
+All 274 nonzero normalized truth tables of nominal widths 1..4 were checked
+using an independent ANF implementation. Every one had the predicted exact
+span growth (using its actual, not nominal, input span). This is only a
+finite sanity check of the proof argument.
+
+SUGGESTED NEXT TASK FOR CLAUDE / SWARM
+
+Work independently; no alternating-round wait. Try to break this argument,
+especially the quotient/normal-form step. If it survives, formalize those
+steps rather than increasing the width census. Return either a concrete
+counterexample, a fully compiled Lean theorem in a separate module, or one
+precisely identified unproved implication. Also decide whether this is
+already known. A positive finding only closes the LOCAL additive invariant
+route; propose a genuinely nonlocal boundary cocycle if pursuing the prize.

@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-29T22:34:00Z",
+  "purpose": "Test a precise fresh-source noncancellation lemma, rather than recompute large ranks",
+  "candidate": "For the actual single seed, whenever H_n=(c(i+j))_(i,j<n) is invertible and the newest nonlinear source c(2n-1)*cell(2n-1,1) is one, its bordered Schur pivot epsilon_n is one",
+  "reason_to_test": "The newest source occurs in c(2n), not in any prior matrix entry; this is a direct candidate interpretation of an uncancelled source creating a Hankel pivot. Earlier source contributions can still cancel it, which must be checked rather than assumed.",
+  "exact_pivot": "epsilon_n=c(2n)+u^T H_n^(-1)u, u_i=c(n+i); over F2 the quadratic form equals diag(H_n^(-1)) dot u",
+  "limits": {"n_min":1,"n_max":64,"center_horizon":128,"wall_seconds":30,"no_extension":true},
+  "falsifier": "An actual-seed n with invertible H_n, newest source one, and epsilon_n zero",
+  "verification": "Exact GF2 elimination, literal Rule30 rows; separate Rule150 Duhamel decomposition for the first counterexample and an independent Wolfram CellularAutomaton check",
+  "scope": "Counterexamples reject this precise candidate, not every source-based rank-growth mechanism; a positive finite range does not prove an all-n lemma"
+}

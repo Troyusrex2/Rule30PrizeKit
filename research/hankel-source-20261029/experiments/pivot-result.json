@@ -1,0 +1,201 @@
+{
+  "status": "fresh_source_candidate_refuted",
+  "invertible_parents_checked": 28,
+  "records": [
+    {
+      "n": 1,
+      "pivot": 1,
+      "newest_source": 1
+    },
+    {
+      "n": 2,
+      "pivot": 0,
+      "newest_source": 1
+    },
+    {
+      "n": 4,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 6,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 9,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 13,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 14,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 17,
+      "pivot": 0,
+      "newest_source": 1
+    },
+    {
+      "n": 20,
+      "pivot": 1,
+      "newest_source": 1
+    },
+    {
+      "n": 21,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 23,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 26,
+      "pivot": 1,
+      "newest_source": 1
+    },
+    {
+      "n": 27,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 28,
+      "pivot": 0,
+      "newest_source": 1
+    },
+    {
+      "n": 33,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 36,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 37,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 38,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 39,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 41,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 44,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 45,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 46,
+      "pivot": 1,
+      "newest_source": 1
+    },
+    {
+      "n": 47,
+      "pivot": 1,
+      "newest_source": 0
+    },
+    {
+      "n": 48,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 53,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 62,
+      "pivot": 0,
+      "newest_source": 0
+    },
+    {
+      "n": 64,
+      "pivot": 1,
+      "newest_source": 0
+    }
+  ],
+  "first_counterexample": {
+    "n": 2,
+    "pivot": 0,
+    "newest_source": 1,
+    "H_rows": [
+      3,
+      1
+    ],
+    "inverse_rows": [
+      2,
+      3
+    ],
+    "u": 2,
+    "center_prefix": [
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "decomposition": {
+      "observation_times": [
+        3,
+        4
+      ],
+      "linear_contribution": 0,
+      "source_layers": [
+        {
+          "source_time": 0,
+          "active_terms": 0,
+          "parity": 0
+        },
+        {
+          "source_time": 1,
+          "active_terms": 1,
+          "parity": 1
+        },
+        {
+          "source_time": 2,
+          "active_terms": 0,
+          "parity": 0
+        },
+        {
+          "source_time": 3,
+          "active_terms": 1,
+          "parity": 1
+        }
+      ],
+      "newest_source": 1,
+      "older_contribution": 1,
+      "pivot": 0
+    }
+  },
+  "seconds": 0.0470000000204891,
+  "verification": "Exact finite Python, not Lean"
+}

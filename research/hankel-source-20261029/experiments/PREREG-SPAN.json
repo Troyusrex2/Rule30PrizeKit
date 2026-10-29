@@ -1,0 +1,9 @@
+{
+  "purpose":"Falsify the paper cohomology argument's exact span-growth assertion before sharing it",
+  "limits":{"density_widths":[1,2,3,4],"all_normalized_densities":true,"wall_seconds":30},
+  "normalization":"Every ANF monomial contains the left endpoint; equivalently rho(0,rest)=0",
+  "quotient":"Identify monomials that are spatial translates; XOR their coefficients",
+  "candidate":"For a nonzero normalized density of actual span m, the quotient of rho after one Rule30 step has span m+2 for m>=2, and span 2 for m=1",
+  "failure":"Any density where the predicted span is not attained",
+  "scope":"Finite independent check of a proposed uniform paper argument; not its proof"
+}

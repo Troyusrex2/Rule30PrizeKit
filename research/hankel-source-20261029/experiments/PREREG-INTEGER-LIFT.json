@@ -1,0 +1,8 @@
+{
+  "purpose":"Check whether the concrete mod-two pivot cancellation persists over the rationals; do not assume mod-two singularity means integer singularity",
+  "candidate":"At every tested invertible mod-two H_n with newest actual source one, the bordered H_(n+1) has nonzero INTEGER determinant, even when its mod-two pivot vanishes",
+  "limits":{"n_min":1,"n_max":32,"center_horizon":64,"wall_seconds":30,"no_extension":true},
+  "method":"Exact integer Bareiss elimination plus mod-two checks; keep all zero/invertible flags and any first counterexample",
+  "falsifier":"An actual-seed n with H_n invertible modulo2, fresh source1, and det_Z H_(n+1)=0",
+  "scope":"A positive finite screen does not prove the candidate or unbounded rank. This is a field-lift test of a concrete cancellation mechanism, not a large rank census."
+}
