@@ -1,0 +1,69 @@
+{
+  "scope": "decoder synthesis and exact finite checks; not a Lean proof",
+  "controls": {
+    "copy": {
+      "states": 1,
+      "answer": true,
+      "variables": 9,
+      "clauses": 20,
+      "table": [
+        [
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          0,
+          1
+        ]
+      ],
+      "assignments": [
+        0,
+        0
+      ]
+    },
+    "free_context_drop_rejected": {
+      "states": 4,
+      "answer": false,
+      "variables": 88,
+      "clauses": 539
+    }
+  },
+  "results": [
+    {
+      "states": 2,
+      "answer": false,
+      "variables": 4254,
+      "clauses": 16993
+    },
+    {
+      "states": 3,
+      "answer": false,
+      "variables": 6393,
+      "clauses": 34055
+    },
+    {
+      "states": 4,
+      "answer": false,
+      "variables": 8540,
+      "clauses": 57590
+    },
+    {
+      "states": 6,
+      "answer": false,
+      "variables": 12858,
+      "clauses": 124247
+    },
+    {
+      "states": 8,
+      "answer": false,
+      "variables": 17208,
+      "clauses": 217300
+    }
+  ],
+  "positive_profile_pairs": 2116,
+  "seconds": 0.6709743000101298,
+  "source_sha256": "fbca0ba115c282cb2c81d4c6591e1d74d8b03474f5228dd8a5766f232597b5b6",
+  "solver_sha256": "4ad2c6d5baa2eb8dfdf46601063a45345a3cd0c29559252bb7bd3dfc23df4e82"
+}

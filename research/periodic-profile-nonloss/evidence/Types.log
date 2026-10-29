@@ -1,0 +1,187 @@
+Ruliology.CellularAutomata.Rule30ProfileGraph.wordPer_iff : ∀ (q w p : Nat),
+  0 < q →
+    (Ruliology.CellularAutomata.Rule30ProfileGraph.WordPer q w p ↔
+      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+        (Ruliology.CellularAutomata.Rule30ProfileGraph.profile q w) p)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.wordPer_iff' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30ProfileGraph.wordStep_sound : ∀ (q a b c : Nat),
+  0 < q →
+    Ruliology.CellularAutomata.Rule30ProfileGraph.WordStep q a b c →
+      ∀ (t : Nat),
+        Ruliology.CellularAutomata.Rule30ProfileGraph.profile q c (t + 1) =
+          (Ruliology.CellularAutomata.Rule30ProfileGraph.profile q c t ^^
+            (Ruliology.CellularAutomata.Rule30ProfileGraph.profile q a t ||
+              Ruliology.CellularAutomata.Rule30ProfileGraph.profile q b t))
+'Ruliology.CellularAutomata.Rule30ProfileGraph.wordStep_sound' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30ProfileGraph.next_sound : ∀ (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  0 < G.q →
+    (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+      ∀ (i : Nat),
+        i < G.bound →
+          ∀ (a b c : Nat → Bool),
+            (∀ (t : Nat), a t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.a i) t) →
+              (∀ (t : Nat), b t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.b i) t) →
+                Ruliology.CellularAutomata.Rule30RightPrefixClock.Period c G.q →
+                  (∀ (t : Nat), c (t + 1) = (c t ^^ (a t || b t))) →
+                    ∃ j,
+                      j < G.bound ∧
+                        (∀ (t : Nat), b t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.a j) t) ∧
+                          ∀ (t : Nat), c t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.b j) t
+'Ruliology.CellularAutomata.Rule30ProfileGraph.next_sound' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.reachable_pair : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  0 < G.q →
+    0 < G.bound →
+      G.a 0 = 0 →
+        G.b 0 = 0 →
+          (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+            ∀ (P : Nat → Nat → Bool),
+              (∀ (t : Nat), P 0 t = false) →
+                (∀ (t : Nat), P 1 t = false) →
+                  (∀ (j t : Nat), P (j + 2) (t + 1) = (P (j + 2) t ^^ (P (j + 1) t || P j t))) →
+                    ∀ (n : Nat),
+                      (∀ (j : Nat), j ≤ n + 1 → Ruliology.CellularAutomata.Rule30RightPrefixClock.Period (P j) G.q) →
+                        ∃ i,
+                          i < G.bound ∧
+                            (∀ (t : Nat), P n t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.a i) t) ∧
+                              ∀ (t : Nat),
+                                P (n + 1) t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.b i) t
+'Ruliology.CellularAutomata.Rule30ProfileGraph.reachable_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.reachable_period_inherits : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  0 < G.q →
+    (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+      ∀ (i : Nat),
+        i < G.bound →
+          ∀ (a b : Nat → Bool),
+            (∀ (t : Nat), a t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.a i) t) →
+              (∀ (t : Nat), b t = Ruliology.CellularAutomata.Rule30ProfileGraph.profile G.q (G.b i) t) →
+                ∀ (e : Nat),
+                  e ≤ G.maxE →
+                    Ruliology.CellularAutomata.Rule30RightPrefixClock.Period b (2 ^ e) →
+                      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period a (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.reachable_period_inherits' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.actual_period_inherits : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  0 < G.q →
+    0 < G.bound →
+      G.a 0 = 0 →
+        G.b 0 = 0 →
+          (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+            ∀ (x : Int → Bool) (R : Int),
+              (∀ (p : Int), R < p → x p = false) →
+                ∀ (n e : Nat),
+                  e ≤ G.maxE →
+                    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+                        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) G.q →
+                      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑n)) (2 ^ e) →
+                        Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑n - 1)) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.actual_period_inherits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.actual_prefix_from_last : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  0 < G.q →
+    0 < G.bound →
+      G.a 0 = 0 →
+        G.b 0 = 0 →
+          (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+            ∀ (x : Int → Bool) (R : Int),
+              (∀ (p : Int), R < p → x p = false) →
+                ∀ (n e : Nat),
+                  e ≤ G.maxE →
+                    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+                        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) G.q →
+                      Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑n)) (2 ^ e) →
+                        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixPer
+                          (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.actual_prefix_from_last' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.actual_last_minimal : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  G.q = 2 ^ G.maxE →
+    0 < G.bound →
+      G.a 0 = 0 →
+        G.b 0 = 0 →
+          (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+            ∀ (x : Int → Bool) (R : Int),
+              (∀ (p : Int), R < p → x p = false) →
+                ∀ (n E : Nat),
+                  E ≤ G.maxE →
+                    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+                        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) E →
+                      ∀ (e : Nat),
+                        e < E →
+                          ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑n)) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.actual_last_minimal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraph.actual_no_small_clock_drop : ∀
+  (G : Ruliology.CellularAutomata.Rule30ProfileGraph.Graph),
+  G.q = 2 ^ G.maxE →
+    0 < G.bound →
+      G.a 0 = 0 →
+        G.b 0 = 0 →
+          (∀ (i : Nat), i < G.bound → Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK G i) →
+            ∀ (x : Int → Bool) (R : Int),
+              (∀ (p : Int), R < p → x p = false) →
+                ∀ (n E : Nat),
+                  E ≤ G.maxE →
+                    Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+                        (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) E →
+                      ∀ (e : Nat),
+                        e < E →
+                          ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                              (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 1))) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraph.actual_no_small_clock_drop' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.all_nodes_checked : ∀ (i : Nat),
+  i < 2116 →
+    Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph i
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.all_nodes_checked' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph_valid : ∀ (i : Nat),
+  i < 2116 →
+    Ruliology.CellularAutomata.Rule30ProfileGraph.NodeOK Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph i
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph_valid' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.root_a : Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph.a
+    0 =
+  0
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.root_a' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.root_b : Ruliology.CellularAutomata.Rule30ProfileGraphCases.graph.b
+    0 =
+  0
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.root_b' depends on axioms: [propext]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.actual_small_clock_minimal : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n E : Nat),
+      E ≤ 5 →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) E →
+          ∀ (e : Nat),
+            e < E →
+              ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                  (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑n)) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.actual_small_clock_minimal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ProfileGraphCases.actual_no_drop_below_sixty_four : ∀ (x : Int → Bool) (R : Int),
+  (∀ (p : Int), R < p → x p = false) →
+    ∀ (n E : Nat),
+      E ≤ 5 →
+        Ruliology.CellularAutomata.Rule30RightPrefixClock.PrefixIsE
+            (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x) (-R + ↑n) E →
+          ∀ (e : Nat),
+            e < E →
+              ¬Ruliology.CellularAutomata.Rule30RightPrefixClock.Period
+                  (Ruliology.CellularAutomata.Rule30RightProfiles.rightDiag x (-R + ↑(n + 1))) (2 ^ e)
+'Ruliology.CellularAutomata.Rule30ProfileGraphCases.actual_no_drop_below_sixty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

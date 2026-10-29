@@ -1,0 +1,7 @@
+# A cyclic decoder for predecessor profiles
+
+New hypothesis, motivated by the complete q32 profile graph: its2116 reachable pairs have2112 distinct second profiles. Only the two alternating profiles admit multiple predecessors (three each). Test whether a small Mealy decoder reads the newer profile and emits the older one, on cyclic runs. A decoder with 00 and11 resets and idempotent 01/10 maps preserves every periodic input's period, while allowing the observed alternating exceptions at period2.
+
+Use all2116 q32 profile pairs, including their time-rotation graph. Synthesize2,3,4,6,8 states, exactly one3-second SAT attempt each, no state-count escalation or CEGIS on failure. At most100000variables/500000clauses,60second parent,1GiB owned RSS,2GiB minimum available, one G913 job. Copy relation must fit a1-state decoder; a synthetic constant-input / period2-output relation must be rejected by the reset constraints.
+
+For each SAT model independently replay every training edge, both double resets and alternating idempotence. Then run an exact finite-word inclusion check for closure under the literal Rule30 spatial relation using source-state × current-new-bit × target-state-subset. A failure is a counterexample to this stronger reader invariant, not to generic nonloss. Passing all checks is only a candidate: independent auditing and a generic Lean proof remain necessary. No result may be promoted from training accuracy alone. Fixed finite profile graph and no q64 census.

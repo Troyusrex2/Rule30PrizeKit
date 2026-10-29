@@ -1,0 +1,5 @@
+# Fixed finite-seed nonloss census
+
+Exhaust all 2^24 states of the exact triangular map T(w)=w XOR((w<<1) OR(w<<2)) modulo 2^24. This finite projection is exact for all time on the low24 diagonals of the genuinely finite seed with that initial code; high cells cannot affect lower diagonals. Enumerate each permutation cycle once. Compute each bit profile's minimal dyadic period by recursive half-period comparison. Stop immediately on an adjacent period decrease; retain the whole cycle for independent and then Lean verification. Otherwise report a finite-width census only, never a universal theorem.
+
+Controls fixed before execution: synthetic 8-to-2 drop must be detected; all256 width8 seeds must agree with a direct profile-period oracle and literal Boolean update; first16 width24 cycles must agree with the direct oracle. The census is one G913 job with a60-second wall cap,1GiB owned RSS cap, and2GiB minimum system-available memory. No larger width or cap escalation on failure. No paid workers, external publication, or adoption of a negative theorem from this numerical experiment alone.
