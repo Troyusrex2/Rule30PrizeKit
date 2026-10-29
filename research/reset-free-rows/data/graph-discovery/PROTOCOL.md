@@ -1,0 +1,7 @@
+# Exact sofic core of consecutive reset-free Rule30 rows
+
+The unqualified reset-production conjecture was refuted by the spatial-period5 orbit of11100. Refine the question: classify all bi-infinite spatial configurations whose first H temporal rows are reset-free (all zero-separated one-runs avoid length1mod3).
+
+A spatial state stores two adjacent columns plus, in each temporal row, the current one-run length modulo3. There are six locally consistent atoms(prevbit,currentbit,runmod):000,100,011,110,111,112. Appending a spatial column fixes all but its top-time bit by literal Rule30 inverse recurrence; reject a zero if its preceding runmod is1. Thus the exact graph has6^H vertices and at most two successors per vertex. Remove vertices with no predecessor or successor to obtain the complete bi-infinite essential core; inspect SCCs and inter-SCC connections. Artificial scanner phases for an all-one row must not be mistaken for spatial variation.
+
+Register H=1..7, stop once an exact classification stabilizes across two consecutive H or on60s/1GiB/system available2GiB guards. One G913 process, no automatic height growth. Cross-check graph cycle acceptance against literal cyclic Rule30 plus explicit run checks for ALL spatial words through period10 at heights<=4. No prize or Hhom claim from a finite graph until graph completeness and the intended implication are proved in Lean. Period5 background itself is not claimed novel.

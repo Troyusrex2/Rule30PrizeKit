@@ -1,0 +1,1477 @@
+{
+  "passed": true,
+  "official_pin": "932cf8dde039b89b1dcbe9636867bb1b2057fef0",
+  "fresh_source_modules": 13,
+  "reused_objects": false,
+  "whole_catalog_build": false,
+  "checkers": [
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.NodeOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Path",
+          "standardAxioms": true
+        },
+        {
+          "kind": "inductive",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.all_nodes_checked",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.checkAll",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.checkAll_sound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.coreStates",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.currentBit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.deadData",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.digit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_eventually_five",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_five_from_seven",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.graph",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.graph_valid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.instDecidableNodeOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.iterate",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAtom",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAux",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextState",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_dead_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_eventually_five",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_reaches_core",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.prevBit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.rankData",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.runMod",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.successor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.zero_path",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.casesOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.core",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.coreDec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.ctorIdx",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.dead",
+          "standardAxioms": true
+        },
+        {
+          "kind": "constructor",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.mk",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.next",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.noConfusionType",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.output",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.rank",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.rankBound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "recursor",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.rec",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.recOn",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.successor",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.iterate.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAux.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.mk.inj",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.mk.injEq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.mk.noConfusion",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked.mk.sizeOf_spec",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_dead_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_reaches_core",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.path_eventually_five",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.all_nodes_checked",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.graph_valid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_eventually_five",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_five_from_seven",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.zero_path",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30ResetFreeCore",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 80,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.colored_after_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.exists_coloring",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_at_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_before_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_lt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_origin",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan.match_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_lt",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_origin",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_before_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.colored_after_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeRuns.exists_coloring",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30ResetFreeRuns",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 38,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.AtomOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.EventuallyAvoidReset",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.NoReject",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atomValue",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_properties",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_step_table",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_table",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.avoid_shift",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.colored_strip_five",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.digits_ext",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.encoded_strip_path",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.fin0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.fin1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.fin2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.fin3",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.fin4",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_cases",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_rows",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_tails",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.inputBit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.input_eq",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.instDecidableAtomOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.nextAux_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.pack",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_digit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_lt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.transition_of_components",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.unpack",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_current",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_digit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_prev",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_run",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.xor_solve",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.digit.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAux.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAux.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAux.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.inputBit.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.pack.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_lt",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_digit",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.digits_ext",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.transition_of_components",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_table",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_step_table",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.encoded_strip_path",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.colored_strip_five",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_rows",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.avoid_shift",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_tails",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30ResetFreeStrip",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 103,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.arbitrarily_far_resets_in_five",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.not_eventual_avoid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.one_phase_has_unbounded_resets",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_rows",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_tails",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_recurrence",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_recurrence",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_rows",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_tails",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.one_phase_has_unbounded_resets",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.not_eventual_avoid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary.arbitrarily_far_resets_in_five",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30ResetFreeBoundary",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 11,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    },
+    {
+      "claim": "partial",
+      "declared": [
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.FinitePath",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.NoReject",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.ReachOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.RowRecurrence",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.atomValue",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.atom_properties",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.fin0",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.fin1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.fin2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_nonzero_reset_in_three",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_three_avoid_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.inputBit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.instDecidableReachOK",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextAux",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextState",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.not_avoid_witness",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.packThree",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.packThree_digit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.packThree_lt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_avoid",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_finite",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_step_small",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.path_to_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.reach_checked",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.reach_node",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.reachableStates",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.sharpness_two_rows",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.three_cases",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.transition_of_components",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.unpack",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_bound",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_current",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_digit",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_step",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_zero",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.wallStart",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.wall_starts",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.atomValue.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.inputBit.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextAux.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextAux.eq_2",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextAux.eq_def",
+          "standardAxioms": true
+        },
+        {
+          "kind": "def",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextAux.match_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.nextState.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.packThree.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex.eq_1",
+          "standardAxioms": true
+        },
+        {
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.wallStart.eq_1",
+          "standardAxioms": true
+        }
+      ],
+      "headlines": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.transition_of_components",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.reach_checked",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.path_to_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_three_avoid_zero",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_nonzero_reset_in_three",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_avoid",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_step",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "found": true,
+          "kind": "theorem",
+          "name": "Ruliology.CellularAutomata.Rule30ResetFreeThree.sharpness_two_rows",
+          "ok": true,
+          "problems": [],
+          "typeMatches": true
+        }
+      ],
+      "importsStatements": true,
+      "module": "Ruliology.CellularAutomata.Rule30ResetFreeThree",
+      "newAxioms": [],
+      "official": [],
+      "reasons": [],
+      "replay": {
+        "constants": 103,
+        "ok": true
+      },
+      "verdict": "pass",
+      "verifiedTargets": []
+    }
+  ],
+  "aggregate_constants": 335,
+  "headline_count": 40,
+  "source_files": [
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30Diagonals.lean",
+      "sha256": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30BlackRuns.lean",
+      "sha256": "8a830f14ee171641dd1a6c9da229e6308f34b05867d4a8a37843185491e609ee"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30PeriodTwo.lean",
+      "sha256": "00dd86544ed7763a08271f8a8d3327d4f3cda7f60c5fc5c92ad467b43dd85769"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ZeroBoundary.lean",
+      "sha256": "95279579b7a51d750a87db786ade44cf55627bd805e6a4d369126adc91d1004d"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ResetFreeCore.lean",
+      "sha256": "b2a79b551b80b00dfae6f92dc0eb5b25272c102c1cb30325cce508b25f956058"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ResetFreeRuns.lean",
+      "sha256": "2ebe9f578b55ea17be9510c2e14ff679aa8f97c6afd34bc617eaf0084f447ca7"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ResetFreeStrip.lean",
+      "sha256": "094deacb2cfaa3ab648d99b7cefb3bcc8fb8c8074de56f77b17652956deb6c0c"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ResetFreeBoundary.lean",
+      "sha256": "130a5a4f345debcebadedbe0444879e47912a627218bff0b606039085adf60ff"
+    },
+    {
+      "path": "sources/Ruliology/CellularAutomata/Rule30ResetFreeThree.lean",
+      "sha256": "0e8cc0567b9b37688d8b751f4bbf7a0277e6c4aa69f76816a49ba9d95ee648cc"
+    },
+    {
+      "path": "Check.lean",
+      "sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+    }
+  ],
+  "source_warnings": false,
+  "seconds": 50.22275750001427
+}

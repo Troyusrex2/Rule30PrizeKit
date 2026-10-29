@@ -1,0 +1,316 @@
+Ruliology.CellularAutomata.Rule30ResetFreeCore.path_dead_zero : ∀
+  (G : Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked),
+  (∀ (s : Nat), s < G.bound → Ruliology.CellularAutomata.Rule30ResetFreeCore.NodeOK G s) →
+    ∀ (v : Nat → Nat) (b : Nat → Bool),
+      Ruliology.CellularAutomata.Rule30ResetFreeCore.Path G v b → ∀ (n : Nat), G.dead (v n) = 0
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.path_dead_zero' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.path_reaches_core : ∀
+  (G : Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked),
+  (∀ (s : Nat), s < G.bound → Ruliology.CellularAutomata.Rule30ResetFreeCore.NodeOK G s) →
+    ∀ (v : Nat → Nat) (b : Nat → Bool),
+      Ruliology.CellularAutomata.Rule30ResetFreeCore.Path G v b → ∃ N, N ≤ G.rank (v 0) ∧ G.core (v N)
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.path_reaches_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.path_eventually_five : ∀
+  (G : Ruliology.CellularAutomata.Rule30ResetFreeCore.Ranked),
+  (∀ (s : Nat), s < G.bound → Ruliology.CellularAutomata.Rule30ResetFreeCore.NodeOK G s) →
+    ∀ (v : Nat → Nat) (b : Nat → Bool),
+      Ruliology.CellularAutomata.Rule30ResetFreeCore.Path G v b →
+        ∃ N, N ≤ G.rankBound ∧ ∀ (n : Nat), N ≤ n → G.output (v (n + 5)) = G.output (v n)
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.path_eventually_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.all_nodes_checked : Ruliology.CellularAutomata.Rule30ResetFreeCore.checkAll
+    Ruliology.CellularAutomata.Rule30ResetFreeCore.graph 7776 =
+  true
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.all_nodes_checked' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.graph_valid : ∀ (s : Nat),
+  s < 7776 →
+    Ruliology.CellularAutomata.Rule30ResetFreeCore.NodeOK Ruliology.CellularAutomata.Rule30ResetFreeCore.graph s
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.graph_valid' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_eventually_five : ∀ (v : Nat → Nat) (b : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeCore.Path Ruliology.CellularAutomata.Rule30ResetFreeCore.graph v b →
+    ∃ N,
+      N ≤ 7 ∧
+        ∀ (n : Nat),
+          N ≤ n →
+            Ruliology.CellularAutomata.Rule30ResetFreeCore.graph.output (v (n + 5)) =
+              Ruliology.CellularAutomata.Rule30ResetFreeCore.graph.output (v n)
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_eventually_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_five_from_seven : ∀ (v : Nat → Nat) (b : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeCore.Path Ruliology.CellularAutomata.Rule30ResetFreeCore.graph v b →
+    ∀ (n : Nat),
+      7 ≤ n →
+        Ruliology.CellularAutomata.Rule30ResetFreeCore.graph.output (v (n + 5)) =
+          Ruliology.CellularAutomata.Rule30ResetFreeCore.graph.output (v n)
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.encoded_path_five_from_seven' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeCore.zero_path : Ruliology.CellularAutomata.Rule30ResetFreeCore.Path
+  Ruliology.CellularAutomata.Rule30ResetFreeCore.graph (fun x => 0) fun x => false
+'Ruliology.CellularAutomata.Rule30ResetFreeCore.zero_path' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_lt : ∀ (f : Nat → Bool) (z n : Nat),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan f z n < 3
+'Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_lt' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_origin : ∀ (f : Nat → Bool) (z : Nat),
+  f z = false →
+    ∀ (n : Nat),
+      ∃ r,
+        r ≤ n ∧
+          f (z + r) = false ∧
+            (∀ (j : Nat), r < j → j ≤ n → f (z + j) = true) ∧
+              Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan f z n = (n - r) % 3
+'Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_before_zero : ∀ (f : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset f →
+    ∀ (z : Nat),
+      f z = false → ∀ (n : Nat), f (z + n + 1) = false → Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan f z n ≠ 1
+'Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan_before_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeRuns.colored_after_zero : ∀ (f : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset f →
+    ∀ (z : Nat),
+      f z = false →
+        Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom f (z + 1) fun p =>
+          Ruliology.CellularAutomata.Rule30ResetFreeRuns.scan f z (p - z)
+'Ruliology.CellularAutomata.Rule30ResetFreeRuns.colored_after_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeRuns.exists_coloring : ∀ (f : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset f →
+    ∃ K, 1 ≤ K ∧ ∃ r, Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom f K r
+'Ruliology.CellularAutomata.Rule30ResetFreeRuns.exists_coloring' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_lt : ∀ (d : Fin 5 → Nat),
+  (∀ (i : Fin 5), d i < 6) → Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive d < 7776
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_lt' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_digit : ∀ (d : Fin 5 → Nat),
+  (∀ (i : Fin 5), d i < 6) →
+    ∀ (i : Fin 5),
+      Ruliology.CellularAutomata.Rule30ResetFreeCore.digit (Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive d)
+          ↑i =
+        d i
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.packFive_digit' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30ResetFreeStrip.digits_ext : ∀ {s u : Nat},
+  s < 7776 →
+    u < 7776 →
+      (∀ (i : Fin 5),
+          Ruliology.CellularAutomata.Rule30ResetFreeCore.digit s ↑i =
+            Ruliology.CellularAutomata.Rule30ResetFreeCore.digit u ↑i) →
+        s = u
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.digits_ext' depends on axioms: [propext, Quot.sound]
+@Ruliology.CellularAutomata.Rule30ResetFreeStrip.transition_of_components : ∀ {s u : Nat},
+  u < 7776 →
+    ∀ (top : Bool),
+      Ruliology.CellularAutomata.Rule30ResetFreeStrip.NoReject s top →
+        (∀ (i : Fin 5),
+            Ruliology.CellularAutomata.Rule30ResetFreeCore.digit u ↑i =
+              Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAtom
+                (Ruliology.CellularAutomata.Rule30ResetFreeCore.digit s ↑i)
+                (Ruliology.CellularAutomata.Rule30ResetFreeStrip.inputBit s top ↑i)) →
+          Ruliology.CellularAutomata.Rule30ResetFreeCore.nextState s top = u
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.transition_of_components' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_table : ∀ (p c : Bool) (r : Fin 3),
+  Ruliology.CellularAutomata.Rule30ResetFreeStrip.AtomOK p c ↑r →
+    Ruliology.CellularAutomata.Rule30ResetFreeCore.prevBit
+          (Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom p c ↑r) =
+        p ∧
+      Ruliology.CellularAutomata.Rule30ResetFreeCore.currentBit
+            (Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom p c ↑r) =
+          c ∧
+        Ruliology.CellularAutomata.Rule30ResetFreeCore.runMod
+              (Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom p c ↑r) =
+            ↑r ∧
+          Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom p c ↑r < 6
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_table' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_step_table : ∀ (p c e : Bool) (r u : Fin 3),
+  Ruliology.CellularAutomata.Rule30ResetFreeStrip.AtomOK p c ↑r →
+    Ruliology.CellularAutomata.Rule30ResetFreeStrip.AtomOK c e ↑u →
+      (e = false → ↑r ≠ 1) →
+        (↑u = if e = true then (↑r + 1) % 3 else 0) →
+          Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAtom
+              (Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom p c ↑r) e =
+            Ruliology.CellularAutomata.Rule30ResetFreeStrip.encodeAtom c e ↑u
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.atom_step_table' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_step : ∀ (x : Fin 5 → Nat → Bool) (r : Fin 5 → Nat → Nat)
+  (K : Nat),
+  1 ≤ K →
+    (∀ (t : Fin 5), Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom (x t) K (r t)) →
+      Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence x →
+        ∀ (p : Nat),
+          K ≤ p →
+            Ruliology.CellularAutomata.Rule30ResetFreeCore.nextState
+                (Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex x r p) (x 4 (p + 1)) =
+              Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex x r (p + 1)
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.encoded_strip_path : ∀ (x : Fin 5 → Nat → Bool) (r : Fin 5 → Nat → Nat)
+  (K : Nat),
+  1 ≤ K →
+    (∀ (t : Fin 5), Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom (x t) K (r t)) →
+      Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence x →
+        Ruliology.CellularAutomata.Rule30ResetFreeCore.Path Ruliology.CellularAutomata.Rule30ResetFreeCore.graph
+          (fun k => Ruliology.CellularAutomata.Rule30ResetFreeStrip.vertex x r (K + k)) fun k => x 4 (K + k + 1)
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.encoded_strip_path' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.colored_strip_five : ∀ (x : Fin 5 → Nat → Bool) (r : Fin 5 → Nat → Nat)
+  (K : Nat),
+  1 ≤ K →
+    (∀ (t : Fin 5), Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom (x t) K (r t)) →
+      Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence x → ∀ (p : Nat), K + 7 ≤ p → x 0 (p + 5) = x 0 p
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.colored_strip_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_rows : ∀ (x : Fin 5 → Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence x →
+    (∀ (t : Fin 5), Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset (x t)) →
+      ∃ M, ∀ (p : Nat), M ≤ p → x 0 (p + 5) = x 0 p
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.avoid_shift : ∀ (f : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset f →
+    ∀ (K : Nat), Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset fun p => f (K + p)
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.avoid_shift' does not depend on any axioms
+Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_tails : ∀ (x : Fin 5 → Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence x →
+    (∀ (t : Fin 5), Ruliology.CellularAutomata.Rule30ResetFreeStrip.EventuallyAvoidReset (x t)) →
+      ∃ M, ∀ (p : Nat), M ≤ p → x 0 (p + 5) = x 0 p
+'Ruliology.CellularAutomata.Rule30ResetFreeStrip.five_reset_free_tails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_recurrence : ∀ (L : Nat → Bool) (T : Nat),
+  Ruliology.CellularAutomata.Rule30ResetFreeStrip.RowRecurrence fun t k =>
+    Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t) k
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_recurrence' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_rows : ∀ (L : Nat → Bool) (T : Nat),
+  (∀ (t : Fin 5),
+      Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t))) →
+    ∃ M,
+      ∀ (p : Nat),
+        M ≤ p →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T (p + 5) =
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T p
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_tails : ∀ (L : Nat → Bool) (T : Nat),
+  (∀ (t : Fin 5),
+      Ruliology.CellularAutomata.Rule30ResetFreeStrip.EventuallyAvoidReset
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t))) →
+    ∃ M,
+      ∀ (p : Nat),
+        M ≤ p →
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T (p + 5) =
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T p
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.zrow_five_reset_free_tails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.one_phase_has_unbounded_resets : ∀ (L : Nat → Bool) (T : Nat),
+  (¬∃ M,
+        ∀ (p : Nat),
+          M ≤ p →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T (p + 5) =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T p) →
+    ∃ t,
+      ¬Ruliology.CellularAutomata.Rule30ResetFreeStrip.EventuallyAvoidReset
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t))
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.one_phase_has_unbounded_resets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.not_eventual_avoid : ∀ (f : Nat → Bool),
+  ¬Ruliology.CellularAutomata.Rule30ResetFreeStrip.EventuallyAvoidReset f →
+    ∀ (K : Nat),
+      ∃ i n, K ≤ i ∧ n % 3 = 1 ∧ f i = false ∧ f (i + n + 1) = false ∧ ∀ (j : Nat), j < n → f (i + j + 1) = true
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.not_eventual_avoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeBoundary.arbitrarily_far_resets_in_five : ∀ (L : Nat → Bool) (T : Nat),
+  (¬∃ M,
+        ∀ (p : Nat),
+          M ≤ p →
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T (p + 5) =
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L T p) →
+    ∃ t,
+      ∀ (K : Nat),
+        ∃ i n,
+          K ≤ i ∧
+            n % 3 = 1 ∧
+              Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t) i = false ∧
+                Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t) (i + n + 1) = false ∧
+                  ∀ (j : Nat), j < n → Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (T + ↑t) (i + j + 1) = true
+'Ruliology.CellularAutomata.Rule30ResetFreeBoundary.arbitrarily_far_resets_in_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Ruliology.CellularAutomata.Rule30ResetFreeThree.transition_of_components : ∀ {s u : Nat},
+  u < 216 →
+    ∀ (top : Bool),
+      Ruliology.CellularAutomata.Rule30ResetFreeThree.NoReject s top →
+        (∀ (i : Fin 3),
+            Ruliology.CellularAutomata.Rule30ResetFreeCore.digit u ↑i =
+              Ruliology.CellularAutomata.Rule30ResetFreeCore.nextAtom
+                (Ruliology.CellularAutomata.Rule30ResetFreeCore.digit s ↑i)
+                (Ruliology.CellularAutomata.Rule30ResetFreeThree.inputBit s top ↑i)) →
+          Ruliology.CellularAutomata.Rule30ResetFreeThree.nextState s top = u
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.transition_of_components' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_step : ∀ (x : Fin 3 → Nat → Bool) (r : Fin 3 → Nat → Nat)
+  (K : Nat),
+  1 ≤ K →
+    (∀ (t : Fin 3), Ruliology.CellularAutomata.Rule30ResetFreeRuns.ColoredFrom (x t) K (r t)) →
+      Ruliology.CellularAutomata.Rule30ResetFreeThree.RowRecurrence x →
+        ∀ (p : Nat),
+          K ≤ p →
+            Ruliology.CellularAutomata.Rule30ResetFreeThree.nextState
+                (Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex x r p) (x 2 (p + 1)) =
+              Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex x r (p + 1)
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.vertex_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.reach_checked : (Ruliology.CellularAutomata.Rule30ResetFreeThree.reachableStates.all
+    fun s => decide (Ruliology.CellularAutomata.Rule30ResetFreeThree.ReachOK s)) =
+  true
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.reach_checked' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.path_to_zero : ∀ (v : Nat → Nat) (b : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ResetFreeThree.FinitePath v b →
+    v 0 ∈ Ruliology.CellularAutomata.Rule30ResetFreeThree.reachableStates →
+      ∀ (N : Nat), v N = 0 → ∀ (k : Nat), k ≤ N → v k = 0
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.path_to_zero' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_three_avoid_zero : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp L →
+    (∀ (t : Fin 3),
+        Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset
+          (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L ↑t)) →
+      ∀ (p : Nat), 1 ≤ p → L p = false
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_three_avoid_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_nonzero_reset_in_three : ∀ (L : Nat → Bool),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp L →
+    (∃ p, 1 ≤ p ∧ L p = true) →
+      ∃ t i n,
+        n % 3 = 1 ∧
+          Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (↑t) i = false ∧
+            Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (↑t) (i + n + 1) = false ∧
+              ∀ (j : Nat), j < n → Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow L (↑t) (i + j + 1) = true
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.finite_nonzero_reset_in_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_avoid : ∀ (a : Nat),
+  Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset (Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt a)
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_avoid' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_step : ∀ (k : Nat),
+  Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow (Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 1) 1 k =
+    Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 2 k
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.pair_step' depends on axioms: [propext, Quot.sound]
+Ruliology.CellularAutomata.Rule30ResetFreeThree.sharpness_two_rows : Ruliology.CellularAutomata.Rule30ZeroBoundary.FinSupp
+    (Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 1) ∧
+  Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 1 1 = true ∧
+    Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow (Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 1)
+          0) ∧
+      Ruliology.CellularAutomata.Rule30ResetFreeRuns.AvoidReset
+        (Ruliology.CellularAutomata.Rule30ZeroBoundary.zrow (Ruliology.CellularAutomata.Rule30ResetFreeThree.pairAt 1)
+          1)
+'Ruliology.CellularAutomata.Rule30ResetFreeThree.sharpness_two_rows' depends on axioms: [propext, Quot.sound]
