@@ -1,0 +1,13 @@
+{
+  "wild_candidate": "The sheared Rule30 map Phi on the bi-infinite shift has no genuinely dyadic temporal periodic points above period8. Finite white-root profile prefixes can have larger clocks but may be unable to extend to a full spatial periodic spacetime at that clock.",
+  "test": "For cyclic spatial rows of lengths17..24, exhaustively check Phi^16(x)=x and Phi^32(x)=x against Phi^8 and Phi^16. Smaller rings1..16 were completely decomposed in the prior independent test.",
+  "why": "Distinguish actual global dyadic periodic backgrounds from arbitrary finite profile prefixes. A uniform periodic-point classification could supply the missing boundary-sensitive clock mechanism; no such implication is assumed.",
+  "limits": {
+    "wall_seconds": 60,
+    "max_ring": 24,
+    "max_temporal_period": 32,
+    "numpy_chunk_states": 262144,
+    "stop_on_first_genuine16_or32": true
+  },
+  "scope": "Negative is finite ring evidence only; heteroclinic/aperiodic spatial configurations and larger periods remain untested. No PR from a larger census."
+}

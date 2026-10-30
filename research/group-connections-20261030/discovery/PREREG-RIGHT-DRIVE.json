@@ -1,0 +1,10 @@
+{
+ "question":"Can periodic right forcing admit an exact sparse dyadic restart, giving a genuine renormalization instead of a generic pair-to-bit factor?",
+ "driver":"c(t)=t mod2, starting with empty right half; r(t+1)=(r<<1) XOR (r OR (r>>1)) XOR c(t)",
+ "initial_observation":"At times2,4,8 the packed right row is a single1 at index t-2. This is an observed small prefix, not a theorem.",
+ "candidate":"For every k>=1, r(2^k)=2^(2^k-2)",
+ "limits":{"k_max":8,"time_max":256,"wall_seconds":10},
+ "failure":"The first dyadic restart with any additional bits",
+ "secondary_diagnostic":"Record the first128 bits at column1 and the phase-sampled column, only to inspect the failure, not to infer eventual periodicity",
+ "scope":"Periodic driver and finite zero right initial state; neither success at finite scales nor failure proves aperiodicity or refutes eventual settling"
+}

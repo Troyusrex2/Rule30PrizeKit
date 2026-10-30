@@ -1,0 +1,8 @@
+{
+ "observed":"First64 white-phase samples of the alternating-driver empty right half suggest period7 after sample2. This was noticed while falsifying a sparse dyadic restart, so it is exploratory origin, not independent discovery evidence.",
+ "candidate":"a(n+7)=a(n) for every n>=2, where a(n)=bit0 of r(2n), driver c(t)=t mod2 and r(0)=0",
+ "official_phase":"Official altCol starts black. Our row at time1 is still empty; official u(empty)(n)=our bit0 at time2n+2, so the candidate transfers by one sample shift.",
+ "limits":{"time_max":65536,"wall_seconds":30,"store_packed_rows":false,"stop_at_first_counterexample":true},
+ "positive_next":"If it survives, seek a finite periodic shielding certificate and prove it against Rule30Ether.drv. A long matching trace alone is not evidence of eventual periodicity.",
+ "negative_next":"Record exact first mismatch and stop treating the apparent phase pattern as an invariant. Do not silently extend or move the transient."
+}

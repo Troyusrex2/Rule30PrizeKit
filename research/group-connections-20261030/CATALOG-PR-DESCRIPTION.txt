@@ -1,0 +1,17 @@
+Every homogeneous local group-valued zero-curvature connection for one Rule30 update is a local vertex gauge of two commuting vacuum constants. For every finite width and every group, the canonical gauge satisfies
+
+`L(w) = g(tail w)^-1 * L(zeros) * g(init w)`
+
+`M(w) = g(image w)^-1 * M(zeros) * g(middle w)`
+
+with `g(zeros)=1`. Ordered cyclic spatial products are conjugate to `L(zeros)^length`.
+
+Adds core-only `Rule30GroupCocycle`, its catalog import and documentation. The transport has the one-cell halo specified by `Cocycle`; no finiteness, commutativity, or identity-vacuum assumption is imposed. Commuting background connections with arbitrary local vertex gauge provide positive controls. A Boolean local-flux corollary is included.
+
+The proof normalizes white-leading edges, uses left-permutivity and two independent endpoint controls to remove the final spatial cell, removes the corresponding transport cell, and inducts to six one-cell equations. A twisted-shift lemma then makes gauged temporal transport constant. All group laws are explicit fields of the quantified standard core structure `GroupData`; a Mathlib group adapter was checked separately, without adding a catalog dependency.
+
+This extends the existing additive integer/mod-two results to ordered, potentially noncommutative group transport. It does not classify singular semigroups, independently larger transport halos, arbitrary nonlocal observables, or general integrability. It does not prove a prize problem.
+
+Validation: fresh three-source closure at `932cf8dde039b89b1dcbe9636867bb1b2057fef0`, a separate explicit statement/official-rule guard, and the unchanged official `Check.lean` replay passed. All 180 owned declarations replayed; all four monomorphic headlines passed with only `propext` and `Quot.sound`, no new axioms. Runtime9.84s. No Mathlib or inherited owned objects were on the fresh build path; all owned builds were warning-free. `git diff --check` passed. The whole catalog was not rebuilt.
+
+Contributed by Troy Lowry with OpenAI Codex.

@@ -1,0 +1,10 @@
+{
+ "mechanism":"Parameterize the all-even-black left-boundary survivor set by its EVEN spatial cells b_j. Write the forced odd cells as x_(2j+1)=1+a_j. If finite b forces a_j=0 at arbitrarily large dyadic indices, the original finite row is impossible: Q01 would follow by a genuine global coding argument.",
+ "known_small_identities":"a0=0, a1=b0, a2=b0; a3 equals b1 XOR b2 when b0=0 and b1 AND b2 when b0=1",
+ "candidate1":"a_(2^k)=b0 for k>=1",
+ "candidate2":"a_(2^k-1)=0 whenever b_j=0 for all j>=2^(k-1)-1",
+ "limits":{"input_free_bits":8,"all_inputs":256,"forced_odd_indices_through":128,"wall_seconds":30},
+ "evidence":"Exact cone-triangular completion of initial odd cells, independently rechecked for black even pins through every constructed index. Derive ANF for dyadic outputs if useful.",
+ "negative_scope":"Only these precise dyadic templates, not every code-based or renormalization argument. Finite tests cannot prove the candidate for arbitrary k/support.",
+ "distinction":"This is a global survivor-code construction conditional on all even pins, not the already-refuted generic pair-to-bit factor of Rule30 squared."
+}

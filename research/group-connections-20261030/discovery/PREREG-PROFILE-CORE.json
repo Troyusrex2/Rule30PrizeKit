@@ -1,0 +1,15 @@
+{
+  "target": "Test whether a uniform predecessor/nonloss argument can omit the finite white spatial boundary.",
+  "claim_to_test": "In any bi-infinite spatial chain of dyadic-periodic temporal profiles obeying c(t+1)=c(t) XOR (a(t) OR b(t)), the last profile determines its predecessor outside periods1/2; no adjacent period drop above2.",
+  "method": "Enumerate ALL profile pairs at q=2,4,8, retain the indegree/outdegree core (infinite spatial past and future), compare predecessor choices and periods. Root-white reachable graphs are only controls, not used as assumptions.",
+  "limits": {
+    "q": [
+      2,
+      4,
+      8
+    ],
+    "wall_seconds": 30,
+    "max_nodes": 65536
+  },
+  "use": "A countermodel kills boundary-free decoder proofs; a positive remains finite evidence and requires a uniform proof."
+}

@@ -1,0 +1,188 @@
+---
+Template: ComputationalEssay
+Name: Local group connections for Rule 30 are background gauges
+Author: Troy Lowry; OpenAI Codex
+Date: 2026-10-30
+Description: Uniform classification at every finite width, including noncommutative groups and nonidentity vacuum transport
+Abstract: Every homogeneous one-step local group connection with the stated transport halo is a vertex gauge of two commuting vacuum constants. The theorem quantifies over every finite width and every group; it does not prove a prize problem.
+Keywords: [Rule 30, group cocycles, zero curvature, local conservation, Lean, partial result]
+ContextPath: ["Wolfram`LeanLink`"]
+---
+
+## Question and scope
+
+Rule 30 updates a cell by `left XOR (center OR right)`. Its single-seed
+center column is the subject of the prize. This essay proves a partial
+structural theorem about a possible method of attack, rather than about
+the center's eventual periodicity.
+
+```wl
+ArrayPlot[CellularAutomaton[30,{{1},0},40],Frame->True,
+ ImageSize->520,PlotLabel->"Rule 30 from one black cell"]
+```
+
+Let `Word k` be the Boolean words of length k. Write `image w` for the
+shrinking Rule 30 update, `init` and `tail` for deletion of the final and
+first cell, and `middle` for deletion of both endpoints. Take any group G,
+possibly infinite or noncommutative, and functions
+
+    L : Word (n+1) -> G
+    M : Word (n+2) -> G.
+
+The local zero-curvature equation, for every word w of length n+3, is
+
+    L(image w) M(init w) = M(tail w) L(middle w).
+
+The order of factors matters. Spatial products are ordered from right to
+left as the word is scanned. The transport halo is exactly as displayed;
+it is an assumption, not an inferred feature of every conceivable invariant.
+
+## Result
+
+Put a=L(zeros) and b=M(zeros). There is a local function g on n-cell words,
+with g(zeros)=1, such that a and b commute and
+
+    L(w) = g(tail w)^-1 a g(init w)
+    M(w) = g(image w)^-1 b g(middle w).
+
+On a cyclic spatial path of length N, the product of L is therefore
+conjugate to a^N. Its conjugacy class contains no configuration information
+at fixed length. This statement does not say that the individual L values
+are constant before a gauge change. At varying lengths, the background
+power can still depend on length.
+
+The catalog's `Rule30LocalConservation` and `Rule30ProductParity` classify
+additive integer and mod-two scores for four updates. The scope added here
+is ordered group transport for one update, including noncommutative groups
+and nonidentity vacuum weights. We make no historical priority claim for
+general absence-of-conservation methods.
+
+## Exploration and an honest positive control
+
+Finite searches first tested special-linear matrix groups of orders6,48,60
+at small spatial widths. The negative search results were not used as
+premises of the proof. A second search allowed nonidentity vacuum weights.
+The uniform proof below replaces both searches with an induction.
+
+Here is a reproducible positive example in the noncommutative group
+GL(2,F2). The background constants commute, but the vertex gauges range
+over different group elements. We check every five-cell input, and a
+cyclic product. These checks illustrate the theorem; they are not the
+proof of its unbounded quantifiers.
+
+```wl
+mm[x_,y_]:=Mod[x.y,2];
+mi[x_]:=Mod[Inverse[x],2];
+gl2=Select[Partition[#,2]& /@ Tuples[{0,1},4],Mod[Det[#],2]==1&];
+gv[v_]:=gl2[[1+FromDigits[v,2]]];
+aa=bb={{0,1},{1,0}};
+im[v_]:=Table[BitXor[v[[i]],BitOr[v[[i+1]],v[[i+2]]]],{i,Length[v]-2}];
+mid[v_]:=Most[Rest[v]];
+ell[v_]:=mm[mm[mi[gv[Rest[v]]],aa],gv[Most[v]]];
+emm[v_]:=mm[mm[mi[gv[im[v]]],bb],gv[mid[v]]];
+localCheck=And@@Table[mm[ell[im[v]],emm[Most[v]]]==mm[emm[Rest[v]],ell[mid[v]]],{v,Tuples[{0,1},5]}];
+ring={1,1,0,1,0};
+windows=Table[Table[ring[[Mod[j+k-2,Length[ring]]+1]],{k,3}],{j,Length[ring]}];
+prod=Fold[mm[#2,#1]&,IdentityMatrix[2],ell /@ windows];
+h=gv[Take[ring,2]];
+expected=mm[mm[mi[h],Mod[MatrixPower[aa,Length[ring]],2]],h];
+<|"GroupOrder"->Length[gl2],"AmbientGroupIsNoncommutative"->
+ AnyTrue[Tuples[gl2,2],mm[#[[1]],#[[2]]]!=mm[#[[2]],#[[1]]]&],
+ "All32LocalEquations"->localCheck,"CyclicConjugacy"->(prod==expected),
+ "Product"->prod,"Expected"->expected|>
+```
+
+Allowing singular matrices also produced a nonconstant cyclic invariant:
+the trace of products of the two matrix units E01,E10 recognizes perfectly
+alternating even rings. This is outside the group theorem and provides no
+demonstrated leverage on the single-seed center. No inference from a finite
+search to all singular representations is made.
+
+## Idea of the proof
+
+First construct a gauge by repeatedly prepending white cells and dropping
+the final cell. After n repetitions every n-cell vertex is white, so this
+construction is finite at every width. It makes every white-leading
+spatial edge equal to a, without assuming a=1.
+
+Rule 30 is left-permutive. Every finite middle output can therefore be
+realized with two white right registers. The two outer input bits can then
+vary the two output endpoints independently. In the zero-curvature square,
+the normalized first endpoint has constant weight a. Group cancellation
+forces the other endpoint to be irrelevant. This uses no commutativity.
+
+The same equation now forces temporal transport to forget its final cell.
+Both ranges shrink, so induction reduces the spatial statement to six
+one-cell equations. These force L(1)=L(0). Undoing the gauge gives the
+spatial classification.
+
+With gauged spatial weight constant, the remaining equation is a twisted
+shift equation for temporal transport. Prepending white cells again moves
+every word to the vacuum. Cancellation and the vacuum commuting equation
+make this transport constant too. The canonical gauge is identity at the
+vacuum. Finally, products telescope along spatial paths.
+
+## Complete formal proof
+
+The following cell contains the entire source. It imports the official
+kit and no unmerged module, and reads no local proof file. Relative to
+catalog PR58, only the import/export wrapper and namespace have changed.
+The verifier supplies its kit through `RULE30PRIZE_KIT`.
+
+```wl
+Needs["Wolfram`LeanLink`"];
+$Rule30PrizeKit=Environment["RULE30PRIZE_KIT"];
+```
+
+```wl
+rule30Submission=LeanImportString[(*Iconize["Lean source"]*)"import Rule30PrizeKit\n\n/-!\n# Rule30: local group cocycles carry only background holonomy\n\nFor every finite window width and every (possibly noncommutative, infinite)\ngroup, a homogeneous local zero-curvature equation for one Rule30 step forces\nthe spatial weight to be a vertex gauge of its vacuum value. The transport\nwindow has the one-cell halo specified by `Cocycle`. No identity-vacuum\nnormalization is assumed. Every algebraic law is a field of the quantified\nstandard group structure `GroupData`, not an additional global axiom.\n\nWriting a=L(zeros), the classification is\n`L(w) = g(tail w)^-1 * a * g(init w)`.\nThe canonical gauge also makes temporal transport constant at M(zeros),\nand the two vacuum constants commute (`full_background_connection`).\nOrdered cyclic products are therefore conjugate to a^length. Pure-gauge\nexamples establish that this does not assert pointwise constancy of L.\nThe Boolean specialization classifies exact local-flux laws as spatial\ncoboundaries plus a constant; it assumes the displayed flux identity, rather\nthan proving a cyclic-to-local-current equivalence.\n\nThe proof gauge-normalizes the edges beginning in white. Left-permutivity\nrealizes arbitrary middle outputs with two white right registers; independent\nouter input bits then force the normalized weight to forget its final cell.\nThe transport forgets its final cell as well. Induction reduces to the six\none-cell equations in `cube_forces_equal`. Gauge construction and every\nrange-reduction step work without commutativity.\n\nThe existing Rule30LocalConservation and Rule30ProductParity classify additive\ninteger and mod-two scores for four steps. Here the new scope is group-valued,\nordered, possibly noncommutative transport for one step. This theorem does not\nclassify noninvertible semigroups, arbitrary nonlocal invariants, or all notions\nof integrability, and does not settle a prize problem. A larger independently\nchosen transport halo is not included in the theorem as stated.\n\nContributed by Troy Lowry with OpenAI Codex, 2026-10-30.\n-/\nnamespace Rule30Submission\n\n/-- Standard group data, kept explicit because the core catalog has no Mathlib. -/\nclass GroupData (G : Type u) extends Mul G, OfNat G 1, Inv G where\n  assoc : ∀ a b c : G, (a*b)*c=a*(b*c)\n  left_unit : ∀ a : G, 1*a=a\n  right_unit : ∀ a : G, a*1=a\n  left_inverse : ∀ a : G, Inv.inv a*a=1\n  right_inverse : ∀ a : G, a*Inv.inv a=1\n\ntheorem mul_assoc {G : Type u} [GroupData G] (a b c : G) : (a*b)*c=a*(b*c) := GroupData.assoc a b c\n@[simp] theorem one_mul {G : Type u} [GroupData G] (a : G) : 1*a=a := GroupData.left_unit a\n@[simp] theorem mul_one {G : Type u} [GroupData G] (a : G) : a*1=a := GroupData.right_unit a\n@[simp] theorem inv_mul_cancel {G : Type u} [GroupData G] (a : G) : a⁻¹*a=1 := GroupData.left_inverse a\n@[simp] theorem mul_inv_cancel {G : Type u} [GroupData G] (a : G) : a*a⁻¹=1 := GroupData.right_inverse a\n@[simp] theorem inv_mul_cancel_left {G : Type u} [GroupData G] (a b : G) : a⁻¹*(a*b)=b := by\n  rw [←mul_assoc,inv_mul_cancel,one_mul]\n@[simp] theorem mul_inv_cancel_left {G : Type u} [GroupData G] (a b : G) : a*(a⁻¹*b)=b := by\n  rw [←mul_assoc,mul_inv_cancel,one_mul]\ntheorem mul_left_cancel {G : Type u} [GroupData G] {a b c : G} (h : a*b=a*c) : b=c := by\n  have he := congrArg (fun q : G => a⁻¹*q) h\n  simpa only [inv_mul_cancel_left] using he\ntheorem mul_right_cancel {G : Type u} [GroupData G] {a b c : G} (h : a*b=c*b) : a=c := by\n  have he := congrArg (fun q : G => q*b⁻¹) h\n  simpa only [mul_assoc,mul_inv_cancel,mul_one] using he\n\nnamespace WordOps\ndef cons {n : Nat} {α : Type u} (a : α) (v : Fin n → α) : Fin (n+1) → α := Fin.cases a v\ndef init {n : Nat} {α : Type u} (v : Fin (n+1) → α) : Fin n → α := fun i => v i.castSucc\ndef tail {n : Nat} {α : Type u} (v : Fin (n+1) → α) : Fin n → α := fun i => v i.succ\ndef snoc {n : Nat} {α : Type u} (v : Fin n → α) (a : α) : Fin (n+1) → α :=\n  fun i => if h : i.val<n then v ⟨i.val,h⟩ else a\n@[simp] theorem cons_zero {n : Nat} {α : Type u} (a : α) (v : Fin n → α) : cons a v 0=a := rfl\n@[simp] theorem cons_succ {n : Nat} {α : Type u} (a : α) (v : Fin n → α) (i : Fin n) : cons a v i.succ=v i := rfl\n@[simp] theorem tail_cons {n : Nat} {α : Type u} (a : α) (v : Fin n → α) : tail (cons a v)=v := rfl\n@[simp] theorem init_snoc {n : Nat} {α : Type u} (v : Fin n → α) (a : α) : init (snoc v a)=v := by\n  funext i\n  simp [init,snoc]\n@[simp] theorem snoc_castSucc {n : Nat} {α : Type u} (a : α) (v : Fin n → α) (i : Fin n) :\n    snoc v a i.castSucc=v i := by simp [snoc]\n@[simp] theorem snoc_last {n : Nat} {α : Type u} (v : Fin n → α) (a : α) : snoc v a (Fin.last n)=a := by\n  simp [snoc,Fin.last]\n@[simp] theorem snoc_apply_zero {n : Nat} {α : Type u} (v : Fin (n+1) → α) (a : α) : snoc v a 0=v 0 := by\n  simp [snoc]\n@[simp] theorem cons_self_tail {n : Nat} {α : Type u} (v : Fin (n+1) → α) : cons (v 0) (tail v)=v := by\n  funext i\n  cases i using Fin.cases <;> rfl\n@[simp] theorem snoc_init_self {n : Nat} {α : Type u} (v : Fin (n+1) → α) : snoc (init v) (v (Fin.last n))=v := by\n  funext i\n  cases i using Fin.lastCases with\n  | last => simp\n  | cast i => simp [init]\ntheorem cons_snoc_eq_snoc_cons {n : Nat} {α : Type u} (a : α) (v : Fin n → α) (b : α) :\n    cons a (snoc v b)=snoc (cons a v) b := by\n  funext i\n  cases i using Fin.cases with\n  | zero => simp\n  | succ i =>\n    cases i using Fin.lastCases with\n    | last => simp [snoc,Fin.last,cons]\n    | cast i => simp [snoc,cons,show i.val+1<n+1 by omega]\nend WordOps\n\ndef iterate {α : Type u} (f : α → α) : Nat → α → α\n  | 0,x => x\n  | k+1,x => f (iterate f k x)\ntheorem iterate_succ_apply' {α : Type u} (f : α → α) (k : Nat) (x : α) :\n    iterate f (k+1) x=f (iterate f k x) := rfl\ntheorem iterate_succ_apply {α : Type u} (f : α → α) (k : Nat) (x : α) :\n    iterate f (k+1) x=iterate f k (f x) := by\n  induction k with\n  | zero => rfl\n  | succ k ih => exact congrArg f ih\n\nopen Ruliology.CellularAutomata.Rule30Jen\nabbrev Word (n : Nat) := Fin n → Bool\n\ndef image {n : Nat} (v : Word (n+2)) : Word n := fun i =>\n  rule (v ⟨i.val,by omega⟩) (v ⟨i.val+1,by omega⟩) (v ⟨i.val+2,by omega⟩)\ndef middle {n : Nat} (v : Word (n+2)) : Word n := WordOps.init (WordOps.tail v)\n\ntheorem tail_snoc {n : Nat} (v : Word (n+1)) (b : Bool) :\n    @WordOps.tail (n+1) Bool (@WordOps.snoc (n+1) Bool v b)=\n      @WordOps.snoc n Bool (@WordOps.tail n Bool v) b := by\n  funext i\n  cases i using Fin.lastCases with\n  | last => simp [WordOps.tail,WordOps.snoc]\n  | cast i =>\n    simp [WordOps.tail,WordOps.snoc,show i.val+1<n+1 by omega]\n    congr 1\n\ntheorem init_cons {n : Nat} (a : Bool) (v : Word (n+1)) :\n    @WordOps.init (n+1) Bool (@WordOps.cons (n+1) Bool a v)=\n      @WordOps.cons n Bool a (@WordOps.init n Bool v) := by\n  funext i\n  cases i using Fin.cases with\n  | zero => rfl\n  | succ i => rfl\n\ntheorem image_cons {n : Nat} (a : Bool) (v : Word (n+2)) :\n    image (WordOps.cons a v)=WordOps.cons (rule a (v 0) (v 1)) (image v) := by\n  funext i\n  cases i using Fin.cases with\n  | zero => rfl\n  | succ i => rfl\n\ntheorem image_snoc {n : Nat} (v : Word (n+2)) (b : Bool) :\n    image (WordOps.snoc v b)=WordOps.snoc (image v)\n      (rule (v ⟨n,by omega⟩) (v (Fin.last (n+1))) b) := by\n  funext i\n  cases i using Fin.lastCases with\n  | last =>\n    simp [image,WordOps.snoc,show n<n+2 by omega]\n    rfl\n  | cast i => simp [image,WordOps.snoc,show i.val<n+2 by omega,show i.val+1<n+2 by omega,show i.val+2<n+2 by omega]\n\ndef fill (a b : Bool) : List Bool → Nat → Bool\n  | [],0 => a\n  | [],_+1 => b\n  | y::ys,0 => rule y (fill a b ys 0) (fill a b ys 1)\n  | _::ys,i+1 => fill a b ys i\n\ntheorem fill_step (a b : Bool) (ys : List Bool) (i : Nat) (h : i<ys.length) :\n    rule (fill a b ys i) (fill a b ys (i+1)) (fill a b ys (i+2))=ys[i] := by\n  induction ys generalizing i with\n  | nil => simp at h\n  | cons y ys ih =>\n    cases i with\n    | zero =>\n      simp only [fill,List.getElem_cons_zero]\n      generalize fill a b ys 0=c\n      generalize fill a b ys 1=d\n      cases y <;> cases c <;> cases d <;> rfl\n    | succ i => simpa only [fill,List.getElem_cons_succ] using ih i (by simpa using h)\n\ntheorem fill_right0 (a b : Bool) (ys : List Bool) : fill a b ys ys.length=a := by\n  induction ys with\n  | nil => rfl\n  | cons y ys ih => simpa only [List.length_cons,fill] using ih\ntheorem fill_right1 (a b : Bool) (ys : List Bool) : fill a b ys (ys.length+1)=b := by\n  induction ys with\n  | nil => rfl\n  | cons y ys ih => simpa only [List.length_cons,fill] using ih\n\n/-- Every finite middle output word is realizable with two white right registers. -/\ntheorem image_surjective_white {n : Nat} (u : Word n) :\n    ∃ z : Word (n+2), image z=u ∧ z ⟨n,by omega⟩=false ∧ z (Fin.last (n+1))=false := by\n  let ys := List.ofFn u\n  let z : Word (n+2) := fun i => fill false false ys i.val\n  refine ⟨z,?_,?_,?_⟩\n  · funext i\n    have h := fill_step false false ys i.val (by simp [ys])\n    simpa [image,z,ys] using h\n  · have h := fill_right0 false false ys\n    simpa [ys,z] using h\n  · have h := fill_right1 false false ys\n    simpa [ys,z] using h\n\ndef Cocycle {G : Type _} [GroupData G] {n : Nat}\n    (L : Word n → G) (M : Word (n+1) → G) : Prop :=\n  ∀ w : Word (n+2), L (image w)*M (WordOps.init w)=M (WordOps.tail w)*L (middle w)\ndef Anchored {G : Type _} [GroupData G] {n : Nat} (L : Word (n+1) → G) (vac : G) : Prop :=\n  ∀ w, w 0=false → L w=vac\n\n/-- Group-valued endpoint obstruction; no commutativity is assumed. -/\ntheorem rectangle_forgets_right {G : Type _} [GroupData G]\n    (f : Bool → Bool → G) (A B : Bool → G) (C : G)\n    (hf : ∀ r, f false r=f false false)\n    (h : ∀ l r, f l r*A l=B r*C) : f true false=f true true := by\n  have h00 := h false false\n  have h01 := h false true\n  rw [hf true] at h01\n  have hb : B false=B true := mul_right_cancel (h00.symm.trans h01)\n  have h10 := h true false\n  have h11 := h true true\n  rw [hb] at h10\n  exact mul_right_cancel (h10.trans h11.symm)\n\ndef ForgetsLast {G : Type _} {n : Nat} (L : Word (n+1) → G) : Prop :=\n  ∀ v : Word n, ∀ r, L (WordOps.snoc v r)=L (WordOps.snoc v false)\n\ntheorem normalized_forgets_last {G : Type _} [GroupData G] {n : Nat}\n    (L : Word (n+2) → G) (M : Word (n+3) → G)\n    {vac : G} (hN : Anchored L vac) (hC : Cocycle L M) : ForgetsLast L := by\n  have htrue (u : Word n) :\n      L (WordOps.cons true (WordOps.snoc u false))=L (WordOps.cons true (WordOps.snoc u true)) := by\n    obtain ⟨z,hz,hz0,hz1⟩ := image_surjective_white u\n    let b := z 0 || z 1\n    have hframe (l r : Bool) :\n        image (WordOps.cons l (WordOps.snoc z r))=WordOps.cons (xor l b) (WordOps.snoc u r) := by\n      rw [image_cons,image_snoc,hz,hz0,hz1]\n      have h0 : (WordOps.snoc z r : Word (n+3)) 0=z 0 :=\n        @WordOps.snoc_castSucc (n+2) Bool r z 0\n      have h1 : (WordOps.snoc z r : Word (n+3)) 1=z 1 :=\n        @WordOps.snoc_castSucc (n+2) Bool r z 1\n      rw [h0,h1]\n      simp only [rule,Bool.false_or,Bool.false_xor,b]\n    have hrect (l r : Bool) :\n        L (WordOps.cons (xor l b) (WordOps.snoc u r))*M (WordOps.cons l z)=\n          M (WordOps.snoc z r)*L z := by\n      have h := hC (WordOps.cons l (WordOps.snoc z r))\n      simpa only [hframe,init_cons,WordOps.init_snoc,WordOps.tail_cons,middle] using h\n    apply rectangle_forgets_right\n      (fun l r => L (WordOps.cons l (WordOps.snoc u r)))\n      (fun l => M (WordOps.cons (xor l b) z)) (fun r => M (WordOps.snoc z r)) (L z)\n    · intro r\n      rw [hN _ rfl,hN _ rfl]\n    · intro l r\n      have h := hrect (xor l b) r\n      have he : xor (xor l b) b=l := by cases l <;> cases b <;> rfl\n      rw [he] at h\n      exact h\n  have hboth (a : Bool) (u : Word n) :\n      L (WordOps.cons a (WordOps.snoc u false))=L (WordOps.cons a (WordOps.snoc u true)) := by\n    cases a with\n    | false => rw [hN _ rfl,hN _ rfl]\n    | true => exact htrue u\n  intro v r\n  have h := hboth (v 0) (WordOps.tail v)\n  simp only [WordOps.cons_snoc_eq_snoc_cons,WordOps.cons_self_tail] at h\n  cases r with\n  | false => rfl\n  | true => exact h.symm\n\ntheorem flux_forgets_last {G : Type _} [GroupData G] {n : Nat}\n    (L : Word (n+2) → G) (M : Word (n+3) → G)\n    (hL : ForgetsLast L) (hC : Cocycle L M) : ForgetsLast M := by\n  unfold ForgetsLast at hL ⊢\n  have hframe (w : Word (n+3)) (r : Bool) :\n      L (WordOps.snoc (image w) false)*M w=M (WordOps.snoc (WordOps.tail w) r)*L (WordOps.tail w) := by\n    have h := hC (WordOps.snoc w r)\n    simpa only [image_snoc,hL,WordOps.init_snoc,tail_snoc,middle] using h\n  intro v r\n  have hr := hframe (WordOps.cons false v) r\n  have h0 := hframe (WordOps.cons false v) false\n  have he := hr.symm.trans h0\n  exact mul_right_cancel (by simpa only [WordOps.tail_cons] using he)\n\ntheorem cocycle_shrink {G : Type _} [GroupData G] {n : Nat}\n    (L : Word (n+2) → G) (M : Word (n+3) → G)\n    (hL : ForgetsLast L) (hM : ForgetsLast M) (hC : Cocycle L M) :\n    Cocycle (fun v : Word (n+1) => L (WordOps.snoc v false))\n      (fun v : Word (n+2) => M (WordOps.snoc v false)) := by\n  unfold ForgetsLast at hL hM\n  intro w\n  have hm : M w=M (WordOps.snoc (WordOps.init w) false) := by\n    have h := hM (WordOps.init w) (w (Fin.last (n+2)))\n    simpa only [WordOps.snoc_init_self] using h\n  have hl : L (WordOps.tail w)=L (WordOps.snoc (middle w) false) := by\n    have h := hL (WordOps.init (WordOps.tail w)) ((WordOps.tail w) (Fin.last (n+1)))\n    simpa only [WordOps.snoc_init_self,middle] using h\n  have h := hC (WordOps.snoc w false)\n  simpa only [image_snoc,hL,WordOps.init_snoc,tail_snoc,middle,hm,hl] using h\n\ntheorem cube_forces_equal {G : Type _} [GroupData G]\n    (L : Bool → G) (M : Bool → Bool → G)\n    (h : ∀ l c r, L (rule l c r)*M l c=M c r*L c) : L true=L false := by\n  have h000 := h false false false\n  have h001 := h false false true\n  have h010 := h false true false\n  have h011 := h false true true\n  have h101 := h true false true\n  have h110 := h true true false\n  change L false*M false false=M false false*L false at h000\n  change L true*M false false=M false true*L false at h001\n  change L true*M false true=M true false*L true at h010\n  change L true*M false true=M true true*L true at h011\n  change L false*M true false=M false true*L false at h101\n  change L false*M true true=M true false*L true at h110\n  have hn : M true false=M true true := mul_right_cancel (h010.symm.trans h011)\n  rw [←hn] at h110\n  have hp : M false true=M false false :=\n    mul_left_cancel (h010.trans (h110.symm.trans (h101.trans h001.symm)))\n  rw [hp] at h001\n  exact mul_right_cancel (h001.trans h000.symm)\n\ntheorem word1 (v : Word 1) : v=(fun _ => v 0) := by\n  funext i\n  have hi : i=0 := by apply Fin.ext;omega\n  rw [hi]\n\ntheorem cocycle_one_equal {G : Type _} [GroupData G]\n    (L : Word 1 → G) (M : Word 2 → G) (hC : Cocycle L M) :\n    L (fun _ => true)=L (fun _ => false) := by\n  apply cube_forces_equal (fun b => L (fun _ => b))\n    (fun b c => M (WordOps.cons b (fun _ : Fin 1 => c)))\n  intro l c r\n  let w : Word 3 := WordOps.cons l (WordOps.cons c (fun _ : Fin 1 => r))\n  have hi : image w=(fun _ : Fin 1 => rule l c r) := word1 _\n  have hm : middle w=(fun _ : Fin 1 => c) := word1 _\n  have hp : WordOps.init w=WordOps.cons l (fun _ : Fin 1 => c) := by\n    rw [show w=WordOps.cons l (WordOps.cons c (fun _ : Fin 1 => r)) from rfl,init_cons]\n    exact congrArg (fun v : Word 1 => @WordOps.cons 1 Bool l v) (word1 _)\n  have h := hC w\n  simpa only [hi,hm,hp,show WordOps.tail w=WordOps.cons c (fun _ : Fin 1 => r) from rfl] using h\n\ntheorem anchored_trivial {G : Type _} [GroupData G] :\n    ∀ (n : Nat) (L : Word (n+1) → G) (M : Word (n+2) → G) (vac : G),\n      Anchored L vac → Cocycle L M → ∀ w, L w=vac\n  | 0,L,M,vac,hN,hC => by\n    have ht := cocycle_one_equal L M hC\n    intro w\n    cases hb : w 0 with\n    | false => exact hN w hb\n    | true =>\n      have hw : w=(fun _ : Fin 1 => true) := by\n        funext i\n        have hi : i=0 := by apply Fin.ext;omega\n        simpa only [hi] using hb\n      rw [hw]\n      exact ht.trans (hN _ rfl)\n  | n+1,L,M,vac,hN,hC => by\n    have hL := normalized_forgets_last L M hN hC\n    have hM := flux_forgets_last L M hL hC\n    let L' (v : Word (n+1)) := L (WordOps.snoc v false)\n    let M' (v : Word (n+2)) := M (WordOps.snoc v false)\n    have hN' : Anchored L' vac := by\n      intro v hv\n      exact hN _ (by simpa using hv)\n    have hC' : Cocycle L' M' := cocycle_shrink L M hL hM hC\n    intro w\n    have he := hL (WordOps.init w) (w (Fin.last (n+1)))\n    rw [WordOps.snoc_init_self] at he\n    exact he.trans (anchored_trivial n L' M' vac hN' hC' (WordOps.init w))\n\ndef zeros (n : Nat) : Word n := fun _ => false\ndef pad {n : Nat} (v : Word n) : Word n :=\n  @WordOps.init n Bool (@WordOps.cons n Bool false v)\n\ntheorem pad_apply {n : Nat} (v : Word n) (i : Fin n) :\n    pad v i=if i.val=0 then false else v ⟨i.val-1,by omega⟩ := by\n  cases n with\n  | zero => exact Fin.elim0 i\n  | succ n =>\n    cases i using Fin.cases with\n    | zero => rfl\n    | succ i =>\n      simp [pad,WordOps.init,WordOps.cons]\n      congr 1\n\ntheorem pad_bit_zero {n : Nat} (k : Nat) (v : Word n) (i : Fin n)\n    (h : i.val<k) : (iterate pad k) v i=false := by\n  induction k generalizing v i with\n  | zero => omega\n  | succ k ih =>\n    rw [iterate_succ_apply',pad_apply]\n    by_cases hi : i.val=0\n    · simp only [hi,ite_true]\n    · rw [ite_eq_right hi]\n      have hidx : i.val-1<n := by omega\n      have hk : i.val-1<k := by omega\n      exact ih v ⟨i.val-1,hidx⟩ hk\n\ntheorem pad_all_zero {n : Nat} (v : Word n) : (iterate pad n) v=zeros n := by\n  funext i\n  exact pad_bit_zero n v i i.isLt\n\ntheorem cons_zero (n : Nat) : WordOps.cons false (zeros n)=zeros (n+1) := by\n  funext i\n  cases i using Fin.cases <;> rfl\n\ndef gaugePartial {G : Type _} [GroupData G] {n : Nat} (L : Word (n+1) → G) :\n    Nat → Word n → G\n  | 0,_ => 1\n  | k+1,v => L (zeros (n+1))*gaugePartial L k (pad v)*(L (WordOps.cons false v))⁻¹\n\ntheorem gauge_stable {G : Type _} [GroupData G] {n : Nat} (L : Word (n+1) → G) :\n    ∀ k v, (iterate pad k) v=zeros n → gaugePartial L (k+1) v=gaugePartial L k v\n  | 0,v,h => by\n    have hv : v=zeros n := h\n    subst v\n    simp [gaugePartial,cons_zero]\n  | k+1,v,h => by\n    change L (zeros (n+1))*gaugePartial L (k+1) (pad v)*(L (WordOps.cons false v))⁻¹=\n      L (zeros (n+1))*gaugePartial L k (pad v)*(L (WordOps.cons false v))⁻¹\n    rw [gauge_stable L k (pad v) (by simpa only [iterate_succ_apply] using h)]\n\ndef gauge {G : Type _} [GroupData G] {n : Nat} (L : Word (n+1) → G) : Word n → G :=\n  gaugePartial L n\n\ndef edgeGauge {G : Type _} [GroupData G] {n : Nat}\n    (g : Word n → G) (L : Word (n+1) → G) (w : Word (n+1)) : G :=\n  g (WordOps.tail w)*L w*(g (WordOps.init w))⁻¹\ndef timeGauge {G : Type _} [GroupData G] {n : Nat}\n    (g : Word n → G) (M : Word (n+2) → G) (w : Word (n+2)) : G :=\n  g (image w)*M w*(g (middle w))⁻¹\n\ntheorem gauge_anchored {G : Type _} [GroupData G] {n : Nat} (L : Word (n+1) → G) :\n    Anchored (edgeGauge (gauge L) L) (L (zeros (n+1))) := by\n  intro w hw\n  have he : w=WordOps.cons false (WordOps.tail w) := by\n    have h := WordOps.cons_self_tail w\n    rw [hw] at h\n    exact h.symm\n  rw [he]\n  change gaugePartial L n (WordOps.tail w)*L (WordOps.cons false (WordOps.tail w))*\n      (gaugePartial L n (pad (WordOps.tail w)))⁻¹=L (zeros (n+1))\n  have hs := gauge_stable L n (WordOps.tail w) (pad_all_zero _)\n  change L (zeros (n+1))*gaugePartial L n (pad (WordOps.tail w))*\n      (L (WordOps.cons false (WordOps.tail w)))⁻¹=gaugePartial L n (WordOps.tail w) at hs\n  rw [←hs]\n  simp [mul_assoc]\n\ntheorem image_init {n : Nat} (w : Word (n+3)) :\n    (image (WordOps.init w) : Word n)=WordOps.init (image w) := rfl\ntheorem image_tail {n : Nat} (w : Word (n+3)) :\n    (image (WordOps.tail w) : Word n)=WordOps.tail (image w) := rfl\ntheorem middle_init {n : Nat} (w : Word (n+3)) :\n    (middle (WordOps.init w) : Word n)=WordOps.init (middle w) := rfl\ntheorem middle_tail {n : Nat} (w : Word (n+3)) :\n    (middle (WordOps.tail w) : Word n)=WordOps.tail (middle w) := rfl\n\ntheorem gauge_cocycle {G : Type _} [GroupData G] {n : Nat}\n    (g : Word n → G) (L : Word (n+1) → G) (M : Word (n+2) → G)\n    (hC : Cocycle L M) : Cocycle (edgeGauge g L) (timeGauge g M) := by\n  intro w\n  have h := congrArg (fun q : G => g (WordOps.tail (image w))*q*(g (WordOps.init (middle w)))⁻¹) (hC w)\n  simpa only [edgeGauge,timeGauge,image_init,image_tail,middle_init,middle_tail,\n    mul_assoc,inv_mul_cancel_left] using h\n\n/-- Every homogeneous group-valued one-cell-halo Rule30 cocycle is a local\ngauge of its constant vacuum connection. Neither finiteness nor commutativity\nof the group is assumed. This is NOT center aperiodicity. -/\ntheorem cocycle_is_background_gauge {G : Type _} [GroupData G] {n : Nat}\n    (L : Word (n+1) → G) (M : Word (n+2) → G) (hC : Cocycle L M) :\n    ∃ g : Word n → G, ∀ w : Word (n+1),\n      L w=(g (WordOps.tail w))⁻¹*L (zeros (n+1))*g (WordOps.init w) := by\n  refine ⟨gauge L,?_⟩\n  have hA := gauge_anchored L\n  have hG := gauge_cocycle (gauge L) L M hC\n  have ht := anchored_trivial n (edgeGauge (gauge L) L) (timeGauge (gauge L) M)\n    (L (zeros (n+1))) hA hG\n  intro w\n  have he := congrArg (fun q : G => (gauge L (WordOps.tail w))⁻¹*q*gauge L (WordOps.init w)) (ht w)\n  simpa only [edgeGauge,mul_assoc,inv_mul_cancel_left,inv_mul_cancel,mul_one] using he\n\n\n/-- Pure-gauge examples exist: the classification does not say L is\npointwise constant before a change of vertex coordinates. -/\ntheorem background_gauges_are_cocycles {G : Type u} [GroupData G] {n : Nat}\n    (g : Word n → G) (a : G) :\n    Cocycle (edgeGauge g (fun _ : Word (n+1) => a))\n      (timeGauge g (fun _ : Word (n+2) => 1)) := by\n  apply gauge_cocycle\n  intro w\n  simp only [mul_one,one_mul]\n\ndef groupPower {G : Type u} [GroupData G] (a : G) : Nat → G\n  | 0 => 1\n  | k+1 => a*groupPower a k\ndef pathProduct {G : Type u} [GroupData G] {n : Nat}\n    (L : Word (n+1) → G) (w : Nat → Word (n+1)) : Nat → G\n  | 0 => 1\n  | k+1 => L (w k)*pathProduct L w k\n\ntheorem path_background {G : Type u} [GroupData G] {n : Nat}\n    (L : Word (n+1) → G) (g : Word n → G) (a : G)\n    (hL : ∀ w, L w=(g (WordOps.tail w))⁻¹*a*g (WordOps.init w))\n    (w : Nat → Word (n+1)) (v : Nat → Word n)\n    (hs : ∀ i, WordOps.init (w i)=v i) (ht : ∀ i, WordOps.tail (w i)=v (i+1)) :\n    ∀ N, pathProduct L w N=(g (v N))⁻¹*groupPower a N*g (v 0)\n  | 0 => by simp [pathProduct,groupPower]\n  | k+1 => by\n    rw [pathProduct,hL,hs,ht,path_background L g a hL w v hs ht k]\n    simp only [groupPower,mul_assoc,mul_inv_cancel_left]\n\n/-- A cyclic product carries only the length and the vacuum conjugacy class. -/\ntheorem cyclic_products_background (G : Type) [GroupData G] (n : Nat)\n    (L : Word (n+1) → G) (M : Word (n+2) → G) (hC : Cocycle L M)\n    (w : Nat → Word (n+1)) (v : Nat → Word n)\n    (hs : ∀ i, WordOps.init (w i)=v i) (ht : ∀ i, WordOps.tail (w i)=v (i+1))\n    (N : Nat) (hc : v N=v 0) :\n    ∃ h : G, pathProduct L w N=h⁻¹*groupPower (L (zeros (n+1))) N*h := by\n  obtain ⟨g,hg⟩ := cocycle_is_background_gauge L M hC\n  refine ⟨g (v 0),?_⟩\n  have h := path_background L g (L (zeros (n+1))) hg w v hs ht N\n  simpa only [hc] using h\n\n/-- Multiplicative presentation of the two-element additive group. -/\n@[instance_reducible] def xorGroup : GroupData Bool where\n  mul := xor\n  ofNat := false\n  inv := id\n  assoc := by intro a b c;cases a <;> cases b <;> cases c <;> rfl\n  left_unit := by intro a;cases a <;> rfl\n  right_unit := by intro a;cases a <;> rfl\n  left_inverse := by intro a;cases a <;> rfl\n  right_inverse := by intro a;cases a <;> rfl\n\ntheorem xor_flux_rearrange (a b c d : Bool) (h : xor a c=xor b d) :\n    xor a b=xor d c := by\n  cases a <;> cases b <;> cases c <;> cases d <;> cases h <;> rfl\n\n/-- The exact local-flux form of the additive F2 classification, for all\nwidths. No cyclic-to-local-flux equivalence is assumed or claimed here. -/\ntheorem boolean_flux_coboundary (n : Nat)\n    (rho : Word (n+1) → Bool) (j : Word (n+2) → Bool)\n    (h : ∀ w : Word (n+3), xor (rho (image w)) (rho (middle w))=\n      xor (j (WordOps.init w)) (j (WordOps.tail w))) :\n    ∃ g : Word n → Bool, ∀ w : Word (n+1), rho w=\n      xor (xor (g (WordOps.tail w)) (rho (zeros (n+1)))) (g (WordOps.init w)) := by\n  letI : GroupData Bool := xorGroup\n  have hC : Cocycle rho j := by\n    intro w\n    exact xor_flux_rearrange _ _ _ _ (h w)\n  obtain ⟨g,hg⟩ := cocycle_is_background_gauge rho j hC\n  exact ⟨g,hg⟩\n\n/-- A universe-zero headline for the official partial checker. No finiteness\nor commutativity is assumed; the explicit GroupData are the standard laws. -/\ntheorem background_gauge_all_groups (G : Type) [GroupData G] (n : Nat)\n    (L : Word (n+1) → G) (M : Word (n+2) → G) (hC : Cocycle L M) :\n    ∃ g : Word n → G, ∀ w : Word (n+1),\n      L w=(g (WordOps.tail w))⁻¹*L (zeros (n+1))*g (WordOps.init w) :=\n  cocycle_is_background_gauge L M hC\n\n\n/-- A twisted shift-constant function on finite words is constant: prepend\nwhite cells until the entire word is white, and cancel the fixed twist. -/\ntheorem twisted_shift_constant {G : Type u} [GroupData G] (m : Nat)\n    (a : G) (N : Word m → G)\n    (h : ∀ w : Word (m+1), a*N (WordOps.init w)=N (WordOps.tail w)*a) :\n    ∀ v, N v=N (zeros m) := by\n  have hz : a*N (zeros m)=N (zeros m)*a := h (zeros (m+1))\n  have descend : ∀ k v, iterate pad k v=zeros m → N v=N (zeros m) := by\n    intro k\n    induction k with\n    | zero => intro v hv; exact congrArg N hv\n    | succ k ih =>\n      intro v hv\n      have hp : iterate pad k (pad v)=zeros m := by\n        simpa only [iterate_succ_apply] using hv\n      have step := h (WordOps.cons false v)\n      change a*N (pad v)=N v*a at step\n      rw [ih (pad v) hp] at step\n      exact mul_right_cancel (step.symm.trans hz)\n  intro v\n  exact descend m v (pad_all_zero v)\n\ntheorem gaugePartial_zero {G : Type u} [GroupData G] {n : Nat}\n    (L : Word (n+1) → G) (k : Nat) : gaugePartial L k (zeros n)=1 := by\n  have hp : pad (zeros n)=zeros n := congrArg WordOps.init (cons_zero n)\n  induction k with\n  | zero => rfl\n  | succ k ih => simp only [gaugePartial,hp,ih,cons_zero,mul_one,mul_inv_cancel]\n\n/-- Full spatial-and-temporal classification with the canonical gauge fixed\nto the identity at the vacuum. The two vacuum constants commute. -/\ntheorem full_background_connection (G : Type) [GroupData G] (n : Nat)\n    (L : Word (n+1) → G) (M : Word (n+2) → G) (hC : Cocycle L M) :\n    ∃ g : Word n → G, g (zeros n)=1 ∧\n      L (zeros (n+1))*M (zeros (n+2))=M (zeros (n+2))*L (zeros (n+1)) ∧\n      (∀ w : Word (n+1), L w=(g (WordOps.tail w))⁻¹*L (zeros (n+1))*g (WordOps.init w)) ∧\n      (∀ w : Word (n+2), M w=(g (image w))⁻¹*M (zeros (n+2))*g (middle w)) := by\n  let g := gauge L\n  have hzero : g (zeros n)=1 := gaugePartial_zero L n\n  have ht := anchored_trivial n (edgeGauge g L) (timeGauge g M)\n    (L (zeros (n+1))) (gauge_anchored L) (gauge_cocycle g L M hC)\n  have hN : ∀ w : Word (n+3),\n      L (zeros (n+1))*timeGauge g M (WordOps.init w)=\n        timeGauge g M (WordOps.tail w)*L (zeros (n+1)) := by\n    intro w\n    have h := gauge_cocycle g L M hC w\n    simpa only [ht] using h\n  have hc := twisted_shift_constant (n+2) (L (zeros (n+1))) (timeGauge g M) hN\n  have hzimage : image (zeros (n+2))=zeros n := by funext i; rfl\n  have hzmiddle : middle (zeros (n+2))=zeros n := rfl\n  have hzM : timeGauge g M (zeros (n+2))=M (zeros (n+2)) := by\n    have hi : Inv.inv (1 : G)=1 := by simpa only [mul_one] using (inv_mul_cancel (1 : G))\n    simp only [timeGauge,hzimage,hzmiddle,hzero,hi,one_mul,mul_one]\n  refine ⟨g,hzero,hC (zeros (n+3)),?_,?_⟩\n  · intro w\n    have he := congrArg (fun q : G => (g (WordOps.tail w))⁻¹*q*g (WordOps.init w)) (ht w)\n    simpa only [edgeGauge,mul_assoc,inv_mul_cancel_left,inv_mul_cancel,mul_one] using he\n  · intro w\n    have he := congrArg (fun q : G => (g (image w))⁻¹*q*g (middle w)) ((hc w).trans hzM)\n    simpa only [timeGauge,mul_assoc,inv_mul_cancel_left,inv_mul_cancel,mul_one] using he\n\n/-- Commuting constant backgrounds give honest positive controls for both\nparts of the connection, with arbitrary local vertex gauge. -/\ntheorem commuting_backgrounds_are_cocycles {G : Type u} [GroupData G] {n : Nat}\n    (g : Word n → G) (a b : G) (hab : a*b=b*a) :\n    Cocycle (edgeGauge g (fun _ : Word (n+1) => a))\n      (timeGauge g (fun _ : Word (n+2) => b)) := by\n  apply gauge_cocycle\n  intro w\n  exact hab\n\nend Rule30Submission\n",
+ "ProjectDir"->$Rule30PrizeKit,"Filter"->"Rule30Submission."];
+```
+
+## Kernel replay and exact statements
+
+The first check replays every owned declaration through Lean's kernel.
+The axiom lists below supplement that replay. A partial-result checker
+does not establish a prize implication or novelty; the printed types and
+the stated scope must also be read.
+
+```wl
+rule30KernelCheck=rule30Submission["Rule30Submission.full_background_connection"]["KernelCheck"];
+{rule30KernelCheck,Association@Table[name-><|
+ "Statement"->rule30Submission[name]["TypeForm"],
+ "Axioms"->rule30Submission[name]["Axioms"]|>,{name,{"Rule30Submission.full_background_connection","Rule30Submission.background_gauge_all_groups","Rule30Submission.cyclic_products_background","Rule30Submission.boolean_flux_coboundary"}}]}
+```
+
+The two range-reduction statements and the twisted-shift lemma expose the
+unbounded argument rather than a finite cutoff.
+
+```wl
+Association@Table[name->rule30Submission[name]["TypeForm"],
+ {name,{"Rule30Submission.normalized_forgets_last",
+ "Rule30Submission.flux_forgets_last","Rule30Submission.twisted_shift_constant"}}]
+```
+
+## What remains open
+
+No eventual period of the actual single-seed center is excluded here.
+The theorem classifies the displayed homogeneous local group connection,
+not every invariant, all notions of integrability, independently larger
+transport supports, or nonlocal and noninvertible constructions. The
+Boolean corollary assumes an exact local flux identity; it does not prove
+a cyclic-to-local-current equivalence. The proof does not weaken any
+definition of the prize problems.
+
+A successful continuation must find an observable or boundary-sensitive
+argument outside this class and prove its connection to the actual seed.
+The existence of a nonzero local source or of synchronization resets alone
+does not establish unbounded Hankel rank.
+
+## References and reproducibility
+
+- [Catalog PR58, complete core Lean module](https://github.com/WolframInstitute/Rule30PrizeKit/pull/58).
+- [Reference catalog](https://github.com/WolframInstitute/Rule30PrizeKit/blob/main/lean/README.md), including the earlier additive conservation results.
+- [Rule 30 Prize definitions and verification workflow](https://www.wolframcloud.com/obj/rule-30-prize/Agents/).
+- [Wolfram CellularAutomaton documentation](https://reference.wolfram.com/language/ref/CellularAutomaton.html).
+
+Research and formalization by Troy Lowry with OpenAI Codex. No prize claim
+or historical-priority claim is made.

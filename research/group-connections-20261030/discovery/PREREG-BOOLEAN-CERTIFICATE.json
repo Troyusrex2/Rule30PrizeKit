@@ -1,0 +1,10 @@
+{
+ "target":"Q01: no finite zero-boundary left start keeps column-1 black at every even tick",
+ "mechanism":"A width-uniform Boolean Nullstellensatz certificate, after exactly solving the in-cone triangular pin constraints. This is an algebraic reader, not a statistical predictor.",
+ "coordinates":"Fix leftmost black at depthW. Free start bits at nonpivot depths parameterize every survivor of the in-cone even pins. Each remaining pin violation is an exact Boolean function f_i of those free bits.",
+ "certificate":"Seek 1=sum_i p_i f_i in the Boolean function algebra overF2, restricting multiplier p_i to degree at mostd. Extract the actual selected monomial-times-pin terms, then inspect for a reusable induction.",
+ "limits":{"widths":[4,6,8,10,12,14,16,18,20],"pins_per_width":"2W+4","multiplier_degree_max":3,"wall_seconds_per_width":45},
+ "positive_scope":"A finite certificate is not a new period exclusion. No catalog PR for another width. Only a genuinely uniform construction or new implication would be a publishable target.",
+ "failure":"If the required multiplier degree grows or extracted identities have no stable structure, do not claim a bounded-degree or width-uniform theorem. A timeout is partial, not unsatisfiability.",
+ "verification":"Independent evaluation of the extracted identity on every free-bit assignment; compare full initial-state enumeration on the smallest widths. A prospective uniform theorem must be proved against official zrow/FinSupp, not this enumeration."
+}

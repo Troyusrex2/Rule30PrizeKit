@@ -1,0 +1,13 @@
+{
+  "target": "An unbounded-clock predecessor decoder, not another finite-clock nonloss certificate.",
+  "input": "Exact existing white-root profile graphs q=4,8,16,32. Derivative d(t)=b(t) XOR b(t+1).",
+  "candidate": "A bounded centered derivative window determines a(t), except when the whole observed window is all1 (unresolved alternating input).",
+  "test": "For radii0..15 group pointed cyclic derivative windows and check output a(t) conflicts. Record explicit collisions and whether the complete derivative words differ.",
+  "next_if_positive": "Derive a symbolic Rule30 identity proving the decoder; finite fit alone is not adopted.",
+  "limits": {
+    "wall_seconds": 30,
+    "maximum_radius": 15,
+    "no_new_profile_graph": true
+  },
+  "negative_scope": "Only bounded local derivative-window decoding; arbitrary nonlocal or stateful decoder remains open."
+}

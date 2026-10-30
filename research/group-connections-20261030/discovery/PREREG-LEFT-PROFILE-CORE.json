@@ -1,0 +1,14 @@
+{
+  "correction": "An actual bounded-clock prefix need not admit any bounded-clock spatial future: a subsequent profile can double its period. Thus the bi-infinite core test is too restrictive for a decoder theorem.",
+  "target": "Predecessor uniqueness outside periods1/2 under an infinite spatial PAST only. This includes every finite white-root path, since the zero root has a loop.",
+  "method": "Repeat q2/4/8 complete profile graph, prune indegree0 only, retain dead ends.",
+  "limits": {
+    "q": [
+      2,
+      4,
+      8
+    ],
+    "wall_seconds": 30
+  },
+  "interpretation": "Test correct quantifiers before spending on a proof; a positive finite result is not a theorem."
+}

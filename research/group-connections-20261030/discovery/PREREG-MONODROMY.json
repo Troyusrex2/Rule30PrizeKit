@@ -1,0 +1,16 @@
+{
+ "question":"Does Rule30 admit a nontrivial finite-group spatial Lax cocycle with identity vacuum, using block weights of length w and temporal transport of length w+1?",
+ "equation":"L(F(input))[w bits] * M(input prefix w+1) = M(input suffix w+1) * L(input central w bits), for every input word of length w+2",
+ "prize_bridge":"Such a law would preserve the conjugacy class of finite spatial monodromy. This is outside additive-density invariants, but existence alone does NOT imply singleton aperiodicity; a seed-specific boundary argument would still be required.",
+ "normalization":"L(allzero)=identity. Local gauge on de Bruijn vertices of length w-1 fixes a spanning tree of L edges to identity. The allones input equation forces L(allones)=identity. All other L labels are enumerated. All temporal root labels M(zeros) remain allowed.",
+ "nontriviality":"At least one gauge-normalized L edge is nonidentity. If all L are identity, the spatial product carries no information.",
+ "solver":"Exact finite-group table enumeration with conjugator-bitset intersections; no SAT solver or installs",
+ "stages":[
+  {"group":"SL2(F2)","widths":[2,3,4],"wall_seconds_each":45},
+  {"group":"SL2(F2[e]/e^2)","widths":[2,3],"wall_seconds_each":45},
+  {"group":"SL2(F4)","widths":[2,3],"wall_seconds_each":45}
+ ],
+ "positive_verification":"Recover all M labels and check all 2^(w+2) original equations independently; demonstrate a nonidentity closed spatial product. Then inspect the actual singleton consequence before making any prize claim.",
+ "negative_scope":"Only the specified groups, block widths, identity vacuum and local temporal transport. Larger groups, unbounded/spectral groups, nonidentity vacuum, more memory and genuinely nonlocal laws remain open.",
+ "timeout":"Record partial enumeration, never infer nonexistence from a timeout. No automatic width extension."
+}

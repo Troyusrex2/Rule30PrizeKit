@@ -1,0 +1,11 @@
+$HistoryLength=0;
+probe[p_,n_,seconds_]:=Module[{v,vars,eqs,novel,result,row},
+ v=Table[Unique["x"],{p},{n}];vars=Flatten[v];
+ eqs=Flatten[Table[Equivalent[v[[Mod[t,p]+1,j]],Xor[v[[t,j]],Or[v[[t,Mod[j-2,n]+1]],v[[t,Mod[j-3,n]+1]]]]],{t,p},{j,n}]];
+ novel=And[Not[v[[1,1]]],v[[p/2+1,1]]];
+ result=TimeConstrained[MemoryConstrained[SatisfiabilityInstances[And@@Append[eqs,novel],vars,1],2147483648,"memory_cap"],seconds,"time_cap"];
+ If[ListQ[result]&&Length[result]>0,row=Boole[Take[First[result],n]];Return[<|"p"->p,"n"->n,"status"->"model","row"->row|>]];
+ <|"p"->p,"n"->n,"status"->If[result==={},"unsat",ToString[result,InputForm]]|>
+];
+records={probe[8,4,3],probe[16,32,25]};
+Print[ExportString[records,"RawJSON"]];

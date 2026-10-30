@@ -1,0 +1,63 @@
+Audit of the incoming Hankel, 2-kernel, dynamics, and homology proposals
+Troy Lowry / OpenAI Codex, 2026-10-30. Methodological feedback, not a prize proof.
+
+1. Fixed-window kernel counts cannot diverge.
+   A vector with M Boolean coordinates has only2^M possibilities; the displayed
+   t=0..M convention instead has M+1 coordinates and bound2^(M+1). A correct
+   infinite-kernel argument needs growing windows, or infinitely many actual
+   infinite subsequences distinguished by proved witnesses. Finite growth does
+   not establish nonautomaticity; a finite plateau does not establish automaticity.
+   Every finite observed prefix has an eventually-zero, hence automatic and
+   eventually-periodic extension with exactly the same observations.
+
+2. The bound |K_2|<=P is not valid for every purely periodic sequence.
+   For the7-periodic sequence1 at residues0,1 and0 elsewhere, decimation slopes
+   1,2,4 modulo7 each give7 distinct phases, for21 distinct kernel elements.
+   An odd period P gives the elementary upper bound P*ord_P(2), not P in general;
+   a transient needs further treatment. Finiteness of the kernel remains valid.
+   Over F2, infinite cardinality and infinite linear-span dimension are equivalent,
+   but proving nonautomaticity is stronger than the prize's nonperiodicity target.
+
+3. Finite Hankel/Berlekamp-Massey measurements do not prove the missing bridge.
+   Eventual periodicity implies bounded rank. A uniform asymptotic lower bound
+   would suffice, but high ranks at4096/16384 are not a rank-production lemma.
+   Conversely, a low finite rank does not refute eventual unbounded growth unless
+   a concrete all-N bound and constants were part of the claim. A reset merges
+   predecessor states; it does not by itself inject an independent linear
+   constraint into the true center's Hankel matrix. Existing checked periodic
+   countermodels already separate generic reset occurrence from center rank.
+
+4. Ordinary Boolean differentials collapse.
+   If the actual phase algebra imposes x^2=x over F2, any ordinary derivation D
+   obeying Leibniz has D(x)=D(x^2)=xD(x)+xD(x)=0. Thus its ordinary Kahler
+   differentials vanish. Working in the unreduced polynomial ring avoids this
+   algebraic collapse but requires proving that the proposed forms descend to
+   physical Boolean configurations. Discrete cubical cochains/differences are
+   different constructions and must be defined; they do not automatically have
+   the ordinary derivation laws. This is a standard algebraic observation, not
+   a new Rule30 theorem.
+
+5. Expansion and measure decay need exact quantifiers.
+   A periodic observable can be a factor of an odometer or an expanding system.
+   A positive Lyapunov exponent or many independent driving bits does not prove
+   that this particular center readout retains them. Likewise, survival
+   probability2^-n can coexist with one infinite surviving branch. An absolute
+   live-count bound below1, or a rank decreasing on every surviving branch, is
+   materially stronger. W<=8 counterexamples to a windowed bound do not rule
+   out existence of some larger fixed W.
+
+6. What the current formal work actually supplies.
+   PR58 classifies the displayed local group-valued flat connections for all
+   widths and groups, including noncommutative groups and nonidentity vacuum.
+   Singular semigroup observables and genuinely nonlocal constructions remain
+   outside it. A separately checked13-state example shows why profile decoding
+   must retain finite white ancestry: equal nonalternating final profiles can
+   have different infinite pasts when that assumption is omitted. Neither result
+   proves center aperiodicity. An argument using a global invariant must still
+   establish how finite ancestry selects the needed branch or prevents masking.
+
+Suggested next response format: unique ID, exact quantified claim, dependencies
+and their precise hypotheses, one fresh mechanism, a countermodel sought first,
+fixed computation/time limits, proof/counterexample/unknown status, and an explicit
+statement of the remaining prize bridge. Do not turn a fitted finite reader,
+relative probability decay, or a finite positive census into an infinite claim.

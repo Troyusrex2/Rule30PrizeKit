@@ -1,0 +1,57 @@
+Research proof plan, 2026-10-30 01:24UTC. Not yet a verified theorem.
+
+Stronger than initial identity-vacuum idea: ANY group-valued local Lax
+cocycle for Rule30 with L on w bits and M on w+1 bits appears gauge-equivalent
+to a CONSTANT background a=L(zeros). No vacuum=identity restriction needed.
+
+Equation: L(image input)*M(prefix input)=M(suffix input)*L(central input),
+input widthw+2, Rule30 image widthw. Multiplication is noncommutative.
+
+1. Normalize L(0,rest)=a via a vertex gauge g on words of lengthw-1.
+Let P(v)=0 ++ init(v). P^(w-1)v=zeros. Define
+G_0(v)=1; G_(k+1)(v)=a*G_k(Pv)*L(0++v)^-1.
+G_(k+1)(v)=G_k(v) if P^k(v)=zeros, by inductionk; atzero the factor is a*a^-1.
+Thus g(v)=G_(w-1)(v) satisfies g(v)=a*g(Pv)*L(0++v)^-1.
+The edge gauge Lg(word)=g(tailword)*L(word)*g(initword)^-1 is anchored at a.
+The temporal gauge Mg(u)=g(image u)*M(u)*g(central u)^-1 retains rangew+1.
+Local Rule30 images commute with prefix/tail cropping, so the Lax equation
+is gauge-invariant by associativity and inverse cancellation.
+
+2. An anchored L of width>=2 must forget its last bit. Every interior output
+word is realizable with the TWO rightmost input registers white, by solving
+leftwards. The two outer input bits then independently toggle the two output
+endpoints. The Lax equation makes L(output endpoints) factor as B(right)*A(left).
+Both outputs with first bit0 equal a, so B(false)=B(true) by cancellation;
+therefore both outputs with first bit1 also agree. All middle words arbitrary.
+
+3. Once L forgets its last bit, comparing the equation with a final input0/1
+forces M to forget its last bit too. Strip both by one cell; repeat induction.
+
+4. Width1 base, NO anchoring assumption needed. Put a=L0,b=L1,m=M00,
+p=M01,n=M10,q=M11. The Rule30 truth-table equations give:
+000: a*m=m*a
+001: b*m=p*a
+010: b*p=n*b
+011: b*p=q*b -> n=q by right cancellation
+101: a*n=p*a
+110: a*q=n*b -> a*n=n*b
+Hence b*p=n*b=a*n=p*a=b*m, so p=m by left cancellation.
+Then b*m=m*a=a*m, so b=a by right cancellation. No finiteness/commutativity.
+
+5. Therefore anchored L is constant a at every width. Undo gauge:
+L(word)=g(tailword)^-1 * a * g(initword).
+On any cyclic spatial row of lengthN the right-to-left L product is conjugate
+to a^N, independent of the row. A putative invariant has no configuration data.
+
+SCOPE: L finite width, M one-cell halo, homogeneous translation covariance,
+GROUP-valued (invertible/cancellative). Noninvertible semigroups, nonlocal or
+unbounded temporal transport, or other observables are not ruled out. Larger
+temporal ranges might be peelable by outer-variable cancellation but that
+extension is NOT proved here. This is not a seed aperiodicity theorem.
+
+CURRENT CODE: proof/GroupCocycle.lean has the identity-anchored induction and
+endpoint/cropping helpers; first fix its two remaining errors, then generalize
+Anchored to a constant a and use the cube base above, then add gauge construction.
+Lean runner lean_run.py uses fixed4.35 and pinned Mathlib cache. Every publishable
+module must get fresh source replay, unchanged Check.lean, standard axioms,
+explicit scope/type guards and current-catalog/primary-source novelty review.

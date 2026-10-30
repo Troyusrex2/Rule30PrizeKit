@@ -1,0 +1,90 @@
+{
+  "records": [
+    {
+      "q": 2,
+      "all_pairs": 16,
+      "biinfinite_core": 6,
+      "nonunique_predecessor": null,
+      "period_drop": null,
+      "witness": null
+    },
+    {
+      "q": 4,
+      "all_pairs": 256,
+      "biinfinite_core": 6,
+      "nonunique_predecessor": null,
+      "period_drop": null,
+      "witness": null
+    },
+    {
+      "q": 8,
+      "all_pairs": 65536,
+      "biinfinite_core": 46,
+      "nonunique_predecessor": null,
+      "period_drop": {
+        "a": 87,
+        "b": 170,
+        "period_a": 8,
+        "period_b": 2,
+        "node": 22442
+      },
+      "witness": {
+        "left": {
+          "path": [
+            [
+              87,
+              170
+            ],
+            [
+              168,
+              87
+            ],
+            [
+              212,
+              168
+            ],
+            [
+              172,
+              212
+            ],
+            [
+              178,
+              172
+            ],
+            [
+              202,
+              178
+            ],
+            [
+              43,
+              202
+            ],
+            [
+              172,
+              43
+            ]
+          ],
+          "cycle_starts_at": 4
+        },
+        "right": {
+          "path": [
+            [
+              87,
+              170
+            ],
+            [
+              170,
+              85
+            ],
+            [
+              85,
+              170
+            ]
+          ],
+          "cycle_starts_at": 1
+        }
+      }
+    }
+  ],
+  "seconds": 0.1410000000614673
+}

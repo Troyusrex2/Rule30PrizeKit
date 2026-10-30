@@ -1,0 +1,51 @@
+{
+  "formal_submission_made": false,
+  "attempts": {
+    "notebook-build.log.guard.json": {
+      "command_basename": "wolframscript.exe",
+      "exit": 1,
+      "seconds": 17.047,
+      "peak_owned_mib": 395.51,
+      "stopped": null,
+      "limits": {
+        "seconds": 180,
+        "mib": 2560
+      }
+    },
+    "notebook-build-fixed.log.guard.json": {
+      "command_basename": "wolframscript.exe",
+      "exit": 15,
+      "seconds": 122.968,
+      "peak_owned_mib": 2577.93,
+      "stopped": "owned_rss_cap",
+      "limits": {
+        "seconds": 180,
+        "mib": 2560
+      }
+    },
+    "notebook-build-low-memory.log.guard.json": {
+      "command_basename": "wolframscript.exe",
+      "exit": 15,
+      "seconds": 109.594,
+      "peak_owned_mib": 2572.37,
+      "stopped": "owned_rss_cap",
+      "limits": {
+        "seconds": 180,
+        "mib": 2560
+      }
+    },
+    "notebook-build-final.log.guard.json": {
+      "command_basename": "wolframscript.exe",
+      "exit": 15,
+      "seconds": 110.875,
+      "peak_owned_mib": 2997.26,
+      "stopped": "free_physical_memory_guard",
+      "limits": {
+        "seconds": 180,
+        "mib": 3072,
+        "min_free_mib": 768
+      }
+    }
+  },
+  "stopped_retries": true
+}

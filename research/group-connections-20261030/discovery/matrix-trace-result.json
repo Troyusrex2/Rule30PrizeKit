@@ -1,0 +1,42 @@
+{
+  "controls": [
+    {
+      "rule": 204,
+      "all_selected_pass": true
+    },
+    {
+      "rule": 240,
+      "all_selected_pass": true
+    },
+    {
+      "rule": 30,
+      "width1_exact_positives_pass_finite_control": true
+    }
+  ],
+  "results": [
+    {
+      "width": 1,
+      "tested": 37,
+      "total": 256,
+      "nonconstant_after_finite_prune": 1,
+      "exact_positive": 1,
+      "seconds": 0.031,
+      "complete": false
+    }
+  ],
+  "positive": {
+    "width": 1,
+    "labels": [
+      2,
+      4
+    ],
+    "witness": {
+      "length": 2,
+      "word": 1,
+      "vacuum_trace": 0,
+      "trace": 1
+    }
+  },
+  "seconds": 0.078,
+  "interpretation": "Bounded representation family only. Nonconstancy search uses fixed lengths<=8; universal invariance check uses exact reachable linear spans."
+}

@@ -1,0 +1,13 @@
+{
+  "candidate": "No genuinely period16 point for the sheared Rule30 map; target is a structural periodic-background classification, not another width certificate.",
+  "test": "Wolfram FindInstance Boolean SAT on16x32 cyclic spacetime, exact Phi update, require row8 differs from row0.",
+  "limits": {
+    "kernel_wall_seconds": 35,
+    "external_timeout_seconds": 45,
+    "time_constrained_sat_seconds": 25,
+    "memory_bytes": 2147483648,
+    "no_install": true
+  },
+  "interpretation": "A model refutes the uniform candidate. UNSAT proves only this finite torus; timeout is unresolved. Independent Python literal update validates any returned row.",
+  "control": "Period8 ring4 must have a genuine8 solution."
+}

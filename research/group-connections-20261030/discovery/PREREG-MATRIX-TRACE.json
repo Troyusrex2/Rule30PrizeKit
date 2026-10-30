@@ -1,0 +1,28 @@
+{
+  "purpose": "Escape invertible group-cocycle cancellation using singular binary matrices and direct cyclic trace invariance.",
+  "observable": "trace over F2 of ordered products of Mat2(F2) labels on spatial windows",
+  "checks": "Exact all-length decision by reachable linear spans of paired old/new matrix products in the deBruijn graph; nonconstancy witness at fixed lengths up to8. No finite ring cutoff is used for invariance.",
+  "families": [
+    {
+      "width": 1,
+      "assignments": 256
+    },
+    {
+      "width": 2,
+      "assignments": 65536
+    }
+  ],
+  "limits": {
+    "wall_seconds": 120,
+    "stop_after_first_nonconstant_law": true
+  },
+  "controls": [
+    "rule204 identity",
+    "rule240 shift",
+    "scalar direct cycle enumeration for selected assignments"
+  ],
+  "scope_limits": [
+    "F2 trace cannot detect ordinary Z2 parity represented in characteristic2; a negative does not eliminate noninvertible invariants generally.",
+    "Only two-by-two binary matrices and width1/2, not all finite memories."
+  ]
+}

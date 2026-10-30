@@ -1,0 +1,31 @@
+Local matrix-product experiment, 2026-10-30.
+
+For a word of w adjacent row bits, assign L(word) in a finite group. For a
+word of w+1 bits, assign temporal M(word). An input window a0..a(w+1) gives
+old central block a1..aw and new block F(a0,a1,a2)..F(a(w-1),aw,a(w+1)).
+The equation is L_new M_prefix = M_suffix L_old.
+
+On a cyclic row, products of L from right to left then evolve by conjugacy:
+P_new=M_root P_old M_root^-1. With L(vacuum)=I this also applies to finite
+defects padded by zeros. Gauge at the spatial vertices (words of lengthw-1)
+acts L_edge -> G_target L_edge G_source^-1, preserving the local class and
+the permitted temporal window. An undirected spanning tree of deBruijn
+vertices can therefore have all L labels set to I. The allones loop must
+also have L=I because its updated block is allzero and temporal transport
+is invertible. A remaining nonidentity edge is a nongauge L assignment.
+
+For each L assignment, solve for M without enumerating every M vertex.
+A directed BFS of temporal deBruijn vertices (lengthw+1) gives
+M_v=A_v M_root B_v with A_root=B_root=I. A tree edge e:u->v gives
+A_v=L_new(e) A_u, B_v=B_u L_old(e)^-1. For any edge, consistency requires
+U M_root = M_root V where
+U=A_v^-1 L_new(e) A_u, V=B_v L_old(e) B_u^-1.
+Precompute a bitset of allowed M_root for every(U,V), intersect it over all
+non-tree edges, and reject when empty. Recover one root if any survive,
+then independently check every original local equation.
+
+This is a finite-group cocycle search, not a statistical invariant fit and
+not an assumption of a closed coarse row. A positive law would need a new
+argument connecting its spatial product to the actual singleton boundary.
+No such bridge is presumed. A negative result is restricted to the registered
+groups/windows/vacuum normalization.

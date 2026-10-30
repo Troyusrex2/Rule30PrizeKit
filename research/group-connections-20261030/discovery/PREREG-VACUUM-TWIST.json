@@ -1,0 +1,10 @@
+{
+ "reason":"The identity-vacuum Lax ansatz admits an apparent uniform gauge/endpoint obstruction. Standard spectral Lax matrices often have a NONidentity vacuum; that class was not tested and is not ruled out by the current argument.",
+ "candidate":"Same finite-range group Lax equation, but L(allzero)=a ranges over conjugacy-class representatives. The allones equation only requires L(allones) conjugate to a, not identity.",
+ "gauge":"Keep the vacuum loop a and gauge all spatial spanning-tree edges to identity. Exclude the unique normalized connection gauge-equivalent to assigning a to EVERY edge; that carries only background length, not configuration information.",
+ "stages":[{"group":"SL2_F2","widths":[1,2,3]},{"group":"SL2_dual_F2","widths":[1,2]},{"group":"SL2_F4","widths":[1,2]}],
+ "wall_seconds_per_stage":45,
+ "positive_verification":"Recover M, verify every original local equation, and exhibit spatial monodromy depending on the row rather than only vacuum/length before making any invariant claim.",
+ "negative_scope":"Only registered finite groups/window sizes; no statement about all spectral groups or unbounded memory.",
+ "no_prize_implication_assumed":true
+}
