@@ -1,0 +1,7 @@
+{
+  "registered_before_execution": true,
+  "mechanism": "For fixed initial right half R, left-permutivity makes the map E_R from the initial left-ray bits to the center trace a compatible family of binary-prefix permutations. Test whether the change-of-right-context T=E_1^{-1} E_0 has a small finite-state Mealy presentation.",
+  "bounds": {"prefix_bits": 16, "section_prefix_depths": [0,1,2,3,4,5,6,7,8], "distinguishing_suffix_bits": 8, "wall_seconds": 30},
+  "right_contexts": "Only the initial cell at physical +1 differs (0 versus1); every farther-right cell is white.",
+  "decision": "If more than16 distinct section fingerprints occur at one depth, reject every <=16-state deterministic Mealy realization. Finite fingerprint counts do not settle existence of a larger finite-state machine, infinite-state complexity, or EdgeObservable."
+}

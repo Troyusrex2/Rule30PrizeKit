@@ -1,0 +1,7 @@
+{
+  "registered_before_execution": true,
+  "claim_tested": "For nonzero a,b<2^W, if Phi^t(a) and Phi^t(b) have the same bit at c+t for every 0<=t<=2W, then a and b have the same bit length. Here Phi(x)=x XOR((x<<1) OR(x<<2)) and 0<=c<W.",
+  "bounds": {"width_min": 1, "width_max": 16, "observer_indices": "all 0..W-1", "wall_seconds": 60, "witness_followup_times": "0..4W inclusive"},
+  "motivation": "Post-hoc final audit of the proposed 2W edge bound across all observer placements. This reduces maximum width from18, retaining the same relative time bound. No wider or longer follow-up census in this block.",
+  "decision": "Any unequal-edge collision refutes the quantitative bound only, not infinite EdgeObservable. A finite successful census is not evidence of a proof or prize solution."
+}

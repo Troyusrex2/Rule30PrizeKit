@@ -1,0 +1,7 @@
+{
+  "registered_utc": "2026-10-30T03:06:49Z",
+  "claim_tested": "For any two nonzero configurations supported in a common W-cell interval with the observer at R=floor(W/2)-1, unequal left edges imply a center disagreement at some time 0<=t<=2W.",
+  "bounds": {"width_min": 1, "width_max": 18, "wall_seconds": 30, "witness_followup_times": "0..4W inclusive"},
+  "method": "Enumerate every nonzero W-bit row, group exact time-ordered center trace prefixes, stop at the first unequal-left-edge collision. Validate any witness independently with literal physical-coordinate Rule30.",
+  "interpretation": "A collision refutes only this proposed linear horizon, never EdgeObservable. No collision is finite evidence only, not a theorem. No enlargement after this run."
+}
