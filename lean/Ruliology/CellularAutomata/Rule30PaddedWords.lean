@@ -5,6 +5,8 @@ public import Ruliology.CellularAutomata.Rule30WhitePad10111
 public import Ruliology.CellularAutomata.Rule30WhiteEndNine
 public import Ruliology.CellularAutomata.Rule30WhiteRunEight
 public import Ruliology.CellularAutomata.Rule30WordRotation
+public import Ruliology.CellularAutomata.Rule30White17Runs
+public import Ruliology.CellularAutomata.Rule30GrammarRuns
 public import Ruliology.CellularAutomata.Rule30Realization
 public import Ruliology.CellularAutomata.Rule30ArbitraryWhitePadding
 
@@ -13,12 +15,15 @@ public import Ruliology.CellularAutomata.Rule30ArbitraryWhitePadding
 
 The center column of the single seed is never eventually the repeating word `0^r u`, a white run
 of length `r` followed by a tail `u`, once `r` reaches a bound that depends on `u`.
-`paddedBound u` retains the sharper catalog bounds for tails of at most six cells and uses
+`paddedBound u` retains the sharper catalog bounds for tails of at most six cells, adds bounds
+7 for `1111` and 17 for other pure black tails of length at least three, and uses
 `Rule30ArbitraryWhitePadding.paddingThreshold` for longer tails. `no_padded_word` covers every
 tail, including empty and all-white tails:
 
 | Tail `u` | Bound | Proof |
 |---|---|---|
+| `1111` | 7 | `not_eventuallyWord_zeros_1111`, from the uniform grammar |
+| `1^k`, `k ≥ 3`, `k ≠ 4` | 17 | `no_padded_word_black` (any length) |
 | `11` | 8 | `Rule30WhiteRunEight.no_white_run_11_ge8` |
 | `10111` | 9 | `Rule30WhitePad10111.not_eventually_zeros_10111` |
 | `1` | 9 | `Rule30WhiteEndNine.not_eventually_white_end_ge9`, rotated |
@@ -42,6 +47,8 @@ def paddedBound (u : List Bool) : Nat :=
   if u = [true, true] then 8
   else if u = [true, false, true, true, true] then 9
   else if u = [true] then 9
+  else if u = [true, true, true, true] then 7
+  else if u = List.replicate u.length true ∧ 3 ≤ u.length then 17
   else if u.length ≤ 4 then 49
   else if u.length ≤ 5 then 69
   else if u.length ≤ 6 then 74
@@ -85,6 +92,26 @@ theorem not_eventuallyWord_zeros_11 (r : Nat) (hr : 8 ≤ r) :
       List.getElem?_append_right (by simp)]
     simp
 
+/-- All pure black tails of length at least three, including lengths beyond the six-cell API. -/
+theorem no_padded_word_black (k : Nat) (hk : 3 ≤ k) (q : Nat) (hq : 17 ≤ q) :
+    ¬ EventuallyWord (List.replicate q false ++ List.replicate k true) := by
+  intro h
+  exact Rule30White17Runs.not_eventually_black_white k q (by omega) hq
+    (eventuallyWord_swap (by simp; omega) h)
+
+/-- The singleton four-black grammar block, rotated to start at its white run. -/
+theorem not_eventuallyWord_zeros_1111 (q : Nat) (hq : 7 ≤ q) :
+    ¬ EventuallyWord (List.replicate q false ++ [true, true, true, true]) := by
+  intro h
+  have hg := Rule30GrammarRuns.not_eventually_grammar [(4, q)] (by simp)
+    (by
+      intro a ha
+      have ha' : a = (4, q) := by simpa using ha
+      subst a
+      exact Or.inr (Or.inr (Or.inl ⟨rfl, hq⟩)))
+  apply hg
+  simpa using eventuallyWord_swap (by simp) h
+
 private theorem replicate_getD (r n : Nat) : (List.replicate r false).getD n false = false := by
   induction r generalizing n with
   | zero => simp
@@ -113,17 +140,23 @@ theorem no_padded_word (u : List Bool) (r : Nat) (hr : paddedBound u ≤ r) :
     exact Rule30WhitePad10111.not_eventually_zeros_10111 r (by simpa [paddedBound] using hr)
   by_cases h1 : u = [true]
   · subst h1; exact not_eventuallyWord_zeros_one r (by simpa [paddedBound] using hr)
+  by_cases h1111 : u = [true, true, true, true]
+  · subst h1111; exact not_eventuallyWord_zeros_1111 r (by simpa [paddedBound] using hr)
+  by_cases hblack : u = List.replicate u.length true ∧ 3 ≤ u.length
+  · have hq : 17 ≤ r := by simpa only [paddedBound, ite_eq_right h11, ite_eq_right h10111, ite_eq_right h1, ite_eq_right h1111, ite_eq_left hblack] using hr
+    rw [hblack.1]
+    exact no_padded_word_black _ hblack.2 r hq
   by_cases h4 : u.length ≤ 4
   · exact Rule30ShortTail.no_short_tail_seed u h4 r
-      (by simpa [paddedBound, h11, h10111, h1, h4] using hr)
+      (by simpa [paddedBound, h11, h10111, h1, h1111, hblack, h4] using hr)
   by_cases h5 : u.length ≤ 5
   · exact Rule30FiveTail.no_five_tail_seed u h5 r
-      (by simpa [paddedBound, h11, h10111, h1, h4, h5] using hr)
+      (by simpa [paddedBound, h11, h10111, h1, h1111, hblack, h4, h5] using hr)
   by_cases h6 : u.length ≤ 6
   · exact Rule30SixTailSharpened.no_six_tail_seed u h6 r
-      (by simpa [paddedBound, h11, h10111, h1, h4, h5, h6] using hr)
+      (by simpa [paddedBound, h11, h10111, h1, h1111, hblack, h4, h5, h6] using hr)
   have hq : Rule30ArbitraryWhitePadding.paddingThreshold u.length ≤ r := by
-    simpa [paddedBound, h11, h10111, h1, h4, h5, h6] using hr
+    simpa [paddedBound, h11, h10111, h1, h1111, hblack, h4, h5, h6] using hr
   by_cases hb : ∃ j, j < u.length ∧ u.getD j false = true
   · intro hw
     have hpos : 0 < (List.replicate r false ++ u).length := by
