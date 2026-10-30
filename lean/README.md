@@ -405,6 +405,7 @@ Q01 was also kernel-checked for width ≤ 56 during the attempt. That finite che
 | Module | Added | What it proves | Headline theorems |
 |---|---|---|---|
 | `Rule30Predecessors` | 10-10 | A corrected form of the Feynmans' predecessor theorem: rule 30 on a cyclic register. | `predCount_eq_three_iff`, `predCount_eq_one_iff` |
+| `Rule30GroupCocycle` | 2026-10-30 | For any group and independently placed finite row windows, a homogeneous one-step zero-curvature connection is a local vertex gauge of two commuting vacuum constants; cyclic spatial products are conjugate to vacuum powers. No finiteness, commutativity, identity-vacuum, or minimal-range premise. Includes pure-gauge controls and a Boolean local-flux corollary; no prize solution or noninvertible/nonlocal classification. Contributed by Troy Lowry with OpenAI Codex. | `arbitrary_local_supports`, `full_background_connection`, `cyclic_products_background`, `boolean_flux_coboundary` |
 | `Rule30PredecessorCounts` | 10-10 | How many registers have 0, 1, 2 or 3 predecessors. | `sum_predCount`, `numWithPreds_zero` |
 | `Rule30Blocks` | 10-10 | Only 24 of the 32 possible 3×2 blocks occur. | `blockAt_allowed`, `occurs_iff`, `occurs_single_cell` |
 | `BusyBeaverLifetimes` | 10-10 | Busy-beaver lifetimes of four cellular automata. `Rule30Blocks` reuses its bit-plane simulation. | `lifetime450504084`, `lifetime5810255963295` |
