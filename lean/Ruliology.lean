@@ -8,6 +8,7 @@ public import Ruliology.CellularAutomata.Rule30Prize
 public import Ruliology.CellularAutomata.Rule30CommonGauge
 public import Ruliology.CellularAutomata.Rule30LocalConservation
 public import Ruliology.CellularAutomata.Rule30ProductParity
+public import Ruliology.CellularAutomata.Rule30GroupCocycle
 public import Ruliology.CellularAutomata.Rule30Window
 public import Ruliology.CellularAutomata.Rule30MaskedJen
 public import Ruliology.CellularAutomata.Rule30BlackRuns
