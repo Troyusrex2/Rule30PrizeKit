@@ -120,6 +120,13 @@ public import Ruliology.CellularAutomata.Rule30PaddedWords
 public import Ruliology.CellularAutomata.Rule30FrozenRuler
 public import Ruliology.CellularAutomata.Rule30EdgeStaircases
 public import Ruliology.CellularAutomata.Rule30PrefixMerger
+public import Ruliology.CellularAutomata.Rule30BlackRunErosion
+public import Ruliology.CellularAutomata.Rule30LeftReset
+public import Ruliology.CellularAutomata.Rule30LeftUnbounded
+public import Ruliology.CellularAutomata.Rule30SettledBarrier
+public import Ruliology.CellularAutomata.Rule30FrontLaw
+public import Ruliology.CellularAutomata.Rule30SettledBarrierEffective
+public import Ruliology.CellularAutomata.Rule30WhiteSpacing
 
 /-!
 # Rule 30 Prize: Lean snapshot

@@ -1,0 +1,270 @@
+module
+
+public import Ruliology.CellularAutomata.Rule30Prize
+public import Ruliology.CellularAutomata.Rule30Diagonals
+
+/-!
+# Rule30LeftReset
+
+Reset and parity accumulation for left diagonals. The eventual period divides a power of two indexed by the count of eventually white diagonals.
+-/
+
+@[expose] public section
+
+namespace Ruliology.CellularAutomata
+namespace Rule30LeftReset
+
+open Rule30Diagonals
+
+section Generic
+variable {x a b : Nat → Bool}
+
+theorem periodic_iter {f : Nat → Bool} {s L : Nat} (hf : ∀ t, s ≤ t → f (t + L) = f t) :
+    ∀ k t, s ≤ t → f (t + k * L) = f t := by
+  intro k
+  induction k with
+  | zero => intro t _; simp
+  | succ k ih =>
+    intro t ht
+    rw [show t + (k + 1) * L = (t + k * L) + L by rw [Nat.succ_mul]; omega, hf _ (by omega), ih t ht]
+
+theorem periodic_two {f : Nat → Bool} {s L : Nat} (hf : ∀ t, s ≤ t → f (t + L) = f t) :
+    ∀ t, s ≤ t → f (t + 2 * L) = f t := by
+  intro t ht
+  rw [Nat.two_mul, ← Nat.add_assoc, hf _ (by omega), hf t ht]
+
+theorem reset_periodic {s L : Nat}
+    (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (ha : ∀ t, s ≤ t → a (t + L) = a t) (hb : ∀ t, s ≤ t → b (t + L) = b t)
+    {s0 : Nat} (hs : s ≤ s0) (hreset : b s0 = true) :
+    ∀ t, s0 + 1 ≤ t → x (t + L) = x t := by
+  have key : ∀ n, x (s0 + 1 + n + L) = x (s0 + 1 + n) := by
+    intro n
+    induction n with
+    | zero =>
+      rw [show s0 + 1 + 0 + L = (s0 + L) + 1 by omega, show s0 + 1 + 0 = s0 + 1 by omega, hx, hx,
+        ha s0 hs, hb s0 hs, hreset]
+      simp
+    | succ n ih =>
+      rw [show s0 + 1 + (n + 1) + L = (s0 + 1 + n + L) + 1 by omega,
+        show s0 + 1 + (n + 1) = (s0 + 1 + n) + 1 by omega, hx, hx, ha _ (by omega),
+        hb _ (by omega), ih]
+  intro t ht
+  obtain ⟨n, rfl⟩ : ∃ n, t = s0 + 1 + n := ⟨t - (s0 + 1), by omega⟩
+  exact key n
+
+def par (a : Nat → Bool) (t : Nat) : Nat → Bool
+  | 0 => false
+  | n + 1 => xor (par a t n) (a (t + n))
+
+theorem accum {s : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (hb : ∀ t, s ≤ t → b t = false) :
+    ∀ t, s ≤ t → ∀ n, x (t + n) = xor (x t) (par a t n) := by
+  intro t ht n
+  induction n with
+  | zero => simp [par]
+  | succ n ih =>
+    rw [show t + (n + 1) = (t + n) + 1 by omega, hx, hb _ (by omega), ih]
+    simp only [par, Bool.false_or]
+    cases a (t + n) <;> cases x t <;> cases par a t n <;> rfl
+
+theorem par_periodic {s L : Nat} (ha : ∀ t, s ≤ t → a (t + L) = a t) :
+    ∀ t, s ≤ t → ∀ n, par a (t + L) n = par a t n := by
+  intro t ht n
+  induction n with
+  | zero => rfl
+  | succ n ih =>
+    simp only [par]
+    rw [ih, show t + L + n = (t + n) + L by omega, ha _ (by omega)]
+
+theorem white_shift {s L : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (hb : ∀ t, s ≤ t → b t = false) :
+    ∀ t, s ≤ t → x (t + L) = xor (x t) (par a t L) :=
+  fun t ht => accum hx hb t ht L
+
+theorem white_double {s L : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (ha : ∀ t, s ≤ t → a (t + L) = a t) (hb : ∀ t, s ≤ t → b t = false) :
+    ∀ t, s ≤ t → x (t + 2 * L) = x t := by
+  intro t ht
+  rw [Nat.two_mul, ← Nat.add_assoc, white_shift hx hb (t + L) (by omega), white_shift hx hb t ht,
+    par_periodic ha t ht L]
+  cases x t <;> cases par a t L <;> rfl
+
+theorem white_period_iff {s L : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (hb : ∀ t, s ≤ t → b t = false) :
+    ∀ t, s ≤ t → (x (t + L) = x t ↔ par a t L = false) := by
+  intro t ht
+  rw [white_shift hx hb t ht]
+  cases x t <;> cases par a t L <;> simp
+
+theorem period_or_white {s L : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (ha : ∀ t, s ≤ t → a (t + L) = a t) (hb : ∀ t, s ≤ t → b (t + L) = b t) :
+    (∀ t, s + L ≤ t → x (t + L) = x t) ∨ (∀ t, s ≤ t → b t = false) := by
+  by_cases hL : L = 0
+  · left; intro t _; subst hL; simp
+  by_cases h : ∃ s0, s ≤ s0 ∧ s0 < s + L ∧ b s0 = true
+  · obtain ⟨s0, hs, hlt, hr⟩ := h
+    left
+    intro t ht
+    exact reset_periodic hx ha hb hs hr t (by omega)
+  · right
+    have hw : ∀ s0, s ≤ s0 → s0 < s + L → b s0 = false := by
+      intro s0 h1 h2
+      cases hb0 : b s0
+      · rfl
+      · exact absurd ⟨s0, h1, h2, hb0⟩ h
+    intro t ht
+    obtain ⟨q, r, hrL, hts⟩ : ∃ q r, r < L ∧ t = s + r + q * L := by
+      refine ⟨(t - s) / L, (t - s) % L, Nat.mod_lt _ (Nat.pos_of_ne_zero hL), ?_⟩
+      have hdm := Nat.div_add_mod (t - s) L
+      generalize (t - s) / L = q at hdm ⊢
+      generalize (t - s) % L = r at hdm ⊢
+      rw [Nat.mul_comm] at hdm
+      generalize q * L = m at hdm ⊢
+      omega
+    subst hts
+    rw [periodic_iter hb q (s + r) (by omega)]
+    exact hw _ (by omega) (by omega)
+
+theorem white_forces_eq {s : Nat} (hx : ∀ t, x (t + 1) = xor (a t) (b t || x t))
+    (hw : ∀ t, s ≤ t → x t = false) :
+    ∀ t, s ≤ t → a t = b t := by
+  intro t ht
+  have h := hx t
+  rw [hw _ (by omega), hw _ ht] at h
+  revert h
+  cases a t <;> cases b t <;> decide
+
+end Generic
+
+theorem D_period_after_reset {j s L s0 : Nat}
+    (ha : ∀ t, s ≤ t → D j (t + L) = D j t) (hb : ∀ t, s ≤ t → D (j + 1) (t + L) = D (j + 1) t)
+    (hs : s ≤ s0) (hreset : D (j + 1) s0 = true) :
+    ∀ t, s0 + 1 ≤ t → D (j + 2) (t + L) = D (j + 2) t :=
+  reset_periodic (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) ha hb hs hreset
+
+theorem D_white_shift {j s L : Nat} (hb : ∀ t, s ≤ t → D (j + 1) t = false) :
+    ∀ t, s ≤ t → D (j + 2) (t + L) = xor (D (j + 2) t) (par (D j) t L) :=
+  white_shift (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) hb
+
+theorem D_white_double {j s L : Nat}
+    (ha : ∀ t, s ≤ t → D j (t + L) = D j t) (hb : ∀ t, s ≤ t → D (j + 1) t = false) :
+    ∀ t, s ≤ t → D (j + 2) (t + 2 * L) = D (j + 2) t :=
+  white_double (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) ha hb
+
+theorem D_white_period_iff {j s L : Nat} (hb : ∀ t, s ≤ t → D (j + 1) t = false) :
+    ∀ t, s ≤ t → (D (j + 2) (t + L) = D (j + 2) t ↔ par (D j) t L = false) :=
+  white_period_iff (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) hb
+
+theorem D_period_or_white {j s L : Nat}
+    (ha : ∀ t, s ≤ t → D j (t + L) = D j t) (hb : ∀ t, s ≤ t → D (j + 1) (t + L) = D (j + 1) t) :
+    (∀ t, s + L ≤ t → D (j + 2) (t + L) = D (j + 2) t) ∨ (∀ t, s ≤ t → D (j + 1) t = false) :=
+  period_or_white (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) ha hb
+
+theorem D_white_of_eq {j s : Nat} (hw : ∀ t, s ≤ t → D (j + 2) t = false) :
+    ∀ t, s ≤ t → D j t = D (j + 1) t :=
+  white_forces_eq (x := D (j + 2)) (a := D j) (b := D (j + 1)) (D_step j) hw
+
+def EvPer (f : Nat → Bool) (L : Nat) : Prop := ∃ T, ∀ t, T ≤ t → f (t + L) = f t
+
+def EvWhite (f : Nat → Bool) : Prop := ∃ T, ∀ t, T ≤ t → f t = false
+
+theorem EvPer.two {f : Nat → Bool} {L : Nat} (h : EvPer f L) : EvPer f (2 * L) :=
+  let ⟨T, hT⟩ := h
+  ⟨T, periodic_two hT⟩
+
+theorem D_evper_or_evwhite {j L : Nat} (h1 : EvPer (D j) L) (h2 : EvPer (D (j + 1)) L) :
+    EvPer (D (j + 2)) L ∨ EvWhite (D (j + 1)) := by
+  obtain ⟨T1, h1⟩ := h1
+  obtain ⟨T2, h2⟩ := h2
+  rcases D_period_or_white (s := max T1 T2) (fun t ht => h1 t (by omega))
+    (fun t ht => h2 t (by omega)) with h | h
+  · exact Or.inl ⟨max T1 T2 + L, h⟩
+  · exact Or.inr ⟨max T1 T2, h⟩
+
+theorem D_evper_double {j L : Nat} (h1 : EvPer (D j) L) (hw : EvWhite (D (j + 1))) :
+    EvPer (D (j + 2)) (2 * L) := by
+  obtain ⟨T1, h1⟩ := h1
+  obtain ⟨T2, hw⟩ := hw
+  exact ⟨max T1 T2, D_white_double (s := max T1 T2) (fun t ht => h1 t (by omega))
+    (fun t ht => hw t (by omega))⟩
+
+theorem D_evwhite_eq {j : Nat} (hw : EvWhite (D (j + 2))) :
+    ∃ T, ∀ t, T ≤ t → D j t = D (j + 1) t :=
+  let ⟨T, hT⟩ := hw
+  ⟨T, D_white_of_eq hT⟩
+
+open Classical in
+
+noncomputable def whiteCount : Nat → Nat
+  | 0 => 0
+  | j + 1 => whiteCount j + (if EvWhite (D (j + 1)) then 1 else 0)
+
+theorem D_zero_evper (L : Nat) : EvPer (D 0) L :=
+  ⟨0, fun t _ => by rw [D_zero, D_zero]⟩
+
+theorem D_one_evper (L : Nat) : EvPer (D 1) L :=
+  ⟨1, fun t ht => by
+    obtain ⟨s, rfl⟩ : ∃ s, t = s + 1 := ⟨t - 1, by omega⟩
+    rw [show s + 1 + L = (s + L) + 1 by omega, D_one, D_one]⟩
+
+theorem D_evper_pow_whiteCount_pair :
+    ∀ j, EvPer (D j) (2 ^ whiteCount j) ∧ EvPer (D (j + 1)) (2 ^ whiteCount j) := by
+  intro j
+  induction j with
+  | zero => exact ⟨D_zero_evper _, D_one_evper _⟩
+  | succ j ih =>
+    obtain ⟨h1, h2⟩ := ih
+    by_cases hw : EvWhite (D (j + 1))
+    · have hc : whiteCount (j + 1) = whiteCount j + 1 := by
+        simp only [whiteCount, hw, ↓reduceIte]
+      rw [hc, Nat.pow_succ, Nat.mul_comm]
+      exact ⟨h2.two, D_evper_double h1 hw⟩
+    · have hc : whiteCount (j + 1) = whiteCount j := by
+        simp only [whiteCount, hw, ↓reduceIte, Nat.add_zero]
+      rw [hc]
+      rcases D_evper_or_evwhite h1 h2 with h | h
+      · exact ⟨h2, h⟩
+      · exact absurd h hw
+
+theorem D_evper_pow_whiteCount (j : Nat) : EvPer (D j) (2 ^ whiteCount j) :=
+  (D_evper_pow_whiteCount_pair j).1
+
+theorem D_evper_bounded_of_finite_white {N : Nat} (hN : ∀ j, N < j → ¬ EvWhite (D j)) :
+    ∀ j, EvPer (D j) (2 ^ whiteCount N) := by
+  have hc : ∀ j, N ≤ j → whiteCount j = whiteCount N := by
+    intro j hj
+    induction j with
+    | zero => have : N = 0 := by omega
+              subst this; rfl
+    | succ j ih =>
+      rcases Nat.lt_or_ge N (j + 1) with h | h
+      · have : ¬ EvWhite (D (j + 1)) := hN _ h
+        simp only [whiteCount, this, ↓reduceIte, Nat.add_zero]
+        exact ih (by omega)
+      · have : N = j + 1 := by omega
+        rw [this]
+  intro j
+  rcases Nat.lt_or_ge j N with h | h
+  ·
+    have hmono : ∀ i k, i ≤ k → whiteCount i ≤ whiteCount k := by
+      intro i k hik
+      induction k with
+      | zero => simp at hik; subst hik; exact Nat.le_refl _
+      | succ k ih =>
+        rcases Nat.lt_or_ge i (k + 1) with h' | h'
+        · have := ih (by omega)
+          simp only [whiteCount]
+          omega
+        · have : i = k + 1 := by omega
+          subst this; exact Nat.le_refl _
+    obtain ⟨T, hT⟩ := D_evper_pow_whiteCount j
+    obtain ⟨d, hd⟩ : ∃ d, whiteCount N = whiteCount j + d := ⟨_, (Nat.add_sub_cancel' (hmono j N (by omega))).symm⟩
+    refine ⟨T, fun t ht => ?_⟩
+    rw [hd, Nat.pow_add]
+    have := periodic_iter hT (2 ^ d) t ht
+    rwa [Nat.mul_comm] at this
+  · rw [← hc j h]; exact D_evper_pow_whiteCount j
+
+end Rule30LeftReset
+end Ruliology.CellularAutomata
