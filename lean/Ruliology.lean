@@ -112,6 +112,11 @@ public import Ruliology.CellularAutomata.Rule30FiniteClockCertificate
 public import Ruliology.CellularAutomata.Rule30FiniteClockSixteen
 public import Ruliology.CellularAutomata.Rule30TerminalClock
 public import Ruliology.CellularAutomata.Rule30CenterRuns
+public import Ruliology.CellularAutomata.Rule30ResetFreeCore
+public import Ruliology.CellularAutomata.Rule30ResetFreeRuns
+public import Ruliology.CellularAutomata.Rule30ResetFreeStrip
+public import Ruliology.CellularAutomata.Rule30ResetFreeBoundary
+public import Ruliology.CellularAutomata.Rule30ResetFreeThree
 public import Ruliology.CellularAutomata.Rule30EtherThreeErosion
 public import Ruliology.CellularAutomata.Rule30WhiteTailErosion
 public import Ruliology.CellularAutomata.Rule30XorRigidity
