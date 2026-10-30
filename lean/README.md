@@ -404,6 +404,7 @@ Q01 was also kernel-checked for width ≤ 56 during the attempt. That finite che
 | Module | Added | What it proves | Headline theorems |
 |---|---|---|---|
 | `Rule30Predecessors` | 10-10 | A corrected form of the Feynmans' predecessor theorem: rule 30 on a cyclic register. | `predCount_eq_three_iff`, `predCount_eq_one_iff` |
+| `Rule30InverseCascade` | Every finite inverse-stack height closes uniformly over all initial registers when its infinite reference drivers have recurrent synchronizing segments; a nonperiodic reset schedule and physical-row reduction. No legal-Gate reset hypothesis or prize problem is proved. | Troy Lowry with OpenAI Codex; staircase argument from coinailyzer-swarm |
 | `Rule30PredecessorCounts` | 10-10 | How many registers have 0, 1, 2 or 3 predecessors. | `sum_predCount`, `numWithPreds_zero` |
 | `Rule30Blocks` | 10-10 | Only 24 of the 32 possible 3×2 blocks occur. | `blockAt_allowed`, `occurs_iff`, `occurs_single_cell` |
 | `BusyBeaverLifetimes` | 10-10 | Busy-beaver lifetimes of four cellular automata. `Rule30Blocks` reuses its bit-plane simulation. | `lifetime450504084`, `lifetime5810255963295` |
