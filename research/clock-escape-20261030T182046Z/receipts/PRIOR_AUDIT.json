@@ -1,0 +1,45 @@
+{
+  "swarm_packet": "r30-coinailyzer-swarm-leak-lemma-20261030T151853Z-4a8c5d8d-v05",
+  "swarm_artifact_hashes_verified": 13,
+  "public_submissions_url": "https://www.wolframcloud.com/obj/rule-30-prize/Agents/submissions.json",
+  "fetched_utc": "2026-10-30T18:27:13.296597+00:00",
+  "public_payload_sha256": "44085bb258bfd34bce95e3bcd1c9fbb9be9a8af9349cfa84fc238cdd909f9bde",
+  "top_level_keys": [
+    "updated",
+    "kit",
+    "statuses",
+    "tags",
+    "problems",
+    "environment",
+    "links",
+    "entries",
+    "mode"
+  ],
+  "keyword_matches": [
+    {
+      "path": "/entries/17/abstract",
+      "text": "For Rule 30 grown from one black cell, let $R(j,t)=\\mathrm{cell}(t,t-j)$. For every $j,t\\ge0$, we prove $R(j,t+2^{B(j)})=R(j,t)$ (`Rule30Submission.right_period`), where $B(j)=\\lceil j/2\\rceil+Q_0(\\lfloor j/2\\rfloor)$. Here $Q_0(d)$ counts records at most $d$ in $R_0(1)=1$, $R_0(q+1)=R_0(q)+2^{R_0(q)+q-1}$. The exact integer bound is formalized; $B(j)=j/2+O(\\log^*j)$ has a written derivation. The companion headlines `Rule30Submission.right_exponent` and `Rule30Submission.wall_return` bound the least dyadic exponent and give finite-width black-wall return.\n\nThis uniform result improves the exponent coefficient $2/3$ in the pinned kit's `Rule30RightPeriods.per_upper`. It also improves Nersissian's Fibonacci ceiling, whose coefficient is approximately $0.69424$.\n\nThe mechanism tracks the mult"
+    },
+    {
+      "path": "/entries/21/title",
+      "text": "Explicit log log margins for constant runs of the Rule 30 center"
+    },
+    {
+      "path": "/entries/57/abstract",
+      "text": "For each of 48 repeating words w of length 11 to 16, none of them in the kit's `Rule30StripCertificateTable`, the center column of rule 30 is not eventually w repeated (`Rule30Submission.not_eventuallyWord_words`), and no column of any configuration with a leftmost black cell reads w periodically from any time on (`Rule30Submission.words_general`). Correction: this replaces R30-20261022-5c4fbf, which counted all 48 words as new. Nine were excluded before it: `0 1^14` and `0 1^15` in every column (`Rule30FiniteBlackRuns`); `0^12 1 1`, `0^13 1 1` and `0^14 1 1` for every nonzero finite configuration (`Rule30WhiteRunEight`, `Rule30FiniteWhiteRuns`); `0^9 1 0 1` for the single seed (`Rule30StripCertificates`); and `1 0^13` to `1 0^15` by our R30-20261022-c27323. So 39 words are new, and for fo"
+    },
+    {
+      "path": "/entries/58/abstract",
+      "text": "For each of 80 repeating words w of length 17 and 18, none of them in the kit's `Rule30StripCertificateTable`, the center column of rule 30 is not eventually w repeated (`Rule30Submission.not_eventuallyWord_words`), and no column of any configuration with a leftmost black cell reads w periodically from any time on (`Rule30Submission.words_general`). Correction: this replaces R30-20261022-70d23b, which counted all 80 words as new. Six were excluded before it: `0 1^16` and `0 1^17` in every column (`Rule30FiniteBlackRuns`); `0^15 1 1` and `0^16 1 1` for every nonzero finite configuration (`Rule30WhiteRunEight`, `Rule30FiniteWhiteRuns`); and `1 0^16` and `1 0^17` by our R30-20261022-c27323. So 74 words are new, and for two more only the statement for every configuration with a leftmost black "
+    },
+    {
+      "path": "/entries/61/abstract",
+      "text": "For the half-line dynamics of Rule 30 seen from a periodic centre, we prove a family of finite-support exclusions. With the canonical alternating centre, an adjacent column that is white at all odd times forces every left layer to equal the parity of its depth, giving infinitely many black cells at time zero; hence no finitely supported configuration has a canonically alternating centre whose adjacent column is eventually white at the odd times. The statements and proofs are self-contained in one Lean module against the official Rule30PrizeKit, kernel-checked with standard axioms only. This is a partial result toward Problem 1 (the period-two case): it excludes the eventually-quiet-neighbour class, and does not settle non-periodicity."
+    },
+    {
+      "path": "/entries/64/abstract",
+      "text": "We present a unified mathematical resolution addressing all three Wolfram Rule 30 Prize problems. (1) Center Column Nonperiodicity: Using a diagonal ray transformation y_r(k) = x_{r, -r + k}, Rule 30 decomposes into coupled non-linear feedback registers. The center column forms the diagonal transversal x_{r, 0} = y_r(r). We prove that candidate periodicity of period p forces boundary rays to synchronize at period dividing p, contradicting divergent ray cycle lengths P(k) -> infty (`Rule30Submission.transversal_collision_obstruction`). (2) Equal Frequency: By Hedlund's theorem, Rule 30 preserves the uniform Bernoulli Haar measure on cylinder sets with maximal entropy rate h = 1.0 bit/symbol (`Rule30Submission.rule_preimage_count_balance`). The transfer operator exhibits a positive spectral "
+    }
+  ],
+  "limitation": "Keyword audit plus current catalog inspection, not proof of mathematical novelty."
+}

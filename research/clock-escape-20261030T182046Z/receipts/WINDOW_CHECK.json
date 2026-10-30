@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "WindowBarrier.Good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "WindowBarrier.cell",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "WindowBarrier.code",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "WindowBarrier.no_ranking",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "WindowBarrier.no_two_step_ranking",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "WindowBarrier.potential",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "WindowBarrier.window",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "WindowBarrier.no_ranking",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "WindowBarrier.no_two_step_ranking",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "WindowBarrier",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 9,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "seconds": 5.608999999938533,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "93e2b8e4407708eae8f80c4b0cf3c0b1b902ffcbfe8adbf957c18caf97e70c85",
+  "caveat": "Both witnesses restricted to parentless codes. Integer table weights; rational weights follow by finite common-denominator scaling. Exact feature-balance certificates also supplied. No claim about arbitrary potentials or added nonlocal features."
+}

@@ -1,0 +1,306 @@
+{
+  "passed": true,
+  "modules": {
+    "TwoLayerEscape": {
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "TwoLayerEscape.bool_two_stalls",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "TwoLayerEscape.cancel_xor",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "TwoLayerEscape.three_rows_force_white",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "TwoLayerEscape.two_layer_escape",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "TwoLayerEscape.three_rows_force_white",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "TwoLayerEscape.two_layer_escape",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "TwoLayerEscape",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 15,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "source_sha256": "98dd4cdcd1b30d5406e05c2591f4cec90a95888b299feff4b0ac83aa99700069"
+    },
+    "ControlledAlias": {
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "ControlledAlias.Matches",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.Phase",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.U",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.act_is_controlled",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.advance",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.ancestor_compatible",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.code",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.controlled_confined",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.different_forever",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.drive",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.driven",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.initial",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.left",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.lowerC",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.lowerH",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.matches_agree",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.matches_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.matching_forever",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.phase",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.phase_val",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.recurrent_black_control",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.right",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.table_interfaces",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.table_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.U.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.U.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.U.eq_3",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.U.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.driven.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "ControlledAlias.lowerC.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "ControlledAlias.phase.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ControlledAlias.act_is_controlled",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "ControlledAlias.ancestor_compatible",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ControlledAlias.controlled_confined",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ControlledAlias.different_forever",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "ControlledAlias.recurrent_black_control",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "ControlledAlias",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 61,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      },
+      "source_sha256": "8db4d10f76d5969be1e1daf4542c90f011ee582e705406d42cf4c0af2e0bd514"
+    }
+  },
+  "seconds": 7.922000000020489,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+}

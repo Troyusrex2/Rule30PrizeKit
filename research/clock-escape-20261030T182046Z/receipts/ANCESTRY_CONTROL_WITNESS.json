@@ -1,0 +1,109 @@
+{
+  "source_word": "AAACBCCC",
+  "application_order": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    0,
+    0,
+    0
+  ],
+  "initial_pair": [
+    42,
+    43
+  ],
+  "ticks_checked": 256,
+  "max_difference_digit": 4,
+  "period16_prefix_and_tail_returns": 17,
+  "lower_ancestor_one_step_constraint": true,
+  "finite_projected_cycle": {
+    "start": 0,
+    "end": 16,
+    "period": 16,
+    "states": [
+      [
+        0,
+        42,
+        43
+      ],
+      [
+        1,
+        213,
+        212
+      ],
+      [
+        2,
+        810,
+        815
+      ],
+      [
+        3,
+        469,
+        464
+      ],
+      [
+        4,
+        554,
+        561
+      ],
+      [
+        5,
+        725,
+        726
+      ],
+      [
+        6,
+        299,
+        298
+      ],
+      [
+        7,
+        981,
+        982
+      ],
+      [
+        0,
+        43,
+        42
+      ],
+      [
+        1,
+        212,
+        213
+      ],
+      [
+        2,
+        815,
+        810
+      ],
+      [
+        3,
+        464,
+        469
+      ],
+      [
+        4,
+        561,
+        554
+      ],
+      [
+        5,
+        726,
+        725
+      ],
+      [
+        6,
+        298,
+        299
+      ],
+      [
+        7,
+        982,
+        981
+      ]
+    ]
+  },
+  "interpretation": "Synthetic periodic lower controls, NOT actual black-edge ancestry. Existing exact return-word barrier explains the observed confinement; the 256-tick observation alone is not an all-time proof."
+}

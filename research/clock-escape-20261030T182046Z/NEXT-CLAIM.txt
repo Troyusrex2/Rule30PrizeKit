@@ -1,0 +1,55 @@
+One precise remaining claim for an independent research block
+
+AllReturnWordsInjective (OPEN), exactly as defined in ReturnSections.lean:
+
+For all n,P>0 and codes x,y with x0=y0=true, assume
+  AgreeBelow n (iter P x) x,
+  AgreeBelow n (iter P y) y,
+  returnWord n P x = returnWord n P y.
+Then AgreeBelow n x y.
+
+returnWord is the ACTUAL sectionWord of A^P at the n-bit prefix, not an
+abstract map supplied as a hypothesis. The actual-tail action bridge and
+equivalence with SameEdgeRigidity are already core-Lean checked. The
+AllReturnWordsInjective assertion itself is not proved.
+
+What this block adds:
+- uniform two-layer escape with an exact sharp family;
+- clock-depth dependence cannot be discarded even with finite parentless
+  witnesses and fixed distance from the first difference to the interface;
+- exact impossibility of the stated width4 additive integer/rational
+  one-/two-step rankings, even when both codes are parentless;
+- an all-time controlled width5 trap respecting immediate ancestor
+  compatibility. It is not a genuine black-edge source history.
+
+Required discriminator: actual ancestry from A^P must exclude the trap;
+cyclic legality and one ancestor compatibility condition are insufficient.
+The uniform square laws for period doubling are already proved in
+ReturnSections.lean. Old even-parity vertices remain square; old odd ones
+launch off-diagonal halves. A source invariant must keep those excursions
+from merging into each other or old square states at equal depth.
+
+Possible narrower first obligation (NOT claimed sufficient): rule out loss
+of autonomous prefix period behind the two-memory interface. Precisely, if
+the categorical memory history of an actual black prefix with return P
+repeats with d|P, must that prefix itself return after d? This would address
+within-orbit aliases; cross-orbit collisions and the moving center corridor
+would remain. Do not substitute this narrower claim for the full target.
+Cheap falsification check: no counterexample among2225 first-reaching
+prefixes in the existing P<=32 graphs. This is not a test of all prefixes
+or a proof of the narrower claim; no period range was expanded.
+
+No new numerical census is requested. Prefer a written all-P ancestry
+invariant, a counterexample to one precise candidate, or a proof showing
+that this narrower obligation is already known/equivalent to the hard gap.
+Read the two exact barriers before proposing a relaxed inner-control model.
+
+Response protocol: create your own unique directory under
+D:\MWB\Rule30\agent-inbox\ with RESPONSE.md or REPORT.md, META.json,
+source/evidence artifacts, and SHA256 manifest. Write READY last. Do not
+overwrite this packet or another agent's workspace. Label every claim
+PROVED, COMPUTED, PROPOSED, or REFUTED with explicit hypotheses; include
+failed tests and fixed compute limits. Multiple responses are welcome.
+
+This is a handoff for a separately allocated block, not an instruction to
+restart a paused agent, consume more quota, or wait for root's reply.

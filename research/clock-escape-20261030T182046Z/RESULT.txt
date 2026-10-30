@@ -1,0 +1,154 @@
+Rule30 research block: sharp clocks, two-layer escape, and ancestry barriers
+Troy Lowry / root, 2026-10-30. Started18:20:46 UTC; review19:20:46 UTC.
+
+The new constructive result
+--------------------------
+PR61 https://github.com/WolframInstitute/Rule30PrizeKit/pull/61
+head dcf53fb921ee155136723fa29f3dba2ce8d8fae3, contribution/edge-clock-20261030.
+The public module Rule30EdgeClock imports only the existing FrozenRuler core
+closure. Its44 declarations and7 headlines pass the unchanged checker, no
+new axioms, no warnings. The complete168-module catalog was not rebuilt.
+
+Use the actual edge map T: digit0 stays fixed, digit1 XORs digit0, and
+digit(j+2) XORs the OR of digits(j+1),j. Codes may have infinite support.
+
+1. Every positive digit j of EVERY black-edge code changes within ceil(j/2)
+ticks, from EVERY starting time. The single seed attains that bound. Long
+overall clock periods do not imply long consecutive quiet intervals.
+Public functions: freeze_below, flip_bound, flip_bound_from, seed_at_bound.
+
+2. If two codes agree below j+1 and differ there, their next digit j+2
+differs in every window of ceil(j/2)+1 ticks when j>0. The excluded j=0
+case is real: digit1 differences can remain invisible at digit2 forever.
+Public functions: higher_excitation, recurrent_excitation.
+
+3. Every such first difference, INCLUDING digit1, escapes the two-digit
+band {j+1,j+2} into j+3 or j+4 within ceil(j/2)+2 ticks, recurrently from
+every start time. Three consecutive rows of agreement on both interfaces
+force the common lower digit j white. The quiet-clock theorem contradicts
+a long enough white interval. This is uniform in j and in all infinite
+tails, not a larger finite search.
+Public functions: three_rows_force_white, two_layer_escape,
+recurrent_two_layer_escape. Private prototype: TwoLayerEscape.lean.
+
+Sharpness and an induction barrier
+---------------------------------
+ClockDelay.lean gives explicit finite same-black-edge parentless witnesses:
+i=2n+3; X_n has ones at0,i,i+2; Y_n at0,i+1,i+2.
+They first differ at i and agree above K=i+1 through time n+2. Their first
+escape occurs EXACTLY at n+3. Thus the new two-layer bound is attained at
+infinitely many depths. No escape-time bound depending only on K-i can
+hold, even for finite parentless rows. A shared prefix clock must be kept.
+Functions: arbitrary_delay, sharp_two_layer, no_distance_only_bound,
+common_below, first_difference, parentless, finite_pair.
+Checker:67 declarations/6 headlines, no new axioms/warnings.
+
+The construction uses the already-known decoration/edge-shift alias plus
+finite propagation from a far common black edge. The known alias itself
+is not claimed as new. This differs from TraceAmbiguity's fixed-observer
+finite-horizon ambiguity; here the two-layer deadline and its dependence
+on the absolute first-difference index are exact.
+
+Swarm packet audit and exact LP follow-up
+----------------------------------------
+Read and hash-verified every payload in
+r30-coinailyzer-swarm-potential-search-20261030T182946Z-61ecce60-v01.
+Credit: coinailyzer-swarm / Claude for the optimization proposal and feature
+grammar. HiGHS output alone is numerical evidence, not an exact certificate.
+Root extracted exact positive integer duals and kernel-checked the resulting
+universal contradictions in WindowBarrier.lean:
+- K6, position-dependent joint width4 windows, one-step:28 transitions,
+  total weight64, maximum weight5, every feature count balances exactly.
+- Same grammar, two-step amortization:10 transitions, total weight16,
+  maximum weight2, every feature count balances exactly. This completes a
+  case the swarm's time cap left unfinished.
+ALL witness codes in BOTH certificates are parentless (digits1=2), so the
+obstructions survive restricting BOTH members to the parentless class.
+Functions: no_ranking, no_two_step_ranking;9 declarations/2 headlines.
+
+The Lean statements quantify over arbitrary INTEGER tables. Rational table
+weights are excluded by common-denominator scaling over the finite table.
+The supplied exact feature-balance certificates also express the usual
+weighted-sum obstruction independently of floating arithmetic. This is not
+a theorem against every possible potential: nonlocal features, different
+grammars, or other amortization schemes remain possible.
+
+Why the two-layer proof does not close all widths
+-----------------------------------------------
+ControlledAlias.lean converts the earlier checked word AAACBCCC barrier to
+an explicit every-tick driven example. The two finite starts42,43 differ
+forever but agree at EVERY digit>=5 for ALL times. The external controls
+are periodic and c is black every16 ticks. They obey the necessary local
+ancestor rule h=1 => next c differs from c. The interior is exactly the
+edge recurrence, with these two controls substituted below digit0.
+Functions: act_is_controlled, ancestor_compatible, controlled_confined,
+different_forever, recurrent_black_control;61 declarations/5 headlines.
+
+This is NOT an actual same-black-edge Rule30 counterexample. Those controls
+have not been supplied by a genuine finite black-edge ancestry. It proves
+that keeping just ONE ancestor compatibility constraint is insufficient.
+The source-ancestry requirement cannot be dropped from a proposed extension.
+The finite controlled games at widths2,3,4 have no recurrent black-c cycle;
+the exact width5 construction shows why those observations cannot be
+extrapolated. No larger game census was run.
+
+Other diagnostics and public-source audit
+----------------------------------------
+Reused only the already explored P=2,4,8,16,32 source return graphs. Their
+only recurrent components are stripe two-cycles, but no all-P claim follows.
+A temporal linear-complexity diagnostic gets additional values26..32 at
+P32; a simple spectrum restricted to powers of2 plus1 is false. This is a
+failed candidate invariant, not a new nonperiodicity test or proof.
+
+Swarm leak packet v05 hashes all13 matched. Its K11 maximum24 breaks the
+earlier exact3K-8 fit, and its K12 extremal pair starts with the SAME low
+pair11/11. Parentless extremality is not stable on inherited plateaus.
+No new larger-width leak enumeration was performed here.
+
+The official submissions list was checked for prior forms of the clock
+bound. No matching general quiet-time/two-layer theorem was located. Entry
+R30-20261029-9460e3 has a sweeping resolution title but is registered only
+as partial, with no verified prize targets. Its main contradiction assumes
+both ray-period divergence and the needed synchronization; the latter
+bridge is not proved. Its finite Boolean checks do not prove density or
+complexity lower bounds. This audit is not a prize adjudication.
+
+Validation and reproducibility
+------------------------------
+Lean4.35.0, core only; unchanged Check.lean SHA256:
+b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905.
+No sorry, new axiom, native_decide, or bv_decide was introduced. Expanded
+statement guards compile. Receipts retain source hashes and kernel results.
+The unchanged checker itself emits its existing Environment.replay API
+deprecation warning; the new proof modules emit no warnings.
+
+Independent integer controls passed8190 quiet-clock prefixes,8184 one-layer
+cases,64 seed depths, the128-tick exceptional-digit control,32704 two-layer
+paired prefixes up to swapping, and65 exact sharp-family deadlines. These
+are supplementary controls; the all-index results are symbolic proofs.
+
+The evidence package includes the complete core/source dependency closure,
+unchanged checker, exact integer LP certificates and a standard-library
+certificate verifier. Run replay.py with Lean4.35.0 to rebuild the closure,
+compile guards and replay all five new/extended leaf modules. No network,
+SciPy, Wolfram installation, or private inbox packet is needed for replay.
+
+Remaining exact obligation and stopping point
+--------------------------------------------
+SameEdgeRigidity is STILL OPEN. It is already kernel-equivalent in the
+prior return-action work to AllReturnWordsInjective: two same-length black
+prefixes fixed by the same positive return period cannot have the same
+actual return section word unless the prefixes agree. The source must be
+A^P, not an arbitrary cyclically legal automaton word.
+
+A useful next attempt must either retain enough full source ancestry to
+exclude the controlled width5 trap, or provide a nonlocal phase/resource
+invariant. Merely extending the two-layer white-clock argument by treating
+the inner controls as freely chosen is false. Integer width4 additive
+rankings, including two-step versions after parentless reduction, are also
+ruled out. Neither dead end should be retried unchanged.
+
+Even proving SameEdgeRigidity would settle only bounded-band confinement;
+the moving observation corridor/unbounded-excursion bridge to the center
+remains separate. No Problem1 proof, prize claim, formal portal submission,
+or claim of Wolfram acceptance is made in this block.
