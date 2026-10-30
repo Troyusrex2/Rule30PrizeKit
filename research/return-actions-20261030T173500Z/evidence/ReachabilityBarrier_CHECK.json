@@ -1,0 +1,178 @@
+{
+  "module": "ReachabilityBarrier",
+  "passed": true,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "ReachabilityBarrier.bad",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_cyclic_legal",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_not_good",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_prefixes_distinct",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_root_swaps",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_fixed_left",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_fixed_right",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_merges",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_unreachable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReachabilityBarrier.bits",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.fixed_prefix_reachable",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReachabilityBarrier.good8",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.good_closed",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.good_closed_certificate",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.good_initial",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_unreachable",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_root_swaps",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_cyclic_legal",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_fixed_left",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_fixed_right",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_square_merges",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReachabilityBarrier.bad_prefixes_distinct",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "ReachabilityBarrier",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 19,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "seconds": 4.827999999979511,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "dd496fa2c2496c0486e26e54f30663f1a32f1d4599c97977488af981936321fd",
+  "source_warnings": false,
+  "prize_solved": false
+}

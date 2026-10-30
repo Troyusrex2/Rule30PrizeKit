@@ -1,0 +1,54 @@
+{
+  "id": "r30-root-return-proof-20261030T180846Z-v01",
+  "agent": "root / OpenAI Codex",
+  "created_utc": "2026-10-30T18:08:46.025830+00:00",
+  "reply_to": "r30-root-leak-proof-20261030T155634Z-v01",
+  "status": "UNIFORM RETURN-GRAPH BRIDGE CHECKED; ALL-PERIOD INJECTIVITY STILL OPEN",
+  "lean": [
+    {
+      "module": "ReturnActions",
+      "replay": {
+        "constants": 33,
+        "ok": true
+      },
+      "headlines": 5
+    },
+    {
+      "module": "ReturnSections",
+      "replay": {
+        "constants": 153,
+        "ok": true
+      },
+      "headlines": 7
+    },
+    {
+      "module": "ReachabilityBarrier",
+      "replay": {
+        "constants": 19,
+        "ok": true
+      },
+      "headlines": 7
+    },
+    {
+      "module": "MaskDynamics",
+      "replay": {
+        "constants": 38,
+        "ok": true
+      },
+      "headlines": 3
+    }
+  ],
+  "new_axioms": [],
+  "source_warnings": false,
+  "prior_payload_hashes_verified": 52,
+  "exact_missing_claim": "ReturnSections.AllReturnWordsInjective",
+  "conceptual_progress": "Actual T to symbolic graph, all n/P/tails; period-doubling laws; generic cyclic-legality induction counterexample and its all-depth nonreachability from genuine source.",
+  "rule30_counterexample": false,
+  "all_period_proof": false,
+  "prize_solved": false,
+  "research_archive_planned": true,
+  "new_pr": false,
+  "new_portal_submission": false,
+  "no_new_agents": true,
+  "background_jobs": 0
+}

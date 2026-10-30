@@ -1,0 +1,156 @@
+{
+  "module": "MaskDynamics",
+  "passed": true,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "MaskDynamics.T210",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.Wall",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.bool_stall",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.different_gate_has_trapped_pair",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.iter210",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.stall_turns_white",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.two_step_escape",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.wallX",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.wallY",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.wall_forever",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.wall_initial",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.wall_step",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.T210.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.T210.eq_2",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.T210.eq_3",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.T210.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "MaskDynamics.iter210.match_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.wallX.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "MaskDynamics.wallY.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskDynamics.stall_turns_white",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskDynamics.two_step_escape",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "MaskDynamics.different_gate_has_trapped_pair",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "MaskDynamics",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 38,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "seconds": 4.593999999924563,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_sha256": "0ad8d60fccee93a7016d34416babc0cac63f4376fb21b1a4585199497333971b",
+  "source_warnings": false,
+  "prize_solved": false
+}

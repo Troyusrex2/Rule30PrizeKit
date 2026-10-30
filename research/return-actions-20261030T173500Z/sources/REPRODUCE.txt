@@ -1,0 +1,10 @@
+Lean4.35.0; no Mathlib required. Set LEAN_PATH to sources, LEAN_NUM_THREADS=1.
+Compile matching .olean in order: Rule30Jen,Rule30Prize,Rule30Realization,
+Rule30FrozenRuler under Ruliology/CellularAutomata, then CanonicalDecoration,
+LeakDescent,ReturnActions,ReturnSections,ReachabilityBarrier,MaskDynamics,
+StatementGuard,SectionsGuard,BarrierGuard,MaskGuard.
+Run the unchanged Check.lean with each module and the headlines in its
+CHECK receipt. build.py/check.py/check_module.py retain original local
+workspace paths. Full source closure is included; no native evaluation.
+verify.py is standard Python. Exploratory LP needs existing numpy/scipy;
+no new package was installed. Scientific scripts have explicit finite caps.

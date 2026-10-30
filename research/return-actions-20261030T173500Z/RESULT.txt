@@ -1,0 +1,131 @@
+RETURN-ACTION RESEARCH BLOCK, 2026-10-30
+Status: exact uniform reductions and sharp barriers; the central invariant is OPEN.
+
+The main advance is a complete kernel-checked bridge from the actual Rule30
+edge evolution to the return-word graph. The previous report left this
+connection as paper reasoning. It is now proved for all prefix lengths,
+all return periods, and arbitrary infinite tails. No finite census or
+unverified surrogate automaton is used in those equivalences.
+
+Verified statements (core Lean4.35, unchanged official checker)
+------------------------------------------------------------
+1. ReturnActions.lean: every n-bit prefix of every infinite code returns
+   after 2^n ticks. Once a prefix returns, its exact tail-return function
+   factorizes the entire step on every possible tail. Equal return actions
+   on two distinct black-edge prefixes produce a permanently confined
+   difference, including all intermediate ticks. Conversely, confinement
+   gives identical dyadic return actions. Thus SameEdgeRigidity is exactly
+   DyadicReturnInjective, an OPEN functional injectivity statement.
+
+2. ReturnSections.lean: the prior catalog's three-state table is connected
+   directly to official FrozenRuler.T on infinite codes. A=(A,C), no swap;
+   B=(A,C), swap; C=(B,C), swap. act A is proved equal to T; its positive
+   powers are actual iterates. The symbolic return word acts as the exact
+   return-tail function. Full same-edge rigidity is equivalent to:
+
+   For every n>0, P>0 and black-edge prefixes x,y that both return after P
+   ticks, equal literal return-state words imply agreement below n.
+
+   This is AllReturnWordsInjective, STILL OPEN. Its equivalence to rigidity
+   and canonical confined classification is proved; injectivity itself is
+   not assumed as an axiom and is not claimed. A confined pair gives equal
+   literal words directly by matching boundary memories at every tick;
+   the proof does not misuse positive-word freeness on a single cylinder.
+
+   fixed_prefix_iff also proves the graph semantics: a prefix returns iff
+   every section visited while reading it has identity root permutation.
+   nextWord_read and output_read connect each graph edge to the actual CA.
+
+3. The exact period-doubling formulas are proved for EVERY positive state
+   word w, not merely a list of periods. Write F_b(w)=nextWord w b.
+   If w has identity root permutation:
+       F_b(ww)=F_b(w) F_b(w).
+   If w swaps the root:
+       F_b(ww)=F_not-b(w) F_b(w).
+   The two children of any nonempty word are distinct. Thus doubling a
+   period follows the old graph on square words until an old dead state
+   launches an off-diagonal pair. The remaining induction step is to
+   prevent these new excursions from merging at equal depths or returning
+   indistinguishably to the old square part. That step is NOT proved.
+
+4. MaskDynamics.lean formalizes Swarm's useful Rule30-specific mechanism.
+   If a top difference is masked for one tick, the common masking cell
+   turns WHITE. If the original difference persists, it escapes two digits
+   higher on the next tick. This is uniform in the digit and the code.
+   Repeated crashes/regeneration can still occur; this does not bound them.
+
+   A sharp control shows why generic structure is insufficient. Replacing
+   OR by (!previous && older), the Rule210 edge map admits the finite rows
+   encoded9 and15 (black at{0,3} versus{0,1,2,3} in edge digits). They have
+   the same black edge, are distinct, and agree at EVERY digit>=3 for ALL
+   time. The masking1 remains permanent for that different gate. This is
+   a checked alternative-rule counterexample, NOT a Rule30 counterexample.
+
+A real failure of a tempting all-period induction lemma
+------------------------------------------------------
+It is FALSE that an arbitrary cyclically legal root-swapping positive
+word has a merge-free fixed-prefix graph after squaring. The explicit
+word g=AAACBCCC swaps the root and obeys the local cyclic B/C constraint.
+Its square fixes both six-bit input prefixes010101 and110101 (first bit
+read first; packed42 and43), and both have the SAME return section(BC)^8.
+This rules out the generic cyclic-legality induction substitute.
+
+Crucially, this is not a counterexample to the genuine source A^P.
+ReachabilityBarrier.lean gives an exact34-state closed set for all fixed
+prefixes of A^8, proves membership by induction for EVERY prefix length,
+and proves g is outside that set. Consequently g cannot occur as an
+actual P8 return boundary of a prefix fixed by Rule30. Both the bad merge
+and its all-depth nonreachability are kernel checked.
+
+This locates the hard part precisely: an invariant must preserve complete
+finite ancestry from A^P. Local cyclic legality, primitive period, and
+positive-word freeness do not supply it. Dropping that ancestry can create
+real counterexamples to the proposed induction.
+
+Attempts and their limits
+-------------------------
+* Primitive temporal period need not increase: BCCC on input0 has section
+  CBCB, dropping period4 to2. Distinct cyclically legal same-period words
+  AACB and AACC both map on input1 to CCBC. These concrete failures are
+  proved in ReturnSections; they do not refute the genuine source claim.
+* Ordinary displacement is not injective: Phi(21)-21=Phi(25)-25=86. The
+  stronger fixed-prefix/zero-tail substitute survived only the explicitly
+  bounded tests (P<=16,N<=10), and remains unproved. No inference of an
+  all-period law is made from that survival.
+* A uniform spatial first-moment charge was attempted through affine
+  graph-coboundary inequalities valid at every position and every spatial
+  width. Radius2,3,4 models yielded infeasible floating solver statuses.
+  No rational certificate was found; these are failed proof candidates,
+  not a theorem excluding all weighted or nonlocal potentials.
+* One diagnostic at P32 completed the exact fixed-section graph to a
+  repeating layer:2112 states,1056 alive, no equal-depth merges at any
+  later prefix length. This is Python exact finite-state evidence for one
+  return period, not a Lean or all-period result. No P64 escalation.
+
+Validation and public state
+---------------------------
+All four new modules passed the unchanged kernel checker, their independent
+expanded-statement guards, and the no-new-axiom check. Receipts report:
+ReturnActions33 declarations/5 headlines; ReturnSections153/7;
+ReachabilityBarrier19/7; MaskDynamics38/3. No source warnings. Counts
+include generated datatype declarations; they are not counts of discoveries.
+verify.py independently checks the symbolic tail map against integer Rule30,
+the bad boundary merge and closed set, and the alternative-gate control.
+The previous52-file handoff is hash-audited; copied prior proofs are unchanged.
+
+The public kit main was rechecked and remains a6399ef15ff4, catalog168
+modules. The automaton table and positive-word theory are existing prior
+material. No claim of a new automaton or a prize solution is made here.
+
+Next precise obligation
+-----------------------
+Prove AllReturnWordsInjective in ReturnSections.lean by retaining the
+source A^P through the doubling law. A useful sufficient invariant would
+keep the off-diagonal launches from old dead states separate at equal
+depth, and separate them from the old square states, uniformly in P.
+The cyclically legal word g above is a mandatory falsification control:
+any proposed invariant admitting it without an ancestry check is too weak.
+
+Even successful bounded-defect rigidity would leave the unbounded-excursion
+regime and its connection to EdgeObservable open. No full prize proof or
+formal portal submission follows from the current results.

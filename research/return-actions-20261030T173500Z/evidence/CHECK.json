@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "checker": {
+    "claim": "partial",
+    "declared": [
+      {
+        "kind": "def",
+        "name": "ReturnActions.DyadicReturnInjective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReturnActions.Returns",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.canonical_iff_return_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReturnActions.drop",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.dyadic_factorization",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.iter_xor",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReturnActions.join",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.join_high",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.join_low",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.prefix_factorization",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.prefix_period",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.return_injective_of_rigidity",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.rigidity_iff_return_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.rigidity_of_return_injective",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.shared_return_confines",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReturnActions.tailReturn",
+        "standardAxioms": true
+      },
+      {
+        "kind": "def",
+        "name": "ReturnActions.zero",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.drop.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.join.eq_1",
+        "standardAxioms": true
+      },
+      {
+        "kind": "theorem",
+        "name": "ReturnActions.tailReturn.eq_1",
+        "standardAxioms": true
+      }
+    ],
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReturnActions.prefix_period",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReturnActions.dyadic_factorization",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReturnActions.shared_return_confines",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReturnActions.rigidity_iff_return_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "ReturnActions.canonical_iff_return_injective",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "importsStatements": true,
+    "module": "ReturnActions",
+    "newAxioms": [],
+    "official": [],
+    "reasons": [],
+    "replay": {
+      "constants": 33,
+      "ok": true
+    },
+    "verdict": "pass",
+    "verifiedTargets": []
+  },
+  "seconds": 7.531,
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905",
+  "source_warnings": false,
+  "scope": "Every infinite code has dyadic prefix returns. OPEN same-edge rigidity is equivalent to OPEN injectivity of the actual dyadic return-tail functions on black-edge prefixes. Shared functional returns imply confinement for every P>0.",
+  "prize_solved": false
+}
