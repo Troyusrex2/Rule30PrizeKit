@@ -128,6 +128,7 @@ public import Ruliology.CellularAutomata.Rule30FrontLaw
 public import Ruliology.CellularAutomata.Rule30SettledBarrierEffective
 public import Ruliology.CellularAutomata.Rule30WhiteSpacing
 public import Ruliology.CellularAutomata.Rule30PairedColumnRuns
+public import Ruliology.CellularAutomata.Rule30RightProfiles
 
 /-!
 # Rule 30 Prize: Lean snapshot
