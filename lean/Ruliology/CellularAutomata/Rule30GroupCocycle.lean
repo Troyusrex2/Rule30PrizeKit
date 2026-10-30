@@ -6,8 +6,10 @@ public import Ruliology.CellularAutomata.Rule30Prize
 
 For every finite window width and every (possibly noncommutative, infinite)
 group, a homogeneous local zero-curvature equation for one Rule30 step forces
-the spatial weight to be a vertex gauge of its vacuum value. The transport
-window has the one-cell halo specified by `Cocycle`. No identity-vacuum
+the spatial weight to be a vertex gauge of its vacuum value. The normalized transport
+window has the one-cell halo specified by `Cocycle`. Independently placed
+finite supports are covered by padding into a common container
+(`arbitrary_local_supports`); minimal range is not an assumption. No identity-vacuum
 normalization is assumed. Every algebraic law is a field of the quantified
 standard group structure `GroupData`, not an additional global axiom.
 
@@ -32,8 +34,8 @@ The existing Rule30LocalConservation and Rule30ProductParity classify additive
 integer and mod-two scores for four steps. Here the new scope is group-valued,
 ordered, possibly noncommutative transport for one step. This theorem does not
 classify noninvertible semigroups, arbitrary nonlocal invariants, or all notions
-of integrability, and does not settle a prize problem. A larger independently
-chosen transport halo is not included in the theorem as stated.
+of integrability, and does not settle a prize problem. The gauge is local in the chosen common container.
+Unbounded-memory and noninvertible transport are outside the statement.
 
 Contributed by Troy Lowry with OpenAI Codex, 2026-10-30.
 -/
@@ -625,5 +627,37 @@ theorem commuting_backgrounds_are_cocycles {G : Type u} [GroupData G] {n : Nat}
   apply gauge_cocycle
   intro w
   exact hab
+
+
+/-- Place an independently chosen local support inside a common finite window.
+Unused cells on either side are padding, not a minimal-range assumption. -/
+def window (offset length : Nat) {ambient : Nat} (h : offset+length≤ambient)
+    (w : Word ambient) : Word length := fun i => w ⟨offset+i.val,by omega⟩
+
+@[simp] theorem window_zeros (offset length ambient : Nat)
+    (h : offset+length≤ambient) : window offset length h (zeros ambient)=zeros length := rfl
+
+/-- The spatial and temporal supports can be chosen independently, with arbitrary
+offsets and unused padding in a common input window. This removes the apparent
+minimal-halo restriction: any bounded local supports can be enlarged to this
+container, without changing their functions. The gauge is local in that container.
+This is still a group-valued homogeneous flat connection, not every invariant. -/
+theorem arbitrary_local_supports (G : Type) [GroupData G]
+    (N n m r s : Nat) (hr : r+(n+1)≤N+1) (hs : s+(m+1)≤N+2)
+    (L : Word (n+1) → G) (M : Word (m+1) → G)
+    (h : ∀ w : Word (N+3),
+      L (window r (n+1) hr (image w))*M (window s (m+1) hs (WordOps.init w))=
+      M (window s (m+1) hs (WordOps.tail w))*L (window r (n+1) hr (middle w))) :
+    ∃ g : Word N → G, g (zeros N)=1 ∧
+      L (zeros (n+1))*M (zeros (m+1))=M (zeros (m+1))*L (zeros (n+1)) ∧
+      (∀ v : Word (N+1), L (window r (n+1) hr v)=
+        (g (WordOps.tail v))⁻¹*L (zeros (n+1))*g (WordOps.init v)) ∧
+      (∀ v : Word (N+2), M (window s (m+1) hs v)=
+        (g (image v))⁻¹*M (zeros (m+1))*g (middle v)) := by
+  have hc : Cocycle (fun v => L (window r (n+1) hr v))
+      (fun v => M (window s (m+1) hs v)) := h
+  simpa only [window_zeros] using
+    full_background_connection G N (fun v => L (window r (n+1) hr v))
+      (fun v => M (window s (m+1) hs v)) hc
 
 end Ruliology.CellularAutomata.Rule30GroupCocycle

@@ -1,0 +1,13 @@
+The common-window support bound is not a minimal-halo restriction.
+For original spatial support [lL,rL] and temporal-vertex support [lM,rM],
+choose an old-row container [A,B] with A<=min(lL-1,lM) and
+B>=max(rL+1,rM+1). Expanded spatial support is [A+1,B-1], expanded
+temporal-prefix support [A,B-1], and temporal-suffix support [A+1,B].
+The original functions ignore unused cells. Offsets r=lL-(A+1),s=lM-A
+and lengths are exactly the bounds in arbitrary_local_supports. Apply the
+full background-connection theorem to these expanded functions; cropping
+the zero word preserves each original vacuum value. The gauge depends
+on the container width, not necessarily the smaller original L support.
+No claim is made for position-dependent, history-dependent not reducible
+to a row function, singular, or unbounded-memory connections.
+This is a formal scope extension of PR58, not an independent prize claim.

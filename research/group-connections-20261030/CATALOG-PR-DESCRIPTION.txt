@@ -1,17 +1,19 @@
-Every homogeneous local group-valued zero-curvature connection for one Rule30 update is a local vertex gauge of two commuting vacuum constants. For every finite width and every group, the canonical gauge satisfies
+Every homogeneous one-step group-valued local zero-curvature connection for Rule30 is a local vertex gauge of two commuting vacuum constants. The new `arbitrary_local_supports` corollary allows independently placed finite spatial and temporal supports: pad both functions into a common finite container, apply the classification, and retain their original vacuum values. Minimal support and a tight halo are not assumptions.
+
+In the normalized common-window notation, the canonical gauge satisfies
 
 `L(w) = g(tail w)^-1 * L(zeros) * g(init w)`
 
 `M(w) = g(image w)^-1 * M(zeros) * g(middle w)`
 
-with `g(zeros)=1`. Ordered cyclic spatial products are conjugate to `L(zeros)^length`.
+with `g(zeros)=1`. Ordered cyclic spatial products are conjugate to `L(zeros)^length`. No finiteness, commutativity, or identity-vacuum assumption on the group is imposed.
 
-Adds core-only `Rule30GroupCocycle`, its catalog import and documentation. The transport has the one-cell halo specified by `Cocycle`; no finiteness, commutativity, or identity-vacuum assumption is imposed. Commuting background connections with arbitrary local vertex gauge provide positive controls. A Boolean local-flux corollary is included.
+Adds core-only `Rule30GroupCocycle`, its catalog import and documentation. All group laws are explicit fields of the quantified standard core structure `GroupData`; an independently checked Mathlib adapter supplies precisely those laws. Commuting backgrounds with arbitrary local vertex gauge provide positive controls, and a Boolean local-flux corollary is included.
 
-The proof normalizes white-leading edges, uses left-permutivity and two independent endpoint controls to remove the final spatial cell, removes the corresponding transport cell, and inducts to six one-cell equations. A twisted-shift lemma then makes gauged temporal transport constant. All group laws are explicit fields of the quantified standard core structure `GroupData`; a Mathlib group adapter was checked separately, without adding a catalog dependency.
+The proof normalizes white-leading edges, uses left-permutivity and independent endpoint control to remove the final spatial cell, removes the corresponding transport cell, and inducts to six one-cell equations. A twisted-shift lemma then makes gauged temporal transport constant. The final support-padding argument changes no dynamics or algebraic premise.
 
-This extends the existing additive integer/mod-two results to ordered, potentially noncommutative group transport. It does not classify singular semigroups, independently larger transport halos, arbitrary nonlocal observables, or general integrability. It does not prove a prize problem.
+This extends the existing additive conservation classifications to ordered, potentially noncommutative group transport. It does not classify singular semigroups, position-dependent or genuinely nonlocal observables, or all notions of integrability. It does not prove a prize problem.
 
-Validation: fresh three-source closure at `932cf8dde039b89b1dcbe9636867bb1b2057fef0`, a separate explicit statement/official-rule guard, and the unchanged official `Check.lean` replay passed. All 180 owned declarations replayed; all four monomorphic headlines passed with only `propext` and `Quot.sound`, no new axioms. Runtime9.84s. No Mathlib or inherited owned objects were on the fresh build path; all owned builds were warning-free. `git diff --check` passed. The whole catalog was not rebuilt.
+Validation: a fresh four-source research closure and explicit official-rule/type guards passed with the unchanged `Check.lean`; the catalog module's source has186 replayed declarations and five selected monomorphic headlines, standard axioms only, no new axioms or owned-source warnings. The closure also independently replays a separate research countermodel, outside this PR. The official Jen/Prize source bytes match both main932cf8d and verifier19540bf. The whole catalog was not rebuilt.
 
 Contributed by Troy Lowry with OpenAI Codex.

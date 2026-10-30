@@ -17,7 +17,7 @@ env = dict(os.environ, LEAN_PATH=str(src), LEAN_NUM_THREADS='1')
 start = time.monotonic()
 runs = []
 prefix = 'Ruliology.CellularAutomata.Rule30GroupCocycle.'
-headlines = ['full_background_connection', 'background_gauge_all_groups',
+headlines = ['arbitrary_local_supports','full_background_connection', 'background_gauge_all_groups',
              'cyclic_products_background', 'boolean_flux_coboundary']
 
 def run(name, args):

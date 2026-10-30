@@ -126,7 +126,7 @@ vacuum. Finally, products telescope along spatial paths.
 
 The following cell contains the entire source. It imports the official
 kit and no unmerged module, and reads no local proof file. Relative to
-catalog PR58, only the import/export wrapper and namespace have changed.
+catalog PR58 at commit284a5eb6a790b57f0e1aa2b6ad53cb05b9c8e000, only the import/export wrapper and namespace have changed. The later support-padding corollary is not included in this older draft.
 The verifier supplies its kit through `RULE30PRIZE_KIT`.
 
 ```wl

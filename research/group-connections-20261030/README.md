@@ -6,7 +6,7 @@ The catalog contribution is [PR58](https://github.com/WolframInstitute/Rule30Pri
 For every finite width and any group, the displayed one-step local zero-curvature connection
 is a vertex gauge of two commuting vacuum constants. No finite-group, abelian, or
 identity-vacuum assumption is made. Ordered cyclic spatial products telescope to a
-conjugate of the vacuum power. The exact transport halo is part of the statement.
+conjugate of the vacuum power. Independently placed finite spatial/temporal supports are covered by common-window padding (`arbitrary_local_supports`); a minimal halo is not a premise.
 The full module docstring, `full_background_connection`, and the explicit statement
 guard specify the quantifiers. This is an obstruction to a class of methods, not a
 prize proof or a classification of all invariants.
@@ -66,10 +66,14 @@ configuration files are deliberately absent.
 
 ## Final receipts and publication status
 
-Fresh replay passed: 180 declarations in GroupCocycle and 37 in the countermodel, with seven selected headlines and explicit official-rule/type guards. Runtime 15.219s. No new axioms or owned-source warnings. The whole catalog was not rebuilt.
+Fresh replay passed: 186 declarations in GroupCocycle and 37 in the countermodel, with eight selected headlines and explicit official-rule/type guards. Runtime 16.985s. No new axioms or owned-source warnings. The whole catalog was not rebuilt.
 
 The independent Wolfram GL2(F2) positive control passed all32 local equations and cyclic conjugacy. Its saved seed figure is under `essay-draft/`. The standalone root-import source also passed all four headlines. The computational notebook hit its memory/free-physical guards, so **no new formal portal submission was made**. The prose and source are labelled draft; failed notebooks are absent. The core-only portable replay is complete.
 
 A separate bounded renewal-reader test checked whether the empty-right echo gap code was a shifted/decimated self-code or one of the seed columns-4..4. No128-bit training match occurred among77100 fixed candidates; this rejects that specific family, not every return-map renormalization.
 
 Raw compiler logs preserve original bytes and are exempt from whitespace lint. The core-only owned sources compiled without warnings; the separate root-import draft has a nonfatal Mathlib style suggestion about letI.
+
+## Finite-support padding extension
+
+`arbitrary_local_supports` permits different support lengths and arbitrary offsets inside a common finite container. Both functions ignore added cells; their vacuum values are unchanged. The group gauge is local in that container. This covers finite row-local support sizes without a minimal-range hypothesis, while homogeneity and invertibility remain essential. The optional `mathlib-adapter/` separately checks the conventional Group interpretation. The essay draft below predates this corollary and retains its exact previously checked source.

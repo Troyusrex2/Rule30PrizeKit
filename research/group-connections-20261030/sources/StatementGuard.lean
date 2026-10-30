@@ -32,3 +32,18 @@ open Ruliology.CellularAutomata.Rule30BoundaryProfileCounterexample in
 example (i : State) (k t : Nat) :
     past i k (t+1)=Rule30Jen.rule (past i k t) (past i (k+1) t) (past i (k+2) t) :=
   recurrence i k t
+
+open Ruliology.CellularAutomata.Rule30GroupCocycle in
+example : ∀ (G : Type) [GroupData G] (N n m r s : Nat)
+    (hr : r+(n+1)≤N+1) (hs : s+(m+1)≤N+2)
+    (L : Word (n+1) → G) (M : Word (m+1) → G),
+    (∀ w : Word (N+3),
+      L (window r (n+1) hr (image w))*M (window s (m+1) hs (WordOps.init w))=
+      M (window s (m+1) hs (WordOps.tail w))*L (window r (n+1) hr (middle w))) →
+    ∃ g : Word N → G, g (zeros N)=1 ∧
+      L (zeros (n+1))*M (zeros (m+1))=M (zeros (m+1))*L (zeros (n+1)) ∧
+      (∀ v : Word (N+1), L (window r (n+1) hr v)=
+        (g (WordOps.tail v))⁻¹*L (zeros (n+1))*g (WordOps.init v)) ∧
+      (∀ v : Word (N+2), M (window s (m+1) hs v)=
+        (g (image v))⁻¹*M (zeros (m+1))*g (middle v)) :=
+  arbitrary_local_supports
