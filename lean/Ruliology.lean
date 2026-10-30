@@ -135,6 +135,7 @@ public import Ruliology.CellularAutomata.Rule30WhiteSpacing
 public import Ruliology.CellularAutomata.Rule30PairedColumnRuns
 public import Ruliology.CellularAutomata.Rule30RightProfiles
 public import Ruliology.CellularAutomata.Rule30UniversalStart
+public import Ruliology.CellularAutomata.Rule30RingOrbits
 
 /-!
 # Rule 30 Prize: Lean snapshot
