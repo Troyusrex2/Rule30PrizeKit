@@ -13,6 +13,8 @@ standard group structure `GroupData`, not an additional global axiom.
 
 Writing a=L(zeros), the classification is
 `L(w) = g(tail w)^-1 * a * g(init w)`.
+The canonical gauge also makes temporal transport constant at M(zeros),
+and the two vacuum constants commute (`full_background_connection`).
 Ordered cyclic products are therefore conjugate to a^length. Pure-gauge
 examples establish that this does not assert pointwise constancy of L.
 The Boolean specialization classifies exact local-flux laws as spatial
@@ -551,5 +553,77 @@ theorem background_gauge_all_groups (G : Type) [GroupData G] (n : Nat)
     ∃ g : Word n → G, ∀ w : Word (n+1),
       L w=(g (WordOps.tail w))⁻¹*L (zeros (n+1))*g (WordOps.init w) :=
   cocycle_is_background_gauge L M hC
+
+
+/-- A twisted shift-constant function on finite words is constant: prepend
+white cells until the entire word is white, and cancel the fixed twist. -/
+theorem twisted_shift_constant {G : Type u} [GroupData G] (m : Nat)
+    (a : G) (N : Word m → G)
+    (h : ∀ w : Word (m+1), a*N (WordOps.init w)=N (WordOps.tail w)*a) :
+    ∀ v, N v=N (zeros m) := by
+  have hz : a*N (zeros m)=N (zeros m)*a := h (zeros (m+1))
+  have descend : ∀ k v, iterate pad k v=zeros m → N v=N (zeros m) := by
+    intro k
+    induction k with
+    | zero => intro v hv; exact congrArg N hv
+    | succ k ih =>
+      intro v hv
+      have hp : iterate pad k (pad v)=zeros m := by
+        simpa only [iterate_succ_apply] using hv
+      have step := h (WordOps.cons false v)
+      change a*N (pad v)=N v*a at step
+      rw [ih (pad v) hp] at step
+      exact mul_right_cancel (step.symm.trans hz)
+  intro v
+  exact descend m v (pad_all_zero v)
+
+theorem gaugePartial_zero {G : Type u} [GroupData G] {n : Nat}
+    (L : Word (n+1) → G) (k : Nat) : gaugePartial L k (zeros n)=1 := by
+  have hp : pad (zeros n)=zeros n := congrArg WordOps.init (cons_zero n)
+  induction k with
+  | zero => rfl
+  | succ k ih => simp only [gaugePartial,hp,ih,cons_zero,mul_one,mul_inv_cancel]
+
+/-- Full spatial-and-temporal classification with the canonical gauge fixed
+to the identity at the vacuum. The two vacuum constants commute. -/
+theorem full_background_connection (G : Type) [GroupData G] (n : Nat)
+    (L : Word (n+1) → G) (M : Word (n+2) → G) (hC : Cocycle L M) :
+    ∃ g : Word n → G, g (zeros n)=1 ∧
+      L (zeros (n+1))*M (zeros (n+2))=M (zeros (n+2))*L (zeros (n+1)) ∧
+      (∀ w : Word (n+1), L w=(g (WordOps.tail w))⁻¹*L (zeros (n+1))*g (WordOps.init w)) ∧
+      (∀ w : Word (n+2), M w=(g (image w))⁻¹*M (zeros (n+2))*g (middle w)) := by
+  let g := gauge L
+  have hzero : g (zeros n)=1 := gaugePartial_zero L n
+  have ht := anchored_trivial n (edgeGauge g L) (timeGauge g M)
+    (L (zeros (n+1))) (gauge_anchored L) (gauge_cocycle g L M hC)
+  have hN : ∀ w : Word (n+3),
+      L (zeros (n+1))*timeGauge g M (WordOps.init w)=
+        timeGauge g M (WordOps.tail w)*L (zeros (n+1)) := by
+    intro w
+    have h := gauge_cocycle g L M hC w
+    simpa only [ht] using h
+  have hc := twisted_shift_constant (n+2) (L (zeros (n+1))) (timeGauge g M) hN
+  have hzimage : image (zeros (n+2))=zeros n := by funext i; rfl
+  have hzmiddle : middle (zeros (n+2))=zeros n := rfl
+  have hzM : timeGauge g M (zeros (n+2))=M (zeros (n+2)) := by
+    have hi : Inv.inv (1 : G)=1 := by simpa only [mul_one] using (inv_mul_cancel (1 : G))
+    simp only [timeGauge,hzimage,hzmiddle,hzero,hi,one_mul,mul_one]
+  refine ⟨g,hzero,hC (zeros (n+3)),?_,?_⟩
+  · intro w
+    have he := congrArg (fun q : G => (g (WordOps.tail w))⁻¹*q*g (WordOps.init w)) (ht w)
+    simpa only [edgeGauge,mul_assoc,inv_mul_cancel_left,inv_mul_cancel,mul_one] using he
+  · intro w
+    have he := congrArg (fun q : G => (g (image w))⁻¹*q*g (middle w)) ((hc w).trans hzM)
+    simpa only [timeGauge,mul_assoc,inv_mul_cancel_left,inv_mul_cancel,mul_one] using he
+
+/-- Commuting constant backgrounds give honest positive controls for both
+parts of the connection, with arbitrary local vertex gauge. -/
+theorem commuting_backgrounds_are_cocycles {G : Type u} [GroupData G] {n : Nat}
+    (g : Word n → G) (a b : G) (hab : a*b=b*a) :
+    Cocycle (edgeGauge g (fun _ : Word (n+1) => a))
+      (timeGauge g (fun _ : Word (n+2) => b)) := by
+  apply gauge_cocycle
+  intro w
+  exact hab
 
 end Ruliology.CellularAutomata.Rule30GroupCocycle
