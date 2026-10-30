@@ -1,0 +1,17 @@
+Before running: one fixed source-period128 / prefix-width32 SAT instance
+tests whether a genuine black-edge prefix can have period128 while its
+categorical two-memory interface repeats after64. Such a verified model
+would refute the proposed within-orbit period-reflection claim and produce
+an actual bounded-defect obstruction, not just a synthetic driver.
+
+This is a bounded falsification attempt, not a larger return-graph census.
+No period/width sweep and no finite-result submission. Existing CaDiCaL
+only, no installs. Big-instance CPU cap45s, subprocess wall cap55s.
+Controls: known period8/width8 black-edge negative, and the checked
+period16/width7 synthetic controlled alias pinned to its16-row cycle,
+5s each. Total solver budget55s CPU,65s hard outer wall budget.
+
+A SAT model must be independently checked as integer Rule30 rows, including
+the cyclic recurrence, source edge, parentless condition, shorter interface
+period and genuinely longer prefix period. UNSAT is only a bounded solver
+result here. A timeout changes no claim. Do not enlarge after this test.

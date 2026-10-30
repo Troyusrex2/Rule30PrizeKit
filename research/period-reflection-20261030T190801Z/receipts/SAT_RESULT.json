@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "name": "positive_control",
+      "P": 16,
+      "N": 7,
+      "external_controls": true,
+      "vars": 119,
+      "clauses": 909,
+      "seconds": 0.030999999959021807,
+      "status": "SAT",
+      "cnf_sha256": "d113da2dda428960c3cfa5bf59281a6a83f04d9d08ade996cba53c9cd7e8607e",
+      "independent_integer_model_verified": true,
+      "rows": [
+        42,
+        85,
+        42,
+        85,
+        42,
+        85,
+        43,
+        85,
+        43,
+        84,
+        47,
+        80,
+        49,
+        86,
+        42,
+        86
+      ]
+    },
+    {
+      "name": "negative_control",
+      "P": 8,
+      "N": 8,
+      "external_controls": false,
+      "vars": 72,
+      "clauses": 475,
+      "seconds": 0.01600000006146729,
+      "status": "UNSAT",
+      "cnf_sha256": "b3c39c603eb9c8f9d947fbc34e559a67b7bbaeac48effed80544a0307fa52951"
+    },
+    {
+      "name": "source128_prefix32",
+      "P": 128,
+      "N": 32,
+      "external_controls": false,
+      "vars": 4128,
+      "clauses": 31747,
+      "seconds": 45.01500000001397,
+      "status": "timeout",
+      "cnf_sha256": "3976b47e878905abfbea07edef27178c269a0fe4f19186d11b8f22d0b7731330"
+    }
+  ],
+  "total_seconds": 45.125,
+  "scope": "Finite falsification test only. No all-period result or kernel UNSAT certificate claimed. Windows CaDiCaL lacks a CPU timer; single-thread subprocess wall limits implement the stated caps."
+}

@@ -1,0 +1,39 @@
+{
+  "packets": [
+    {
+      "packet": "r30-coinailyzer-swarm-return-graph-20261030T185746Z-b3213a96-v01",
+      "hashes_verified": 7
+    },
+    {
+      "packet": "r30-coinailyzer-swarm-potential-search-20261030T182946Z-61ecce60-v02",
+      "hashes_verified": 9
+    }
+  ],
+  "coupling_bug": "halves.py compares flat tuple to tuple-of-two-tuples; concatenate RHS halves. The uniform identity is already nextWord_append + output_parity in ReturnSections.lean.",
+  "example": {
+    "left": [
+      0,
+      2,
+      0,
+      2
+    ],
+    "incorrect_rhs": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "correct_rhs": [
+      0,
+      2,
+      0,
+      2
+    ]
+  },
+  "grammar_note": "The new width4 position-indexed and two-step exact obstructions are stronger grammars than the older translation-invariant three-cell charge. Not merely a weaker duplicate; scope distinctions matter.",
+  "p64_status": "Reported finite exact Python graph check. Not rerun or Lean-verified here; no new P census."
+}

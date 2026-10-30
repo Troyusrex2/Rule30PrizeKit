@@ -1,0 +1,8 @@
+Before the test: is imposing the two genuine lower-cell recurrences enough
+to remove source-free within-orbit aliases? One fixed synthetic instance:
+8-periodic external c,h,g,f, with c'=c XOR(h OR g), h'=h XOR(g OR f);
+an inner10-digit profile has period16, changes bit0 after8, but interface
+digits8,9 repeat after8. c must be recurrently black. These are NOT full
+black-edge ancestors. A verified SAT model refutes sufficiency of this
+two-level ancestry relaxation, while respecting the new no-ACC invariant.
+Fixed limit10 seconds, no width/period escalation. UNSAT is only finite.

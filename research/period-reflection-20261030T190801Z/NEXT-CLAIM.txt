@@ -1,0 +1,65 @@
+One exact missing claim: AllReturnWordsInjective (OPEN)
+
+For all n,P>0 and infinite black-edge codes x,y, assume
+  AgreeBelow n (iter P x) x,
+  AgreeBelow n (iter P y) y,
+  returnWord n P x = returnWord n P y.
+Prove AgreeBelow n x y. returnWord is the ACTUAL section of A^P, not an
+abstract response map. The equivalence with SameEdgeRigidity and the
+actual-tail bridge are already checked. This injectivity claim is open.
+
+Target an anchored invariant uniform in n and P. The first five-digit
+relative band is the cheapest test that invariant must pass; another
+isolated width certificate is not the intended next result.
+
+Minimal source-sensitive test: FiveLayerEscape (also OPEN)
+
+For every j>=0 and every infinite x,y:Nat->Bool, assume
+  x0=true,
+  x(k)=y(k) for every k<j+1,
+  x(j+1)!=y(j+1).
+Prove that some t has
+  iter t x(j+6)!=iter t y(j+6), or
+  iter t x(j+7)!=iter t y(j+7).
+Here iter is the ACTUAL Rule30FrozenRuler.T iteration. No supplied abstract
+transition, unproved observability hypothesis, or generic controller may
+replace the source. No numerical linear deadline is proposed as a premise.
+
+Why this tests a genuine gap: four layers are now uniform at every
+depth, with explicit deadline7*(ceil(j/2)+1), by a max6 black-clock budget.
+The relaxed controlled model first admits a trapped defect at width5,
+even respecting TWO full lower-cell recurrences and recurrent black input.
+The counterexample is completely checked for all time/space. Any proof
+that sees only those controllers is false. The finite black source farther
+left must enter the argument in a new way.
+
+Read proofs/ControlledBudget.lean, TwoClockAlias.lean and the public
+Rule30DefectClockBudget before trying a potential. The actual width4 rank
+is non-additive and may stall on white clock ticks. It does not contradict
+the exact local additive ranking obstructions from the previous packet.
+
+Other checked tools:
+- Return-word equality confines at the exact cut for every common infinite
+  tail and every time, without the former2P enlargement (WordBoundary).
+- Actual source collisions first differing at i require i+6<=n
+  (MemorySeparation). This is a partial constraint, not word injectivity.
+- Universal no-ACC excludes ALL powers of AAACBCCC at ALL source periods.
+  The stronger word BCCBACBC respects that filter and two lower recurrences.
+- Source P128/width32 period-reflection SAT timed out at45s. Do not treat
+  the timeout as UNSAT or restart that run unchanged.
+
+AllReturnWordsInjective, SameEdgeRigidity and PrefixPeriodReflection are
+still open. Use the five-layer test to reject candidate global invariants,
+rather than settling for a longer finite search. The moving-center/
+unbounded-excursion bridge remains after full bounded-band rigidity too.
+
+Suggested separately allocated block: at most one hour, one written
+anchored invariant or one precisely checked refutation, then stop/review.
+No larger period/absolute-width census, no new workers or installations.
+If no new source-sensitive argument emerges, report that instead of
+producing another finite table. This does not restart a paused agent.
+
+Reply in a NEW unique D:\MWB\Rule30\agent-inbox\ directory with response,
+META.json, proof/evidence artifacts, SHA256 manifest, READY written last.
+Multiple independent responses welcome; do not wait on root or overwrite
+another agent's files. Label PROVED/COMPUTED/PROPOSED/REFUTED explicitly.
