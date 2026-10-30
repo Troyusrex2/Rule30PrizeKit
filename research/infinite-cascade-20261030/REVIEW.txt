@@ -1,0 +1,97 @@
+Swarm review and infinite-cascade reduction, 2026-10-30
+Troy Lowry with OpenAI Codex
+
+Latest available handoffs are the01:37UTC v02 packets, not a new overnight
+delivery. No newer packet was found in the shared inbox, coordination or
+claude-responses folders. Troy was asked for a newer location if one exists;
+research continued without waiting.
+
+What survives and is now checked
+The staircase's qualitative reduction is valid. Rule30InverseCascade defines
+actual triangular register trajectories. For every finite height m and every
+infinite external driver, recurrent synchronizing segments on the reference
+driver rows give ONE finite cutoff uniform over EVERY competing trajectory's
+initial registers. Agreement holds at every later column, on every stack row.
+No spatial or temporal periodicity and no bounded wait length is assumed.
+The physical-row corollary uses the official forward rule and predecessor
+transfer, retaining the row-closing hypotheses explicitly.
+
+exists_reset_schedule selects reset windows after the preceding cutoff;
+scheduled_cascade_closes proves that the resulting final position suffices.
+This is not a complexity bound. Adding consecutive waits does not prevent
+geometric or faster growth when later waits depend on the current position.
+The gate-bit intervals were not proved independent or disjoint. None of
+these quantitative assumptions is needed for qualitative finite closing.
+
+The handoff's Lean-shaped block theorem ends in "... or True" and contains
+placeholders. It does not formally assert its intended result. The new
+coupled-system theorem replaces that sketch rather than treating it as
+already checked. RunClosing's existing exact reset criterion supplies the
+unbounded family0 1^(3k+1) 0 b; the following cell b is essential.
+
+Fresh source-only Lake build + unchanged official checker:91 declarations,
+six headlines, no new axioms or source warnings,37.609s. Separate guards
+check the full quantified statement and the official transfer/forward rules.
+An all-time height-one counterexample checks that deleting the reset
+hypothesis is false (white input preserves states00 and11 indefinitely).
+The dependency bytes match maina6399ef. Whole catalog not rebuilt.
+PR60: https://github.com/WolframInstitute/Rule30PrizeKit/pull/60
+
+What is STILL missing
+The theorem does not show that every relevant legal reconstructed row has
+recurrent resets. It assumes this. It also does not connect a possibly false
+general legal-row conjecture to all periods without the precise prize bridge.
+The global infinite-ancestry obstruction remains open. No prize is claimed.
+
+The global count law is sufficient, not the only possible remaining claim
+Swarm proposes N(d,L)<=C*A^d*lambda^L with one C,A and0<lambda<1 valid for
+all d,L. Since N is an integer, such an ABSOLUTE count bound would force
+extinction at each fixed d; density/probability decay alone would not.
+But the proposed uniform law is substantially stronger than merely finite
+extinction for each d. It implies a LINEAR upper bound in d on every live
+depth L, by1<=C*A^d*lambda^L and taking logarithms.
+
+A simple logical counterfamily shows the distinction: let the d-th tree be
+one branch of length d^2. Every tree has finite height (so every infinite
+input is killed), but no fixed C,A,lambda of the displayed form bounds its
+live counts for all d,L: at L=d^2 the left side is1 and the right side tends
+to0. This is a generic logical example, NOT a Rule30 counterexample.
+Thus calling that entropy law "exactly the one open statement" is too strong.
+A deterministic, nonuniform well-founded argument could suffice instead.
+The observed finite slope/decay is a conjecture generator, not its proof.
+
+Further quantifier corrections retained from the earlier review
+Tests at W=2,4,6,8 do not prove failure of every fixed W. The triples/stack
+reset classification does not imply that each individual row has recurrent
+resets. A fixed bounded temporal clock may describe a past but fail to extend
+spatially in the same clock. Finite ancestry cannot be dropped: the earlier
+13-state checked infinite-past countermodel has a nonalternating8-periodic
+final profile with different predecessors.
+
+One bounded attempt at an infinite obstruction
+Exact periodic-profile iteration used the known gap5 and gap(3,5) carriers
+as controls (periods155 and325 reproduced). The new legal periodic gap word
+(3,5,5) enters a2444-column cycle after2407 columns; every one of its26
+temporal phases has a constant four-state transfer map over a full cycle.
+It therefore supplies no nonsynchronizing periodic-tail obstruction. This
+is computational evidence with complete pair repetition, not a new Lean
+theorem; no extra finite-carrier PR is warranted. All limits were fixed
+before running (100000 pairs/word,30seconds total); elapsed0.063s.
+
+Overnight public work
+Main advanced to a6399ef (168 catalog modules). Our reset-free theorem PR53
+merged, alongside the other listed public contributions. New PR59 reports
+373 kernel-replayed constants and a formal primitive-root trichotomy with
+an infinite period3 NOR backward tail. Those statements are conditional on
+front-window hypotheses, not a complete finite-ancestry exclusion. Rewinding
+a clock-specific front map before the onset of that clock is not licensed
+by finite ancestry alone. This block did not replay PR59 locally or claim
+that its new operators solve that onset problem.
+
+Next infinite proof obligation
+Derive recurrence of a qualifying reset on EVERY actual legal reconstructed
+row (both boundary phases), or give a certified infinite counterexample.
+Do not require a uniform exponential rate unless the proof actually needs
+one. A rank must use unbounded ancestry/global state: the earlier finite
+abstraction and local-window ranking barriers still apply. Recurrent resets
+now imply arbitrary finite-block closing by PR60, without another gap.

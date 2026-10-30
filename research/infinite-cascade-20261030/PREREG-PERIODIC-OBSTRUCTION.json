@@ -1,0 +1,8 @@
+{
+  "registered_before_execution": true,
+  "target": "Attempt an exact infinite counterexample to RowClosing from the periodic legal gap word(3,5,5), rather than using long finite survival as a counterexample.",
+  "known_controls": {"gap_word_5": "spatial carrier period155", "gap_word_3_5": "spatial carrier period325"},
+  "limits": {"wall_seconds": 30, "column_pairs_per_word": 100000, "gap_words": [[5],[3,5],[3,5,5]]},
+  "method": "Iterate pairs of exact cyclic temporal profiles. Only a repeated complete pair proves a spatially periodic tail. For each temporal phase compute the four-state inverse transfer map on one cycle and test its third power for constancy.",
+  "interpretation": "A certified nonsynchronizing cycle could refute the proposed RowClosing hypothesis. A capped orbit is UNKNOWN, never an infinite survivor. A positive extra carrier is not a new prize theorem or grounds for another finite-family PR. No extension of the limits."
+}
