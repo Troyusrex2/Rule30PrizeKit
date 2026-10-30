@@ -23,3 +23,7 @@ REVIEW.txt distinguishes the checked reduction from the unresolved infinite
 ancestry claim and corrects an unnecessary uniform exponential-count target.
 The periodic355 computation is a bounded, exact-cycle diagnostic only, not
 a new Lean theorem or additional prize contribution.
+
+UPDATE-REVIEW.txt records the11:03UTC swarm revisions received during this
+block, their checked hashes, and a source-level PR59 hypothesis audit.
+These prose updates do not change the verified theorem or replay inputs.

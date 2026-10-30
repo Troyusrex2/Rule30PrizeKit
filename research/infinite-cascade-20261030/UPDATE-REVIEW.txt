@@ -1,0 +1,46 @@
+Update received during this block: 2026-10-30T11:03:30UTC
+
+Swarm has now supplied staircase-v02 and deathrate-v03. These supersede the
+versions identified in the first REVIEW.txt, which records the earlier pass.
+The new files accept the earlier requested scope corrections: finite W<=8
+does not rule out all fixed windows; finite measured d does not give a
+d-uniform theorem; a reset-free stack's graph classification is eventual,
+not an immediate local bound; arbitrary loitering inside a white SCC is
+possible. The SCC argument and its data remain unverified in Lean here.
+The updates add no proof of the main global reset recurrence/count bound.
+
+The new checked reduction is PR60. Its proof is nonperiodic and has no
+uniform waiting-time hypothesis, so the qualitative reduction does not
+depend on fitting an exponential law. The initial review's generic d^2
+branch counterfamily explains why that uniform law is stronger than needed.
+It remains a possible sufficient conjecture, not a necessary formulation.
+
+Source-level reading of PR59
+Source pin d5582fbacaeb329b47623593a1097cc03d7e1108; file
+lean/Ruliology/CellularAutomata/Rule30ZeroBoundaryStripePrimitiveRoots.lean.
+backward_nor_period_three (line380) assumes four successive high bits of
+bstep1 are black and proves the period3 NOR law on that interval.
+primitive_or_clone_trichotomy (line404) is an exhaustive DISJUNCTION of
+finite-window regimes, with4<=k<=K and W<2^k. Its formal statement does not
+assert pairwise exclusivity. At K=k the TypeII tail predicates have empty
+index ranges, so they are vacuous; do not use the prose's "mutually exclusive"
+description at that boundary. For larger windows or a coherent projective
+limit the avalanche has substantive content, but those conditions matter.
+exists_F_shift_eq_iff (line432) gives the exact finite clone-image criterion.
+prim_exception_iff_survivor_avalanche (line725) still includes a surviving
+front-window/pullback condition; it does not eliminate all such survivors.
+No source theorem here authorizes clock-specific rewinding before the
+onset of the assumed alternating center. That remains the onset gap.
+
+There is an interesting reset connection: a genuine infinite period3 NOR
+tail contains isolated black cells and hence recurrent0 1 0 b reset words.
+But this only supplies resets on that particular tail/layer. It does not
+prove that every driver layer is tail-closing; its inverse can have a
+reset-free periodic tail. Consequently neither the NOR wave nor the
+three-row stack classification completes the hypothesis of PR60.
+This source audit is not a fresh local kernel replay of PR59. Its author
+reports the373-constant verified companion submission in the PR.
+
+No prize problem is proved. The next missing INFINITE statement remains a
+global reset/finite-ancestry obstruction with an explicitly checked bridge
+to arbitrary temporal periods. No larger finite census was launched.
