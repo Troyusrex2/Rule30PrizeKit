@@ -1,6 +1,6 @@
 {
-  "seconds": 40.34299999999348,
-  "compiled": 13,
+  "seconds": 45.64100000006147,
+  "compiled": 15,
   "audits": [
     {
       "module": "RightOneLayer",
@@ -519,6 +519,274 @@
         "reasons": [],
         "replay": {
           "constants": 5,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "RightRecurrent",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.bad_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.bad_every_block",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.block_sample",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.boundary",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.center_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.controls",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.counterexample",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.ctl",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.decode",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.elementary_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.f",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.f_add",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.input",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.local_gate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.no00",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.no11111",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.not_eventually_S",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.not_periodic",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.orbit",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.orbit_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.periodic_iff_schedule",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.raw",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.reads_schedule",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.rows",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.short",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.strip",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.strip_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.transition_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightRecurrent.win",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.boundary.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.f.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.input.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.orbit.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.raw.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightRecurrent.strip.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.counterexample",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.strip_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.center_step",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.periodic_iff_schedule",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.bad_every_block",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightRecurrent.not_eventually_S",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "RightRecurrent",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 60,
           "ok": true
         },
         "verdict": "pass",

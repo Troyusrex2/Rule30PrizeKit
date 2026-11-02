@@ -1,0 +1,67 @@
+Right-strip recurrence audit, 2026-11-02. Troy Lowry with OpenAI Codex.
+
+RESULT
+The proposed eventual-S-or-periodic implication is FALSE in the saved width6
+relaxation. This is now an all-time Lean theorem, not extrapolation from a scan.
+It is NOT a counterexample in the full right half, nor at finite origin.
+
+Two closed19-step paths from window63 have output words
+  U = 1011101011110111011
+  V = 1010111101110111011.
+They admit arbitrary concatenation, preserve no00 and no11111 across joins, and
+both contain a complement eight-bit window outside S at the start of each block.
+The low-time complement codes are162 and10; neither belongs to
+S={8,9,16,18,33,36,66,72,132,144}.
+
+ALLOWING VERSUS NECESSITATING NONPERIODICITY
+Concatenation alone does not force nonperiodicity. Constant choices repeat one
+word periodically. The precise proved statement is
+  EventuallyPeriodic(f_q) IFF EventuallyPeriodic(q).
+The choice is read exactly at f_q(19*n+5)=q(n). Taking q to be the indicator of
+powers of2 (a previously checked nonperiodic sequence) gives a concrete
+nonperiodic output, with bad-S windows arbitrarily far out. Nothing says the
+singleton selects this schedule. The encoded freedom is supplied by free outer
+input; that is exactly the information discarded by this finite-strip relaxation.
+
+SEMANTICS
+RightRecurrent.strip_step proves every one-step Rule30 equation in the six-cell
+right strip. center_step proves that f is the required left-neighbor trace at
+white times of the alternating center, not an arbitrary graph label.
+orbit_step is its two-step form. no00/no11111 hold for EVERY choice schedule.
+periodic_iff_schedule and bad_every_block hold for EVERY choice schedule.
+counterexample specializes to the powers-of-two schedule.
+No update equation is asserted for the free outer column7. In particular,
+there is NO full-right realizability or finite-right-origin theorem here.
+No all-width barrier is claimed. The older genuine full-space ether examples
+remain separate; this does not replace or invalidate them.
+
+COMPUTATION AND CHECKING
+The preregistered test stayed at width6 and examined967 reachable product states,
+3868 edges, one nontrivial recurrent component of236 states. It found the witness
+in about0.016seconds. No width increase, large scan, subagent, G913 use, schedule,
+or remote restart. Graph output is only a discovery aid.
+The Lean proof checks the two finite path tables with decide, then proves all
+times/all schedules symbolically. The unchanged official checker replayed the
+module successfully; standard axioms only; no new axioms; no prize targets.
+An independent replay uses Rule30's literal8-entry truth table, not the packed
+XOR update used in discovery. See literal-validation.json and portable replay.
+
+WHAT THIS CHANGES / NEXT PROOF OBLIGATION
+Do not spend on a six-cell arbitrary-input certificate for eventual-S-or-periodic:
+the model has an explicit counterexample. Do not respond by increasing width.
+The still-open, stronger dynamical hypothesis must retain actual finite right
+origin. A candidate precise target is:
+  For every finitely supported right start R driven by an alternating center,
+  its actual free-bit trace f_R is eventually periodic OR its complement is
+  eventually S-legal.
+This statement has NOT been proved or refuted. The current empty-right GateTrap
+entry theorem does not quantify over every finite start. Neither branch alone
+proves the singleton result: one must also supply the finite-left exclusion for
+the relevant gate language, or the adjacent-periodic-column contradiction.
+The next useful step is to audit a concrete finite-origin induction lemma, if
+Swarm has one. A larger free-boundary census would not establish this bridge.
+
+PUBLICATION STATUS
+This is a reproducible research-archive update, not a catalog PR or prize/API
+submission. No novelty or Wolfram acceptance claim. Public URL is recorded in
+CHECKPOINT.json and the coordination receipt after upload/readback.

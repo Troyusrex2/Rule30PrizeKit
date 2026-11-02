@@ -12,7 +12,9 @@
     "BlockHiddenPair",
     "HiddenPairRightObstruction",
     "PeriodTwoGateExclusion",
-    "GateScopeAudit"
+    "GateScopeAudit",
+    "NonperiodicHiddenExample",
+    "RightRecurrent"
   ],
   "headlines": {
     "RightOneLayer": [
@@ -35,6 +37,14 @@
     ],
     "GateScopeAudit": [
       "s_already_excludes"
+    ],
+    "RightRecurrent": [
+      "counterexample",
+      "strip_step",
+      "center_step",
+      "periodic_iff_schedule",
+      "bad_every_block",
+      "not_eventually_S"
     ]
   },
   "sources": [
@@ -114,6 +124,18 @@
       "module": "GateScopeAudit",
       "path": "project/GateScopeAudit.lean",
       "sha256": "832fb0963d6d9faa8bdcaa57ee96559aa51ec7499065b6d4d1fb3e64dad80c4a",
+      "role": "new audit module"
+    },
+    {
+      "module": "NonperiodicHiddenExample",
+      "path": "project/NonperiodicHiddenExample.lean",
+      "sha256": "8ad92585175e788cde43e165bb35e35415988354c54a795f4d9086141fa94ede",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "RightRecurrent",
+      "path": "project/RightRecurrent.lean",
+      "sha256": "f1598033e5e7de093d4a707a450cbddb480d728422267b7e0aeea8c84c312b7b",
       "role": "new audit module"
     }
   ],

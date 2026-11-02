@@ -53,7 +53,21 @@ A useful next target is whether the full right recurrence forces eventual entry 
 the stronger gap/S grammar, apart from periodic-output cases. The current kit's
 `Rule30GateTrap` supplies a trap and an empty-right entry result; that is not a theorem
 that every finite right start enters it. No such universal entry result is proved here.
-No additional larger scan was performed for this target.
+The follow-up `RightRecurrent.lean` now disproves this implication in the
+six-cell relaxation with free outer input. Two closed 19-step paths admit arbitrary
+concatenation. Their output is eventually periodic **if and only if** the choice
+schedule is eventually periodic (`periodic_iff_schedule`); every block violates S.
+Choosing the indicator of powers of two gives a proved all-time counterexample
+(`counterexample`). Every single step of the strip and the center equation are
+checked (`strip_step`, `center_step`). This does not assert an update equation for
+the free outer column, an infinite right extension, or finite right origin.
+
+Thus arbitrary concatenation allows nonperiodicity; the specified nonperiodic
+schedule necessitates it. A constant choice is periodic. The singleton's choice
+has not been identified. The next proof obligation must use actual right-side
+recurrence and finite origin, rather than this six-cell relaxation alone.
+See `followup/RESULTS.txt` for the precise scope and reproducible witness.
+No wider scan was performed.
 
 ## Reproduce
 
@@ -64,7 +78,7 @@ python replay.py --lean PATH_TO_LEAN_EXE --out NEW_EMPTY_DIRECTORY
 ```
 
 The script copies the supplied source closure, compiles every module, and invokes
-the unchanged official `Check.lean` on the five audit modules. Each owned process
+the unchanged official `Check.lean` on the six audit modules. Each owned process
 has a 60-second deadline. It rejects new axioms, failed replay, and any claim to
 have verified a prize target. All claims are partial; open implications remain open.
 The manifest records exact source hashes. Standard Lean axioms only; no `sorry`,

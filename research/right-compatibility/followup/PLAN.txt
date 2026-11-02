@@ -1,0 +1,12 @@
+Started 2026-11-02T19:32:34Z. Checkpoint by 20:12:34Z.
+Target: audit eventual-S-or-periodic for the existing width6 right-window model.
+Conjecture under test: every infinite path satisfying no00/no11111 either is
+eventually periodic in output or eventually has all complement eight-bit windows
+in S={8,9,16,18,33,36,66,72,132,144} (low-time bit first).
+Falsifier: two closed paths from the same product state, equal length, distinct
+output words, each containing a bad-S window. Arbitrary concatenation then gives
+unbounded bad-S occurrences and can encode a non-eventually-periodic schedule.
+This is only a finite-strip template test, not a full-right counterexample.
+Limits: existing width6; <=20000 states; <=60 seconds; one worker; no remote jobs,
+no wider census. Save exact input/state paths and replay literal local updates.
+If false, audit the witness and its all-time meaning, not a larger scan.
