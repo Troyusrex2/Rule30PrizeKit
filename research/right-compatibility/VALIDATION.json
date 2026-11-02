@@ -1,0 +1,529 @@
+{
+  "seconds": 40.34299999999348,
+  "compiled": 13,
+  "audits": [
+    {
+      "module": "RightOneLayer",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "RightOneLayer.Compatible",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayer.Conditions",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.compatible_iff",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.compatible_iff_free_outer",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.coupling_forces",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayer.forced",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.necessary",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.sufficient",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayer.witness",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.witness_couples",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.witness_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.witness_white",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.witness.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.witness.eq_2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayer.witness.match_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightOneLayer.compatible_iff",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightOneLayer.compatible_iff_free_outer",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "RightOneLayer",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 19,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "RightOneLayerPeriodTwo",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "RightOneLayerPeriodTwo.No00",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayerPeriodTwo.center",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayerPeriodTwo.compatible_iff_no00",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "RightOneLayerPeriodTwo.left",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayer.forced.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayerPeriodTwo.center.eq_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "RightOneLayerPeriodTwo.left.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "RightOneLayerPeriodTwo.compatible_iff_no00",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "RightOneLayerPeriodTwo",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 16,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "HiddenPairRightObstruction",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "HiddenPairRightObstruction.FullHistory",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_left_five",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_left_four",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_profile_not_compatible",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_true_branch_no_extension",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.finite_false_branch_no_extension",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.full_history_compatible",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.official_history",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.periodic_false_branch_no_extension",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.periodic_profile_not_compatible",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.three_white_left_black_stays",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.zero_rule_neighbors",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.full_history_compatible",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.periodic_false_branch_no_extension",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_true_branch_no_extension",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.finite_false_branch_no_extension",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.periodic_profile_not_compatible",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "HiddenPairRightObstruction.block_profile_not_compatible",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "HiddenPairRightObstruction",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 16,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "PeriodTwoGateExclusion",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.Window",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.actual_output",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.encode",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.final_empty",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.gate_identity",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.initial",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.initial_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.member",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.no_010110",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.output",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.step2",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.subsets",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.transition",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.transition_certificate",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.window",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.window_step",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.word",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "PeriodTwoGateExclusion.step.match_1",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.subsets.eq_1",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "PeriodTwoGateExclusion.no_010110",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "PeriodTwoGateExclusion",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 28,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    },
+    {
+      "module": "GateScopeAudit",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "def",
+            "name": "GateScopeAudit.S",
+            "standardAxioms": true
+          },
+          {
+            "kind": "def",
+            "name": "GateScopeAudit.SWindow",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "GateScopeAudit.s_already_excludes",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "GateScopeAudit.s_excludes_complement_certificate",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "GateScopeAudit.s_already_excludes",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "GateScopeAudit",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 5,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ]
+}

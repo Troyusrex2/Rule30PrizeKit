@@ -1,0 +1,121 @@
+{
+  "order": [
+    "Ruliology.CellularAutomata.Rule30Jen",
+    "Ruliology.CellularAutomata.Rule30Prize",
+    "RightOneLayer",
+    "RightOneLayerPeriodTwo",
+    "Ruliology.CellularAutomata.Rule30MaskedJen",
+    "Ruliology.CellularAutomata.Rule30DrivenLeft",
+    "Ruliology.CellularAutomata.Rule30DrivenMaskTransport",
+    "PeriodicHiddenPair",
+    "FiniteHiddenPair",
+    "BlockHiddenPair",
+    "HiddenPairRightObstruction",
+    "PeriodTwoGateExclusion",
+    "GateScopeAudit"
+  ],
+  "headlines": {
+    "RightOneLayer": [
+      "compatible_iff",
+      "compatible_iff_free_outer"
+    ],
+    "RightOneLayerPeriodTwo": [
+      "compatible_iff_no00"
+    ],
+    "HiddenPairRightObstruction": [
+      "full_history_compatible",
+      "periodic_false_branch_no_extension",
+      "block_true_branch_no_extension",
+      "finite_false_branch_no_extension",
+      "periodic_profile_not_compatible",
+      "block_profile_not_compatible"
+    ],
+    "PeriodTwoGateExclusion": [
+      "no_010110"
+    ],
+    "GateScopeAudit": [
+      "s_already_excludes"
+    ]
+  },
+  "sources": [
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Jen",
+      "path": "project/Ruliology/CellularAutomata/Rule30Jen.lean",
+      "sha256": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30Prize",
+      "path": "project/Ruliology/CellularAutomata/Rule30Prize.lean",
+      "sha256": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "RightOneLayer",
+      "path": "project/RightOneLayer.lean",
+      "sha256": "f4c49ad49677c9013e61ca1a99f4ce3c54b1447ca619add820b7b1b37e93359d",
+      "role": "new audit module"
+    },
+    {
+      "module": "RightOneLayerPeriodTwo",
+      "path": "project/RightOneLayerPeriodTwo.lean",
+      "sha256": "691ce4eab20facaac1dbf99208cda5978b2c78344d77117d6673558ec354f9bd",
+      "role": "new audit module"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30MaskedJen",
+      "path": "project/Ruliology/CellularAutomata/Rule30MaskedJen.lean",
+      "sha256": "44fe75c8865d6edd4a6cddeeec9430d32fed7e06e47803c35b267024192dbfb5",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenLeft",
+      "path": "project/Ruliology/CellularAutomata/Rule30DrivenLeft.lean",
+      "sha256": "1f46101a2b6041f9b4bcade0b32da60b1c6ac779b49d0237fbfd72faff4d2053",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "Ruliology.CellularAutomata.Rule30DrivenMaskTransport",
+      "path": "project/Ruliology/CellularAutomata/Rule30DrivenMaskTransport.lean",
+      "sha256": "93c1847f85f60f9d1b62099662cf8cf9ebe7bb94273f1b2d6a19b4259d3af523",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "PeriodicHiddenPair",
+      "path": "project/PeriodicHiddenPair.lean",
+      "sha256": "ae49bd599a7b68d71e31a58fb0e91e1bb06b71d24c083837e8ca133cf7620510",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "FiniteHiddenPair",
+      "path": "project/FiniteHiddenPair.lean",
+      "sha256": "9a86ec571585a94f0851c8f8a3bb83a3150e9d9c7f69227744145026f14a746d",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "BlockHiddenPair",
+      "path": "project/BlockHiddenPair.lean",
+      "sha256": "18f8ba46fb7fc9b9d94354f9fe5d4f1da71c5cdfceee1c7d54e2b813963e02a6",
+      "role": "unchanged supporting dependency"
+    },
+    {
+      "module": "HiddenPairRightObstruction",
+      "path": "project/HiddenPairRightObstruction.lean",
+      "sha256": "d7978389ce6be4ed87118857d21f877f65e2de580a0f88af486f9750c760883d",
+      "role": "new audit module"
+    },
+    {
+      "module": "PeriodTwoGateExclusion",
+      "path": "project/PeriodTwoGateExclusion.lean",
+      "sha256": "72a6147ed8f5baf0ccbdc8197f77ee48261fbcddd61db7ef0a9d8a546e20ea8e",
+      "role": "new audit module"
+    },
+    {
+      "module": "GateScopeAudit",
+      "path": "project/GateScopeAudit.lean",
+      "sha256": "832fb0963d6d9faa8bdcaa57ee96559aa51ec7499065b6d4d1fb3e64dad80c4a",
+      "role": "new audit module"
+    }
+  ],
+  "checker_sha256": "b882f2527a1d6e720828a0c729cc80c3977905ed9207d09af22f8d153a073905"
+}
