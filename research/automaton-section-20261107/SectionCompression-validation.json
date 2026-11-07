@@ -1,0 +1,121 @@
+{
+  "seconds": 4.76600000000326,
+  "sources": {
+    "Ruliology.CellularAutomata.Rule30Jen": "0700944834df40a026191a7fe4c1ab22114c6509a319afc1d71877e30a22c6bc",
+    "Ruliology.CellularAutomata.Rule30Diagonals": "4bbdd2e9fbe0ba2cd47479c5054b01f37be9df7724b5cd8758917f1ecc500791",
+    "Ruliology.CellularAutomata.Rule30Prize": "9d6bc9deff317ec056d9d321c1fb0373fdaba808d91112da3c7870e7562f283c",
+    "SeedAutomaton": "5939dd1b0e288ccaaad9848ddb82319d8e16893d1ef9b006dc1fb6f121bd997e",
+    "SeedSections": "f48d5ab4104851faa837b3924f69f88469f9af54e54eed8c7586a033482bd58c",
+    "SectionCompression": "137e9ee97ba78119f77792a94c3e8153117adfcac4198dff5ff03e55cc0dcecb"
+  },
+  "checks": [
+    {
+      "module": "SectionCompression",
+      "checker": {
+        "claim": "partial",
+        "declared": [
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.A_word_zero",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.act_A_zero_stream",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.actual_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.erase_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.exact_minimum_positive_length",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.rounds_A_cons",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.rounds_A_prefix",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.rounds_length",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.two_round_head",
+            "standardAxioms": true
+          },
+          {
+            "kind": "theorem",
+            "name": "SectionCompression.word_append",
+            "standardAxioms": true
+          }
+        ],
+        "headlines": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "SectionCompression.exact_minimum_positive_length",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "SectionCompression.erase_prefix",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          },
+          {
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "found": true,
+            "kind": "theorem",
+            "name": "SectionCompression.actual_prefix",
+            "ok": true,
+            "problems": [],
+            "typeMatches": true
+          }
+        ],
+        "importsStatements": true,
+        "module": "SectionCompression",
+        "newAxioms": [],
+        "official": [],
+        "reasons": [],
+        "replay": {
+          "constants": 17,
+          "ok": true
+        },
+        "verdict": "pass",
+        "verifiedTargets": []
+      }
+    }
+  ]
+}

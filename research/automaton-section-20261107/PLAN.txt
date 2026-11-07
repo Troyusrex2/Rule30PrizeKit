@@ -1,0 +1,28 @@
+Actual-singleton research block, started 2026-11-07T21:36:47Z.
+Work ceiling for this block: 22:15 UTC. No subagents, scans, installs, remote
+jobs, schedules, or API submissions.
+
+New structural attempt: retain the exact singleton and moving center index
+through a three-state Mealy automaton for the right-edge update. Derive its
+dual action on words of states and the exact center parity readout. Then
+investigate whether section reduction offers a uniform induction.
+
+Candidate recursion, derived by hand before finite testing:
+  A=(A,C), B=swap(A,C), C=swap(B,C).
+  F^t(singleton) in right-edge coordinates = A^t(1000...).
+  center(n+1) = parity(dual_0^n(C^(n+1))), where parity counts B/C modulo 2.
+
+Potential shortcut to test, not assume: a fixed finite nucleus of sections.
+Literature search identifies this as automaton 5002, equivalent by renaming
+A->c,B->b,C->a to automaton 2369 in Bondarenko et al., arXiv:0803.3555.
+That group is reported noncontracting. Independently check the exact obstruction:
+A^n persists along every all-zero section, while its powers are distinct.
+This does not by itself refute a seed-conditioned, observation-specific reduction.
+
+One finite validation only: literal Rule30 update and independent Mealy/dual
+implementations through n=128. Check exact center formula and two dual rounds
+for every state word of length <=6. This is semantic validation, not evidence
+of infinite aperiodicity. No enlargement based on the result.
+
+Goal is an actual-history argument. An exact encoding alone will be labeled
+a reformulation, and no prize progress will be claimed from group infinitude.
