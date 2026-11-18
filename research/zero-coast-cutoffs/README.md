@@ -1,5 +1,7 @@
 # Reset counts after the last seed bit
 
+[Periodic wall clocks and an exact inverse propagation theorem](INVERSE.md) gives sharp bounds for five prescribed rhythms and a counterexample to controlling the outermost disagreement after a legal switch.
+
 This note concerns `q01Gap_and_massDiverges_iff_reset_iterVoidMacro_crash` in [Rule30ZeroCoastBridge](https://github.com/WolframInstitute/Rule30PrizeKit/blob/ac3d1440c6dbce52a45aa404e4d614ce85d4b8d1/lean/Ruliology/CellularAutomata/Rule30ZeroCoastBridge.lean). The question is whether one can bound the number of successful zero-input returns from a reachable reset. Each return takes six or ten ticks.
 
 Let $A$ and $B$ be the latest and preceding antidiagonals at a reset. Read them at the same depth, with white padding through the last index occupied by either. Let $h$ count pairs in the order 00, 01, 10, 11. Here are two paths that each complete two returns using no further set seed bits.

@@ -1,0 +1,654 @@
+{
+  "claim": "partial",
+  "declared": [
+    {
+      "kind": "def",
+      "name": "ReverseFront.Front",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.Row",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.Step",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.advance",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.advance_bound",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.advance_local",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.alternate",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.alternate_entry",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.arbitrary_predecessors",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.at_front",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.base",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.base_clamp",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.base_steps",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.base_time",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.clamp",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.clamp_lt",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.compact",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.compactMask",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact_differs",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact_steps",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact_tail",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact_time",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact_trace",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.driven",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.e",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.e_shift",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.entry_front",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.history",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.inv",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.kitSeed",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.legal_entry",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.mask",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.predecessor",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.prescribed_front",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.prescribed_step",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.propagation",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.readPre",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.right_inverse",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.sample",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.sample_clamp",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.sample_steps",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.six_merge_iff",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.six_returns",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.six_table",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.step_iff_zrow",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.twoSteps",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.walk",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.walk_add",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.advance.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.alternate.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.base.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.base.eq_2",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.compact.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.compactMask.match_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.driven.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.driven.eq_2",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.e.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.kitSeed.match_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_10",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_11",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_12",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_2",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_3",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_4",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_5",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_6",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_7",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_8",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.mask.eq_9",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.mask.match_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.readPre.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.readPre.eq_2",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.readPre.eq_3",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.readPre.eq_def",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.readPre.match_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.sample.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.walk.eq_1",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.walk.eq_2",
+      "standardAxioms": true
+    },
+    {
+      "kind": "theorem",
+      "name": "ReverseFront.walk.eq_def",
+      "standardAxioms": true
+    },
+    {
+      "kind": "def",
+      "name": "ReverseFront.walk.match_1",
+      "standardAxioms": true
+    }
+  ],
+  "headlines": [
+    {
+      "axioms": [],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.step_iff_zrow",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.base_steps",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.base_time",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.sample_steps",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.legal_entry",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.propagation",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.arbitrary_predecessors",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.prescribed_step",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.prescribed_front",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.alternate_entry",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.compact_time",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.compact_tail",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.compact_steps",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.compact_differs",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.compact_trace",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.advance_local",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.advance_bound",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.six_table",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.six_returns",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "found": true,
+      "kind": "theorem",
+      "name": "ReverseFront.six_merge_iff",
+      "ok": true,
+      "problems": [],
+      "typeMatches": true
+    }
+  ],
+  "importsStatements": true,
+  "module": "ReverseFront",
+  "newAxioms": [],
+  "official": [],
+  "reasons": [],
+  "replay": {
+    "constants": 176,
+    "ok": true
+  },
+  "verdict": "pass",
+  "verifiedTargets": []
+}
