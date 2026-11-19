@@ -6,7 +6,15 @@ The same outer completion works for **all spatial prefixes** of length H. Start 
 
 For H white future observations, any nonempty terminal row with a finite k-step all-white past has width at least H+2k+1: the start is white through depth H+k, and its last black cell then advances k more cells. In particular a fixed nonempty initial row of width W has **no finite all-white alternative history of length t** reaching its actual row at age t ≥ W. For a hypothetical indefinitely legal finite trajectory, forcing even one such history at the appropriate age would give a contradiction for that branch of the period-two problem. The construction above supplies a different origin per window; it does not supply this history for the actual trajectory.
 
-## A proposed ranking failed
+## Exact count at fixed width (paper argument)
+
+Fix an H-bit future word u, a k-bit past word b, and an exact terminal width W ≥ H+2k+1. Among **all** width-W rows with future u, exactly a fraction 4<sup>−k</sup> have a finite predecessor realizing b. The fraction is the same for each u and each b. The expected number of finite k-step predecessors under uniform sampling of these terminal rows is therefore 2<sup>−k</sup>. Sampling rows along one old orbit uses a different distribution.
+
+To count, adjoining a new depth bit toggles the next wall observation and preserves every earlier observation. Thus any length-n wall word fixes exactly the first n physical seed bits. There are 2<sup>W−H−1</sup> terminal rows of exact width W with word u. An eligible ancestor has exact width W−k and the concatenated wall word bu. Its top black bit and its H+k low bits are fixed, leaving W−H−2k−1 independent bits. Distinct ancestors here have distinct terminal rows because a terminal row and its k past wall bits determine the entire predecessor history. Dividing the two counts gives the stated fraction. In particular the fraction with all-white ancestry of depth at least k is the same for legal and illegal finite wall words in this width range.
+
+The boundary of the counting formula is concrete. If 1 ≤ W−k ≤ H+k, decode the concatenated word bu into its unique H+k-bit initial prefix, padded above with zeros. The eligible count is then exactly one if this number has bit length W−k, and zero otherwise. Now the observations reach the original seed edge. The formal PR covers existence and the fixed-origin width cutoff; this counting identity is a separate paper corollary. Run `python count_pasts.py` for an independent exhaustive check.
+
+## Testing the ranking on reachable rows
 
 For a positive finite row Y, let v(Y) be its maximum number of consecutive finite all-white backward steps. On the previously published 101-cell seed 2440786724530854946624415088918, the pairs (width, v) at resets 100, 106, 116 are (201,25), (207,27), (217,29). The proposed descent quantity width − 2v increases from 151 to 153 to 159 on two legal returns after the seed cutoff. This refutes strict descent on every return. Run `python white_past.py` to check it.
 
