@@ -109,5 +109,53 @@
     "newAxioms": [],
     "verifiedTargets": [],
     "verdict": "pass"
+  },
+  {
+    "module": "FailedLift",
+    "claim": "partial",
+    "replay": {
+      "constants": 23,
+      "ok": true
+    },
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FailedLift.meet111",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FailedLift.two_changes",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "FailedLift.neither_predecessor_finite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "newAxioms": [],
+    "verifiedTargets": [],
+    "verdict": "pass"
   }
 ]

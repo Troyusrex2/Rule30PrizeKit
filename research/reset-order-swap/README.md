@@ -14,8 +14,12 @@ A concrete finite-history example shows how this obstruction appears. Start with
 
 The infinite period-two exclusion remains open. A hypothetical finite origin with an infinite mixed schedule would give swaps arbitrarily late and therefore the black-tail transition above. What is missing is a reason this transition cannot coexist with an indefinitely legal continuation in the finite original orbit. A legal finite prefix alone allows the obstruction.
 
+There is a smaller test for the first failed lift. At any phase inside a six- or ten-tick gap, observing the rest of that gap and two complete further gaps fixes enough low bits of the physical row to merge the two possible one-step predecessor registers. The 64 cases reach equality by spatial depth 11. From then on the registers read identical data and stay equal. Consequently **both or neither** of the backward boundary choices yield finite support at such a tick. This is a finite truth-table check plus the deterministic recurrence. It says nothing about which outcome occurs. In particular it leaves open whether an indefinitely legal history can reach the neither-finite outcome in the swapped past.
+
 ## Reproduction
 
 - `python physical_check.py` independently reconstructs finite seed prefixes and runs Rule 30 forward at every leaf. It checks coalescence, the margin protecting arbitrary common exterior bits, and the explicit 24-return example.
 - `python undo_witness.py` checks the late-swap example forward and evaluates the literal Rule 30 truth table on both possible backward starts.
+- [FailedLift.lean](FailedLift.lean) also kernel-checks the two changed observations through tick 111, the identical physical row at tick 111, and failure of both predecessors at tick 71 using the kit's finite-preimage criterion.
+- `python one_tick.py` checks predecessor synchronization at each phase and each pair of following gaps. This supplementary check is separate from the catalog PR.
 - `python certificate.py --check PATH_TO_ResetSwapCover.lean` reproduces the catalog certificate. The [catalog source](https://github.com/Troyusrex2/Rule30PrizeKit/tree/0fc65a8779365c3d8a0b8f8764ec866cc1e057d5/lean/Ruliology/CellularAutomata) contains the full Lean proof. [verification.json](verification.json) extracts the verdicts and headline checks from the three local replays with the unmodified kit checker.
