@@ -1,0 +1,113 @@
+[
+  {
+    "module": "Ruliology.CellularAutomata.Rule30Certificates.ResetSwapCover",
+    "claim": "partial",
+    "replay": {
+      "constants": 718,
+      "ok": true
+    },
+    "headlines": [
+      {
+        "axioms": [
+          "propext"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.Certificate.cover_ok",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "newAxioms": [],
+    "verifiedTargets": [],
+    "verdict": "pass"
+  },
+  {
+    "module": "Ruliology.CellularAutomata.Rule30ResetSwapCore",
+    "claim": "partial",
+    "replay": {
+      "constants": 76,
+      "ok": true
+    },
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.good_sync",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "newAxioms": [],
+    "verifiedTargets": [],
+    "verdict": "pass"
+  },
+  {
+    "module": "Ruliology.CellularAutomata.Rule30ResetSwap",
+    "claim": "partial",
+    "replay": {
+      "constants": 58,
+      "ok": true
+    },
+    "headlines": [
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.finite_initial_swap",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.initial_swap",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.late_edit_infinite",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "found": true,
+        "kind": "theorem",
+        "name": "Ruliology.CellularAutomata.Rule30ResetSwap.late_swap_transition",
+        "ok": true,
+        "problems": [],
+        "typeMatches": true
+      }
+    ],
+    "newAxioms": [],
+    "verifiedTargets": [],
+    "verdict": "pass"
+  }
+]
