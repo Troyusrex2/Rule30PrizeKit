@@ -349,4 +349,105 @@ theorem sharp_windows :
     Misses 2 0xaab716cf23 40 9 0x1f3aab716cf23 ∧
     Misses 2 0xaab716cf23 39 10 0x12ab716cf23 := by decide +kernel
 
+/-! ## The forced left row for the 42-cell restart
+
+With time zero at the restart, the center has temporal mask 0x124924. Its right
+neighbor on white-center ticks has mask 0x90, including the initial tick. The
+one-step entry certificate fixes all later white readings. Solving Rule 30 for
+the western neighbor gives the spatial word recurrence below. Every thirteen
+consecutive time-zero bits of this reconstruction include a black site.
+-/
+namespace Spatial
+
+/-- The center and its eastern neighbor on white ticks. Temporal bit t is time t. -/
+def start : Nat × Nat := (0x124924, 0x90)
+def move (p : Nat × Nat) : Nat × Nat :=
+  (((p.1 >>> 1) ||| ((p.1 % 2) <<< 20)) ^^^ (p.1 ||| p.2), p.1)
+def advance : Nat → Nat × Nat → Nat × Nat
+  | 0, p => p
+  | n+1, p => advance n (move p)
+
+/-- Scan successive depths, retaining the number of consecutive white sites. -/
+def scan : Nat → Nat × Nat → Nat → Bool
+  | 0, _, _ => true
+  | n+1, p, run =>
+    let next := if p.1.testBit 0 then 0 else run+1
+    decide (next < 13) && scan n (move p) next
+
+private theorem base_bits (t : Fin 21) :
+    start.1.testBit t.val = wordAt3 w001 t.val ∧
+    start.2.testBit t.val =
+      ((!wordAt3 w001 t.val) && t001.u.testBit ((t.val+15)%21)) := by
+  revert t
+  decide
+
+set_option maxRecDepth 200000 in
+set_option maxHeartbeats 8000000 in
+theorem certificate :
+    advance 1967 start = (0x61b9f,0x1be8c5) ∧
+    advance 26313 (0x61b9f,0x1be8c5) = (0x61b9f,0x1be8c5) ∧
+    scan (1967+26313+12) start 0 = true := by decide +kernel
+
+private theorem advance_add (m n : Nat) (p : Nat × Nat) :
+    advance (m+n) p = advance n (advance m p) := by
+  induction m generalizing p with
+  | zero => simp [advance]
+  | succ m ih => rw [Nat.succ_add, advance, advance, ih]
+
+theorem periodic (d : Nat) : advance (1967+d+26313) start = advance (1967+d) start := by
+  rw [show 1967+d+26313 = (1967+26313)+d by omega, advance_add (1967+26313) d,
+    advance_add 1967 26313, advance_add 1967 d, certificate.1, certificate.2.1]
+
+
+private theorem after_scan (m n : Nat) (p : Nat × Nat) (run : Nat)
+    (h : scan (m+n) p run = true) : ∃ r, scan n (advance m p) r = true := by
+  induction m generalizing p run with
+  | zero => exact ⟨run, by simpa [advance] using h⟩
+  | succ m ih =>
+    rw [Nat.succ_add, scan] at h
+    exact ih _ _ (Bool.and_eq_true_iff.mp h).2
+
+private theorem white_run (k n : Nat) (p : Nat × Nat) (r : Nat) (pos : 0 < k)
+    (h : scan (k+n) p r = true)
+    (wh : ∀ j, j < k → (advance j p).1.testBit 0 = false) : r+k < 13 := by
+  induction k generalizing p r with
+  | zero => omega
+  | succ k ih =>
+    have w := wh 0 (by omega)
+    change p.1.testBit 0 = false at w
+    rw [Nat.succ_add, scan, w] at h
+    obtain ⟨first, rest⟩ := Bool.and_eq_true_iff.mp h
+    change decide (r+1 < 13) = true at first
+    have upper := of_decide_eq_true first
+    by_cases hk : k=0
+    · omega
+    · have bound := ih (move p) (r+1) (by omega) rest (fun j hj => wh (j+1) (by omega))
+      omega
+
+/-- At any starting depth, some one of the next thirteen sites (including that
+depth) on the reconstructed time-zero row is black. -/
+theorem every_thirteen (d : Nat) : ∃ j, j < 13 ∧ (advance (d+j) start).1.testBit 0 = true := by
+  induction d using Nat.strongRecOn with
+  | ind d ih =>
+    by_cases small : d < 28280
+    · have cert := certificate.2.2
+      rw [show 1967+26313+12 = d+(13+(28279-d)) by omega] at cert
+      obtain ⟨r, h⟩ := after_scan _ _ _ _ cert
+      apply Classical.byContradiction
+      intro none
+      have white (j : Nat) (hj : j < 13) : (advance j (advance d start)).1.testBit 0 = false := by
+        rw [← advance_add]
+        cases e : (advance (d+j) start).1.testBit 0
+        · rfl
+        · exact False.elim (none ⟨j,hj,e⟩)
+      have impossible := white_run 13 _ _ r (by decide) h white
+      omega
+    · obtain ⟨j, hj, black⟩ := ih (d-26313) (by omega)
+      refine ⟨j,hj,?_⟩
+      rw [show d+j = 1967+(d-26313+j-1967)+26313 by omega, periodic,
+        show 1967+(d-26313+j-1967)=d-26313+j by omega]
+      exact black
+
+end Spatial
+
 end Ruliology.CellularAutomata.Rule30PeriodThreeGateRecovery
